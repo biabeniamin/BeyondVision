@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Dec  7 15:47:05 2018
+# Process ID: 10016
+# Current directory: D:/Beni/Digilent19/Sobel_zybo_z7
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2936 D:\Beni\Digilent19\Sobel_zybo_z7\block_compile.xpr
+# Log file: D:/Beni/Digilent19/Sobel_zybo_z7/vivado.log
+# Journal file: D:/Beni/Digilent19/Sobel_zybo_z7\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Beni/Digilent19/Sobel_zybo_z7/block_compile.xpr
+update_compile_order -fileset sources_1
+launch_sdk -workspace D:/Beni/Digilent19/Sobel_zybo_z7/block_compile.sdk -hwspec D:/Beni/Digilent19/Sobel_zybo_z7/block_compile.sdk/design_1_wrapper.hdf

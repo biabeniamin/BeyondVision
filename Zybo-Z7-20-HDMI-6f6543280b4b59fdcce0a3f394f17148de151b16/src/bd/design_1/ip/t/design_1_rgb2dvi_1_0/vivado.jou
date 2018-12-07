@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Dec  7 13:58:30 2018
+# Process ID: 23560
+# Current directory: D:/Beni/Digilent19/Zybo-Z7-20-HDMI-6f6543280b4b59fdcce0a3f394f17148de151b16/src/bd/design_1/ip/t/design_1_rgb2dvi_1_0
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7440 D:\Beni\Digilent19\Zybo-Z7-20-HDMI-6f6543280b4b59fdcce0a3f394f17148de151b16\src\bd\design_1\ip\t\design_1_rgb2dvi_1_0\design_1_rgb2dvi_1_0.dcp
+# Log file: D:/Beni/Digilent19/Zybo-Z7-20-HDMI-6f6543280b4b59fdcce0a3f394f17148de151b16/src/bd/design_1/ip/t/design_1_rgb2dvi_1_0/vivado.log
+# Journal file: D:/Beni/Digilent19/Zybo-Z7-20-HDMI-6f6543280b4b59fdcce0a3f394f17148de151b16/src/bd/design_1/ip/t/design_1_rgb2dvi_1_0\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_checkpoint D:/Beni/Digilent19/Zybo-Z7-20-HDMI-6f6543280b4b59fdcce0a3f394f17148de151b16/src/bd/design_1/ip/t/design_1_rgb2dvi_1_0/design_1_rgb2dvi_1_0.dcp
