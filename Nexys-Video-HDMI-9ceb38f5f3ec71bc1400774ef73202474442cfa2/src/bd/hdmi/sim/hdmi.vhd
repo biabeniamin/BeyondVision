@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Fri Dec  7 15:10:28 2018
+--Date        : Fri Dec  7 17:03:38 2018
 --Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
 --Command     : generate_target hdmi.bd
 --Design      : hdmi
@@ -6166,7 +6166,7 @@ architecture STRUCTURE of hdmi is
     TMDS_Data_p : in STD_LOGIC_VECTOR ( 2 downto 0 );
     TMDS_Data_n : in STD_LOGIC_VECTOR ( 2 downto 0 );
     RefClk : in STD_LOGIC;
-    aRst_n : in STD_LOGIC;
+    aRst : in STD_LOGIC;
     vid_pData : out STD_LOGIC_VECTOR ( 23 downto 0 );
     vid_pVDE : out STD_LOGIC;
     vid_pHSync : out STD_LOGIC;
@@ -6179,7 +6179,7 @@ architecture STRUCTURE of hdmi is
     DDC_SCL_I : in STD_LOGIC;
     DDC_SCL_O : out STD_LOGIC;
     DDC_SCL_T : out STD_LOGIC;
-    pRst_n : in STD_LOGIC
+    pRst : in STD_LOGIC
   );
   end component hdmi_dvi2rgb_0_0;
   component hdmi_mdm_1_0 is
@@ -7417,8 +7417,8 @@ dvi2rgb_0: component hdmi_dvi2rgb_0_0
       TMDS_Data_n(2 downto 0) => B"000",
       TMDS_Data_p(2 downto 0) => B"000",
       aPixelClkLckd => dvi2rgb_0_aPixelClkLckd,
-      aRst_n => mig_7series_0_mmcm_locked,
-      pRst_n => '1',
+      aRst => '0',
+      pRst => '0',
       vid_pData(23 downto 0) => dvi2rgb_0_RGB_DATA(23 downto 0),
       vid_pHSync => dvi2rgb_0_RGB_HSYNC,
       vid_pVDE => dvi2rgb_0_RGB_ACTIVE_VIDEO,

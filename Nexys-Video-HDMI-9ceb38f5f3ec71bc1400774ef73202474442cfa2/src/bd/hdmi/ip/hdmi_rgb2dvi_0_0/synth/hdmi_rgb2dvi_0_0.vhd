@@ -46,8 +46,8 @@
 -- 
 -- DO NOT MODIFY THIS FILE.
 
--- IP VLNV: digilentinc.com:ip:rgb2dvi:1.3
--- IP Revision: 2
+-- IP VLNV: digilentinc.com:ip:rgb2dvi:1.4
+-- IP Revision: 5
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -113,13 +113,12 @@ ARCHITECTURE hdmi_rgb2dvi_0_0_arch OF hdmi_rgb2dvi_0_0 IS
   ATTRIBUTE X_INTERFACE_INFO OF TMDS_Data_n: SIGNAL IS "digilentinc.com:interface:tmds:1.0 TMDS DATA_N";
   ATTRIBUTE X_INTERFACE_INFO OF TMDS_Data_p: SIGNAL IS "digilentinc.com:interface:tmds:1.0 TMDS DATA_P";
   ATTRIBUTE X_INTERFACE_INFO OF TMDS_Clk_n: SIGNAL IS "digilentinc.com:interface:tmds:1.0 TMDS CLK_N";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF TMDS_Clk_p: SIGNAL IS "XIL_INTERFACENAME TMDS, BOARD.ASSOCIATED_PARAM TMDS_BOARD_INTERFACE";
   ATTRIBUTE X_INTERFACE_INFO OF TMDS_Clk_p: SIGNAL IS "digilentinc.com:interface:tmds:1.0 TMDS CLK_P";
 BEGIN
   U0 : rgb2dvi
     GENERIC MAP (
       kGenerateSerialClk => false,
-      kClkPrimitive => "PLL",
+      kClkPrimitive => "MMCM",
       kRstActiveHigh => false,
       kClkRange => 2
     )

@@ -1,8 +1,8 @@
---Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+--Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2017.4_AR70530_AR70530 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
---Date        : Fri May 11 20:55:52 2018
---Host        : DESKTOP-HQKVQ13 running 64-bit major release  (build 9200)
+--Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+--Date        : Fri Dec  7 17:10:33 2018
+--Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
 --Purpose     : IP block netlist
@@ -35,36 +35,20 @@ entity design_1_wrapper is
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     HDMI_HPD_IN : out STD_LOGIC_VECTOR ( 0 to 0 );
-    hdmi_in_clk_n : in STD_LOGIC;
-    hdmi_in_clk_p : in STD_LOGIC;
-    hdmi_in_data_n : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    hdmi_in_data_p : in STD_LOGIC_VECTOR ( 2 downto 0 );
     hdmi_in_ddc_scl_io : inout STD_LOGIC;
-    hdmi_in_ddc_sda_io : inout STD_LOGIC;
-    hdmi_out_clk_n : out STD_LOGIC;
-    hdmi_out_clk_p : out STD_LOGIC;
-    hdmi_out_data_n : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    hdmi_out_data_p : out STD_LOGIC_VECTOR ( 2 downto 0 )
+    hdmi_in_ddc_sda_io : inout STD_LOGIC
   );
 end design_1_wrapper;
 
 architecture STRUCTURE of design_1_wrapper is
   component design_1 is
   port (
-    hdmi_in_clk_p : in STD_LOGIC;
-    hdmi_in_clk_n : in STD_LOGIC;
-    hdmi_in_data_p : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    hdmi_in_data_n : in STD_LOGIC_VECTOR ( 2 downto 0 );
     hdmi_in_ddc_scl_i : in STD_LOGIC;
     hdmi_in_ddc_scl_o : out STD_LOGIC;
     hdmi_in_ddc_scl_t : out STD_LOGIC;
     hdmi_in_ddc_sda_i : in STD_LOGIC;
     hdmi_in_ddc_sda_o : out STD_LOGIC;
     hdmi_in_ddc_sda_t : out STD_LOGIC;
-    hdmi_out_clk_p : out STD_LOGIC;
-    hdmi_out_clk_n : out STD_LOGIC;
-    hdmi_out_data_p : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    hdmi_out_data_n : out STD_LOGIC_VECTOR ( 2 downto 0 );
     DDR_cas_n : inout STD_LOGIC;
     DDR_cke : inout STD_LOGIC;
     DDR_ck_n : inout STD_LOGIC;
@@ -128,20 +112,12 @@ design_1_i: component design_1
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
       FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
       HDMI_HPD_IN(0) => HDMI_HPD_IN(0),
-      hdmi_in_clk_n => hdmi_in_clk_n,
-      hdmi_in_clk_p => hdmi_in_clk_p,
-      hdmi_in_data_n(2 downto 0) => hdmi_in_data_n(2 downto 0),
-      hdmi_in_data_p(2 downto 0) => hdmi_in_data_p(2 downto 0),
       hdmi_in_ddc_scl_i => hdmi_in_ddc_scl_i,
       hdmi_in_ddc_scl_o => hdmi_in_ddc_scl_o,
       hdmi_in_ddc_scl_t => hdmi_in_ddc_scl_t,
       hdmi_in_ddc_sda_i => hdmi_in_ddc_sda_i,
       hdmi_in_ddc_sda_o => hdmi_in_ddc_sda_o,
-      hdmi_in_ddc_sda_t => hdmi_in_ddc_sda_t,
-      hdmi_out_clk_n => hdmi_out_clk_n,
-      hdmi_out_clk_p => hdmi_out_clk_p,
-      hdmi_out_data_n(2 downto 0) => hdmi_out_data_n(2 downto 0),
-      hdmi_out_data_p(2 downto 0) => hdmi_out_data_p(2 downto 0)
+      hdmi_in_ddc_sda_t => hdmi_in_ddc_sda_t
     );
 hdmi_in_ddc_scl_iobuf: component IOBUF
      port map (

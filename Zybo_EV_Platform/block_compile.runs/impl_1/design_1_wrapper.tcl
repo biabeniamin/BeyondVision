@@ -65,22 +65,22 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
+  set_param board.repoPaths C:/Xilinx/board_files
   create_project -in_memory -part xc7z020clg400-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/hdl_projects/block_compile/block_compile.cache/wt [current_project]
-  set_property parent.project_path C:/hdl_projects/block_compile/block_compile.xpr [current_project]
-  set_property ip_repo_paths C:/hdl_projects/digilent [current_project]
-  set_property ip_output_repo C:/hdl_projects/block_compile/block_compile.cache/ip [current_project]
+  set_property webtalk.parent_dir D:/Beni/Digilent19/Zybo_EV_Platform/block_compile.cache/wt [current_project]
+  set_property parent.project_path D:/Beni/Digilent19/Zybo_EV_Platform/block_compile.xpr [current_project]
+  set_property ip_repo_paths D:/Beni/Digilent19/vivado-library-master [current_project]
+  set_property ip_output_repo D:/Beni/Digilent19/Zybo_EV_Platform/block_compile.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  add_files -quiet C:/hdl_projects/block_compile/block_compile.runs/synth_1/design_1_wrapper.dcp
+  add_files -quiet D:/Beni/Digilent19/Zybo_EV_Platform/block_compile.runs/synth_1/design_1_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/design_1.bd
+  add_files D:/Beni/Digilent19/Zybo_EV_Platform/block_compile.srcs/sources_1/bd/design_1/design_1.bd
   set_param project.isImplRun false
-  read_xdc C:/hdl_projects/block_compile/block_compile.srcs/constrs_1/new/cosnt.xdc
+  read_xdc D:/Beni/Digilent19/Zybo_EV_Platform/block_compile.srcs/constrs_1/new/cosnt.xdc
   set_param project.isImplRun true
   link_design -top design_1_wrapper -part xc7z020clg400-1
   set_param project.isImplRun false
@@ -116,7 +116,9 @@ start_step place_design
 set ACTIVE_STEP place_design
 set rc [catch {
   create_msg_db place_design.pb
-  implement_debug_core 
+  if { [llength [get_debug_cores -quiet] ] > 0 }  { 
+    implement_debug_core 
+  } 
   place_design -directive Quick
   write_checkpoint -force design_1_wrapper_placed.dcp
   create_report "impl_1_place_report_io_0" "report_io -file design_1_wrapper_io_placed.rpt"
@@ -142,7 +144,7 @@ set rc [catch {
   create_report "impl_1_route_report_methodology_0" "report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx"
   create_report "impl_1_route_report_power_0" "report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx"
   create_report "impl_1_route_report_route_status_0" "report_route_status -file design_1_wrapper_route_status.rpt -pb design_1_wrapper_route_status.pb"
-  create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -file design_1_wrapper_timing_summary_routed.rpt -rpx design_1_wrapper_timing_summary_routed.rpx -warn_on_violation "
+  create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -file design_1_wrapper_timing_summary_routed.rpt -pb design_1_wrapper_timing_summary_routed.pb -rpx design_1_wrapper_timing_summary_routed.rpx -warn_on_violation "
   create_report "impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file design_1_wrapper_incremental_reuse_routed.rpt"
   create_report "impl_1_route_report_clock_utilization_0" "report_clock_utilization -file design_1_wrapper_clock_utilization_routed.rpt"
   close_msg_db -file route_design.pb

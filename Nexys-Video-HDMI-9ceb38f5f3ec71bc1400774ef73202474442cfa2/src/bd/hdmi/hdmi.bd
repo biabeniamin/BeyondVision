@@ -355,13 +355,12 @@
       </spirit:componentInstance>
       <spirit:componentInstance>
         <spirit:instanceName>dvi2rgb_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="dvi2rgb" spirit:vendor="digilentinc.com" spirit:version="1.7"/>
+        <spirit:componentRef spirit:library="ip" spirit:name="dvi2rgb" spirit:vendor="digilentinc.com" spirit:version="1.8"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">hdmi_dvi2rgb_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="kRstActiveHigh">false</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="kClkRange">2</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="kAddBUFG">false</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="kEdidFileName">900p_edid.data</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="kRstActiveHigh">true</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="kClkRange">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="kAddBUFG">true</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
@@ -447,7 +446,7 @@
       </spirit:componentInstance>
       <spirit:componentInstance>
         <spirit:instanceName>rgb2dvi_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="rgb2dvi" spirit:vendor="digilentinc.com" spirit:version="1.3"/>
+        <spirit:componentRef spirit:library="ip" spirit:name="rgb2dvi" spirit:vendor="digilentinc.com" spirit:version="1.4"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">hdmi_rgb2dvi_0_0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="kRstActiveHigh">false</spirit:configurableElementValue>
@@ -706,7 +705,6 @@
       <spirit:adHocConnection>
         <spirit:name>mig_7series_0_mmcm_locked</spirit:name>
         <spirit:internalPortReference spirit:componentRef="mig_7series_0" spirit:portRef="mmcm_locked"/>
-        <spirit:internalPortReference spirit:componentRef="dvi2rgb_0" spirit:portRef="aRst_n"/>
         <spirit:internalPortReference spirit:componentRef="rst_mig_7series_0_100M" spirit:portRef="dcm_locked"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
@@ -5479,6 +5477,14 @@
     <spirit:version>10.0</spirit:version>
     <spirit:busInterfaces>
       <spirit:busInterface>
+        <spirit:name>M_AXI_DC</spirit:name>
+        <spirit:master>
+          <spirit:addressSpaceRef spirit:addressSpaceRef="Data"/>
+        </spirit:master>
+        <spirit:busType spirit:library="interface" spirit:name="aximm" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="interface" spirit:name="aximm_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+      </spirit:busInterface>
+      <spirit:busInterface>
         <spirit:name>DLMB</spirit:name>
         <spirit:master>
           <spirit:addressSpaceRef spirit:addressSpaceRef="Data"/>
@@ -5488,14 +5494,6 @@
       </spirit:busInterface>
       <spirit:busInterface>
         <spirit:name>M_AXI_DP</spirit:name>
-        <spirit:master>
-          <spirit:addressSpaceRef spirit:addressSpaceRef="Data"/>
-        </spirit:master>
-        <spirit:busType spirit:library="interface" spirit:name="aximm" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="interface" spirit:name="aximm_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>M_AXI_DC</spirit:name>
         <spirit:master>
           <spirit:addressSpaceRef spirit:addressSpaceRef="Data"/>
         </spirit:master>

@@ -13,3 +13,4 @@ start_gui
 open_project D:/Beni/Digilent19/Sobel_zybo_z7/block_compile.xpr
 update_compile_order -fileset sources_1
 launch_sdk -workspace D:/Beni/Digilent19/Sobel_zybo_z7/block_compile.sdk -hwspec D:/Beni/Digilent19/Sobel_zybo_z7/block_compile.sdk/design_1_wrapper.hdf
+open_bd_design {D:/Beni/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/design_1.bd}

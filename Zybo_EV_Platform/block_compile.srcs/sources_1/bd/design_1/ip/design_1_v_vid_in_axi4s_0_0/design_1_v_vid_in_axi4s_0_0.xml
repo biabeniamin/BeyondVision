@@ -528,17 +528,18 @@ dency video_comp2_offset format long minimum {} maximum {}} value 16} integer {s
         <spirit:displayName>Verilog Synthesis</spirit:displayName>
         <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis</spirit:envIdentifier>
         <spirit:language>verilog</spirit:language>
+        <spirit:modelName>v_vid_in_axi4s_v4_0_8</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_verilogsynthesis_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri May 11 18:27:33 UTC 2018</spirit:value>
+            <spirit:value>Fri Dec 07 15:10:50 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:c3e1205e</spirit:value>
+            <spirit:value>8:4953fae9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -552,11 +553,11 @@ dency video_comp2_offset format long minimum {} maximum {}} value 16} integer {s
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri May 11 18:27:33 UTC 2018</spirit:value>
+            <spirit:value>Fri Dec 07 15:10:50 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:c3e1205e</spirit:value>
+            <spirit:value>8:4953fae9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -565,17 +566,18 @@ dency video_comp2_offset format long minimum {} maximum {}} value 16} integer {s
         <spirit:displayName>Verilog Synthesis Wrapper</spirit:displayName>
         <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis.wrapper</spirit:envIdentifier>
         <spirit:language>verilog</spirit:language>
+        <spirit:modelName>design_1_v_vid_in_axi4s_0_0</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_verilogsynthesiswrapper_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri May 11 18:27:33 UTC 2018</spirit:value>
+            <spirit:value>Fri Dec 07 15:10:50 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:c3e1205e</spirit:value>
+            <spirit:value>8:4953fae9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -584,17 +586,18 @@ dency video_comp2_offset format long minimum {} maximum {}} value 16} integer {s
         <spirit:displayName>Verilog Simulation</spirit:displayName>
         <spirit:envIdentifier>verilogSource:vivado.xilinx.com:simulation</spirit:envIdentifier>
         <spirit:language>verilog</spirit:language>
+        <spirit:modelName>v_vid_in_axi4s_v4_0_8</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_verilogbehavioralsimulation_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri May 11 18:27:33 UTC 2018</spirit:value>
+            <spirit:value>Fri Dec 07 15:10:50 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:da5f0593</spirit:value>
+            <spirit:value>8:0b395588</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -603,17 +606,18 @@ dency video_comp2_offset format long minimum {} maximum {}} value 16} integer {s
         <spirit:displayName>Verilog Simulation Wrapper</spirit:displayName>
         <spirit:envIdentifier>verilogSource:vivado.xilinx.com:simulation.wrapper</spirit:envIdentifier>
         <spirit:language>verilog</spirit:language>
+        <spirit:modelName>design_1_v_vid_in_axi4s_0_0</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_verilogsimulationwrapper_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri May 11 18:27:33 UTC 2018</spirit:value>
+            <spirit:value>Fri Dec 07 15:10:50 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:da5f0593</spirit:value>
+            <spirit:value>8:0b395588</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -627,11 +631,11 @@ dency video_comp2_offset format long minimum {} maximum {}} value 16} integer {s
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri May 11 18:37:25 UTC 2018</spirit:value>
+            <spirit:value>Fri Dec 07 15:12:04 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:c3e1205e</spirit:value>
+            <spirit:value>8:4953fae9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1235,9 +1239,9 @@ dency video_comp2_offset format long minimum {} maximum {}} value 16} integer {s
         </spirit:define>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/f931/hdl/v_vid_in_axi4s_v4_0_vl_rfs.v</spirit:name>
+        <spirit:name>../../ipshared/d987/hdl/v_vid_in_axi4s_v4_0_vl_rfs.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>v_vid_in_axi4s_v4_0_7</spirit:logicalName>
+        <spirit:logicalName>v_vid_in_axi4s_v4_0_8</spirit:logicalName>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1261,10 +1265,10 @@ dency video_comp2_offset format long minimum {} maximum {}} value 16} integer {s
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/f931/hdl/v_vid_in_axi4s_v4_0_vl_rfs.v</spirit:name>
+        <spirit:name>../../ipshared/d987/hdl/v_vid_in_axi4s_v4_0_vl_rfs.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-        <spirit:logicalName>v_vid_in_axi4s_v4_0_7</spirit:logicalName>
+        <spirit:logicalName>v_vid_in_axi4s_v4_0_8</spirit:logicalName>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1441,7 +1445,7 @@ dency video_comp2_offset format long minimum {} maximum {}} value 16} integer {s
         <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
         <xilinx:xpmLibrary>XPM_FIFO</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>7</xilinx:coreRevision>
+      <xilinx:coreRevision>8</xilinx:coreRevision>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.ACLK_INTF.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.ACLK_INTF.FREQ_HZ" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
@@ -1458,14 +1462,14 @@ dency video_comp2_offset format long minimum {} maximum {}} value 16} integer {s
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.VIDEO_OUT.TID_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.VIDEO_OUT.TUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.VID_IO_IN_CLK_INTF.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.VID_IO_IN_CLK_INTF.FREQ_HZ" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.VID_IO_IN_CLK_INTF.FREQ_HZ" xilinx:valueSource="default_prop"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_HAS_ASYNC_CLK" xilinx:valueSource="user"/>
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
-      <xilinx:xilinxVersion>2017.3</xilinx:xilinxVersion>
+      <xilinx:xilinxVersion>2018.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="992496b8"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="390b54ac"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="50af9ba9"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="f35d4d51"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="f89cf64e"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="2ca06cd9"/>

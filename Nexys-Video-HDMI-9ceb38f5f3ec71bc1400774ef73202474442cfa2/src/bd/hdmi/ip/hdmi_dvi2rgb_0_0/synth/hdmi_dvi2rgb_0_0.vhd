@@ -46,7 +46,7 @@
 -- 
 -- DO NOT MODIFY THIS FILE.
 
--- IP VLNV: digilentinc.com:ip:dvi2rgb:1.7
+-- IP VLNV: digilentinc.com:ip:dvi2rgb:1.8
 -- IP Revision: 1
 
 LIBRARY ieee;
@@ -60,7 +60,7 @@ ENTITY hdmi_dvi2rgb_0_0 IS
     TMDS_Data_p : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
     TMDS_Data_n : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
     RefClk : IN STD_LOGIC;
-    aRst_n : IN STD_LOGIC;
+    aRst : IN STD_LOGIC;
     vid_pData : OUT STD_LOGIC_VECTOR(23 DOWNTO 0);
     vid_pVDE : OUT STD_LOGIC;
     vid_pHSync : OUT STD_LOGIC;
@@ -73,7 +73,7 @@ ENTITY hdmi_dvi2rgb_0_0 IS
     DDC_SCL_I : IN STD_LOGIC;
     DDC_SCL_O : OUT STD_LOGIC;
     DDC_SCL_T : OUT STD_LOGIC;
-    pRst_n : IN STD_LOGIC
+    pRst : IN STD_LOGIC
   );
 END hdmi_dvi2rgb_0_0;
 
@@ -87,8 +87,7 @@ ARCHITECTURE hdmi_dvi2rgb_0_0_arch OF hdmi_dvi2rgb_0_0 IS
       kClkRange : INTEGER;
       kIDLY_TapValuePs : INTEGER;
       kIDLY_TapWidth : INTEGER;
-      kAddBUFG : BOOLEAN;
-      kEdidFileName : STRING
+      kAddBUFG : BOOLEAN
     );
     PORT (
       TMDS_Clk_p : IN STD_LOGIC;
@@ -121,14 +120,11 @@ ARCHITECTURE hdmi_dvi2rgb_0_0_arch OF hdmi_dvi2rgb_0_0 IS
   ATTRIBUTE CHECK_LICENSE_TYPE OF hdmi_dvi2rgb_0_0_arch : ARCHITECTURE IS "hdmi_dvi2rgb_0_0,dvi2rgb,{}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
-  ATTRIBUTE X_INTERFACE_PARAMETER OF pRst_n: SIGNAL IS "XIL_INTERFACENAME SyncRst_n, POLARITY ACTIVE_LOW";
-  ATTRIBUTE X_INTERFACE_INFO OF pRst_n: SIGNAL IS "xilinx.com:signal:reset:1.0 SyncRst_n RST";
   ATTRIBUTE X_INTERFACE_INFO OF DDC_SCL_T: SIGNAL IS "xilinx.com:interface:iic:1.0 DDC SCL_T";
   ATTRIBUTE X_INTERFACE_INFO OF DDC_SCL_O: SIGNAL IS "xilinx.com:interface:iic:1.0 DDC SCL_O";
   ATTRIBUTE X_INTERFACE_INFO OF DDC_SCL_I: SIGNAL IS "xilinx.com:interface:iic:1.0 DDC SCL_I";
   ATTRIBUTE X_INTERFACE_INFO OF DDC_SDA_T: SIGNAL IS "xilinx.com:interface:iic:1.0 DDC SDA_T";
   ATTRIBUTE X_INTERFACE_INFO OF DDC_SDA_O: SIGNAL IS "xilinx.com:interface:iic:1.0 DDC SDA_O";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF DDC_SDA_I: SIGNAL IS "XIL_INTERFACENAME DDC, BOARD.ASSOCIATED_PARAM IIC_BOARD_INTERFACE";
   ATTRIBUTE X_INTERFACE_INFO OF DDC_SDA_I: SIGNAL IS "xilinx.com:interface:iic:1.0 DDC SDA_I";
   ATTRIBUTE X_INTERFACE_PARAMETER OF PixelClk: SIGNAL IS "XIL_INTERFACENAME PixelClk, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN hdmi_dvi2rgb_0_0_PixelClk";
   ATTRIBUTE X_INTERFACE_INFO OF PixelClk: SIGNAL IS "xilinx.com:signal:clock:1.0 PixelClk CLK";
@@ -136,25 +132,21 @@ ARCHITECTURE hdmi_dvi2rgb_0_0_arch OF hdmi_dvi2rgb_0_0 IS
   ATTRIBUTE X_INTERFACE_INFO OF vid_pHSync: SIGNAL IS "xilinx.com:interface:vid_io:1.0 RGB HSYNC";
   ATTRIBUTE X_INTERFACE_INFO OF vid_pVDE: SIGNAL IS "xilinx.com:interface:vid_io:1.0 RGB ACTIVE_VIDEO";
   ATTRIBUTE X_INTERFACE_INFO OF vid_pData: SIGNAL IS "xilinx.com:interface:vid_io:1.0 RGB DATA";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF aRst_n: SIGNAL IS "XIL_INTERFACENAME AsyncRst_n, POLARITY ACTIVE_LOW";
-  ATTRIBUTE X_INTERFACE_INFO OF aRst_n: SIGNAL IS "xilinx.com:signal:reset:1.0 AsyncRst_n RST";
   ATTRIBUTE X_INTERFACE_PARAMETER OF RefClk: SIGNAL IS "XIL_INTERFACENAME RefClk, FREQ_HZ 200000000, PHASE 0, CLK_DOMAIN hdmi_mig_7series_0_0_ui_clk";
   ATTRIBUTE X_INTERFACE_INFO OF RefClk: SIGNAL IS "xilinx.com:signal:clock:1.0 RefClk CLK";
   ATTRIBUTE X_INTERFACE_INFO OF TMDS_Data_n: SIGNAL IS "digilentinc.com:interface:tmds:1.0 TMDS DATA_N";
   ATTRIBUTE X_INTERFACE_INFO OF TMDS_Data_p: SIGNAL IS "digilentinc.com:interface:tmds:1.0 TMDS DATA_P";
   ATTRIBUTE X_INTERFACE_INFO OF TMDS_Clk_n: SIGNAL IS "digilentinc.com:interface:tmds:1.0 TMDS CLK_N";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF TMDS_Clk_p: SIGNAL IS "XIL_INTERFACENAME TMDS, BOARD.ASSOCIATED_PARAM TMDS_BOARD_INTERFACE";
   ATTRIBUTE X_INTERFACE_INFO OF TMDS_Clk_p: SIGNAL IS "digilentinc.com:interface:tmds:1.0 TMDS CLK_P";
 BEGIN
   U0 : dvi2rgb
     GENERIC MAP (
       kEmulateDDC => true,
-      kRstActiveHigh => false,
-      kClkRange => 2,
+      kRstActiveHigh => true,
+      kClkRange => 1,
       kIDLY_TapValuePs => 78,
       kIDLY_TapWidth => 5,
-      kAddBUFG => false,
-      kEdidFileName => "900p_edid.data"
+      kAddBUFG => true
     )
     PORT MAP (
       TMDS_Clk_p => TMDS_Clk_p,
@@ -162,8 +154,8 @@ BEGIN
       TMDS_Data_p => TMDS_Data_p,
       TMDS_Data_n => TMDS_Data_n,
       RefClk => RefClk,
-      aRst => '0',
-      aRst_n => aRst_n,
+      aRst => aRst,
+      aRst_n => '1',
       vid_pData => vid_pData,
       vid_pVDE => vid_pVDE,
       vid_pHSync => vid_pHSync,
@@ -176,7 +168,7 @@ BEGIN
       DDC_SCL_I => DDC_SCL_I,
       DDC_SCL_O => DDC_SCL_O,
       DDC_SCL_T => DDC_SCL_T,
-      pRst => '0',
-      pRst_n => pRst_n
+      pRst => pRst,
+      pRst_n => '1'
     );
 END hdmi_dvi2rgb_0_0_arch;

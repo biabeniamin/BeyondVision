@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: digilentinc.com:ip:rgb2dvi:1.4
--- IP Revision: 7
+-- IP Revision: 5
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -77,11 +77,7 @@ ARCHITECTURE design_1_rgb2dvi_0_1_arch OF design_1_rgb2dvi_0_1 IS
       kGenerateSerialClk : BOOLEAN;
       kClkPrimitive : STRING;
       kRstActiveHigh : BOOLEAN;
-      kClkRange : INTEGER;
-      kD0Swap : BOOLEAN;
-      kD1Swap : BOOLEAN;
-      kD2Swap : BOOLEAN;
-      kClkSwap : BOOLEAN
+      kClkRange : INTEGER
     );
     PORT (
       TMDS_Clk_p : OUT STD_LOGIC;
@@ -99,7 +95,7 @@ ARCHITECTURE design_1_rgb2dvi_0_1_arch OF design_1_rgb2dvi_0_1 IS
     );
   END COMPONENT rgb2dvi;
   ATTRIBUTE X_CORE_INFO : STRING;
-  ATTRIBUTE X_CORE_INFO OF design_1_rgb2dvi_0_1_arch: ARCHITECTURE IS "rgb2dvi,Vivado 2017.4_AR70530_AR70530";
+  ATTRIBUTE X_CORE_INFO OF design_1_rgb2dvi_0_1_arch: ARCHITECTURE IS "rgb2dvi,Vivado 2018.2";
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF design_1_rgb2dvi_0_1_arch : ARCHITECTURE IS "design_1_rgb2dvi_0_1,rgb2dvi,{}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
@@ -116,21 +112,15 @@ ARCHITECTURE design_1_rgb2dvi_0_1_arch OF design_1_rgb2dvi_0_1 IS
   ATTRIBUTE X_INTERFACE_INFO OF aRst: SIGNAL IS "xilinx.com:signal:reset:1.0 AsyncRst RST";
   ATTRIBUTE X_INTERFACE_INFO OF TMDS_Data_n: SIGNAL IS "digilentinc.com:interface:tmds:1.0 TMDS DATA_N";
   ATTRIBUTE X_INTERFACE_INFO OF TMDS_Data_p: SIGNAL IS "digilentinc.com:interface:tmds:1.0 TMDS DATA_P";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF TMDS_Clk_n: SIGNAL IS "XIL_INTERFACENAME TMDS_Clk_n, ASSOCIATED_RESET aRst_n, FREQ_HZ 100000000, PHASE 0.000";
-  ATTRIBUTE X_INTERFACE_INFO OF TMDS_Clk_n: SIGNAL IS "digilentinc.com:interface:tmds:1.0 TMDS CLK_N, xilinx.com:signal:clock:1.0 TMDS_Clk_n CLK";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF TMDS_Clk_p: SIGNAL IS "XIL_INTERFACENAME TMDS, BOARD.ASSOCIATED_PARAM TMDS_BOARD_INTERFACE, XIL_INTERFACENAME TMDS_Clk_p, FREQ_HZ 100000000, PHASE 0.000";
-  ATTRIBUTE X_INTERFACE_INFO OF TMDS_Clk_p: SIGNAL IS "digilentinc.com:interface:tmds:1.0 TMDS CLK_P, xilinx.com:signal:clock:1.0 TMDS_Clk_p CLK";
+  ATTRIBUTE X_INTERFACE_INFO OF TMDS_Clk_n: SIGNAL IS "digilentinc.com:interface:tmds:1.0 TMDS CLK_N";
+  ATTRIBUTE X_INTERFACE_INFO OF TMDS_Clk_p: SIGNAL IS "digilentinc.com:interface:tmds:1.0 TMDS CLK_P";
 BEGIN
   U0 : rgb2dvi
     GENERIC MAP (
       kGenerateSerialClk => false,
-      kClkPrimitive => "PLL",
+      kClkPrimitive => "MMCM",
       kRstActiveHigh => true,
-      kClkRange => 2,
-      kD0Swap => false,
-      kD1Swap => false,
-      kD2Swap => false,
-      kClkSwap => false
+      kClkRange => 2
     )
     PORT MAP (
       TMDS_Clk_p => TMDS_Clk_p,

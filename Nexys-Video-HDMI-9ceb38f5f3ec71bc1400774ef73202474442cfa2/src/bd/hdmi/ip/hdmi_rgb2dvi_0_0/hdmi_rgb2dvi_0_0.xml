@@ -44,12 +44,6 @@
           </spirit:physicalPort>
         </spirit:portMap>
       </spirit:portMaps>
-      <spirit:parameters>
-        <spirit:parameter>
-          <spirit:name>BOARD.ASSOCIATED_PARAM</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.TMDS.BOARD.ASSOCIATED_PARAM">TMDS_BOARD_INTERFACE</spirit:value>
-        </spirit:parameter>
-      </spirit:parameters>
     </spirit:busInterface>
     <spirit:busInterface>
       <spirit:name>SerialClk</spirit:name>
@@ -273,11 +267,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Dec 07 12:40:15 UTC 2018</spirit:value>
+            <spirit:value>Fri Dec 07 15:04:20 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:2f1c5a6a</spirit:value>
+            <spirit:value>8:ce48bacc</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -293,11 +287,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Dec 07 12:40:15 UTC 2018</spirit:value>
+            <spirit:value>Fri Dec 07 15:04:20 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:2f1c5a6a</spirit:value>
+            <spirit:value>8:ce48bacc</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -313,11 +307,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Dec 07 12:40:15 UTC 2018</spirit:value>
+            <spirit:value>Fri Dec 07 15:04:20 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:7995f8f0</spirit:value>
+            <spirit:value>8:229e82c9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -333,11 +327,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Dec 07 12:40:15 UTC 2018</spirit:value>
+            <spirit:value>Fri Dec 07 15:04:20 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:7995f8f0</spirit:value>
+            <spirit:value>8:229e82c9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -551,7 +545,7 @@
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>kClkPrimitive</spirit:name>
         <spirit:displayName>Kclkprimitive</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.kClkPrimitive">PLL</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.kClkPrimitive">MMCM</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="boolean">
         <spirit:name>kRstActiveHigh</spirit:name>
@@ -609,34 +603,34 @@
         </spirit:define>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/e3fc/src/ClockGen.vhd</spirit:name>
+        <spirit:name>../../ipshared/907a/src/ClockGen.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/e3fc/src/SyncAsync.vhd</spirit:name>
+        <spirit:name>../../ipshared/907a/src/SyncAsync.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/e3fc/src/SyncAsyncReset.vhd</spirit:name>
+        <spirit:name>../../ipshared/907a/src/SyncAsyncReset.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/e3fc/src/DVI_Constants.vhd</spirit:name>
+        <spirit:name>../../ipshared/907a/src/DVI_Constants.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/e3fc/src/OutputSERDES.vhd</spirit:name>
+        <spirit:name>../../ipshared/907a/src/OutputSERDES.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/e3fc/src/TMDS_Encoder.vhd</spirit:name>
+        <spirit:name>../../ipshared/907a/src/TMDS_Encoder.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/e3fc/src/rgb2dvi.vhd</spirit:name>
+        <spirit:name>../../ipshared/907a/src/rgb2dvi.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -651,39 +645,32 @@
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/e3fc/src/ClockGen.vhd</spirit:name>
+        <spirit:name>../../ipshared/907a/src/ClockGen.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/e3fc/src/SyncAsync.vhd</spirit:name>
+        <spirit:name>../../ipshared/907a/src/SyncAsync.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/e3fc/src/SyncAsyncReset.vhd</spirit:name>
+        <spirit:name>../../ipshared/907a/src/SyncAsyncReset.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/e3fc/src/DVI_Constants.vhd</spirit:name>
+        <spirit:name>../../ipshared/907a/src/DVI_Constants.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/e3fc/src/OutputSERDES.vhd</spirit:name>
+        <spirit:name>../../ipshared/907a/src/OutputSERDES.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/e3fc/src/TMDS_Encoder.vhd</spirit:name>
+        <spirit:name>../../ipshared/907a/src/TMDS_Encoder.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/e3fc/src/rgb2dvi.vhd</spirit:name>
+        <spirit:name>../../ipshared/907a/src/rgb2dvi.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -705,12 +692,12 @@
     <spirit:parameter>
       <spirit:name>kRstActiveHigh</spirit:name>
       <spirit:displayName>Reset active high</spirit:displayName>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.kRstActiveHigh" spirit:order="1100">false</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.kRstActiveHigh" spirit:order="1100" spirit:configGroups="0 UnGrouped checkBox">false</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>kClkPrimitive</spirit:name>
       <spirit:displayName>MMCM/PLL</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.kClkPrimitive" spirit:choiceRef="choice_list_e099fe6c" spirit:order="1100">PLL</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.kClkPrimitive" spirit:choiceRef="choice_list_e099fe6c" spirit:order="1100" spirit:configGroups="0 UnGrouped radioGroup">MMCM</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -722,44 +709,40 @@
     <spirit:parameter>
       <spirit:name>kGenerateSerialClk</spirit:name>
       <spirit:displayName>Generate SerialClk internally from pixel clock.</spirit:displayName>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.kGenerateSerialClk" spirit:order="1200">false</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.kGenerateSerialClk" spirit:order="1200" spirit:configGroups="0 UnGrouped checkBox">false</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>kClkRange</spirit:name>
       <spirit:displayName>TMDS clock range</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.kClkRange" spirit:choiceRef="choice_pairs_c59fad91">2</spirit:value>
-    </spirit:parameter>
-    <spirit:parameter>
-      <spirit:name>TMDS_BOARD_INTERFACE</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.TMDS_BOARD_INTERFACE"/>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.kClkRange" spirit:choiceRef="choice_pairs_c59fad91" spirit:configGroups="0 UnGrouped radioGroup">2</spirit:value>
     </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
       <xilinx:displayName>RGB to DVI Video Encoder (Source)</xilinx:displayName>
-      <xilinx:coreRevision>2</xilinx:coreRevision>
+      <xilinx:coreRevision>5</xilinx:coreRevision>
       <xilinx:tags>
         <xilinx:tag xilinx:name="xilinx.com:ip:rgb2dvi:1.0_ARCHIVE_LOCATION">C:/Users/Elod/Documents/Vivado_Projects/dgl_repo/ip/rgb2dvi_v1_0</xilinx:tag>
         <xilinx:tag xilinx:name="digilentinc.com:ip:rgb2dvi:1.0_ARCHIVE_LOCATION">C:/Users/Elod/Documents/Vivado_Projects/dgl_repo/ip/rgb2dvi_v1_0</xilinx:tag>
         <xilinx:tag xilinx:name="digilentinc.com:ip:rgb2dvi:1.1_ARCHIVE_LOCATION">C:/Users/Elod/Documents/Vivado_Projects/dgl_repo</xilinx:tag>
-        <xilinx:tag xilinx:name="digilentinc.com:ip:rgb2dvi:1.2_ARCHIVE_LOCATION">D:/vivado-library/ip/rgb2dvi_v1_2</xilinx:tag>
-        <xilinx:tag xilinx:name="digilentinc.com:ip:rgb2dvi:1.3_ARCHIVE_LOCATION">D:/xcam/common-repo/vivado-library/ip/rgb2dvi</xilinx:tag>
+        <xilinx:tag xilinx:name="digilentinc.com:ip:rgb2dvi:1.2_ARCHIVE_LOCATION">C:/Users/Elod/Documents/Vivado_Projects/dgl_repo</xilinx:tag>
       </xilinx:tags>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.PIXELCLK.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SERIALCLK.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.kClkPrimitive" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.kClkRange" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.kGenerateSerialClk" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.kRstActiveHigh" xilinx:valueSource="user"/>
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
-      <xilinx:xilinxVersion>2015.4</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="7a329503"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="e9160520"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="16681a3c"/>
-      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="dcf10faf"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="f34f6586"/>
+      <xilinx:xilinxVersion>2014.4</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="6d33c469"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="562106cc"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="8f54593c"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="51521899"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="6469a587"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

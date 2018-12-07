@@ -1,10 +1,10 @@
-// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2017.4_AR70530_AR70530 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-// Date        : Sun May  6 16:58:19 2018
-// Host        : DESKTOP-HQKVQ13 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top design_1_xlconstant_0_0 -prefix
-//               design_1_xlconstant_0_0_ design_1_xlconstant_0_0_sim_netlist.v
+// Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+// Date        : Fri Dec  7 17:11:59 2018
+// Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim
+//               D:/Beni/Digilent19/Zybo_EV_Platform/block_compile.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/design_1_xlconstant_0_0_sim_netlist.v
 // Design      : design_1_xlconstant_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "design_1_xlconstant_0_0,xlconstant_v1_1_3_xlconstant,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "xlconstant_v1_1_3_xlconstant,Vivado 2017.4_AR70530_AR70530" *) 
+(* CHECK_LICENSE_TYPE = "design_1_xlconstant_0_0,xlconstant_v1_1_5_xlconstant,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "xlconstant_v1_1_5_xlconstant,Vivado 2018.2" *) 
 (* NotValidForBitStream *)
 module design_1_xlconstant_0_0
    (dout);
