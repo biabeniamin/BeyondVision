@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Sat Dec  8 20:11:13 2018
+--Date        : Sat Dec  8 21:10:26 2018
 --Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
 --Command     : generate_target hdmi.bd
 --Design      : hdmi
@@ -5979,7 +5979,7 @@ entity hdmi is
     usb_uart_txd : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of hdmi : entity is "hdmi,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=hdmi,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=55,numReposBlks=38,numNonXlnxBlks=3,numHierBlks=17,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,synth_mode=Global}";
+  attribute CORE_GENERATION_INFO of hdmi : entity is "hdmi,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=hdmi,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=57,numReposBlks=40,numNonXlnxBlks=3,numHierBlks=17,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,synth_mode=Global}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of hdmi : entity is "hdmi.hwdef";
 end hdmi;
@@ -6642,6 +6642,50 @@ architecture STRUCTURE of hdmi is
     m_axis_tuser : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component hdmi_axis_subset_converter_0_0;
+  component hdmi_axis_subset_converter_0_1 is
+  port (
+    aclk : in STD_LOGIC;
+    aresetn : in STD_LOGIC;
+    s_axis_tvalid : in STD_LOGIC;
+    s_axis_tready : out STD_LOGIC;
+    s_axis_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    s_axis_tlast : in STD_LOGIC;
+    s_axis_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axis_tvalid : out STD_LOGIC;
+    m_axis_tready : in STD_LOGIC;
+    m_axis_tdata : out STD_LOGIC_VECTOR ( 23 downto 0 );
+    m_axis_tlast : out STD_LOGIC;
+    m_axis_tuser : out STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component hdmi_axis_subset_converter_0_1;
+  component hdmi_image_filter_0_0 is
+  port (
+    INPUT_STREAM_TVALID : in STD_LOGIC;
+    INPUT_STREAM_TREADY : out STD_LOGIC;
+    INPUT_STREAM_TDATA : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    INPUT_STREAM_TKEEP : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    INPUT_STREAM_TSTRB : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    INPUT_STREAM_TUSER : in STD_LOGIC_VECTOR ( 0 to 0 );
+    INPUT_STREAM_TLAST : in STD_LOGIC_VECTOR ( 0 to 0 );
+    INPUT_STREAM_TID : in STD_LOGIC_VECTOR ( 0 to 0 );
+    INPUT_STREAM_TDEST : in STD_LOGIC_VECTOR ( 0 to 0 );
+    OUTPUT_STREAM_TVALID : out STD_LOGIC;
+    OUTPUT_STREAM_TREADY : in STD_LOGIC;
+    OUTPUT_STREAM_TDATA : out STD_LOGIC_VECTOR ( 23 downto 0 );
+    OUTPUT_STREAM_TKEEP : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    OUTPUT_STREAM_TSTRB : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    OUTPUT_STREAM_TUSER : out STD_LOGIC_VECTOR ( 0 to 0 );
+    OUTPUT_STREAM_TLAST : out STD_LOGIC_VECTOR ( 0 to 0 );
+    OUTPUT_STREAM_TID : out STD_LOGIC_VECTOR ( 0 to 0 );
+    OUTPUT_STREAM_TDEST : out STD_LOGIC_VECTOR ( 0 to 0 );
+    ap_clk : in STD_LOGIC;
+    ap_rst_n : in STD_LOGIC;
+    ap_start : in STD_LOGIC;
+    ap_done : out STD_LOGIC;
+    ap_ready : out STD_LOGIC;
+    ap_idle : out STD_LOGIC
+  );
+  end component hdmi_image_filter_0_0;
   signal SYS_Rst_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal TMDS_IN_1_CLK_N : STD_LOGIC;
   signal TMDS_IN_1_CLK_P : STD_LOGIC;
@@ -6729,6 +6773,11 @@ architecture STRUCTURE of hdmi is
   signal axis_subset_converter_0_M_AXIS_TREADY : STD_LOGIC;
   signal axis_subset_converter_0_M_AXIS_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
   signal axis_subset_converter_0_M_AXIS_TVALID : STD_LOGIC;
+  signal axis_subset_converter_1_M_AXIS_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
+  signal axis_subset_converter_1_M_AXIS_TLAST : STD_LOGIC;
+  signal axis_subset_converter_1_M_AXIS_TREADY : STD_LOGIC;
+  signal axis_subset_converter_1_M_AXIS_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal axis_subset_converter_1_M_AXIS_TVALID : STD_LOGIC;
   signal dvi2rgb_0_DDC_SCL_I : STD_LOGIC;
   signal dvi2rgb_0_DDC_SCL_O : STD_LOGIC;
   signal dvi2rgb_0_DDC_SCL_T : STD_LOGIC;
@@ -6741,6 +6790,12 @@ architecture STRUCTURE of hdmi is
   signal dvi2rgb_0_RGB_HSYNC : STD_LOGIC;
   signal dvi2rgb_0_RGB_VSYNC : STD_LOGIC;
   signal dvi2rgb_0_aPixelClkLckd : STD_LOGIC;
+  signal image_filter_0_OUTPUT_STREAM_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
+  signal image_filter_0_OUTPUT_STREAM_TKEEP : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal image_filter_0_OUTPUT_STREAM_TLAST : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal image_filter_0_OUTPUT_STREAM_TREADY : STD_LOGIC;
+  signal image_filter_0_OUTPUT_STREAM_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal image_filter_0_OUTPUT_STREAM_TVALID : STD_LOGIC;
   signal microblaze_0_M_AXI_DC_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal microblaze_0_M_AXI_DC_ARBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal microblaze_0_M_AXI_DC_ARCACHE : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -7035,6 +7090,14 @@ architecture STRUCTURE of hdmi is
   signal NLW_axi_vdma_0_mm2s_frame_ptr_out_UNCONNECTED : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal NLW_axi_vdma_0_s2mm_frame_ptr_out_UNCONNECTED : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal NLW_axis_subset_converter_0_m_axis_tkeep_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal NLW_axis_subset_converter_1_aresetn_UNCONNECTED : STD_LOGIC;
+  signal NLW_image_filter_0_ap_done_UNCONNECTED : STD_LOGIC;
+  signal NLW_image_filter_0_ap_idle_UNCONNECTED : STD_LOGIC;
+  signal NLW_image_filter_0_ap_ready_UNCONNECTED : STD_LOGIC;
+  signal NLW_image_filter_0_ap_rst_n_UNCONNECTED : STD_LOGIC;
+  signal NLW_image_filter_0_OUTPUT_STREAM_TDEST_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal NLW_image_filter_0_OUTPUT_STREAM_TID_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal NLW_image_filter_0_OUTPUT_STREAM_TSTRB_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal NLW_mdm_1_Debug_SYS_Rst_UNCONNECTED : STD_LOGIC;
   signal NLW_microblaze_0_M_AXI_IC_AWLOCK_UNCONNECTED : STD_LOGIC;
   signal NLW_microblaze_0_M_AXI_IC_AWVALID_UNCONNECTED : STD_LOGIC;
@@ -7073,6 +7136,7 @@ architecture STRUCTURE of hdmi is
   signal NLW_v_axi4s_vid_out_0_status_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal NLW_v_tc_0_fsync_out_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_v_tc_1_intc_if_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal NLW_v_vid_in_axi4s_0_aresetn_UNCONNECTED : STD_LOGIC;
   signal NLW_v_vid_in_axi4s_0_fid_UNCONNECTED : STD_LOGIC;
   signal NLW_v_vid_in_axi4s_0_overflow_UNCONNECTED : STD_LOGIC;
   signal NLW_v_vid_in_axi4s_0_underflow_UNCONNECTED : STD_LOGIC;
@@ -7447,12 +7511,12 @@ axi_vdma_0: component hdmi_axi_vdma_0_0
       s_axi_lite_wready => microblaze_0_axi_periph_M01_AXI_WREADY,
       s_axi_lite_wvalid => microblaze_0_axi_periph_M01_AXI_WVALID(0),
       s_axis_s2mm_aclk => mig_7series_0_ui_addn_clk_0,
-      s_axis_s2mm_tdata(23 downto 0) => v_vid_in_axi4s_0_video_out_TDATA(23 downto 0),
-      s_axis_s2mm_tkeep(2 downto 0) => B"111",
-      s_axis_s2mm_tlast => v_vid_in_axi4s_0_video_out_TLAST,
-      s_axis_s2mm_tready => v_vid_in_axi4s_0_video_out_TREADY,
-      s_axis_s2mm_tuser(0) => v_vid_in_axi4s_0_video_out_TUSER,
-      s_axis_s2mm_tvalid => v_vid_in_axi4s_0_video_out_TVALID
+      s_axis_s2mm_tdata(23 downto 0) => image_filter_0_OUTPUT_STREAM_TDATA(23 downto 0),
+      s_axis_s2mm_tkeep(2 downto 0) => image_filter_0_OUTPUT_STREAM_TKEEP(2 downto 0),
+      s_axis_s2mm_tlast => image_filter_0_OUTPUT_STREAM_TLAST(0),
+      s_axis_s2mm_tready => image_filter_0_OUTPUT_STREAM_TREADY,
+      s_axis_s2mm_tuser(0) => image_filter_0_OUTPUT_STREAM_TUSER(0),
+      s_axis_s2mm_tvalid => image_filter_0_OUTPUT_STREAM_TVALID
     );
 axis_subset_converter_0: component hdmi_axis_subset_converter_0_0
      port map (
@@ -7470,6 +7534,21 @@ axis_subset_converter_0: component hdmi_axis_subset_converter_0_0
       s_axis_tready => axi_vdma_0_M_AXIS_MM2S_TREADY,
       s_axis_tuser(0) => axi_vdma_0_M_AXIS_MM2S_TUSER(0),
       s_axis_tvalid => axi_vdma_0_M_AXIS_MM2S_TVALID
+    );
+axis_subset_converter_1: component hdmi_axis_subset_converter_0_1
+     port map (
+      aclk => mig_7series_0_ui_addn_clk_0,
+      aresetn => NLW_axis_subset_converter_1_aresetn_UNCONNECTED,
+      m_axis_tdata(23 downto 0) => axis_subset_converter_1_M_AXIS_TDATA(23 downto 0),
+      m_axis_tlast => axis_subset_converter_1_M_AXIS_TLAST,
+      m_axis_tready => axis_subset_converter_1_M_AXIS_TREADY,
+      m_axis_tuser(0) => axis_subset_converter_1_M_AXIS_TUSER(0),
+      m_axis_tvalid => axis_subset_converter_1_M_AXIS_TVALID,
+      s_axis_tdata(23 downto 0) => v_vid_in_axi4s_0_video_out_TDATA(23 downto 0),
+      s_axis_tlast => v_vid_in_axi4s_0_video_out_TLAST,
+      s_axis_tready => v_vid_in_axi4s_0_video_out_TREADY,
+      s_axis_tuser(0) => v_vid_in_axi4s_0_video_out_TUSER,
+      s_axis_tvalid => v_vid_in_axi4s_0_video_out_TVALID
     );
 dvi2rgb_0: component hdmi_dvi2rgb_0_0
      port map (
@@ -7492,6 +7571,33 @@ dvi2rgb_0: component hdmi_dvi2rgb_0_0
       vid_pHSync => dvi2rgb_0_RGB_HSYNC,
       vid_pVDE => dvi2rgb_0_RGB_ACTIVE_VIDEO,
       vid_pVSync => dvi2rgb_0_RGB_VSYNC
+    );
+image_filter_0: component hdmi_image_filter_0_0
+     port map (
+      INPUT_STREAM_TDATA(23 downto 0) => axis_subset_converter_1_M_AXIS_TDATA(23 downto 0),
+      INPUT_STREAM_TDEST(0) => '0',
+      INPUT_STREAM_TID(0) => '0',
+      INPUT_STREAM_TKEEP(2 downto 0) => B"111",
+      INPUT_STREAM_TLAST(0) => axis_subset_converter_1_M_AXIS_TLAST,
+      INPUT_STREAM_TREADY => axis_subset_converter_1_M_AXIS_TREADY,
+      INPUT_STREAM_TSTRB(2 downto 0) => B"111",
+      INPUT_STREAM_TUSER(0) => axis_subset_converter_1_M_AXIS_TUSER(0),
+      INPUT_STREAM_TVALID => axis_subset_converter_1_M_AXIS_TVALID,
+      OUTPUT_STREAM_TDATA(23 downto 0) => image_filter_0_OUTPUT_STREAM_TDATA(23 downto 0),
+      OUTPUT_STREAM_TDEST(0) => NLW_image_filter_0_OUTPUT_STREAM_TDEST_UNCONNECTED(0),
+      OUTPUT_STREAM_TID(0) => NLW_image_filter_0_OUTPUT_STREAM_TID_UNCONNECTED(0),
+      OUTPUT_STREAM_TKEEP(2 downto 0) => image_filter_0_OUTPUT_STREAM_TKEEP(2 downto 0),
+      OUTPUT_STREAM_TLAST(0) => image_filter_0_OUTPUT_STREAM_TLAST(0),
+      OUTPUT_STREAM_TREADY => image_filter_0_OUTPUT_STREAM_TREADY,
+      OUTPUT_STREAM_TSTRB(2 downto 0) => NLW_image_filter_0_OUTPUT_STREAM_TSTRB_UNCONNECTED(2 downto 0),
+      OUTPUT_STREAM_TUSER(0) => image_filter_0_OUTPUT_STREAM_TUSER(0),
+      OUTPUT_STREAM_TVALID => image_filter_0_OUTPUT_STREAM_TVALID,
+      ap_clk => mig_7series_0_ui_addn_clk_0,
+      ap_done => NLW_image_filter_0_ap_done_UNCONNECTED,
+      ap_idle => NLW_image_filter_0_ap_idle_UNCONNECTED,
+      ap_ready => NLW_image_filter_0_ap_ready_UNCONNECTED,
+      ap_rst_n => NLW_image_filter_0_ap_rst_n_UNCONNECTED,
+      ap_start => '0'
     );
 mdm_1: component hdmi_mdm_1_0
      port map (
@@ -8118,7 +8224,7 @@ v_vid_in_axi4s_0: component hdmi_v_vid_in_axi4s_0_0
      port map (
       aclk => mig_7series_0_ui_addn_clk_0,
       aclken => '1',
-      aresetn => '1',
+      aresetn => NLW_v_vid_in_axi4s_0_aresetn_UNCONNECTED,
       axis_enable => '1',
       fid => NLW_v_vid_in_axi4s_0_fid_UNCONNECTED,
       m_axis_video_tdata(23 downto 0) => v_vid_in_axi4s_0_video_out_TDATA(23 downto 0),

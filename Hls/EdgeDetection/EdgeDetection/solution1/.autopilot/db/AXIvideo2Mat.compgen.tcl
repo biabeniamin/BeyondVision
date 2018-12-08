@@ -11,14 +11,14 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 9 \
+    id 3 \
     name AXI_video_strm_V_data_V \
     reset_level 1 \
     sync_rst true \
     corename {INPUT_STREAM} \
     metadata {  } \
     op interface \
-    ports { INPUT_STREAM_TDATA { I 32 vector } } \
+    ports { INPUT_STREAM_TDATA { I 24 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'AXI_video_strm_V_data_V'"
@@ -30,14 +30,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 10 \
+    id 4 \
     name AXI_video_strm_V_keep_V \
     reset_level 1 \
     sync_rst true \
     corename {INPUT_STREAM} \
     metadata {  } \
     op interface \
-    ports { INPUT_STREAM_TKEEP { I 4 vector } } \
+    ports { INPUT_STREAM_TKEEP { I 3 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'AXI_video_strm_V_keep_V'"
@@ -49,14 +49,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 11 \
+    id 5 \
     name AXI_video_strm_V_strb_V \
     reset_level 1 \
     sync_rst true \
     corename {INPUT_STREAM} \
     metadata {  } \
     op interface \
-    ports { INPUT_STREAM_TSTRB { I 4 vector } } \
+    ports { INPUT_STREAM_TSTRB { I 3 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'AXI_video_strm_V_strb_V'"
@@ -68,7 +68,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 12 \
+    id 6 \
     name AXI_video_strm_V_user_V \
     reset_level 1 \
     sync_rst true \
@@ -87,7 +87,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 13 \
+    id 7 \
     name AXI_video_strm_V_last_V \
     reset_level 1 \
     sync_rst true \
@@ -106,7 +106,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 14 \
+    id 8 \
     name AXI_video_strm_V_id_V \
     reset_level 1 \
     sync_rst true \
@@ -125,7 +125,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 15 \
+    id 9 \
     name AXI_video_strm_V_dest_V \
     reset_level 1 \
     sync_rst true \
@@ -143,7 +143,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 16 \
+    id 10 \
     name img_rows_V \
     type fifo \
     dir I \
@@ -151,14 +151,14 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_img_rows_V \
     op interface \
-    ports { img_rows_V_dout { I 32 vector } img_rows_V_empty_n { I 1 bit } img_rows_V_read { O 1 bit } } \
+    ports { img_rows_V_dout { I 11 vector } img_rows_V_empty_n { I 1 bit } img_rows_V_read { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 17 \
+    id 11 \
     name img_cols_V \
     type fifo \
     dir I \
@@ -166,14 +166,14 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_img_cols_V \
     op interface \
-    ports { img_cols_V_dout { I 32 vector } img_cols_V_empty_n { I 1 bit } img_cols_V_read { O 1 bit } } \
+    ports { img_cols_V_dout { I 12 vector } img_cols_V_empty_n { I 1 bit } img_cols_V_read { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 18 \
+    id 12 \
     name img_data_stream_0_V \
     type fifo \
     dir O \
@@ -188,7 +188,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 19 \
+    id 13 \
     name img_data_stream_1_V \
     type fifo \
     dir O \
@@ -203,7 +203,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 20 \
+    id 14 \
     name img_data_stream_2_V \
     type fifo \
     dir O \
@@ -218,7 +218,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 21 \
+    id 15 \
     name img_rows_V_out \
     type fifo \
     dir O \
@@ -226,14 +226,14 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_img_rows_V_out \
     op interface \
-    ports { img_rows_V_out_din { O 32 vector } img_rows_V_out_full_n { I 1 bit } img_rows_V_out_write { O 1 bit } } \
+    ports { img_rows_V_out_din { O 11 vector } img_rows_V_out_full_n { I 1 bit } img_rows_V_out_write { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 22 \
+    id 16 \
     name img_cols_V_out \
     type fifo \
     dir O \
@@ -241,7 +241,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_img_cols_V_out \
     op interface \
-    ports { img_cols_V_out_din { O 32 vector } img_cols_V_out_full_n { I 1 bit } img_cols_V_out_write { O 1 bit } } \
+    ports { img_cols_V_out_din { O 12 vector } img_cols_V_out_full_n { I 1 bit } img_cols_V_out_write { O 1 bit } } \
 } "
 }
 

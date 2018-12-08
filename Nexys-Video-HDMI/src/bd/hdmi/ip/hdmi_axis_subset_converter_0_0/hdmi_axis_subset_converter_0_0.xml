@@ -553,11 +553,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Dec 08 18:11:54 UTC 2018</spirit:value>
+            <spirit:value>Sat Dec 08 18:45:03 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:2104db69</spirit:value>
+            <spirit:value>8:8349d6f9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -573,11 +573,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Dec 08 18:11:54 UTC 2018</spirit:value>
+            <spirit:value>Sat Dec 08 18:45:03 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:2104db69</spirit:value>
+            <spirit:value>8:8349d6f9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -599,11 +599,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Dec 08 18:11:54 UTC 2018</spirit:value>
+            <spirit:value>Sat Dec 08 18:45:03 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:3a7262aa</spirit:value>
+            <spirit:value>8:c070b76f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -619,11 +619,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Dec 08 18:11:54 UTC 2018</spirit:value>
+            <spirit:value>Sat Dec 08 18:45:03 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:3a7262aa</spirit:value>
+            <spirit:value>8:c070b76f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
