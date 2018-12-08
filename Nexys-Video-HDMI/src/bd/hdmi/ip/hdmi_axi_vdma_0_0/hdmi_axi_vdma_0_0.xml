@@ -6274,7 +6274,7 @@ Note: Frame Delay must be less than or equal to Frame Buffers or an undefined re
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:cebc4430</spirit:value>
+            <spirit:value>8:70683692</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -6290,11 +6290,11 @@ Note: Frame Delay must be less than or equal to Frame Buffers or an undefined re
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Dec 08 19:10:27 UTC 2018</spirit:value>
+            <spirit:value>Sat Dec 08 19:34:16 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:cebc4430</spirit:value>
+            <spirit:value>8:70683692</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -6337,7 +6337,7 @@ Note: Frame Delay must be less than or equal to Frame Buffers or an undefined re
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:5315d5fd</spirit:value>
+            <spirit:value>8:8784022e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -6353,11 +6353,11 @@ Note: Frame Delay must be less than or equal to Frame Buffers or an undefined re
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Dec 08 19:10:27 UTC 2018</spirit:value>
+            <spirit:value>Sat Dec 08 19:34:16 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:5315d5fd</spirit:value>
+            <spirit:value>8:8784022e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>

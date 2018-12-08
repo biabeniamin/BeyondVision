@@ -468,16 +468,17 @@ proc create_root_design { parentCell } {
   set axi_vdma_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_vdma:6.3 axi_vdma_0 ]
   set_property -dict [ list \
    CONFIG.c_addr_width {32} \
+   CONFIG.c_include_mm2s_dre {1} \
    CONFIG.c_include_s2mm {1} \
-   CONFIG.c_include_s2mm_dre {0} \
-   CONFIG.c_m_axi_mm2s_data_width {128} \
-   CONFIG.c_m_axi_s2mm_data_width {128} \
+   CONFIG.c_include_s2mm_dre {1} \
+   CONFIG.c_m_axi_mm2s_data_width {64} \
+   CONFIG.c_m_axi_s2mm_data_width {64} \
    CONFIG.c_m_axis_mm2s_tdata_width {24} \
-   CONFIG.c_mm2s_genlock_mode {0} \
-   CONFIG.c_mm2s_linebuffer_depth {4096} \
-   CONFIG.c_mm2s_max_burst_length {32} \
-   CONFIG.c_s2mm_genlock_mode {0} \
-   CONFIG.c_s2mm_linebuffer_depth {4096} \
+   CONFIG.c_mm2s_genlock_mode {3} \
+   CONFIG.c_mm2s_linebuffer_depth {512} \
+   CONFIG.c_mm2s_max_burst_length {8} \
+   CONFIG.c_s2mm_genlock_mode {2} \
+   CONFIG.c_s2mm_linebuffer_depth {512} \
    CONFIG.c_s2mm_max_burst_length {32} \
  ] $axi_vdma_0
 
