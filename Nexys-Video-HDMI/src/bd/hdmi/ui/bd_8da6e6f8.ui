@@ -12,7 +12,7 @@ preplace port DDC -pg 1 -y 1510 -defaultsOSRD
 preplace port reset -pg 1 -y 1130 -defaultsOSRD
 preplace portBus hdmi_hpd -pg 1 -y -40 -defaultsOSRD
 preplace portBus hdmi_rx_txen -pg 1 -y -210 -defaultsOSRD
-preplace inst v_axi4s_vid_out_0 -pg 1 -lvl 7 -y 890 -defaultsOSRD
+preplace inst v_axi4s_vid_out_0 -pg 1 -lvl 7 -y 900 -defaultsOSRD
 preplace inst rst_mig_7series_0_pxl -pg 1 -lvl 3 -y 1340 -defaultsOSRD
 preplace inst image_filter_0 -pg 1 -lvl 5 -y 940 -defaultsOSRD
 preplace inst v_tc_0 -pg 1 -lvl 6 -y 630 -defaultsOSRD
@@ -45,7 +45,7 @@ preplace netloc microblaze_0_axi_periph_M04_AXI 1 3 3 1460J 810 NJ 810 2460
 preplace netloc sys_clk_i_1 1 0 8 NJ 1150 NJ 1150 1070J 1200 NJ 1200 1990J 1280 NJ 1280 3030J 1150 NJ
 preplace netloc axi_vdma_0_s2mm_introut 1 0 7 -30J 1190 NJ 1190 1040J 1220 NJ 1220 1960J 1230 NJ 1230 2940
 preplace netloc axi_gpio_video_ip2intc_irpt 1 0 7 -40J 1780 NJ 1780 NJ 1780 NJ 1780 NJ 1780 NJ 1780 2940
-preplace netloc axi_dynclk_0_PXL_CLK_O 1 4 4 1960J 840 2570 480 3000 1010 3350J
+preplace netloc axi_dynclk_0_PXL_CLK_O 1 4 4 1960J 840 2570 480 3000 1040 3350J
 preplace netloc SYS_Rst_1 1 1 4 NJ 630 NJ 630 NJ 630 1950J
 preplace netloc mig_7series_0_DDR3 1 8 1 NJ
 preplace netloc mig_7series_0_ui_addn_clk_0 1 4 5 2010 1260 2570J 1260 NJ 1260 NJ 1260 3660
@@ -64,7 +64,7 @@ preplace netloc mig_7series_0_ui_addn_clk_2 1 3 6 1460J 1270 NJ 1270 NJ 1270 NJ 
 preplace netloc microblaze_0_ilmb_1 1 4 1 2000
 preplace netloc microblaze_0_M_AXI_DC 1 4 3 2010J 670 2470J 320 NJ
 preplace netloc axi_mem_intercon_M00_AXI 1 7 1 3360
-preplace netloc axi_dynclk_0_PXL_CLK_5X_O 1 4 4 2000J 850 NJ 850 2960J 1020 3380J
+preplace netloc axi_dynclk_0_PXL_CLK_5X_O 1 4 4 2000J 850 NJ 850 2970J 1050 3380J
 preplace netloc rgb2dvi_0_TMDS 1 8 1 NJ
 preplace netloc microblaze_0_axi_periph_M05_AXI 1 1 5 770J 680 NJ 680 NJ 680 1980J 690 2440
 preplace netloc microblaze_0_axi_dp 1 4 1 1950
@@ -90,7 +90,7 @@ preplace netloc image_filter_0_OUTPUT_STREAM 1 5 1 2520
 preplace netloc v_vid_in_axi4s_0_vtiming_out 1 5 1 2540
 preplace netloc v_tc_0_vtiming_out 1 6 1 2990
 preplace netloc microblaze_0_debug 1 2 2 NJ 510 1430
-preplace netloc axi_vdma_0_M_AXI_S2MM 1 6 1 2970
+preplace netloc axi_vdma_0_M_AXI_S2MM 1 6 1 2960
 preplace netloc reset_1 1 0 8 NJ 1130 NJ 1130 1060J 1240 NJ 1240 NJ 1240 NJ 1240 3010J 1110 NJ
 preplace netloc axi_gpio_video_gpio_io_o 1 6 3 2980 -40 NJ -40 NJ
 preplace netloc dvi2rgb_0_RGB 1 4 1 1990

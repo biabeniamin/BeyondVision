@@ -6,8 +6,8 @@ preplace port DDR -pg 1 -y 630 -defaultsOSRD
 preplace port FIXED_IO -pg 1 -y 650 -defaultsOSRD
 preplace port hdmi_in_ddc -pg 1 -y 500 -defaultsOSRD
 preplace portBus HDMI_HPD_IN -pg 1 -y 130 -defaultsOSRD
-preplace inst ila_5 -pg 1 -lvl 6 -y 1080 -defaultsOSRD
 preplace inst v_axi4s_vid_out_0 -pg 1 -lvl 8 -y 1040 -defaultsOSRD
+preplace inst ila_5 -pg 1 -lvl 6 -y 1080 -defaultsOSRD
 preplace inst rst_ps7_0_50M -pg 1 -lvl 1 -y 600 -defaultsOSRD
 preplace inst axi_vdma_0 -pg 1 -lvl 7 -y 780 -defaultsOSRD
 preplace inst image_filter_0 -pg 1 -lvl 5 -y 860 -defaultsOSRD
