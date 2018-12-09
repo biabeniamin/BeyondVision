@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
 // Date        : Fri Dec  7 17:14:15 2018
 // Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               d:/Beni/Digilent19/Zybo_EV_Platform/block_compile.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_4/design_1_auto_pc_4_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top design_1_auto_pc_4 -prefix
+//               design_1_auto_pc_4_ design_1_auto_pc_4_stub.v
 // Design      : design_1_auto_pc_4
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1

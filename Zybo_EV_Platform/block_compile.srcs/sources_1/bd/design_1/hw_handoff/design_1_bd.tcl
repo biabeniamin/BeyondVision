@@ -220,8 +220,11 @@ proc create_root_design { parentCell } {
   # Create instance: dvi2rgb_1, and set properties
   set dvi2rgb_1 [ create_bd_cell -type ip -vlnv digilentinc.com:ip:dvi2rgb:1.9 dvi2rgb_1 ]
   set_property -dict [ list \
+   CONFIG.IIC_BOARD_INTERFACE {hdmi_in_ddc} \
+   CONFIG.TMDS_BOARD_INTERFACE {hdmi_in} \
    CONFIG.kAddBUFG {true} \
    CONFIG.kClkRange {1} \
+   CONFIG.kEdidFileName {720p_edid.data} \
    CONFIG.kEnableSerialClkOutput {false} \
    CONFIG.kRstActiveHigh {true} \
  ] $dvi2rgb_1

@@ -33,8 +33,8 @@ preplace netloc ps7_0_axi_periph_M02_AXI 1 3 2 NJ 720 1370
 preplace netloc v_axi4s_vid_out_0_underflow 1 6 1 2290
 preplace netloc v_axi4s_vid_out_0_overflow 1 6 1 2300
 preplace netloc xlconstant_1_dout 1 5 1 1940
-preplace netloc axis_subset_converter_0_M_AXIS 1 4 1 1390
 preplace netloc v_vid_in_axi4s_0_video_out 1 3 2 1040 170 NJ
+preplace netloc axis_subset_converter_0_M_AXIS 1 4 1 1390
 preplace netloc axi_dynclk_0_PXL_CLK_O 1 4 3 1470 80 1930 80 2330
 preplace netloc dvi2rgb_1_DDC 1 7 1 2910J
 preplace netloc axi_vdma_0_M_AXI_MM2S 1 5 1 1860

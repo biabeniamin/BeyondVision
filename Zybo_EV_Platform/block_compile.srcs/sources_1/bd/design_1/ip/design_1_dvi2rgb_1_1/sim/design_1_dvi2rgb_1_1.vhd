@@ -87,7 +87,8 @@ ARCHITECTURE design_1_dvi2rgb_1_1_arch OF design_1_dvi2rgb_1_1 IS
       kClkRange : INTEGER;
       kIDLY_TapValuePs : INTEGER;
       kIDLY_TapWidth : INTEGER;
-      kAddBUFG : BOOLEAN
+      kAddBUFG : BOOLEAN;
+      kEdidFileName : STRING
     );
     PORT (
       TMDS_Clk_p : IN STD_LOGIC;
@@ -121,6 +122,7 @@ ARCHITECTURE design_1_dvi2rgb_1_1_arch OF design_1_dvi2rgb_1_1 IS
   ATTRIBUTE X_INTERFACE_INFO OF DDC_SCL_I: SIGNAL IS "xilinx.com:interface:iic:1.0 DDC SCL_I";
   ATTRIBUTE X_INTERFACE_INFO OF DDC_SDA_T: SIGNAL IS "xilinx.com:interface:iic:1.0 DDC SDA_T";
   ATTRIBUTE X_INTERFACE_INFO OF DDC_SDA_O: SIGNAL IS "xilinx.com:interface:iic:1.0 DDC SDA_O";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF DDC_SDA_I: SIGNAL IS "XIL_INTERFACENAME DDC, BOARD.ASSOCIATED_PARAM IIC_BOARD_INTERFACE";
   ATTRIBUTE X_INTERFACE_INFO OF DDC_SDA_I: SIGNAL IS "xilinx.com:interface:iic:1.0 DDC SDA_I";
   ATTRIBUTE X_INTERFACE_PARAMETER OF PixelClk: SIGNAL IS "XIL_INTERFACENAME PixelClk, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_1_dvi2rgb_1_1_PixelClk";
   ATTRIBUTE X_INTERFACE_INFO OF PixelClk: SIGNAL IS "xilinx.com:signal:clock:1.0 PixelClk CLK";
@@ -133,6 +135,7 @@ ARCHITECTURE design_1_dvi2rgb_1_1_arch OF design_1_dvi2rgb_1_1 IS
   ATTRIBUTE X_INTERFACE_INFO OF TMDS_Data_n: SIGNAL IS "digilentinc.com:interface:tmds:1.0 TMDS DATA_N";
   ATTRIBUTE X_INTERFACE_INFO OF TMDS_Data_p: SIGNAL IS "digilentinc.com:interface:tmds:1.0 TMDS DATA_P";
   ATTRIBUTE X_INTERFACE_INFO OF TMDS_Clk_n: SIGNAL IS "digilentinc.com:interface:tmds:1.0 TMDS CLK_N";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF TMDS_Clk_p: SIGNAL IS "XIL_INTERFACENAME TMDS, BOARD.ASSOCIATED_PARAM TMDS_BOARD_INTERFACE";
   ATTRIBUTE X_INTERFACE_INFO OF TMDS_Clk_p: SIGNAL IS "digilentinc.com:interface:tmds:1.0 TMDS CLK_P";
 BEGIN
   U0 : dvi2rgb
@@ -142,7 +145,8 @@ BEGIN
       kClkRange => 1,
       kIDLY_TapValuePs => 78,
       kIDLY_TapWidth => 5,
-      kAddBUFG => true
+      kAddBUFG => true,
+      kEdidFileName => "720p_edid.data"
     )
     PORT MAP (
       TMDS_Clk_p => TMDS_Clk_p,

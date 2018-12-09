@@ -1,0 +1,49 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -y 60 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 80 -defaultsOSRD
+preplace port hdmi_in -pg 1 -y 250 -defaultsOSRD
+preplace port hdmi_in_ddc -pg 1 -y 250 -defaultsOSRD
+preplace inst v_axi4s_vid_out_0 -pg 1 -lvl 4 -y 480 -defaultsOSRD
+preplace inst v_tc_0 -pg 1 -lvl 4 -y 770 -defaultsOSRD
+preplace inst axi_vdma_0 -pg 1 -lvl 1 -y -20 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 2 -y 430 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 5 -y 280 -defaultsOSRD
+preplace inst axi_dynclk_0 -pg 1 -lvl 3 -y 830 -defaultsOSRD
+preplace inst rst_ps7_0_200M -pg 1 -lvl 4 -y 170 -defaultsOSRD
+preplace inst v_vid_in_axi4s_0 -pg 1 -lvl 3 -y 460 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 5 -y 50 -defaultsOSRD
+preplace inst dvi2rgb_0 -pg 1 -lvl 2 -y 280 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 3 -y 120 -defaultsOSRD
+preplace netloc ps7_0_axi_periph_M02_AXI 1 2 4 710J 630 NJ 630 NJ 630 1970
+preplace netloc processing_system7_0_DDR 1 3 3 1200J -130 NJ -130 2020
+preplace netloc v_vid_in_axi4s_0_video_out 1 0 4 0 370 NJ 370 680J 350 1200
+preplace netloc axi_dynclk_0_PXL_CLK_O 1 3 1 1210
+preplace netloc axi_vdma_0_M_AXI_MM2S 1 1 4 NJ -80 NJ -80 NJ -80 1650
+preplace netloc processing_system7_0_M_AXI_GP0 1 3 2 1230J -50 NJ
+preplace netloc axi_smc_M00_AXI 1 2 4 700 -150 NJ -150 NJ -150 1990
+preplace netloc axi_vdma_0_M_AXIS_MM2S 1 1 3 NJ -40 NJ -40 1240
+preplace netloc rst_ps7_0_200M_peripheral_aresetn 1 0 5 10 860 NJ 860 690J 920 1250J 350 1660
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 3 1 1260
+preplace netloc ps7_0_axi_periph_M01_AXI 1 3 3 1260 600 NJ 600 1980
+preplace netloc hdmi_in_1 1 0 2 N 250 N
+preplace netloc dvi2rgb_0_DDC 1 2 4 670J -140 NJ -140 NJ -140 2010
+preplace netloc xlconstant_0_dout 1 2 1 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 3 3 1210J -110 NJ -110 2000
+preplace netloc rst_ps7_0_200M_interconnect_aresetn 1 4 1 1630
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 5 20 110 380 110 690 0 1220 70 1640
+preplace netloc v_tc_0_vtiming_out 1 3 2 1260 360 1640
+preplace netloc axi_vdma_0_M_AXI_S2MM 1 1 4 NJ -60 NJ -60 NJ -60 1620
+preplace netloc ps7_0_axi_periph_M00_AXI 1 0 6 0 -150 NJ -150 690J -120 NJ -120 NJ -120 1980
+preplace netloc processing_system7_0_FCLK_CLK1 1 2 2 700J 340 1200
+preplace netloc dvi2rgb_0_RGB 1 2 1 670
+levelinfo -pg 1 -20 210 560 970 1450 1820 2050 -top -310 -bot 930
+",
+}
+{
+   da_axi4_cnt: "5",
+   da_clkrst_cnt: "6",
+   da_ps7_cnt: "1",
+}
