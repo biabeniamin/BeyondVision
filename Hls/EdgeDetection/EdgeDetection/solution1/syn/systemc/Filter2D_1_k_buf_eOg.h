@@ -22,7 +22,7 @@ using namespace sc_dt;
 struct Filter2D_1_k_buf_eOg_ram : public sc_core::sc_module {
 
   static const unsigned DataWidth = 8;
-  static const unsigned AddressRange = 1280;
+  static const unsigned AddressRange = 1600;
   static const unsigned AddressWidth = 11;
 
 //latency = 1
@@ -88,7 +88,7 @@ SC_MODULE(Filter2D_1_k_buf_eOg) {
 
 
 static const unsigned DataWidth = 8;
-static const unsigned AddressRange = 1280;
+static const unsigned AddressRange = 1600;
 static const unsigned AddressWidth = 11;
 
 sc_core::sc_in <sc_lv<AddressWidth> > address0;

@@ -50,8 +50,8 @@ struct Block_proc : public sc_module {
     static const sc_logic ap_const_logic_0;
     static const sc_lv<1> ap_ST_fsm_state1;
     static const sc_lv<32> ap_const_lv32_0;
-    static const sc_lv<11> ap_const_lv11_2D0;
-    static const sc_lv<12> ap_const_lv12_500;
+    static const sc_lv<11> ap_const_lv11_384;
+    static const sc_lv<12> ap_const_lv12_640;
     static const bool ap_const_boolean_1;
     // Thread declarations
     void thread_ap_clk_no_reset_();

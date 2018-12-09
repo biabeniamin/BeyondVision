@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Sun Dec  9 16:27:56 2018
+--Date        : Sun Dec  9 16:46:48 2018
 --Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -1368,7 +1368,7 @@ entity design_1 is
     hdmi_in_ddc_sda_t : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=17,numReposBlks=12,numNonXlnxBlks=2,numHierBlks=5,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=5,da_clkrst_cnt=6,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=18,numReposBlks=13,numNonXlnxBlks=3,numHierBlks=5,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=5,da_clkrst_cnt=6,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
 end design_1;
@@ -1801,6 +1801,20 @@ architecture STRUCTURE of design_1 is
     s00_axi_rready : in STD_LOGIC
   );
   end component design_1_axi_dynclk_0_0;
+  component design_1_rgb2dvi_0_0 is
+  port (
+    TMDS_Clk_p : out STD_LOGIC;
+    TMDS_Clk_n : out STD_LOGIC;
+    TMDS_Data_p : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    TMDS_Data_n : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    aRst : in STD_LOGIC;
+    vid_pData : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    vid_pVDE : in STD_LOGIC;
+    vid_pHSync : in STD_LOGIC;
+    vid_pVSync : in STD_LOGIC;
+    PixelClk : in STD_LOGIC
+  );
+  end component design_1_rgb2dvi_0_0;
   signal axi_dynclk_0_PXL_CLK_O : STD_LOGIC;
   signal axi_smc_M00_AXI_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal axi_smc_M00_AXI_ARBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -1999,6 +2013,10 @@ architecture STRUCTURE of design_1 is
   signal ps7_0_axi_periph_M02_AXI_WVALID : STD_LOGIC;
   signal rst_ps7_0_200M_interconnect_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal rst_ps7_0_200M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal v_axi4s_vid_out_0_vid_io_out_ACTIVE_VIDEO : STD_LOGIC;
+  signal v_axi4s_vid_out_0_vid_io_out_DATA : STD_LOGIC_VECTOR ( 23 downto 0 );
+  signal v_axi4s_vid_out_0_vid_io_out_HSYNC : STD_LOGIC;
+  signal v_axi4s_vid_out_0_vid_io_out_VSYNC : STD_LOGIC;
   signal v_tc_0_vtiming_out_ACTIVE_VIDEO : STD_LOGIC;
   signal v_tc_0_vtiming_out_HBLANK : STD_LOGIC;
   signal v_tc_0_vtiming_out_HSYNC : STD_LOGIC;
@@ -2027,21 +2045,21 @@ architecture STRUCTURE of design_1 is
   signal NLW_processing_system7_0_S_AXI_HP0_WACOUNT_UNCONNECTED : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal NLW_processing_system7_0_S_AXI_HP0_WCOUNT_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal NLW_processing_system7_0_USB0_PORT_INDCTL_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal NLW_rgb2dvi_0_TMDS_Clk_n_UNCONNECTED : STD_LOGIC;
+  signal NLW_rgb2dvi_0_TMDS_Clk_p_UNCONNECTED : STD_LOGIC;
+  signal NLW_rgb2dvi_0_TMDS_Data_n_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal NLW_rgb2dvi_0_TMDS_Data_p_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal NLW_rst_ps7_0_200M_mb_reset_UNCONNECTED : STD_LOGIC;
   signal NLW_rst_ps7_0_200M_bus_struct_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_ps7_0_200M_peripheral_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_v_axi4s_vid_out_0_locked_UNCONNECTED : STD_LOGIC;
   signal NLW_v_axi4s_vid_out_0_overflow_UNCONNECTED : STD_LOGIC;
   signal NLW_v_axi4s_vid_out_0_underflow_UNCONNECTED : STD_LOGIC;
-  signal NLW_v_axi4s_vid_out_0_vid_active_video_UNCONNECTED : STD_LOGIC;
   signal NLW_v_axi4s_vid_out_0_vid_field_id_UNCONNECTED : STD_LOGIC;
   signal NLW_v_axi4s_vid_out_0_vid_hblank_UNCONNECTED : STD_LOGIC;
-  signal NLW_v_axi4s_vid_out_0_vid_hsync_UNCONNECTED : STD_LOGIC;
   signal NLW_v_axi4s_vid_out_0_vid_vblank_UNCONNECTED : STD_LOGIC;
-  signal NLW_v_axi4s_vid_out_0_vid_vsync_UNCONNECTED : STD_LOGIC;
   signal NLW_v_axi4s_vid_out_0_vtg_ce_UNCONNECTED : STD_LOGIC;
   signal NLW_v_axi4s_vid_out_0_status_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal NLW_v_axi4s_vid_out_0_vid_data_UNCONNECTED : STD_LOGIC_VECTOR ( 23 downto 0 );
   signal NLW_v_tc_0_irq_UNCONNECTED : STD_LOGIC;
   signal NLW_v_tc_0_fsync_out_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_v_vid_in_axi4s_0_fid_UNCONNECTED : STD_LOGIC;
@@ -2507,6 +2525,19 @@ ps7_0_axi_periph: entity work.design_1_ps7_0_axi_periph_0
       S00_AXI_wstrb(3 downto 0) => processing_system7_0_M_AXI_GP0_WSTRB(3 downto 0),
       S00_AXI_wvalid => processing_system7_0_M_AXI_GP0_WVALID
     );
+rgb2dvi_0: component design_1_rgb2dvi_0_0
+     port map (
+      PixelClk => axi_dynclk_0_PXL_CLK_O,
+      TMDS_Clk_n => NLW_rgb2dvi_0_TMDS_Clk_n_UNCONNECTED,
+      TMDS_Clk_p => NLW_rgb2dvi_0_TMDS_Clk_p_UNCONNECTED,
+      TMDS_Data_n(2 downto 0) => NLW_rgb2dvi_0_TMDS_Data_n_UNCONNECTED(2 downto 0),
+      TMDS_Data_p(2 downto 0) => NLW_rgb2dvi_0_TMDS_Data_p_UNCONNECTED(2 downto 0),
+      aRst => '0',
+      vid_pData(23 downto 0) => v_axi4s_vid_out_0_vid_io_out_DATA(23 downto 0),
+      vid_pHSync => v_axi4s_vid_out_0_vid_io_out_HSYNC,
+      vid_pVDE => v_axi4s_vid_out_0_vid_io_out_ACTIVE_VIDEO,
+      vid_pVSync => v_axi4s_vid_out_0_vid_io_out_VSYNC
+    );
 rst_ps7_0_200M: component design_1_rst_ps7_0_200M_0
      port map (
       aux_reset_in => '1',
@@ -2535,14 +2566,14 @@ v_axi4s_vid_out_0: component design_1_v_axi4s_vid_out_0_0
       s_axis_video_tvalid => axi_vdma_0_M_AXIS_MM2S_TVALID,
       status(31 downto 0) => NLW_v_axi4s_vid_out_0_status_UNCONNECTED(31 downto 0),
       underflow => NLW_v_axi4s_vid_out_0_underflow_UNCONNECTED,
-      vid_active_video => NLW_v_axi4s_vid_out_0_vid_active_video_UNCONNECTED,
-      vid_data(23 downto 0) => NLW_v_axi4s_vid_out_0_vid_data_UNCONNECTED(23 downto 0),
+      vid_active_video => v_axi4s_vid_out_0_vid_io_out_ACTIVE_VIDEO,
+      vid_data(23 downto 0) => v_axi4s_vid_out_0_vid_io_out_DATA(23 downto 0),
       vid_field_id => NLW_v_axi4s_vid_out_0_vid_field_id_UNCONNECTED,
       vid_hblank => NLW_v_axi4s_vid_out_0_vid_hblank_UNCONNECTED,
-      vid_hsync => NLW_v_axi4s_vid_out_0_vid_hsync_UNCONNECTED,
+      vid_hsync => v_axi4s_vid_out_0_vid_io_out_HSYNC,
       vid_io_out_ce => '1',
       vid_vblank => NLW_v_axi4s_vid_out_0_vid_vblank_UNCONNECTED,
-      vid_vsync => NLW_v_axi4s_vid_out_0_vid_vsync_UNCONNECTED,
+      vid_vsync => v_axi4s_vid_out_0_vid_io_out_VSYNC,
       vtg_active_video => v_tc_0_vtiming_out_ACTIVE_VIDEO,
       vtg_ce => NLW_v_axi4s_vid_out_0_vtg_ce_UNCONNECTED,
       vtg_field_id => '0',

@@ -368,9 +368,9 @@ assign dst1_data_stream_V_din = src_data_stream_V_dout;
 
 assign dst2_data_stream_V_din = src_data_stream_V_dout;
 
-assign exitcond3_fu_140_p2 = ((t_V_reg_118 == 10'd720) ? 1'b1 : 1'b0);
+assign exitcond3_fu_140_p2 = ((t_V_reg_118 == 10'd900) ? 1'b1 : 1'b0);
 
-assign exitcond_fu_152_p2 = ((t_V_3_reg_129 == 11'd1280) ? 1'b1 : 1'b0);
+assign exitcond_fu_152_p2 = ((t_V_3_reg_129 == 11'd1600) ? 1'b1 : 1'b0);
 
 assign i_V_fu_146_p2 = (t_V_reg_118 + 10'd1);
 

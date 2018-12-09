@@ -136,7 +136,7 @@
 
 <Node id="10" bw="1" op_0_bw="10" op_1_bw="10">
 <![CDATA[
-:1  %exitcond3 = icmp eq i10 %t_V, -304
+:1  %exitcond3 = icmp eq i10 %t_V, -124
 
 ]]></Node>
 <StgValue><ssdm name="exitcond3"/></StgValue>
@@ -151,7 +151,7 @@
 
 <Node id="11" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-:2  call void (...)* @_ssdm_op_SpecLoopTripCount(i64 720, i64 720, i64 720)
+:2  call void (...)* @_ssdm_op_SpecLoopTripCount(i64 900, i64 900, i64 900)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -278,7 +278,7 @@
 
 <Node id="20" bw="1" op_0_bw="11" op_1_bw="11">
 <![CDATA[
-:1  %exitcond = icmp eq i11 %t_V_3, -768
+:1  %exitcond = icmp eq i11 %t_V_3, -448
 
 ]]></Node>
 <StgValue><ssdm name="exitcond"/></StgValue>
@@ -293,7 +293,7 @@
 
 <Node id="21" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-:2  call void (...)* @_ssdm_op_SpecLoopTripCount(i64 1280, i64 1280, i64 1280)
+:2  call void (...)* @_ssdm_op_SpecLoopTripCount(i64 1600, i64 1600, i64 1600)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>

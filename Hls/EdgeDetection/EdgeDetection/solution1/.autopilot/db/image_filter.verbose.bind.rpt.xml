@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'image_filter'" level="0">
-<item name = "Date">Sat Dec  8 21:07:58 2018
+<item name = "Date">Sun Dec  9 19:58:47 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">EdgeDetection</item>
@@ -24,22 +24,22 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">943938, 943938, 943922, 943922, dataflow</column>
+<column name="">1467918, 1467918, 1467902, 1467902, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_AddWeighted_fu_420">AddWeighted, 943921, 943921, 943921, 943921, none</column>
-<column name="grp_Sobel_fu_427">Sobel, 930660, 930660, 930660, 930660, none</column>
-<column name="grp_Sobel_1_fu_433">Sobel_1, 930660, 930660, 930660, 930660, none</column>
-<column name="grp_GaussianBlur_fu_439">GaussianBlur, 930660, 930660, 930660, 930660, none</column>
-<column name="grp_AXIvideo2Mat_fu_445">AXIvideo2Mat, 3, 926643, 3, 926643, none</column>
-<column name="grp_CvtColor_1_fu_470">CvtColor_1, 1, 925921, 1, 925921, none</column>
-<column name="grp_Mat2AXIvideo_fu_480">Mat2AXIvideo, 924481, 924481, 924481, 924481, none</column>
-<column name="grp_CvtColor_fu_501">CvtColor, 923761, 923761, 923761, 923761, none</column>
-<column name="grp_Duplicate_fu_509">Duplicate, 923761, 923761, 923761, 923761, none</column>
+<column name="grp_AddWeighted_fu_420">AddWeighted, 1467901, 1467901, 1467901, 1467901, none</column>
+<column name="grp_Sobel_fu_427">Sobel, 1451320, 1451320, 1451320, 1451320, none</column>
+<column name="grp_Sobel_1_fu_433">Sobel_1, 1451320, 1451320, 1451320, 1451320, none</column>
+<column name="grp_GaussianBlur_fu_439">GaussianBlur, 1451320, 1451320, 1451320, 1451320, none</column>
+<column name="grp_AXIvideo2Mat_fu_445">AXIvideo2Mat, 3, 1446303, 3, 1446303, none</column>
+<column name="grp_CvtColor_1_fu_470">CvtColor_1, 1, 1445401, 1, 1445401, none</column>
+<column name="grp_Mat2AXIvideo_fu_480">Mat2AXIvideo, 1443601, 1443601, 1443601, 1443601, none</column>
+<column name="grp_CvtColor_fu_501">CvtColor, 1442701, 1442701, 1442701, 1442701, none</column>
+<column name="grp_Duplicate_fu_509">Duplicate, 1442701, 1442701, 1442701, 1442701, none</column>
 <column name="StgValue_36_Block_proc_fu_516">Block_proc, 0, 0, 0, 0, none</column>
 </table>
 </item>

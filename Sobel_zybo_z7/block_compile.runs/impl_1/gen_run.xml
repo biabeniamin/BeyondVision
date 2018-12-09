@@ -3,9 +3,9 @@
   <File Type="ROUTE-PWR" Name="design_1_wrapper_power_routed.rpt"/>
   <File Type="PA-TCL" Name="design_1_wrapper.tcl"/>
   <File Type="PWROPT-DCP" Name="design_1_wrapper_pwropt.dcp"/>
+  <File Type="OPT-DCP" Name="design_1_wrapper_opt.dcp"/>
   <File Type="ROUTE-PWR-SUM" Name="design_1_wrapper_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="design_1_wrapper_reports.tcl"/>
-  <File Type="OPT-DCP" Name="design_1_wrapper_opt.dcp"/>
   <File Type="BG-DRC" Name="design_1_wrapper.drc"/>
   <File Type="OPT-HWDEF" Name="design_1_wrapper.hwdef"/>
   <File Type="OPT-DRC" Name="design_1_wrapper_drc_opted.rpt"/>
@@ -23,16 +23,16 @@
   <File Type="ROUTE-BLACKBOX-DCP" Name="design_1_wrapper_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="design_1_wrapper_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="design_1_wrapper_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="design_1_wrapper_drc_routed.rpx"/>
   <File Type="BITSTR-LTX" Name="design_1_wrapper.ltx"/>
+  <File Type="ROUTE-DRC-RPX" Name="design_1_wrapper_drc_routed.rpx"/>
   <File Type="BITSTR-MSK" Name="design_1_wrapper.msk"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="design_1_wrapper_methodology_drc_routed.rpt"/>
   <File Type="BITSTR-MMI" Name="design_1_wrapper.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="design_1_wrapper_methodology_drc_routed.rpt"/>
   <File Type="BG-BGN" Name="design_1_wrapper.bgn"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="design_1_wrapper_methodology_drc_routed.rpx"/>
   <File Type="BITSTR-RBT" Name="design_1_wrapper.rbt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="design_1_wrapper_methodology_drc_routed.pb"/>
   <File Type="BITSTR-SYSDEF" Name="design_1_wrapper.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="design_1_wrapper_methodology_drc_routed.pb"/>
   <File Type="BG-BIN" Name="design_1_wrapper.bin"/>
   <File Type="ROUTE-PWR-RPX" Name="design_1_wrapper_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="design_1_wrapper_route_status.rpt"/>
@@ -40,8 +40,8 @@
   <File Type="ROUTE-TIMINGSUMMARY" Name="design_1_wrapper_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="design_1_wrapper_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="design_1_wrapper_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-CLK" Name="design_1_wrapper_clock_utilization_routed.rpt"/>
   <File Type="RDI-RDI" Name="design_1_wrapper.vdi"/>
+  <File Type="ROUTE-CLK" Name="design_1_wrapper_clock_utilization_routed.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="design_1_wrapper_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="design_1_wrapper_postroute_physopt_bb.dcp"/>
   <File Type="BITSTR-NKY" Name="design_1_wrapper.nky"/>
@@ -101,22 +101,22 @@
   <BlockFileSet Type="BlockSrcs" Name="design_1_xlconstant_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_v_tc_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_v_tc_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_rgb2dvi_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_rst_ps7_0_50M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_rgb2dvi_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_vdma_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_dvi2rgb_1_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_v_vid_in_axi4s_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_v_axi4s_vid_out_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_dvi2rgb_1_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_v_axi4s_vid_out_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_ila_1_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_dynclk_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_axis_subset_converter_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_ila_4_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axis_subset_converter_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_image_filter_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_ila_3_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axis_subset_converter_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_ila_3_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_ila_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_ila_0_0"/>

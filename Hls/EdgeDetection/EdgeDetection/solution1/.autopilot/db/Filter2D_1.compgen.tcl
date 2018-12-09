@@ -414,7 +414,7 @@ set MemName Filter2D_1_k_buf_eOg
 set CoreName ap_simcore_mem
 set PortList { 1 0 }
 set DataWd 8
-set AddrRange 1280
+set AddrRange 1600
 set AddrWd 11
 set impl_style block
 set TrueReset 0

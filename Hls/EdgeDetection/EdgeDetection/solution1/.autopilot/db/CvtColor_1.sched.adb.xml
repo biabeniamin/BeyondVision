@@ -259,7 +259,7 @@ entry:8  br label %0
 
 <Node id="20" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-:3  call void (...)* @_ssdm_op_SpecLoopTripCount(i64 0, i64 720, i64 0)
+:3  call void (...)* @_ssdm_op_SpecLoopTripCount(i64 0, i64 900, i64 0)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -416,7 +416,7 @@ entry:8  br label %0
 
 <Node id="31" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-:3  call void (...)* @_ssdm_op_SpecLoopTripCount(i64 0, i64 1280, i64 0)
+:3  call void (...)* @_ssdm_op_SpecLoopTripCount(i64 0, i64 1600, i64 0)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>

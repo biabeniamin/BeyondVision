@@ -94,9 +94,9 @@ struct Duplicate : public sc_module {
     static const sc_lv<10> ap_const_lv10_0;
     static const sc_lv<32> ap_const_lv32_3;
     static const sc_lv<11> ap_const_lv11_0;
-    static const sc_lv<10> ap_const_lv10_2D0;
+    static const sc_lv<10> ap_const_lv10_384;
     static const sc_lv<10> ap_const_lv10_1;
-    static const sc_lv<11> ap_const_lv11_500;
+    static const sc_lv<11> ap_const_lv11_640;
     static const sc_lv<11> ap_const_lv11_1;
     // Thread declarations
     void thread_ap_clk_no_reset_();

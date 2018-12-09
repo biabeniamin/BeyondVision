@@ -698,7 +698,7 @@ entry:21  br label %._crit_edge1.i
 
 <Node id="57" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-.preheader186.i:4  call void (...)* @_ssdm_op_SpecLoopTripCount(i64 0, i64 720, i64 0)
+.preheader186.i:4  call void (...)* @_ssdm_op_SpecLoopTripCount(i64 0, i64 900, i64 0)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -968,7 +968,7 @@ entry:21  br label %._crit_edge1.i
 
 <Node id="70" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-:5  call void (...)* @_ssdm_op_SpecLoopTripCount(i64 0, i64 1280, i64 0)
+:5  call void (...)* @_ssdm_op_SpecLoopTripCount(i64 0, i64 1600, i64 0)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>

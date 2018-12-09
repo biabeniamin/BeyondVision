@@ -152,8 +152,8 @@ always @ (*) begin
     ap_block_state1 = ((ap_start == 1'b0) | (img_0_cols_V_out_full_n == 1'b0) | (img_0_rows_V_out_full_n == 1'b0) | (ap_done_reg == 1'b1));
 end
 
-assign img_0_cols_V_out_din = 12'd1280;
+assign img_0_cols_V_out_din = 12'd1600;
 
-assign img_0_rows_V_out_din = 11'd720;
+assign img_0_rows_V_out_din = 11'd900;
 
 endmodule //Block_proc

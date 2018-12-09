@@ -49,7 +49,7 @@ entry:1  call void (...)* @_ssdm_op_SpecInterface(i11* %img_0_rows_V_out, [8 x i
 
 <Node id="5" bw="0" op_0_bw="0" op_1_bw="11" op_2_bw="11">
 <![CDATA[
-entry:2  call void @_ssdm_op_Write.ap_fifo.i11P(i11* %img_0_rows_V_out, i11 720)
+entry:2  call void @_ssdm_op_Write.ap_fifo.i11P(i11* %img_0_rows_V_out, i11 900)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -64,7 +64,7 @@ entry:2  call void @_ssdm_op_Write.ap_fifo.i11P(i11* %img_0_rows_V_out, i11 720)
 
 <Node id="6" bw="0" op_0_bw="0" op_1_bw="12" op_2_bw="12">
 <![CDATA[
-entry:3  call void @_ssdm_op_Write.ap_fifo.i12P(i12* %img_0_cols_V_out, i12 1280)
+entry:3  call void @_ssdm_op_Write.ap_fifo.i12P(i12* %img_0_cols_V_out, i12 1600)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>

@@ -62,11 +62,11 @@ architecture behav of Mat2AXIvideo is
     constant ap_const_lv11_0 : STD_LOGIC_VECTOR (10 downto 0) := "00000000000";
     constant ap_const_lv3_7 : STD_LOGIC_VECTOR (2 downto 0) := "111";
     constant ap_const_lv3_0 : STD_LOGIC_VECTOR (2 downto 0) := "000";
-    constant ap_const_lv10_2D0 : STD_LOGIC_VECTOR (9 downto 0) := "1011010000";
+    constant ap_const_lv10_384 : STD_LOGIC_VECTOR (9 downto 0) := "1110000100";
     constant ap_const_lv10_1 : STD_LOGIC_VECTOR (9 downto 0) := "0000000001";
-    constant ap_const_lv11_500 : STD_LOGIC_VECTOR (10 downto 0) := "10100000000";
+    constant ap_const_lv11_640 : STD_LOGIC_VECTOR (10 downto 0) := "11001000000";
     constant ap_const_lv11_1 : STD_LOGIC_VECTOR (10 downto 0) := "00000000001";
-    constant ap_const_lv11_4FF : STD_LOGIC_VECTOR (10 downto 0) := "10011111111";
+    constant ap_const_lv11_63F : STD_LOGIC_VECTOR (10 downto 0) := "11000111111";
 
     signal ap_done_reg : STD_LOGIC := '0';
     signal ap_CS_fsm : STD_LOGIC_VECTOR (3 downto 0) := "0001";
@@ -956,9 +956,9 @@ begin
         end if; 
     end process;
 
-    axi_last_V_fu_228_p2 <= "1" when (t_V_1_reg_188 = ap_const_lv11_4FF) else "0";
-    exitcond2_fu_204_p2 <= "1" when (t_V_reg_177 = ap_const_lv10_2D0) else "0";
-    exitcond_fu_216_p2 <= "1" when (t_V_1_reg_188 = ap_const_lv11_500) else "0";
+    axi_last_V_fu_228_p2 <= "1" when (t_V_1_reg_188 = ap_const_lv11_63F) else "0";
+    exitcond2_fu_204_p2 <= "1" when (t_V_reg_177 = ap_const_lv10_384) else "0";
+    exitcond_fu_216_p2 <= "1" when (t_V_1_reg_188 = ap_const_lv11_640) else "0";
     i_V_fu_210_p2 <= std_logic_vector(unsigned(t_V_reg_177) + unsigned(ap_const_lv10_1));
 
     img_data_stream_0_V_blk_n_assign_proc : process(img_data_stream_0_V_empty_n, ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_block_pp0_stage0, exitcond_reg_270)

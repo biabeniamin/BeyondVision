@@ -333,7 +333,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>1f9dc16c</spirit:value>
+            <spirit:value>7b9c8d2e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -352,7 +352,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>6c969d80</spirit:value>
+            <spirit:value>e872aa96</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -371,7 +371,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>7f82eeaa</spirit:value>
+            <spirit:value>bfd5d827</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -390,7 +390,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>3fa74aa7</spirit:value>
+            <spirit:value>6d6395a0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1419,7 +1419,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
       <spirit:file>
         <spirit:name>hdl/vhdl/image_filter.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_eebc6ea1</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_3f36ebf1</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1709,7 +1709,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>latency</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="5">943938</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="5">1467918</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>II</spirit:name>
@@ -1726,15 +1726,15 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
       </xilinx:taxonomies>
       <xilinx:displayName>Image_filter</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>1812082108</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2018-12-08T19:08:30Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>1812092005</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2018-12-09T18:05:36Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="4fa735d2"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="7de02ce9"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="dc15bb61"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="4566ec59"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="e4a9c7df"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="93bd43a9"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

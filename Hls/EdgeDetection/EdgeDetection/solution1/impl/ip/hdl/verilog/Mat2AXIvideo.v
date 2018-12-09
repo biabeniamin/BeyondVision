@@ -922,11 +922,11 @@ assign ap_block_state5_pp0_stage0_iter2 = ~(1'b1 == 1'b1);
 
 assign ap_enable_pp0 = (ap_idle_pp0 ^ 1'b1);
 
-assign axi_last_V_fu_228_p2 = ((t_V_1_reg_188 == 11'd1279) ? 1'b1 : 1'b0);
+assign axi_last_V_fu_228_p2 = ((t_V_1_reg_188 == 11'd1599) ? 1'b1 : 1'b0);
 
-assign exitcond2_fu_204_p2 = ((t_V_reg_177 == 10'd720) ? 1'b1 : 1'b0);
+assign exitcond2_fu_204_p2 = ((t_V_reg_177 == 10'd900) ? 1'b1 : 1'b0);
 
-assign exitcond_fu_216_p2 = ((t_V_1_reg_188 == 11'd1280) ? 1'b1 : 1'b0);
+assign exitcond_fu_216_p2 = ((t_V_1_reg_188 == 11'd1600) ? 1'b1 : 1'b0);
 
 assign i_V_fu_210_p2 = (t_V_reg_177 + 10'd1);
 

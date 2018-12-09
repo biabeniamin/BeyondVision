@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'AddWeighted'
 ================================================================
-* Date:           Sat Dec  8 21:07:57 2018
+* Date:           Sun Dec  9 19:58:45 2018
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        EdgeDetection
@@ -25,25 +25,25 @@
 
 + Latency (clock cycles): 
     * Summary: 
-    +--------+--------+--------+--------+---------+
-    |     Latency     |     Interval    | Pipeline|
-    |   min  |   max  |   min  |   max  |   Type  |
-    +--------+--------+--------+--------+---------+
-    |  943921|  943921|  943921|  943921|   none  |
-    +--------+--------+--------+--------+---------+
+    +---------+---------+---------+---------+---------+
+    |      Latency      |      Interval     | Pipeline|
+    |   min   |   max   |   min   |   max   |   Type  |
+    +---------+---------+---------+---------+---------+
+    |  1467901|  1467901|  1467901|  1467901|   none  |
+    +---------+---------+---------+---------+---------+
 
     + Detail: 
         * Instance: 
         N/A
 
         * Loop: 
-        +---------------+--------+--------+----------+-----------+-----------+------+----------+
-        |               |     Latency     | Iteration|  Initiation Interval  | Trip |          |
-        |   Loop Name   |   min  |   max  |  Latency |  achieved |   target  | Count| Pipelined|
-        +---------------+--------+--------+----------+-----------+-----------+------+----------+
-        |- loop_height  |  943920|  943920|      1311|          -|          -|   720|    no    |
-        | + loop_width  |    1308|    1308|        30|          1|          1|  1280|    yes   |
-        +---------------+--------+--------+----------+-----------+-----------+------+----------+
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+        |               |      Latency      | Iteration|  Initiation Interval  | Trip |          |
+        |   Loop Name   |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- loop_height  |  1467900|  1467900|      1631|          -|          -|   900|    no    |
+        | + loop_width  |     1628|     1628|        30|          1|          1|  1600|    yes   |
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
 
 ============================================================
 + Verbose Summary: Synthesis Manager
@@ -158,10 +158,10 @@ ST_1 : Operation 37 [1/1] (1.66ns)   --->   "br label %0" [C:/Xilinx/Vivado/2018
 
 State 2 <SV = 1> <Delay = 2.67>
 ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%t_V = phi i10 [ 0, %._crit_edge3 ], [ %i_V, %3 ]"   --->   Operation 38 'phi' 't_V' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 39 [1/1] (1.70ns)   --->   "%exitcond4_i = icmp eq i10 %t_V, -304" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:354->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 39 'icmp' 'exitcond4_i' <Predicate = true> <Delay = 1.70> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 40 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 720, i64 720, i64 720)"   --->   Operation 40 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (1.70ns)   --->   "%exitcond4_i = icmp eq i10 %t_V, -124" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:354->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 39 'icmp' 'exitcond4_i' <Predicate = true> <Delay = 1.70> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 900, i64 900, i64 900)"   --->   Operation 40 'speclooptripcount' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 41 [1/1] (2.12ns)   --->   "%i_V = add i10 %t_V, 1" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:354->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 41 'add' 'i_V' <Predicate = true> <Delay = 2.12> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 42 [1/1] (0.00ns)   --->   "br i1 %exitcond4_i, label %"arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit", label %1" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:354->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 42 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "br i1 %exitcond4_i, label %"arithm_pro<kernel_addWeighted, 900, 1600, 0, 0, 0, double, double, double>.exit", label %1" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:354->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 42 'br' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 43 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str8) nounwind" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:354->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 43 'specloopname' <Predicate = (!exitcond4_i)> <Delay = 0.00>
 ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%tmp_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str8)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:354->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 44 'specregionbegin' 'tmp_i' <Predicate = (!exitcond4_i)> <Delay = 0.00>
 ST_2 : Operation 45 [1/1] (1.66ns)   --->   "br label %2" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:355->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 45 'br' <Predicate = (!exitcond4_i)> <Delay = 1.66>
@@ -169,8 +169,8 @@ ST_2 : Operation 46 [1/1] (0.00ns)   --->   "ret void" [C:/Xilinx/Vivado/2018.2/
 
 State 3 <SV = 2> <Delay = 2.12>
 ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%t_V_4 = phi i11 [ 0, %1 ], [ %j_V, %.critedge.i ]"   --->   Operation 47 'phi' 't_V_4' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 48 [1/1] (1.81ns)   --->   "%exitcond_i = icmp eq i11 %t_V_4, -768" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:355->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 48 'icmp' 'exitcond_i' <Predicate = true> <Delay = 1.81> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 49 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 1280, i64 1280, i64 1280)"   --->   Operation 49 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 48 [1/1] (1.81ns)   --->   "%exitcond_i = icmp eq i11 %t_V_4, -448" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:355->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 48 'icmp' 'exitcond_i' <Predicate = true> <Delay = 1.81> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 49 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 1600, i64 1600, i64 1600)"   --->   Operation 49 'speclooptripcount' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 50 [1/1] (2.12ns)   --->   "%j_V = add i11 %t_V_4, 1" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:355->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 50 'add' 'j_V' <Predicate = true> <Delay = 2.12> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_3 : Operation 51 [1/1] (0.00ns)   --->   "br i1 %exitcond_i, label %3, label %.critedge.i" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:355->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 51 'br' <Predicate = true> <Delay = 0.00>
 
@@ -1480,7 +1480,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 <comp id="226" class="1004" name="exitcond4_i_fu_226">
 <pin_list>
 <pin id="227" dir="0" index="0" bw="10" slack="0"/>
-<pin id="228" dir="0" index="1" bw="10" slack="0"/>
+<pin id="228" dir="0" index="1" bw="8" slack="0"/>
 <pin id="229" dir="1" index="2" bw="1" slack="1"/>
 </pin_list>
 <bind>
@@ -1504,7 +1504,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 <comp id="238" class="1004" name="exitcond_i_fu_238">
 <pin_list>
 <pin id="239" dir="0" index="0" bw="11" slack="0"/>
-<pin id="240" dir="0" index="1" bw="11" slack="0"/>
+<pin id="240" dir="0" index="1" bw="10" slack="0"/>
 <pin id="241" dir="1" index="2" bw="1" slack="1"/>
 </pin_list>
 <bind>

@@ -304,7 +304,7 @@
 
 <Node id="10" bw="1" op_0_bw="10" op_1_bw="10">
 <![CDATA[
-:1  %exitcond4_i = icmp eq i10 %t_V, -304
+:1  %exitcond4_i = icmp eq i10 %t_V, -124
 
 ]]></Node>
 <StgValue><ssdm name="exitcond4_i"/></StgValue>
@@ -319,7 +319,7 @@
 
 <Node id="11" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-:2  call void (...)* @_ssdm_op_SpecLoopTripCount(i64 720, i64 720, i64 720)
+:2  call void (...)* @_ssdm_op_SpecLoopTripCount(i64 900, i64 900, i64 900)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -349,7 +349,7 @@
 
 <Node id="13" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-:4  br i1 %exitcond4_i, label %"arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit", label %1
+:4  br i1 %exitcond4_i, label %"arithm_pro<kernel_addWeighted, 900, 1600, 0, 0, 0, double, double, double>.exit", label %1
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -413,7 +413,7 @@
 
 <Node id="174" bw="0">
 <![CDATA[
-arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:0  ret void
+arithm_pro<kernel_addWeighted, 900, 1600, 0, 0, 0, double, double, double>.exit:0  ret void
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -446,7 +446,7 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="20" bw="1" op_0_bw="11" op_1_bw="11">
 <![CDATA[
-:1  %exitcond_i = icmp eq i11 %t_V_4, -768
+:1  %exitcond_i = icmp eq i11 %t_V_4, -448
 
 ]]></Node>
 <StgValue><ssdm name="exitcond_i"/></StgValue>
@@ -461,7 +461,7 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="21" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-:2  call void (...)* @_ssdm_op_SpecLoopTripCount(i64 1280, i64 1280, i64 1280)
+:2  call void (...)* @_ssdm_op_SpecLoopTripCount(i64 1600, i64 1600, i64 1600)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>

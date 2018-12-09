@@ -366,9 +366,9 @@ struct AddWeighted : public sc_module {
     static const sc_lv<11> ap_const_lv11_0;
     static const sc_lv<64> ap_const_lv64_0;
     static const sc_lv<64> ap_const_lv64_3FE0000000000000;
-    static const sc_lv<10> ap_const_lv10_2D0;
+    static const sc_lv<10> ap_const_lv10_384;
     static const sc_lv<10> ap_const_lv10_1;
-    static const sc_lv<11> ap_const_lv11_500;
+    static const sc_lv<11> ap_const_lv11_640;
     static const sc_lv<11> ap_const_lv11_1;
     static const sc_lv<32> ap_const_lv32_34;
     static const sc_lv<32> ap_const_lv32_3E;

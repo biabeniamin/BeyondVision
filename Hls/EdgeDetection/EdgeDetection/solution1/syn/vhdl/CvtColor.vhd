@@ -53,9 +53,9 @@ architecture behav of CvtColor is
     constant ap_const_lv10_0 : STD_LOGIC_VECTOR (9 downto 0) := "0000000000";
     constant ap_const_lv32_3 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000011";
     constant ap_const_lv11_0 : STD_LOGIC_VECTOR (10 downto 0) := "00000000000";
-    constant ap_const_lv10_2D0 : STD_LOGIC_VECTOR (9 downto 0) := "1011010000";
+    constant ap_const_lv10_384 : STD_LOGIC_VECTOR (9 downto 0) := "1110000100";
     constant ap_const_lv10_1 : STD_LOGIC_VECTOR (9 downto 0) := "0000000001";
-    constant ap_const_lv11_500 : STD_LOGIC_VECTOR (10 downto 0) := "10100000000";
+    constant ap_const_lv11_640 : STD_LOGIC_VECTOR (10 downto 0) := "11001000000";
     constant ap_const_lv11_1 : STD_LOGIC_VECTOR (10 downto 0) := "00000000001";
 
     signal real_start : STD_LOGIC;
@@ -328,8 +328,8 @@ begin
     end process;
 
     ap_ready <= internal_ap_ready;
-    exitcond1_fu_164_p2 <= "1" when (i_reg_142 = ap_const_lv10_2D0) else "0";
-    exitcond_fu_176_p2 <= "1" when (j_reg_153 = ap_const_lv11_500) else "0";
+    exitcond1_fu_164_p2 <= "1" when (i_reg_142 = ap_const_lv10_384) else "0";
+    exitcond_fu_176_p2 <= "1" when (j_reg_153 = ap_const_lv11_640) else "0";
     i_1_fu_170_p2 <= std_logic_vector(unsigned(i_reg_142) + unsigned(ap_const_lv10_1));
 
     internal_ap_ready_assign_proc : process(exitcond1_fu_164_p2, ap_CS_fsm_state2)

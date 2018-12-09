@@ -52,9 +52,9 @@ architecture behav of AddWeighted is
     constant ap_const_lv11_0 : STD_LOGIC_VECTOR (10 downto 0) := "00000000000";
     constant ap_const_lv64_0 : STD_LOGIC_VECTOR (63 downto 0) := "0000000000000000000000000000000000000000000000000000000000000000";
     constant ap_const_lv64_3FE0000000000000 : STD_LOGIC_VECTOR (63 downto 0) := "0011111111100000000000000000000000000000000000000000000000000000";
-    constant ap_const_lv10_2D0 : STD_LOGIC_VECTOR (9 downto 0) := "1011010000";
+    constant ap_const_lv10_384 : STD_LOGIC_VECTOR (9 downto 0) := "1110000100";
     constant ap_const_lv10_1 : STD_LOGIC_VECTOR (9 downto 0) := "0000000001";
-    constant ap_const_lv11_500 : STD_LOGIC_VECTOR (10 downto 0) := "10100000000";
+    constant ap_const_lv11_640 : STD_LOGIC_VECTOR (10 downto 0) := "11001000000";
     constant ap_const_lv11_1 : STD_LOGIC_VECTOR (10 downto 0) := "00000000001";
     constant ap_const_lv32_34 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000110100";
     constant ap_const_lv32_3E : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000111110";
@@ -1357,8 +1357,8 @@ begin
         end if; 
     end process;
 
-    exitcond4_i_fu_226_p2 <= "1" when (t_V_reg_179 = ap_const_lv10_2D0) else "0";
-    exitcond_i_fu_238_p2 <= "1" when (t_V_4_reg_190 = ap_const_lv11_500) else "0";
+    exitcond4_i_fu_226_p2 <= "1" when (t_V_reg_179 = ap_const_lv10_384) else "0";
+    exitcond_i_fu_238_p2 <= "1" when (t_V_4_reg_190 = ap_const_lv11_640) else "0";
 
     grp_fu_201_ce_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_block_pp0_stage0_11001)
     begin

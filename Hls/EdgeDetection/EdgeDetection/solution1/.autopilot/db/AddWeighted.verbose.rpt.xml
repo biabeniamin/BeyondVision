@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'AddWeighted'" level="0">
-<item name = "Date">Sat Dec  8 21:08:03 2018
+<item name = "Date">Sun Dec  9 19:58:51 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">EdgeDetection</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">943921, 943921, 943921, 943921, none</column>
+<column name="">1467901, 1467901, 1467901, 1467901, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,8 +35,8 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- loop_height">943920, 943920, 1311, -, -, 720, no</column>
-<column name=" + loop_width">1308, 1308, 30, 1, 1, 1280, yes</column>
+<column name="- loop_height">1467900, 1467900, 1631, -, -, 900, no</column>
+<column name=" + loop_width">1628, 1628, 30, 1, 1, 1600, yes</column>
 </table>
 </item>
 </section>
@@ -121,8 +121,8 @@
 <column name="tmp_21_i_fu_520_p2">ashr, 0, 0, 162, 54, 54</column>
 <column name="Range1_all_zeros_1_fu_572_p2">icmp, 0, 0, 29, 54, 1</column>
 <column name="Range2_all_ones_fu_720_p2">icmp, 0, 0, 29, 54, 54</column>
-<column name="exitcond4_i_fu_226_p2">icmp, 0, 0, 13, 10, 10</column>
-<column name="exitcond_i_fu_238_p2">icmp, 0, 0, 13, 11, 11</column>
+<column name="exitcond4_i_fu_226_p2">icmp, 0, 0, 13, 10, 8</column>
+<column name="exitcond_i_fu_238_p2">icmp, 0, 0, 13, 11, 10</column>
 <column name="icmp_fu_369_p2">icmp, 0, 0, 13, 9, 1</column>
 <column name="tmp_14_i_fu_421_p2">icmp, 0, 0, 13, 12, 6</column>
 <column name="tmp_18_i_fu_496_p2">icmp, 0, 0, 13, 12, 6</column>

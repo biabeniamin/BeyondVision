@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'Mat2AXIvideo'
 ================================================================
-* Date:           Sat Dec  8 21:07:57 2018
+* Date:           Sun Dec  9 19:58:46 2018
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        EdgeDetection
@@ -25,25 +25,25 @@
 
 + Latency (clock cycles): 
     * Summary: 
-    +--------+--------+--------+--------+---------+
-    |     Latency     |     Interval    | Pipeline|
-    |   min  |   max  |   min  |   max  |   Type  |
-    +--------+--------+--------+--------+---------+
-    |  924481|  924481|  924481|  924481|   none  |
-    +--------+--------+--------+--------+---------+
+    +---------+---------+---------+---------+---------+
+    |      Latency      |      Interval     | Pipeline|
+    |   min   |   max   |   min   |   max   |   Type  |
+    +---------+---------+---------+---------+---------+
+    |  1443601|  1443601|  1443601|  1443601|   none  |
+    +---------+---------+---------+---------+---------+
 
     + Detail: 
         * Instance: 
         N/A
 
         * Loop: 
-        +---------------+--------+--------+----------+-----------+-----------+------+----------+
-        |               |     Latency     | Iteration|  Initiation Interval  | Trip |          |
-        |   Loop Name   |   min  |   max  |  Latency |  achieved |   target  | Count| Pipelined|
-        +---------------+--------+--------+----------+-----------+-----------+------+----------+
-        |- loop_height  |  924480|  924480|      1284|          -|          -|   720|    no    |
-        | + loop_width  |    1281|    1281|         3|          1|          1|  1280|    yes   |
-        +---------------+--------+--------+----------+-----------+-----------+------+----------+
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+        |               |      Latency      | Iteration|  Initiation Interval  | Trip |          |
+        |   Loop Name   |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- loop_height  |  1443600|  1443600|      1604|          -|          -|   900|    no    |
+        | + loop_width  |     1601|     1601|         3|          1|          1|  1600|    yes   |
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
 
 ============================================================
 + Verbose Summary: Synthesis Manager
@@ -107,8 +107,8 @@ ST_1 : Operation 13 [1/1] (1.66ns)   --->   "br label %0" [C:/Xilinx/Vivado/2018
 
 State 2 <SV = 1> <Delay = 2.67>
 ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%t_V = phi i10 [ 0, %._crit_edge ], [ %i_V, %3 ]"   --->   Operation 14 'phi' 't_V' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 15 [1/1] (1.70ns)   --->   "%exitcond2 = icmp eq i10 %t_V, -304" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:125]   --->   Operation 15 'icmp' 'exitcond2' <Predicate = true> <Delay = 1.70> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.70> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 720, i64 720, i64 720)"   --->   Operation 16 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (1.70ns)   --->   "%exitcond2 = icmp eq i10 %t_V, -124" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:125]   --->   Operation 15 'icmp' 'exitcond2' <Predicate = true> <Delay = 1.70> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.70> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 900, i64 900, i64 900)"   --->   Operation 16 'speclooptripcount' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 17 [1/1] (2.12ns)   --->   "%i_V = add i10 %t_V, 1" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:125]   --->   Operation 17 'add' 'i_V' <Predicate = true> <Delay = 2.12> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 18 [1/1] (0.00ns)   --->   "br i1 %exitcond2, label %4, label %1" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:125]   --->   Operation 18 'br' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str8) nounwind" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:125]   --->   Operation 19 'specloopname' <Predicate = (!exitcond2)> <Delay = 0.00>
@@ -118,11 +118,11 @@ ST_2 : Operation 22 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 22 're
 
 State 3 <SV = 2> <Delay = 2.79>
 ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%t_V_1 = phi i11 [ 0, %1 ], [ %j_V, %"operator>>.exit" ]"   --->   Operation 23 'phi' 't_V_1' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 24 [1/1] (1.81ns)   --->   "%exitcond = icmp eq i11 %t_V_1, -768" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:126]   --->   Operation 24 'icmp' 'exitcond' <Predicate = true> <Delay = 1.81> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.70> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 1280, i64 1280, i64 1280)"   --->   Operation 25 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (1.81ns)   --->   "%exitcond = icmp eq i11 %t_V_1, -448" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:126]   --->   Operation 24 'icmp' 'exitcond' <Predicate = true> <Delay = 1.81> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.70> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 1600, i64 1600, i64 1600)"   --->   Operation 25 'speclooptripcount' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 26 [1/1] (2.12ns)   --->   "%j_V = add i11 %t_V_1, 1" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:126]   --->   Operation 26 'add' 'j_V' <Predicate = true> <Delay = 2.12> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_3 : Operation 27 [1/1] (0.00ns)   --->   "br i1 %exitcond, label %3, label %"operator>>.exit"" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:126]   --->   Operation 27 'br' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 28 [1/1] (1.81ns)   --->   "%axi_last_V = icmp eq i11 %t_V_1, -769" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:135]   --->   Operation 28 'icmp' 'axi_last_V' <Predicate = (!exitcond)> <Delay = 1.81> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.70> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 28 [1/1] (1.81ns)   --->   "%axi_last_V = icmp eq i11 %t_V_1, -449" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:135]   --->   Operation 28 'icmp' 'axi_last_V' <Predicate = (!exitcond)> <Delay = 1.81> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.70> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 
 State 4 <SV = 3> <Delay = 3.90>
 ST_4 : Operation 29 [1/1] (0.00ns)   --->   "%tmp_user_V_load = load i1* %tmp_user_V" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:146]   --->   Operation 29 'load' 'tmp_user_V_load' <Predicate = (!exitcond)> <Delay = 0.00>
@@ -172,6 +172,7 @@ The critical path consists of the following:
  <State 4>: 3.91ns
 The critical path consists of the following:
 	fifo read on port 'img_data_stream_0_V' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:624->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:656->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:140) [42]  (3.91 ns)
+	axis write on port 'AXI_video_strm_V_data_V' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:146) [47]  (0 ns)
 
  <State 5>: 0ns
 The critical path consists of the following:

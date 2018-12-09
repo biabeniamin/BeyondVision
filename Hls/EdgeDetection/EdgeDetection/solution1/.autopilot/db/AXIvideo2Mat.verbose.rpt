@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'AXIvideo2Mat'
 ================================================================
-* Date:           Sat Dec  8 21:07:59 2018
+* Date:           Sun Dec  9 19:58:48 2018
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        EdgeDetection
@@ -25,27 +25,27 @@
 
 + Latency (clock cycles): 
     * Summary: 
-    +-----+--------+-----+--------+---------+
-    |    Latency   |   Interval   | Pipeline|
-    | min |   max  | min |   max  |   Type  |
-    +-----+--------+-----+--------+---------+
-    |    3|  926643|    3|  926643|   none  |
-    +-----+--------+-----+--------+---------+
+    +-----+---------+-----+---------+---------+
+    |    Latency    |    Interval   | Pipeline|
+    | min |   max   | min |   max   |   Type  |
+    +-----+---------+-----+---------+---------+
+    |    3|  1446303|    3|  1446303|   none  |
+    +-----+---------+-----+---------+---------+
 
     + Detail: 
         * Instance: 
         N/A
 
         * Loop: 
-        +-----------------------+-----+--------+----------+-----------+-----------+----------+----------+
-        |                       |    Latency   | Iteration|  Initiation Interval  |   Trip   |          |
-        |       Loop Name       | min |   max  |  Latency |  achieved |   target  |   Count  | Pipelined|
-        +-----------------------+-----+--------+----------+-----------+-----------+----------+----------+
-        |- loop_wait_for_start  |    0|       0|         1|          1|          1|         0|    yes   |
-        |- loop_height          |    0|  926640| 7 ~ 1287 |          -|          -|  0 ~ 720 |    no    |
-        | + loop_width          |    1|    1281|         2|          1|          1| 0 ~ 1280 |    yes   |
-        | + loop_wait_for_eol   |    1|       1|         2|          1|          1|         0|    yes   |
-        +-----------------------+-----+--------+----------+-----------+-----------+----------+----------+
+        +-----------------------+-----+---------+----------+-----------+-----------+----------+----------+
+        |                       |    Latency    | Iteration|  Initiation Interval  |   Trip   |          |
+        |       Loop Name       | min |   max   |  Latency |  achieved |   target  |   Count  | Pipelined|
+        +-----------------------+-----+---------+----------+-----------+-----------+----------+----------+
+        |- loop_wait_for_start  |    0|        0|         1|          1|          1|         0|    yes   |
+        |- loop_height          |    0|  1446300| 7 ~ 1607 |          -|          -|  0 ~ 900 |    no    |
+        | + loop_width          |    1|     1601|         2|          1|          1| 0 ~ 1600 |    yes   |
+        | + loop_wait_for_eol   |    1|        1|         2|          1|          1|         0|    yes   |
+        +-----------------------+-----+---------+----------+-----------+-----------+----------+----------+
 
 
 
@@ -368,7 +368,7 @@ ST_4 : Operation 46 [1/1] (0.00ns)   --->   "%axi_last_V1_i = phi i1 [ %axi_last
 ST_4 : Operation 47 [1/1] (0.00ns)   --->   "%axi_data_V1_i = phi i24 [ %axi_data_V_3_i, %5 ], [ %tmp_data_V, %.preheader186.i.preheader ]"   --->   Operation 47 'phi' 'axi_data_V1_i' <Predicate = true> <Delay = 0.00>
 ST_4 : Operation 48 [1/1] (0.00ns)   --->   "%t_V = phi i32 [ %i_V, %5 ], [ 0, %.preheader186.i.preheader ]"   --->   Operation 48 'phi' 't_V' <Predicate = true> <Delay = 0.00>
 ST_4 : Operation 49 [1/1] (2.43ns)   --->   "%exitcond4_i = icmp eq i32 %t_V, %rows_V" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:71]   --->   Operation 49 'icmp' 'exitcond4_i' <Predicate = true> <Delay = 2.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 50 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 0, i64 720, i64 0)"   --->   Operation 50 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 50 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 0, i64 900, i64 0)"   --->   Operation 50 'speclooptripcount' <Predicate = true> <Delay = 0.00>
 ST_4 : Operation 51 [1/1] (2.70ns)   --->   "%i_V = add i32 %t_V, 1" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:71]   --->   Operation 51 'add' 'i_V' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_4 : Operation 52 [1/1] (0.00ns)   --->   "br i1 %exitcond4_i, label %.exit, label %0" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:71]   --->   Operation 52 'br' <Predicate = true> <Delay = 0.00>
 ST_4 : Operation 53 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str8) nounwind" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:71]   --->   Operation 53 'specloopname' <Predicate = (!exitcond4_i)> <Delay = 0.00>
@@ -389,7 +389,7 @@ ST_5 : Operation 64 [1/1] (1.66ns)   --->   "store i1 false, i1* %sof_1_i"   ---
 State 6 <SV = 5> <Delay = 5.57>
 ST_6 : Operation 65 [1/1] (0.00ns)   --->   "%eol = phi i1 [ %axi_last_V1_i, %0 ], [ %axi_last_V_2_i, %._crit_edge2.i ]" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:100]   --->   Operation 65 'phi' 'eol' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 66 [1/1] (0.00ns)   --->   "%axi_data_V_1_i = phi i24 [ %axi_data_V1_i, %0 ], [ %p_Val2_s, %._crit_edge2.i ]"   --->   Operation 66 'phi' 'axi_data_V_1_i' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 67 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 0, i64 1280, i64 0)"   --->   Operation 67 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 67 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 0, i64 1600, i64 0)"   --->   Operation 67 'speclooptripcount' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 68 [1/1] (0.00ns)   --->   "br i1 %exitcond_i, label %.preheader.i.preheader, label %2" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:73]   --->   Operation 68 'br' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 69 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str9) nounwind" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:73]   --->   Operation 69 'specloopname' <Predicate = (!exitcond_i)> <Delay = 0.00>
 ST_6 : Operation 70 [1/1] (0.00ns)   --->   "%tmp_41_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([11 x i8]* @p_str9)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:73]   --->   Operation 70 'specregionbegin' 'tmp_41_i' <Predicate = (!exitcond_i)> <Delay = 0.00>

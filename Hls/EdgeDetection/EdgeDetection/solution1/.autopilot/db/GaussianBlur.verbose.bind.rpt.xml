@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'GaussianBlur'" level="0">
-<item name = "Date">Sat Dec  8 21:07:54 2018
+<item name = "Date">Sun Dec  9 19:58:43 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">EdgeDetection</item>
@@ -24,14 +24,14 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">930660, 930660, 930660, 930660, none</column>
+<column name="">1451320, 1451320, 1451320, 1451320, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_Filter2D_1_fu_40">Filter2D_1, 930659, 930659, 930659, 930659, none</column>
+<column name="grp_Filter2D_1_fu_40">Filter2D_1, 1451319, 1451319, 1451319, 1451319, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

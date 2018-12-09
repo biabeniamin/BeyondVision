@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'AddWeighted'" level="0">
-<item name = "Date">Sat Dec  8 21:07:56 2018
+<item name = "Date">Sun Dec  9 19:58:45 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">EdgeDetection</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">943921, 943921, 943921, 943921, none</column>
+<column name="">1467901, 1467901, 1467901, 1467901, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,8 +35,8 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- loop_height">943920, 943920, 1311, -, -, 720, no</column>
-<column name=" + loop_width">1308, 1308, 30, 1, 1, 1280, yes</column>
+<column name="- loop_height">1467900, 1467900, 1631, -, -, 900, no</column>
+<column name=" + loop_width">1628, 1628, 30, 1, 1, 1600, yes</column>
 </table>
 </item>
 </section>

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'image_filter'" level="0">
-<item name = "Date">Sat Dec  8 21:08:04 2018
+<item name = "Date">Sun Dec  9 19:58:53 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">EdgeDetection</item>
@@ -22,22 +22,22 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">943938, 943938, 943922, 943922, dataflow</column>
+<column name="">1467918, 1467918, 1467902, 1467902, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="AddWeighted_U0">AddWeighted, 943921, 943921, 943921, 943921, none</column>
-<column name="Sobel_U0">Sobel, 930660, 930660, 930660, 930660, none</column>
-<column name="Sobel_1_U0">Sobel_1, 930660, 930660, 930660, 930660, none</column>
-<column name="GaussianBlur_U0">GaussianBlur, 930660, 930660, 930660, 930660, none</column>
-<column name="AXIvideo2Mat_U0">AXIvideo2Mat, 3, 926643, 3, 926643, none</column>
-<column name="CvtColor_1_U0">CvtColor_1, 1, 925921, 1, 925921, none</column>
-<column name="Mat2AXIvideo_U0">Mat2AXIvideo, 924481, 924481, 924481, 924481, none</column>
-<column name="CvtColor_U0">CvtColor, 923761, 923761, 923761, 923761, none</column>
-<column name="Duplicate_U0">Duplicate, 923761, 923761, 923761, 923761, none</column>
+<column name="AddWeighted_U0">AddWeighted, 1467901, 1467901, 1467901, 1467901, none</column>
+<column name="Sobel_U0">Sobel, 1451320, 1451320, 1451320, 1451320, none</column>
+<column name="Sobel_1_U0">Sobel_1, 1451320, 1451320, 1451320, 1451320, none</column>
+<column name="GaussianBlur_U0">GaussianBlur, 1451320, 1451320, 1451320, 1451320, none</column>
+<column name="AXIvideo2Mat_U0">AXIvideo2Mat, 3, 1446303, 3, 1446303, none</column>
+<column name="CvtColor_1_U0">CvtColor_1, 1, 1445401, 1, 1445401, none</column>
+<column name="Mat2AXIvideo_U0">Mat2AXIvideo, 1443601, 1443601, 1443601, 1443601, none</column>
+<column name="CvtColor_U0">CvtColor, 1442701, 1442701, 1442701, 1442701, none</column>
+<column name="Duplicate_U0">Duplicate, 1442701, 1442701, 1442701, 1442701, none</column>
 <column name="Block_proc_U0">Block_proc, 0, 0, 0, 0, none</column>
 </table>
 </item>
@@ -57,7 +57,7 @@
 <column name="DSP">-, -, -, -</column>
 <column name="Expression">-, -, 0, 4</column>
 <column name="FIFO">0, -, 85, 320</column>
-<column name="Instance">9, 39, 5749, 9559</column>
+<column name="Instance">9, 39, 5752, 9568</column>
 <column name="Memory">-, -, -, -</column>
 <column name="Multiplexer">-, -, -, -</column>
 <column name="Register">-, -, -, -</column>
@@ -75,10 +75,10 @@
 <column name="CvtColor_U0">CvtColor, 0, 0, 40, 185</column>
 <column name="CvtColor_1_U0">CvtColor_1, 0, 3, 238, 267</column>
 <column name="Duplicate_U0">Duplicate, 0, 0, 40, 176</column>
-<column name="GaussianBlur_U0">GaussianBlur, 3, 4, 516, 1069</column>
+<column name="GaussianBlur_U0">GaussianBlur, 3, 4, 517, 1072</column>
 <column name="Mat2AXIvideo_U0">Mat2AXIvideo, 0, 0, 119, 368</column>
-<column name="Sobel_U0">Sobel, 3, 2, 488, 1165</column>
-<column name="Sobel_1_U0">Sobel_1, 3, 2, 487, 1156</column>
+<column name="Sobel_U0">Sobel, 3, 2, 489, 1168</column>
+<column name="Sobel_1_U0">Sobel_1, 3, 2, 488, 1159</column>
 </table>
 </item>
 <item name = "DSP48"><table name="" hasTotal="0">

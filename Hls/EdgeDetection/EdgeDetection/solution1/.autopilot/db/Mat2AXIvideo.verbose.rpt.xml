@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'Mat2AXIvideo'" level="0">
-<item name = "Date">Sat Dec  8 21:08:04 2018
+<item name = "Date">Sun Dec  9 19:58:52 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">EdgeDetection</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">924481, 924481, 924481, 924481, none</column>
+<column name="">1443601, 1443601, 1443601, 1443601, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,8 +35,8 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- loop_height">924480, 924480, 1284, -, -, 720, no</column>
-<column name=" + loop_width">1281, 1281, 3, 1, 1, 1280, yes</column>
+<column name="- loop_height">1443600, 1443600, 1604, -, -, 900, no</column>
+<column name=" + loop_width">1601, 1601, 3, 1, 1, 1600, yes</column>
 </table>
 </item>
 </section>
@@ -93,9 +93,9 @@
 <column name="AXI_video_strm_V_data_V_1_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
 <column name="AXI_video_strm_V_last_V_1_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
 <column name="AXI_video_strm_V_user_V_1_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
-<column name="axi_last_V_fu_228_p2">icmp, 0, 0, 13, 11, 11</column>
-<column name="exitcond2_fu_204_p2">icmp, 0, 0, 13, 10, 10</column>
-<column name="exitcond_fu_216_p2">icmp, 0, 0, 13, 11, 11</column>
+<column name="axi_last_V_fu_228_p2">icmp, 0, 0, 13, 11, 10</column>
+<column name="exitcond2_fu_204_p2">icmp, 0, 0, 13, 10, 8</column>
+<column name="exitcond_fu_216_p2">icmp, 0, 0, 13, 11, 10</column>
 <column name="ap_block_pp0_stage0_11001">or, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state2">or, 0, 0, 2, 1, 1</column>

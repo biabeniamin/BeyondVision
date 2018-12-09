@@ -388,9 +388,9 @@ assign ap_enable_pp0 = (ap_idle_pp0 ^ 1'b1);
 
 assign ap_ready = internal_ap_ready;
 
-assign exitcond1_fu_164_p2 = ((i_reg_142 == 10'd720) ? 1'b1 : 1'b0);
+assign exitcond1_fu_164_p2 = ((i_reg_142 == 10'd900) ? 1'b1 : 1'b0);
 
-assign exitcond_fu_176_p2 = ((j_reg_153 == 11'd1280) ? 1'b1 : 1'b0);
+assign exitcond_fu_176_p2 = ((j_reg_153 == 11'd1600) ? 1'b1 : 1'b0);
 
 assign i_1_fu_170_p2 = (i_reg_142 + 10'd1);
 

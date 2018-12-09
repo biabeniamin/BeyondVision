@@ -1280,9 +1280,9 @@ assign deleted_zeros_fu_790_p3 = ((carry_1_i_i_fu_691_p2[0:0] === 1'b1) ? Range1
 
 assign dst_data_stream_V_din = ((sel_tmp56_i_fu_925_p2[0:0] === 1'b1) ? p_Val2_12_0_i_mux_i_fu_874_p3 : sel_tmp52_i_fu_907_p3);
 
-assign exitcond4_i_fu_226_p2 = ((t_V_reg_179 == 10'd720) ? 1'b1 : 1'b0);
+assign exitcond4_i_fu_226_p2 = ((t_V_reg_179 == 10'd900) ? 1'b1 : 1'b0);
 
-assign exitcond_i_fu_238_p2 = ((t_V_4_reg_190 == 11'd1280) ? 1'b1 : 1'b0);
+assign exitcond_i_fu_238_p2 = ((t_V_4_reg_190 == 11'd1600) ? 1'b1 : 1'b0);
 
 assign grp_fu_220_p0 = tmp_102_reg_958;
 

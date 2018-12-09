@@ -188,11 +188,11 @@ struct Mat2AXIvideo : public sc_module {
     static const sc_lv<11> ap_const_lv11_0;
     static const sc_lv<3> ap_const_lv3_7;
     static const sc_lv<3> ap_const_lv3_0;
-    static const sc_lv<10> ap_const_lv10_2D0;
+    static const sc_lv<10> ap_const_lv10_384;
     static const sc_lv<10> ap_const_lv10_1;
-    static const sc_lv<11> ap_const_lv11_500;
+    static const sc_lv<11> ap_const_lv11_640;
     static const sc_lv<11> ap_const_lv11_1;
-    static const sc_lv<11> ap_const_lv11_4FF;
+    static const sc_lv<11> ap_const_lv11_63F;
     // Thread declarations
     void thread_ap_clk_no_reset_();
     void thread_AXI_video_strm_V_data_V_1_ack_in();
