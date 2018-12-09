@@ -5,10 +5,10 @@
 ############################################################
 open_project EdgeDetection
 set_top image_filter
-add_files EdgeDetection/cvt_colour.cpp
-add_files EdgeDetection/cvt_colour.hpp
 add_files EdgeDetection/test.bmp
-add_files -tb EdgeDetection/cvt_colour_tb.cpp -cflags "-Wno-unknown-pragmas -Wno-unknown-pragmas"
+add_files EdgeDetection/cvt_colour.hpp
+add_files EdgeDetection/cvt_colour.cpp
+add_files -tb EdgeDetection/cvt_colour_tb.cpp -cflags "-Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas"
 open_solution "solution1"
 set_part {xc7a200tsbg484-1} -tool vivado
 create_clock -period 10 -name default
