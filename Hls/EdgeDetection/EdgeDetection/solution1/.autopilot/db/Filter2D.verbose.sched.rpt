@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'Filter2D'
 ================================================================
-* Date:           Sun Dec  9 19:58:43 2018
+* Date:           Mon Dec 10 17:39:54 2018
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        EdgeDetection
@@ -387,7 +387,7 @@ The critical path consists of the following:
  <State 3>: 6.4ns
 The critical path consists of the following:
 	'phi' operation ('j.V') with incoming values : ('j.V', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:442->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277) [96]  (0 ns)
-	'add' operation ('ImagLoc.x', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:449->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277) [115]  (2.13 ns)
+	'sub' operation ('p', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgbase.h:142->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:450->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277) [122]  (2.13 ns)
 	'select' operation ('p_p2_i_i', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgbase.h:139->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:450->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277) [123]  (0.682 ns)
 	'icmp' operation ('tmp_20', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgbase.h:144->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:450->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277) [126]  (1.93 ns)
 	'and' operation ('sel_tmp8', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgbase.h:144->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:450->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277) [132]  (0.978 ns)
@@ -395,8 +395,8 @@ The critical path consists of the following:
 
  <State 4>: 3.26ns
 The critical path consists of the following:
-	'getelementptr' operation ('k_buf_0_val_3_addr', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:835->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:843->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:458->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277) [138]  (0 ns)
-	'load' operation ('k_buf_0_val_3_load', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:458->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277) on array 'k_buf[0].val[3]', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277 [139]  (3.26 ns)
+	'getelementptr' operation ('k_buf_0_val_5_addr', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:835->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:843->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:458->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277) [147]  (0 ns)
+	'load' operation ('k_buf_0_val_5_load', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:458->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277) on array 'k_buf[0].val[5]', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277 [148]  (3.26 ns)
 
  <State 5>: 7.18ns
 The critical path consists of the following:

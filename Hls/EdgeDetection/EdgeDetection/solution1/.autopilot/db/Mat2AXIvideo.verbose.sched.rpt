@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'Mat2AXIvideo'
 ================================================================
-* Date:           Sun Dec  9 19:58:46 2018
+* Date:           Mon Dec 10 17:39:57 2018
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        EdgeDetection
@@ -172,7 +172,6 @@ The critical path consists of the following:
  <State 4>: 3.91ns
 The critical path consists of the following:
 	fifo read on port 'img_data_stream_0_V' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:624->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:656->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:140) [42]  (3.91 ns)
-	axis write on port 'AXI_video_strm_V_data_V' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:146) [47]  (0 ns)
 
  <State 5>: 0ns
 The critical path consists of the following:
