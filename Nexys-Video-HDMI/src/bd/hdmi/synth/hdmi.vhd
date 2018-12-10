@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Mon Dec 10 19:34:51 2018
+--Date        : Mon Dec 10 20:01:33 2018
 --Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
 --Command     : generate_target hdmi.bd
 --Design      : hdmi
@@ -6212,7 +6212,7 @@ entity hdmi is
     usb_uart_txd : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of hdmi : entity is "hdmi,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=hdmi,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=63,numReposBlks=45,numNonXlnxBlks=3,numHierBlks=18,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,da_clkrst_cnt=1,synth_mode=Global}";
+  attribute CORE_GENERATION_INFO of hdmi : entity is "hdmi,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=hdmi,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=64,numReposBlks=46,numNonXlnxBlks=3,numHierBlks=18,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,da_clkrst_cnt=1,synth_mode=Global}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of hdmi : entity is "hdmi.hwdef";
 end hdmi;
@@ -6992,6 +6992,15 @@ architecture STRUCTURE of hdmi is
     SLOT_2_AXIS_tready : in STD_LOGIC
   );
   end component hdmi_system_ila_0_0;
+  component hdmi_system_ila_2_0 is
+  port (
+    clk : in STD_LOGIC;
+    SLOT_0_VID_IO_data : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    SLOT_0_VID_IO_active_video : in STD_LOGIC;
+    SLOT_0_VID_IO_hsync : in STD_LOGIC;
+    SLOT_0_VID_IO_vsync : in STD_LOGIC
+  );
+  end component hdmi_system_ila_2_0;
   signal SYS_Rst_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal TMDS_IN_1_CLK_N : STD_LOGIC;
   signal TMDS_IN_1_CLK_P : STD_LOGIC;
@@ -7110,9 +7119,21 @@ architecture STRUCTURE of hdmi is
   signal dvi2rgb_0_DDC_SDA_T : STD_LOGIC;
   signal dvi2rgb_0_PixelClk : STD_LOGIC;
   signal dvi2rgb_0_RGB_ACTIVE_VIDEO : STD_LOGIC;
+  attribute CONN_BUS_INFO of dvi2rgb_0_RGB_ACTIVE_VIDEO : signal is "dvi2rgb_0_RGB xilinx.com:interface:vid_io:1.0 None ACTIVE_VIDEO";
+  attribute DEBUG of dvi2rgb_0_RGB_ACTIVE_VIDEO : signal is "true";
+  attribute MARK_DEBUG of dvi2rgb_0_RGB_ACTIVE_VIDEO : signal is std.standard.true;
   signal dvi2rgb_0_RGB_DATA : STD_LOGIC_VECTOR ( 23 downto 0 );
+  attribute CONN_BUS_INFO of dvi2rgb_0_RGB_DATA : signal is "dvi2rgb_0_RGB xilinx.com:interface:vid_io:1.0 None DATA";
+  attribute DEBUG of dvi2rgb_0_RGB_DATA : signal is "true";
+  attribute MARK_DEBUG of dvi2rgb_0_RGB_DATA : signal is std.standard.true;
   signal dvi2rgb_0_RGB_HSYNC : STD_LOGIC;
+  attribute CONN_BUS_INFO of dvi2rgb_0_RGB_HSYNC : signal is "dvi2rgb_0_RGB xilinx.com:interface:vid_io:1.0 None HSYNC";
+  attribute DEBUG of dvi2rgb_0_RGB_HSYNC : signal is "true";
+  attribute MARK_DEBUG of dvi2rgb_0_RGB_HSYNC : signal is std.standard.true;
   signal dvi2rgb_0_RGB_VSYNC : STD_LOGIC;
+  attribute CONN_BUS_INFO of dvi2rgb_0_RGB_VSYNC : signal is "dvi2rgb_0_RGB xilinx.com:interface:vid_io:1.0 None VSYNC";
+  attribute DEBUG of dvi2rgb_0_RGB_VSYNC : signal is "true";
+  attribute MARK_DEBUG of dvi2rgb_0_RGB_VSYNC : signal is std.standard.true;
   signal dvi2rgb_0_aPixelClkLckd : STD_LOGIC;
   signal microblaze_0_M_AXI_DC_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal microblaze_0_M_AXI_DC_ARBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -8592,6 +8613,14 @@ system_ila_1: component hdmi_system_ila_1_0
      port map (
       clk => mig_7series_0_ui_clk,
       probe0(0) => xlconstant_1_dout(0)
+    );
+system_ila_2: component hdmi_system_ila_2_0
+     port map (
+      SLOT_0_VID_IO_active_video => dvi2rgb_0_RGB_ACTIVE_VIDEO,
+      SLOT_0_VID_IO_data(23 downto 0) => dvi2rgb_0_RGB_DATA(23 downto 0),
+      SLOT_0_VID_IO_hsync => dvi2rgb_0_RGB_HSYNC,
+      SLOT_0_VID_IO_vsync => dvi2rgb_0_RGB_VSYNC,
+      clk => dvi2rgb_0_PixelClk
     );
 v_axi4s_vid_out_0: component hdmi_v_axi4s_vid_out_0_0
      port map (
