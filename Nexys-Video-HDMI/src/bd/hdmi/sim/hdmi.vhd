@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Mon Dec 10 18:58:17 2018
+--Date        : Mon Dec 10 19:34:52 2018
 --Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
 --Command     : generate_target hdmi.bd
 --Design      : hdmi
@@ -6984,7 +6984,12 @@ architecture STRUCTURE of hdmi is
     SLOT_1_AXIS_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
     SLOT_1_AXIS_tvalid : in STD_LOGIC;
     SLOT_1_AXIS_tready : in STD_LOGIC;
-    resetn : in STD_LOGIC
+    resetn : in STD_LOGIC;
+    SLOT_2_AXIS_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    SLOT_2_AXIS_tlast : in STD_LOGIC;
+    SLOT_2_AXIS_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
+    SLOT_2_AXIS_tvalid : in STD_LOGIC;
+    SLOT_2_AXIS_tready : in STD_LOGIC
   );
   end component hdmi_system_ila_0_0;
   signal SYS_Rst_1 : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -7089,7 +7094,7 @@ architecture STRUCTURE of hdmi is
   attribute CONN_BUS_INFO of axis_subset_converter_1_M_AXIS_TREADY : signal is "axis_subset_converter_1_M_AXIS xilinx.com:interface:axis:1.0 None TREADY";
   attribute DEBUG of axis_subset_converter_1_M_AXIS_TREADY : signal is "true";
   attribute MARK_DEBUG of axis_subset_converter_1_M_AXIS_TREADY : signal is std.standard.true;
-  signal axis_subset_converter_1_M_AXIS_TUSER : STD_LOGIC;
+  signal axis_subset_converter_1_M_AXIS_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
   attribute CONN_BUS_INFO of axis_subset_converter_1_M_AXIS_TUSER : signal is "axis_subset_converter_1_M_AXIS xilinx.com:interface:axis:1.0 None TUSER";
   attribute DEBUG of axis_subset_converter_1_M_AXIS_TUSER : signal is "true";
   attribute MARK_DEBUG of axis_subset_converter_1_M_AXIS_TUSER : signal is std.standard.true;
@@ -7440,6 +7445,26 @@ architecture STRUCTURE of hdmi is
   signal v_tc_0_vtiming_out_VBLANK : STD_LOGIC;
   signal v_tc_0_vtiming_out_VSYNC : STD_LOGIC;
   signal v_tc_1_irq : STD_LOGIC;
+  signal v_vid_in_axi4s_0_video_out_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
+  attribute CONN_BUS_INFO of v_vid_in_axi4s_0_video_out_TDATA : signal is "v_vid_in_axi4s_0_video_out xilinx.com:interface:axis:1.0 None TDATA";
+  attribute DEBUG of v_vid_in_axi4s_0_video_out_TDATA : signal is "true";
+  attribute MARK_DEBUG of v_vid_in_axi4s_0_video_out_TDATA : signal is std.standard.true;
+  signal v_vid_in_axi4s_0_video_out_TLAST : STD_LOGIC;
+  attribute CONN_BUS_INFO of v_vid_in_axi4s_0_video_out_TLAST : signal is "v_vid_in_axi4s_0_video_out xilinx.com:interface:axis:1.0 None TLAST";
+  attribute DEBUG of v_vid_in_axi4s_0_video_out_TLAST : signal is "true";
+  attribute MARK_DEBUG of v_vid_in_axi4s_0_video_out_TLAST : signal is std.standard.true;
+  signal v_vid_in_axi4s_0_video_out_TREADY : STD_LOGIC;
+  attribute CONN_BUS_INFO of v_vid_in_axi4s_0_video_out_TREADY : signal is "v_vid_in_axi4s_0_video_out xilinx.com:interface:axis:1.0 None TREADY";
+  attribute DEBUG of v_vid_in_axi4s_0_video_out_TREADY : signal is "true";
+  attribute MARK_DEBUG of v_vid_in_axi4s_0_video_out_TREADY : signal is std.standard.true;
+  signal v_vid_in_axi4s_0_video_out_TUSER : STD_LOGIC;
+  attribute CONN_BUS_INFO of v_vid_in_axi4s_0_video_out_TUSER : signal is "v_vid_in_axi4s_0_video_out xilinx.com:interface:axis:1.0 None TUSER";
+  attribute DEBUG of v_vid_in_axi4s_0_video_out_TUSER : signal is "true";
+  attribute MARK_DEBUG of v_vid_in_axi4s_0_video_out_TUSER : signal is std.standard.true;
+  signal v_vid_in_axi4s_0_video_out_TVALID : STD_LOGIC;
+  attribute CONN_BUS_INFO of v_vid_in_axi4s_0_video_out_TVALID : signal is "v_vid_in_axi4s_0_video_out xilinx.com:interface:axis:1.0 None TVALID";
+  attribute DEBUG of v_vid_in_axi4s_0_video_out_TVALID : signal is "true";
+  attribute MARK_DEBUG of v_vid_in_axi4s_0_video_out_TVALID : signal is std.standard.true;
   signal v_vid_in_axi4s_0_vtiming_out_ACTIVE_VIDEO : STD_LOGIC;
   signal v_vid_in_axi4s_0_vtiming_out_HSYNC : STD_LOGIC;
   signal v_vid_in_axi4s_0_vtiming_out_VSYNC : STD_LOGIC;
@@ -7458,11 +7483,6 @@ architecture STRUCTURE of hdmi is
   signal NLW_axi_vdma_0_s2mm_frame_ptr_out_UNCONNECTED : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal NLW_axis_subset_converter_0_m_axis_tkeep_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal NLW_axis_subset_converter_1_aresetn_UNCONNECTED : STD_LOGIC;
-  signal NLW_axis_subset_converter_1_m_axis_tlast_UNCONNECTED : STD_LOGIC;
-  signal NLW_axis_subset_converter_1_m_axis_tvalid_UNCONNECTED : STD_LOGIC;
-  signal NLW_axis_subset_converter_1_s_axis_tready_UNCONNECTED : STD_LOGIC;
-  signal NLW_axis_subset_converter_1_m_axis_tdata_UNCONNECTED : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal NLW_axis_subset_converter_1_m_axis_tuser_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_mdm_1_Debug_SYS_Rst_UNCONNECTED : STD_LOGIC;
   signal NLW_microblaze_0_M_AXI_IC_AWLOCK_UNCONNECTED : STD_LOGIC;
   signal NLW_microblaze_0_M_AXI_IC_AWVALID_UNCONNECTED : STD_LOGIC;
@@ -7933,16 +7953,16 @@ axis_subset_converter_1: component hdmi_axis_subset_converter_0_1
      port map (
       aclk => mig_7series_0_ui_addn_clk_0,
       aresetn => NLW_axis_subset_converter_1_aresetn_UNCONNECTED,
-      m_axis_tdata(23 downto 0) => NLW_axis_subset_converter_1_m_axis_tdata_UNCONNECTED(23 downto 0),
-      m_axis_tlast => NLW_axis_subset_converter_1_m_axis_tlast_UNCONNECTED,
-      m_axis_tready => '1',
-      m_axis_tuser(0) => NLW_axis_subset_converter_1_m_axis_tuser_UNCONNECTED(0),
-      m_axis_tvalid => NLW_axis_subset_converter_1_m_axis_tvalid_UNCONNECTED,
-      s_axis_tdata(23 downto 0) => B"000000000000000000000000",
-      s_axis_tlast => '0',
-      s_axis_tready => NLW_axis_subset_converter_1_s_axis_tready_UNCONNECTED,
-      s_axis_tuser(0) => '0',
-      s_axis_tvalid => '0'
+      m_axis_tdata(23 downto 0) => axis_subset_converter_1_M_AXIS_TDATA(23 downto 0),
+      m_axis_tlast => axis_subset_converter_1_M_AXIS_TLAST,
+      m_axis_tready => axis_subset_converter_1_M_AXIS_TREADY,
+      m_axis_tuser(0) => axis_subset_converter_1_M_AXIS_TUSER(0),
+      m_axis_tvalid => axis_subset_converter_1_M_AXIS_TVALID,
+      s_axis_tdata(23 downto 0) => v_vid_in_axi4s_0_video_out_TDATA(23 downto 0),
+      s_axis_tlast => v_vid_in_axi4s_0_video_out_TLAST,
+      s_axis_tready => v_vid_in_axi4s_0_video_out_TREADY,
+      s_axis_tuser(0) => v_vid_in_axi4s_0_video_out_TUSER,
+      s_axis_tvalid => v_vid_in_axi4s_0_video_out_TVALID
     );
 dvi2rgb_0: component hdmi_dvi2rgb_0_0
      port map (
@@ -8530,7 +8550,7 @@ sobel_0: component hdmi_sobel_0_0
       INPUT_STREAM_TLAST(0) => axis_subset_converter_1_M_AXIS_TLAST,
       INPUT_STREAM_TREADY => axis_subset_converter_1_M_AXIS_TREADY,
       INPUT_STREAM_TSTRB(2 downto 0) => B"111",
-      INPUT_STREAM_TUSER(0) => axis_subset_converter_1_M_AXIS_TUSER,
+      INPUT_STREAM_TUSER(0) => axis_subset_converter_1_M_AXIS_TUSER(0),
       INPUT_STREAM_TVALID => axis_subset_converter_1_M_AXIS_TVALID,
       OUTPUT_STREAM_TDATA(23 downto 0) => sobel_0_OUTPUT_STREAM_TDATA(23 downto 0),
       OUTPUT_STREAM_TDEST(0) => sobel_0_OUTPUT_STREAM_TDEST(0),
@@ -8549,7 +8569,7 @@ system_ila_0: component hdmi_system_ila_0_0
       SLOT_0_AXIS_tdata(23 downto 0) => axis_subset_converter_1_M_AXIS_TDATA(23 downto 0),
       SLOT_0_AXIS_tlast => axis_subset_converter_1_M_AXIS_TLAST,
       SLOT_0_AXIS_tready => axis_subset_converter_1_M_AXIS_TREADY,
-      SLOT_0_AXIS_tuser(0) => axis_subset_converter_1_M_AXIS_TUSER,
+      SLOT_0_AXIS_tuser(0) => axis_subset_converter_1_M_AXIS_TUSER(0),
       SLOT_0_AXIS_tvalid => axis_subset_converter_1_M_AXIS_TVALID,
       SLOT_1_AXIS_tdata(23 downto 0) => sobel_0_OUTPUT_STREAM_TDATA(23 downto 0),
       SLOT_1_AXIS_tdest(0) => sobel_0_OUTPUT_STREAM_TDEST(0),
@@ -8560,6 +8580,11 @@ system_ila_0: component hdmi_system_ila_0_0
       SLOT_1_AXIS_tstrb(2 downto 0) => sobel_0_OUTPUT_STREAM_TSTRB(2 downto 0),
       SLOT_1_AXIS_tuser(0) => sobel_0_OUTPUT_STREAM_TUSER(0),
       SLOT_1_AXIS_tvalid => sobel_0_OUTPUT_STREAM_TVALID,
+      SLOT_2_AXIS_tdata(23 downto 0) => v_vid_in_axi4s_0_video_out_TDATA(23 downto 0),
+      SLOT_2_AXIS_tlast => v_vid_in_axi4s_0_video_out_TLAST,
+      SLOT_2_AXIS_tready => v_vid_in_axi4s_0_video_out_TREADY,
+      SLOT_2_AXIS_tuser(0) => v_vid_in_axi4s_0_video_out_TUSER,
+      SLOT_2_AXIS_tvalid => v_vid_in_axi4s_0_video_out_TVALID,
       clk => mig_7series_0_ui_addn_clk_0,
       resetn => rst_hdmi_160M_peripheral_aresetn(0)
     );
@@ -8675,11 +8700,11 @@ v_vid_in_axi4s_0: component hdmi_v_vid_in_axi4s_0_0
       aresetn => NLW_v_vid_in_axi4s_0_aresetn_UNCONNECTED,
       axis_enable => '1',
       fid => NLW_v_vid_in_axi4s_0_fid_UNCONNECTED,
-      m_axis_video_tdata(23 downto 0) => axis_subset_converter_1_M_AXIS_TDATA(23 downto 0),
-      m_axis_video_tlast => axis_subset_converter_1_M_AXIS_TLAST,
-      m_axis_video_tready => axis_subset_converter_1_M_AXIS_TREADY,
-      m_axis_video_tuser => axis_subset_converter_1_M_AXIS_TUSER,
-      m_axis_video_tvalid => axis_subset_converter_1_M_AXIS_TVALID,
+      m_axis_video_tdata(23 downto 0) => v_vid_in_axi4s_0_video_out_TDATA(23 downto 0),
+      m_axis_video_tlast => v_vid_in_axi4s_0_video_out_TLAST,
+      m_axis_video_tready => v_vid_in_axi4s_0_video_out_TREADY,
+      m_axis_video_tuser => v_vid_in_axi4s_0_video_out_TUSER,
+      m_axis_video_tvalid => v_vid_in_axi4s_0_video_out_TVALID,
       overflow => NLW_v_vid_in_axi4s_0_overflow_UNCONNECTED,
       underflow => NLW_v_vid_in_axi4s_0_underflow_UNCONNECTED,
       vid_active_video => dvi2rgb_0_RGB_ACTIVE_VIDEO,
