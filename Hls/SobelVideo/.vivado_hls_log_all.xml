@@ -11,7 +11,18 @@
   </errorLogs>
   <warningLogs>
     <logs>
-      <synLog/>
+      <synLog>
+        <logs message="WARNING: [HLS 200-433] Loop - loop_wait_for_start has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="SobelVideo" solutionName="solution1" date="2018-12-10T18:23:30.128+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - loop_wait_for_start has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="SobelVideo" solutionName="solution1" date="2018-12-10T18:23:30.033+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - loop_wait_for_start has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="SobelVideo" solutionName="solution1" date="2018-12-10T18:23:29.354+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - loop_wait_for_start has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="SobelVideo" solutionName="solution1" date="2018-12-10T18:23:29.224+0200" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'Block__proc' to 'Block_proc'." projectName="SobelVideo" solutionName="solution1" date="2018-12-10T18:23:28.814+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::AXIvideo2Mat&lt;24, 1080, 1920, 4096>' to 'AXIvideo2Mat' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:49:9)" projectName="SobelVideo" solutionName="solution1" date="2018-12-10T18:23:28.788+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::Mat2AXIvideo&lt;24, 1080, 1920, 4096>' to 'Mat2AXIvideo' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:78:50)" projectName="SobelVideo" solutionName="solution1" date="2018-12-10T18:23:28.446+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'img_0.data_stream.V' (SobelVideo/a.cpp:13)." projectName="SobelVideo" solutionName="solution1" date="2018-12-10T18:23:27.581+0200" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_axi_io.h:78: variable-indexed range selection may cause suboptimal QoR." projectName="SobelVideo" solutionName="solution1" date="2018-12-10T18:23:27.385+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 214-114] Only function calls and local variable declarations are allowed in a dataflow region: SobelVideo/a.cpp:16:1" projectName="SobelVideo" solutionName="solution1" date="2018-12-10T18:23:26.445+0200" type="Warning"/>
+      </synLog>
       <simLog/>
       <mgLog/>
       <packageLog/>
