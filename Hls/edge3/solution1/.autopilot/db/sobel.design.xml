@@ -1,35 +1,29 @@
 <profile>
 
-<ReportVersion>
-<Version>2018.2</Version>
-</ReportVersion>
+<RTLDesignHierarchy>
+<TopModule>
+<ModuleName>sobel</ModuleName>
+</TopModule>
+</RTLDesignHierarchy>
 
-<UserAssignments>
-<unit>ns</unit>
-<ProductFamily>aartix7</ProductFamily>
-<Part>xa7a12tcsg325-1q</Part>
-<TopModelName>sobel</TopModelName>
+<ModuleInformation>
+<Module>
+<Name>sobel</Name>
+<PerformanceEstimates>
+<SummaryOfTimingAnalysis>
 <TargetClockPeriod>10.00</TargetClockPeriod>
 <ClockUncertainty>1.25</ClockUncertainty>
-</UserAssignments>
-
-<PerformanceEstimates>
-<PipelineType>dataflow</PipelineType>
-<SummaryOfTimingAnalysis>
-<unit>ns</unit>
 <EstimatedClockPeriod>0.000</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<unit>clock cycles</unit>
 <Best-caseLatency>0</Best-caseLatency>
 <Average-caseLatency>0</Average-caseLatency>
 <Worst-caseLatency>0</Worst-caseLatency>
 <DataflowPipelineThroughput>undef</DataflowPipelineThroughput>
-<Interval-min>undef</Interval-min>
-<Interval-max>undef</Interval-max>
+<PipelineInitiationInterval>undef</PipelineInitiationInterval>
+<PipelineType>dataflow</PipelineType>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
-
 <AreaEstimates>
 <Resources>
 <BRAM_18K>0</BRAM_18K>
@@ -37,14 +31,7 @@
 <FF>0</FF>
 <LUT>0</LUT>
 </Resources>
-<AvailableResources>
-<BRAM_18K>40</BRAM_18K>
-<DSP48E>40</DSP48E>
-<FF>16000</FF>
-<LUT>8000</LUT>
-</AvailableResources>
 </AreaEstimates>
-
 <InterfaceSummary>
 <RtlPorts>
 <name>INPUT_STREAMINPUT_STREAM_V_data_V_TDATA</name>
@@ -237,5 +224,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 </InterfaceSummary>
+</Module>
+</ModuleInformation>
 
 </profile>

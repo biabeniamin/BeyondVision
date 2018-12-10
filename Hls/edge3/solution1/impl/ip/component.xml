@@ -2,7 +2,7 @@
 <spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <spirit:vendor>xilinx.com</spirit:vendor>
   <spirit:library>hls</spirit:library>
-  <spirit:name>hls_sobel</spirit:name>
+  <spirit:name>sobel</spirit:name>
   <spirit:version>1.0</spirit:version>
   <spirit:busInterfaces>
     <spirit:busInterface>
@@ -681,14 +681,14 @@
         <spirit:displayName>Verilog Synthesis</spirit:displayName>
         <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis</spirit:envIdentifier>
         <spirit:language>verilog</spirit:language>
-        <spirit:modelName>hls_sobel</spirit:modelName>
+        <spirit:modelName>sobel</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_verilogsynthesis_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>0952cdd3</spirit:value>
+            <spirit:value>fcd768f4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -697,14 +697,14 @@
         <spirit:displayName>Verilog Simulation</spirit:displayName>
         <spirit:envIdentifier>verilogSource:vivado.xilinx.com:simulation</spirit:envIdentifier>
         <spirit:language>verilog</spirit:language>
-        <spirit:modelName>hls_sobel</spirit:modelName>
+        <spirit:modelName>sobel</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_verilogbehavioralsimulation_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>47014151</spirit:value>
+            <spirit:value>c6844d34</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -713,14 +713,14 @@
         <spirit:displayName>VHDL Synthesis</spirit:displayName>
         <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:synthesis</spirit:envIdentifier>
         <spirit:language>vhdl</spirit:language>
-        <spirit:modelName>hls_sobel</spirit:modelName>
+        <spirit:modelName>sobel</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_vhdlsynthesis_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>dd82f9ed</spirit:value>
+            <spirit:value>b2b1a659</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -729,14 +729,14 @@
         <spirit:displayName>VHDL Simulation</spirit:displayName>
         <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:simulation</spirit:envIdentifier>
         <spirit:language>vhdl</spirit:language>
-        <spirit:modelName>hls_sobel</spirit:modelName>
+        <spirit:modelName>sobel</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>5f5eb7c6</spirit:value>
+            <spirit:value>c996cd31</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1426,19 +1426,19 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>constraints/hls_sobel_ooc.xdc</spirit:name>
+        <spirit:name>constraints/sobel_ooc.xdc</spirit:name>
         <spirit:userFileType>xdc</spirit:userFileType>
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/hls_sobel.v</spirit:name>
+        <spirit:name>hdl/verilog/sobel.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/verilog/hls_sobel.v</spirit:name>
+        <spirit:name>hdl/verilog/sobel.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1446,20 +1446,20 @@
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>constraints/hls_sobel_ooc.xdc</spirit:name>
+        <spirit:name>constraints/sobel_ooc.xdc</spirit:name>
         <spirit:userFileType>xdc</spirit:userFileType>
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/hls_sobel.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/sobel.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_5f5eb7c6</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_c996cd31</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/vhdl/hls_sobel.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/sobel.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1481,7 +1481,7 @@
     <spirit:fileSet>
       <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>xgui/hls_sobel_v1_0.tcl</spirit:name>
+        <spirit:name>xgui/sobel_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:userFileType>CHECKSUM_1b589c1a</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
@@ -1500,7 +1500,7 @@
   <spirit:parameters>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">hls_sobel_v1_0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">sobel_v1_0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>clk_period</spirit:name>
@@ -1531,17 +1531,17 @@
       <xilinx:taxonomies>
         <xilinx:taxonomy>/VIVADO_HLS_IP</xilinx:taxonomy>
       </xilinx:taxonomies>
-      <xilinx:displayName>Hls_sobel</xilinx:displayName>
+      <xilinx:displayName>Sobel</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>1812101754</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2018-12-10T15:54:48Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>1812101759</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2018-12-10T15:59:31Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="444bf0b2"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="993cfcfb"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="77f51c87"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="76c564fd"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="4f57203d"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="df37b45c"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

@@ -1,5 +1,5 @@
 
-set TopModule "hls_sobel"
+set TopModule "sobel"
 set ClockPeriod "10.000000"
 set ClockList {ap_clk}
 set multiClockList {}
