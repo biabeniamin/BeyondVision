@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Dec 14 17:20:59 2018" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Dec 14 20:06:43 2018" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:nexys_video:part0:1.1" DEVICE="7a200t" NAME="hdmi" PACKAGE="sbg484" SPEEDGRADE="-1"/>
 
@@ -53,6 +53,16 @@
     <PORT DIR="O" LEFT="0" NAME="hdmi_rx_txen" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_0_dout">
       <CONNECTIONS>
         <CONNECTION INSTANCE="xlconstant_0" PORT="dout"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="s1" SIGIS="data" SIGNAME="External_Ports_s1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axis_interconnect_0_s_arb_req_suppress_concat" PORT="In0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="s2" SIGIS="data" SIGNAME="External_Ports_s2">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axis_interconnect_0_s_arb_req_suppress_concat" PORT="In1"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -139,66 +149,94 @@
       <PORTS>
         <PORT DIR="I" NAME="INPUT_STREAM_TVALID" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TVALID">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_subset_converter_1" PORT="m_axis_tvalid"/>
+            <CONNECTION INSTANCE="axis_interconnect_1_m01_couplers_auto_ss_slidr" PORT="m_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="INPUT_STREAM_TREADY" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TREADY">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_subset_converter_1" PORT="m_axis_tready"/>
+            <CONNECTION INSTANCE="axis_interconnect_1_m01_couplers_auto_ss_slidr" PORT="m_axis_tready"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="23" NAME="INPUT_STREAM_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TDATA">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_subset_converter_1" PORT="m_axis_tdata"/>
+            <CONNECTION INSTANCE="axis_interconnect_1_m01_couplers_auto_ss_slidr" PORT="m_axis_tdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="2" NAME="INPUT_STREAM_TKEEP" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="2" NAME="INPUT_STREAM_TSTRB" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="2" NAME="INPUT_STREAM_TKEEP" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TKEEP">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_m01_couplers_auto_ss_slidr" PORT="m_axis_tkeep"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="INPUT_STREAM_TSTRB" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TSTRB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_m01_couplers_auto_ss_slidr" PORT="m_axis_tstrb"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" LEFT="0" NAME="INPUT_STREAM_TUSER" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TUSER">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_subset_converter_1" PORT="m_axis_tuser"/>
+            <CONNECTION INSTANCE="axis_interconnect_1_m01_couplers_auto_ss_slidr" PORT="m_axis_tuser"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="0" NAME="INPUT_STREAM_TLAST" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TLAST">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_subset_converter_1" PORT="m_axis_tlast"/>
+            <CONNECTION INSTANCE="axis_interconnect_1_m01_couplers_auto_ss_slidr" PORT="m_axis_tlast"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="INPUT_STREAM_TID" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="0" NAME="INPUT_STREAM_TDEST" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="0" NAME="INPUT_STREAM_TID" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_m01_couplers_auto_ss_slidr" PORT="m_axis_tid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="INPUT_STREAM_TDEST" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TDEST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_m01_couplers_auto_ss_slidr" PORT="m_axis_tdest"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" NAME="OUTPUT_STREAM_TVALID" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TVALID">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_tvalid"/>
+            <CONNECTION INSTANCE="axis_interconnect_0_xbar" PORT="s_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="OUTPUT_STREAM_TREADY" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TREADY">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_tready"/>
+            <CONNECTION INSTANCE="axis_interconnect_0_xbar" PORT="s_axis_tready"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="23" NAME="OUTPUT_STREAM_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TDATA">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_tdata"/>
+            <CONNECTION INSTANCE="axis_interconnect_0_xbar" PORT="s_axis_tdata"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="2" NAME="OUTPUT_STREAM_TKEEP" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TKEEP">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_tkeep"/>
+            <CONNECTION INSTANCE="axis_interconnect_0_xbar" PORT="s_axis_tkeep"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="2" NAME="OUTPUT_STREAM_TSTRB" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="2" NAME="OUTPUT_STREAM_TSTRB" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TSTRB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_xbar" PORT="s_axis_tstrb"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" LEFT="0" NAME="OUTPUT_STREAM_TUSER" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TUSER">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_tuser"/>
+            <CONNECTION INSTANCE="axis_interconnect_0_xbar" PORT="s_axis_tuser"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="OUTPUT_STREAM_TLAST" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TLAST">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_tlast"/>
+            <CONNECTION INSTANCE="axis_interconnect_0_xbar" PORT="s_axis_tlast"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="0" NAME="OUTPUT_STREAM_TID" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="0" NAME="OUTPUT_STREAM_TDEST" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="0" NAME="OUTPUT_STREAM_TID" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_xbar" PORT="s_axis_tid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="OUTPUT_STREAM_TDEST" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TDEST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_xbar" PORT="s_axis_tdest"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT CLKFREQUENCY="160000000" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="mig_7series_0_ui_addn_clk_0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="mig_7series_0" PORT="ui_addn_clk_0"/>
@@ -219,7 +257,7 @@
         <PORT DIR="O" NAME="ap_idle" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="axis_subset_converter_1_M_AXIS" NAME="INPUT_STREAM" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+        <BUSINTERFACE BUSNAME="axis_interconnect_1_m01_couplers_auto_ss_slidr_M_AXIS" NAME="INPUT_STREAM" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="1"/>
@@ -773,6 +811,14 @@
             <CONNECTION INSTANCE="v_vid_in_axi4s_0" PORT="aresetn"/>
             <CONNECTION INSTANCE="axis_subset_converter_1" PORT="aresetn"/>
             <CONNECTION INSTANCE="SobelFilter_0" PORT="ap_rst_n"/>
+            <CONNECTION INSTANCE="axis_interconnect_1_xbar" PORT="aresetn"/>
+            <CONNECTION INSTANCE="axis_interconnect_1_s00_couplers_auto_ss_slid" PORT="aresetn"/>
+            <CONNECTION INSTANCE="axis_interconnect_1_m01_couplers_auto_ss_k" PORT="aresetn"/>
+            <CONNECTION INSTANCE="axis_interconnect_1_m01_couplers_auto_ss_slidr" PORT="aresetn"/>
+            <CONNECTION INSTANCE="axis_interconnect_0_xbar" PORT="aresetn"/>
+            <CONNECTION INSTANCE="axis_interconnect_0_s00_couplers_auto_ss_k" PORT="aresetn"/>
+            <CONNECTION INSTANCE="axis_interconnect_0_s00_couplers_auto_ss_slid" PORT="aresetn"/>
+            <CONNECTION INSTANCE="axis_interconnect_0_m00_couplers_auto_ss_slidr" PORT="aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="gpio2_io_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio2_io_o">
@@ -5257,34 +5303,34 @@
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S01_AXI_bready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="23" NAME="s_axis_s2mm_tdata" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TDATA">
+        <PORT DIR="I" LEFT="23" NAME="s_axis_s2mm_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_vdma_0_s_axis_s2mm_tdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="SobelFilter_0" PORT="OUTPUT_STREAM_TDATA"/>
+            <CONNECTION INSTANCE="axis_interconnect_0_m00_couplers_auto_ss_slidr" PORT="m_axis_tdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="2" NAME="s_axis_s2mm_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TKEEP">
+        <PORT DIR="I" LEFT="2" NAME="s_axis_s2mm_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="axi_vdma_0_s_axis_s2mm_tkeep">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="SobelFilter_0" PORT="OUTPUT_STREAM_TKEEP"/>
+            <CONNECTION INSTANCE="axis_interconnect_0_m00_couplers_auto_ss_slidr" PORT="m_axis_tkeep"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="s_axis_s2mm_tuser" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TUSER">
+        <PORT DIR="I" LEFT="0" NAME="s_axis_s2mm_tuser" RIGHT="0" SIGIS="undef" SIGNAME="axi_vdma_0_s_axis_s2mm_tuser">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="SobelFilter_0" PORT="OUTPUT_STREAM_TUSER"/>
+            <CONNECTION INSTANCE="axis_interconnect_0_m00_couplers_auto_ss_slidr" PORT="m_axis_tuser"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axis_s2mm_tvalid" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TVALID">
+        <PORT DIR="I" NAME="s_axis_s2mm_tvalid" SIGIS="undef" SIGNAME="axi_vdma_0_s_axis_s2mm_tvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="SobelFilter_0" PORT="OUTPUT_STREAM_TVALID"/>
+            <CONNECTION INSTANCE="axis_interconnect_0_m00_couplers_auto_ss_slidr" PORT="m_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axis_s2mm_tready" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TREADY">
+        <PORT DIR="O" NAME="s_axis_s2mm_tready" SIGIS="undef" SIGNAME="axi_vdma_0_s_axis_s2mm_tready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="SobelFilter_0" PORT="OUTPUT_STREAM_TREADY"/>
+            <CONNECTION INSTANCE="axis_interconnect_0_m00_couplers_auto_ss_slidr" PORT="m_axis_tready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axis_s2mm_tlast" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TLAST">
+        <PORT DIR="I" NAME="s_axis_s2mm_tlast" SIGIS="undef" SIGNAME="axi_vdma_0_s_axis_s2mm_tlast">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="SobelFilter_0" PORT="OUTPUT_STREAM_TLAST"/>
+            <CONNECTION INSTANCE="axis_interconnect_0_m00_couplers_auto_ss_slidr" PORT="m_axis_tlast"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="mm2s_introut" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="axi_vdma_0_mm2s_introut">
@@ -5468,7 +5514,7 @@
             <PORTMAP LOGICAL="TVALID" PHYSICAL="m_axis_mm2s_tvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="SobelFilter_0_OUTPUT_STREAM" NAME="S_AXIS_S2MM" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+        <BUSINTERFACE BUSNAME="axis_interconnect_0_m00_couplers_auto_ss_slidr_M_AXIS" NAME="S_AXIS_S2MM" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
@@ -5480,7 +5526,7 @@
           <PARAMETER NAME="FREQ_HZ" VALUE="160000000"/>
           <PARAMETER NAME="PHASE" VALUE="0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_mig_7series_0_0_ui_clk"/>
-          <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TDATA_WIDTH 24 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TUSER_WIDTH 1}"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
           <PORTMAPS>
             <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_s2mm_tdata"/>
             <PORTMAP LOGICAL="TKEEP" PHYSICAL="s_axis_s2mm_tkeep"/>
@@ -5498,6 +5544,2170 @@
       <PERIPHERALS>
         <PERIPHERAL INSTANCE="mig_7series_0"/>
       </PERIPHERALS>
+    </MODULE>
+    <MODULE FULLNAME="/axis_interconnect_0/m00_couplers/auto_ss_slidr" HWVERSION="1.1" INSTANCE="axis_interconnect_0_m00_couplers_auto_ss_slidr" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="axis_subset_converter" VLNV="xilinx.com:ip:axis_subset_converter:1.1">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axis_infrastructure_ip_suite;v=v1_1;d=pg085-axi4stream-infrastructure.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_FAMILY" VALUE="artix7"/>
+        <PARAMETER NAME="C_S_AXIS_TDATA_WIDTH" VALUE="24"/>
+        <PARAMETER NAME="C_S_AXIS_TID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_S_AXIS_TDEST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_S_AXIS_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_S_AXIS_SIGNAL_SET" VALUE="0b00000000000000000000000011111111"/>
+        <PARAMETER NAME="C_M_AXIS_TDATA_WIDTH" VALUE="24"/>
+        <PARAMETER NAME="C_M_AXIS_TID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_M_AXIS_TDEST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_M_AXIS_SIGNAL_SET" VALUE="0b00000000000000000000000010011011"/>
+        <PARAMETER NAME="C_M_AXIS_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_DEFAULT_TLAST" VALUE="0"/>
+        <PARAMETER NAME="S_TDATA_NUM_BYTES" VALUE="3"/>
+        <PARAMETER NAME="M_TDATA_NUM_BYTES" VALUE="3"/>
+        <PARAMETER NAME="S_TID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="M_TID_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="S_TDEST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="M_TDEST_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="S_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="M_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="S_HAS_TREADY" VALUE="1"/>
+        <PARAMETER NAME="S_HAS_TSTRB" VALUE="1"/>
+        <PARAMETER NAME="S_HAS_TKEEP" VALUE="1"/>
+        <PARAMETER NAME="S_HAS_TLAST" VALUE="1"/>
+        <PARAMETER NAME="M_HAS_TREADY" VALUE="1"/>
+        <PARAMETER NAME="M_HAS_TSTRB" VALUE="0"/>
+        <PARAMETER NAME="M_HAS_TKEEP" VALUE="1"/>
+        <PARAMETER NAME="M_HAS_TLAST" VALUE="1"/>
+        <PARAMETER NAME="HAS_ACLKEN" VALUE="0"/>
+        <PARAMETER NAME="DEFAULT_TLAST" VALUE="0"/>
+        <PARAMETER NAME="TDATA_REMAP" VALUE="tdata[23:0]"/>
+        <PARAMETER NAME="TUSER_REMAP" VALUE="tuser[0:0]"/>
+        <PARAMETER NAME="TID_REMAP" VALUE="1'b0"/>
+        <PARAMETER NAME="TDEST_REMAP" VALUE="1'b0"/>
+        <PARAMETER NAME="TKEEP_REMAP" VALUE="tkeep[2:0]"/>
+        <PARAMETER NAME="TSTRB_REMAP" VALUE="1'b0"/>
+        <PARAMETER NAME="TLAST_REMAP" VALUE="tlast[0]"/>
+        <PARAMETER NAME="Component_Name" VALUE="hdmi_auto_ss_slidr_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="160000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="mig_7series_0_ui_addn_clk_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mig_7series_0" PORT="ui_addn_clk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="aresetn" SIGIS="rst" SIGNAME="axi_gpio_0_gpio_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axis_tvalid" SIGIS="undef" SIGNAME="axis_interconnect_0_m00_couplers_auto_ss_slidr_s_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_xbar" PORT="m_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axis_tready" SIGIS="undef" SIGNAME="axis_interconnect_0_m00_couplers_auto_ss_slidr_s_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_xbar" PORT="m_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="23" NAME="s_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_m00_couplers_auto_ss_slidr_s_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_xbar" PORT="m_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="s_axis_tstrb" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_m00_couplers_auto_ss_slidr_s_axis_tstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_xbar" PORT="m_axis_tstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="s_axis_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_m00_couplers_auto_ss_slidr_s_axis_tkeep">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_xbar" PORT="m_axis_tkeep"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axis_tlast" SIGIS="undef" SIGNAME="axis_interconnect_0_m00_couplers_auto_ss_slidr_s_axis_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_xbar" PORT="m_axis_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="s_axis_tid" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_m00_couplers_auto_ss_slidr_s_axis_tid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_xbar" PORT="m_axis_tid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="s_axis_tdest" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_m00_couplers_auto_ss_slidr_s_axis_tdest">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_xbar" PORT="m_axis_tdest"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="s_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_m00_couplers_auto_ss_slidr_s_axis_tuser">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_xbar" PORT="m_axis_tuser"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axis_tvalid" SIGIS="undef" SIGNAME="axi_vdma_0_s_axis_s2mm_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axis_tready" SIGIS="undef" SIGNAME="axi_vdma_0_s_axis_s2mm_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="23" NAME="m_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_vdma_0_s_axis_s2mm_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="m_axis_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="axi_vdma_0_s_axis_s2mm_tkeep">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_tkeep"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axis_tlast" SIGIS="undef" SIGNAME="axi_vdma_0_s_axis_s2mm_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="m_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="axi_vdma_0_s_axis_s2mm_tuser">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_tuser"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="axis_interconnect_0_xbar_M00_AXIS" NAME="S_AXIS" TYPE="SLAVE" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="160000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_mig_7series_0_0_ui_clk"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_tdata"/>
+            <PORTMAP LOGICAL="TDEST" PHYSICAL="s_axis_tdest"/>
+            <PORTMAP LOGICAL="TID" PHYSICAL="s_axis_tid"/>
+            <PORTMAP LOGICAL="TKEEP" PHYSICAL="s_axis_tkeep"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="s_axis_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="s_axis_tready"/>
+            <PORTMAP LOGICAL="TSTRB" PHYSICAL="s_axis_tstrb"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="s_axis_tuser"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="s_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="axis_interconnect_0_m00_couplers_auto_ss_slidr_M_AXIS" NAME="M_AXIS" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="160000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_mig_7series_0_0_ui_clk"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="m_axis_tdata"/>
+            <PORTMAP LOGICAL="TKEEP" PHYSICAL="m_axis_tkeep"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="m_axis_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="m_axis_tready"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="m_axis_tuser"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="m_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE FULLNAME="/axis_interconnect_0/s00_couplers/auto_ss_k" HWVERSION="1.1" INSTANCE="axis_interconnect_0_s00_couplers_auto_ss_k" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="axis_subset_converter" VLNV="xilinx.com:ip:axis_subset_converter:1.1">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axis_infrastructure_ip_suite;v=v1_1;d=pg085-axi4stream-infrastructure.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_FAMILY" VALUE="artix7"/>
+        <PARAMETER NAME="C_S_AXIS_TDATA_WIDTH" VALUE="24"/>
+        <PARAMETER NAME="C_S_AXIS_TID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_S_AXIS_TDEST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_S_AXIS_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_S_AXIS_SIGNAL_SET" VALUE="0b00000000000000000000000011010011"/>
+        <PARAMETER NAME="C_M_AXIS_TDATA_WIDTH" VALUE="24"/>
+        <PARAMETER NAME="C_M_AXIS_TID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_M_AXIS_TDEST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_M_AXIS_SIGNAL_SET" VALUE="0b00000000000000000000000011011011"/>
+        <PARAMETER NAME="C_M_AXIS_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_DEFAULT_TLAST" VALUE="0"/>
+        <PARAMETER NAME="S_TDATA_NUM_BYTES" VALUE="3"/>
+        <PARAMETER NAME="M_TDATA_NUM_BYTES" VALUE="3"/>
+        <PARAMETER NAME="S_TID_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="M_TID_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="S_TDEST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="M_TDEST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="S_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="M_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="S_HAS_TREADY" VALUE="1"/>
+        <PARAMETER NAME="S_HAS_TSTRB" VALUE="0"/>
+        <PARAMETER NAME="S_HAS_TKEEP" VALUE="0"/>
+        <PARAMETER NAME="S_HAS_TLAST" VALUE="1"/>
+        <PARAMETER NAME="M_HAS_TREADY" VALUE="1"/>
+        <PARAMETER NAME="M_HAS_TSTRB" VALUE="0"/>
+        <PARAMETER NAME="M_HAS_TKEEP" VALUE="1"/>
+        <PARAMETER NAME="M_HAS_TLAST" VALUE="1"/>
+        <PARAMETER NAME="HAS_ACLKEN" VALUE="0"/>
+        <PARAMETER NAME="DEFAULT_TLAST" VALUE="0"/>
+        <PARAMETER NAME="TDATA_REMAP" VALUE="tdata[23:0]"/>
+        <PARAMETER NAME="TUSER_REMAP" VALUE="tuser[0:0]"/>
+        <PARAMETER NAME="TID_REMAP" VALUE="1'b0"/>
+        <PARAMETER NAME="TDEST_REMAP" VALUE="tdest[0:0]"/>
+        <PARAMETER NAME="TKEEP_REMAP" VALUE="3'b111"/>
+        <PARAMETER NAME="TSTRB_REMAP" VALUE="1'b0"/>
+        <PARAMETER NAME="TLAST_REMAP" VALUE="tlast[0]"/>
+        <PARAMETER NAME="Component_Name" VALUE="hdmi_auto_ss_k_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="160000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="mig_7series_0_ui_addn_clk_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mig_7series_0" PORT="ui_addn_clk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="aresetn" SIGIS="rst" SIGNAME="axi_gpio_0_gpio_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axis_tvalid" SIGIS="undef" SIGNAME="axis_interconnect_0_s00_couplers_auto_ss_k_s_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_xbar" PORT="m_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axis_tready" SIGIS="undef" SIGNAME="axis_interconnect_0_s00_couplers_auto_ss_k_s_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_xbar" PORT="m_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="23" NAME="s_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_s00_couplers_auto_ss_k_s_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_xbar" PORT="m_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axis_tlast" SIGIS="undef" SIGNAME="axis_interconnect_0_s00_couplers_auto_ss_k_s_axis_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_xbar" PORT="m_axis_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="s_axis_tdest" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_s00_couplers_auto_ss_k_s_axis_tdest">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_xbar" PORT="m_axis_tdest"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="s_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_s00_couplers_auto_ss_k_s_axis_tuser">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_xbar" PORT="m_axis_tuser"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axis_tvalid" SIGIS="undef" SIGNAME="axis_interconnect_0_s00_couplers_auto_ss_k_m_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_s00_couplers_auto_ss_slid" PORT="s_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axis_tready" SIGIS="undef" SIGNAME="axis_interconnect_0_s00_couplers_auto_ss_k_m_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_s00_couplers_auto_ss_slid" PORT="s_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="23" NAME="m_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_s00_couplers_auto_ss_k_m_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_s00_couplers_auto_ss_slid" PORT="s_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="m_axis_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_s00_couplers_auto_ss_k_m_axis_tkeep">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_s00_couplers_auto_ss_slid" PORT="s_axis_tkeep"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axis_tlast" SIGIS="undef" SIGNAME="axis_interconnect_0_s00_couplers_auto_ss_k_m_axis_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_s00_couplers_auto_ss_slid" PORT="s_axis_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="m_axis_tdest" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_s00_couplers_auto_ss_k_m_axis_tdest">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_s00_couplers_auto_ss_slid" PORT="s_axis_tdest"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="m_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_s00_couplers_auto_ss_k_m_axis_tuser">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_s00_couplers_auto_ss_slid" PORT="s_axis_tuser"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="axis_interconnect_1_xbar_M00_AXIS" NAME="S_AXIS" TYPE="SLAVE" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="160000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_mig_7series_0_0_ui_clk"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_tdata"/>
+            <PORTMAP LOGICAL="TDEST" PHYSICAL="s_axis_tdest"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="s_axis_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="s_axis_tready"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="s_axis_tuser"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="s_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="axis_interconnect_0_s00_couplers_auto_ss_k_M_AXIS" NAME="M_AXIS" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="160000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_mig_7series_0_0_ui_clk"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="m_axis_tdata"/>
+            <PORTMAP LOGICAL="TDEST" PHYSICAL="m_axis_tdest"/>
+            <PORTMAP LOGICAL="TKEEP" PHYSICAL="m_axis_tkeep"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="m_axis_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="m_axis_tready"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="m_axis_tuser"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="m_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE FULLNAME="/axis_interconnect_0/s00_couplers/auto_ss_slid" HWVERSION="1.1" INSTANCE="axis_interconnect_0_s00_couplers_auto_ss_slid" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="axis_subset_converter" VLNV="xilinx.com:ip:axis_subset_converter:1.1">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axis_infrastructure_ip_suite;v=v1_1;d=pg085-axi4stream-infrastructure.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_FAMILY" VALUE="artix7"/>
+        <PARAMETER NAME="C_S_AXIS_TDATA_WIDTH" VALUE="24"/>
+        <PARAMETER NAME="C_S_AXIS_TID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_S_AXIS_TDEST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_S_AXIS_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_S_AXIS_SIGNAL_SET" VALUE="0b00000000000000000000000011011011"/>
+        <PARAMETER NAME="C_M_AXIS_TDATA_WIDTH" VALUE="24"/>
+        <PARAMETER NAME="C_M_AXIS_TID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_M_AXIS_TDEST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_M_AXIS_SIGNAL_SET" VALUE="0b00000000000000000000000011111111"/>
+        <PARAMETER NAME="C_M_AXIS_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_DEFAULT_TLAST" VALUE="0"/>
+        <PARAMETER NAME="S_TDATA_NUM_BYTES" VALUE="3"/>
+        <PARAMETER NAME="M_TDATA_NUM_BYTES" VALUE="3"/>
+        <PARAMETER NAME="S_TID_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="M_TID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="S_TDEST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="M_TDEST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="S_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="M_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="S_HAS_TREADY" VALUE="1"/>
+        <PARAMETER NAME="S_HAS_TSTRB" VALUE="0"/>
+        <PARAMETER NAME="S_HAS_TKEEP" VALUE="1"/>
+        <PARAMETER NAME="S_HAS_TLAST" VALUE="1"/>
+        <PARAMETER NAME="M_HAS_TREADY" VALUE="1"/>
+        <PARAMETER NAME="M_HAS_TSTRB" VALUE="1"/>
+        <PARAMETER NAME="M_HAS_TKEEP" VALUE="1"/>
+        <PARAMETER NAME="M_HAS_TLAST" VALUE="1"/>
+        <PARAMETER NAME="HAS_ACLKEN" VALUE="0"/>
+        <PARAMETER NAME="DEFAULT_TLAST" VALUE="0"/>
+        <PARAMETER NAME="TDATA_REMAP" VALUE="tdata[23:0]"/>
+        <PARAMETER NAME="TUSER_REMAP" VALUE="tuser[0:0]"/>
+        <PARAMETER NAME="TID_REMAP" VALUE="1'b0"/>
+        <PARAMETER NAME="TDEST_REMAP" VALUE="tdest[0:0]"/>
+        <PARAMETER NAME="TKEEP_REMAP" VALUE="tkeep[2:0]"/>
+        <PARAMETER NAME="TSTRB_REMAP" VALUE="tkeep[2:0]"/>
+        <PARAMETER NAME="TLAST_REMAP" VALUE="tlast[0]"/>
+        <PARAMETER NAME="Component_Name" VALUE="hdmi_auto_ss_slid_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="160000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="mig_7series_0_ui_addn_clk_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mig_7series_0" PORT="ui_addn_clk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="aresetn" SIGIS="rst" SIGNAME="axi_gpio_0_gpio_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axis_tvalid" SIGIS="undef" SIGNAME="axis_interconnect_0_s00_couplers_auto_ss_k_m_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_s00_couplers_auto_ss_k" PORT="m_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axis_tready" SIGIS="undef" SIGNAME="axis_interconnect_0_s00_couplers_auto_ss_k_m_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_s00_couplers_auto_ss_k" PORT="m_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="23" NAME="s_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_s00_couplers_auto_ss_k_m_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_s00_couplers_auto_ss_k" PORT="m_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="s_axis_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_s00_couplers_auto_ss_k_m_axis_tkeep">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_s00_couplers_auto_ss_k" PORT="m_axis_tkeep"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axis_tlast" SIGIS="undef" SIGNAME="axis_interconnect_0_s00_couplers_auto_ss_k_m_axis_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_s00_couplers_auto_ss_k" PORT="m_axis_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="s_axis_tdest" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_s00_couplers_auto_ss_k_m_axis_tdest">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_s00_couplers_auto_ss_k" PORT="m_axis_tdest"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="s_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_s00_couplers_auto_ss_k_m_axis_tuser">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_s00_couplers_auto_ss_k" PORT="m_axis_tuser"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axis_tvalid" SIGIS="undef" SIGNAME="axis_interconnect_0_s00_couplers_auto_ss_slid_m_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_xbar" PORT="s_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axis_tready" SIGIS="undef" SIGNAME="axis_interconnect_0_s00_couplers_auto_ss_slid_m_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_xbar" PORT="s_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="23" NAME="m_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_s00_couplers_auto_ss_slid_m_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_xbar" PORT="s_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="m_axis_tstrb" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_s00_couplers_auto_ss_slid_m_axis_tstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_xbar" PORT="s_axis_tstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="m_axis_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_s00_couplers_auto_ss_slid_m_axis_tkeep">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_xbar" PORT="s_axis_tkeep"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axis_tlast" SIGIS="undef" SIGNAME="axis_interconnect_0_s00_couplers_auto_ss_slid_m_axis_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_xbar" PORT="s_axis_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="m_axis_tid" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_s00_couplers_auto_ss_slid_m_axis_tid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_xbar" PORT="s_axis_tid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="m_axis_tdest" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_s00_couplers_auto_ss_slid_m_axis_tdest">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_xbar" PORT="s_axis_tdest"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="m_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_s00_couplers_auto_ss_slid_m_axis_tuser">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_xbar" PORT="s_axis_tuser"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="axis_interconnect_0_s00_couplers_auto_ss_k_M_AXIS" NAME="S_AXIS" TYPE="SLAVE" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="160000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_mig_7series_0_0_ui_clk"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_tdata"/>
+            <PORTMAP LOGICAL="TDEST" PHYSICAL="s_axis_tdest"/>
+            <PORTMAP LOGICAL="TKEEP" PHYSICAL="s_axis_tkeep"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="s_axis_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="s_axis_tready"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="s_axis_tuser"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="s_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="axis_interconnect_0_s00_couplers_auto_ss_slid_M_AXIS" NAME="M_AXIS" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="160000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_mig_7series_0_0_ui_clk"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="m_axis_tdata"/>
+            <PORTMAP LOGICAL="TDEST" PHYSICAL="m_axis_tdest"/>
+            <PORTMAP LOGICAL="TID" PHYSICAL="m_axis_tid"/>
+            <PORTMAP LOGICAL="TKEEP" PHYSICAL="m_axis_tkeep"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="m_axis_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="m_axis_tready"/>
+            <PORTMAP LOGICAL="TSTRB" PHYSICAL="m_axis_tstrb"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="m_axis_tuser"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="m_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE FULLNAME="/axis_interconnect_0/s_arb_req_suppress_concat" HWVERSION="2.1" INSTANCE="axis_interconnect_0_s_arb_req_suppress_concat" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconcat" VLNV="xilinx.com:ip:xlconcat:2.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="IN0_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN1_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN2_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN3_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN4_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN5_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN6_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN7_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN8_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN9_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN10_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN11_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN12_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN13_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN14_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN15_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN16_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN17_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN18_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN19_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN20_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN21_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN22_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN23_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN24_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN25_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN26_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN27_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN28_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN29_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN30_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN31_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="dout_width" VALUE="2"/>
+        <PARAMETER NAME="NUM_PORTS" VALUE="2"/>
+        <PARAMETER NAME="Component_Name" VALUE="hdmi_s_arb_req_suppress_concat_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="0" NAME="In0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_s1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="s1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="In1" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_s2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="s2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_s_arb_req_suppress_concat_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_xbar" PORT="s_req_suppress"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/axis_interconnect_0/xbar" HWVERSION="1.1" INSTANCE="axis_interconnect_0_xbar" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="axis_switch" VLNV="xilinx.com:ip:axis_switch:1.1">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axis_infrastructure_ip_suite;v=v1_1;d=pg085-axi4stream-infrastructure.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_FAMILY" VALUE="artix7"/>
+        <PARAMETER NAME="C_NUM_SI_SLOTS" VALUE="2"/>
+        <PARAMETER NAME="C_LOG_SI_SLOTS" VALUE="1"/>
+        <PARAMETER NAME="C_NUM_MI_SLOTS" VALUE="1"/>
+        <PARAMETER NAME="C_AXIS_TDATA_WIDTH" VALUE="24"/>
+        <PARAMETER NAME="C_AXIS_TID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_AXIS_TDEST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_AXIS_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_AXIS_SIGNAL_SET" VALUE="0b00000000000000000000000011111111"/>
+        <PARAMETER NAME="C_ARB_ON_MAX_XFERS" VALUE="1"/>
+        <PARAMETER NAME="C_ARB_ON_NUM_CYCLES" VALUE="0"/>
+        <PARAMETER NAME="C_ARB_ON_TLAST" VALUE="0"/>
+        <PARAMETER NAME="C_INCLUDE_ARBITER" VALUE="1"/>
+        <PARAMETER NAME="C_ARB_ALGORITHM" VALUE="0"/>
+        <PARAMETER NAME="C_OUTPUT_REG" VALUE="0"/>
+        <PARAMETER NAME="C_DECODER_REG" VALUE="0"/>
+        <PARAMETER NAME="C_M_AXIS_CONNECTIVITY_ARRAY" VALUE="0b11"/>
+        <PARAMETER NAME="C_M_AXIS_BASETDEST_ARRAY" VALUE="0b0"/>
+        <PARAMETER NAME="C_M_AXIS_HIGHTDEST_ARRAY" VALUE="0b0"/>
+        <PARAMETER NAME="C_ROUTING_MODE" VALUE="0"/>
+        <PARAMETER NAME="C_S_AXI_CTRL_ADDR_WIDTH" VALUE="7"/>
+        <PARAMETER NAME="C_S_AXI_CTRL_DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_COMMON_CLOCK" VALUE="0"/>
+        <PARAMETER NAME="NUM_SI" VALUE="2"/>
+        <PARAMETER NAME="NUM_MI" VALUE="1"/>
+        <PARAMETER NAME="ROUTING_MODE" VALUE="0"/>
+        <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+        <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
+        <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+        <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+        <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+        <PARAMETER NAME="TID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="HAS_ACLKEN" VALUE="0"/>
+        <PARAMETER NAME="ARB_ON_MAX_XFERS" VALUE="1"/>
+        <PARAMETER NAME="ARB_ON_NUM_CYCLES" VALUE="0"/>
+        <PARAMETER NAME="ARB_ON_TLAST" VALUE="0"/>
+        <PARAMETER NAME="ARB_ALGORITHM" VALUE="0"/>
+        <PARAMETER NAME="DECODER_REG" VALUE="0"/>
+        <PARAMETER NAME="OUTPUT_REG" VALUE="0"/>
+        <PARAMETER NAME="COMMON_CLOCK" VALUE="0"/>
+        <PARAMETER NAME="M00_AXIS_BASETDEST" VALUE="0x00000000"/>
+        <PARAMETER NAME="M01_AXIS_BASETDEST" VALUE="0x00000001"/>
+        <PARAMETER NAME="M02_AXIS_BASETDEST" VALUE="0x00000002"/>
+        <PARAMETER NAME="M03_AXIS_BASETDEST" VALUE="0x00000003"/>
+        <PARAMETER NAME="M04_AXIS_BASETDEST" VALUE="0x00000004"/>
+        <PARAMETER NAME="M05_AXIS_BASETDEST" VALUE="0x00000005"/>
+        <PARAMETER NAME="M06_AXIS_BASETDEST" VALUE="0x00000006"/>
+        <PARAMETER NAME="M07_AXIS_BASETDEST" VALUE="0x00000007"/>
+        <PARAMETER NAME="M08_AXIS_BASETDEST" VALUE="0x00000008"/>
+        <PARAMETER NAME="M09_AXIS_BASETDEST" VALUE="0x00000009"/>
+        <PARAMETER NAME="M10_AXIS_BASETDEST" VALUE="0x0000000a"/>
+        <PARAMETER NAME="M11_AXIS_BASETDEST" VALUE="0x0000000b"/>
+        <PARAMETER NAME="M12_AXIS_BASETDEST" VALUE="0x0000000c"/>
+        <PARAMETER NAME="M13_AXIS_BASETDEST" VALUE="0x0000000d"/>
+        <PARAMETER NAME="M14_AXIS_BASETDEST" VALUE="0x0000000e"/>
+        <PARAMETER NAME="M15_AXIS_BASETDEST" VALUE="0x0000000f"/>
+        <PARAMETER NAME="M00_AXIS_HIGHTDEST" VALUE="0x00000000"/>
+        <PARAMETER NAME="M01_AXIS_HIGHTDEST" VALUE="0x00000001"/>
+        <PARAMETER NAME="M02_AXIS_HIGHTDEST" VALUE="0x00000002"/>
+        <PARAMETER NAME="M03_AXIS_HIGHTDEST" VALUE="0x00000003"/>
+        <PARAMETER NAME="M04_AXIS_HIGHTDEST" VALUE="0x00000004"/>
+        <PARAMETER NAME="M05_AXIS_HIGHTDEST" VALUE="0x00000005"/>
+        <PARAMETER NAME="M06_AXIS_HIGHTDEST" VALUE="0x00000006"/>
+        <PARAMETER NAME="M07_AXIS_HIGHTDEST" VALUE="0x00000007"/>
+        <PARAMETER NAME="M08_AXIS_HIGHTDEST" VALUE="0x00000008"/>
+        <PARAMETER NAME="M09_AXIS_HIGHTDEST" VALUE="0x00000009"/>
+        <PARAMETER NAME="M10_AXIS_HIGHTDEST" VALUE="0x0000000a"/>
+        <PARAMETER NAME="M11_AXIS_HIGHTDEST" VALUE="0x0000000b"/>
+        <PARAMETER NAME="M12_AXIS_HIGHTDEST" VALUE="0x0000000c"/>
+        <PARAMETER NAME="M13_AXIS_HIGHTDEST" VALUE="0x0000000d"/>
+        <PARAMETER NAME="M14_AXIS_HIGHTDEST" VALUE="0x0000000e"/>
+        <PARAMETER NAME="M15_AXIS_HIGHTDEST" VALUE="0x0000000f"/>
+        <PARAMETER NAME="M00_S00_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M00_S01_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M00_S02_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M00_S03_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M00_S04_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M00_S05_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M00_S06_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M00_S07_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M00_S08_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M00_S09_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M00_S10_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M00_S11_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M00_S12_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M00_S13_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M00_S14_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M00_S15_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M01_S00_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M01_S01_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M01_S02_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M01_S03_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M01_S04_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M01_S05_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M01_S06_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M01_S07_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M01_S08_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M01_S09_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M01_S10_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M01_S11_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M01_S12_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M01_S13_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M01_S14_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M01_S15_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M02_S00_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M02_S01_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M02_S02_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M02_S03_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M02_S04_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M02_S05_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M02_S06_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M02_S07_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M02_S08_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M02_S09_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M02_S10_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M02_S11_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M02_S12_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M02_S13_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M02_S14_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M02_S15_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M03_S00_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M03_S01_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M03_S02_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M03_S03_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M03_S04_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M03_S05_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M03_S06_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M03_S07_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M03_S08_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M03_S09_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M03_S10_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M03_S11_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M03_S12_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M03_S13_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M03_S14_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M03_S15_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M04_S00_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M04_S01_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M04_S02_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M04_S03_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M04_S04_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M04_S05_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M04_S06_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M04_S07_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M04_S08_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M04_S09_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M04_S10_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M04_S11_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M04_S12_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M04_S13_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M04_S14_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M04_S15_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M05_S00_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M05_S01_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M05_S02_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M05_S03_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M05_S04_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M05_S05_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M05_S06_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M05_S07_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M05_S08_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M05_S09_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M05_S10_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M05_S11_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M05_S12_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M05_S13_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M05_S14_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M05_S15_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M06_S00_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M06_S01_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M06_S02_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M06_S03_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M06_S04_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M06_S05_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M06_S06_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M06_S07_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M06_S08_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M06_S09_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M06_S10_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M06_S11_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M06_S12_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M06_S13_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M06_S14_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M06_S15_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M07_S00_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M07_S01_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M07_S02_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M07_S03_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M07_S04_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M07_S05_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M07_S06_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M07_S07_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M07_S08_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M07_S09_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M07_S10_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M07_S11_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M07_S12_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M07_S13_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M07_S14_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M07_S15_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M08_S00_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M08_S01_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M08_S02_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M08_S03_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M08_S04_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M08_S05_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M08_S06_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M08_S07_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M08_S08_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M08_S09_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M08_S10_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M08_S11_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M08_S12_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M08_S13_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M08_S14_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M08_S15_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M09_S00_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M09_S01_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M09_S02_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M09_S03_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M09_S04_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M09_S05_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M09_S06_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M09_S07_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M09_S08_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M09_S09_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M09_S10_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M09_S11_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M09_S12_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M09_S13_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M09_S14_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M09_S15_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M10_S00_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M10_S01_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M10_S02_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M10_S03_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M10_S04_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M10_S05_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M10_S06_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M10_S07_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M10_S08_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M10_S09_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M10_S10_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M10_S11_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M10_S12_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M10_S13_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M10_S14_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M10_S15_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M11_S00_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M11_S01_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M11_S02_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M11_S03_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M11_S04_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M11_S05_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M11_S06_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M11_S07_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M11_S08_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M11_S09_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M11_S10_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M11_S11_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M11_S12_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M11_S13_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M11_S14_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M11_S15_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M12_S00_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M12_S01_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M12_S02_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M12_S03_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M12_S04_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M12_S05_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M12_S06_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M12_S07_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M12_S08_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M12_S09_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M12_S10_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M12_S11_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M12_S12_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M12_S13_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M12_S14_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M12_S15_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M13_S00_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M13_S01_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M13_S02_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M13_S03_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M13_S04_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M13_S05_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M13_S06_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M13_S07_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M13_S08_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M13_S09_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M13_S10_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M13_S11_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M13_S12_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M13_S13_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M13_S14_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M13_S15_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M14_S00_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M14_S01_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M14_S02_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M14_S03_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M14_S04_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M14_S05_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M14_S06_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M14_S07_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M14_S08_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M14_S09_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M14_S10_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M14_S11_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M14_S12_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M14_S13_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M14_S14_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M14_S15_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M15_S00_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M15_S01_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M15_S02_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M15_S03_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M15_S04_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M15_S05_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M15_S06_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M15_S07_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M15_S08_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M15_S09_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M15_S10_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M15_S11_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M15_S12_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M15_S13_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M15_S14_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M15_S15_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="hdmi_xbar_2"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="160000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="mig_7series_0_ui_addn_clk_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mig_7series_0" PORT="ui_addn_clk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="aresetn" SIGIS="rst" SIGNAME="axi_gpio_0_gpio_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="s_axis_tvalid" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_s00_couplers_auto_ss_slid_m_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SobelFilter_0" PORT="OUTPUT_STREAM_TVALID"/>
+          </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_s00_couplers_auto_ss_slid" PORT="m_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="s_axis_tready" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_s00_couplers_auto_ss_slid_m_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SobelFilter_0" PORT="OUTPUT_STREAM_TREADY"/>
+          </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_s00_couplers_auto_ss_slid" PORT="m_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="47" NAME="s_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_s00_couplers_auto_ss_slid_m_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SobelFilter_0" PORT="OUTPUT_STREAM_TDATA"/>
+          </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_s00_couplers_auto_ss_slid" PORT="m_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="5" NAME="s_axis_tstrb" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_s00_couplers_auto_ss_slid_m_axis_tstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SobelFilter_0" PORT="OUTPUT_STREAM_TSTRB"/>
+          </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_s00_couplers_auto_ss_slid" PORT="m_axis_tstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="5" NAME="s_axis_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_s00_couplers_auto_ss_slid_m_axis_tkeep">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SobelFilter_0" PORT="OUTPUT_STREAM_TKEEP"/>
+          </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_s00_couplers_auto_ss_slid" PORT="m_axis_tkeep"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="s_axis_tlast" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_s00_couplers_auto_ss_slid_m_axis_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SobelFilter_0" PORT="OUTPUT_STREAM_TLAST"/>
+          </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_s00_couplers_auto_ss_slid" PORT="m_axis_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="s_axis_tid" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_s00_couplers_auto_ss_slid_m_axis_tid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SobelFilter_0" PORT="OUTPUT_STREAM_TID"/>
+          </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_s00_couplers_auto_ss_slid" PORT="m_axis_tid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="s_axis_tdest" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_s00_couplers_auto_ss_slid_m_axis_tdest">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SobelFilter_0" PORT="OUTPUT_STREAM_TDEST"/>
+          </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_s00_couplers_auto_ss_slid" PORT="m_axis_tdest"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="s_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_s00_couplers_auto_ss_slid_m_axis_tuser">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SobelFilter_0" PORT="OUTPUT_STREAM_TUSER"/>
+          </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_s00_couplers_auto_ss_slid" PORT="m_axis_tuser"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="m_axis_tvalid" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_m00_couplers_auto_ss_slidr_s_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_m00_couplers_auto_ss_slidr" PORT="s_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="m_axis_tready" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_m00_couplers_auto_ss_slidr_s_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_m00_couplers_auto_ss_slidr" PORT="s_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="23" NAME="m_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_m00_couplers_auto_ss_slidr_s_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_m00_couplers_auto_ss_slidr" PORT="s_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="m_axis_tstrb" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_m00_couplers_auto_ss_slidr_s_axis_tstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_m00_couplers_auto_ss_slidr" PORT="s_axis_tstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="m_axis_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_m00_couplers_auto_ss_slidr_s_axis_tkeep">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_m00_couplers_auto_ss_slidr" PORT="s_axis_tkeep"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="m_axis_tlast" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_m00_couplers_auto_ss_slidr_s_axis_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_m00_couplers_auto_ss_slidr" PORT="s_axis_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="m_axis_tid" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_m00_couplers_auto_ss_slidr_s_axis_tid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_m00_couplers_auto_ss_slidr" PORT="s_axis_tid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="m_axis_tdest" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_m00_couplers_auto_ss_slidr_s_axis_tdest">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_m00_couplers_auto_ss_slidr" PORT="s_axis_tdest"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="m_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_m00_couplers_auto_ss_slidr_s_axis_tuser">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_m00_couplers_auto_ss_slidr" PORT="s_axis_tuser"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="s_req_suppress" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_0_s_arb_req_suppress_concat_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_s_arb_req_suppress_concat" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="s_decode_err" RIGHT="0" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="axis_interconnect_0_s00_couplers_auto_ss_slid_M_AXIS" NAME="S00_AXIS" TYPE="SLAVE" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="160000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_mig_7series_0_0_ui_clk"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="s_axis_tvalid"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="s_axis_tready"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_tdata"/>
+            <PORTMAP LOGICAL="TSTRB" PHYSICAL="s_axis_tstrb"/>
+            <PORTMAP LOGICAL="TKEEP" PHYSICAL="s_axis_tkeep"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="s_axis_tlast"/>
+            <PORTMAP LOGICAL="TID" PHYSICAL="s_axis_tid"/>
+            <PORTMAP LOGICAL="TDEST" PHYSICAL="s_axis_tdest"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="s_axis_tuser"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="axis_interconnect_0_xbar_M00_AXIS" NAME="M00_AXIS" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="160000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_mig_7series_0_0_ui_clk"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="m_axis_tvalid"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="m_axis_tready"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="m_axis_tdata"/>
+            <PORTMAP LOGICAL="TSTRB" PHYSICAL="m_axis_tstrb"/>
+            <PORTMAP LOGICAL="TKEEP" PHYSICAL="m_axis_tkeep"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="m_axis_tlast"/>
+            <PORTMAP LOGICAL="TID" PHYSICAL="m_axis_tid"/>
+            <PORTMAP LOGICAL="TDEST" PHYSICAL="m_axis_tdest"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="m_axis_tuser"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="SobelFilter_0_OUTPUT_STREAM" NAME="S01_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="160000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_mig_7series_0_0_ui_clk"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TDATA_WIDTH 24 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TUSER_WIDTH 1}"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="s_axis_tvalid"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="s_axis_tready"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_tdata"/>
+            <PORTMAP LOGICAL="TSTRB" PHYSICAL="s_axis_tstrb"/>
+            <PORTMAP LOGICAL="TKEEP" PHYSICAL="s_axis_tkeep"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="s_axis_tlast"/>
+            <PORTMAP LOGICAL="TID" PHYSICAL="s_axis_tid"/>
+            <PORTMAP LOGICAL="TDEST" PHYSICAL="s_axis_tdest"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="s_axis_tuser"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE FULLNAME="/axis_interconnect_1/m01_couplers/auto_ss_k" HWVERSION="1.1" INSTANCE="axis_interconnect_1_m01_couplers_auto_ss_k" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="axis_subset_converter" VLNV="xilinx.com:ip:axis_subset_converter:1.1">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axis_infrastructure_ip_suite;v=v1_1;d=pg085-axi4stream-infrastructure.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_FAMILY" VALUE="artix7"/>
+        <PARAMETER NAME="C_S_AXIS_TDATA_WIDTH" VALUE="24"/>
+        <PARAMETER NAME="C_S_AXIS_TID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_S_AXIS_TDEST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_S_AXIS_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_S_AXIS_SIGNAL_SET" VALUE="0b00000000000000000000000011010011"/>
+        <PARAMETER NAME="C_M_AXIS_TDATA_WIDTH" VALUE="24"/>
+        <PARAMETER NAME="C_M_AXIS_TID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_M_AXIS_TDEST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_M_AXIS_SIGNAL_SET" VALUE="0b00000000000000000000000011011011"/>
+        <PARAMETER NAME="C_M_AXIS_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_DEFAULT_TLAST" VALUE="0"/>
+        <PARAMETER NAME="S_TDATA_NUM_BYTES" VALUE="3"/>
+        <PARAMETER NAME="M_TDATA_NUM_BYTES" VALUE="3"/>
+        <PARAMETER NAME="S_TID_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="M_TID_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="S_TDEST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="M_TDEST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="S_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="M_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="S_HAS_TREADY" VALUE="1"/>
+        <PARAMETER NAME="S_HAS_TSTRB" VALUE="0"/>
+        <PARAMETER NAME="S_HAS_TKEEP" VALUE="0"/>
+        <PARAMETER NAME="S_HAS_TLAST" VALUE="1"/>
+        <PARAMETER NAME="M_HAS_TREADY" VALUE="1"/>
+        <PARAMETER NAME="M_HAS_TSTRB" VALUE="0"/>
+        <PARAMETER NAME="M_HAS_TKEEP" VALUE="1"/>
+        <PARAMETER NAME="M_HAS_TLAST" VALUE="1"/>
+        <PARAMETER NAME="HAS_ACLKEN" VALUE="0"/>
+        <PARAMETER NAME="DEFAULT_TLAST" VALUE="0"/>
+        <PARAMETER NAME="TDATA_REMAP" VALUE="tdata[23:0]"/>
+        <PARAMETER NAME="TUSER_REMAP" VALUE="tuser[0:0]"/>
+        <PARAMETER NAME="TID_REMAP" VALUE="1'b0"/>
+        <PARAMETER NAME="TDEST_REMAP" VALUE="tdest[0:0]"/>
+        <PARAMETER NAME="TKEEP_REMAP" VALUE="3'b111"/>
+        <PARAMETER NAME="TSTRB_REMAP" VALUE="1'b0"/>
+        <PARAMETER NAME="TLAST_REMAP" VALUE="tlast[0]"/>
+        <PARAMETER NAME="Component_Name" VALUE="hdmi_auto_ss_k_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="160000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="mig_7series_0_ui_addn_clk_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mig_7series_0" PORT="ui_addn_clk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="aresetn" SIGIS="rst" SIGNAME="axi_gpio_0_gpio_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axis_tvalid" SIGIS="undef" SIGNAME="axis_interconnect_1_m01_couplers_auto_ss_k_s_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_xbar" PORT="m_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axis_tready" SIGIS="undef" SIGNAME="axis_interconnect_1_m01_couplers_auto_ss_k_s_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_xbar" PORT="m_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="23" NAME="s_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_1_m01_couplers_auto_ss_k_s_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_xbar" PORT="m_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axis_tlast" SIGIS="undef" SIGNAME="axis_interconnect_1_m01_couplers_auto_ss_k_s_axis_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_xbar" PORT="m_axis_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="s_axis_tdest" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_1_m01_couplers_auto_ss_k_s_axis_tdest">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_xbar" PORT="m_axis_tdest"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="s_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_1_m01_couplers_auto_ss_k_s_axis_tuser">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_xbar" PORT="m_axis_tuser"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axis_tvalid" SIGIS="undef" SIGNAME="axis_interconnect_1_m01_couplers_auto_ss_k_m_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_m01_couplers_auto_ss_slidr" PORT="s_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axis_tready" SIGIS="undef" SIGNAME="axis_interconnect_1_m01_couplers_auto_ss_k_m_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_m01_couplers_auto_ss_slidr" PORT="s_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="23" NAME="m_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_1_m01_couplers_auto_ss_k_m_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_m01_couplers_auto_ss_slidr" PORT="s_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="m_axis_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_1_m01_couplers_auto_ss_k_m_axis_tkeep">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_m01_couplers_auto_ss_slidr" PORT="s_axis_tkeep"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axis_tlast" SIGIS="undef" SIGNAME="axis_interconnect_1_m01_couplers_auto_ss_k_m_axis_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_m01_couplers_auto_ss_slidr" PORT="s_axis_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="m_axis_tdest" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_1_m01_couplers_auto_ss_k_m_axis_tdest">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_m01_couplers_auto_ss_slidr" PORT="s_axis_tdest"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="m_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_1_m01_couplers_auto_ss_k_m_axis_tuser">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_m01_couplers_auto_ss_slidr" PORT="s_axis_tuser"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="axis_interconnect_1_xbar_M01_AXIS" NAME="S_AXIS" TYPE="SLAVE" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="160000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_mig_7series_0_0_ui_clk"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_tdata"/>
+            <PORTMAP LOGICAL="TDEST" PHYSICAL="s_axis_tdest"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="s_axis_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="s_axis_tready"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="s_axis_tuser"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="s_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="axis_interconnect_1_m01_couplers_auto_ss_k_M_AXIS" NAME="M_AXIS" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="160000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_mig_7series_0_0_ui_clk"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="m_axis_tdata"/>
+            <PORTMAP LOGICAL="TDEST" PHYSICAL="m_axis_tdest"/>
+            <PORTMAP LOGICAL="TKEEP" PHYSICAL="m_axis_tkeep"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="m_axis_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="m_axis_tready"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="m_axis_tuser"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="m_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE FULLNAME="/axis_interconnect_1/m01_couplers/auto_ss_slidr" HWVERSION="1.1" INSTANCE="axis_interconnect_1_m01_couplers_auto_ss_slidr" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="axis_subset_converter" VLNV="xilinx.com:ip:axis_subset_converter:1.1">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axis_infrastructure_ip_suite;v=v1_1;d=pg085-axi4stream-infrastructure.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_FAMILY" VALUE="artix7"/>
+        <PARAMETER NAME="C_S_AXIS_TDATA_WIDTH" VALUE="24"/>
+        <PARAMETER NAME="C_S_AXIS_TID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_S_AXIS_TDEST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_S_AXIS_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_S_AXIS_SIGNAL_SET" VALUE="0b00000000000000000000000011011011"/>
+        <PARAMETER NAME="C_M_AXIS_TDATA_WIDTH" VALUE="24"/>
+        <PARAMETER NAME="C_M_AXIS_TID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_M_AXIS_TDEST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_M_AXIS_SIGNAL_SET" VALUE="0b00000000000000000000000011111111"/>
+        <PARAMETER NAME="C_M_AXIS_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_DEFAULT_TLAST" VALUE="0"/>
+        <PARAMETER NAME="S_TDATA_NUM_BYTES" VALUE="3"/>
+        <PARAMETER NAME="M_TDATA_NUM_BYTES" VALUE="3"/>
+        <PARAMETER NAME="S_TID_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="M_TID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="S_TDEST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="M_TDEST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="S_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="M_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="S_HAS_TREADY" VALUE="1"/>
+        <PARAMETER NAME="S_HAS_TSTRB" VALUE="0"/>
+        <PARAMETER NAME="S_HAS_TKEEP" VALUE="1"/>
+        <PARAMETER NAME="S_HAS_TLAST" VALUE="1"/>
+        <PARAMETER NAME="M_HAS_TREADY" VALUE="1"/>
+        <PARAMETER NAME="M_HAS_TSTRB" VALUE="1"/>
+        <PARAMETER NAME="M_HAS_TKEEP" VALUE="1"/>
+        <PARAMETER NAME="M_HAS_TLAST" VALUE="1"/>
+        <PARAMETER NAME="HAS_ACLKEN" VALUE="0"/>
+        <PARAMETER NAME="DEFAULT_TLAST" VALUE="0"/>
+        <PARAMETER NAME="TDATA_REMAP" VALUE="tdata[23:0]"/>
+        <PARAMETER NAME="TUSER_REMAP" VALUE="tuser[0:0]"/>
+        <PARAMETER NAME="TID_REMAP" VALUE="1'b0"/>
+        <PARAMETER NAME="TDEST_REMAP" VALUE="tdest[0:0]"/>
+        <PARAMETER NAME="TKEEP_REMAP" VALUE="tkeep[2:0]"/>
+        <PARAMETER NAME="TSTRB_REMAP" VALUE="tkeep[2:0]"/>
+        <PARAMETER NAME="TLAST_REMAP" VALUE="tlast[0]"/>
+        <PARAMETER NAME="Component_Name" VALUE="hdmi_auto_ss_slidr_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="160000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="mig_7series_0_ui_addn_clk_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mig_7series_0" PORT="ui_addn_clk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="aresetn" SIGIS="rst" SIGNAME="axi_gpio_0_gpio_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axis_tvalid" SIGIS="undef" SIGNAME="axis_interconnect_1_m01_couplers_auto_ss_k_m_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_m01_couplers_auto_ss_k" PORT="m_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axis_tready" SIGIS="undef" SIGNAME="axis_interconnect_1_m01_couplers_auto_ss_k_m_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_m01_couplers_auto_ss_k" PORT="m_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="23" NAME="s_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_1_m01_couplers_auto_ss_k_m_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_m01_couplers_auto_ss_k" PORT="m_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="s_axis_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_1_m01_couplers_auto_ss_k_m_axis_tkeep">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_m01_couplers_auto_ss_k" PORT="m_axis_tkeep"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axis_tlast" SIGIS="undef" SIGNAME="axis_interconnect_1_m01_couplers_auto_ss_k_m_axis_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_m01_couplers_auto_ss_k" PORT="m_axis_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="s_axis_tdest" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_1_m01_couplers_auto_ss_k_m_axis_tdest">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_m01_couplers_auto_ss_k" PORT="m_axis_tdest"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="s_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_1_m01_couplers_auto_ss_k_m_axis_tuser">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_m01_couplers_auto_ss_k" PORT="m_axis_tuser"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axis_tvalid" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SobelFilter_0" PORT="INPUT_STREAM_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axis_tready" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SobelFilter_0" PORT="INPUT_STREAM_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="23" NAME="m_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SobelFilter_0" PORT="INPUT_STREAM_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="m_axis_tstrb" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TSTRB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SobelFilter_0" PORT="INPUT_STREAM_TSTRB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="m_axis_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TKEEP">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SobelFilter_0" PORT="INPUT_STREAM_TKEEP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axis_tlast" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TLAST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SobelFilter_0" PORT="INPUT_STREAM_TLAST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="m_axis_tid" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SobelFilter_0" PORT="INPUT_STREAM_TID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="m_axis_tdest" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TDEST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SobelFilter_0" PORT="INPUT_STREAM_TDEST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="m_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TUSER">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SobelFilter_0" PORT="INPUT_STREAM_TUSER"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="axis_interconnect_1_m01_couplers_auto_ss_k_M_AXIS" NAME="S_AXIS" TYPE="SLAVE" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="160000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_mig_7series_0_0_ui_clk"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_tdata"/>
+            <PORTMAP LOGICAL="TDEST" PHYSICAL="s_axis_tdest"/>
+            <PORTMAP LOGICAL="TKEEP" PHYSICAL="s_axis_tkeep"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="s_axis_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="s_axis_tready"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="s_axis_tuser"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="s_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="axis_interconnect_1_m01_couplers_auto_ss_slidr_M_AXIS" NAME="M_AXIS" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="160000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_mig_7series_0_0_ui_clk"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="m_axis_tdata"/>
+            <PORTMAP LOGICAL="TDEST" PHYSICAL="m_axis_tdest"/>
+            <PORTMAP LOGICAL="TID" PHYSICAL="m_axis_tid"/>
+            <PORTMAP LOGICAL="TKEEP" PHYSICAL="m_axis_tkeep"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="m_axis_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="m_axis_tready"/>
+            <PORTMAP LOGICAL="TSTRB" PHYSICAL="m_axis_tstrb"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="m_axis_tuser"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="m_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE FULLNAME="/axis_interconnect_1/s00_couplers/auto_ss_slid" HWVERSION="1.1" INSTANCE="axis_interconnect_1_s00_couplers_auto_ss_slid" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="axis_subset_converter" VLNV="xilinx.com:ip:axis_subset_converter:1.1">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axis_infrastructure_ip_suite;v=v1_1;d=pg085-axi4stream-infrastructure.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_FAMILY" VALUE="artix7"/>
+        <PARAMETER NAME="C_S_AXIS_TDATA_WIDTH" VALUE="24"/>
+        <PARAMETER NAME="C_S_AXIS_TID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_S_AXIS_TDEST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_S_AXIS_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_S_AXIS_SIGNAL_SET" VALUE="0b00000000000000000000000010010011"/>
+        <PARAMETER NAME="C_M_AXIS_TDATA_WIDTH" VALUE="24"/>
+        <PARAMETER NAME="C_M_AXIS_TID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_M_AXIS_TDEST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_M_AXIS_SIGNAL_SET" VALUE="0b00000000000000000000000011010011"/>
+        <PARAMETER NAME="C_M_AXIS_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_DEFAULT_TLAST" VALUE="0"/>
+        <PARAMETER NAME="S_TDATA_NUM_BYTES" VALUE="3"/>
+        <PARAMETER NAME="M_TDATA_NUM_BYTES" VALUE="3"/>
+        <PARAMETER NAME="S_TID_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="M_TID_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="S_TDEST_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="M_TDEST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="S_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="M_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="S_HAS_TREADY" VALUE="1"/>
+        <PARAMETER NAME="S_HAS_TSTRB" VALUE="0"/>
+        <PARAMETER NAME="S_HAS_TKEEP" VALUE="0"/>
+        <PARAMETER NAME="S_HAS_TLAST" VALUE="1"/>
+        <PARAMETER NAME="M_HAS_TREADY" VALUE="1"/>
+        <PARAMETER NAME="M_HAS_TSTRB" VALUE="0"/>
+        <PARAMETER NAME="M_HAS_TKEEP" VALUE="0"/>
+        <PARAMETER NAME="M_HAS_TLAST" VALUE="1"/>
+        <PARAMETER NAME="HAS_ACLKEN" VALUE="0"/>
+        <PARAMETER NAME="DEFAULT_TLAST" VALUE="0"/>
+        <PARAMETER NAME="TDATA_REMAP" VALUE="tdata[23:0]"/>
+        <PARAMETER NAME="TUSER_REMAP" VALUE="tuser[0:0]"/>
+        <PARAMETER NAME="TID_REMAP" VALUE="1'b0"/>
+        <PARAMETER NAME="TDEST_REMAP" VALUE="1'b0"/>
+        <PARAMETER NAME="TKEEP_REMAP" VALUE="1'b0"/>
+        <PARAMETER NAME="TSTRB_REMAP" VALUE="1'b0"/>
+        <PARAMETER NAME="TLAST_REMAP" VALUE="tlast[0]"/>
+        <PARAMETER NAME="Component_Name" VALUE="hdmi_auto_ss_slid_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="160000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="mig_7series_0_ui_addn_clk_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mig_7series_0" PORT="ui_addn_clk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="aresetn" SIGIS="rst" SIGNAME="axi_gpio_0_gpio_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axis_tvalid" SIGIS="undef" SIGNAME="axis_interconnect_1_s00_couplers_auto_ss_slid_s_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_subset_converter_1" PORT="m_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axis_tready" SIGIS="undef" SIGNAME="axis_interconnect_1_s00_couplers_auto_ss_slid_s_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_subset_converter_1" PORT="m_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="23" NAME="s_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_1_s00_couplers_auto_ss_slid_s_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_subset_converter_1" PORT="m_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axis_tlast" SIGIS="undef" SIGNAME="axis_interconnect_1_s00_couplers_auto_ss_slid_s_axis_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_subset_converter_1" PORT="m_axis_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="s_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_1_s00_couplers_auto_ss_slid_s_axis_tuser">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_subset_converter_1" PORT="m_axis_tuser"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axis_tvalid" SIGIS="undef" SIGNAME="axis_interconnect_1_s00_couplers_auto_ss_slid_m_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_xbar" PORT="s_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axis_tready" SIGIS="undef" SIGNAME="axis_interconnect_1_s00_couplers_auto_ss_slid_m_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_xbar" PORT="s_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="23" NAME="m_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_1_s00_couplers_auto_ss_slid_m_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_xbar" PORT="s_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axis_tlast" SIGIS="undef" SIGNAME="axis_interconnect_1_s00_couplers_auto_ss_slid_m_axis_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_xbar" PORT="s_axis_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="m_axis_tdest" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_1_s00_couplers_auto_ss_slid_m_axis_tdest">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_xbar" PORT="s_axis_tdest"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="m_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_1_s00_couplers_auto_ss_slid_m_axis_tuser">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_xbar" PORT="s_axis_tuser"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="axis_subset_converter_1_M_AXIS" NAME="S_AXIS" TYPE="SLAVE" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="160000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_mig_7series_0_0_ui_clk"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_tdata"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="s_axis_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="s_axis_tready"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="s_axis_tuser"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="s_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="axis_interconnect_1_s00_couplers_auto_ss_slid_M_AXIS" NAME="M_AXIS" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="160000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_mig_7series_0_0_ui_clk"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="m_axis_tdata"/>
+            <PORTMAP LOGICAL="TDEST" PHYSICAL="m_axis_tdest"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="m_axis_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="m_axis_tready"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="m_axis_tuser"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="m_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE FULLNAME="/axis_interconnect_1/xbar" HWVERSION="1.1" INSTANCE="axis_interconnect_1_xbar" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="axis_switch" VLNV="xilinx.com:ip:axis_switch:1.1">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axis_infrastructure_ip_suite;v=v1_1;d=pg085-axi4stream-infrastructure.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_FAMILY" VALUE="artix7"/>
+        <PARAMETER NAME="C_NUM_SI_SLOTS" VALUE="1"/>
+        <PARAMETER NAME="C_LOG_SI_SLOTS" VALUE="1"/>
+        <PARAMETER NAME="C_NUM_MI_SLOTS" VALUE="2"/>
+        <PARAMETER NAME="C_AXIS_TDATA_WIDTH" VALUE="24"/>
+        <PARAMETER NAME="C_AXIS_TID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_AXIS_TDEST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_AXIS_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_AXIS_SIGNAL_SET" VALUE="0b00000000000000000000000011010011"/>
+        <PARAMETER NAME="C_ARB_ON_MAX_XFERS" VALUE="1"/>
+        <PARAMETER NAME="C_ARB_ON_NUM_CYCLES" VALUE="0"/>
+        <PARAMETER NAME="C_ARB_ON_TLAST" VALUE="0"/>
+        <PARAMETER NAME="C_INCLUDE_ARBITER" VALUE="1"/>
+        <PARAMETER NAME="C_ARB_ALGORITHM" VALUE="0"/>
+        <PARAMETER NAME="C_OUTPUT_REG" VALUE="0"/>
+        <PARAMETER NAME="C_DECODER_REG" VALUE="1"/>
+        <PARAMETER NAME="C_M_AXIS_CONNECTIVITY_ARRAY" VALUE="0b11"/>
+        <PARAMETER NAME="C_M_AXIS_BASETDEST_ARRAY" VALUE="0b10"/>
+        <PARAMETER NAME="C_M_AXIS_HIGHTDEST_ARRAY" VALUE="0b10"/>
+        <PARAMETER NAME="C_ROUTING_MODE" VALUE="0"/>
+        <PARAMETER NAME="C_S_AXI_CTRL_ADDR_WIDTH" VALUE="7"/>
+        <PARAMETER NAME="C_S_AXI_CTRL_DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_COMMON_CLOCK" VALUE="0"/>
+        <PARAMETER NAME="NUM_SI" VALUE="1"/>
+        <PARAMETER NAME="NUM_MI" VALUE="2"/>
+        <PARAMETER NAME="ROUTING_MODE" VALUE="0"/>
+        <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+        <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
+        <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+        <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+        <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+        <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="HAS_ACLKEN" VALUE="0"/>
+        <PARAMETER NAME="ARB_ON_MAX_XFERS" VALUE="1"/>
+        <PARAMETER NAME="ARB_ON_NUM_CYCLES" VALUE="0"/>
+        <PARAMETER NAME="ARB_ON_TLAST" VALUE="0"/>
+        <PARAMETER NAME="ARB_ALGORITHM" VALUE="0"/>
+        <PARAMETER NAME="DECODER_REG" VALUE="1"/>
+        <PARAMETER NAME="OUTPUT_REG" VALUE="0"/>
+        <PARAMETER NAME="COMMON_CLOCK" VALUE="0"/>
+        <PARAMETER NAME="M00_AXIS_BASETDEST" VALUE="0x00000000"/>
+        <PARAMETER NAME="M01_AXIS_BASETDEST" VALUE="0x00000001"/>
+        <PARAMETER NAME="M02_AXIS_BASETDEST" VALUE="0x00000002"/>
+        <PARAMETER NAME="M03_AXIS_BASETDEST" VALUE="0x00000003"/>
+        <PARAMETER NAME="M04_AXIS_BASETDEST" VALUE="0x00000004"/>
+        <PARAMETER NAME="M05_AXIS_BASETDEST" VALUE="0x00000005"/>
+        <PARAMETER NAME="M06_AXIS_BASETDEST" VALUE="0x00000006"/>
+        <PARAMETER NAME="M07_AXIS_BASETDEST" VALUE="0x00000007"/>
+        <PARAMETER NAME="M08_AXIS_BASETDEST" VALUE="0x00000008"/>
+        <PARAMETER NAME="M09_AXIS_BASETDEST" VALUE="0x00000009"/>
+        <PARAMETER NAME="M10_AXIS_BASETDEST" VALUE="0x0000000a"/>
+        <PARAMETER NAME="M11_AXIS_BASETDEST" VALUE="0x0000000b"/>
+        <PARAMETER NAME="M12_AXIS_BASETDEST" VALUE="0x0000000c"/>
+        <PARAMETER NAME="M13_AXIS_BASETDEST" VALUE="0x0000000d"/>
+        <PARAMETER NAME="M14_AXIS_BASETDEST" VALUE="0x0000000e"/>
+        <PARAMETER NAME="M15_AXIS_BASETDEST" VALUE="0x0000000f"/>
+        <PARAMETER NAME="M00_AXIS_HIGHTDEST" VALUE="0x00000000"/>
+        <PARAMETER NAME="M01_AXIS_HIGHTDEST" VALUE="0x00000001"/>
+        <PARAMETER NAME="M02_AXIS_HIGHTDEST" VALUE="0x00000002"/>
+        <PARAMETER NAME="M03_AXIS_HIGHTDEST" VALUE="0x00000003"/>
+        <PARAMETER NAME="M04_AXIS_HIGHTDEST" VALUE="0x00000004"/>
+        <PARAMETER NAME="M05_AXIS_HIGHTDEST" VALUE="0x00000005"/>
+        <PARAMETER NAME="M06_AXIS_HIGHTDEST" VALUE="0x00000006"/>
+        <PARAMETER NAME="M07_AXIS_HIGHTDEST" VALUE="0x00000007"/>
+        <PARAMETER NAME="M08_AXIS_HIGHTDEST" VALUE="0x00000008"/>
+        <PARAMETER NAME="M09_AXIS_HIGHTDEST" VALUE="0x00000009"/>
+        <PARAMETER NAME="M10_AXIS_HIGHTDEST" VALUE="0x0000000a"/>
+        <PARAMETER NAME="M11_AXIS_HIGHTDEST" VALUE="0x0000000b"/>
+        <PARAMETER NAME="M12_AXIS_HIGHTDEST" VALUE="0x0000000c"/>
+        <PARAMETER NAME="M13_AXIS_HIGHTDEST" VALUE="0x0000000d"/>
+        <PARAMETER NAME="M14_AXIS_HIGHTDEST" VALUE="0x0000000e"/>
+        <PARAMETER NAME="M15_AXIS_HIGHTDEST" VALUE="0x0000000f"/>
+        <PARAMETER NAME="M00_S00_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M00_S01_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M00_S02_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M00_S03_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M00_S04_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M00_S05_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M00_S06_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M00_S07_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M00_S08_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M00_S09_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M00_S10_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M00_S11_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M00_S12_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M00_S13_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M00_S14_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M00_S15_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M01_S00_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M01_S01_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M01_S02_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M01_S03_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M01_S04_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M01_S05_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M01_S06_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M01_S07_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M01_S08_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M01_S09_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M01_S10_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M01_S11_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M01_S12_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M01_S13_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M01_S14_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M01_S15_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M02_S00_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M02_S01_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M02_S02_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M02_S03_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M02_S04_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M02_S05_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M02_S06_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M02_S07_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M02_S08_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M02_S09_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M02_S10_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M02_S11_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M02_S12_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M02_S13_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M02_S14_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M02_S15_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M03_S00_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M03_S01_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M03_S02_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M03_S03_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M03_S04_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M03_S05_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M03_S06_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M03_S07_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M03_S08_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M03_S09_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M03_S10_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M03_S11_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M03_S12_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M03_S13_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M03_S14_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M03_S15_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M04_S00_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M04_S01_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M04_S02_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M04_S03_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M04_S04_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M04_S05_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M04_S06_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M04_S07_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M04_S08_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M04_S09_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M04_S10_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M04_S11_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M04_S12_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M04_S13_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M04_S14_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M04_S15_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M05_S00_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M05_S01_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M05_S02_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M05_S03_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M05_S04_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M05_S05_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M05_S06_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M05_S07_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M05_S08_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M05_S09_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M05_S10_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M05_S11_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M05_S12_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M05_S13_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M05_S14_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M05_S15_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M06_S00_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M06_S01_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M06_S02_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M06_S03_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M06_S04_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M06_S05_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M06_S06_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M06_S07_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M06_S08_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M06_S09_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M06_S10_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M06_S11_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M06_S12_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M06_S13_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M06_S14_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M06_S15_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M07_S00_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M07_S01_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M07_S02_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M07_S03_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M07_S04_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M07_S05_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M07_S06_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M07_S07_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M07_S08_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M07_S09_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M07_S10_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M07_S11_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M07_S12_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M07_S13_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M07_S14_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M07_S15_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M08_S00_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M08_S01_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M08_S02_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M08_S03_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M08_S04_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M08_S05_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M08_S06_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M08_S07_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M08_S08_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M08_S09_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M08_S10_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M08_S11_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M08_S12_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M08_S13_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M08_S14_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M08_S15_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M09_S00_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M09_S01_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M09_S02_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M09_S03_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M09_S04_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M09_S05_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M09_S06_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M09_S07_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M09_S08_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M09_S09_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M09_S10_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M09_S11_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M09_S12_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M09_S13_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M09_S14_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M09_S15_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M10_S00_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M10_S01_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M10_S02_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M10_S03_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M10_S04_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M10_S05_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M10_S06_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M10_S07_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M10_S08_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M10_S09_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M10_S10_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M10_S11_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M10_S12_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M10_S13_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M10_S14_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M10_S15_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M11_S00_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M11_S01_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M11_S02_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M11_S03_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M11_S04_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M11_S05_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M11_S06_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M11_S07_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M11_S08_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M11_S09_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M11_S10_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M11_S11_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M11_S12_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M11_S13_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M11_S14_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M11_S15_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M12_S00_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M12_S01_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M12_S02_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M12_S03_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M12_S04_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M12_S05_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M12_S06_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M12_S07_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M12_S08_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M12_S09_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M12_S10_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M12_S11_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M12_S12_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M12_S13_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M12_S14_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M12_S15_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M13_S00_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M13_S01_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M13_S02_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M13_S03_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M13_S04_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M13_S05_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M13_S06_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M13_S07_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M13_S08_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M13_S09_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M13_S10_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M13_S11_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M13_S12_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M13_S13_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M13_S14_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M13_S15_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M14_S00_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M14_S01_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M14_S02_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M14_S03_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M14_S04_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M14_S05_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M14_S06_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M14_S07_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M14_S08_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M14_S09_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M14_S10_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M14_S11_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M14_S12_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M14_S13_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M14_S14_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M14_S15_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M15_S00_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M15_S01_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M15_S02_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M15_S03_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M15_S04_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M15_S05_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M15_S06_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M15_S07_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M15_S08_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M15_S09_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M15_S10_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M15_S11_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M15_S12_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M15_S13_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M15_S14_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="M15_S15_CONNECTIVITY" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="hdmi_xbar_3"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="160000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="mig_7series_0_ui_addn_clk_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mig_7series_0" PORT="ui_addn_clk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="aresetn" SIGIS="rst" SIGNAME="axi_gpio_0_gpio_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="s_axis_tvalid" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_1_s00_couplers_auto_ss_slid_m_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_s00_couplers_auto_ss_slid" PORT="m_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="s_axis_tready" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_1_s00_couplers_auto_ss_slid_m_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_s00_couplers_auto_ss_slid" PORT="m_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="23" NAME="s_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_1_s00_couplers_auto_ss_slid_m_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_s00_couplers_auto_ss_slid" PORT="m_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="s_axis_tlast" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_1_s00_couplers_auto_ss_slid_m_axis_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_s00_couplers_auto_ss_slid" PORT="m_axis_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="s_axis_tdest" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_1_s00_couplers_auto_ss_slid_m_axis_tdest">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_s00_couplers_auto_ss_slid" PORT="m_axis_tdest"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="s_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_1_s00_couplers_auto_ss_slid_m_axis_tuser">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_s00_couplers_auto_ss_slid" PORT="m_axis_tuser"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="m_axis_tvalid" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_1_m01_couplers_auto_ss_k_s_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_s00_couplers_auto_ss_k" PORT="s_axis_tvalid"/>
+          </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_m01_couplers_auto_ss_k" PORT="s_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="m_axis_tready" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_1_m01_couplers_auto_ss_k_s_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_s00_couplers_auto_ss_k" PORT="s_axis_tready"/>
+          </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_m01_couplers_auto_ss_k" PORT="s_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="47" NAME="m_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_1_m01_couplers_auto_ss_k_s_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_s00_couplers_auto_ss_k" PORT="s_axis_tdata"/>
+          </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_m01_couplers_auto_ss_k" PORT="s_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="m_axis_tlast" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_1_m01_couplers_auto_ss_k_s_axis_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_s00_couplers_auto_ss_k" PORT="s_axis_tlast"/>
+          </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_m01_couplers_auto_ss_k" PORT="s_axis_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="m_axis_tdest" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_1_m01_couplers_auto_ss_k_s_axis_tdest">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_s00_couplers_auto_ss_k" PORT="s_axis_tdest"/>
+          </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_m01_couplers_auto_ss_k" PORT="s_axis_tdest"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="m_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_1_m01_couplers_auto_ss_k_s_axis_tuser">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_0_s00_couplers_auto_ss_k" PORT="s_axis_tuser"/>
+          </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_interconnect_1_m01_couplers_auto_ss_k" PORT="s_axis_tuser"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="s_decode_err" RIGHT="0" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="axis_interconnect_1_s00_couplers_auto_ss_slid_M_AXIS" NAME="S00_AXIS" TYPE="SLAVE" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="160000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_mig_7series_0_0_ui_clk"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="s_axis_tvalid"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="s_axis_tready"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_tdata"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="s_axis_tlast"/>
+            <PORTMAP LOGICAL="TDEST" PHYSICAL="s_axis_tdest"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="s_axis_tuser"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="axis_interconnect_1_xbar_M00_AXIS" NAME="M00_AXIS" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="160000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_mig_7series_0_0_ui_clk"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="m_axis_tvalid"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="m_axis_tready"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="m_axis_tdata"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="m_axis_tlast"/>
+            <PORTMAP LOGICAL="TDEST" PHYSICAL="m_axis_tdest"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="m_axis_tuser"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="axis_interconnect_1_xbar_M01_AXIS" NAME="M01_AXIS" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="160000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_mig_7series_0_0_ui_clk"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="m_axis_tvalid"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="m_axis_tready"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="m_axis_tdata"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="m_axis_tlast"/>
+            <PORTMAP LOGICAL="TDEST" PHYSICAL="m_axis_tdest"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="m_axis_tuser"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
     </MODULE>
     <MODULE FULLNAME="/axis_subset_converter_0" HWVERSION="1.1" INSTANCE="axis_subset_converter_0" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="axis_subset_converter" VLNV="xilinx.com:ip:axis_subset_converter:1.1">
       <DOCUMENTS>
@@ -5740,29 +7950,29 @@
             <CONNECTION INSTANCE="v_vid_in_axi4s_0" PORT="m_axis_video_tuser"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axis_tvalid" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TVALID">
+        <PORT DIR="O" NAME="m_axis_tvalid" SIGIS="undef" SIGNAME="axis_interconnect_1_s00_couplers_auto_ss_slid_s_axis_tvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="SobelFilter_0" PORT="INPUT_STREAM_TVALID"/>
+            <CONNECTION INSTANCE="axis_interconnect_1_s00_couplers_auto_ss_slid" PORT="s_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m_axis_tready" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TREADY">
+        <PORT DIR="I" NAME="m_axis_tready" SIGIS="undef" SIGNAME="axis_interconnect_1_s00_couplers_auto_ss_slid_s_axis_tready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="SobelFilter_0" PORT="INPUT_STREAM_TREADY"/>
+            <CONNECTION INSTANCE="axis_interconnect_1_s00_couplers_auto_ss_slid" PORT="s_axis_tready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="23" NAME="m_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TDATA">
+        <PORT DIR="O" LEFT="23" NAME="m_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_1_s00_couplers_auto_ss_slid_s_axis_tdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="SobelFilter_0" PORT="INPUT_STREAM_TDATA"/>
+            <CONNECTION INSTANCE="axis_interconnect_1_s00_couplers_auto_ss_slid" PORT="s_axis_tdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axis_tlast" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TLAST">
+        <PORT DIR="O" NAME="m_axis_tlast" SIGIS="undef" SIGNAME="axis_interconnect_1_s00_couplers_auto_ss_slid_s_axis_tlast">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="SobelFilter_0" PORT="INPUT_STREAM_TLAST"/>
+            <CONNECTION INSTANCE="axis_interconnect_1_s00_couplers_auto_ss_slid" PORT="s_axis_tlast"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="0" NAME="m_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TUSER">
+        <PORT DIR="O" LEFT="0" NAME="m_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="axis_interconnect_1_s00_couplers_auto_ss_slid_s_axis_tuser">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="SobelFilter_0" PORT="INPUT_STREAM_TUSER"/>
+            <CONNECTION INSTANCE="axis_interconnect_1_s00_couplers_auto_ss_slid" PORT="s_axis_tuser"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -5788,7 +7998,7 @@
             <PORTMAP LOGICAL="TVALID" PHYSICAL="s_axis_tvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="axis_subset_converter_1_M_AXIS" NAME="M_AXIS" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+        <BUSINTERFACE BUSNAME="axis_subset_converter_1_M_AXIS" NAME="M_AXIS" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
@@ -12037,6 +14247,14 @@
             <CONNECTION INSTANCE="axis_subset_converter_1" PORT="aclk"/>
             <CONNECTION INSTANCE="rst_hdmi_160M" PORT="slowest_sync_clk"/>
             <CONNECTION INSTANCE="SobelFilter_0" PORT="ap_clk"/>
+            <CONNECTION INSTANCE="axis_interconnect_0_xbar" PORT="aclk"/>
+            <CONNECTION INSTANCE="axis_interconnect_0_s00_couplers_auto_ss_k" PORT="aclk"/>
+            <CONNECTION INSTANCE="axis_interconnect_0_s00_couplers_auto_ss_slid" PORT="aclk"/>
+            <CONNECTION INSTANCE="axis_interconnect_0_m00_couplers_auto_ss_slidr" PORT="aclk"/>
+            <CONNECTION INSTANCE="axis_interconnect_1_xbar" PORT="aclk"/>
+            <CONNECTION INSTANCE="axis_interconnect_1_s00_couplers_auto_ss_slid" PORT="aclk"/>
+            <CONNECTION INSTANCE="axis_interconnect_1_m01_couplers_auto_ss_k" PORT="aclk"/>
+            <CONNECTION INSTANCE="axis_interconnect_1_m01_couplers_auto_ss_slidr" PORT="aclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="200000000" DIR="O" NAME="ui_addn_clk_1" SIGIS="clk" SIGNAME="mig_7series_0_ui_addn_clk_1">

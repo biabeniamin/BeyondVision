@@ -29,8 +29,8 @@ create_clock -period 10.000 -name sys_clk_i -waveform {0.000 5.000} -add [get_po
 
 
 ##Switches
-set_property -dict { PACKAGE_PIN E22  } [get_ports { s1 }]; #IO_L22P_T3_16 Sch=sw[0]
-set_property -dict { PACKAGE_PIN F21  } [get_ports { s2 }]; #IO_25_16 Sch=sw[1]
+#set_property -dict { PACKAGE_PIN E22  IOSTANDARD TMDS_33} [get_ports { s1 }]; #IO_L22P_T3_16 Sch=sw[0]
+#set_property -dict { PACKAGE_PIN F21  IOSTANDARD TMDS_33} [get_ports { s2 }]; #IO_25_16 Sch=sw[1]
 #set_property -dict { PACKAGE_PIN G21  } [get_ports { sw[2] }]; #IO_L24P_T3_16 Sch=sw[2]
 #set_property -dict { PACKAGE_PIN G22  } [get_ports { sw[3] }]; #IO_L24N_T3_16 Sch=sw[3]
 #set_property -dict { PACKAGE_PIN H17  } [get_ports { sw[4] }]; #IO_L6P_T0_15 Sch=sw[4]
