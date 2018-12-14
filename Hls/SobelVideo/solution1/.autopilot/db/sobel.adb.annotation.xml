@@ -26,7 +26,7 @@
 <item  id="35" filename="SobelVideo/a.cpp" linenumber="13" name="img_0_data_stream_0" contextFuncName="sobel" moduleName="sobel" rtlName="img_0_data_stream_0_U" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\Beni\Digilent19\Hls"><\/item>
 <item  id="38" filename="SobelVideo/a.cpp" linenumber="13" name="img_0_data_stream_1" contextFuncName="sobel" moduleName="sobel" rtlName="img_0_data_stream_1_U" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\Beni\Digilent19\Hls"><\/item>
 <item  id="41" filename="SobelVideo/a.cpp" linenumber="13" name="img_0_data_stream_2" contextFuncName="sobel" moduleName="sobel" rtlName="img_0_data_stream_2_U" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\Beni\Digilent19\Hls"><\/item>
-<item  id="56" filename="SobelVideo/a.cpp" linenumber="19" name="" contextFuncName="sobel" moduleName="sobel" rtlName="AXIvideo2Mat_U0" latency="1" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\Beni\Digilent19\Hls"><\/item>
-<item  id="57" filename="SobelVideo/a.cpp" linenumber="22" name="" contextFuncName="sobel" moduleName="sobel" rtlName="Mat2AXIvideo_U0" latency="1" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\Beni\Digilent19\Hls"><\/item>
+<item  id="55" filename="SobelVideo/a.cpp" linenumber="19" name="" contextFuncName="sobel" moduleName="sobel" rtlName="AXIvideo2Mat_U0" latency="1" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\Beni\Digilent19\Hls"><\/item>
+<item  id="56" filename="SobelVideo/a.cpp" linenumber="22" name="" contextFuncName="sobel" moduleName="sobel" rtlName="Mat2AXIvideo_U0" latency="1" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\Beni\Digilent19\Hls"><\/item>
 <\/annotationInfo>
 </annotationInfo>

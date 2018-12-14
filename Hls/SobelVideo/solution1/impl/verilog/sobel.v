@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="sobel,hls_ip_2018_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7a200tsbg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=7.816000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=663,HLS_SYN_LUT=1205,HLS_VERSION=2018_2}" *)
+(* CORE_GENERATION_INFO="sobel,hls_ip_2018_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7a200tsbg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=7.816000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=663,HLS_SYN_LUT=1207,HLS_VERSION=2018_2}" *)
 
 module sobel (
         INPUT_STREAM_TDATA,
@@ -26,10 +26,14 @@ module sobel (
         OUTPUT_STREAM_TDEST,
         ap_clk,
         ap_rst_n,
+        ap_start,
         INPUT_STREAM_TVALID,
         INPUT_STREAM_TREADY,
         OUTPUT_STREAM_TVALID,
-        OUTPUT_STREAM_TREADY
+        OUTPUT_STREAM_TREADY,
+        ap_done,
+        ap_ready,
+        ap_idle
 );
 
 
@@ -49,10 +53,14 @@ output  [0:0] OUTPUT_STREAM_TID;
 output  [0:0] OUTPUT_STREAM_TDEST;
 input   ap_clk;
 input   ap_rst_n;
+input   ap_start;
 input   INPUT_STREAM_TVALID;
 output   INPUT_STREAM_TREADY;
 output   OUTPUT_STREAM_TVALID;
 input   OUTPUT_STREAM_TREADY;
+output   ap_done;
+output   ap_ready;
+output   ap_idle;
 
  reg    ap_rst_n_inv;
 wire    Block_proc_U0_ap_start;
@@ -124,6 +132,8 @@ wire    img_0_rows_V_c4_empty_n;
 wire    img_0_cols_V_c5_full_n;
 wire   [11:0] img_0_cols_V_c5_dout;
 wire    img_0_cols_V_c5_empty_n;
+wire    ap_sync_done;
+wire    ap_sync_ready;
 wire    Block_proc_U0_start_full_n;
 wire    Block_proc_U0_start_write;
 wire   [0:0] start_for_Mat2AXIvideo_U0_din;
@@ -332,11 +342,11 @@ start_for_Mat2AXIbkb start_for_Mat2AXIbkb_U(
 
 assign AXIvideo2Mat_U0_ap_continue = 1'b1;
 
-assign AXIvideo2Mat_U0_ap_start = 1'b1;
+assign AXIvideo2Mat_U0_ap_start = ap_start;
 
 assign Block_proc_U0_ap_continue = 1'b1;
 
-assign Block_proc_U0_ap_start = 1'b1;
+assign Block_proc_U0_ap_start = ap_start;
 
 assign Block_proc_U0_start_full_n = 1'b1;
 
@@ -368,11 +378,21 @@ assign OUTPUT_STREAM_TUSER = Mat2AXIvideo_U0_OUTPUT_STREAM_TUSER;
 
 assign OUTPUT_STREAM_TVALID = Mat2AXIvideo_U0_OUTPUT_STREAM_TVALID;
 
+assign ap_done = Mat2AXIvideo_U0_ap_done;
+
+assign ap_idle = (Mat2AXIvideo_U0_ap_idle & Block_proc_U0_ap_idle & AXIvideo2Mat_U0_ap_idle);
+
+assign ap_ready = AXIvideo2Mat_U0_ap_ready;
+
 always @ (*) begin
     ap_rst_n_inv = ~ap_rst_n;
 end
 
-assign ap_sync_continue = 1'b0;
+assign ap_sync_continue = 1'b1;
+
+assign ap_sync_done = Mat2AXIvideo_U0_ap_done;
+
+assign ap_sync_ready = AXIvideo2Mat_U0_ap_ready;
 
 assign start_for_Mat2AXIvideo_U0_din = 1'b1;
 

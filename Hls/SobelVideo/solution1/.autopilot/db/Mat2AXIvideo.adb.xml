@@ -473,7 +473,7 @@ entry:21  br label %0
 
 <Node id="42" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-:0  call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str9) nounwind
+:0  call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str8) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -489,7 +489,7 @@ entry:21  br label %0
 
 <Node id="43" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-:1  %tmp_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str9)
+:1  %tmp_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str8)
 
 ]]></Node>
 <StgValue><ssdm name="tmp_i"/></StgValue>
@@ -666,7 +666,7 @@ operator>>.exit.i:0  %tmp_user_V_load = load i1* %tmp_user_V
 
 <Node id="58" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-operator>>.exit.i:6  %tmp_3_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str14)
+operator>>.exit.i:6  %tmp_3_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str13)
 
 ]]></Node>
 <StgValue><ssdm name="tmp_3_i"/></StgValue>
@@ -746,7 +746,7 @@ operator>>.exit.i:10  %tmp = call i8 @_ssdm_op_Read.ap_fifo.volatile.i8P(i8* %im
 
 <Node id="63" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-operator>>.exit.i:11  %empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str14, i32 %tmp_3_i)
+operator>>.exit.i:11  %empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str13, i32 %tmp_3_i)
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -813,7 +813,7 @@ operator>>.exit.i:15  store i1 false, i1* %tmp_user_V
 
 <Node id="53" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-operator>>.exit.i:1  call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str10) nounwind
+operator>>.exit.i:1  call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str9) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -829,7 +829,7 @@ operator>>.exit.i:1  call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str10
 
 <Node id="54" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-operator>>.exit.i:2  %tmp_1_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([11 x i8]* @p_str10)
+operator>>.exit.i:2  %tmp_1_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([11 x i8]* @p_str9)
 
 ]]></Node>
 <StgValue><ssdm name="tmp_1_i"/></StgValue>
@@ -877,7 +877,7 @@ operator>>.exit.i:13  call void @_ssdm_op_Write.axis.volatile.i24P.i3P.i3P.i1P.i
 
 <Node id="66" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-operator>>.exit.i:14  %empty_27 = call i32 (...)* @_ssdm_op_SpecRegionEnd([11 x i8]* @p_str10, i32 %tmp_1_i)
+operator>>.exit.i:14  %empty_27 = call i32 (...)* @_ssdm_op_SpecRegionEnd([11 x i8]* @p_str9, i32 %tmp_1_i)
 
 ]]></Node>
 <StgValue><ssdm name="empty_27"/></StgValue>
@@ -911,7 +911,7 @@ operator>>.exit.i:16  br label %2
 
 <Node id="70" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-:0  %empty_28 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str9, i32 %tmp_i)
+:0  %empty_28 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str8, i32 %tmp_i)
 
 ]]></Node>
 <StgValue><ssdm name="empty_28"/></StgValue>
@@ -1574,11 +1574,11 @@ operator>>.exit.i:16  br label %2
 </dataflow>
 <dataflow id="428" from="_ssdm_op_SpecLoopName" to="StgValue_34" fromId="427" toId="34">
 </dataflow>
-<dataflow id="430" from="p_str9" to="StgValue_34" fromId="429" toId="34">
+<dataflow id="430" from="p_str8" to="StgValue_34" fromId="429" toId="34">
 </dataflow>
 <dataflow id="432" from="_ssdm_op_SpecRegionBegin" to="tmp_i" fromId="431" toId="35">
 </dataflow>
-<dataflow id="433" from="p_str9" to="tmp_i" fromId="429" toId="35">
+<dataflow id="433" from="p_str8" to="tmp_i" fromId="429" toId="35">
 </dataflow>
 <dataflow id="434" from="StgValue_95" to="t_V_1" fromId="95" toId="38">
 <condition id="56">
@@ -1626,7 +1626,7 @@ operator>>.exit.i:16  br label %2
 </dataflow>
 <dataflow id="452" from="_ssdm_op_SpecRegionBegin" to="tmp_3_i" fromId="431" toId="46">
 </dataflow>
-<dataflow id="454" from="p_str14" to="tmp_3_i" fromId="453" toId="46">
+<dataflow id="454" from="p_str13" to="tmp_3_i" fromId="453" toId="46">
 </dataflow>
 <dataflow id="456" from="_ssdm_op_SpecProtocol" to="StgValue_47" fromId="455" toId="47">
 </dataflow>
@@ -1648,7 +1648,7 @@ operator>>.exit.i:16  br label %2
 </dataflow>
 <dataflow id="467" from="_ssdm_op_SpecRegionEnd" to="empty" fromId="466" toId="51">
 </dataflow>
-<dataflow id="468" from="p_str14" to="empty" fromId="453" toId="51">
+<dataflow id="468" from="p_str13" to="empty" fromId="453" toId="51">
 </dataflow>
 <dataflow id="469" from="tmp_3_i" to="empty" fromId="46" toId="51">
 </dataflow>
@@ -1696,11 +1696,11 @@ operator>>.exit.i:16  br label %2
 </dataflow>
 <dataflow id="497" from="_ssdm_op_SpecLoopName" to="StgValue_55" fromId="427" toId="55">
 </dataflow>
-<dataflow id="499" from="p_str10" to="StgValue_55" fromId="498" toId="55">
+<dataflow id="499" from="p_str9" to="StgValue_55" fromId="498" toId="55">
 </dataflow>
 <dataflow id="500" from="_ssdm_op_SpecRegionBegin" to="tmp_1_i" fromId="431" toId="56">
 </dataflow>
-<dataflow id="501" from="p_str10" to="tmp_1_i" fromId="498" toId="56">
+<dataflow id="501" from="p_str9" to="tmp_1_i" fromId="498" toId="56">
 </dataflow>
 <dataflow id="503" from="_ssdm_op_SpecPipeline" to="StgValue_57" fromId="502" toId="57">
 </dataflow>
@@ -1746,13 +1746,13 @@ operator>>.exit.i:16  br label %2
 </dataflow>
 <dataflow id="524" from="_ssdm_op_SpecRegionEnd" to="empty_27" fromId="466" toId="59">
 </dataflow>
-<dataflow id="525" from="p_str10" to="empty_27" fromId="498" toId="59">
+<dataflow id="525" from="p_str9" to="empty_27" fromId="498" toId="59">
 </dataflow>
 <dataflow id="526" from="tmp_1_i" to="empty_27" fromId="56" toId="59">
 </dataflow>
 <dataflow id="527" from="_ssdm_op_SpecRegionEnd" to="empty_28" fromId="466" toId="61">
 </dataflow>
-<dataflow id="528" from="p_str9" to="empty_28" fromId="429" toId="61">
+<dataflow id="528" from="p_str8" to="empty_28" fromId="429" toId="61">
 </dataflow>
 <dataflow id="529" from="tmp_i" to="empty_28" fromId="35" toId="61">
 </dataflow>

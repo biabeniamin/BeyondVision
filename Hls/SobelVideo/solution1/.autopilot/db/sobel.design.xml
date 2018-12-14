@@ -7,17 +7,17 @@
 <Instance>
 <InstName>AXIvideo2Mat_U0</InstName>
 <ModuleName>AXIvideo2Mat</ModuleName>
-<ID>208</ID>
+<ID>206</ID>
 </Instance>
 <Instance>
 <InstName>Mat2AXIvideo_U0</InstName>
 <ModuleName>Mat2AXIvideo</ModuleName>
-<ID>233</ID>
+<ID>231</ID>
 </Instance>
 <Instance>
 <InstName>Block_proc_U0</InstName>
 <ModuleName>Block_proc</ModuleName>
-<ID>256</ID>
+<ID>254</ID>
 </Instance>
 </InstancesList>
 </TopModule>
@@ -1131,7 +1131,7 @@
 <Resources>
 <BRAM_18K>0</BRAM_18K>
 <FF>663</FF>
-<LUT>1205</LUT>
+<LUT>1207</LUT>
 <DSP48E>0</DSP48E>
 </Resources>
 </AreaEstimates>
@@ -1357,7 +1357,7 @@
 <Object>sobel</Object>
 <Type>return value</Type>
 <Scope></Scope>
-<IOProtocol>ap_ctrl_none</IOProtocol>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
 <Bits>1</Bits>
@@ -1368,9 +1368,53 @@
 <Object>sobel</Object>
 <Type>return value</Type>
 <Scope></Scope>
-<IOProtocol>ap_ctrl_none</IOProtocol>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_start</name>
+<Object>sobel</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_done</name>
+<Object>sobel</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_ready</name>
+<Object>sobel</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_idle</name>
+<Object>sobel</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>

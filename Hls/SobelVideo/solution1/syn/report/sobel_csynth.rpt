@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'sobel'
 ================================================================
-* Date:           Mon Dec 10 18:23:30 2018
+* Date:           Fri Dec 14 10:28:27 2018
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        SobelVideo
@@ -56,14 +56,14 @@
 |       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
 +-----------------+---------+-------+--------+--------+
 |DSP              |        -|      -|       -|       -|
-|Expression       |        -|      -|       -|       -|
+|Expression       |        -|      -|       0|       2|
 |FIFO             |        0|      -|      35|     142|
 |Instance         |        -|      -|     628|    1063|
 |Memory           |        -|      -|       -|       -|
 |Multiplexer      |        -|      -|       -|       -|
 |Register         |        -|      -|       -|       -|
 +-----------------+---------+-------+--------+--------+
-|Total            |        0|      0|     663|    1205|
+|Total            |        0|      0|     663|    1207|
 +-----------------+---------+-------+--------+--------+
 |Available        |      730|    740|  269200|  129000|
 +-----------------+---------+-------+--------+--------+
@@ -104,7 +104,13 @@
     +-----------------------+---------+---+----+------+-----+---------+
 
     * Expression: 
-    N/A
+    +--------------+----------+-------+---+----+------------+------------+
+    | Variable Name| Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------+----------+-------+---+----+------------+------------+
+    |ap_idle       |    and   |      0|  0|   2|           1|           1|
+    +--------------+----------+-------+---+----+------------+------------+
+    |Total         |          |      0|  0|   2|           1|           1|
+    +--------------+----------+-------+---+----+------------+------------+
 
     * Multiplexer: 
     N/A
@@ -118,28 +124,32 @@
 == Interface
 ================================================================
 * Summary: 
-+----------------------+-----+-----+--------------+------------------------+--------------+
-|       RTL Ports      | Dir | Bits|   Protocol   |      Source Object     |    C Type    |
-+----------------------+-----+-----+--------------+------------------------+--------------+
-|INPUT_STREAM_TDATA    |  in |   24|     axis     |  INPUT_STREAM_V_data_V |    pointer   |
-|INPUT_STREAM_TKEEP    |  in |    3|     axis     |  INPUT_STREAM_V_keep_V |    pointer   |
-|INPUT_STREAM_TSTRB    |  in |    3|     axis     |  INPUT_STREAM_V_strb_V |    pointer   |
-|INPUT_STREAM_TUSER    |  in |    1|     axis     |  INPUT_STREAM_V_user_V |    pointer   |
-|INPUT_STREAM_TLAST    |  in |    1|     axis     |  INPUT_STREAM_V_last_V |    pointer   |
-|INPUT_STREAM_TID      |  in |    1|     axis     |   INPUT_STREAM_V_id_V  |    pointer   |
-|INPUT_STREAM_TDEST    |  in |    1|     axis     |  INPUT_STREAM_V_dest_V |    pointer   |
-|INPUT_STREAM_TVALID   |  in |    1|     axis     |  INPUT_STREAM_V_dest_V |    pointer   |
-|INPUT_STREAM_TREADY   | out |    1|     axis     |  INPUT_STREAM_V_dest_V |    pointer   |
-|OUTPUT_STREAM_TDATA   | out |   24|     axis     | OUTPUT_STREAM_V_data_V |    pointer   |
-|OUTPUT_STREAM_TKEEP   | out |    3|     axis     | OUTPUT_STREAM_V_keep_V |    pointer   |
-|OUTPUT_STREAM_TSTRB   | out |    3|     axis     | OUTPUT_STREAM_V_strb_V |    pointer   |
-|OUTPUT_STREAM_TUSER   | out |    1|     axis     | OUTPUT_STREAM_V_user_V |    pointer   |
-|OUTPUT_STREAM_TLAST   | out |    1|     axis     | OUTPUT_STREAM_V_last_V |    pointer   |
-|OUTPUT_STREAM_TID     | out |    1|     axis     |  OUTPUT_STREAM_V_id_V  |    pointer   |
-|OUTPUT_STREAM_TDEST   | out |    1|     axis     | OUTPUT_STREAM_V_dest_V |    pointer   |
-|OUTPUT_STREAM_TVALID  | out |    1|     axis     | OUTPUT_STREAM_V_dest_V |    pointer   |
-|OUTPUT_STREAM_TREADY  |  in |    1|     axis     | OUTPUT_STREAM_V_dest_V |    pointer   |
-|ap_clk                |  in |    1| ap_ctrl_none |          sobel         | return value |
-|ap_rst_n              |  in |    1| ap_ctrl_none |          sobel         | return value |
-+----------------------+-----+-----+--------------+------------------------+--------------+
++----------------------+-----+-----+------------+------------------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  |      Source Object     |    C Type    |
++----------------------+-----+-----+------------+------------------------+--------------+
+|INPUT_STREAM_TDATA    |  in |   24|    axis    |  INPUT_STREAM_V_data_V |    pointer   |
+|INPUT_STREAM_TKEEP    |  in |    3|    axis    |  INPUT_STREAM_V_keep_V |    pointer   |
+|INPUT_STREAM_TSTRB    |  in |    3|    axis    |  INPUT_STREAM_V_strb_V |    pointer   |
+|INPUT_STREAM_TUSER    |  in |    1|    axis    |  INPUT_STREAM_V_user_V |    pointer   |
+|INPUT_STREAM_TLAST    |  in |    1|    axis    |  INPUT_STREAM_V_last_V |    pointer   |
+|INPUT_STREAM_TID      |  in |    1|    axis    |   INPUT_STREAM_V_id_V  |    pointer   |
+|INPUT_STREAM_TDEST    |  in |    1|    axis    |  INPUT_STREAM_V_dest_V |    pointer   |
+|INPUT_STREAM_TVALID   |  in |    1|    axis    |  INPUT_STREAM_V_dest_V |    pointer   |
+|INPUT_STREAM_TREADY   | out |    1|    axis    |  INPUT_STREAM_V_dest_V |    pointer   |
+|OUTPUT_STREAM_TDATA   | out |   24|    axis    | OUTPUT_STREAM_V_data_V |    pointer   |
+|OUTPUT_STREAM_TKEEP   | out |    3|    axis    | OUTPUT_STREAM_V_keep_V |    pointer   |
+|OUTPUT_STREAM_TSTRB   | out |    3|    axis    | OUTPUT_STREAM_V_strb_V |    pointer   |
+|OUTPUT_STREAM_TUSER   | out |    1|    axis    | OUTPUT_STREAM_V_user_V |    pointer   |
+|OUTPUT_STREAM_TLAST   | out |    1|    axis    | OUTPUT_STREAM_V_last_V |    pointer   |
+|OUTPUT_STREAM_TID     | out |    1|    axis    |  OUTPUT_STREAM_V_id_V  |    pointer   |
+|OUTPUT_STREAM_TDEST   | out |    1|    axis    | OUTPUT_STREAM_V_dest_V |    pointer   |
+|OUTPUT_STREAM_TVALID  | out |    1|    axis    | OUTPUT_STREAM_V_dest_V |    pointer   |
+|OUTPUT_STREAM_TREADY  |  in |    1|    axis    | OUTPUT_STREAM_V_dest_V |    pointer   |
+|ap_clk                |  in |    1| ap_ctrl_hs |          sobel         | return value |
+|ap_rst_n              |  in |    1| ap_ctrl_hs |          sobel         | return value |
+|ap_start              |  in |    1| ap_ctrl_hs |          sobel         | return value |
+|ap_done               | out |    1| ap_ctrl_hs |          sobel         | return value |
+|ap_ready              | out |    1| ap_ctrl_hs |          sobel         | return value |
+|ap_idle               | out |    1| ap_ctrl_hs |          sobel         | return value |
++----------------------+-----+-----+------------+------------------------+--------------+
 

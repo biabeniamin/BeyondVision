@@ -21,7 +21,7 @@
 namespace ap_rtl {
 
 struct sobel : public sc_module {
-    // Port declarations 20
+    // Port declarations 24
     sc_in< sc_lv<24> > INPUT_STREAM_TDATA;
     sc_in< sc_lv<3> > INPUT_STREAM_TKEEP;
     sc_in< sc_lv<3> > INPUT_STREAM_TSTRB;
@@ -38,10 +38,14 @@ struct sobel : public sc_module {
     sc_out< sc_lv<1> > OUTPUT_STREAM_TDEST;
     sc_in_clk ap_clk;
     sc_in< sc_logic > ap_rst_n;
+    sc_in< sc_logic > ap_start;
     sc_in< sc_logic > INPUT_STREAM_TVALID;
     sc_out< sc_logic > INPUT_STREAM_TREADY;
     sc_out< sc_logic > OUTPUT_STREAM_TVALID;
     sc_in< sc_logic > OUTPUT_STREAM_TREADY;
+    sc_out< sc_logic > ap_done;
+    sc_out< sc_logic > ap_ready;
+    sc_out< sc_logic > ap_idle;
     sc_signal< sc_logic > ap_var_for_const0;
 
 
@@ -136,6 +140,8 @@ struct sobel : public sc_module {
     sc_signal< sc_logic > img_0_cols_V_c5_full_n;
     sc_signal< sc_lv<12> > img_0_cols_V_c5_dout;
     sc_signal< sc_logic > img_0_cols_V_c5_empty_n;
+    sc_signal< sc_logic > ap_sync_done;
+    sc_signal< sc_logic > ap_sync_ready;
     sc_signal< sc_logic > Block_proc_U0_start_full_n;
     sc_signal< sc_logic > Block_proc_U0_start_write;
     sc_signal< sc_lv<1> > start_for_Mat2AXIvideo_U0_din;
@@ -170,8 +176,13 @@ struct sobel : public sc_module {
     void thread_OUTPUT_STREAM_TSTRB();
     void thread_OUTPUT_STREAM_TUSER();
     void thread_OUTPUT_STREAM_TVALID();
+    void thread_ap_done();
+    void thread_ap_idle();
+    void thread_ap_ready();
     void thread_ap_rst_n_inv();
     void thread_ap_sync_continue();
+    void thread_ap_sync_done();
+    void thread_ap_sync_ready();
     void thread_start_for_Mat2AXIvideo_U0_din();
     void thread_hdltv_gen();
 };

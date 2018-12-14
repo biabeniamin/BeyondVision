@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'sobel'" level="0">
-<item name = "Date">Mon Dec 10 18:23:30 2018
+<item name = "Date">Fri Dec 14 10:28:27 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">SobelVideo</item>
@@ -50,7 +50,7 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="DSP">-, -, -, -</column>
-<column name="Expression">-, -, -, -</column>
+<column name="Expression">-, -, 0, 2</column>
 <column name="FIFO">0, -, 35, 142</column>
 <column name="Instance">-, -, 628, 1063</column>
 <column name="Memory">-, -, -, -</column>
@@ -90,6 +90,7 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_idle">and, 0, 0, 2, 1, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -125,8 +126,12 @@
 <column name="OUTPUT_STREAM_TDEST">out, 1, axis, OUTPUT_STREAM_V_dest_V, pointer</column>
 <column name="OUTPUT_STREAM_TVALID">out, 1, axis, OUTPUT_STREAM_V_dest_V, pointer</column>
 <column name="OUTPUT_STREAM_TREADY">in, 1, axis, OUTPUT_STREAM_V_dest_V, pointer</column>
-<column name="ap_clk">in, 1, ap_ctrl_none, sobel, return value</column>
-<column name="ap_rst_n">in, 1, ap_ctrl_none, sobel, return value</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, sobel, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_hs, sobel, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, sobel, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, sobel, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, sobel, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, sobel, return value</column>
 </table>
 </item>
 </section>

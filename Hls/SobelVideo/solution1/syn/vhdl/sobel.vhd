@@ -27,17 +27,21 @@ port (
     OUTPUT_STREAM_TDEST : OUT STD_LOGIC_VECTOR (0 downto 0);
     ap_clk : IN STD_LOGIC;
     ap_rst_n : IN STD_LOGIC;
+    ap_start : IN STD_LOGIC;
     INPUT_STREAM_TVALID : IN STD_LOGIC;
     INPUT_STREAM_TREADY : OUT STD_LOGIC;
     OUTPUT_STREAM_TVALID : OUT STD_LOGIC;
-    OUTPUT_STREAM_TREADY : IN STD_LOGIC );
+    OUTPUT_STREAM_TREADY : IN STD_LOGIC;
+    ap_done : OUT STD_LOGIC;
+    ap_ready : OUT STD_LOGIC;
+    ap_idle : OUT STD_LOGIC );
 end;
 
 
 architecture behav of sobel is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "sobel,hls_ip_2018_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7a200tsbg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=7.816000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=663,HLS_SYN_LUT=1205,HLS_VERSION=2018_2}";
+    "sobel,hls_ip_2018_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7a200tsbg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=7.816000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=663,HLS_SYN_LUT=1207,HLS_VERSION=2018_2}";
     constant ap_const_lv24_0 : STD_LOGIC_VECTOR (23 downto 0) := "000000000000000000000000";
     constant ap_const_lv3_0 : STD_LOGIC_VECTOR (2 downto 0) := "000";
     constant ap_const_lv1_0 : STD_LOGIC_VECTOR (0 downto 0) := "0";
@@ -114,6 +118,8 @@ architecture behav of sobel is
     signal img_0_cols_V_c5_full_n : STD_LOGIC;
     signal img_0_cols_V_c5_dout : STD_LOGIC_VECTOR (11 downto 0);
     signal img_0_cols_V_c5_empty_n : STD_LOGIC;
+    signal ap_sync_done : STD_LOGIC;
+    signal ap_sync_ready : STD_LOGIC;
     signal Block_proc_U0_start_full_n : STD_LOGIC;
     signal Block_proc_U0_start_write : STD_LOGIC;
     signal start_for_Mat2AXIvideo_U0_din : STD_LOGIC_VECTOR (0 downto 0);
@@ -470,9 +476,9 @@ begin
 
 
     AXIvideo2Mat_U0_ap_continue <= ap_const_logic_1;
-    AXIvideo2Mat_U0_ap_start <= ap_const_logic_1;
+    AXIvideo2Mat_U0_ap_start <= ap_start;
     Block_proc_U0_ap_continue <= ap_const_logic_1;
-    Block_proc_U0_ap_start <= ap_const_logic_1;
+    Block_proc_U0_ap_start <= ap_start;
     Block_proc_U0_start_full_n <= ap_const_logic_1;
     Block_proc_U0_start_write <= ap_const_logic_0;
     INPUT_STREAM_TREADY <= AXIvideo2Mat_U0_INPUT_STREAM_TREADY;
@@ -488,12 +494,17 @@ begin
     OUTPUT_STREAM_TSTRB <= Mat2AXIvideo_U0_OUTPUT_STREAM_TSTRB;
     OUTPUT_STREAM_TUSER <= Mat2AXIvideo_U0_OUTPUT_STREAM_TUSER;
     OUTPUT_STREAM_TVALID <= Mat2AXIvideo_U0_OUTPUT_STREAM_TVALID;
+    ap_done <= Mat2AXIvideo_U0_ap_done;
+    ap_idle <= (Mat2AXIvideo_U0_ap_idle and Block_proc_U0_ap_idle and AXIvideo2Mat_U0_ap_idle);
+    ap_ready <= AXIvideo2Mat_U0_ap_ready;
 
     ap_rst_n_inv_assign_proc : process(ap_rst_n)
     begin
                 ap_rst_n_inv <= not(ap_rst_n);
     end process;
 
-    ap_sync_continue <= ap_const_logic_0;
+    ap_sync_continue <= ap_const_logic_1;
+    ap_sync_done <= Mat2AXIvideo_U0_ap_done;
+    ap_sync_ready <= AXIvideo2Mat_U0_ap_ready;
     start_for_Mat2AXIvideo_U0_din <= (0=>ap_const_logic_1, others=>'-');
 end behav;
