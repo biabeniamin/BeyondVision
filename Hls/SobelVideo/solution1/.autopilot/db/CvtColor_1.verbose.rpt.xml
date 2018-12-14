@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'CvtColor_1'" level="0">
-<item name = "Date">Fri Dec 14 12:00:29 2018
+<item name = "Date">Fri Dec 14 12:41:22 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">SobelVideo</item>
@@ -84,8 +84,8 @@
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
 <column name="i_fu_270_p2">+, 0, 0, 18, 11, 1</column>
 <column name="j_fu_285_p2">+, 0, 0, 18, 11, 1</column>
-<column name="p_Val2_4_fu_329_p2">+, 0, 0, 15, 8, 8</column>
-<column name="tmp_2_i_fu_280_p2">icmp, 0, 0, 13, 12, 12</column>
+<column name="p_Val2_39_fu_329_p2">+, 0, 0, 15, 8, 8</column>
+<column name="tmp_72_i_fu_280_p2">icmp, 0, 0, 13, 12, 12</column>
 <column name="tmp_i_fu_265_p2">icmp, 0, 0, 13, 12, 12</column>
 <column name="ap_block_pp0_stage0_01001">or, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
@@ -95,7 +95,7 @@
 <column name="p_Val2_s_fu_354_p3">select, 0, 0, 8, 1, 8</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 <column name="ap_enable_reg_pp0_iter1">xor, 0, 0, 2, 2, 1</column>
-<column name="p_Result_2_i_i_i_i_1_fu_342_p2">xor, 0, 0, 2, 1, 2</column>
+<column name="p_Result_1_i_i_i_i_1_fu_342_p2">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -129,20 +129,20 @@
 <column name="i_i_reg_239">11, 0, 11, 0</column>
 <column name="i_reg_403">11, 0, 11, 0</column>
 <column name="j_i_reg_250">11, 0, 11, 0</column>
-<column name="p_Val2_3_reg_442">8, 0, 8, 0</column>
+<column name="p_Val2_38_reg_442">8, 0, 8, 0</column>
 <column name="p_src_cols_V_read_reg_389">12, 0, 12, 0</column>
 <column name="p_src_rows_V_read_reg_394">12, 0, 12, 0</column>
 <column name="r_V_1_reg_437">30, 0, 30, 0</column>
 <column name="r_V_4_i_i_reg_432">29, 0, 29, 0</column>
 <column name="start_once_reg">1, 0, 1, 0</column>
-<column name="tmp_11_reg_417">8, 0, 8, 0</column>
-<column name="tmp_11_reg_417_pp0_iter2_reg">8, 0, 8, 0</column>
-<column name="tmp_12_reg_422">8, 0, 8, 0</column>
-<column name="tmp_12_reg_422_pp0_iter2_reg">8, 0, 8, 0</column>
-<column name="tmp_13_reg_427">8, 0, 8, 0</column>
-<column name="tmp_2_i_reg_408">1, 0, 1, 0</column>
+<column name="tmp_173_reg_417">8, 0, 8, 0</column>
+<column name="tmp_173_reg_417_pp0_iter2_reg">8, 0, 8, 0</column>
+<column name="tmp_174_reg_422">8, 0, 8, 0</column>
+<column name="tmp_174_reg_422_pp0_iter2_reg">8, 0, 8, 0</column>
+<column name="tmp_175_reg_427">8, 0, 8, 0</column>
+<column name="tmp_72_i_reg_408">1, 0, 1, 0</column>
 <column name="tmp_reg_447">1, 0, 1, 0</column>
-<column name="tmp_2_i_reg_408">64, 32, 1, 0</column>
+<column name="tmp_72_i_reg_408">64, 32, 1, 0</column>
 </table>
 </item>
 </section>

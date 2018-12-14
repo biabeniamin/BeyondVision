@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'Mat2AXIvideo'
 ================================================================
-* Date:           Fri Dec 14 12:00:30 2018
+* Date:           Fri Dec 14 12:41:28 2018
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        SobelVideo
@@ -101,7 +101,7 @@
     |AXI_video_strm_V_last_V_1_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
     |AXI_video_strm_V_user_V_1_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
     |axi_last_V_fu_224_p2                      |   icmp   |      0|  0|  13|          11|           9|
-    |exitcond1_fu_200_p2                       |   icmp   |      0|  0|  13|          11|          11|
+    |exitcond2_fu_200_p2                       |   icmp   |      0|  0|  13|          11|          11|
     |exitcond_fu_212_p2                        |   icmp   |      0|  0|  13|          11|           9|
     |ap_block_pp0_stage0_11001                 |    or    |      0|  0|   2|           1|           1|
     |ap_block_state1                           |    or    |      0|  0|   2|           1|           1|
@@ -135,7 +135,7 @@
     |img_data_stream_0_V_blk_n           |   9|          2|    1|          2|
     |img_data_stream_1_V_blk_n           |   9|          2|    1|          2|
     |img_data_stream_2_V_blk_n           |   9|          2|    1|          2|
-    |t_V_1_reg_184                       |   9|          2|   11|         22|
+    |t_V_2_reg_184                       |   9|          2|   11|         22|
     |t_V_reg_173                         |   9|          2|   11|         22|
     +------------------------------------+----+-----------+-----+-----------+
     |Total                               | 240|         50|   70|        157|
@@ -177,7 +177,7 @@
     |exitcond_reg_266                     |   1|   0|    1|          0|
     |exitcond_reg_266_pp0_iter1_reg       |   1|   0|    1|          0|
     |i_V_reg_261                          |  11|   0|   11|          0|
-    |t_V_1_reg_184                        |  11|   0|   11|          0|
+    |t_V_2_reg_184                        |  11|   0|   11|          0|
     |t_V_reg_173                          |  11|   0|   11|          0|
     |tmp_user_V_fu_122                    |   1|   0|    1|          0|
     +-------------------------------------+----+----+-----+-----------+

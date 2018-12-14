@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'Block_proc'
 ================================================================
-* Date:           Fri Dec 14 12:00:27 2018
+* Date:           Fri Dec 14 12:41:10 2018
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        SobelVideo
@@ -75,8 +75,8 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 3.90>
-ST_1 : Operation 2 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i12* %img_0_cols_V_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str143, i32 0, i32 0, [1 x i8]* @p_str144, [1 x i8]* @p_str145, [1 x i8]* @p_str146, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str147, [1 x i8]* @p_str148)"   --->   Operation 2 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 3 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i12* %img_0_rows_V_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str137, i32 0, i32 0, [1 x i8]* @p_str138, [1 x i8]* @p_str139, [1 x i8]* @p_str140, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str141, [1 x i8]* @p_str142)"   --->   Operation 3 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i12* %img_0_cols_V_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str486, i32 0, i32 0, [1 x i8]* @p_str487, [1 x i8]* @p_str488, [1 x i8]* @p_str489, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str490, [1 x i8]* @p_str491)"   --->   Operation 2 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i12* %img_0_rows_V_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str480, i32 0, i32 0, [1 x i8]* @p_str481, [1 x i8]* @p_str482, [1 x i8]* @p_str483, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str484, [1 x i8]* @p_str485)"   --->   Operation 3 'specinterface' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 4 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i12P(i12* %img_0_rows_V_out, i12 1080)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:601->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:587->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:588->SobelVideo/a.cpp:13]   --->   Operation 4 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 12> <Depth = 2> <FIFO>
 ST_1 : Operation 5 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i12P(i12* %img_0_cols_V_out, i12 1920)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:602->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:587->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:588->SobelVideo/a.cpp:13]   --->   Operation 5 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 12> <Depth = 2> <FIFO>
 ST_1 : Operation 6 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 6 'ret' <Predicate = true> <Delay = 0.00>

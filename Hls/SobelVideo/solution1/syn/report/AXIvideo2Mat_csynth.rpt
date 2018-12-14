@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'AXIvideo2Mat'
 ================================================================
-* Date:           Fri Dec 14 12:00:29 2018
+* Date:           Fri Dec 14 12:41:21 2018
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        SobelVideo
@@ -104,7 +104,7 @@
     |AXI_video_strm_V_data_V_0_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
     |AXI_video_strm_V_last_V_0_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
     |AXI_video_strm_V_user_V_0_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
-    |exitcond2_i_fu_412_p2                     |   icmp   |      0|  0|  18|          32|          32|
+    |exitcond4_i_fu_412_p2                     |   icmp   |      0|  0|  18|          32|          32|
     |exitcond_i_fu_423_p2                      |   icmp   |      0|  0|  18|          32|          32|
     |ap_block_state1                           |    or    |      0|  0|   2|           1|           1|
     |ap_block_state6_pp1_stage0_iter1          |    or    |      0|  0|   2|           1|           1|
@@ -151,7 +151,7 @@
     |img_rows_V_blk_n                         |   9|          2|    1|          2|
     |img_rows_V_out_blk_n                     |   9|          2|    1|          2|
     |real_start                               |   9|          2|    1|          2|
-    |t_V_2_reg_280                            |   9|          2|   32|         64|
+    |t_V_5_reg_280                            |   9|          2|   32|         64|
     |t_V_reg_269                              |   9|          2|   32|         64|
     +-----------------------------------------+----+-----------+-----+-----------+
     |Total                                    | 377|         81|  215|        470|
@@ -198,7 +198,7 @@
     |rows_V_reg_475                       |  32|   0|   32|          0|
     |sof_1_i_fu_178                       |   1|   0|    1|          0|
     |start_once_reg                       |   1|   0|    1|          0|
-    |t_V_2_reg_280                        |  32|   0|   32|          0|
+    |t_V_5_reg_280                        |  32|   0|   32|          0|
     |t_V_reg_269                          |  32|   0|   32|          0|
     |tmp_data_V_reg_485                   |  24|   0|   24|          0|
     |tmp_last_V_reg_493                   |   1|   0|    1|          0|

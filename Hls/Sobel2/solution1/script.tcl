@@ -5,8 +5,8 @@
 ############################################################
 open_project Sobel2
 set_top hls_sobel
-add_files Sobel2/main.cpp
 add_files Sobel2/main.hpp
+add_files Sobel2/main.cpp
 open_solution "solution1"
 set_part {xa7a12tcsg325-1q}
 create_clock -period 10 -name default

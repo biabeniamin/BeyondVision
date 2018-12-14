@@ -41,7 +41,7 @@ end;
 architecture behav of sobel is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "sobel,hls_ip_2018_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7a200tsbg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=11.000000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=0,HLS_SYN_DSP=3,HLS_SYN_FF=816,HLS_SYN_LUT=1687,HLS_VERSION=2018_2}";
+    "sobel,hls_ip_2018_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7a200tsbg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=11.000000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=27,HLS_SYN_DSP=111,HLS_SYN_FF=13451,HLS_SYN_LUT=21976,HLS_VERSION=2018_2}";
     constant ap_const_lv24_0 : STD_LOGIC_VECTOR (23 downto 0) := "000000000000000000000000";
     constant ap_const_lv3_0 : STD_LOGIC_VECTOR (2 downto 0) := "000";
     constant ap_const_lv1_0 : STD_LOGIC_VECTOR (0 downto 0) := "0";
@@ -96,6 +96,94 @@ architecture behav of sobel is
     signal CvtColor_1_U0_p_dst_data_stream_1_V_write : STD_LOGIC;
     signal CvtColor_1_U0_p_dst_data_stream_2_V_din : STD_LOGIC_VECTOR (7 downto 0);
     signal CvtColor_1_U0_p_dst_data_stream_2_V_write : STD_LOGIC;
+    signal GaussianBlur_U0_ap_start : STD_LOGIC;
+    signal GaussianBlur_U0_ap_done : STD_LOGIC;
+    signal GaussianBlur_U0_ap_continue : STD_LOGIC;
+    signal GaussianBlur_U0_ap_idle : STD_LOGIC;
+    signal GaussianBlur_U0_ap_ready : STD_LOGIC;
+    signal GaussianBlur_U0_start_out : STD_LOGIC;
+    signal GaussianBlur_U0_start_write : STD_LOGIC;
+    signal GaussianBlur_U0_p_src_data_stream_0_V_read : STD_LOGIC;
+    signal GaussianBlur_U0_p_src_data_stream_1_V_read : STD_LOGIC;
+    signal GaussianBlur_U0_p_src_data_stream_2_V_read : STD_LOGIC;
+    signal GaussianBlur_U0_p_dst_data_stream_0_V_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal GaussianBlur_U0_p_dst_data_stream_0_V_write : STD_LOGIC;
+    signal GaussianBlur_U0_p_dst_data_stream_1_V_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal GaussianBlur_U0_p_dst_data_stream_1_V_write : STD_LOGIC;
+    signal GaussianBlur_U0_p_dst_data_stream_2_V_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal GaussianBlur_U0_p_dst_data_stream_2_V_write : STD_LOGIC;
+    signal Duplicate_U0_ap_start : STD_LOGIC;
+    signal Duplicate_U0_start_full_n : STD_LOGIC;
+    signal Duplicate_U0_ap_done : STD_LOGIC;
+    signal Duplicate_U0_ap_continue : STD_LOGIC;
+    signal Duplicate_U0_ap_idle : STD_LOGIC;
+    signal Duplicate_U0_ap_ready : STD_LOGIC;
+    signal Duplicate_U0_start_out : STD_LOGIC;
+    signal Duplicate_U0_start_write : STD_LOGIC;
+    signal Duplicate_U0_src_data_stream_0_V_read : STD_LOGIC;
+    signal Duplicate_U0_src_data_stream_1_V_read : STD_LOGIC;
+    signal Duplicate_U0_src_data_stream_2_V_read : STD_LOGIC;
+    signal Duplicate_U0_dst1_data_stream_0_V_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal Duplicate_U0_dst1_data_stream_0_V_write : STD_LOGIC;
+    signal Duplicate_U0_dst1_data_stream_1_V_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal Duplicate_U0_dst1_data_stream_1_V_write : STD_LOGIC;
+    signal Duplicate_U0_dst1_data_stream_2_V_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal Duplicate_U0_dst1_data_stream_2_V_write : STD_LOGIC;
+    signal Duplicate_U0_dst2_data_stream_0_V_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal Duplicate_U0_dst2_data_stream_0_V_write : STD_LOGIC;
+    signal Duplicate_U0_dst2_data_stream_1_V_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal Duplicate_U0_dst2_data_stream_1_V_write : STD_LOGIC;
+    signal Duplicate_U0_dst2_data_stream_2_V_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal Duplicate_U0_dst2_data_stream_2_V_write : STD_LOGIC;
+    signal Sobel_U0_ap_start : STD_LOGIC;
+    signal Sobel_U0_ap_done : STD_LOGIC;
+    signal Sobel_U0_ap_continue : STD_LOGIC;
+    signal Sobel_U0_ap_idle : STD_LOGIC;
+    signal Sobel_U0_ap_ready : STD_LOGIC;
+    signal Sobel_U0_start_out : STD_LOGIC;
+    signal Sobel_U0_start_write : STD_LOGIC;
+    signal Sobel_U0_p_src_data_stream_0_V_read : STD_LOGIC;
+    signal Sobel_U0_p_src_data_stream_1_V_read : STD_LOGIC;
+    signal Sobel_U0_p_src_data_stream_2_V_read : STD_LOGIC;
+    signal Sobel_U0_p_dst_data_stream_0_V_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal Sobel_U0_p_dst_data_stream_0_V_write : STD_LOGIC;
+    signal Sobel_U0_p_dst_data_stream_1_V_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal Sobel_U0_p_dst_data_stream_1_V_write : STD_LOGIC;
+    signal Sobel_U0_p_dst_data_stream_2_V_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal Sobel_U0_p_dst_data_stream_2_V_write : STD_LOGIC;
+    signal Sobel_1_U0_ap_start : STD_LOGIC;
+    signal Sobel_1_U0_ap_done : STD_LOGIC;
+    signal Sobel_1_U0_ap_continue : STD_LOGIC;
+    signal Sobel_1_U0_ap_idle : STD_LOGIC;
+    signal Sobel_1_U0_ap_ready : STD_LOGIC;
+    signal Sobel_1_U0_p_src_data_stream_0_V_read : STD_LOGIC;
+    signal Sobel_1_U0_p_src_data_stream_1_V_read : STD_LOGIC;
+    signal Sobel_1_U0_p_src_data_stream_2_V_read : STD_LOGIC;
+    signal Sobel_1_U0_p_dst_data_stream_0_V_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal Sobel_1_U0_p_dst_data_stream_0_V_write : STD_LOGIC;
+    signal Sobel_1_U0_p_dst_data_stream_1_V_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal Sobel_1_U0_p_dst_data_stream_1_V_write : STD_LOGIC;
+    signal Sobel_1_U0_p_dst_data_stream_2_V_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal Sobel_1_U0_p_dst_data_stream_2_V_write : STD_LOGIC;
+    signal AddWeighted_U0_ap_start : STD_LOGIC;
+    signal AddWeighted_U0_ap_done : STD_LOGIC;
+    signal AddWeighted_U0_ap_continue : STD_LOGIC;
+    signal AddWeighted_U0_ap_idle : STD_LOGIC;
+    signal AddWeighted_U0_ap_ready : STD_LOGIC;
+    signal AddWeighted_U0_start_out : STD_LOGIC;
+    signal AddWeighted_U0_start_write : STD_LOGIC;
+    signal AddWeighted_U0_src1_data_stream_0_V_read : STD_LOGIC;
+    signal AddWeighted_U0_src1_data_stream_1_V_read : STD_LOGIC;
+    signal AddWeighted_U0_src1_data_stream_2_V_read : STD_LOGIC;
+    signal AddWeighted_U0_src2_data_stream_0_V_read : STD_LOGIC;
+    signal AddWeighted_U0_src2_data_stream_1_V_read : STD_LOGIC;
+    signal AddWeighted_U0_src2_data_stream_2_V_read : STD_LOGIC;
+    signal AddWeighted_U0_dst_data_stream_0_V_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal AddWeighted_U0_dst_data_stream_0_V_write : STD_LOGIC;
+    signal AddWeighted_U0_dst_data_stream_1_V_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal AddWeighted_U0_dst_data_stream_1_V_write : STD_LOGIC;
+    signal AddWeighted_U0_dst_data_stream_2_V_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal AddWeighted_U0_dst_data_stream_2_V_write : STD_LOGIC;
     signal CvtColor_U0_ap_start : STD_LOGIC;
     signal CvtColor_U0_ap_done : STD_LOGIC;
     signal CvtColor_U0_ap_continue : STD_LOGIC;
@@ -144,12 +232,12 @@ architecture behav of sobel is
     signal img_0_data_stream_2_full_n : STD_LOGIC;
     signal img_0_data_stream_2_dout : STD_LOGIC_VECTOR (7 downto 0);
     signal img_0_data_stream_2_empty_n : STD_LOGIC;
-    signal img_0_rows_V_c8_full_n : STD_LOGIC;
-    signal img_0_rows_V_c8_dout : STD_LOGIC_VECTOR (11 downto 0);
-    signal img_0_rows_V_c8_empty_n : STD_LOGIC;
-    signal img_0_cols_V_c9_full_n : STD_LOGIC;
-    signal img_0_cols_V_c9_dout : STD_LOGIC_VECTOR (11 downto 0);
-    signal img_0_cols_V_c9_empty_n : STD_LOGIC;
+    signal img_0_rows_V_c20_full_n : STD_LOGIC;
+    signal img_0_rows_V_c20_dout : STD_LOGIC_VECTOR (11 downto 0);
+    signal img_0_rows_V_c20_empty_n : STD_LOGIC;
+    signal img_0_cols_V_c21_full_n : STD_LOGIC;
+    signal img_0_cols_V_c21_dout : STD_LOGIC_VECTOR (11 downto 0);
+    signal img_0_cols_V_c21_empty_n : STD_LOGIC;
     signal img_1_data_stream_0_full_n : STD_LOGIC;
     signal img_1_data_stream_0_dout : STD_LOGIC_VECTOR (7 downto 0);
     signal img_1_data_stream_0_empty_n : STD_LOGIC;
@@ -168,6 +256,60 @@ architecture behav of sobel is
     signal img_2_data_stream_2_full_n : STD_LOGIC;
     signal img_2_data_stream_2_dout : STD_LOGIC_VECTOR (7 downto 0);
     signal img_2_data_stream_2_empty_n : STD_LOGIC;
+    signal img_2a_data_stream_0_full_n : STD_LOGIC;
+    signal img_2a_data_stream_0_dout : STD_LOGIC_VECTOR (7 downto 0);
+    signal img_2a_data_stream_0_empty_n : STD_LOGIC;
+    signal img_2a_data_stream_1_full_n : STD_LOGIC;
+    signal img_2a_data_stream_1_dout : STD_LOGIC_VECTOR (7 downto 0);
+    signal img_2a_data_stream_1_empty_n : STD_LOGIC;
+    signal img_2a_data_stream_2_full_n : STD_LOGIC;
+    signal img_2a_data_stream_2_dout : STD_LOGIC_VECTOR (7 downto 0);
+    signal img_2a_data_stream_2_empty_n : STD_LOGIC;
+    signal img_2b_data_stream_0_full_n : STD_LOGIC;
+    signal img_2b_data_stream_0_dout : STD_LOGIC_VECTOR (7 downto 0);
+    signal img_2b_data_stream_0_empty_n : STD_LOGIC;
+    signal img_2b_data_stream_1_full_n : STD_LOGIC;
+    signal img_2b_data_stream_1_dout : STD_LOGIC_VECTOR (7 downto 0);
+    signal img_2b_data_stream_1_empty_n : STD_LOGIC;
+    signal img_2b_data_stream_2_full_n : STD_LOGIC;
+    signal img_2b_data_stream_2_dout : STD_LOGIC_VECTOR (7 downto 0);
+    signal img_2b_data_stream_2_empty_n : STD_LOGIC;
+    signal img_3_data_stream_0_full_n : STD_LOGIC;
+    signal img_3_data_stream_0_dout : STD_LOGIC_VECTOR (7 downto 0);
+    signal img_3_data_stream_0_empty_n : STD_LOGIC;
+    signal img_3_data_stream_1_full_n : STD_LOGIC;
+    signal img_3_data_stream_1_dout : STD_LOGIC_VECTOR (7 downto 0);
+    signal img_3_data_stream_1_empty_n : STD_LOGIC;
+    signal img_3_data_stream_2_full_n : STD_LOGIC;
+    signal img_3_data_stream_2_dout : STD_LOGIC_VECTOR (7 downto 0);
+    signal img_3_data_stream_2_empty_n : STD_LOGIC;
+    signal img_4_data_stream_0_full_n : STD_LOGIC;
+    signal img_4_data_stream_0_dout : STD_LOGIC_VECTOR (7 downto 0);
+    signal img_4_data_stream_0_empty_n : STD_LOGIC;
+    signal img_4_data_stream_1_full_n : STD_LOGIC;
+    signal img_4_data_stream_1_dout : STD_LOGIC_VECTOR (7 downto 0);
+    signal img_4_data_stream_1_empty_n : STD_LOGIC;
+    signal img_4_data_stream_2_full_n : STD_LOGIC;
+    signal img_4_data_stream_2_dout : STD_LOGIC_VECTOR (7 downto 0);
+    signal img_4_data_stream_2_empty_n : STD_LOGIC;
+    signal img_5_data_stream_0_full_n : STD_LOGIC;
+    signal img_5_data_stream_0_dout : STD_LOGIC_VECTOR (7 downto 0);
+    signal img_5_data_stream_0_empty_n : STD_LOGIC;
+    signal img_5_data_stream_1_full_n : STD_LOGIC;
+    signal img_5_data_stream_1_dout : STD_LOGIC_VECTOR (7 downto 0);
+    signal img_5_data_stream_1_empty_n : STD_LOGIC;
+    signal img_5_data_stream_2_full_n : STD_LOGIC;
+    signal img_5_data_stream_2_dout : STD_LOGIC_VECTOR (7 downto 0);
+    signal img_5_data_stream_2_empty_n : STD_LOGIC;
+    signal img_6_data_stream_0_full_n : STD_LOGIC;
+    signal img_6_data_stream_0_dout : STD_LOGIC_VECTOR (7 downto 0);
+    signal img_6_data_stream_0_empty_n : STD_LOGIC;
+    signal img_6_data_stream_1_full_n : STD_LOGIC;
+    signal img_6_data_stream_1_dout : STD_LOGIC_VECTOR (7 downto 0);
+    signal img_6_data_stream_1_empty_n : STD_LOGIC;
+    signal img_6_data_stream_2_full_n : STD_LOGIC;
+    signal img_6_data_stream_2_dout : STD_LOGIC_VECTOR (7 downto 0);
+    signal img_6_data_stream_2_empty_n : STD_LOGIC;
     signal ap_sync_done : STD_LOGIC;
     signal ap_sync_ready : STD_LOGIC;
     signal Block_proc_U0_start_full_n : STD_LOGIC;
@@ -176,6 +318,28 @@ architecture behav of sobel is
     signal start_for_CvtColor_1_U0_full_n : STD_LOGIC;
     signal start_for_CvtColor_1_U0_dout : STD_LOGIC_VECTOR (0 downto 0);
     signal start_for_CvtColor_1_U0_empty_n : STD_LOGIC;
+    signal start_for_GaussianBlur_U0_din : STD_LOGIC_VECTOR (0 downto 0);
+    signal start_for_GaussianBlur_U0_full_n : STD_LOGIC;
+    signal start_for_GaussianBlur_U0_dout : STD_LOGIC_VECTOR (0 downto 0);
+    signal start_for_GaussianBlur_U0_empty_n : STD_LOGIC;
+    signal start_for_Duplicate_U0_din : STD_LOGIC_VECTOR (0 downto 0);
+    signal start_for_Duplicate_U0_full_n : STD_LOGIC;
+    signal start_for_Duplicate_U0_dout : STD_LOGIC_VECTOR (0 downto 0);
+    signal start_for_Duplicate_U0_empty_n : STD_LOGIC;
+    signal start_for_Sobel_U0_din : STD_LOGIC_VECTOR (0 downto 0);
+    signal start_for_Sobel_U0_full_n : STD_LOGIC;
+    signal start_for_Sobel_U0_dout : STD_LOGIC_VECTOR (0 downto 0);
+    signal start_for_Sobel_U0_empty_n : STD_LOGIC;
+    signal start_for_Sobel_1_U0_din : STD_LOGIC_VECTOR (0 downto 0);
+    signal start_for_Sobel_1_U0_full_n : STD_LOGIC;
+    signal start_for_Sobel_1_U0_dout : STD_LOGIC_VECTOR (0 downto 0);
+    signal start_for_Sobel_1_U0_empty_n : STD_LOGIC;
+    signal start_for_AddWeighted_U0_din : STD_LOGIC_VECTOR (0 downto 0);
+    signal start_for_AddWeighted_U0_full_n : STD_LOGIC;
+    signal start_for_AddWeighted_U0_dout : STD_LOGIC_VECTOR (0 downto 0);
+    signal start_for_AddWeighted_U0_empty_n : STD_LOGIC;
+    signal Sobel_1_U0_start_full_n : STD_LOGIC;
+    signal Sobel_1_U0_start_write : STD_LOGIC;
     signal start_for_CvtColor_U0_din : STD_LOGIC_VECTOR (0 downto 0);
     signal start_for_CvtColor_U0_full_n : STD_LOGIC;
     signal start_for_CvtColor_U0_dout : STD_LOGIC_VECTOR (0 downto 0);
@@ -289,6 +453,186 @@ architecture behav of sobel is
     end component;
 
 
+    component GaussianBlur IS
+    port (
+        ap_clk : IN STD_LOGIC;
+        ap_rst : IN STD_LOGIC;
+        ap_start : IN STD_LOGIC;
+        start_full_n : IN STD_LOGIC;
+        ap_done : OUT STD_LOGIC;
+        ap_continue : IN STD_LOGIC;
+        ap_idle : OUT STD_LOGIC;
+        ap_ready : OUT STD_LOGIC;
+        start_out : OUT STD_LOGIC;
+        start_write : OUT STD_LOGIC;
+        p_src_data_stream_0_V_dout : IN STD_LOGIC_VECTOR (7 downto 0);
+        p_src_data_stream_0_V_empty_n : IN STD_LOGIC;
+        p_src_data_stream_0_V_read : OUT STD_LOGIC;
+        p_src_data_stream_1_V_dout : IN STD_LOGIC_VECTOR (7 downto 0);
+        p_src_data_stream_1_V_empty_n : IN STD_LOGIC;
+        p_src_data_stream_1_V_read : OUT STD_LOGIC;
+        p_src_data_stream_2_V_dout : IN STD_LOGIC_VECTOR (7 downto 0);
+        p_src_data_stream_2_V_empty_n : IN STD_LOGIC;
+        p_src_data_stream_2_V_read : OUT STD_LOGIC;
+        p_dst_data_stream_0_V_din : OUT STD_LOGIC_VECTOR (7 downto 0);
+        p_dst_data_stream_0_V_full_n : IN STD_LOGIC;
+        p_dst_data_stream_0_V_write : OUT STD_LOGIC;
+        p_dst_data_stream_1_V_din : OUT STD_LOGIC_VECTOR (7 downto 0);
+        p_dst_data_stream_1_V_full_n : IN STD_LOGIC;
+        p_dst_data_stream_1_V_write : OUT STD_LOGIC;
+        p_dst_data_stream_2_V_din : OUT STD_LOGIC_VECTOR (7 downto 0);
+        p_dst_data_stream_2_V_full_n : IN STD_LOGIC;
+        p_dst_data_stream_2_V_write : OUT STD_LOGIC );
+    end component;
+
+
+    component Duplicate IS
+    port (
+        ap_clk : IN STD_LOGIC;
+        ap_rst : IN STD_LOGIC;
+        ap_start : IN STD_LOGIC;
+        start_full_n : IN STD_LOGIC;
+        ap_done : OUT STD_LOGIC;
+        ap_continue : IN STD_LOGIC;
+        ap_idle : OUT STD_LOGIC;
+        ap_ready : OUT STD_LOGIC;
+        start_out : OUT STD_LOGIC;
+        start_write : OUT STD_LOGIC;
+        src_data_stream_0_V_dout : IN STD_LOGIC_VECTOR (7 downto 0);
+        src_data_stream_0_V_empty_n : IN STD_LOGIC;
+        src_data_stream_0_V_read : OUT STD_LOGIC;
+        src_data_stream_1_V_dout : IN STD_LOGIC_VECTOR (7 downto 0);
+        src_data_stream_1_V_empty_n : IN STD_LOGIC;
+        src_data_stream_1_V_read : OUT STD_LOGIC;
+        src_data_stream_2_V_dout : IN STD_LOGIC_VECTOR (7 downto 0);
+        src_data_stream_2_V_empty_n : IN STD_LOGIC;
+        src_data_stream_2_V_read : OUT STD_LOGIC;
+        dst1_data_stream_0_V_din : OUT STD_LOGIC_VECTOR (7 downto 0);
+        dst1_data_stream_0_V_full_n : IN STD_LOGIC;
+        dst1_data_stream_0_V_write : OUT STD_LOGIC;
+        dst1_data_stream_1_V_din : OUT STD_LOGIC_VECTOR (7 downto 0);
+        dst1_data_stream_1_V_full_n : IN STD_LOGIC;
+        dst1_data_stream_1_V_write : OUT STD_LOGIC;
+        dst1_data_stream_2_V_din : OUT STD_LOGIC_VECTOR (7 downto 0);
+        dst1_data_stream_2_V_full_n : IN STD_LOGIC;
+        dst1_data_stream_2_V_write : OUT STD_LOGIC;
+        dst2_data_stream_0_V_din : OUT STD_LOGIC_VECTOR (7 downto 0);
+        dst2_data_stream_0_V_full_n : IN STD_LOGIC;
+        dst2_data_stream_0_V_write : OUT STD_LOGIC;
+        dst2_data_stream_1_V_din : OUT STD_LOGIC_VECTOR (7 downto 0);
+        dst2_data_stream_1_V_full_n : IN STD_LOGIC;
+        dst2_data_stream_1_V_write : OUT STD_LOGIC;
+        dst2_data_stream_2_V_din : OUT STD_LOGIC_VECTOR (7 downto 0);
+        dst2_data_stream_2_V_full_n : IN STD_LOGIC;
+        dst2_data_stream_2_V_write : OUT STD_LOGIC );
+    end component;
+
+
+    component Sobel IS
+    port (
+        ap_clk : IN STD_LOGIC;
+        ap_rst : IN STD_LOGIC;
+        ap_start : IN STD_LOGIC;
+        start_full_n : IN STD_LOGIC;
+        ap_done : OUT STD_LOGIC;
+        ap_continue : IN STD_LOGIC;
+        ap_idle : OUT STD_LOGIC;
+        ap_ready : OUT STD_LOGIC;
+        start_out : OUT STD_LOGIC;
+        start_write : OUT STD_LOGIC;
+        p_src_data_stream_0_V_dout : IN STD_LOGIC_VECTOR (7 downto 0);
+        p_src_data_stream_0_V_empty_n : IN STD_LOGIC;
+        p_src_data_stream_0_V_read : OUT STD_LOGIC;
+        p_src_data_stream_1_V_dout : IN STD_LOGIC_VECTOR (7 downto 0);
+        p_src_data_stream_1_V_empty_n : IN STD_LOGIC;
+        p_src_data_stream_1_V_read : OUT STD_LOGIC;
+        p_src_data_stream_2_V_dout : IN STD_LOGIC_VECTOR (7 downto 0);
+        p_src_data_stream_2_V_empty_n : IN STD_LOGIC;
+        p_src_data_stream_2_V_read : OUT STD_LOGIC;
+        p_dst_data_stream_0_V_din : OUT STD_LOGIC_VECTOR (7 downto 0);
+        p_dst_data_stream_0_V_full_n : IN STD_LOGIC;
+        p_dst_data_stream_0_V_write : OUT STD_LOGIC;
+        p_dst_data_stream_1_V_din : OUT STD_LOGIC_VECTOR (7 downto 0);
+        p_dst_data_stream_1_V_full_n : IN STD_LOGIC;
+        p_dst_data_stream_1_V_write : OUT STD_LOGIC;
+        p_dst_data_stream_2_V_din : OUT STD_LOGIC_VECTOR (7 downto 0);
+        p_dst_data_stream_2_V_full_n : IN STD_LOGIC;
+        p_dst_data_stream_2_V_write : OUT STD_LOGIC );
+    end component;
+
+
+    component Sobel_1 IS
+    port (
+        ap_clk : IN STD_LOGIC;
+        ap_rst : IN STD_LOGIC;
+        ap_start : IN STD_LOGIC;
+        ap_done : OUT STD_LOGIC;
+        ap_continue : IN STD_LOGIC;
+        ap_idle : OUT STD_LOGIC;
+        ap_ready : OUT STD_LOGIC;
+        p_src_data_stream_0_V_dout : IN STD_LOGIC_VECTOR (7 downto 0);
+        p_src_data_stream_0_V_empty_n : IN STD_LOGIC;
+        p_src_data_stream_0_V_read : OUT STD_LOGIC;
+        p_src_data_stream_1_V_dout : IN STD_LOGIC_VECTOR (7 downto 0);
+        p_src_data_stream_1_V_empty_n : IN STD_LOGIC;
+        p_src_data_stream_1_V_read : OUT STD_LOGIC;
+        p_src_data_stream_2_V_dout : IN STD_LOGIC_VECTOR (7 downto 0);
+        p_src_data_stream_2_V_empty_n : IN STD_LOGIC;
+        p_src_data_stream_2_V_read : OUT STD_LOGIC;
+        p_dst_data_stream_0_V_din : OUT STD_LOGIC_VECTOR (7 downto 0);
+        p_dst_data_stream_0_V_full_n : IN STD_LOGIC;
+        p_dst_data_stream_0_V_write : OUT STD_LOGIC;
+        p_dst_data_stream_1_V_din : OUT STD_LOGIC_VECTOR (7 downto 0);
+        p_dst_data_stream_1_V_full_n : IN STD_LOGIC;
+        p_dst_data_stream_1_V_write : OUT STD_LOGIC;
+        p_dst_data_stream_2_V_din : OUT STD_LOGIC_VECTOR (7 downto 0);
+        p_dst_data_stream_2_V_full_n : IN STD_LOGIC;
+        p_dst_data_stream_2_V_write : OUT STD_LOGIC );
+    end component;
+
+
+    component AddWeighted IS
+    port (
+        ap_clk : IN STD_LOGIC;
+        ap_rst : IN STD_LOGIC;
+        ap_start : IN STD_LOGIC;
+        start_full_n : IN STD_LOGIC;
+        ap_done : OUT STD_LOGIC;
+        ap_continue : IN STD_LOGIC;
+        ap_idle : OUT STD_LOGIC;
+        ap_ready : OUT STD_LOGIC;
+        start_out : OUT STD_LOGIC;
+        start_write : OUT STD_LOGIC;
+        src1_data_stream_0_V_dout : IN STD_LOGIC_VECTOR (7 downto 0);
+        src1_data_stream_0_V_empty_n : IN STD_LOGIC;
+        src1_data_stream_0_V_read : OUT STD_LOGIC;
+        src1_data_stream_1_V_dout : IN STD_LOGIC_VECTOR (7 downto 0);
+        src1_data_stream_1_V_empty_n : IN STD_LOGIC;
+        src1_data_stream_1_V_read : OUT STD_LOGIC;
+        src1_data_stream_2_V_dout : IN STD_LOGIC_VECTOR (7 downto 0);
+        src1_data_stream_2_V_empty_n : IN STD_LOGIC;
+        src1_data_stream_2_V_read : OUT STD_LOGIC;
+        src2_data_stream_0_V_dout : IN STD_LOGIC_VECTOR (7 downto 0);
+        src2_data_stream_0_V_empty_n : IN STD_LOGIC;
+        src2_data_stream_0_V_read : OUT STD_LOGIC;
+        src2_data_stream_1_V_dout : IN STD_LOGIC_VECTOR (7 downto 0);
+        src2_data_stream_1_V_empty_n : IN STD_LOGIC;
+        src2_data_stream_1_V_read : OUT STD_LOGIC;
+        src2_data_stream_2_V_dout : IN STD_LOGIC_VECTOR (7 downto 0);
+        src2_data_stream_2_V_empty_n : IN STD_LOGIC;
+        src2_data_stream_2_V_read : OUT STD_LOGIC;
+        dst_data_stream_0_V_din : OUT STD_LOGIC_VECTOR (7 downto 0);
+        dst_data_stream_0_V_full_n : IN STD_LOGIC;
+        dst_data_stream_0_V_write : OUT STD_LOGIC;
+        dst_data_stream_1_V_din : OUT STD_LOGIC_VECTOR (7 downto 0);
+        dst_data_stream_1_V_full_n : IN STD_LOGIC;
+        dst_data_stream_1_V_write : OUT STD_LOGIC;
+        dst_data_stream_2_V_din : OUT STD_LOGIC_VECTOR (7 downto 0);
+        dst_data_stream_2_V_full_n : IN STD_LOGIC;
+        dst_data_stream_2_V_write : OUT STD_LOGIC );
+    end component;
+
+
     component CvtColor IS
     port (
         ap_clk : IN STD_LOGIC;
@@ -382,7 +726,7 @@ architecture behav of sobel is
     end component;
 
 
-    component start_for_CvtColoeOg IS
+    component start_for_CvtColoFfa IS
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
@@ -397,7 +741,7 @@ architecture behav of sobel is
     end component;
 
 
-    component start_for_CvtColofYi IS
+    component start_for_GaussiaGfk IS
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
@@ -412,7 +756,82 @@ architecture behav of sobel is
     end component;
 
 
-    component start_for_Mat2AXIg8j IS
+    component start_for_DuplicaHfu IS
+    port (
+        clk : IN STD_LOGIC;
+        reset : IN STD_LOGIC;
+        if_read_ce : IN STD_LOGIC;
+        if_write_ce : IN STD_LOGIC;
+        if_din : IN STD_LOGIC_VECTOR (0 downto 0);
+        if_full_n : OUT STD_LOGIC;
+        if_write : IN STD_LOGIC;
+        if_dout : OUT STD_LOGIC_VECTOR (0 downto 0);
+        if_empty_n : OUT STD_LOGIC;
+        if_read : IN STD_LOGIC );
+    end component;
+
+
+    component start_for_Sobel_U0 IS
+    port (
+        clk : IN STD_LOGIC;
+        reset : IN STD_LOGIC;
+        if_read_ce : IN STD_LOGIC;
+        if_write_ce : IN STD_LOGIC;
+        if_din : IN STD_LOGIC_VECTOR (0 downto 0);
+        if_full_n : OUT STD_LOGIC;
+        if_write : IN STD_LOGIC;
+        if_dout : OUT STD_LOGIC_VECTOR (0 downto 0);
+        if_empty_n : OUT STD_LOGIC;
+        if_read : IN STD_LOGIC );
+    end component;
+
+
+    component start_for_Sobel_1IfE IS
+    port (
+        clk : IN STD_LOGIC;
+        reset : IN STD_LOGIC;
+        if_read_ce : IN STD_LOGIC;
+        if_write_ce : IN STD_LOGIC;
+        if_din : IN STD_LOGIC_VECTOR (0 downto 0);
+        if_full_n : OUT STD_LOGIC;
+        if_write : IN STD_LOGIC;
+        if_dout : OUT STD_LOGIC_VECTOR (0 downto 0);
+        if_empty_n : OUT STD_LOGIC;
+        if_read : IN STD_LOGIC );
+    end component;
+
+
+    component start_for_AddWeigJfO IS
+    port (
+        clk : IN STD_LOGIC;
+        reset : IN STD_LOGIC;
+        if_read_ce : IN STD_LOGIC;
+        if_write_ce : IN STD_LOGIC;
+        if_din : IN STD_LOGIC_VECTOR (0 downto 0);
+        if_full_n : OUT STD_LOGIC;
+        if_write : IN STD_LOGIC;
+        if_dout : OUT STD_LOGIC_VECTOR (0 downto 0);
+        if_empty_n : OUT STD_LOGIC;
+        if_read : IN STD_LOGIC );
+    end component;
+
+
+    component start_for_CvtColoKfY IS
+    port (
+        clk : IN STD_LOGIC;
+        reset : IN STD_LOGIC;
+        if_read_ce : IN STD_LOGIC;
+        if_write_ce : IN STD_LOGIC;
+        if_din : IN STD_LOGIC_VECTOR (0 downto 0);
+        if_full_n : OUT STD_LOGIC;
+        if_write : IN STD_LOGIC;
+        if_dout : OUT STD_LOGIC_VECTOR (0 downto 0);
+        if_empty_n : OUT STD_LOGIC;
+        if_read : IN STD_LOGIC );
+    end component;
+
+
+    component start_for_Mat2AXILf8 IS
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
@@ -482,10 +901,10 @@ begin
         img_data_stream_2_V_full_n => img_0_data_stream_2_full_n,
         img_data_stream_2_V_write => AXIvideo2Mat_U0_img_data_stream_2_V_write,
         img_rows_V_out_din => AXIvideo2Mat_U0_img_rows_V_out_din,
-        img_rows_V_out_full_n => img_0_rows_V_c8_full_n,
+        img_rows_V_out_full_n => img_0_rows_V_c20_full_n,
         img_rows_V_out_write => AXIvideo2Mat_U0_img_rows_V_out_write,
         img_cols_V_out_din => AXIvideo2Mat_U0_img_cols_V_out_din,
-        img_cols_V_out_full_n => img_0_cols_V_c9_full_n,
+        img_cols_V_out_full_n => img_0_cols_V_c21_full_n,
         img_cols_V_out_write => AXIvideo2Mat_U0_img_cols_V_out_write);
 
     CvtColor_1_U0 : component CvtColor_1
@@ -493,18 +912,18 @@ begin
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
         ap_start => CvtColor_1_U0_ap_start,
-        start_full_n => start_for_CvtColor_U0_full_n,
+        start_full_n => start_for_GaussianBlur_U0_full_n,
         ap_done => CvtColor_1_U0_ap_done,
         ap_continue => CvtColor_1_U0_ap_continue,
         ap_idle => CvtColor_1_U0_ap_idle,
         ap_ready => CvtColor_1_U0_ap_ready,
         start_out => CvtColor_1_U0_start_out,
         start_write => CvtColor_1_U0_start_write,
-        p_src_rows_V_dout => img_0_rows_V_c8_dout,
-        p_src_rows_V_empty_n => img_0_rows_V_c8_empty_n,
+        p_src_rows_V_dout => img_0_rows_V_c20_dout,
+        p_src_rows_V_empty_n => img_0_rows_V_c20_empty_n,
         p_src_rows_V_read => CvtColor_1_U0_p_src_rows_V_read,
-        p_src_cols_V_dout => img_0_cols_V_c9_dout,
-        p_src_cols_V_empty_n => img_0_cols_V_c9_empty_n,
+        p_src_cols_V_dout => img_0_cols_V_c21_dout,
+        p_src_cols_V_empty_n => img_0_cols_V_c21_empty_n,
         p_src_cols_V_read => CvtColor_1_U0_p_src_cols_V_read,
         p_src_data_stream_0_V_dout => img_0_data_stream_0_dout,
         p_src_data_stream_0_V_empty_n => img_0_data_stream_0_empty_n,
@@ -525,6 +944,176 @@ begin
         p_dst_data_stream_2_V_full_n => img_1_data_stream_2_full_n,
         p_dst_data_stream_2_V_write => CvtColor_1_U0_p_dst_data_stream_2_V_write);
 
+    GaussianBlur_U0 : component GaussianBlur
+    port map (
+        ap_clk => ap_clk,
+        ap_rst => ap_rst_n_inv,
+        ap_start => GaussianBlur_U0_ap_start,
+        start_full_n => start_for_Duplicate_U0_full_n,
+        ap_done => GaussianBlur_U0_ap_done,
+        ap_continue => GaussianBlur_U0_ap_continue,
+        ap_idle => GaussianBlur_U0_ap_idle,
+        ap_ready => GaussianBlur_U0_ap_ready,
+        start_out => GaussianBlur_U0_start_out,
+        start_write => GaussianBlur_U0_start_write,
+        p_src_data_stream_0_V_dout => img_1_data_stream_0_dout,
+        p_src_data_stream_0_V_empty_n => img_1_data_stream_0_empty_n,
+        p_src_data_stream_0_V_read => GaussianBlur_U0_p_src_data_stream_0_V_read,
+        p_src_data_stream_1_V_dout => img_1_data_stream_1_dout,
+        p_src_data_stream_1_V_empty_n => img_1_data_stream_1_empty_n,
+        p_src_data_stream_1_V_read => GaussianBlur_U0_p_src_data_stream_1_V_read,
+        p_src_data_stream_2_V_dout => img_1_data_stream_2_dout,
+        p_src_data_stream_2_V_empty_n => img_1_data_stream_2_empty_n,
+        p_src_data_stream_2_V_read => GaussianBlur_U0_p_src_data_stream_2_V_read,
+        p_dst_data_stream_0_V_din => GaussianBlur_U0_p_dst_data_stream_0_V_din,
+        p_dst_data_stream_0_V_full_n => img_2_data_stream_0_full_n,
+        p_dst_data_stream_0_V_write => GaussianBlur_U0_p_dst_data_stream_0_V_write,
+        p_dst_data_stream_1_V_din => GaussianBlur_U0_p_dst_data_stream_1_V_din,
+        p_dst_data_stream_1_V_full_n => img_2_data_stream_1_full_n,
+        p_dst_data_stream_1_V_write => GaussianBlur_U0_p_dst_data_stream_1_V_write,
+        p_dst_data_stream_2_V_din => GaussianBlur_U0_p_dst_data_stream_2_V_din,
+        p_dst_data_stream_2_V_full_n => img_2_data_stream_2_full_n,
+        p_dst_data_stream_2_V_write => GaussianBlur_U0_p_dst_data_stream_2_V_write);
+
+    Duplicate_U0 : component Duplicate
+    port map (
+        ap_clk => ap_clk,
+        ap_rst => ap_rst_n_inv,
+        ap_start => Duplicate_U0_ap_start,
+        start_full_n => Duplicate_U0_start_full_n,
+        ap_done => Duplicate_U0_ap_done,
+        ap_continue => Duplicate_U0_ap_continue,
+        ap_idle => Duplicate_U0_ap_idle,
+        ap_ready => Duplicate_U0_ap_ready,
+        start_out => Duplicate_U0_start_out,
+        start_write => Duplicate_U0_start_write,
+        src_data_stream_0_V_dout => img_2_data_stream_0_dout,
+        src_data_stream_0_V_empty_n => img_2_data_stream_0_empty_n,
+        src_data_stream_0_V_read => Duplicate_U0_src_data_stream_0_V_read,
+        src_data_stream_1_V_dout => img_2_data_stream_1_dout,
+        src_data_stream_1_V_empty_n => img_2_data_stream_1_empty_n,
+        src_data_stream_1_V_read => Duplicate_U0_src_data_stream_1_V_read,
+        src_data_stream_2_V_dout => img_2_data_stream_2_dout,
+        src_data_stream_2_V_empty_n => img_2_data_stream_2_empty_n,
+        src_data_stream_2_V_read => Duplicate_U0_src_data_stream_2_V_read,
+        dst1_data_stream_0_V_din => Duplicate_U0_dst1_data_stream_0_V_din,
+        dst1_data_stream_0_V_full_n => img_2a_data_stream_0_full_n,
+        dst1_data_stream_0_V_write => Duplicate_U0_dst1_data_stream_0_V_write,
+        dst1_data_stream_1_V_din => Duplicate_U0_dst1_data_stream_1_V_din,
+        dst1_data_stream_1_V_full_n => img_2a_data_stream_1_full_n,
+        dst1_data_stream_1_V_write => Duplicate_U0_dst1_data_stream_1_V_write,
+        dst1_data_stream_2_V_din => Duplicate_U0_dst1_data_stream_2_V_din,
+        dst1_data_stream_2_V_full_n => img_2a_data_stream_2_full_n,
+        dst1_data_stream_2_V_write => Duplicate_U0_dst1_data_stream_2_V_write,
+        dst2_data_stream_0_V_din => Duplicate_U0_dst2_data_stream_0_V_din,
+        dst2_data_stream_0_V_full_n => img_2b_data_stream_0_full_n,
+        dst2_data_stream_0_V_write => Duplicate_U0_dst2_data_stream_0_V_write,
+        dst2_data_stream_1_V_din => Duplicate_U0_dst2_data_stream_1_V_din,
+        dst2_data_stream_1_V_full_n => img_2b_data_stream_1_full_n,
+        dst2_data_stream_1_V_write => Duplicate_U0_dst2_data_stream_1_V_write,
+        dst2_data_stream_2_V_din => Duplicate_U0_dst2_data_stream_2_V_din,
+        dst2_data_stream_2_V_full_n => img_2b_data_stream_2_full_n,
+        dst2_data_stream_2_V_write => Duplicate_U0_dst2_data_stream_2_V_write);
+
+    Sobel_U0 : component Sobel
+    port map (
+        ap_clk => ap_clk,
+        ap_rst => ap_rst_n_inv,
+        ap_start => Sobel_U0_ap_start,
+        start_full_n => start_for_AddWeighted_U0_full_n,
+        ap_done => Sobel_U0_ap_done,
+        ap_continue => Sobel_U0_ap_continue,
+        ap_idle => Sobel_U0_ap_idle,
+        ap_ready => Sobel_U0_ap_ready,
+        start_out => Sobel_U0_start_out,
+        start_write => Sobel_U0_start_write,
+        p_src_data_stream_0_V_dout => img_2a_data_stream_0_dout,
+        p_src_data_stream_0_V_empty_n => img_2a_data_stream_0_empty_n,
+        p_src_data_stream_0_V_read => Sobel_U0_p_src_data_stream_0_V_read,
+        p_src_data_stream_1_V_dout => img_2a_data_stream_1_dout,
+        p_src_data_stream_1_V_empty_n => img_2a_data_stream_1_empty_n,
+        p_src_data_stream_1_V_read => Sobel_U0_p_src_data_stream_1_V_read,
+        p_src_data_stream_2_V_dout => img_2a_data_stream_2_dout,
+        p_src_data_stream_2_V_empty_n => img_2a_data_stream_2_empty_n,
+        p_src_data_stream_2_V_read => Sobel_U0_p_src_data_stream_2_V_read,
+        p_dst_data_stream_0_V_din => Sobel_U0_p_dst_data_stream_0_V_din,
+        p_dst_data_stream_0_V_full_n => img_3_data_stream_0_full_n,
+        p_dst_data_stream_0_V_write => Sobel_U0_p_dst_data_stream_0_V_write,
+        p_dst_data_stream_1_V_din => Sobel_U0_p_dst_data_stream_1_V_din,
+        p_dst_data_stream_1_V_full_n => img_3_data_stream_1_full_n,
+        p_dst_data_stream_1_V_write => Sobel_U0_p_dst_data_stream_1_V_write,
+        p_dst_data_stream_2_V_din => Sobel_U0_p_dst_data_stream_2_V_din,
+        p_dst_data_stream_2_V_full_n => img_3_data_stream_2_full_n,
+        p_dst_data_stream_2_V_write => Sobel_U0_p_dst_data_stream_2_V_write);
+
+    Sobel_1_U0 : component Sobel_1
+    port map (
+        ap_clk => ap_clk,
+        ap_rst => ap_rst_n_inv,
+        ap_start => Sobel_1_U0_ap_start,
+        ap_done => Sobel_1_U0_ap_done,
+        ap_continue => Sobel_1_U0_ap_continue,
+        ap_idle => Sobel_1_U0_ap_idle,
+        ap_ready => Sobel_1_U0_ap_ready,
+        p_src_data_stream_0_V_dout => img_2b_data_stream_0_dout,
+        p_src_data_stream_0_V_empty_n => img_2b_data_stream_0_empty_n,
+        p_src_data_stream_0_V_read => Sobel_1_U0_p_src_data_stream_0_V_read,
+        p_src_data_stream_1_V_dout => img_2b_data_stream_1_dout,
+        p_src_data_stream_1_V_empty_n => img_2b_data_stream_1_empty_n,
+        p_src_data_stream_1_V_read => Sobel_1_U0_p_src_data_stream_1_V_read,
+        p_src_data_stream_2_V_dout => img_2b_data_stream_2_dout,
+        p_src_data_stream_2_V_empty_n => img_2b_data_stream_2_empty_n,
+        p_src_data_stream_2_V_read => Sobel_1_U0_p_src_data_stream_2_V_read,
+        p_dst_data_stream_0_V_din => Sobel_1_U0_p_dst_data_stream_0_V_din,
+        p_dst_data_stream_0_V_full_n => img_4_data_stream_0_full_n,
+        p_dst_data_stream_0_V_write => Sobel_1_U0_p_dst_data_stream_0_V_write,
+        p_dst_data_stream_1_V_din => Sobel_1_U0_p_dst_data_stream_1_V_din,
+        p_dst_data_stream_1_V_full_n => img_4_data_stream_1_full_n,
+        p_dst_data_stream_1_V_write => Sobel_1_U0_p_dst_data_stream_1_V_write,
+        p_dst_data_stream_2_V_din => Sobel_1_U0_p_dst_data_stream_2_V_din,
+        p_dst_data_stream_2_V_full_n => img_4_data_stream_2_full_n,
+        p_dst_data_stream_2_V_write => Sobel_1_U0_p_dst_data_stream_2_V_write);
+
+    AddWeighted_U0 : component AddWeighted
+    port map (
+        ap_clk => ap_clk,
+        ap_rst => ap_rst_n_inv,
+        ap_start => AddWeighted_U0_ap_start,
+        start_full_n => start_for_CvtColor_U0_full_n,
+        ap_done => AddWeighted_U0_ap_done,
+        ap_continue => AddWeighted_U0_ap_continue,
+        ap_idle => AddWeighted_U0_ap_idle,
+        ap_ready => AddWeighted_U0_ap_ready,
+        start_out => AddWeighted_U0_start_out,
+        start_write => AddWeighted_U0_start_write,
+        src1_data_stream_0_V_dout => img_4_data_stream_0_dout,
+        src1_data_stream_0_V_empty_n => img_4_data_stream_0_empty_n,
+        src1_data_stream_0_V_read => AddWeighted_U0_src1_data_stream_0_V_read,
+        src1_data_stream_1_V_dout => img_4_data_stream_1_dout,
+        src1_data_stream_1_V_empty_n => img_4_data_stream_1_empty_n,
+        src1_data_stream_1_V_read => AddWeighted_U0_src1_data_stream_1_V_read,
+        src1_data_stream_2_V_dout => img_4_data_stream_2_dout,
+        src1_data_stream_2_V_empty_n => img_4_data_stream_2_empty_n,
+        src1_data_stream_2_V_read => AddWeighted_U0_src1_data_stream_2_V_read,
+        src2_data_stream_0_V_dout => img_3_data_stream_0_dout,
+        src2_data_stream_0_V_empty_n => img_3_data_stream_0_empty_n,
+        src2_data_stream_0_V_read => AddWeighted_U0_src2_data_stream_0_V_read,
+        src2_data_stream_1_V_dout => img_3_data_stream_1_dout,
+        src2_data_stream_1_V_empty_n => img_3_data_stream_1_empty_n,
+        src2_data_stream_1_V_read => AddWeighted_U0_src2_data_stream_1_V_read,
+        src2_data_stream_2_V_dout => img_3_data_stream_2_dout,
+        src2_data_stream_2_V_empty_n => img_3_data_stream_2_empty_n,
+        src2_data_stream_2_V_read => AddWeighted_U0_src2_data_stream_2_V_read,
+        dst_data_stream_0_V_din => AddWeighted_U0_dst_data_stream_0_V_din,
+        dst_data_stream_0_V_full_n => img_5_data_stream_0_full_n,
+        dst_data_stream_0_V_write => AddWeighted_U0_dst_data_stream_0_V_write,
+        dst_data_stream_1_V_din => AddWeighted_U0_dst_data_stream_1_V_din,
+        dst_data_stream_1_V_full_n => img_5_data_stream_1_full_n,
+        dst_data_stream_1_V_write => AddWeighted_U0_dst_data_stream_1_V_write,
+        dst_data_stream_2_V_din => AddWeighted_U0_dst_data_stream_2_V_din,
+        dst_data_stream_2_V_full_n => img_5_data_stream_2_full_n,
+        dst_data_stream_2_V_write => AddWeighted_U0_dst_data_stream_2_V_write);
+
     CvtColor_U0 : component CvtColor
     port map (
         ap_clk => ap_clk,
@@ -537,23 +1126,23 @@ begin
         ap_ready => CvtColor_U0_ap_ready,
         start_out => CvtColor_U0_start_out,
         start_write => CvtColor_U0_start_write,
-        p_src_data_stream_0_V_dout => img_1_data_stream_0_dout,
-        p_src_data_stream_0_V_empty_n => img_1_data_stream_0_empty_n,
+        p_src_data_stream_0_V_dout => img_5_data_stream_0_dout,
+        p_src_data_stream_0_V_empty_n => img_5_data_stream_0_empty_n,
         p_src_data_stream_0_V_read => CvtColor_U0_p_src_data_stream_0_V_read,
-        p_src_data_stream_1_V_dout => img_1_data_stream_1_dout,
-        p_src_data_stream_1_V_empty_n => img_1_data_stream_1_empty_n,
+        p_src_data_stream_1_V_dout => img_5_data_stream_1_dout,
+        p_src_data_stream_1_V_empty_n => img_5_data_stream_1_empty_n,
         p_src_data_stream_1_V_read => CvtColor_U0_p_src_data_stream_1_V_read,
-        p_src_data_stream_2_V_dout => img_1_data_stream_2_dout,
-        p_src_data_stream_2_V_empty_n => img_1_data_stream_2_empty_n,
+        p_src_data_stream_2_V_dout => img_5_data_stream_2_dout,
+        p_src_data_stream_2_V_empty_n => img_5_data_stream_2_empty_n,
         p_src_data_stream_2_V_read => CvtColor_U0_p_src_data_stream_2_V_read,
         p_dst_data_stream_0_V_din => CvtColor_U0_p_dst_data_stream_0_V_din,
-        p_dst_data_stream_0_V_full_n => img_2_data_stream_0_full_n,
+        p_dst_data_stream_0_V_full_n => img_6_data_stream_0_full_n,
         p_dst_data_stream_0_V_write => CvtColor_U0_p_dst_data_stream_0_V_write,
         p_dst_data_stream_1_V_din => CvtColor_U0_p_dst_data_stream_1_V_din,
-        p_dst_data_stream_1_V_full_n => img_2_data_stream_1_full_n,
+        p_dst_data_stream_1_V_full_n => img_6_data_stream_1_full_n,
         p_dst_data_stream_1_V_write => CvtColor_U0_p_dst_data_stream_1_V_write,
         p_dst_data_stream_2_V_din => CvtColor_U0_p_dst_data_stream_2_V_din,
-        p_dst_data_stream_2_V_full_n => img_2_data_stream_2_full_n,
+        p_dst_data_stream_2_V_full_n => img_6_data_stream_2_full_n,
         p_dst_data_stream_2_V_write => CvtColor_U0_p_dst_data_stream_2_V_write);
 
     Mat2AXIvideo_U0 : component Mat2AXIvideo
@@ -565,14 +1154,14 @@ begin
         ap_continue => Mat2AXIvideo_U0_ap_continue,
         ap_idle => Mat2AXIvideo_U0_ap_idle,
         ap_ready => Mat2AXIvideo_U0_ap_ready,
-        img_data_stream_0_V_dout => img_2_data_stream_0_dout,
-        img_data_stream_0_V_empty_n => img_2_data_stream_0_empty_n,
+        img_data_stream_0_V_dout => img_6_data_stream_0_dout,
+        img_data_stream_0_V_empty_n => img_6_data_stream_0_empty_n,
         img_data_stream_0_V_read => Mat2AXIvideo_U0_img_data_stream_0_V_read,
-        img_data_stream_1_V_dout => img_2_data_stream_1_dout,
-        img_data_stream_1_V_empty_n => img_2_data_stream_1_empty_n,
+        img_data_stream_1_V_dout => img_6_data_stream_1_dout,
+        img_data_stream_1_V_empty_n => img_6_data_stream_1_empty_n,
         img_data_stream_1_V_read => Mat2AXIvideo_U0_img_data_stream_1_V_read,
-        img_data_stream_2_V_dout => img_2_data_stream_2_dout,
-        img_data_stream_2_V_empty_n => img_2_data_stream_2_empty_n,
+        img_data_stream_2_V_dout => img_6_data_stream_2_dout,
+        img_data_stream_2_V_empty_n => img_6_data_stream_2_empty_n,
         img_data_stream_2_V_read => Mat2AXIvideo_U0_img_data_stream_2_V_read,
         OUTPUT_STREAM_TDATA => Mat2AXIvideo_U0_OUTPUT_STREAM_TDATA,
         OUTPUT_STREAM_TVALID => Mat2AXIvideo_U0_OUTPUT_STREAM_TVALID,
@@ -649,30 +1238,30 @@ begin
         if_empty_n => img_0_data_stream_2_empty_n,
         if_read => CvtColor_1_U0_p_src_data_stream_2_V_read);
 
-    img_0_rows_V_c8_U : component fifo_w12_d2_A
+    img_0_rows_V_c20_U : component fifo_w12_d2_A
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
         if_din => AXIvideo2Mat_U0_img_rows_V_out_din,
-        if_full_n => img_0_rows_V_c8_full_n,
+        if_full_n => img_0_rows_V_c20_full_n,
         if_write => AXIvideo2Mat_U0_img_rows_V_out_write,
-        if_dout => img_0_rows_V_c8_dout,
-        if_empty_n => img_0_rows_V_c8_empty_n,
+        if_dout => img_0_rows_V_c20_dout,
+        if_empty_n => img_0_rows_V_c20_empty_n,
         if_read => CvtColor_1_U0_p_src_rows_V_read);
 
-    img_0_cols_V_c9_U : component fifo_w12_d2_A
+    img_0_cols_V_c21_U : component fifo_w12_d2_A
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
         if_din => AXIvideo2Mat_U0_img_cols_V_out_din,
-        if_full_n => img_0_cols_V_c9_full_n,
+        if_full_n => img_0_cols_V_c21_full_n,
         if_write => AXIvideo2Mat_U0_img_cols_V_out_write,
-        if_dout => img_0_cols_V_c9_dout,
-        if_empty_n => img_0_cols_V_c9_empty_n,
+        if_dout => img_0_cols_V_c21_dout,
+        if_empty_n => img_0_cols_V_c21_empty_n,
         if_read => CvtColor_1_U0_p_src_cols_V_read);
 
     img_1_data_stream_0_U : component fifo_w8_d2_A
@@ -686,7 +1275,7 @@ begin
         if_write => CvtColor_1_U0_p_dst_data_stream_0_V_write,
         if_dout => img_1_data_stream_0_dout,
         if_empty_n => img_1_data_stream_0_empty_n,
-        if_read => CvtColor_U0_p_src_data_stream_0_V_read);
+        if_read => GaussianBlur_U0_p_src_data_stream_0_V_read);
 
     img_1_data_stream_1_U : component fifo_w8_d2_A
     port map (
@@ -699,7 +1288,7 @@ begin
         if_write => CvtColor_1_U0_p_dst_data_stream_1_V_write,
         if_dout => img_1_data_stream_1_dout,
         if_empty_n => img_1_data_stream_1_empty_n,
-        if_read => CvtColor_U0_p_src_data_stream_1_V_read);
+        if_read => GaussianBlur_U0_p_src_data_stream_1_V_read);
 
     img_1_data_stream_2_U : component fifo_w8_d2_A
     port map (
@@ -712,7 +1301,7 @@ begin
         if_write => CvtColor_1_U0_p_dst_data_stream_2_V_write,
         if_dout => img_1_data_stream_2_dout,
         if_empty_n => img_1_data_stream_2_empty_n,
-        if_read => CvtColor_U0_p_src_data_stream_2_V_read);
+        if_read => GaussianBlur_U0_p_src_data_stream_2_V_read);
 
     img_2_data_stream_0_U : component fifo_w8_d2_A
     port map (
@@ -720,12 +1309,12 @@ begin
         reset => ap_rst_n_inv,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => CvtColor_U0_p_dst_data_stream_0_V_din,
+        if_din => GaussianBlur_U0_p_dst_data_stream_0_V_din,
         if_full_n => img_2_data_stream_0_full_n,
-        if_write => CvtColor_U0_p_dst_data_stream_0_V_write,
+        if_write => GaussianBlur_U0_p_dst_data_stream_0_V_write,
         if_dout => img_2_data_stream_0_dout,
         if_empty_n => img_2_data_stream_0_empty_n,
-        if_read => Mat2AXIvideo_U0_img_data_stream_0_V_read);
+        if_read => Duplicate_U0_src_data_stream_0_V_read);
 
     img_2_data_stream_1_U : component fifo_w8_d2_A
     port map (
@@ -733,12 +1322,12 @@ begin
         reset => ap_rst_n_inv,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => CvtColor_U0_p_dst_data_stream_1_V_din,
+        if_din => GaussianBlur_U0_p_dst_data_stream_1_V_din,
         if_full_n => img_2_data_stream_1_full_n,
-        if_write => CvtColor_U0_p_dst_data_stream_1_V_write,
+        if_write => GaussianBlur_U0_p_dst_data_stream_1_V_write,
         if_dout => img_2_data_stream_1_dout,
         if_empty_n => img_2_data_stream_1_empty_n,
-        if_read => Mat2AXIvideo_U0_img_data_stream_1_V_read);
+        if_read => Duplicate_U0_src_data_stream_1_V_read);
 
     img_2_data_stream_2_U : component fifo_w8_d2_A
     port map (
@@ -746,14 +1335,248 @@ begin
         reset => ap_rst_n_inv,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => CvtColor_U0_p_dst_data_stream_2_V_din,
+        if_din => GaussianBlur_U0_p_dst_data_stream_2_V_din,
         if_full_n => img_2_data_stream_2_full_n,
-        if_write => CvtColor_U0_p_dst_data_stream_2_V_write,
+        if_write => GaussianBlur_U0_p_dst_data_stream_2_V_write,
         if_dout => img_2_data_stream_2_dout,
         if_empty_n => img_2_data_stream_2_empty_n,
+        if_read => Duplicate_U0_src_data_stream_2_V_read);
+
+    img_2a_data_stream_0_U : component fifo_w8_d2_A
+    port map (
+        clk => ap_clk,
+        reset => ap_rst_n_inv,
+        if_read_ce => ap_const_logic_1,
+        if_write_ce => ap_const_logic_1,
+        if_din => Duplicate_U0_dst1_data_stream_0_V_din,
+        if_full_n => img_2a_data_stream_0_full_n,
+        if_write => Duplicate_U0_dst1_data_stream_0_V_write,
+        if_dout => img_2a_data_stream_0_dout,
+        if_empty_n => img_2a_data_stream_0_empty_n,
+        if_read => Sobel_U0_p_src_data_stream_0_V_read);
+
+    img_2a_data_stream_1_U : component fifo_w8_d2_A
+    port map (
+        clk => ap_clk,
+        reset => ap_rst_n_inv,
+        if_read_ce => ap_const_logic_1,
+        if_write_ce => ap_const_logic_1,
+        if_din => Duplicate_U0_dst1_data_stream_1_V_din,
+        if_full_n => img_2a_data_stream_1_full_n,
+        if_write => Duplicate_U0_dst1_data_stream_1_V_write,
+        if_dout => img_2a_data_stream_1_dout,
+        if_empty_n => img_2a_data_stream_1_empty_n,
+        if_read => Sobel_U0_p_src_data_stream_1_V_read);
+
+    img_2a_data_stream_2_U : component fifo_w8_d2_A
+    port map (
+        clk => ap_clk,
+        reset => ap_rst_n_inv,
+        if_read_ce => ap_const_logic_1,
+        if_write_ce => ap_const_logic_1,
+        if_din => Duplicate_U0_dst1_data_stream_2_V_din,
+        if_full_n => img_2a_data_stream_2_full_n,
+        if_write => Duplicate_U0_dst1_data_stream_2_V_write,
+        if_dout => img_2a_data_stream_2_dout,
+        if_empty_n => img_2a_data_stream_2_empty_n,
+        if_read => Sobel_U0_p_src_data_stream_2_V_read);
+
+    img_2b_data_stream_0_U : component fifo_w8_d2_A
+    port map (
+        clk => ap_clk,
+        reset => ap_rst_n_inv,
+        if_read_ce => ap_const_logic_1,
+        if_write_ce => ap_const_logic_1,
+        if_din => Duplicate_U0_dst2_data_stream_0_V_din,
+        if_full_n => img_2b_data_stream_0_full_n,
+        if_write => Duplicate_U0_dst2_data_stream_0_V_write,
+        if_dout => img_2b_data_stream_0_dout,
+        if_empty_n => img_2b_data_stream_0_empty_n,
+        if_read => Sobel_1_U0_p_src_data_stream_0_V_read);
+
+    img_2b_data_stream_1_U : component fifo_w8_d2_A
+    port map (
+        clk => ap_clk,
+        reset => ap_rst_n_inv,
+        if_read_ce => ap_const_logic_1,
+        if_write_ce => ap_const_logic_1,
+        if_din => Duplicate_U0_dst2_data_stream_1_V_din,
+        if_full_n => img_2b_data_stream_1_full_n,
+        if_write => Duplicate_U0_dst2_data_stream_1_V_write,
+        if_dout => img_2b_data_stream_1_dout,
+        if_empty_n => img_2b_data_stream_1_empty_n,
+        if_read => Sobel_1_U0_p_src_data_stream_1_V_read);
+
+    img_2b_data_stream_2_U : component fifo_w8_d2_A
+    port map (
+        clk => ap_clk,
+        reset => ap_rst_n_inv,
+        if_read_ce => ap_const_logic_1,
+        if_write_ce => ap_const_logic_1,
+        if_din => Duplicate_U0_dst2_data_stream_2_V_din,
+        if_full_n => img_2b_data_stream_2_full_n,
+        if_write => Duplicate_U0_dst2_data_stream_2_V_write,
+        if_dout => img_2b_data_stream_2_dout,
+        if_empty_n => img_2b_data_stream_2_empty_n,
+        if_read => Sobel_1_U0_p_src_data_stream_2_V_read);
+
+    img_3_data_stream_0_U : component fifo_w8_d2_A
+    port map (
+        clk => ap_clk,
+        reset => ap_rst_n_inv,
+        if_read_ce => ap_const_logic_1,
+        if_write_ce => ap_const_logic_1,
+        if_din => Sobel_U0_p_dst_data_stream_0_V_din,
+        if_full_n => img_3_data_stream_0_full_n,
+        if_write => Sobel_U0_p_dst_data_stream_0_V_write,
+        if_dout => img_3_data_stream_0_dout,
+        if_empty_n => img_3_data_stream_0_empty_n,
+        if_read => AddWeighted_U0_src2_data_stream_0_V_read);
+
+    img_3_data_stream_1_U : component fifo_w8_d2_A
+    port map (
+        clk => ap_clk,
+        reset => ap_rst_n_inv,
+        if_read_ce => ap_const_logic_1,
+        if_write_ce => ap_const_logic_1,
+        if_din => Sobel_U0_p_dst_data_stream_1_V_din,
+        if_full_n => img_3_data_stream_1_full_n,
+        if_write => Sobel_U0_p_dst_data_stream_1_V_write,
+        if_dout => img_3_data_stream_1_dout,
+        if_empty_n => img_3_data_stream_1_empty_n,
+        if_read => AddWeighted_U0_src2_data_stream_1_V_read);
+
+    img_3_data_stream_2_U : component fifo_w8_d2_A
+    port map (
+        clk => ap_clk,
+        reset => ap_rst_n_inv,
+        if_read_ce => ap_const_logic_1,
+        if_write_ce => ap_const_logic_1,
+        if_din => Sobel_U0_p_dst_data_stream_2_V_din,
+        if_full_n => img_3_data_stream_2_full_n,
+        if_write => Sobel_U0_p_dst_data_stream_2_V_write,
+        if_dout => img_3_data_stream_2_dout,
+        if_empty_n => img_3_data_stream_2_empty_n,
+        if_read => AddWeighted_U0_src2_data_stream_2_V_read);
+
+    img_4_data_stream_0_U : component fifo_w8_d2_A
+    port map (
+        clk => ap_clk,
+        reset => ap_rst_n_inv,
+        if_read_ce => ap_const_logic_1,
+        if_write_ce => ap_const_logic_1,
+        if_din => Sobel_1_U0_p_dst_data_stream_0_V_din,
+        if_full_n => img_4_data_stream_0_full_n,
+        if_write => Sobel_1_U0_p_dst_data_stream_0_V_write,
+        if_dout => img_4_data_stream_0_dout,
+        if_empty_n => img_4_data_stream_0_empty_n,
+        if_read => AddWeighted_U0_src1_data_stream_0_V_read);
+
+    img_4_data_stream_1_U : component fifo_w8_d2_A
+    port map (
+        clk => ap_clk,
+        reset => ap_rst_n_inv,
+        if_read_ce => ap_const_logic_1,
+        if_write_ce => ap_const_logic_1,
+        if_din => Sobel_1_U0_p_dst_data_stream_1_V_din,
+        if_full_n => img_4_data_stream_1_full_n,
+        if_write => Sobel_1_U0_p_dst_data_stream_1_V_write,
+        if_dout => img_4_data_stream_1_dout,
+        if_empty_n => img_4_data_stream_1_empty_n,
+        if_read => AddWeighted_U0_src1_data_stream_1_V_read);
+
+    img_4_data_stream_2_U : component fifo_w8_d2_A
+    port map (
+        clk => ap_clk,
+        reset => ap_rst_n_inv,
+        if_read_ce => ap_const_logic_1,
+        if_write_ce => ap_const_logic_1,
+        if_din => Sobel_1_U0_p_dst_data_stream_2_V_din,
+        if_full_n => img_4_data_stream_2_full_n,
+        if_write => Sobel_1_U0_p_dst_data_stream_2_V_write,
+        if_dout => img_4_data_stream_2_dout,
+        if_empty_n => img_4_data_stream_2_empty_n,
+        if_read => AddWeighted_U0_src1_data_stream_2_V_read);
+
+    img_5_data_stream_0_U : component fifo_w8_d2_A
+    port map (
+        clk => ap_clk,
+        reset => ap_rst_n_inv,
+        if_read_ce => ap_const_logic_1,
+        if_write_ce => ap_const_logic_1,
+        if_din => AddWeighted_U0_dst_data_stream_0_V_din,
+        if_full_n => img_5_data_stream_0_full_n,
+        if_write => AddWeighted_U0_dst_data_stream_0_V_write,
+        if_dout => img_5_data_stream_0_dout,
+        if_empty_n => img_5_data_stream_0_empty_n,
+        if_read => CvtColor_U0_p_src_data_stream_0_V_read);
+
+    img_5_data_stream_1_U : component fifo_w8_d2_A
+    port map (
+        clk => ap_clk,
+        reset => ap_rst_n_inv,
+        if_read_ce => ap_const_logic_1,
+        if_write_ce => ap_const_logic_1,
+        if_din => AddWeighted_U0_dst_data_stream_1_V_din,
+        if_full_n => img_5_data_stream_1_full_n,
+        if_write => AddWeighted_U0_dst_data_stream_1_V_write,
+        if_dout => img_5_data_stream_1_dout,
+        if_empty_n => img_5_data_stream_1_empty_n,
+        if_read => CvtColor_U0_p_src_data_stream_1_V_read);
+
+    img_5_data_stream_2_U : component fifo_w8_d2_A
+    port map (
+        clk => ap_clk,
+        reset => ap_rst_n_inv,
+        if_read_ce => ap_const_logic_1,
+        if_write_ce => ap_const_logic_1,
+        if_din => AddWeighted_U0_dst_data_stream_2_V_din,
+        if_full_n => img_5_data_stream_2_full_n,
+        if_write => AddWeighted_U0_dst_data_stream_2_V_write,
+        if_dout => img_5_data_stream_2_dout,
+        if_empty_n => img_5_data_stream_2_empty_n,
+        if_read => CvtColor_U0_p_src_data_stream_2_V_read);
+
+    img_6_data_stream_0_U : component fifo_w8_d2_A
+    port map (
+        clk => ap_clk,
+        reset => ap_rst_n_inv,
+        if_read_ce => ap_const_logic_1,
+        if_write_ce => ap_const_logic_1,
+        if_din => CvtColor_U0_p_dst_data_stream_0_V_din,
+        if_full_n => img_6_data_stream_0_full_n,
+        if_write => CvtColor_U0_p_dst_data_stream_0_V_write,
+        if_dout => img_6_data_stream_0_dout,
+        if_empty_n => img_6_data_stream_0_empty_n,
+        if_read => Mat2AXIvideo_U0_img_data_stream_0_V_read);
+
+    img_6_data_stream_1_U : component fifo_w8_d2_A
+    port map (
+        clk => ap_clk,
+        reset => ap_rst_n_inv,
+        if_read_ce => ap_const_logic_1,
+        if_write_ce => ap_const_logic_1,
+        if_din => CvtColor_U0_p_dst_data_stream_1_V_din,
+        if_full_n => img_6_data_stream_1_full_n,
+        if_write => CvtColor_U0_p_dst_data_stream_1_V_write,
+        if_dout => img_6_data_stream_1_dout,
+        if_empty_n => img_6_data_stream_1_empty_n,
+        if_read => Mat2AXIvideo_U0_img_data_stream_1_V_read);
+
+    img_6_data_stream_2_U : component fifo_w8_d2_A
+    port map (
+        clk => ap_clk,
+        reset => ap_rst_n_inv,
+        if_read_ce => ap_const_logic_1,
+        if_write_ce => ap_const_logic_1,
+        if_din => CvtColor_U0_p_dst_data_stream_2_V_din,
+        if_full_n => img_6_data_stream_2_full_n,
+        if_write => CvtColor_U0_p_dst_data_stream_2_V_write,
+        if_dout => img_6_data_stream_2_dout,
+        if_empty_n => img_6_data_stream_2_empty_n,
         if_read => Mat2AXIvideo_U0_img_data_stream_2_V_read);
 
-    start_for_CvtColoeOg_U : component start_for_CvtColoeOg
+    start_for_CvtColoFfa_U : component start_for_CvtColoFfa
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
@@ -766,7 +1589,72 @@ begin
         if_empty_n => start_for_CvtColor_1_U0_empty_n,
         if_read => CvtColor_1_U0_ap_ready);
 
-    start_for_CvtColofYi_U : component start_for_CvtColofYi
+    start_for_GaussiaGfk_U : component start_for_GaussiaGfk
+    port map (
+        clk => ap_clk,
+        reset => ap_rst_n_inv,
+        if_read_ce => ap_const_logic_1,
+        if_write_ce => ap_const_logic_1,
+        if_din => start_for_GaussianBlur_U0_din,
+        if_full_n => start_for_GaussianBlur_U0_full_n,
+        if_write => CvtColor_1_U0_start_write,
+        if_dout => start_for_GaussianBlur_U0_dout,
+        if_empty_n => start_for_GaussianBlur_U0_empty_n,
+        if_read => GaussianBlur_U0_ap_ready);
+
+    start_for_DuplicaHfu_U : component start_for_DuplicaHfu
+    port map (
+        clk => ap_clk,
+        reset => ap_rst_n_inv,
+        if_read_ce => ap_const_logic_1,
+        if_write_ce => ap_const_logic_1,
+        if_din => start_for_Duplicate_U0_din,
+        if_full_n => start_for_Duplicate_U0_full_n,
+        if_write => GaussianBlur_U0_start_write,
+        if_dout => start_for_Duplicate_U0_dout,
+        if_empty_n => start_for_Duplicate_U0_empty_n,
+        if_read => Duplicate_U0_ap_ready);
+
+    start_for_Sobel_U0_U : component start_for_Sobel_U0
+    port map (
+        clk => ap_clk,
+        reset => ap_rst_n_inv,
+        if_read_ce => ap_const_logic_1,
+        if_write_ce => ap_const_logic_1,
+        if_din => start_for_Sobel_U0_din,
+        if_full_n => start_for_Sobel_U0_full_n,
+        if_write => Duplicate_U0_start_write,
+        if_dout => start_for_Sobel_U0_dout,
+        if_empty_n => start_for_Sobel_U0_empty_n,
+        if_read => Sobel_U0_ap_ready);
+
+    start_for_Sobel_1IfE_U : component start_for_Sobel_1IfE
+    port map (
+        clk => ap_clk,
+        reset => ap_rst_n_inv,
+        if_read_ce => ap_const_logic_1,
+        if_write_ce => ap_const_logic_1,
+        if_din => start_for_Sobel_1_U0_din,
+        if_full_n => start_for_Sobel_1_U0_full_n,
+        if_write => Duplicate_U0_start_write,
+        if_dout => start_for_Sobel_1_U0_dout,
+        if_empty_n => start_for_Sobel_1_U0_empty_n,
+        if_read => Sobel_1_U0_ap_ready);
+
+    start_for_AddWeigJfO_U : component start_for_AddWeigJfO
+    port map (
+        clk => ap_clk,
+        reset => ap_rst_n_inv,
+        if_read_ce => ap_const_logic_1,
+        if_write_ce => ap_const_logic_1,
+        if_din => start_for_AddWeighted_U0_din,
+        if_full_n => start_for_AddWeighted_U0_full_n,
+        if_write => Sobel_U0_start_write,
+        if_dout => start_for_AddWeighted_U0_dout,
+        if_empty_n => start_for_AddWeighted_U0_empty_n,
+        if_read => AddWeighted_U0_ap_ready);
+
+    start_for_CvtColoKfY_U : component start_for_CvtColoKfY
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
@@ -774,12 +1662,12 @@ begin
         if_write_ce => ap_const_logic_1,
         if_din => start_for_CvtColor_U0_din,
         if_full_n => start_for_CvtColor_U0_full_n,
-        if_write => CvtColor_1_U0_start_write,
+        if_write => AddWeighted_U0_start_write,
         if_dout => start_for_CvtColor_U0_dout,
         if_empty_n => start_for_CvtColor_U0_empty_n,
         if_read => CvtColor_U0_ap_ready);
 
-    start_for_Mat2AXIg8j_U : component start_for_Mat2AXIg8j
+    start_for_Mat2AXILf8_U : component start_for_Mat2AXILf8
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
@@ -797,6 +1685,8 @@ begin
 
     AXIvideo2Mat_U0_ap_continue <= ap_const_logic_1;
     AXIvideo2Mat_U0_ap_start <= ap_start;
+    AddWeighted_U0_ap_continue <= ap_const_logic_1;
+    AddWeighted_U0_ap_start <= start_for_AddWeighted_U0_empty_n;
     Block_proc_U0_ap_continue <= ap_const_logic_1;
     Block_proc_U0_ap_start <= ap_start;
     Block_proc_U0_start_full_n <= ap_const_logic_1;
@@ -805,6 +1695,11 @@ begin
     CvtColor_1_U0_ap_start <= start_for_CvtColor_1_U0_empty_n;
     CvtColor_U0_ap_continue <= ap_const_logic_1;
     CvtColor_U0_ap_start <= start_for_CvtColor_U0_empty_n;
+    Duplicate_U0_ap_continue <= ap_const_logic_1;
+    Duplicate_U0_ap_start <= start_for_Duplicate_U0_empty_n;
+    Duplicate_U0_start_full_n <= (start_for_Sobel_U0_full_n and start_for_Sobel_1_U0_full_n);
+    GaussianBlur_U0_ap_continue <= ap_const_logic_1;
+    GaussianBlur_U0_ap_start <= start_for_GaussianBlur_U0_empty_n;
     INPUT_STREAM_TREADY <= AXIvideo2Mat_U0_INPUT_STREAM_TREADY;
     Mat2AXIvideo_U0_ap_continue <= ap_const_logic_1;
     Mat2AXIvideo_U0_ap_start <= start_for_Mat2AXIvideo_U0_empty_n;
@@ -818,8 +1713,14 @@ begin
     OUTPUT_STREAM_TSTRB <= Mat2AXIvideo_U0_OUTPUT_STREAM_TSTRB;
     OUTPUT_STREAM_TUSER <= Mat2AXIvideo_U0_OUTPUT_STREAM_TUSER;
     OUTPUT_STREAM_TVALID <= Mat2AXIvideo_U0_OUTPUT_STREAM_TVALID;
+    Sobel_1_U0_ap_continue <= ap_const_logic_1;
+    Sobel_1_U0_ap_start <= start_for_Sobel_1_U0_empty_n;
+    Sobel_1_U0_start_full_n <= ap_const_logic_1;
+    Sobel_1_U0_start_write <= ap_const_logic_0;
+    Sobel_U0_ap_continue <= ap_const_logic_1;
+    Sobel_U0_ap_start <= start_for_Sobel_U0_empty_n;
     ap_done <= Mat2AXIvideo_U0_ap_done;
-    ap_idle <= (Mat2AXIvideo_U0_ap_idle and CvtColor_U0_ap_idle and CvtColor_1_U0_ap_idle and Block_proc_U0_ap_idle and AXIvideo2Mat_U0_ap_idle);
+    ap_idle <= (Sobel_U0_ap_idle and Sobel_1_U0_ap_idle and Mat2AXIvideo_U0_ap_idle and GaussianBlur_U0_ap_idle and Duplicate_U0_ap_idle and CvtColor_U0_ap_idle and CvtColor_1_U0_ap_idle and Block_proc_U0_ap_idle and AddWeighted_U0_ap_idle and AXIvideo2Mat_U0_ap_idle);
     ap_ready <= AXIvideo2Mat_U0_ap_ready;
 
     ap_rst_n_inv_assign_proc : process(ap_rst_n)
@@ -830,7 +1731,12 @@ begin
     ap_sync_continue <= ap_const_logic_1;
     ap_sync_done <= Mat2AXIvideo_U0_ap_done;
     ap_sync_ready <= AXIvideo2Mat_U0_ap_ready;
+    start_for_AddWeighted_U0_din <= (0=>ap_const_logic_1, others=>'-');
     start_for_CvtColor_1_U0_din <= (0=>ap_const_logic_1, others=>'-');
     start_for_CvtColor_U0_din <= (0=>ap_const_logic_1, others=>'-');
+    start_for_Duplicate_U0_din <= (0=>ap_const_logic_1, others=>'-');
+    start_for_GaussianBlur_U0_din <= (0=>ap_const_logic_1, others=>'-');
     start_for_Mat2AXIvideo_U0_din <= (0=>ap_const_logic_1, others=>'-');
+    start_for_Sobel_1_U0_din <= (0=>ap_const_logic_1, others=>'-');
+    start_for_Sobel_U0_din <= (0=>ap_const_logic_1, others=>'-');
 end behav;

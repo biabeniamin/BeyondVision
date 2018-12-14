@@ -135,7 +135,7 @@ struct AXIvideo2Mat : public sc_module {
     sc_signal< sc_logic > img_data_stream_2_V_blk_n;
     sc_signal< sc_logic > img_rows_V_out_blk_n;
     sc_signal< sc_logic > img_cols_V_out_blk_n;
-    sc_signal< sc_lv<32> > t_V_2_reg_280;
+    sc_signal< sc_lv<32> > t_V_5_reg_280;
     sc_signal< sc_lv<1> > eol_i_reg_291;
     sc_signal< sc_lv<1> > eol_reg_303;
     sc_signal< sc_lv<24> > axi_data_V_1_i_reg_314;
@@ -148,7 +148,7 @@ struct AXIvideo2Mat : public sc_module {
     sc_signal< sc_lv<32> > cols_V_reg_480;
     sc_signal< sc_lv<24> > tmp_data_V_reg_485;
     sc_signal< sc_lv<1> > tmp_last_V_reg_493;
-    sc_signal< sc_lv<1> > exitcond2_i_fu_412_p2;
+    sc_signal< sc_lv<1> > exitcond4_i_fu_412_p2;
     sc_signal< sc_logic > ap_CS_fsm_state4;
     sc_signal< sc_lv<32> > i_V_fu_417_p2;
     sc_signal< sc_lv<32> > i_V_reg_509;
@@ -290,7 +290,7 @@ struct AXIvideo2Mat : public sc_module {
     void thread_brmerge_i_fu_437_p2();
     void thread_cols_V_fu_399_p0();
     void thread_cols_V_fu_399_p1();
-    void thread_exitcond2_i_fu_412_p2();
+    void thread_exitcond4_i_fu_412_p2();
     void thread_exitcond_i_fu_423_p2();
     void thread_i_V_fu_417_p2();
     void thread_img_cols_V_blk_n();

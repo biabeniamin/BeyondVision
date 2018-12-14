@@ -138,8 +138,8 @@ struct Mat2AXIvideo : public sc_module {
     sc_signal< sc_logic > OUTPUT_STREAM_TDATA_blk_n;
     sc_signal< sc_logic > ap_enable_reg_pp0_iter2;
     sc_signal< sc_lv<1> > exitcond_reg_266_pp0_iter1_reg;
-    sc_signal< sc_lv<11> > t_V_1_reg_184;
-    sc_signal< sc_lv<1> > exitcond1_fu_200_p2;
+    sc_signal< sc_lv<11> > t_V_2_reg_184;
+    sc_signal< sc_lv<1> > exitcond2_fu_200_p2;
     sc_signal< sc_logic > ap_CS_fsm_state2;
     sc_signal< bool > ap_block_state2;
     sc_signal< sc_lv<11> > i_V_fu_206_p2;
@@ -275,7 +275,7 @@ struct Mat2AXIvideo : public sc_module {
     void thread_ap_idle_pp0();
     void thread_ap_ready();
     void thread_axi_last_V_fu_224_p2();
-    void thread_exitcond1_fu_200_p2();
+    void thread_exitcond2_fu_200_p2();
     void thread_exitcond_fu_212_p2();
     void thread_i_V_fu_206_p2();
     void thread_img_data_stream_0_V_blk_n();
