@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Fri Dec 14 16:49:43 2018
+--Date        : Fri Dec 14 17:20:17 2018
 --Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
 --Command     : generate_target hdmi.bd
 --Design      : hdmi
@@ -7535,7 +7535,7 @@ SobelFilter_0: component hdmi_SobelFilter_0_0
       ap_done => NLW_SobelFilter_0_ap_done_UNCONNECTED,
       ap_idle => NLW_SobelFilter_0_ap_idle_UNCONNECTED,
       ap_ready => NLW_SobelFilter_0_ap_ready_UNCONNECTED,
-      ap_rst_n => '0',
+      ap_rst_n => Net(0),
       ap_start => axi_gpio_0_gpio2_io_o(0)
     );
 axi_dynclk_0: component hdmi_axi_dynclk_0_0
