@@ -1040,8 +1040,8 @@
         <spirit:internalPortReference spirit:componentRef="axi_gpio_0" spirit:portRef="gpio_io_o"/>
         <spirit:internalPortReference spirit:componentRef="v_vid_in_axi4s_0" spirit:portRef="aresetn"/>
         <spirit:internalPortReference spirit:componentRef="axis_subset_converter_1" spirit:portRef="aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="sobel_0" spirit:portRef="ap_rst_n"/>
         <spirit:internalPortReference spirit:componentRef="system_ila_1" spirit:portRef="probe2"/>
+        <spirit:internalPortReference spirit:componentRef="sobel_0" spirit:portRef="ap_rst_n"/>
         <bd:hdl_attributes>
           <bd:hdl_attribute bd:name="DEBUG" bd:value="true"/>
           <bd:hdl_attribute bd:name="MARK_DEBUG" bd:value="true"/>
@@ -1064,8 +1064,8 @@
       <spirit:adHocConnection>
         <spirit:name>axi_gpio_0_gpio2_io_o</spirit:name>
         <spirit:internalPortReference spirit:componentRef="axi_gpio_0" spirit:portRef="gpio2_io_o"/>
-        <spirit:internalPortReference spirit:componentRef="sobel_0" spirit:portRef="ap_start"/>
         <spirit:internalPortReference spirit:componentRef="system_ila_1" spirit:portRef="probe1"/>
+        <spirit:internalPortReference spirit:componentRef="sobel_0" spirit:portRef="ap_start"/>
         <bd:hdl_attributes>
           <bd:hdl_attribute bd:name="DEBUG" bd:value="true"/>
           <bd:hdl_attribute bd:name="MARK_DEBUG" bd:value="true"/>

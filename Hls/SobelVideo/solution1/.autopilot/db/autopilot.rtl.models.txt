@@ -1,3 +1,6 @@
+sobel_mul_mul_8nsbkb
+sobel_mac_muladd_cud
+sobel_mac_muladd_dEe
 fifo_w12_d2_A
 fifo_w12_d2_A
 fifo_w8_d2_A
@@ -5,8 +8,18 @@ fifo_w8_d2_A
 fifo_w8_d2_A
 fifo_w12_d2_A
 fifo_w12_d2_A
-start_for_Mat2AXIbkb
+fifo_w8_d2_A
+fifo_w8_d2_A
+fifo_w8_d2_A
+fifo_w8_d2_A
+fifo_w8_d2_A
+fifo_w8_d2_A
+start_for_CvtColoeOg
+start_for_CvtColofYi
+start_for_Mat2AXIg8j
 Block_proc
 AXIvideo2Mat
+CvtColor_1
+CvtColor
 Mat2AXIvideo
 sobel

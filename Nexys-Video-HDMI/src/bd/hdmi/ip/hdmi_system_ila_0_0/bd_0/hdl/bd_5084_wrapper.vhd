@@ -47,23 +47,23 @@ architecture STRUCTURE of bd_5084_wrapper is
     resetn : in STD_LOGIC;
     SLOT_0_AXIS_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
     SLOT_0_AXIS_tlast : in STD_LOGIC;
-    SLOT_0_AXIS_tready : in STD_LOGIC;
     SLOT_0_AXIS_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
     SLOT_0_AXIS_tvalid : in STD_LOGIC;
-    SLOT_1_AXIS_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    SLOT_1_AXIS_tdest : in STD_LOGIC_VECTOR ( 0 to 0 );
+    SLOT_0_AXIS_tready : in STD_LOGIC;
     SLOT_1_AXIS_tid : in STD_LOGIC_VECTOR ( 0 to 0 );
+    SLOT_1_AXIS_tdest : in STD_LOGIC_VECTOR ( 0 to 0 );
+    SLOT_1_AXIS_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    SLOT_1_AXIS_tstrb : in STD_LOGIC_VECTOR ( 2 downto 0 );
     SLOT_1_AXIS_tkeep : in STD_LOGIC_VECTOR ( 2 downto 0 );
     SLOT_1_AXIS_tlast : in STD_LOGIC;
-    SLOT_1_AXIS_tready : in STD_LOGIC;
-    SLOT_1_AXIS_tstrb : in STD_LOGIC_VECTOR ( 2 downto 0 );
     SLOT_1_AXIS_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
     SLOT_1_AXIS_tvalid : in STD_LOGIC;
+    SLOT_1_AXIS_tready : in STD_LOGIC;
     SLOT_2_AXIS_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
     SLOT_2_AXIS_tlast : in STD_LOGIC;
-    SLOT_2_AXIS_tready : in STD_LOGIC;
     SLOT_2_AXIS_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
-    SLOT_2_AXIS_tvalid : in STD_LOGIC
+    SLOT_2_AXIS_tvalid : in STD_LOGIC;
+    SLOT_2_AXIS_tready : in STD_LOGIC
   );
   end component bd_5084;
 begin

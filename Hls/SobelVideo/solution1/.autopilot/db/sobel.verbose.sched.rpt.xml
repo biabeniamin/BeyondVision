@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'sobel'" level="0">
-<item name = "Date">Fri Dec 14 10:28:26 2018
+<item name = "Date">Fri Dec 14 12:00:29 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">SobelVideo</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 7.816, 1.25</column>
+<column name="ap_clk">10.00, 11.000, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">5, 2081164, 4, 2081164, dataflow</column>
+<column name="">2077930, 2081164, 2077922, 2081164, dataflow</column>
 </table>
 </item>
 <item name = "Detail">

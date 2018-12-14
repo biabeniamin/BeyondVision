@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Dec 14 11:09:52 2018" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Dec 14 12:03:48 2018" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:nexys_video:part0:1.1" DEVICE="7a200t" NAME="bd_5084" PACKAGE="sbg484" SPEEDGRADE="-1"/>
 
@@ -32,23 +32,23 @@
     </PORT>
     <PORT DIR="I" LEFT="23" NAME="SLOT_0_AXIS_tdata" RIGHT="0" SIGIS="undef"/>
     <PORT DIR="I" NAME="SLOT_0_AXIS_tlast" SIGIS="undef"/>
-    <PORT DIR="I" NAME="SLOT_0_AXIS_tready" SIGIS="undef"/>
     <PORT DIR="I" LEFT="0" NAME="SLOT_0_AXIS_tuser" RIGHT="0" SIGIS="undef"/>
     <PORT DIR="I" NAME="SLOT_0_AXIS_tvalid" SIGIS="undef"/>
-    <PORT DIR="I" LEFT="23" NAME="SLOT_1_AXIS_tdata" RIGHT="0" SIGIS="undef"/>
-    <PORT DIR="I" LEFT="0" NAME="SLOT_1_AXIS_tdest" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" NAME="SLOT_0_AXIS_tready" SIGIS="undef"/>
     <PORT DIR="I" LEFT="0" NAME="SLOT_1_AXIS_tid" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="0" NAME="SLOT_1_AXIS_tdest" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="23" NAME="SLOT_1_AXIS_tdata" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="2" NAME="SLOT_1_AXIS_tstrb" RIGHT="0" SIGIS="undef"/>
     <PORT DIR="I" LEFT="2" NAME="SLOT_1_AXIS_tkeep" RIGHT="0" SIGIS="undef"/>
     <PORT DIR="I" NAME="SLOT_1_AXIS_tlast" SIGIS="undef"/>
-    <PORT DIR="I" NAME="SLOT_1_AXIS_tready" SIGIS="undef"/>
-    <PORT DIR="I" LEFT="2" NAME="SLOT_1_AXIS_tstrb" RIGHT="0" SIGIS="undef"/>
     <PORT DIR="I" LEFT="0" NAME="SLOT_1_AXIS_tuser" RIGHT="0" SIGIS="undef"/>
     <PORT DIR="I" NAME="SLOT_1_AXIS_tvalid" SIGIS="undef"/>
+    <PORT DIR="I" NAME="SLOT_1_AXIS_tready" SIGIS="undef"/>
     <PORT DIR="I" LEFT="23" NAME="SLOT_2_AXIS_tdata" RIGHT="0" SIGIS="undef"/>
     <PORT DIR="I" NAME="SLOT_2_AXIS_tlast" SIGIS="undef"/>
-    <PORT DIR="I" NAME="SLOT_2_AXIS_tready" SIGIS="undef"/>
     <PORT DIR="I" LEFT="0" NAME="SLOT_2_AXIS_tuser" RIGHT="0" SIGIS="undef"/>
     <PORT DIR="I" NAME="SLOT_2_AXIS_tvalid" SIGIS="undef"/>
+    <PORT DIR="I" NAME="SLOT_2_AXIS_tready" SIGIS="undef"/>
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES>
@@ -68,9 +68,9 @@
       <PORTMAPS>
         <PORTMAP LOGICAL="TDATA" PHYSICAL="SLOT_0_AXIS_tdata"/>
         <PORTMAP LOGICAL="TLAST" PHYSICAL="SLOT_0_AXIS_tlast"/>
-        <PORTMAP LOGICAL="TREADY" PHYSICAL="SLOT_0_AXIS_tready"/>
         <PORTMAP LOGICAL="TUSER" PHYSICAL="SLOT_0_AXIS_tuser"/>
         <PORTMAP LOGICAL="TVALID" PHYSICAL="SLOT_0_AXIS_tvalid"/>
+        <PORTMAP LOGICAL="TREADY" PHYSICAL="SLOT_0_AXIS_tready"/>
       </PORTMAPS>
     </BUSINTERFACE>
     <BUSINTERFACE BUSNAME="g_inst_slot_1_axis" NAME="SLOT_1_AXIS" TYPE="TARGET">
@@ -87,15 +87,15 @@
       <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_mig_7series_0_0_ui_clk"/>
       <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}"/>
       <PORTMAPS>
-        <PORTMAP LOGICAL="TDATA" PHYSICAL="SLOT_1_AXIS_tdata"/>
-        <PORTMAP LOGICAL="TDEST" PHYSICAL="SLOT_1_AXIS_tdest"/>
         <PORTMAP LOGICAL="TID" PHYSICAL="SLOT_1_AXIS_tid"/>
+        <PORTMAP LOGICAL="TDEST" PHYSICAL="SLOT_1_AXIS_tdest"/>
+        <PORTMAP LOGICAL="TDATA" PHYSICAL="SLOT_1_AXIS_tdata"/>
+        <PORTMAP LOGICAL="TSTRB" PHYSICAL="SLOT_1_AXIS_tstrb"/>
         <PORTMAP LOGICAL="TKEEP" PHYSICAL="SLOT_1_AXIS_tkeep"/>
         <PORTMAP LOGICAL="TLAST" PHYSICAL="SLOT_1_AXIS_tlast"/>
-        <PORTMAP LOGICAL="TREADY" PHYSICAL="SLOT_1_AXIS_tready"/>
-        <PORTMAP LOGICAL="TSTRB" PHYSICAL="SLOT_1_AXIS_tstrb"/>
         <PORTMAP LOGICAL="TUSER" PHYSICAL="SLOT_1_AXIS_tuser"/>
         <PORTMAP LOGICAL="TVALID" PHYSICAL="SLOT_1_AXIS_tvalid"/>
+        <PORTMAP LOGICAL="TREADY" PHYSICAL="SLOT_1_AXIS_tready"/>
       </PORTMAPS>
     </BUSINTERFACE>
     <BUSINTERFACE BUSNAME="g_inst_slot_2_axis" NAME="SLOT_2_AXIS" TYPE="TARGET">
@@ -114,9 +114,9 @@
       <PORTMAPS>
         <PORTMAP LOGICAL="TDATA" PHYSICAL="SLOT_2_AXIS_tdata"/>
         <PORTMAP LOGICAL="TLAST" PHYSICAL="SLOT_2_AXIS_tlast"/>
-        <PORTMAP LOGICAL="TREADY" PHYSICAL="SLOT_2_AXIS_tready"/>
         <PORTMAP LOGICAL="TUSER" PHYSICAL="SLOT_2_AXIS_tuser"/>
         <PORTMAP LOGICAL="TVALID" PHYSICAL="SLOT_2_AXIS_tvalid"/>
+        <PORTMAP LOGICAL="TREADY" PHYSICAL="SLOT_2_AXIS_tready"/>
       </PORTMAPS>
     </BUSINTERFACE>
   </EXTERNALINTERFACES>

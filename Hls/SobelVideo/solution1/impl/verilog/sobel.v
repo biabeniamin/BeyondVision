@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="sobel,hls_ip_2018_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7a200tsbg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=7.816000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=663,HLS_SYN_LUT=1207,HLS_VERSION=2018_2}" *)
+(* CORE_GENERATION_INFO="sobel,hls_ip_2018_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7a200tsbg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=11.000000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=0,HLS_SYN_DSP=3,HLS_SYN_FF=816,HLS_SYN_LUT=1687,HLS_VERSION=2018_2}" *)
 
 module sobel (
         INPUT_STREAM_TDATA,
@@ -92,13 +92,45 @@ wire   [11:0] AXIvideo2Mat_U0_img_rows_V_out_din;
 wire    AXIvideo2Mat_U0_img_rows_V_out_write;
 wire   [11:0] AXIvideo2Mat_U0_img_cols_V_out_din;
 wire    AXIvideo2Mat_U0_img_cols_V_out_write;
+wire    CvtColor_1_U0_ap_start;
+wire    CvtColor_1_U0_ap_done;
+wire    CvtColor_1_U0_ap_continue;
+wire    CvtColor_1_U0_ap_idle;
+wire    CvtColor_1_U0_ap_ready;
+wire    CvtColor_1_U0_start_out;
+wire    CvtColor_1_U0_start_write;
+wire    CvtColor_1_U0_p_src_rows_V_read;
+wire    CvtColor_1_U0_p_src_cols_V_read;
+wire    CvtColor_1_U0_p_src_data_stream_0_V_read;
+wire    CvtColor_1_U0_p_src_data_stream_1_V_read;
+wire    CvtColor_1_U0_p_src_data_stream_2_V_read;
+wire   [7:0] CvtColor_1_U0_p_dst_data_stream_0_V_din;
+wire    CvtColor_1_U0_p_dst_data_stream_0_V_write;
+wire   [7:0] CvtColor_1_U0_p_dst_data_stream_1_V_din;
+wire    CvtColor_1_U0_p_dst_data_stream_1_V_write;
+wire   [7:0] CvtColor_1_U0_p_dst_data_stream_2_V_din;
+wire    CvtColor_1_U0_p_dst_data_stream_2_V_write;
+wire    CvtColor_U0_ap_start;
+wire    CvtColor_U0_ap_done;
+wire    CvtColor_U0_ap_continue;
+wire    CvtColor_U0_ap_idle;
+wire    CvtColor_U0_ap_ready;
+wire    CvtColor_U0_start_out;
+wire    CvtColor_U0_start_write;
+wire    CvtColor_U0_p_src_data_stream_0_V_read;
+wire    CvtColor_U0_p_src_data_stream_1_V_read;
+wire    CvtColor_U0_p_src_data_stream_2_V_read;
+wire   [7:0] CvtColor_U0_p_dst_data_stream_0_V_din;
+wire    CvtColor_U0_p_dst_data_stream_0_V_write;
+wire   [7:0] CvtColor_U0_p_dst_data_stream_1_V_din;
+wire    CvtColor_U0_p_dst_data_stream_1_V_write;
+wire   [7:0] CvtColor_U0_p_dst_data_stream_2_V_din;
+wire    CvtColor_U0_p_dst_data_stream_2_V_write;
 wire    Mat2AXIvideo_U0_ap_start;
 wire    Mat2AXIvideo_U0_ap_done;
 wire    Mat2AXIvideo_U0_ap_continue;
 wire    Mat2AXIvideo_U0_ap_idle;
 wire    Mat2AXIvideo_U0_ap_ready;
-wire    Mat2AXIvideo_U0_img_rows_V_read;
-wire    Mat2AXIvideo_U0_img_cols_V_read;
 wire    Mat2AXIvideo_U0_img_data_stream_0_V_read;
 wire    Mat2AXIvideo_U0_img_data_stream_1_V_read;
 wire    Mat2AXIvideo_U0_img_data_stream_2_V_read;
@@ -126,16 +158,42 @@ wire    img_0_data_stream_1_empty_n;
 wire    img_0_data_stream_2_full_n;
 wire   [7:0] img_0_data_stream_2_dout;
 wire    img_0_data_stream_2_empty_n;
-wire    img_0_rows_V_c4_full_n;
-wire   [11:0] img_0_rows_V_c4_dout;
-wire    img_0_rows_V_c4_empty_n;
-wire    img_0_cols_V_c5_full_n;
-wire   [11:0] img_0_cols_V_c5_dout;
-wire    img_0_cols_V_c5_empty_n;
+wire    img_0_rows_V_c8_full_n;
+wire   [11:0] img_0_rows_V_c8_dout;
+wire    img_0_rows_V_c8_empty_n;
+wire    img_0_cols_V_c9_full_n;
+wire   [11:0] img_0_cols_V_c9_dout;
+wire    img_0_cols_V_c9_empty_n;
+wire    img_1_data_stream_0_full_n;
+wire   [7:0] img_1_data_stream_0_dout;
+wire    img_1_data_stream_0_empty_n;
+wire    img_1_data_stream_1_full_n;
+wire   [7:0] img_1_data_stream_1_dout;
+wire    img_1_data_stream_1_empty_n;
+wire    img_1_data_stream_2_full_n;
+wire   [7:0] img_1_data_stream_2_dout;
+wire    img_1_data_stream_2_empty_n;
+wire    img_2_data_stream_0_full_n;
+wire   [7:0] img_2_data_stream_0_dout;
+wire    img_2_data_stream_0_empty_n;
+wire    img_2_data_stream_1_full_n;
+wire   [7:0] img_2_data_stream_1_dout;
+wire    img_2_data_stream_1_empty_n;
+wire    img_2_data_stream_2_full_n;
+wire   [7:0] img_2_data_stream_2_dout;
+wire    img_2_data_stream_2_empty_n;
 wire    ap_sync_done;
 wire    ap_sync_ready;
 wire    Block_proc_U0_start_full_n;
 wire    Block_proc_U0_start_write;
+wire   [0:0] start_for_CvtColor_1_U0_din;
+wire    start_for_CvtColor_1_U0_full_n;
+wire   [0:0] start_for_CvtColor_1_U0_dout;
+wire    start_for_CvtColor_1_U0_empty_n;
+wire   [0:0] start_for_CvtColor_U0_din;
+wire    start_for_CvtColor_U0_full_n;
+wire   [0:0] start_for_CvtColor_U0_dout;
+wire    start_for_CvtColor_U0_empty_n;
 wire   [0:0] start_for_Mat2AXIvideo_U0_din;
 wire    start_for_Mat2AXIvideo_U0_full_n;
 wire   [0:0] start_for_Mat2AXIvideo_U0_dout;
@@ -163,7 +221,7 @@ AXIvideo2Mat AXIvideo2Mat_U0(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
     .ap_start(AXIvideo2Mat_U0_ap_start),
-    .start_full_n(start_for_Mat2AXIvideo_U0_full_n),
+    .start_full_n(start_for_CvtColor_1_U0_full_n),
     .ap_done(AXIvideo2Mat_U0_ap_done),
     .ap_continue(AXIvideo2Mat_U0_ap_continue),
     .ap_idle(AXIvideo2Mat_U0_ap_idle),
@@ -195,11 +253,79 @@ AXIvideo2Mat AXIvideo2Mat_U0(
     .img_data_stream_2_V_full_n(img_0_data_stream_2_full_n),
     .img_data_stream_2_V_write(AXIvideo2Mat_U0_img_data_stream_2_V_write),
     .img_rows_V_out_din(AXIvideo2Mat_U0_img_rows_V_out_din),
-    .img_rows_V_out_full_n(img_0_rows_V_c4_full_n),
+    .img_rows_V_out_full_n(img_0_rows_V_c8_full_n),
     .img_rows_V_out_write(AXIvideo2Mat_U0_img_rows_V_out_write),
     .img_cols_V_out_din(AXIvideo2Mat_U0_img_cols_V_out_din),
-    .img_cols_V_out_full_n(img_0_cols_V_c5_full_n),
+    .img_cols_V_out_full_n(img_0_cols_V_c9_full_n),
     .img_cols_V_out_write(AXIvideo2Mat_U0_img_cols_V_out_write)
+);
+
+CvtColor_1 CvtColor_1_U0(
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst_n_inv),
+    .ap_start(CvtColor_1_U0_ap_start),
+    .start_full_n(start_for_CvtColor_U0_full_n),
+    .ap_done(CvtColor_1_U0_ap_done),
+    .ap_continue(CvtColor_1_U0_ap_continue),
+    .ap_idle(CvtColor_1_U0_ap_idle),
+    .ap_ready(CvtColor_1_U0_ap_ready),
+    .start_out(CvtColor_1_U0_start_out),
+    .start_write(CvtColor_1_U0_start_write),
+    .p_src_rows_V_dout(img_0_rows_V_c8_dout),
+    .p_src_rows_V_empty_n(img_0_rows_V_c8_empty_n),
+    .p_src_rows_V_read(CvtColor_1_U0_p_src_rows_V_read),
+    .p_src_cols_V_dout(img_0_cols_V_c9_dout),
+    .p_src_cols_V_empty_n(img_0_cols_V_c9_empty_n),
+    .p_src_cols_V_read(CvtColor_1_U0_p_src_cols_V_read),
+    .p_src_data_stream_0_V_dout(img_0_data_stream_0_dout),
+    .p_src_data_stream_0_V_empty_n(img_0_data_stream_0_empty_n),
+    .p_src_data_stream_0_V_read(CvtColor_1_U0_p_src_data_stream_0_V_read),
+    .p_src_data_stream_1_V_dout(img_0_data_stream_1_dout),
+    .p_src_data_stream_1_V_empty_n(img_0_data_stream_1_empty_n),
+    .p_src_data_stream_1_V_read(CvtColor_1_U0_p_src_data_stream_1_V_read),
+    .p_src_data_stream_2_V_dout(img_0_data_stream_2_dout),
+    .p_src_data_stream_2_V_empty_n(img_0_data_stream_2_empty_n),
+    .p_src_data_stream_2_V_read(CvtColor_1_U0_p_src_data_stream_2_V_read),
+    .p_dst_data_stream_0_V_din(CvtColor_1_U0_p_dst_data_stream_0_V_din),
+    .p_dst_data_stream_0_V_full_n(img_1_data_stream_0_full_n),
+    .p_dst_data_stream_0_V_write(CvtColor_1_U0_p_dst_data_stream_0_V_write),
+    .p_dst_data_stream_1_V_din(CvtColor_1_U0_p_dst_data_stream_1_V_din),
+    .p_dst_data_stream_1_V_full_n(img_1_data_stream_1_full_n),
+    .p_dst_data_stream_1_V_write(CvtColor_1_U0_p_dst_data_stream_1_V_write),
+    .p_dst_data_stream_2_V_din(CvtColor_1_U0_p_dst_data_stream_2_V_din),
+    .p_dst_data_stream_2_V_full_n(img_1_data_stream_2_full_n),
+    .p_dst_data_stream_2_V_write(CvtColor_1_U0_p_dst_data_stream_2_V_write)
+);
+
+CvtColor CvtColor_U0(
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst_n_inv),
+    .ap_start(CvtColor_U0_ap_start),
+    .start_full_n(start_for_Mat2AXIvideo_U0_full_n),
+    .ap_done(CvtColor_U0_ap_done),
+    .ap_continue(CvtColor_U0_ap_continue),
+    .ap_idle(CvtColor_U0_ap_idle),
+    .ap_ready(CvtColor_U0_ap_ready),
+    .start_out(CvtColor_U0_start_out),
+    .start_write(CvtColor_U0_start_write),
+    .p_src_data_stream_0_V_dout(img_1_data_stream_0_dout),
+    .p_src_data_stream_0_V_empty_n(img_1_data_stream_0_empty_n),
+    .p_src_data_stream_0_V_read(CvtColor_U0_p_src_data_stream_0_V_read),
+    .p_src_data_stream_1_V_dout(img_1_data_stream_1_dout),
+    .p_src_data_stream_1_V_empty_n(img_1_data_stream_1_empty_n),
+    .p_src_data_stream_1_V_read(CvtColor_U0_p_src_data_stream_1_V_read),
+    .p_src_data_stream_2_V_dout(img_1_data_stream_2_dout),
+    .p_src_data_stream_2_V_empty_n(img_1_data_stream_2_empty_n),
+    .p_src_data_stream_2_V_read(CvtColor_U0_p_src_data_stream_2_V_read),
+    .p_dst_data_stream_0_V_din(CvtColor_U0_p_dst_data_stream_0_V_din),
+    .p_dst_data_stream_0_V_full_n(img_2_data_stream_0_full_n),
+    .p_dst_data_stream_0_V_write(CvtColor_U0_p_dst_data_stream_0_V_write),
+    .p_dst_data_stream_1_V_din(CvtColor_U0_p_dst_data_stream_1_V_din),
+    .p_dst_data_stream_1_V_full_n(img_2_data_stream_1_full_n),
+    .p_dst_data_stream_1_V_write(CvtColor_U0_p_dst_data_stream_1_V_write),
+    .p_dst_data_stream_2_V_din(CvtColor_U0_p_dst_data_stream_2_V_din),
+    .p_dst_data_stream_2_V_full_n(img_2_data_stream_2_full_n),
+    .p_dst_data_stream_2_V_write(CvtColor_U0_p_dst_data_stream_2_V_write)
 );
 
 Mat2AXIvideo Mat2AXIvideo_U0(
@@ -210,20 +336,14 @@ Mat2AXIvideo Mat2AXIvideo_U0(
     .ap_continue(Mat2AXIvideo_U0_ap_continue),
     .ap_idle(Mat2AXIvideo_U0_ap_idle),
     .ap_ready(Mat2AXIvideo_U0_ap_ready),
-    .img_rows_V_dout(img_0_rows_V_c4_dout),
-    .img_rows_V_empty_n(img_0_rows_V_c4_empty_n),
-    .img_rows_V_read(Mat2AXIvideo_U0_img_rows_V_read),
-    .img_cols_V_dout(img_0_cols_V_c5_dout),
-    .img_cols_V_empty_n(img_0_cols_V_c5_empty_n),
-    .img_cols_V_read(Mat2AXIvideo_U0_img_cols_V_read),
-    .img_data_stream_0_V_dout(img_0_data_stream_0_dout),
-    .img_data_stream_0_V_empty_n(img_0_data_stream_0_empty_n),
+    .img_data_stream_0_V_dout(img_2_data_stream_0_dout),
+    .img_data_stream_0_V_empty_n(img_2_data_stream_0_empty_n),
     .img_data_stream_0_V_read(Mat2AXIvideo_U0_img_data_stream_0_V_read),
-    .img_data_stream_1_V_dout(img_0_data_stream_1_dout),
-    .img_data_stream_1_V_empty_n(img_0_data_stream_1_empty_n),
+    .img_data_stream_1_V_dout(img_2_data_stream_1_dout),
+    .img_data_stream_1_V_empty_n(img_2_data_stream_1_empty_n),
     .img_data_stream_1_V_read(Mat2AXIvideo_U0_img_data_stream_1_V_read),
-    .img_data_stream_2_V_dout(img_0_data_stream_2_dout),
-    .img_data_stream_2_V_empty_n(img_0_data_stream_2_empty_n),
+    .img_data_stream_2_V_dout(img_2_data_stream_2_dout),
+    .img_data_stream_2_V_empty_n(img_2_data_stream_2_empty_n),
     .img_data_stream_2_V_read(Mat2AXIvideo_U0_img_data_stream_2_V_read),
     .OUTPUT_STREAM_TDATA(Mat2AXIvideo_U0_OUTPUT_STREAM_TDATA),
     .OUTPUT_STREAM_TVALID(Mat2AXIvideo_U0_OUTPUT_STREAM_TVALID),
@@ -272,7 +392,7 @@ fifo_w8_d2_A img_0_data_stream_0_U(
     .if_write(AXIvideo2Mat_U0_img_data_stream_0_V_write),
     .if_dout(img_0_data_stream_0_dout),
     .if_empty_n(img_0_data_stream_0_empty_n),
-    .if_read(Mat2AXIvideo_U0_img_data_stream_0_V_read)
+    .if_read(CvtColor_1_U0_p_src_data_stream_0_V_read)
 );
 
 fifo_w8_d2_A img_0_data_stream_1_U(
@@ -285,7 +405,7 @@ fifo_w8_d2_A img_0_data_stream_1_U(
     .if_write(AXIvideo2Mat_U0_img_data_stream_1_V_write),
     .if_dout(img_0_data_stream_1_dout),
     .if_empty_n(img_0_data_stream_1_empty_n),
-    .if_read(Mat2AXIvideo_U0_img_data_stream_1_V_read)
+    .if_read(CvtColor_1_U0_p_src_data_stream_1_V_read)
 );
 
 fifo_w8_d2_A img_0_data_stream_2_U(
@@ -298,43 +418,147 @@ fifo_w8_d2_A img_0_data_stream_2_U(
     .if_write(AXIvideo2Mat_U0_img_data_stream_2_V_write),
     .if_dout(img_0_data_stream_2_dout),
     .if_empty_n(img_0_data_stream_2_empty_n),
-    .if_read(Mat2AXIvideo_U0_img_data_stream_2_V_read)
+    .if_read(CvtColor_1_U0_p_src_data_stream_2_V_read)
 );
 
-fifo_w12_d2_A img_0_rows_V_c4_U(
+fifo_w12_d2_A img_0_rows_V_c8_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
     .if_din(AXIvideo2Mat_U0_img_rows_V_out_din),
-    .if_full_n(img_0_rows_V_c4_full_n),
+    .if_full_n(img_0_rows_V_c8_full_n),
     .if_write(AXIvideo2Mat_U0_img_rows_V_out_write),
-    .if_dout(img_0_rows_V_c4_dout),
-    .if_empty_n(img_0_rows_V_c4_empty_n),
-    .if_read(Mat2AXIvideo_U0_img_rows_V_read)
+    .if_dout(img_0_rows_V_c8_dout),
+    .if_empty_n(img_0_rows_V_c8_empty_n),
+    .if_read(CvtColor_1_U0_p_src_rows_V_read)
 );
 
-fifo_w12_d2_A img_0_cols_V_c5_U(
+fifo_w12_d2_A img_0_cols_V_c9_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
     .if_din(AXIvideo2Mat_U0_img_cols_V_out_din),
-    .if_full_n(img_0_cols_V_c5_full_n),
+    .if_full_n(img_0_cols_V_c9_full_n),
     .if_write(AXIvideo2Mat_U0_img_cols_V_out_write),
-    .if_dout(img_0_cols_V_c5_dout),
-    .if_empty_n(img_0_cols_V_c5_empty_n),
-    .if_read(Mat2AXIvideo_U0_img_cols_V_read)
+    .if_dout(img_0_cols_V_c9_dout),
+    .if_empty_n(img_0_cols_V_c9_empty_n),
+    .if_read(CvtColor_1_U0_p_src_cols_V_read)
 );
 
-start_for_Mat2AXIbkb start_for_Mat2AXIbkb_U(
+fifo_w8_d2_A img_1_data_stream_0_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .if_read_ce(1'b1),
+    .if_write_ce(1'b1),
+    .if_din(CvtColor_1_U0_p_dst_data_stream_0_V_din),
+    .if_full_n(img_1_data_stream_0_full_n),
+    .if_write(CvtColor_1_U0_p_dst_data_stream_0_V_write),
+    .if_dout(img_1_data_stream_0_dout),
+    .if_empty_n(img_1_data_stream_0_empty_n),
+    .if_read(CvtColor_U0_p_src_data_stream_0_V_read)
+);
+
+fifo_w8_d2_A img_1_data_stream_1_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .if_read_ce(1'b1),
+    .if_write_ce(1'b1),
+    .if_din(CvtColor_1_U0_p_dst_data_stream_1_V_din),
+    .if_full_n(img_1_data_stream_1_full_n),
+    .if_write(CvtColor_1_U0_p_dst_data_stream_1_V_write),
+    .if_dout(img_1_data_stream_1_dout),
+    .if_empty_n(img_1_data_stream_1_empty_n),
+    .if_read(CvtColor_U0_p_src_data_stream_1_V_read)
+);
+
+fifo_w8_d2_A img_1_data_stream_2_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .if_read_ce(1'b1),
+    .if_write_ce(1'b1),
+    .if_din(CvtColor_1_U0_p_dst_data_stream_2_V_din),
+    .if_full_n(img_1_data_stream_2_full_n),
+    .if_write(CvtColor_1_U0_p_dst_data_stream_2_V_write),
+    .if_dout(img_1_data_stream_2_dout),
+    .if_empty_n(img_1_data_stream_2_empty_n),
+    .if_read(CvtColor_U0_p_src_data_stream_2_V_read)
+);
+
+fifo_w8_d2_A img_2_data_stream_0_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .if_read_ce(1'b1),
+    .if_write_ce(1'b1),
+    .if_din(CvtColor_U0_p_dst_data_stream_0_V_din),
+    .if_full_n(img_2_data_stream_0_full_n),
+    .if_write(CvtColor_U0_p_dst_data_stream_0_V_write),
+    .if_dout(img_2_data_stream_0_dout),
+    .if_empty_n(img_2_data_stream_0_empty_n),
+    .if_read(Mat2AXIvideo_U0_img_data_stream_0_V_read)
+);
+
+fifo_w8_d2_A img_2_data_stream_1_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .if_read_ce(1'b1),
+    .if_write_ce(1'b1),
+    .if_din(CvtColor_U0_p_dst_data_stream_1_V_din),
+    .if_full_n(img_2_data_stream_1_full_n),
+    .if_write(CvtColor_U0_p_dst_data_stream_1_V_write),
+    .if_dout(img_2_data_stream_1_dout),
+    .if_empty_n(img_2_data_stream_1_empty_n),
+    .if_read(Mat2AXIvideo_U0_img_data_stream_1_V_read)
+);
+
+fifo_w8_d2_A img_2_data_stream_2_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .if_read_ce(1'b1),
+    .if_write_ce(1'b1),
+    .if_din(CvtColor_U0_p_dst_data_stream_2_V_din),
+    .if_full_n(img_2_data_stream_2_full_n),
+    .if_write(CvtColor_U0_p_dst_data_stream_2_V_write),
+    .if_dout(img_2_data_stream_2_dout),
+    .if_empty_n(img_2_data_stream_2_empty_n),
+    .if_read(Mat2AXIvideo_U0_img_data_stream_2_V_read)
+);
+
+start_for_CvtColoeOg start_for_CvtColoeOg_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .if_read_ce(1'b1),
+    .if_write_ce(1'b1),
+    .if_din(start_for_CvtColor_1_U0_din),
+    .if_full_n(start_for_CvtColor_1_U0_full_n),
+    .if_write(AXIvideo2Mat_U0_start_write),
+    .if_dout(start_for_CvtColor_1_U0_dout),
+    .if_empty_n(start_for_CvtColor_1_U0_empty_n),
+    .if_read(CvtColor_1_U0_ap_ready)
+);
+
+start_for_CvtColofYi start_for_CvtColofYi_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .if_read_ce(1'b1),
+    .if_write_ce(1'b1),
+    .if_din(start_for_CvtColor_U0_din),
+    .if_full_n(start_for_CvtColor_U0_full_n),
+    .if_write(CvtColor_1_U0_start_write),
+    .if_dout(start_for_CvtColor_U0_dout),
+    .if_empty_n(start_for_CvtColor_U0_empty_n),
+    .if_read(CvtColor_U0_ap_ready)
+);
+
+start_for_Mat2AXIg8j start_for_Mat2AXIg8j_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
     .if_din(start_for_Mat2AXIvideo_U0_din),
     .if_full_n(start_for_Mat2AXIvideo_U0_full_n),
-    .if_write(AXIvideo2Mat_U0_start_write),
+    .if_write(CvtColor_U0_start_write),
     .if_dout(start_for_Mat2AXIvideo_U0_dout),
     .if_empty_n(start_for_Mat2AXIvideo_U0_empty_n),
     .if_read(Mat2AXIvideo_U0_ap_ready)
@@ -351,6 +575,14 @@ assign Block_proc_U0_ap_start = ap_start;
 assign Block_proc_U0_start_full_n = 1'b1;
 
 assign Block_proc_U0_start_write = 1'b0;
+
+assign CvtColor_1_U0_ap_continue = 1'b1;
+
+assign CvtColor_1_U0_ap_start = start_for_CvtColor_1_U0_empty_n;
+
+assign CvtColor_U0_ap_continue = 1'b1;
+
+assign CvtColor_U0_ap_start = start_for_CvtColor_U0_empty_n;
 
 assign INPUT_STREAM_TREADY = AXIvideo2Mat_U0_INPUT_STREAM_TREADY;
 
@@ -380,7 +612,7 @@ assign OUTPUT_STREAM_TVALID = Mat2AXIvideo_U0_OUTPUT_STREAM_TVALID;
 
 assign ap_done = Mat2AXIvideo_U0_ap_done;
 
-assign ap_idle = (Mat2AXIvideo_U0_ap_idle & Block_proc_U0_ap_idle & AXIvideo2Mat_U0_ap_idle);
+assign ap_idle = (Mat2AXIvideo_U0_ap_idle & CvtColor_U0_ap_idle & CvtColor_1_U0_ap_idle & Block_proc_U0_ap_idle & AXIvideo2Mat_U0_ap_idle);
 
 assign ap_ready = AXIvideo2Mat_U0_ap_ready;
 
@@ -393,6 +625,10 @@ assign ap_sync_continue = 1'b1;
 assign ap_sync_done = Mat2AXIvideo_U0_ap_done;
 
 assign ap_sync_ready = AXIvideo2Mat_U0_ap_ready;
+
+assign start_for_CvtColor_1_U0_din = 1'b1;
+
+assign start_for_CvtColor_U0_din = 1'b1;
 
 assign start_for_Mat2AXIvideo_U0_din = 1'b1;
 

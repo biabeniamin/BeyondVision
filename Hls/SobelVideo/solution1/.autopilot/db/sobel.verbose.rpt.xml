@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'sobel'" level="0">
-<item name = "Date">Fri Dec 14 10:28:27 2018
+<item name = "Date">Fri Dec 14 12:00:30 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">SobelVideo</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 7.816, 1.25</column>
+<column name="ap_clk">10.00, 11.000, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">5, 2081164, 4, 2081164, dataflow</column>
+<column name="">2077930, 2081164, 2077922, 2081164, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
@@ -32,7 +32,9 @@
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
 <column name="AXIvideo2Mat_U0">AXIvideo2Mat, 3, 2081163, 3, 2081163, none</column>
-<column name="Mat2AXIvideo_U0">Mat2AXIvideo, 1, 2077921, 1, 2077921, none</column>
+<column name="CvtColor_1_U0">CvtColor_1, 1, 2080081, 1, 2080081, none</column>
+<column name="Mat2AXIvideo_U0">Mat2AXIvideo, 2077921, 2077921, 2077921, 2077921, none</column>
+<column name="CvtColor_U0">CvtColor, 2076841, 2076841, 2076841, 2076841, none</column>
 <column name="Block_proc_U0">Block_proc, 0, 0, 0, 0, none</column>
 </table>
 </item>
@@ -51,13 +53,13 @@
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="DSP">-, -, -, -</column>
 <column name="Expression">-, -, 0, 2</column>
-<column name="FIFO">0, -, 35, 142</column>
-<column name="Instance">-, -, 628, 1063</column>
+<column name="FIFO">0, -, 65, 250</column>
+<column name="Instance">0, 3, 751, 1435</column>
 <column name="Memory">-, -, -, -</column>
 <column name="Multiplexer">-, -, -, -</column>
 <column name="Register">-, -, -, -</column>
 <specialColumn name="Available">730, 740, 269200, 129000</specialColumn>
-<specialColumn name="Utilization (%)">0, 0, ~0, ~0</specialColumn>
+<specialColumn name="Utilization (%)">0, ~0, ~0, 1</specialColumn>
 </table>
 </item>
 <item name = "Detail">
@@ -66,7 +68,9 @@
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="AXIvideo2Mat_U0">AXIvideo2Mat, 0, 0, 345, 547</column>
 <column name="Block_proc_U0">Block_proc, 0, 0, 2, 29</column>
-<column name="Mat2AXIvideo_U0">Mat2AXIvideo, 0, 0, 281, 487</column>
+<column name="CvtColor_U0">CvtColor, 0, 0, 42, 204</column>
+<column name="CvtColor_1_U0">CvtColor_1, 0, 3, 241, 286</column>
+<column name="Mat2AXIvideo_U0">Mat2AXIvideo, 0, 0, 121, 369</column>
 </table>
 </item>
 <item name = "DSP48"><table name="" hasTotal="0">
@@ -79,13 +83,19 @@
 </item>
 <item name = "FIFO"><table name="" hasTotal="1">
 <keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
-<column name="img_0_cols_V_c5_U">0, 5, 22, 2, 12, 24</column>
+<column name="img_0_cols_V_c9_U">0, 5, 22, 2, 12, 24</column>
 <column name="img_0_cols_V_c_U">0, 5, 22, 2, 12, 24</column>
 <column name="img_0_data_stream_0_U">0, 5, 18, 2, 8, 16</column>
 <column name="img_0_data_stream_1_U">0, 5, 18, 2, 8, 16</column>
 <column name="img_0_data_stream_2_U">0, 5, 18, 2, 8, 16</column>
-<column name="img_0_rows_V_c4_U">0, 5, 22, 2, 12, 24</column>
+<column name="img_0_rows_V_c8_U">0, 5, 22, 2, 12, 24</column>
 <column name="img_0_rows_V_c_U">0, 5, 22, 2, 12, 24</column>
+<column name="img_1_data_stream_0_U">0, 5, 18, 2, 8, 16</column>
+<column name="img_1_data_stream_1_U">0, 5, 18, 2, 8, 16</column>
+<column name="img_1_data_stream_2_U">0, 5, 18, 2, 8, 16</column>
+<column name="img_2_data_stream_0_U">0, 5, 18, 2, 8, 16</column>
+<column name="img_2_data_stream_1_U">0, 5, 18, 2, 8, 16</column>
+<column name="img_2_data_stream_2_U">0, 5, 18, 2, 8, 16</column>
 </table>
 </item>
 <item name = "Expression"><table name="" hasTotal="1">

@@ -30,6 +30,14 @@
          <obj_property name="ElementShortName">AXIvideo2Mat_U0_activity</obj_property>
          <obj_property name="ObjectShortName">AXIvideo2Mat_U0_activity</obj_property>
       </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_1_U0/CvtColor_1_U0_activity">
+         <obj_property name="ElementShortName">CvtColor_1_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">CvtColor_1_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_U0/CvtColor_U0_activity">
+         <obj_property name="ElementShortName">CvtColor_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">CvtColor_U0_activity</obj_property>
+      </wvobject>
       <wvobject type="protoinst" fp_name="/apatb_sobel_top/AESL_inst_sobel/Mat2AXIvideo_U0/Mat2AXIvideo_U0_activity">
          <obj_property name="ElementShortName">Mat2AXIvideo_U0_activity</obj_property>
          <obj_property name="ObjectShortName">Mat2AXIvideo_U0_activity</obj_property>
@@ -227,7 +235,7 @@
                </wvobject>
             </wvobject>
             <wvobject type="group" fp_name="img_rows_V_out_group">
-               <obj_property name="label">img_rows_V_out(img_0_rows_V_c4_U, FIFO)</obj_property>
+               <obj_property name="label">img_rows_V_out(img_0_rows_V_c8_U, FIFO)</obj_property>
                <obj_property name="DisplayName">label</obj_property>
                <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/AXIvideo2Mat_U0/img_rows_V_out_blk_n">
                   <obj_property name="ElementShortName">img_rows_V_out_blk_n</obj_property>
@@ -245,7 +253,7 @@
                </wvobject>
             </wvobject>
             <wvobject type="group" fp_name="img_cols_V_out_group">
-               <obj_property name="label">img_cols_V_out(img_0_cols_V_c5_U, FIFO)</obj_property>
+               <obj_property name="label">img_cols_V_out(img_0_cols_V_c9_U, FIFO)</obj_property>
                <obj_property name="DisplayName">label</obj_property>
                <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/AXIvideo2Mat_U0/img_cols_V_out_blk_n">
                   <obj_property name="ElementShortName">img_cols_V_out_blk_n</obj_property>
@@ -264,54 +272,346 @@
             </wvobject>
          </wvobject>
       </wvobject>
+      <wvobject type="group" fp_name="CvtColor_1_U0_group">
+         <obj_property name="label">CvtColor_1_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="CvtColor_1_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="p_src_rows_V_group">
+               <obj_property name="label">p_src_rows_V(img_0_rows_V_c8_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_1_U0/p_src_rows_V_blk_n">
+                  <obj_property name="ElementShortName">p_src_rows_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">p_src_rows_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_1_U0/p_src_rows_V_dout">
+                  <obj_property name="ElementShortName">p_src_rows_V_dout[11:0]</obj_property>
+                  <obj_property name="ObjectShortName">p_src_rows_V_dout[11:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_1_U0/p_src_rows_V_empty_n">
+                  <obj_property name="ElementShortName">p_src_rows_V_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">p_src_rows_V_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_1_U0/p_src_rows_V_read">
+                  <obj_property name="ElementShortName">p_src_rows_V_read</obj_property>
+                  <obj_property name="ObjectShortName">p_src_rows_V_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="p_src_cols_V_group">
+               <obj_property name="label">p_src_cols_V(img_0_cols_V_c9_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_1_U0/p_src_cols_V_blk_n">
+                  <obj_property name="ElementShortName">p_src_cols_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">p_src_cols_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_1_U0/p_src_cols_V_dout">
+                  <obj_property name="ElementShortName">p_src_cols_V_dout[11:0]</obj_property>
+                  <obj_property name="ObjectShortName">p_src_cols_V_dout[11:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_1_U0/p_src_cols_V_empty_n">
+                  <obj_property name="ElementShortName">p_src_cols_V_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">p_src_cols_V_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_1_U0/p_src_cols_V_read">
+                  <obj_property name="ElementShortName">p_src_cols_V_read</obj_property>
+                  <obj_property name="ObjectShortName">p_src_cols_V_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="p_src_data_stream_0_V_group">
+               <obj_property name="label">p_src_data_stream_0_V(img_0_data_stream_0_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_1_U0/p_src_data_stream_0_V_blk_n">
+                  <obj_property name="ElementShortName">p_src_data_stream_0_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">p_src_data_stream_0_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_1_U0/p_src_data_stream_0_V_dout">
+                  <obj_property name="ElementShortName">p_src_data_stream_0_V_dout[7:0]</obj_property>
+                  <obj_property name="ObjectShortName">p_src_data_stream_0_V_dout[7:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_1_U0/p_src_data_stream_0_V_empty_n">
+                  <obj_property name="ElementShortName">p_src_data_stream_0_V_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">p_src_data_stream_0_V_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_1_U0/p_src_data_stream_0_V_read">
+                  <obj_property name="ElementShortName">p_src_data_stream_0_V_read</obj_property>
+                  <obj_property name="ObjectShortName">p_src_data_stream_0_V_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="p_src_data_stream_1_V_group">
+               <obj_property name="label">p_src_data_stream_1_V(img_0_data_stream_1_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_1_U0/p_src_data_stream_1_V_blk_n">
+                  <obj_property name="ElementShortName">p_src_data_stream_1_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">p_src_data_stream_1_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_1_U0/p_src_data_stream_1_V_dout">
+                  <obj_property name="ElementShortName">p_src_data_stream_1_V_dout[7:0]</obj_property>
+                  <obj_property name="ObjectShortName">p_src_data_stream_1_V_dout[7:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_1_U0/p_src_data_stream_1_V_empty_n">
+                  <obj_property name="ElementShortName">p_src_data_stream_1_V_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">p_src_data_stream_1_V_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_1_U0/p_src_data_stream_1_V_read">
+                  <obj_property name="ElementShortName">p_src_data_stream_1_V_read</obj_property>
+                  <obj_property name="ObjectShortName">p_src_data_stream_1_V_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="p_src_data_stream_2_V_group">
+               <obj_property name="label">p_src_data_stream_2_V(img_0_data_stream_2_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_1_U0/p_src_data_stream_2_V_blk_n">
+                  <obj_property name="ElementShortName">p_src_data_stream_2_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">p_src_data_stream_2_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_1_U0/p_src_data_stream_2_V_dout">
+                  <obj_property name="ElementShortName">p_src_data_stream_2_V_dout[7:0]</obj_property>
+                  <obj_property name="ObjectShortName">p_src_data_stream_2_V_dout[7:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_1_U0/p_src_data_stream_2_V_empty_n">
+                  <obj_property name="ElementShortName">p_src_data_stream_2_V_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">p_src_data_stream_2_V_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_1_U0/p_src_data_stream_2_V_read">
+                  <obj_property name="ElementShortName">p_src_data_stream_2_V_read</obj_property>
+                  <obj_property name="ObjectShortName">p_src_data_stream_2_V_read</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="CvtColor_1_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_1_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_1_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_1_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_1_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="CvtColor_1_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="p_dst_data_stream_0_V_group">
+               <obj_property name="label">p_dst_data_stream_0_V(img_1_data_stream_0_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_1_U0/p_dst_data_stream_0_V_blk_n">
+                  <obj_property name="ElementShortName">p_dst_data_stream_0_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">p_dst_data_stream_0_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_1_U0/p_dst_data_stream_0_V_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_1_U0/p_dst_data_stream_0_V_full_n">
+                  <obj_property name="ElementShortName">p_dst_data_stream_0_V_full_n</obj_property>
+                  <obj_property name="ObjectShortName">p_dst_data_stream_0_V_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_1_U0/p_dst_data_stream_0_V_write">
+                  <obj_property name="ElementShortName">p_dst_data_stream_0_V_write</obj_property>
+                  <obj_property name="ObjectShortName">p_dst_data_stream_0_V_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="p_dst_data_stream_1_V_group">
+               <obj_property name="label">p_dst_data_stream_1_V(img_1_data_stream_1_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_1_U0/p_dst_data_stream_1_V_blk_n">
+                  <obj_property name="ElementShortName">p_dst_data_stream_1_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">p_dst_data_stream_1_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_1_U0/p_dst_data_stream_1_V_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_1_U0/p_dst_data_stream_1_V_full_n">
+                  <obj_property name="ElementShortName">p_dst_data_stream_1_V_full_n</obj_property>
+                  <obj_property name="ObjectShortName">p_dst_data_stream_1_V_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_1_U0/p_dst_data_stream_1_V_write">
+                  <obj_property name="ElementShortName">p_dst_data_stream_1_V_write</obj_property>
+                  <obj_property name="ObjectShortName">p_dst_data_stream_1_V_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="p_dst_data_stream_2_V_group">
+               <obj_property name="label">p_dst_data_stream_2_V(img_1_data_stream_2_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_1_U0/p_dst_data_stream_2_V_blk_n">
+                  <obj_property name="ElementShortName">p_dst_data_stream_2_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">p_dst_data_stream_2_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_1_U0/p_dst_data_stream_2_V_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_1_U0/p_dst_data_stream_2_V_full_n">
+                  <obj_property name="ElementShortName">p_dst_data_stream_2_V_full_n</obj_property>
+                  <obj_property name="ObjectShortName">p_dst_data_stream_2_V_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_1_U0/p_dst_data_stream_2_V_write">
+                  <obj_property name="ElementShortName">p_dst_data_stream_2_V_write</obj_property>
+                  <obj_property name="ObjectShortName">p_dst_data_stream_2_V_write</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="CvtColor_U0_group">
+         <obj_property name="label">CvtColor_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="CvtColor_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="p_src_data_stream_0_V_group">
+               <obj_property name="label">p_src_data_stream_0_V(img_1_data_stream_0_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_U0/p_src_data_stream_0_V_blk_n">
+                  <obj_property name="ElementShortName">p_src_data_stream_0_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">p_src_data_stream_0_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_U0/p_src_data_stream_0_V_dout">
+                  <obj_property name="ElementShortName">p_src_data_stream_0_V_dout[7:0]</obj_property>
+                  <obj_property name="ObjectShortName">p_src_data_stream_0_V_dout[7:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_U0/p_src_data_stream_0_V_empty_n">
+                  <obj_property name="ElementShortName">p_src_data_stream_0_V_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">p_src_data_stream_0_V_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_U0/p_src_data_stream_0_V_read">
+                  <obj_property name="ElementShortName">p_src_data_stream_0_V_read</obj_property>
+                  <obj_property name="ObjectShortName">p_src_data_stream_0_V_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="p_src_data_stream_1_V_group">
+               <obj_property name="label">p_src_data_stream_1_V(img_1_data_stream_1_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_U0/p_src_data_stream_1_V_blk_n">
+                  <obj_property name="ElementShortName">p_src_data_stream_1_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">p_src_data_stream_1_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_U0/p_src_data_stream_1_V_dout">
+                  <obj_property name="ElementShortName">p_src_data_stream_1_V_dout[7:0]</obj_property>
+                  <obj_property name="ObjectShortName">p_src_data_stream_1_V_dout[7:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_U0/p_src_data_stream_1_V_empty_n">
+                  <obj_property name="ElementShortName">p_src_data_stream_1_V_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">p_src_data_stream_1_V_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_U0/p_src_data_stream_1_V_read">
+                  <obj_property name="ElementShortName">p_src_data_stream_1_V_read</obj_property>
+                  <obj_property name="ObjectShortName">p_src_data_stream_1_V_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="p_src_data_stream_2_V_group">
+               <obj_property name="label">p_src_data_stream_2_V(img_1_data_stream_2_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_U0/p_src_data_stream_2_V_blk_n">
+                  <obj_property name="ElementShortName">p_src_data_stream_2_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">p_src_data_stream_2_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_U0/p_src_data_stream_2_V_dout">
+                  <obj_property name="ElementShortName">p_src_data_stream_2_V_dout[7:0]</obj_property>
+                  <obj_property name="ObjectShortName">p_src_data_stream_2_V_dout[7:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_U0/p_src_data_stream_2_V_empty_n">
+                  <obj_property name="ElementShortName">p_src_data_stream_2_V_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">p_src_data_stream_2_V_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_U0/p_src_data_stream_2_V_read">
+                  <obj_property name="ElementShortName">p_src_data_stream_2_V_read</obj_property>
+                  <obj_property name="ObjectShortName">p_src_data_stream_2_V_read</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="CvtColor_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="CvtColor_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="p_dst_data_stream_0_V_group">
+               <obj_property name="label">p_dst_data_stream_0_V(img_2_data_stream_0_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_U0/p_dst_data_stream_0_V_blk_n">
+                  <obj_property name="ElementShortName">p_dst_data_stream_0_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">p_dst_data_stream_0_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_U0/p_dst_data_stream_0_V_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_U0/p_dst_data_stream_0_V_full_n">
+                  <obj_property name="ElementShortName">p_dst_data_stream_0_V_full_n</obj_property>
+                  <obj_property name="ObjectShortName">p_dst_data_stream_0_V_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_U0/p_dst_data_stream_0_V_write">
+                  <obj_property name="ElementShortName">p_dst_data_stream_0_V_write</obj_property>
+                  <obj_property name="ObjectShortName">p_dst_data_stream_0_V_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="p_dst_data_stream_1_V_group">
+               <obj_property name="label">p_dst_data_stream_1_V(img_2_data_stream_1_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_U0/p_dst_data_stream_1_V_blk_n">
+                  <obj_property name="ElementShortName">p_dst_data_stream_1_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">p_dst_data_stream_1_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_U0/p_dst_data_stream_1_V_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_U0/p_dst_data_stream_1_V_full_n">
+                  <obj_property name="ElementShortName">p_dst_data_stream_1_V_full_n</obj_property>
+                  <obj_property name="ObjectShortName">p_dst_data_stream_1_V_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_U0/p_dst_data_stream_1_V_write">
+                  <obj_property name="ElementShortName">p_dst_data_stream_1_V_write</obj_property>
+                  <obj_property name="ObjectShortName">p_dst_data_stream_1_V_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="p_dst_data_stream_2_V_group">
+               <obj_property name="label">p_dst_data_stream_2_V(img_2_data_stream_2_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_U0/p_dst_data_stream_2_V_blk_n">
+                  <obj_property name="ElementShortName">p_dst_data_stream_2_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">p_dst_data_stream_2_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_U0/p_dst_data_stream_2_V_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_U0/p_dst_data_stream_2_V_full_n">
+                  <obj_property name="ElementShortName">p_dst_data_stream_2_V_full_n</obj_property>
+                  <obj_property name="ObjectShortName">p_dst_data_stream_2_V_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/CvtColor_U0/p_dst_data_stream_2_V_write">
+                  <obj_property name="ElementShortName">p_dst_data_stream_2_V_write</obj_property>
+                  <obj_property name="ObjectShortName">p_dst_data_stream_2_V_write</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
       <wvobject type="group" fp_name="Mat2AXIvideo_U0_group">
          <obj_property name="label">Mat2AXIvideo_U0</obj_property>
          <obj_property name="DisplayName">label</obj_property>
          <wvobject type="group" fp_name="Mat2AXIvideo_U0_Input_group">
             <obj_property name="label">Input Channels</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="group" fp_name="img_rows_V_group">
-               <obj_property name="label">img_rows_V(img_0_rows_V_c4_U, FIFO)</obj_property>
-               <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/Mat2AXIvideo_U0/img_rows_V_blk_n">
-                  <obj_property name="ElementShortName">img_rows_V_blk_n</obj_property>
-                  <obj_property name="ObjectShortName">img_rows_V_blk_n</obj_property>
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/Mat2AXIvideo_U0/img_rows_V_dout">
-                  <obj_property name="ElementShortName">img_rows_V_dout[11:0]</obj_property>
-                  <obj_property name="ObjectShortName">img_rows_V_dout[11:0]</obj_property>
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/Mat2AXIvideo_U0/img_rows_V_empty_n">
-                  <obj_property name="ElementShortName">img_rows_V_empty_n</obj_property>
-                  <obj_property name="ObjectShortName">img_rows_V_empty_n</obj_property>
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/Mat2AXIvideo_U0/img_rows_V_read">
-                  <obj_property name="ElementShortName">img_rows_V_read</obj_property>
-                  <obj_property name="ObjectShortName">img_rows_V_read</obj_property>
-               </wvobject>
-            </wvobject>
-            <wvobject type="group" fp_name="img_cols_V_group">
-               <obj_property name="label">img_cols_V(img_0_cols_V_c5_U, FIFO)</obj_property>
-               <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/Mat2AXIvideo_U0/img_cols_V_blk_n">
-                  <obj_property name="ElementShortName">img_cols_V_blk_n</obj_property>
-                  <obj_property name="ObjectShortName">img_cols_V_blk_n</obj_property>
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/Mat2AXIvideo_U0/img_cols_V_dout">
-                  <obj_property name="ElementShortName">img_cols_V_dout[11:0]</obj_property>
-                  <obj_property name="ObjectShortName">img_cols_V_dout[11:0]</obj_property>
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/Mat2AXIvideo_U0/img_cols_V_empty_n">
-                  <obj_property name="ElementShortName">img_cols_V_empty_n</obj_property>
-                  <obj_property name="ObjectShortName">img_cols_V_empty_n</obj_property>
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/Mat2AXIvideo_U0/img_cols_V_read">
-                  <obj_property name="ElementShortName">img_cols_V_read</obj_property>
-                  <obj_property name="ObjectShortName">img_cols_V_read</obj_property>
-               </wvobject>
-            </wvobject>
             <wvobject type="group" fp_name="img_data_stream_0_V_group">
-               <obj_property name="label">img_data_stream_0_V(img_0_data_stream_0_U, FIFO)</obj_property>
+               <obj_property name="label">img_data_stream_0_V(img_2_data_stream_0_U, FIFO)</obj_property>
                <obj_property name="DisplayName">label</obj_property>
                <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/Mat2AXIvideo_U0/img_data_stream_0_V_blk_n">
                   <obj_property name="ElementShortName">img_data_stream_0_V_blk_n</obj_property>
@@ -331,7 +631,7 @@
                </wvobject>
             </wvobject>
             <wvobject type="group" fp_name="img_data_stream_1_V_group">
-               <obj_property name="label">img_data_stream_1_V(img_0_data_stream_1_U, FIFO)</obj_property>
+               <obj_property name="label">img_data_stream_1_V(img_2_data_stream_1_U, FIFO)</obj_property>
                <obj_property name="DisplayName">label</obj_property>
                <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/Mat2AXIvideo_U0/img_data_stream_1_V_blk_n">
                   <obj_property name="ElementShortName">img_data_stream_1_V_blk_n</obj_property>
@@ -351,7 +651,7 @@
                </wvobject>
             </wvobject>
             <wvobject type="group" fp_name="img_data_stream_2_V_group">
-               <obj_property name="label">img_data_stream_2_V(img_0_data_stream_2_U, FIFO)</obj_property>
+               <obj_property name="label">img_data_stream_2_V(img_2_data_stream_2_U, FIFO)</obj_property>
                <obj_property name="DisplayName">label</obj_property>
                <wvobject type="logic" fp_name="/apatb_sobel_top/AESL_inst_sobel/Mat2AXIvideo_U0/img_data_stream_2_V_blk_n">
                   <obj_property name="ElementShortName">img_data_stream_2_V_blk_n</obj_property>
