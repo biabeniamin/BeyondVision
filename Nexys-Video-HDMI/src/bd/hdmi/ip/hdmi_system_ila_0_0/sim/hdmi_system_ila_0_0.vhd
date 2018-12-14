@@ -56,6 +56,9 @@ USE ieee.numeric_std.ALL;
 ENTITY hdmi_system_ila_0_0 IS
   PORT (
     clk : IN STD_LOGIC;
+    probe0 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    probe1 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    probe2 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     SLOT_0_AXIS_tdata : IN STD_LOGIC_VECTOR(23 DOWNTO 0);
     SLOT_0_AXIS_tlast : IN STD_LOGIC;
     SLOT_0_AXIS_tuser : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
@@ -85,6 +88,9 @@ ARCHITECTURE hdmi_system_ila_0_0_arch OF hdmi_system_ila_0_0 IS
   COMPONENT bd_5084 IS
     PORT (
       clk : IN STD_LOGIC;
+      probe0 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+      probe1 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+      probe2 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
       SLOT_0_AXIS_tdata : IN STD_LOGIC_VECTOR(23 DOWNTO 0);
       SLOT_0_AXIS_tlast : IN STD_LOGIC;
       SLOT_0_AXIS_tuser : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
@@ -147,6 +153,9 @@ BEGIN
   U0 : bd_5084
     PORT MAP (
       clk => clk,
+      probe0 => probe0,
+      probe1 => probe1,
+      probe2 => probe2,
       SLOT_0_AXIS_tdata => SLOT_0_AXIS_tdata,
       SLOT_0_AXIS_tlast => SLOT_0_AXIS_tlast,
       SLOT_0_AXIS_tuser => SLOT_0_AXIS_tuser,

@@ -56,7 +56,9 @@ USE ieee.numeric_std.ALL;
 ENTITY hdmi_system_ila_1_0 IS
   PORT (
     clk : IN STD_LOGIC;
-    probe0 : IN STD_LOGIC_VECTOR(0 DOWNTO 0)
+    probe0 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    probe1 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    probe2 : IN STD_LOGIC_VECTOR(0 DOWNTO 0)
   );
 END hdmi_system_ila_1_0;
 
@@ -66,7 +68,9 @@ ARCHITECTURE hdmi_system_ila_1_0_arch OF hdmi_system_ila_1_0 IS
   COMPONENT bd_90d5 IS
     PORT (
       clk : IN STD_LOGIC;
-      probe0 : IN STD_LOGIC_VECTOR(0 DOWNTO 0)
+      probe0 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+      probe1 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+      probe2 : IN STD_LOGIC_VECTOR(0 DOWNTO 0)
     );
   END COMPONENT bd_90d5;
   ATTRIBUTE X_INTERFACE_INFO : STRING;
@@ -77,6 +81,8 @@ BEGIN
   U0 : bd_90d5
     PORT MAP (
       clk => clk,
-      probe0 => probe0
+      probe0 => probe0,
+      probe1 => probe1,
+      probe2 => probe2
     );
 END hdmi_system_ila_1_0_arch;

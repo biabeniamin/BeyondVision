@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Dec 10 20:02:22 2018" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Dec 14 11:09:55 2018" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:nexys_video:part0:1.1" DEVICE="7a200t" NAME="hdmi" PACKAGE="sbg484" SPEEDGRADE="-1"/>
 
@@ -613,8 +613,20 @@
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M08_AXI_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="0" NAME="gpio_io_o" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="0" NAME="gpio2_io_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="0" NAME="gpio_io_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="v_vid_in_axi4s_0" PORT="aresetn"/>
+            <CONNECTION INSTANCE="axis_subset_converter_1" PORT="aresetn"/>
+            <CONNECTION INSTANCE="sobel_0" PORT="ap_rst_n"/>
+            <CONNECTION INSTANCE="system_ila_1" PORT="probe2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="gpio2_io_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio2_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="sobel_0" PORT="ap_start"/>
+            <CONNECTION INSTANCE="system_ila_1" PORT="probe1"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="microblaze_0_axi_periph_M08_AXI" DATAWIDTH="32" NAME="S_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
@@ -5545,7 +5557,11 @@
             <CONNECTION INSTANCE="mig_7series_0" PORT="ui_addn_clk_0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="aresetn" SIGIS="rst"/>
+        <PORT DIR="I" NAME="aresetn" SIGIS="rst" SIGNAME="axi_gpio_0_gpio_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_o"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" NAME="s_axis_tvalid" SIGIS="undef" SIGNAME="axis_subset_converter_1_s_axis_tvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_vid_in_axi4s_0" PORT="m_axis_video_tvalid"/>
@@ -11871,8 +11887,8 @@
             <CONNECTION INSTANCE="v_vid_in_axi4s_0" PORT="aclk"/>
             <CONNECTION INSTANCE="axis_subset_converter_1" PORT="aclk"/>
             <CONNECTION INSTANCE="rst_hdmi_160M" PORT="slowest_sync_clk"/>
-            <CONNECTION INSTANCE="sobel_0" PORT="ap_clk"/>
             <CONNECTION INSTANCE="system_ila_0" PORT="clk"/>
+            <CONNECTION INSTANCE="sobel_0" PORT="ap_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="200000000" DIR="O" NAME="ui_addn_clk_1" SIGIS="clk" SIGNAME="mig_7series_0_ui_addn_clk_1">
@@ -12523,7 +12539,31 @@
             <CONNECTION INSTANCE="mig_7series_0" PORT="ui_addn_clk_0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="ap_rst_n" SIGIS="rst"/>
+        <PORT DIR="I" NAME="ap_rst_n" SIGIS="rst" SIGNAME="axi_gpio_0_gpio_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ap_start" SIGIS="undef" SIGNAME="axi_gpio_0_gpio2_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio2_io_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ap_done" SIGIS="undef" SIGNAME="sobel_0_ap_done">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="system_ila_0" PORT="probe0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ap_ready" SIGIS="undef" SIGNAME="sobel_0_ap_ready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="system_ila_0" PORT="probe1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ap_idle" SIGIS="undef" SIGNAME="sobel_0_ap_idle">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="system_ila_0" PORT="probe2"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="axis_subset_converter_1_M_AXIS" NAME="INPUT_STREAM" TYPE="SLAVE" VLNV="xilinx.com:interface:axis:1.0">
@@ -12574,6 +12614,15 @@
             <PORTMAP LOGICAL="TLAST" PHYSICAL="OUTPUT_STREAM_TLAST"/>
             <PORTMAP LOGICAL="TID" PHYSICAL="OUTPUT_STREAM_TID"/>
             <PORTMAP LOGICAL="TDEST" PHYSICAL="OUTPUT_STREAM_TDEST"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="ap_ctrl" TYPE="TARGET" VLNV="xilinx.com:interface:acc_handshake:1.0">
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {start {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} done {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} ready {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} idle {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="start" PHYSICAL="ap_start"/>
+            <PORTMAP LOGICAL="done" PHYSICAL="ap_done"/>
+            <PORTMAP LOGICAL="ready" PHYSICAL="ap_ready"/>
+            <PORTMAP LOGICAL="idle" PHYSICAL="ap_idle"/>
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
@@ -12826,7 +12875,7 @@
         <PARAMETER NAME="C_SLOT_15_APC_MAX_WLAST_TO_AWVALID_WAITS" VALUE="0"/>
         <PARAMETER NAME="C_SLOT_15_APC_MAX_WRITE_TO_BVALID_WAITS" VALUE="0"/>
         <PARAMETER NAME="C_SLOT_15_APC_MAX_CONTINUOUS_RTRANSFERS_WAITS" VALUE="0"/>
-        <PARAMETER NAME="C_BRAM_CNT" VALUE="2"/>
+        <PARAMETER NAME="C_BRAM_CNT" VALUE="3"/>
         <PARAMETER NAME="C_SLOT_0_AXI_AW_SEL_DATA" VALUE="1"/>
         <PARAMETER NAME="C_SLOT_0_AXI_W_SEL_DATA" VALUE="1"/>
         <PARAMETER NAME="C_SLOT_0_AXI_B_SEL_DATA" VALUE="1"/>
@@ -15147,7 +15196,7 @@
         <PARAMETER NAME="C_PROBE1_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE0_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_DATA_DEPTH" VALUE="1024"/>
-        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="1"/>
+        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="3"/>
         <PARAMETER NAME="C_XLNX_HW_PROBE_INFO" VALUE="DEFAULT"/>
         <PARAMETER NAME="Component_Name" VALUE="hdmi_system_ila_0_0"/>
         <PARAMETER NAME="C_PROBE70_WIDTH" VALUE="1"/>
@@ -16228,7 +16277,7 @@
         <PARAMETER NAME="C_SLOT_13_INTF_TYPE" VALUE="xilinx.com:interface:aximm_rtl:1.0"/>
         <PARAMETER NAME="C_SLOT_14_INTF_TYPE" VALUE="xilinx.com:interface:aximm_rtl:1.0"/>
         <PARAMETER NAME="C_SLOT_15_INTF_TYPE" VALUE="xilinx.com:interface:aximm_rtl:1.0"/>
-        <PARAMETER NAME="C_MON_TYPE" VALUE="INTERFACE"/>
+        <PARAMETER NAME="C_MON_TYPE" VALUE="MIX"/>
         <PARAMETER NAME="C_SLOT_2_AXI_ARUSER_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_SLOT_2_AXI_RUSER_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_SLOT_2_AXI_AWUSER_WIDTH" VALUE="1"/>
@@ -16421,6 +16470,21 @@
             <CONNECTION INSTANCE="mig_7series_0" PORT="ui_addn_clk_0"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" LEFT="0" NAME="probe0" RIGHT="0" SIGIS="undef" SIGNAME="sobel_0_ap_done">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="sobel_0" PORT="ap_done"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="probe1" RIGHT="0" SIGIS="undef" SIGNAME="sobel_0_ap_ready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="sobel_0" PORT="ap_ready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="probe2" RIGHT="0" SIGIS="undef" SIGNAME="sobel_0_ap_idle">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="sobel_0" PORT="ap_idle"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" LEFT="23" NAME="SLOT_0_AXIS_tdata" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="I" NAME="SLOT_0_AXIS_tlast" SIGIS="undef"/>
         <PORT DIR="I" LEFT="0" NAME="SLOT_0_AXIS_tuser" RIGHT="0" SIGIS="undef"/>
@@ -16435,16 +16499,16 @@
         <PORT DIR="I" LEFT="0" NAME="SLOT_1_AXIS_tuser" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="I" NAME="SLOT_1_AXIS_tvalid" SIGIS="undef"/>
         <PORT DIR="I" NAME="SLOT_1_AXIS_tready" SIGIS="undef"/>
-        <PORT DIR="I" NAME="resetn" SIGIS="rst" SIGNAME="rst_hdmi_160M_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rst_hdmi_160M" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="I" LEFT="23" NAME="SLOT_2_AXIS_tdata" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="I" NAME="SLOT_2_AXIS_tlast" SIGIS="undef"/>
         <PORT DIR="I" LEFT="0" NAME="SLOT_2_AXIS_tuser" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="I" NAME="SLOT_2_AXIS_tvalid" SIGIS="undef"/>
         <PORT DIR="I" NAME="SLOT_2_AXIS_tready" SIGIS="undef"/>
+        <PORT DIR="I" NAME="resetn" SIGIS="rst" SIGNAME="rst_hdmi_160M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_hdmi_160M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="axis_subset_converter_1_M_AXIS" NAME="SLOT_0_AXIS" TYPE="MONITOR" VLNV="xilinx.com:interface:axis:1.0">
@@ -19085,7 +19149,7 @@
         <PARAMETER NAME="C_PROBE1_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE0_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_DATA_DEPTH" VALUE="1024"/>
-        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="1"/>
+        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="3"/>
         <PARAMETER NAME="C_XLNX_HW_PROBE_INFO" VALUE="DEFAULT"/>
         <PARAMETER NAME="Component_Name" VALUE="hdmi_system_ila_1_0"/>
         <PARAMETER NAME="C_PROBE70_WIDTH" VALUE="1"/>
@@ -20361,6 +20425,16 @@
         <PORT DIR="I" LEFT="0" NAME="probe0" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_1_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="xlconstant_1" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="probe1" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio2_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio2_io_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="probe2" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_o"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -25211,7 +25285,11 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="aclken" SIGIS="ce"/>
-        <PORT DIR="I" NAME="aresetn" SIGIS="rst"/>
+        <PORT DIR="I" NAME="aresetn" SIGIS="rst" SIGNAME="axi_gpio_0_gpio_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_o"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" LEFT="23" NAME="m_axis_video_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_subset_converter_1_s_axis_tdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axis_subset_converter_1" PORT="s_axis_tdata"/>

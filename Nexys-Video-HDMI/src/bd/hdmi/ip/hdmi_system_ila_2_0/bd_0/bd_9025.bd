@@ -29,6 +29,14 @@
           </spirit:portMap>
           <spirit:portMap>
             <spirit:logicalPort>
+              <spirit:name>ACTIVE_VIDEO</spirit:name>
+            </spirit:logicalPort>
+            <spirit:physicalPort>
+              <spirit:name>SLOT_0_VID_IO_active_video</spirit:name>
+            </spirit:physicalPort>
+          </spirit:portMap>
+          <spirit:portMap>
+            <spirit:logicalPort>
               <spirit:name>HSYNC</spirit:name>
             </spirit:logicalPort>
             <spirit:physicalPort>
@@ -41,14 +49,6 @@
             </spirit:logicalPort>
             <spirit:physicalPort>
               <spirit:name>SLOT_0_VID_IO_vsync</spirit:name>
-            </spirit:physicalPort>
-          </spirit:portMap>
-          <spirit:portMap>
-            <spirit:logicalPort>
-              <spirit:name>ACTIVE_VIDEO</spirit:name>
-            </spirit:logicalPort>
-            <spirit:physicalPort>
-              <spirit:name>SLOT_0_VID_IO_active_video</spirit:name>
             </spirit:physicalPort>
           </spirit:portMap>
         </spirit:portMaps>
