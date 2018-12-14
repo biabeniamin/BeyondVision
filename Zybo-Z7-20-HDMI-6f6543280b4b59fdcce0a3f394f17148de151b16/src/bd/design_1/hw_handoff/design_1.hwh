@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Dec  7 13:39:11 2018" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Dec 14 17:38:34 2018" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-20:part0:1.0" DEVICE="7z020" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -42,6 +42,24 @@
         <CONNECTION INSTANCE="axi_gpio_video" PORT="gpio_io_o"/>
       </CONNECTIONS>
     </PORT>
+    <PORT DIR="I" NAME="aRst_0" SIGIS="undef" SIGNAME="External_Ports_aRst_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="dvi2rgb_1" PORT="aRst"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="pRst_0" SIGIS="undef" SIGNAME="External_Ports_pRst_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="dvi2rgb_1" PORT="pRst"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="hdmi_in_clk_p" SIGIS="clk"/>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="hdmi_in_clk_n" SIGIS="clk"/>
+    <PORT DIR="I" LEFT="2" NAME="hdmi_in_data_p" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="2" NAME="hdmi_in_data_n" RIGHT="0" SIGIS="undef"/>
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="hdmi_out_clk_p" SIGIS="clk"/>
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="hdmi_out_clk_n" SIGIS="clk"/>
+    <PORT DIR="O" LEFT="2" NAME="hdmi_out_data_p" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" LEFT="2" NAME="hdmi_out_data_n" RIGHT="0" SIGIS="undef"/>
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES>
@@ -107,6 +125,22 @@
         <PORTMAP LOGICAL="SCL_I" PHYSICAL="hdmi_out_ddc_scl_i"/>
         <PORTMAP LOGICAL="SCL_O" PHYSICAL="hdmi_out_ddc_scl_o"/>
         <PORTMAP LOGICAL="SCL_T" PHYSICAL="hdmi_out_ddc_scl_t"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
+    <BUSINTERFACE BUSNAME="External_Interface_hdmi_in" NAME="hdmi_in" TYPE="TARGET">
+      <PORTMAPS>
+        <PORTMAP LOGICAL="CLK_P" PHYSICAL="hdmi_in_clk_p"/>
+        <PORTMAP LOGICAL="CLK_N" PHYSICAL="hdmi_in_clk_n"/>
+        <PORTMAP LOGICAL="DATA_P" PHYSICAL="hdmi_in_data_p"/>
+        <PORTMAP LOGICAL="DATA_N" PHYSICAL="hdmi_in_data_n"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
+    <BUSINTERFACE BUSNAME="rgb2dvi_1_TMDS" NAME="hdmi_out" TYPE="INITIATOR">
+      <PORTMAPS>
+        <PORTMAP LOGICAL="CLK_P" PHYSICAL="hdmi_out_clk_p"/>
+        <PORTMAP LOGICAL="CLK_N" PHYSICAL="hdmi_out_clk_n"/>
+        <PORTMAP LOGICAL="DATA_P" PHYSICAL="hdmi_out_data_p"/>
+        <PORTMAP LOGICAL="DATA_N" PHYSICAL="hdmi_out_data_n"/>
       </PORTMAPS>
     </BUSINTERFACE>
   </EXTERNALINTERFACES>
@@ -4011,25 +4045,25 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE FULLNAME="/dvi2rgb_1" HWVERSION="1.7" INSTANCE="dvi2rgb_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="dvi2rgb" VLNV="digilentinc.com:ip:dvi2rgb:1.7">
+    <MODULE FULLNAME="/dvi2rgb_1" HWVERSION="1.9" INSTANCE="dvi2rgb_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="dvi2rgb" VLNV="digilentinc.com:ip:dvi2rgb:1.9">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="kEmulateDDC" VALUE="true"/>
-        <PARAMETER NAME="kRstActiveHigh" VALUE="false"/>
+        <PARAMETER NAME="kRstActiveHigh" VALUE="true"/>
         <PARAMETER NAME="kClkRange" VALUE="2"/>
         <PARAMETER NAME="kIDLY_TapValuePs" VALUE="78"/>
         <PARAMETER NAME="kIDLY_TapWidth" VALUE="5"/>
-        <PARAMETER NAME="kAddBUFG" VALUE="false"/>
-        <PARAMETER NAME="kEdidFileName" VALUE="900p_edid.data"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_dvi2rgb_1_0"/>
+        <PARAMETER NAME="kAddBUFG" VALUE="true"/>
+        <PARAMETER NAME="kEdidFileName" VALUE="720p_edid.data"/>
+        <PARAMETER NAME="Component_Name" VALUE="dvi2rgb_v1_3"/>
         <PARAMETER NAME="kEnableSerialClkOutput" VALUE="false"/>
-        <PARAMETER NAME="TMDS_BOARD_INTERFACE" VALUE="hdmi_in"/>
-        <PARAMETER NAME="IIC_BOARD_INTERFACE" VALUE="hdmi_in_ddc"/>
+        <PARAMETER NAME="TMDS_BOARD_INTERFACE"/>
+        <PARAMETER NAME="IIC_BOARD_INTERFACE"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="TMDS_Clk_p" SIGIS="clk"/>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="TMDS_Clk_n" SIGIS="clk"/>
+        <PORT DIR="I" NAME="TMDS_Clk_p" SIGIS="clk"/>
+        <PORT DIR="I" NAME="TMDS_Clk_n" SIGIS="clk"/>
         <PORT DIR="I" LEFT="2" NAME="TMDS_Data_p" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="I" LEFT="2" NAME="TMDS_Data_n" RIGHT="0" SIGIS="undef"/>
         <PORT CLKFREQUENCY="200000000" DIR="I" NAME="RefClk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK2">
@@ -4037,9 +4071,9 @@
             <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK2"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="aRst_n" SIGIS="rst" SIGNAME="rst_ps7_0_100M_peripheral_aresetn">
+        <PORT DIR="I" NAME="aRst" SIGIS="undef" SIGNAME="External_Ports_aRst_0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="peripheral_aresetn"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="aRst_0"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="23" NAME="vid_pData" RIGHT="0" SIGIS="undef" SIGNAME="dvi2rgb_1_vid_pData">
@@ -4075,21 +4109,35 @@
             <CONNECTION INSTANCE="proc_sys_reset_0" PORT="aux_reset_in"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="SDA_I" SIGIS="undef"/>
-        <PORT DIR="O" NAME="SDA_O" SIGIS="undef"/>
-        <PORT DIR="O" NAME="SDA_T" SIGIS="undef"/>
-        <PORT DIR="I" NAME="SCL_I" SIGIS="undef"/>
-        <PORT DIR="O" NAME="SCL_O" SIGIS="undef"/>
-        <PORT DIR="O" NAME="SCL_T" SIGIS="undef"/>
-        <PORT DIR="I" NAME="pRst_n" SIGIS="rst"/>
+        <PORT DIR="I" NAME="DDC_SDA_I" SIGIS="undef"/>
+        <PORT DIR="O" NAME="DDC_SDA_O" SIGIS="undef"/>
+        <PORT DIR="O" NAME="DDC_SDA_T" SIGIS="undef"/>
+        <PORT DIR="I" NAME="DDC_SCL_I" SIGIS="undef"/>
+        <PORT DIR="O" NAME="DDC_SCL_O" SIGIS="undef"/>
+        <PORT DIR="O" NAME="DDC_SCL_T" SIGIS="undef"/>
+        <PORT DIR="I" NAME="pRst" SIGIS="undef" SIGNAME="External_Ports_pRst_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pRst_0"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="TMDS" TYPE="TARGET" VLNV="digilentinc.com:interface:tmds:1.0">
+        <BUSINTERFACE BUSNAME="External_Interface_hdmi_in" NAME="TMDS" TYPE="TARGET" VLNV="digilentinc.com:interface:tmds:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="CLK_P" PHYSICAL="TMDS_Clk_p"/>
             <PORTMAP LOGICAL="CLK_N" PHYSICAL="TMDS_Clk_n"/>
             <PORTMAP LOGICAL="DATA_P" PHYSICAL="TMDS_Data_p"/>
             <PORTMAP LOGICAL="DATA_N" PHYSICAL="TMDS_Data_n"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="dvi2rgb_1_DDC" NAME="DDC" TYPE="INITIATOR" VLNV="xilinx.com:interface:iic:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="SCL_I" PHYSICAL="DDC_SCL_I"/>
+            <PORTMAP LOGICAL="SCL_O" PHYSICAL="DDC_SCL_O"/>
+            <PORTMAP LOGICAL="SCL_T" PHYSICAL="DDC_SCL_T"/>
+            <PORTMAP LOGICAL="SDA_I" PHYSICAL="DDC_SDA_I"/>
+            <PORTMAP LOGICAL="SDA_O" PHYSICAL="DDC_SDA_O"/>
+            <PORTMAP LOGICAL="SDA_T" PHYSICAL="DDC_SDA_T"/>
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="dvi2rgb_1_RGB" NAME="RGB" TYPE="INITIATOR" VLNV="xilinx.com:interface:vid_io:1.0">
@@ -4098,16 +4146,6 @@
             <PORTMAP LOGICAL="HSYNC" PHYSICAL="vid_pHSync"/>
             <PORTMAP LOGICAL="VSYNC" PHYSICAL="vid_pVSync"/>
             <PORTMAP LOGICAL="ACTIVE_VIDEO" PHYSICAL="vid_pVDE"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="dvi2rgb_1_DDC" NAME="DDC" TYPE="INITIATOR" VLNV="xilinx.com:interface:iic:1.0">
-          <PORTMAPS>
-            <PORTMAP LOGICAL="SCL_I" PHYSICAL="SCL_I"/>
-            <PORTMAP LOGICAL="SCL_O" PHYSICAL="SCL_O"/>
-            <PORTMAP LOGICAL="SCL_T" PHYSICAL="SCL_T"/>
-            <PORTMAP LOGICAL="SDA_I" PHYSICAL="SDA_I"/>
-            <PORTMAP LOGICAL="SDA_O" PHYSICAL="SDA_O"/>
-            <PORTMAP LOGICAL="SDA_T" PHYSICAL="SDA_T"/>
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
@@ -7172,20 +7210,15 @@
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="kGenerateSerialClk" VALUE="false"/>
-        <PARAMETER NAME="kClkPrimitive" VALUE="PLL"/>
+        <PARAMETER NAME="kClkPrimitive" VALUE="MMCM"/>
         <PARAMETER NAME="kRstActiveHigh" VALUE="false"/>
         <PARAMETER NAME="kClkRange" VALUE="1"/>
-        <PARAMETER NAME="kD0Swap" VALUE="false"/>
-        <PARAMETER NAME="kD1Swap" VALUE="false"/>
-        <PARAMETER NAME="kD2Swap" VALUE="false"/>
-        <PARAMETER NAME="kClkSwap" VALUE="false"/>
         <PARAMETER NAME="Component_Name" VALUE="design_1_rgb2dvi_1_0"/>
-        <PARAMETER NAME="TMDS_BOARD_INTERFACE" VALUE="hdmi_out"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="TMDS_Clk_p" SIGIS="clk"/>
-        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="TMDS_Clk_n" SIGIS="clk"/>
+        <PORT DIR="O" NAME="TMDS_Clk_p" SIGIS="clk"/>
+        <PORT DIR="O" NAME="TMDS_Clk_n" SIGIS="clk"/>
         <PORT DIR="O" LEFT="2" NAME="TMDS_Data_p" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" LEFT="2" NAME="TMDS_Data_n" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="I" NAME="aRst_n" SIGIS="rst" SIGNAME="axi_dynclk_0_LOCKED_O">
@@ -7225,7 +7258,7 @@
         </PORT>
       </PORTS>
       <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="TMDS" TYPE="INITIATOR" VLNV="digilentinc.com:interface:tmds:1.0">
+        <BUSINTERFACE BUSNAME="rgb2dvi_1_TMDS" NAME="TMDS" TYPE="INITIATOR" VLNV="digilentinc.com:interface:tmds:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="CLK_P" PHYSICAL="TMDS_Clk_p"/>
             <PORTMAP LOGICAL="CLK_N" PHYSICAL="TMDS_Clk_n"/>
@@ -7287,7 +7320,6 @@
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" RIGHT="0" SIGIS="rst" SIGNAME="rst_ps7_0_100M_peripheral_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_dynclk_0" PORT="s00_axi_aresetn"/>
-            <CONNECTION INSTANCE="dvi2rgb_1" PORT="aRst_n"/>
             <CONNECTION INSTANCE="axi_gpio_video" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="axi_vdma_0" PORT="axi_resetn"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph_GP0" PORT="S00_ARESETN"/>

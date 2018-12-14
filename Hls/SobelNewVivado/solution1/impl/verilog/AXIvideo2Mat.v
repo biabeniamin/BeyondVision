@@ -180,7 +180,7 @@ reg    img_data_stream_1_V_blk_n;
 reg    img_data_stream_2_V_blk_n;
 reg    img_rows_V_out_blk_n;
 reg    img_cols_V_out_blk_n;
-reg   [31:0] t_V_5_reg_280;
+reg   [31:0] t_V_2_reg_280;
 reg   [0:0] eol_i_reg_291;
 reg   [0:0] eol_reg_303;
 reg   [23:0] axi_data_V_1_i_reg_314;
@@ -193,7 +193,7 @@ wire  signed [31:0] cols_V_fu_399_p1;
 reg  signed [31:0] cols_V_reg_480;
 reg   [23:0] tmp_data_V_reg_485;
 reg   [0:0] tmp_last_V_reg_493;
-wire   [0:0] exitcond4_i_fu_412_p2;
+wire   [0:0] exitcond2_i_fu_412_p2;
 wire    ap_CS_fsm_state4;
 wire   [31:0] i_V_fu_417_p2;
 reg   [31:0] i_V_reg_509;
@@ -394,7 +394,7 @@ always @ (posedge ap_clk) begin
     end else begin
         if ((ap_continue == 1'b1)) begin
             ap_done_reg <= 1'b0;
-        end else if (((exitcond4_i_fu_412_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        end else if (((exitcond2_i_fu_412_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
             ap_done_reg <= 1'b1;
         end
     end
@@ -406,7 +406,7 @@ always @ (posedge ap_clk) begin
     end else begin
         if (((exitcond_i_fu_423_p2 == 1'd1) & (1'b0 == ap_block_pp1_stage0_subdone) & (1'b1 == ap_CS_fsm_pp1_stage0))) begin
             ap_enable_reg_pp1_iter0 <= 1'b0;
-        end else if (((exitcond4_i_fu_412_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4))) begin
+        end else if (((exitcond2_i_fu_412_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4))) begin
             ap_enable_reg_pp1_iter0 <= 1'b1;
         end
     end
@@ -418,7 +418,7 @@ always @ (posedge ap_clk) begin
     end else begin
         if ((1'b0 == ap_block_pp1_stage0_subdone)) begin
             ap_enable_reg_pp1_iter1 <= ap_enable_reg_pp1_iter0;
-        end else if (((exitcond4_i_fu_412_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4))) begin
+        end else if (((exitcond2_i_fu_412_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4))) begin
             ap_enable_reg_pp1_iter1 <= 1'b0;
         end
     end
@@ -471,7 +471,7 @@ end
 always @ (posedge ap_clk) begin
     if (((exitcond_i_reg_514 == 1'd0) & (1'b0 == ap_block_pp1_stage0_11001) & (ap_enable_reg_pp1_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp1_stage0))) begin
         axi_data_V_1_i_reg_314 <= ap_phi_mux_p_Val2_s_phi_fu_342_p4;
-    end else if (((exitcond4_i_fu_412_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4))) begin
+    end else if (((exitcond2_i_fu_412_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4))) begin
         axi_data_V_1_i_reg_314 <= axi_data_V1_i_reg_259;
     end
 end
@@ -511,7 +511,7 @@ end
 always @ (posedge ap_clk) begin
     if (((exitcond_i_reg_514 == 1'd0) & (1'b0 == ap_block_pp1_stage0_11001) & (ap_enable_reg_pp1_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp1_stage0))) begin
         eol_i_reg_291 <= ap_phi_mux_axi_last_V_2_i_phi_fu_330_p4;
-    end else if (((exitcond4_i_fu_412_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4))) begin
+    end else if (((exitcond2_i_fu_412_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4))) begin
         eol_i_reg_291 <= 1'd0;
     end
 end
@@ -519,7 +519,7 @@ end
 always @ (posedge ap_clk) begin
     if (((exitcond_i_reg_514 == 1'd0) & (1'b0 == ap_block_pp1_stage0_11001) & (ap_enable_reg_pp1_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp1_stage0))) begin
         eol_reg_303 <= ap_phi_mux_axi_last_V_2_i_phi_fu_330_p4;
-    end else if (((exitcond4_i_fu_412_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4))) begin
+    end else if (((exitcond2_i_fu_412_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4))) begin
         eol_reg_303 <= axi_last_V1_i_reg_249;
     end
 end
@@ -534,9 +534,9 @@ end
 
 always @ (posedge ap_clk) begin
     if (((exitcond_i_fu_423_p2 == 1'd0) & (1'b0 == ap_block_pp1_stage0_11001) & (ap_enable_reg_pp1_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp1_stage0))) begin
-        t_V_5_reg_280 <= j_V_fu_428_p2;
-    end else if (((exitcond4_i_fu_412_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4))) begin
-        t_V_5_reg_280 <= 32'd0;
+        t_V_2_reg_280 <= j_V_fu_428_p2;
+    end else if (((exitcond2_i_fu_412_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4))) begin
+        t_V_2_reg_280 <= 32'd0;
     end
 end
 
@@ -681,7 +681,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((exitcond4_i_fu_412_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+    if (((exitcond2_i_fu_412_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = ap_done_reg;
@@ -869,7 +869,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((exitcond4_i_fu_412_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+    if (((exitcond2_i_fu_412_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
         internal_ap_ready = 1'b1;
     end else begin
         internal_ap_ready = 1'b0;
@@ -914,7 +914,7 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state4;
         end
         ap_ST_fsm_state4 : begin
-            if (((exitcond4_i_fu_412_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+            if (((exitcond2_i_fu_412_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
                 ap_NS_fsm = ap_ST_fsm_state1;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_pp1_stage0;
@@ -1076,9 +1076,9 @@ assign cols_V_fu_399_p0 = img_cols_V_dout;
 
 assign cols_V_fu_399_p1 = cols_V_fu_399_p0;
 
-assign exitcond4_i_fu_412_p2 = ((t_V_reg_269 == rows_V_reg_475) ? 1'b1 : 1'b0);
+assign exitcond2_i_fu_412_p2 = ((t_V_reg_269 == rows_V_reg_475) ? 1'b1 : 1'b0);
 
-assign exitcond_i_fu_423_p2 = ((t_V_5_reg_280 == cols_V_reg_480) ? 1'b1 : 1'b0);
+assign exitcond_i_fu_423_p2 = ((t_V_2_reg_280 == cols_V_reg_480) ? 1'b1 : 1'b0);
 
 assign i_V_fu_417_p2 = (t_V_reg_269 + 32'd1);
 
@@ -1092,7 +1092,7 @@ assign img_data_stream_2_V_din = {{ap_phi_mux_p_Val2_s_phi_fu_342_p4[23:16]}};
 
 assign img_rows_V_out_din = img_rows_V_dout;
 
-assign j_V_fu_428_p2 = (t_V_5_reg_280 + 32'd1);
+assign j_V_fu_428_p2 = (t_V_2_reg_280 + 32'd1);
 
 assign rows_V_fu_395_p0 = img_rows_V_dout;
 
