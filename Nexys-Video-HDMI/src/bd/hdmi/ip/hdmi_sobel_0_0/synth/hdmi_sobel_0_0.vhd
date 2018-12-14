@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:hls:sobel:1.0
--- IP Revision: 1812141241
+-- IP Revision: 1812141302
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -118,7 +118,7 @@ ARCHITECTURE hdmi_sobel_0_0_arch OF hdmi_sobel_0_0 IS
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF hdmi_sobel_0_0_arch : ARCHITECTURE IS "hdmi_sobel_0_0,sobel,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF hdmi_sobel_0_0_arch: ARCHITECTURE IS "hdmi_sobel_0_0,sobel,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=sobel,x_ipVersion=1.0,x_ipCoreRevision=1812141241,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED}";
+  ATTRIBUTE CORE_GENERATION_INFO OF hdmi_sobel_0_0_arch: ARCHITECTURE IS "hdmi_sobel_0_0,sobel,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=sobel,x_ipVersion=1.0,x_ipCoreRevision=1812141302,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED}";
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
   ATTRIBUTE IP_DEFINITION_SOURCE OF hdmi_sobel_0_0_arch: ARCHITECTURE IS "HLS";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
