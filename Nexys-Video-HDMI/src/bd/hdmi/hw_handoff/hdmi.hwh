@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Dec 14 14:04:21 2018" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Dec 14 15:33:30 2018" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:nexys_video:part0:1.1" DEVICE="7a200t" NAME="hdmi" PACKAGE="sbg484" SPEEDGRADE="-1"/>
 
@@ -5325,7 +5325,7 @@
           <PARAMETER NAME="FREQ_HZ" VALUE="160000000"/>
           <PARAMETER NAME="PHASE" VALUE="0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_mig_7series_0_0_ui_clk"/>
-          <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TDATA_WIDTH 24 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TUSER_WIDTH 1}"/>
           <PORTMAPS>
             <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_s2mm_tdata"/>
             <PORTMAP LOGICAL="TKEEP" PHYSICAL="s_axis_s2mm_tkeep"/>
@@ -5657,9 +5657,7 @@
       </BUSINTERFACES>
     </MODULE>
     <MODULE FULLNAME="/dvi2rgb_0" HWVERSION="1.7" INSTANCE="dvi2rgb_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="dvi2rgb" VLNV="digilentinc.com:ip:dvi2rgb:1.7">
-      <DOCUMENTS>
-        <DOCUMENT SOURCE="d:/Beni/Digilent19/Nexys-Video-HDMI/repo/vivado-library/ip/dvi2rgb_v1_7/docs/dvi2rgb.pdf"/>
-      </DOCUMENTS>
+      <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="kEmulateDDC" VALUE="true"/>
         <PARAMETER NAME="kRstActiveHigh" VALUE="false"/>
@@ -12203,9 +12201,7 @@
       </BUSINTERFACES>
     </MODULE>
     <MODULE FULLNAME="/rgb2dvi_0" HWVERSION="1.3" INSTANCE="rgb2dvi_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="rgb2dvi" VLNV="digilentinc.com:ip:rgb2dvi:1.3">
-      <DOCUMENTS>
-        <DOCUMENT SOURCE="d:/Beni/Digilent19/Nexys-Video-HDMI/repo/vivado-library/ip/rgb2dvi/docs/rgb2dvi.pdf"/>
-      </DOCUMENTS>
+      <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="kGenerateSerialClk" VALUE="false"/>
         <PARAMETER NAME="kClkPrimitive" VALUE="PLL"/>
@@ -12576,7 +12572,7 @@
           <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="1"/>
           <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
-          <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TDATA_WIDTH 24 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TUSER_WIDTH 1}"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
           <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
