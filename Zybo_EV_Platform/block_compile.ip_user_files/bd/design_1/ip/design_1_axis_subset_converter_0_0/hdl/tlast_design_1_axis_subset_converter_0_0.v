@@ -63,7 +63,7 @@ input  [0:0]                                                             tlast,
 output                                                                   tlast_out
 );
 
-assign tlast_out = {tlast};
+assign tlast_out = {tlast[0]};
 
 endmodule
 

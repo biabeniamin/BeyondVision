@@ -1,10 +1,10 @@
-// Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Fri Dec  7 17:12:01 2018
-// Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               D:/Beni/Digilent19/Zybo_EV_Platform/block_compile.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_sim_netlist.v
+// Tool Version: Vivado v.2017.4_AR70530_AR70530 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+// Date        : Sun May  6 16:58:05 2018
+// Host        : DESKTOP-HQKVQ13 running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim -rename_top design_1_rst_ps7_0_50M_0 -prefix
+//               design_1_rst_ps7_0_50M_0_ design_1_rst_ps7_0_50M_0_sim_netlist.v
 // Design      : design_1_rst_ps7_0_50M_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,7 +12,188 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "design_1_rst_ps7_0_50M_0,proc_sys_reset,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "proc_sys_reset,Vivado 2018.2" *) 
+module design_1_rst_ps7_0_50M_0_cdc_sync
+   (lpf_asr_reg,
+    scndry_out,
+    lpf_asr,
+    asr_lpf,
+    p_1_in,
+    p_2_in,
+    aux_reset_in,
+    slowest_sync_clk);
+  output lpf_asr_reg;
+  output scndry_out;
+  input lpf_asr;
+  input [0:0]asr_lpf;
+  input p_1_in;
+  input p_2_in;
+  input aux_reset_in;
+  input slowest_sync_clk;
+
+  wire asr_d1;
+  wire [0:0]asr_lpf;
+  wire aux_reset_in;
+  wire lpf_asr;
+  wire lpf_asr_reg;
+  wire p_1_in;
+  wire p_2_in;
+  wire s_level_out_d1_cdc_to;
+  wire s_level_out_d2;
+  wire s_level_out_d3;
+  wire scndry_out;
+  wire slowest_sync_clk;
+
+  (* ASYNC_REG *) 
+  (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* box_type = "PRIMITIVE" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to 
+       (.C(slowest_sync_clk),
+        .CE(1'b1),
+        .D(asr_d1),
+        .Q(s_level_out_d1_cdc_to),
+        .R(1'b0));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1 
+       (.I0(aux_reset_in),
+        .O(asr_d1));
+  (* ASYNC_REG *) 
+  (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* box_type = "PRIMITIVE" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2 
+       (.C(slowest_sync_clk),
+        .CE(1'b1),
+        .D(s_level_out_d1_cdc_to),
+        .Q(s_level_out_d2),
+        .R(1'b0));
+  (* ASYNC_REG *) 
+  (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* box_type = "PRIMITIVE" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 
+       (.C(slowest_sync_clk),
+        .CE(1'b1),
+        .D(s_level_out_d2),
+        .Q(s_level_out_d3),
+        .R(1'b0));
+  (* ASYNC_REG *) 
+  (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* box_type = "PRIMITIVE" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 
+       (.C(slowest_sync_clk),
+        .CE(1'b1),
+        .D(s_level_out_d3),
+        .Q(scndry_out),
+        .R(1'b0));
+  LUT5 #(
+    .INIT(32'hEAAAAAA8)) 
+    lpf_asr_i_1
+       (.I0(lpf_asr),
+        .I1(asr_lpf),
+        .I2(scndry_out),
+        .I3(p_1_in),
+        .I4(p_2_in),
+        .O(lpf_asr_reg));
+endmodule
+
+(* ORIG_REF_NAME = "cdc_sync" *) 
+module design_1_rst_ps7_0_50M_0_cdc_sync_0
+   (lpf_exr_reg,
+    scndry_out,
+    lpf_exr,
+    p_3_out,
+    mb_debug_sys_rst,
+    ext_reset_in,
+    slowest_sync_clk);
+  output lpf_exr_reg;
+  output scndry_out;
+  input lpf_exr;
+  input [2:0]p_3_out;
+  input mb_debug_sys_rst;
+  input ext_reset_in;
+  input slowest_sync_clk;
+
+  wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1__0_n_0 ;
+  wire ext_reset_in;
+  wire lpf_exr;
+  wire lpf_exr_reg;
+  wire mb_debug_sys_rst;
+  wire [2:0]p_3_out;
+  wire s_level_out_d1_cdc_to;
+  wire s_level_out_d2;
+  wire s_level_out_d3;
+  wire scndry_out;
+  wire slowest_sync_clk;
+
+  (* ASYNC_REG *) 
+  (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* box_type = "PRIMITIVE" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to 
+       (.C(slowest_sync_clk),
+        .CE(1'b1),
+        .D(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1__0_n_0 ),
+        .Q(s_level_out_d1_cdc_to),
+        .R(1'b0));
+  LUT2 #(
+    .INIT(4'hB)) 
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1__0 
+       (.I0(mb_debug_sys_rst),
+        .I1(ext_reset_in),
+        .O(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1__0_n_0 ));
+  (* ASYNC_REG *) 
+  (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* box_type = "PRIMITIVE" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2 
+       (.C(slowest_sync_clk),
+        .CE(1'b1),
+        .D(s_level_out_d1_cdc_to),
+        .Q(s_level_out_d2),
+        .R(1'b0));
+  (* ASYNC_REG *) 
+  (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* box_type = "PRIMITIVE" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 
+       (.C(slowest_sync_clk),
+        .CE(1'b1),
+        .D(s_level_out_d2),
+        .Q(s_level_out_d3),
+        .R(1'b0));
+  (* ASYNC_REG *) 
+  (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* box_type = "PRIMITIVE" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 
+       (.C(slowest_sync_clk),
+        .CE(1'b1),
+        .D(s_level_out_d3),
+        .Q(scndry_out),
+        .R(1'b0));
+  LUT5 #(
+    .INIT(32'hEAAAAAA8)) 
+    lpf_exr_i_1
+       (.I0(lpf_exr),
+        .I1(p_3_out[0]),
+        .I2(scndry_out),
+        .I3(p_3_out[1]),
+        .I4(p_3_out[2]),
+        .O(lpf_exr_reg));
+endmodule
+
+(* CHECK_LICENSE_TYPE = "design_1_rst_ps7_0_50M_0,proc_sys_reset,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "proc_sys_reset,Vivado 2017.4_AR70530_AR70530" *) 
 (* NotValidForBitStream *)
 module design_1_rst_ps7_0_50M_0
    (slowest_sync_clk,
@@ -69,202 +250,19 @@ module design_1_rst_ps7_0_50M_0
         .slowest_sync_clk(slowest_sync_clk));
 endmodule
 
-(* ORIG_REF_NAME = "cdc_sync" *) 
-module design_1_rst_ps7_0_50M_0_cdc_sync
-   (lpf_asr_reg,
-    scndry_out,
-    lpf_asr,
-    p_1_in,
-    p_2_in,
-    asr_lpf,
-    aux_reset_in,
-    slowest_sync_clk);
-  output lpf_asr_reg;
-  output scndry_out;
-  input lpf_asr;
-  input p_1_in;
-  input p_2_in;
-  input [0:0]asr_lpf;
-  input aux_reset_in;
-  input slowest_sync_clk;
-
-  wire asr_d1;
-  wire [0:0]asr_lpf;
-  wire aux_reset_in;
-  wire lpf_asr;
-  wire lpf_asr_reg;
-  wire p_1_in;
-  wire p_2_in;
-  wire s_level_out_d1_cdc_to;
-  wire s_level_out_d2;
-  wire s_level_out_d3;
-  wire scndry_out;
-  wire slowest_sync_clk;
-
-  (* ASYNC_REG *) 
-  (* XILINX_LEGACY_PRIM = "FDR" *) 
-  (* box_type = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to 
-       (.C(slowest_sync_clk),
-        .CE(1'b1),
-        .D(asr_d1),
-        .Q(s_level_out_d1_cdc_to),
-        .R(1'b0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1__0 
-       (.I0(aux_reset_in),
-        .O(asr_d1));
-  (* ASYNC_REG *) 
-  (* XILINX_LEGACY_PRIM = "FDR" *) 
-  (* box_type = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2 
-       (.C(slowest_sync_clk),
-        .CE(1'b1),
-        .D(s_level_out_d1_cdc_to),
-        .Q(s_level_out_d2),
-        .R(1'b0));
-  (* ASYNC_REG *) 
-  (* XILINX_LEGACY_PRIM = "FDR" *) 
-  (* box_type = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 
-       (.C(slowest_sync_clk),
-        .CE(1'b1),
-        .D(s_level_out_d2),
-        .Q(s_level_out_d3),
-        .R(1'b0));
-  (* ASYNC_REG *) 
-  (* XILINX_LEGACY_PRIM = "FDR" *) 
-  (* box_type = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 
-       (.C(slowest_sync_clk),
-        .CE(1'b1),
-        .D(s_level_out_d3),
-        .Q(scndry_out),
-        .R(1'b0));
-  LUT5 #(
-    .INIT(32'hEAAAAAA8)) 
-    lpf_asr_i_1
-       (.I0(lpf_asr),
-        .I1(p_1_in),
-        .I2(p_2_in),
-        .I3(scndry_out),
-        .I4(asr_lpf),
-        .O(lpf_asr_reg));
-endmodule
-
-(* ORIG_REF_NAME = "cdc_sync" *) 
-module design_1_rst_ps7_0_50M_0_cdc_sync_0
-   (lpf_exr_reg,
-    scndry_out,
-    lpf_exr,
-    p_3_out,
-    mb_debug_sys_rst,
-    ext_reset_in,
-    slowest_sync_clk);
-  output lpf_exr_reg;
-  output scndry_out;
-  input lpf_exr;
-  input [2:0]p_3_out;
-  input mb_debug_sys_rst;
-  input ext_reset_in;
-  input slowest_sync_clk;
-
-  wire exr_d1;
-  wire ext_reset_in;
-  wire lpf_exr;
-  wire lpf_exr_reg;
-  wire mb_debug_sys_rst;
-  wire [2:0]p_3_out;
-  wire s_level_out_d1_cdc_to;
-  wire s_level_out_d2;
-  wire s_level_out_d3;
-  wire scndry_out;
-  wire slowest_sync_clk;
-
-  (* ASYNC_REG *) 
-  (* XILINX_LEGACY_PRIM = "FDR" *) 
-  (* box_type = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to 
-       (.C(slowest_sync_clk),
-        .CE(1'b1),
-        .D(exr_d1),
-        .Q(s_level_out_d1_cdc_to),
-        .R(1'b0));
-  LUT2 #(
-    .INIT(4'hB)) 
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1 
-       (.I0(mb_debug_sys_rst),
-        .I1(ext_reset_in),
-        .O(exr_d1));
-  (* ASYNC_REG *) 
-  (* XILINX_LEGACY_PRIM = "FDR" *) 
-  (* box_type = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2 
-       (.C(slowest_sync_clk),
-        .CE(1'b1),
-        .D(s_level_out_d1_cdc_to),
-        .Q(s_level_out_d2),
-        .R(1'b0));
-  (* ASYNC_REG *) 
-  (* XILINX_LEGACY_PRIM = "FDR" *) 
-  (* box_type = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 
-       (.C(slowest_sync_clk),
-        .CE(1'b1),
-        .D(s_level_out_d2),
-        .Q(s_level_out_d3),
-        .R(1'b0));
-  (* ASYNC_REG *) 
-  (* XILINX_LEGACY_PRIM = "FDR" *) 
-  (* box_type = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 
-       (.C(slowest_sync_clk),
-        .CE(1'b1),
-        .D(s_level_out_d3),
-        .Q(scndry_out),
-        .R(1'b0));
-  LUT5 #(
-    .INIT(32'hEAAAAAA8)) 
-    lpf_exr_i_1
-       (.I0(lpf_exr),
-        .I1(p_3_out[1]),
-        .I2(p_3_out[2]),
-        .I3(scndry_out),
-        .I4(p_3_out[0]),
-        .O(lpf_exr_reg));
-endmodule
-
-(* ORIG_REF_NAME = "lpf" *) 
 module design_1_rst_ps7_0_50M_0_lpf
    (lpf_int,
     slowest_sync_clk,
     dcm_locked,
+    aux_reset_in,
     mb_debug_sys_rst,
-    ext_reset_in,
-    aux_reset_in);
+    ext_reset_in);
   output lpf_int;
   input slowest_sync_clk;
   input dcm_locked;
+  input aux_reset_in;
   input mb_debug_sys_rst;
   input ext_reset_in;
-  input aux_reset_in;
 
   wire \ACTIVE_LOW_AUX.ACT_LO_AUX_n_0 ;
   wire \ACTIVE_LOW_EXT.ACT_LO_EXT_n_0 ;
@@ -380,12 +378,12 @@ module design_1_rst_ps7_0_50M_0_lpf
         .Q(lpf_exr),
         .R(1'b0));
   LUT4 #(
-    .INIT(16'hFFFD)) 
+    .INIT(16'hFFEF)) 
     lpf_int0
-       (.I0(dcm_locked),
-        .I1(lpf_exr),
-        .I2(lpf_asr),
-        .I3(Q),
+       (.I0(Q),
+        .I1(lpf_asr),
+        .I2(dcm_locked),
+        .I3(lpf_exr),
         .O(lpf_int0__0));
   FDRE #(
     .INIT(1'b0)) 
@@ -400,7 +398,6 @@ endmodule
 (* C_AUX_RESET_HIGH = "1'b0" *) (* C_AUX_RST_WIDTH = "4" *) (* C_EXT_RESET_HIGH = "1'b0" *) 
 (* C_EXT_RST_WIDTH = "4" *) (* C_FAMILY = "zynq" *) (* C_NUM_BUS_RST = "1" *) 
 (* C_NUM_INTERCONNECT_ARESETN = "1" *) (* C_NUM_PERP_ARESETN = "1" *) (* C_NUM_PERP_RST = "1" *) 
-(* ORIG_REF_NAME = "proc_sys_reset" *) 
 module design_1_rst_ps7_0_50M_0_proc_sys_reset
    (slowest_sync_clk,
     ext_reset_in,
@@ -517,7 +514,6 @@ module design_1_rst_ps7_0_50M_0_proc_sys_reset
         .slowest_sync_clk(slowest_sync_clk));
 endmodule
 
-(* ORIG_REF_NAME = "sequence_psr" *) 
 module design_1_rst_ps7_0_50M_0_sequence_psr
    (MB_out,
     Bsr_out,
@@ -594,12 +590,12 @@ module design_1_rst_ps7_0_50M_0_sequence_psr
         .seq_cnt_en(seq_cnt_en),
         .slowest_sync_clk(slowest_sync_clk));
   LUT4 #(
-    .INIT(16'h0090)) 
+    .INIT(16'h0804)) 
     \bsr_dec[0]_i_1 
        (.I0(seq_cnt_en),
-        .I1(seq_cnt[4]),
-        .I2(seq_cnt[3]),
-        .I3(seq_cnt[5]),
+        .I1(seq_cnt[3]),
+        .I2(seq_cnt[5]),
+        .I3(seq_cnt[4]),
         .O(p_5_out[0]));
   (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT2 #(
@@ -641,12 +637,12 @@ module design_1_rst_ps7_0_50M_0_sequence_psr
         .S(lpf_int));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT4 #(
-    .INIT(16'h9000)) 
+    .INIT(16'h8040)) 
     \core_dec[0]_i_1 
-       (.I0(seq_cnt_en),
-        .I1(seq_cnt[4]),
-        .I2(seq_cnt[3]),
-        .I3(seq_cnt[5]),
+       (.I0(seq_cnt[4]),
+        .I1(seq_cnt[3]),
+        .I2(seq_cnt[5]),
+        .I3(seq_cnt_en),
         .O(\core_dec[0]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT2 #(
@@ -695,20 +691,20 @@ module design_1_rst_ps7_0_50M_0_sequence_psr
         .Q(seq_cnt_en),
         .S(lpf_int));
   LUT4 #(
-    .INIT(16'h0018)) 
+    .INIT(16'h0210)) 
     pr_dec0
-       (.I0(seq_cnt_en),
-        .I1(seq_cnt[0]),
+       (.I0(seq_cnt[0]),
+        .I1(seq_cnt[1]),
         .I2(seq_cnt[2]),
-        .I3(seq_cnt[1]),
+        .I3(seq_cnt_en),
         .O(pr_dec0__0));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT4 #(
-    .INIT(16'h0480)) 
+    .INIT(16'h1080)) 
     \pr_dec[0]_i_1 
        (.I0(seq_cnt_en),
-        .I1(seq_cnt[3]),
-        .I2(seq_cnt[5]),
+        .I1(seq_cnt[5]),
+        .I2(seq_cnt[3]),
         .I3(seq_cnt[4]),
         .O(p_3_out[0]));
   LUT2 #(
@@ -758,7 +754,6 @@ module design_1_rst_ps7_0_50M_0_sequence_psr
         .R(lpf_int));
 endmodule
 
-(* ORIG_REF_NAME = "upcnt_n" *) 
 module design_1_rst_ps7_0_50M_0_upcnt_n
    (Q,
     seq_clr,

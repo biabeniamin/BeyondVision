@@ -3,7 +3,7 @@
   <spirit:vendor>digilentinc.com</spirit:vendor>
   <spirit:library>ip</spirit:library>
   <spirit:name>dvi2rgb</spirit:name>
-  <spirit:version>1.9</spirit:version>
+  <spirit:version>2.0</spirit:version>
   <spirit:busInterfaces>
     <spirit:busInterface>
       <spirit:name>TMDS</spirit:name>

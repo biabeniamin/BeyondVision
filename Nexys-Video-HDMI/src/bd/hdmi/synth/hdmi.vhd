@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Fri Dec 14 20:57:58 2018
+--Date        : Fri Dec 14 21:40:54 2018
 --Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
 --Command     : generate_target hdmi.bd
 --Design      : hdmi
@@ -107,158 +107,6 @@ begin
   m00_couplers_to_m00_couplers_WREADY(0) <= M_AXI_wready(0);
   m00_couplers_to_m00_couplers_WSTRB(3 downto 0) <= S_AXI_wstrb(3 downto 0);
   m00_couplers_to_m00_couplers_WVALID(0) <= S_AXI_wvalid(0);
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity m00_couplers_imp_1HNLV2F is
-  port (
-    M_AXIS_ACLK : in STD_LOGIC;
-    M_AXIS_ARESETN : in STD_LOGIC;
-    M_AXIS_tdata : out STD_LOGIC_VECTOR ( 23 downto 0 );
-    M_AXIS_tdest : out STD_LOGIC_VECTOR ( 0 to 0 );
-    M_AXIS_tlast : out STD_LOGIC_VECTOR ( 0 to 0 );
-    M_AXIS_tready : in STD_LOGIC_VECTOR ( 0 to 0 );
-    M_AXIS_tuser : out STD_LOGIC_VECTOR ( 0 to 0 );
-    M_AXIS_tvalid : out STD_LOGIC_VECTOR ( 0 to 0 );
-    S_AXIS_ACLK : in STD_LOGIC;
-    S_AXIS_ARESETN : in STD_LOGIC;
-    S_AXIS_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    S_AXIS_tdest : in STD_LOGIC_VECTOR ( 0 to 0 );
-    S_AXIS_tlast : in STD_LOGIC_VECTOR ( 0 to 0 );
-    S_AXIS_tready : out STD_LOGIC_VECTOR ( 0 to 0 );
-    S_AXIS_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
-    S_AXIS_tvalid : in STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-end m00_couplers_imp_1HNLV2F;
-
-architecture STRUCTURE of m00_couplers_imp_1HNLV2F is
-  signal m00_couplers_to_m00_couplers_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal m00_couplers_to_m00_couplers_TDEST : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal m00_couplers_to_m00_couplers_TLAST : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal m00_couplers_to_m00_couplers_TREADY : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal m00_couplers_to_m00_couplers_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal m00_couplers_to_m00_couplers_TVALID : STD_LOGIC_VECTOR ( 0 to 0 );
-begin
-  M_AXIS_tdata(23 downto 0) <= m00_couplers_to_m00_couplers_TDATA(23 downto 0);
-  M_AXIS_tdest(0) <= m00_couplers_to_m00_couplers_TDEST(0);
-  M_AXIS_tlast(0) <= m00_couplers_to_m00_couplers_TLAST(0);
-  M_AXIS_tuser(0) <= m00_couplers_to_m00_couplers_TUSER(0);
-  M_AXIS_tvalid(0) <= m00_couplers_to_m00_couplers_TVALID(0);
-  S_AXIS_tready(0) <= m00_couplers_to_m00_couplers_TREADY(0);
-  m00_couplers_to_m00_couplers_TDATA(23 downto 0) <= S_AXIS_tdata(23 downto 0);
-  m00_couplers_to_m00_couplers_TDEST(0) <= S_AXIS_tdest(0);
-  m00_couplers_to_m00_couplers_TLAST(0) <= S_AXIS_tlast(0);
-  m00_couplers_to_m00_couplers_TREADY(0) <= M_AXIS_tready(0);
-  m00_couplers_to_m00_couplers_TUSER(0) <= S_AXIS_tuser(0);
-  m00_couplers_to_m00_couplers_TVALID(0) <= S_AXIS_tvalid(0);
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity m00_couplers_imp_CTFZAE is
-  port (
-    M_AXIS_ACLK : in STD_LOGIC;
-    M_AXIS_ARESETN : in STD_LOGIC;
-    M_AXIS_tdata : out STD_LOGIC_VECTOR ( 23 downto 0 );
-    M_AXIS_tkeep : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    M_AXIS_tlast : out STD_LOGIC;
-    M_AXIS_tready : in STD_LOGIC;
-    M_AXIS_tuser : out STD_LOGIC_VECTOR ( 0 to 0 );
-    M_AXIS_tvalid : out STD_LOGIC;
-    S_AXIS_ACLK : in STD_LOGIC;
-    S_AXIS_ARESETN : in STD_LOGIC;
-    S_AXIS_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    S_AXIS_tdest : in STD_LOGIC_VECTOR ( 0 to 0 );
-    S_AXIS_tid : in STD_LOGIC_VECTOR ( 0 to 0 );
-    S_AXIS_tkeep : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    S_AXIS_tlast : in STD_LOGIC;
-    S_AXIS_tready : out STD_LOGIC;
-    S_AXIS_tstrb : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    S_AXIS_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
-    S_AXIS_tvalid : in STD_LOGIC
-  );
-end m00_couplers_imp_CTFZAE;
-
-architecture STRUCTURE of m00_couplers_imp_CTFZAE is
-  component hdmi_auto_ss_slidr_0 is
-  port (
-    aclk : in STD_LOGIC;
-    aresetn : in STD_LOGIC;
-    s_axis_tvalid : in STD_LOGIC;
-    s_axis_tready : out STD_LOGIC;
-    s_axis_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    s_axis_tstrb : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s_axis_tkeep : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s_axis_tlast : in STD_LOGIC;
-    s_axis_tid : in STD_LOGIC_VECTOR ( 0 to 0 );
-    s_axis_tdest : in STD_LOGIC_VECTOR ( 0 to 0 );
-    s_axis_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axis_tvalid : out STD_LOGIC;
-    m_axis_tready : in STD_LOGIC;
-    m_axis_tdata : out STD_LOGIC_VECTOR ( 23 downto 0 );
-    m_axis_tkeep : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    m_axis_tlast : out STD_LOGIC;
-    m_axis_tuser : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component hdmi_auto_ss_slidr_0;
-  signal S_AXIS_ACLK_1 : STD_LOGIC;
-  signal S_AXIS_ARESETN_1 : STD_LOGIC;
-  signal auto_ss_slidr_to_m00_couplers_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal auto_ss_slidr_to_m00_couplers_TKEEP : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal auto_ss_slidr_to_m00_couplers_TLAST : STD_LOGIC;
-  signal auto_ss_slidr_to_m00_couplers_TREADY : STD_LOGIC;
-  signal auto_ss_slidr_to_m00_couplers_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal auto_ss_slidr_to_m00_couplers_TVALID : STD_LOGIC;
-  signal m00_couplers_to_auto_ss_slidr_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal m00_couplers_to_auto_ss_slidr_TDEST : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal m00_couplers_to_auto_ss_slidr_TID : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal m00_couplers_to_auto_ss_slidr_TKEEP : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal m00_couplers_to_auto_ss_slidr_TLAST : STD_LOGIC;
-  signal m00_couplers_to_auto_ss_slidr_TREADY : STD_LOGIC;
-  signal m00_couplers_to_auto_ss_slidr_TSTRB : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal m00_couplers_to_auto_ss_slidr_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal m00_couplers_to_auto_ss_slidr_TVALID : STD_LOGIC;
-begin
-  M_AXIS_tdata(23 downto 0) <= auto_ss_slidr_to_m00_couplers_TDATA(23 downto 0);
-  M_AXIS_tkeep(2 downto 0) <= auto_ss_slidr_to_m00_couplers_TKEEP(2 downto 0);
-  M_AXIS_tlast <= auto_ss_slidr_to_m00_couplers_TLAST;
-  M_AXIS_tuser(0) <= auto_ss_slidr_to_m00_couplers_TUSER(0);
-  M_AXIS_tvalid <= auto_ss_slidr_to_m00_couplers_TVALID;
-  S_AXIS_ACLK_1 <= S_AXIS_ACLK;
-  S_AXIS_ARESETN_1 <= S_AXIS_ARESETN;
-  S_AXIS_tready <= m00_couplers_to_auto_ss_slidr_TREADY;
-  auto_ss_slidr_to_m00_couplers_TREADY <= M_AXIS_tready;
-  m00_couplers_to_auto_ss_slidr_TDATA(23 downto 0) <= S_AXIS_tdata(23 downto 0);
-  m00_couplers_to_auto_ss_slidr_TDEST(0) <= S_AXIS_tdest(0);
-  m00_couplers_to_auto_ss_slidr_TID(0) <= S_AXIS_tid(0);
-  m00_couplers_to_auto_ss_slidr_TKEEP(2 downto 0) <= S_AXIS_tkeep(2 downto 0);
-  m00_couplers_to_auto_ss_slidr_TLAST <= S_AXIS_tlast;
-  m00_couplers_to_auto_ss_slidr_TSTRB(2 downto 0) <= S_AXIS_tstrb(2 downto 0);
-  m00_couplers_to_auto_ss_slidr_TUSER(0) <= S_AXIS_tuser(0);
-  m00_couplers_to_auto_ss_slidr_TVALID <= S_AXIS_tvalid;
-auto_ss_slidr: component hdmi_auto_ss_slidr_0
-     port map (
-      aclk => S_AXIS_ACLK_1,
-      aresetn => S_AXIS_ARESETN_1,
-      m_axis_tdata(23 downto 0) => auto_ss_slidr_to_m00_couplers_TDATA(23 downto 0),
-      m_axis_tkeep(2 downto 0) => auto_ss_slidr_to_m00_couplers_TKEEP(2 downto 0),
-      m_axis_tlast => auto_ss_slidr_to_m00_couplers_TLAST,
-      m_axis_tready => auto_ss_slidr_to_m00_couplers_TREADY,
-      m_axis_tuser(0) => auto_ss_slidr_to_m00_couplers_TUSER(0),
-      m_axis_tvalid => auto_ss_slidr_to_m00_couplers_TVALID,
-      s_axis_tdata(23 downto 0) => m00_couplers_to_auto_ss_slidr_TDATA(23 downto 0),
-      s_axis_tdest(0) => m00_couplers_to_auto_ss_slidr_TDEST(0),
-      s_axis_tid(0) => m00_couplers_to_auto_ss_slidr_TID(0),
-      s_axis_tkeep(2 downto 0) => m00_couplers_to_auto_ss_slidr_TKEEP(2 downto 0),
-      s_axis_tlast => m00_couplers_to_auto_ss_slidr_TLAST,
-      s_axis_tready => m00_couplers_to_auto_ss_slidr_TREADY,
-      s_axis_tstrb(2 downto 0) => m00_couplers_to_auto_ss_slidr_TSTRB(2 downto 0),
-      s_axis_tuser(0) => m00_couplers_to_auto_ss_slidr_TUSER(0),
-      s_axis_tvalid => m00_couplers_to_auto_ss_slidr_TVALID
-    );
 end STRUCTURE;
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -1051,158 +899,6 @@ m00_regslice: component hdmi_m00_regslice_0
       s_axi_wready => auto_ds_to_m00_regslice_WREADY,
       s_axi_wstrb(15 downto 0) => auto_ds_to_m00_regslice_WSTRB(15 downto 0),
       s_axi_wvalid => auto_ds_to_m00_regslice_WVALID
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity m01_couplers_imp_PNAPKH is
-  port (
-    M_AXIS_ACLK : in STD_LOGIC;
-    M_AXIS_ARESETN : in STD_LOGIC;
-    M_AXIS_tdata : out STD_LOGIC_VECTOR ( 23 downto 0 );
-    M_AXIS_tdest : out STD_LOGIC_VECTOR ( 0 to 0 );
-    M_AXIS_tid : out STD_LOGIC_VECTOR ( 0 to 0 );
-    M_AXIS_tkeep : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    M_AXIS_tlast : out STD_LOGIC;
-    M_AXIS_tready : in STD_LOGIC;
-    M_AXIS_tstrb : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    M_AXIS_tuser : out STD_LOGIC_VECTOR ( 0 to 0 );
-    M_AXIS_tvalid : out STD_LOGIC;
-    S_AXIS_ACLK : in STD_LOGIC;
-    S_AXIS_ARESETN : in STD_LOGIC;
-    S_AXIS_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    S_AXIS_tdest : in STD_LOGIC_VECTOR ( 0 to 0 );
-    S_AXIS_tlast : in STD_LOGIC;
-    S_AXIS_tready : out STD_LOGIC;
-    S_AXIS_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
-    S_AXIS_tvalid : in STD_LOGIC
-  );
-end m01_couplers_imp_PNAPKH;
-
-architecture STRUCTURE of m01_couplers_imp_PNAPKH is
-  component hdmi_auto_ss_k_1 is
-  port (
-    aclk : in STD_LOGIC;
-    aresetn : in STD_LOGIC;
-    s_axis_tvalid : in STD_LOGIC;
-    s_axis_tready : out STD_LOGIC;
-    s_axis_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    s_axis_tlast : in STD_LOGIC;
-    s_axis_tdest : in STD_LOGIC_VECTOR ( 0 to 0 );
-    s_axis_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axis_tvalid : out STD_LOGIC;
-    m_axis_tready : in STD_LOGIC;
-    m_axis_tdata : out STD_LOGIC_VECTOR ( 23 downto 0 );
-    m_axis_tkeep : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    m_axis_tlast : out STD_LOGIC;
-    m_axis_tdest : out STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axis_tuser : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component hdmi_auto_ss_k_1;
-  component hdmi_auto_ss_slidr_1 is
-  port (
-    aclk : in STD_LOGIC;
-    aresetn : in STD_LOGIC;
-    s_axis_tvalid : in STD_LOGIC;
-    s_axis_tready : out STD_LOGIC;
-    s_axis_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    s_axis_tkeep : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s_axis_tlast : in STD_LOGIC;
-    s_axis_tdest : in STD_LOGIC_VECTOR ( 0 to 0 );
-    s_axis_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axis_tvalid : out STD_LOGIC;
-    m_axis_tready : in STD_LOGIC;
-    m_axis_tdata : out STD_LOGIC_VECTOR ( 23 downto 0 );
-    m_axis_tstrb : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    m_axis_tkeep : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    m_axis_tlast : out STD_LOGIC;
-    m_axis_tid : out STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axis_tdest : out STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axis_tuser : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component hdmi_auto_ss_slidr_1;
-  signal S_AXIS_ACLK_1 : STD_LOGIC;
-  signal S_AXIS_ARESETN_1 : STD_LOGIC;
-  signal auto_ss_k_to_auto_ss_slidr_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal auto_ss_k_to_auto_ss_slidr_TDEST : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal auto_ss_k_to_auto_ss_slidr_TKEEP : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal auto_ss_k_to_auto_ss_slidr_TLAST : STD_LOGIC;
-  signal auto_ss_k_to_auto_ss_slidr_TREADY : STD_LOGIC;
-  signal auto_ss_k_to_auto_ss_slidr_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal auto_ss_k_to_auto_ss_slidr_TVALID : STD_LOGIC;
-  signal auto_ss_slidr_to_m01_couplers_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal auto_ss_slidr_to_m01_couplers_TDEST : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal auto_ss_slidr_to_m01_couplers_TID : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal auto_ss_slidr_to_m01_couplers_TKEEP : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal auto_ss_slidr_to_m01_couplers_TLAST : STD_LOGIC;
-  signal auto_ss_slidr_to_m01_couplers_TREADY : STD_LOGIC;
-  signal auto_ss_slidr_to_m01_couplers_TSTRB : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal auto_ss_slidr_to_m01_couplers_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal auto_ss_slidr_to_m01_couplers_TVALID : STD_LOGIC;
-  signal m01_couplers_to_auto_ss_k_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal m01_couplers_to_auto_ss_k_TDEST : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal m01_couplers_to_auto_ss_k_TLAST : STD_LOGIC;
-  signal m01_couplers_to_auto_ss_k_TREADY : STD_LOGIC;
-  signal m01_couplers_to_auto_ss_k_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal m01_couplers_to_auto_ss_k_TVALID : STD_LOGIC;
-begin
-  M_AXIS_tdata(23 downto 0) <= auto_ss_slidr_to_m01_couplers_TDATA(23 downto 0);
-  M_AXIS_tdest(0) <= auto_ss_slidr_to_m01_couplers_TDEST(0);
-  M_AXIS_tid(0) <= auto_ss_slidr_to_m01_couplers_TID(0);
-  M_AXIS_tkeep(2 downto 0) <= auto_ss_slidr_to_m01_couplers_TKEEP(2 downto 0);
-  M_AXIS_tlast <= auto_ss_slidr_to_m01_couplers_TLAST;
-  M_AXIS_tstrb(2 downto 0) <= auto_ss_slidr_to_m01_couplers_TSTRB(2 downto 0);
-  M_AXIS_tuser(0) <= auto_ss_slidr_to_m01_couplers_TUSER(0);
-  M_AXIS_tvalid <= auto_ss_slidr_to_m01_couplers_TVALID;
-  S_AXIS_ACLK_1 <= S_AXIS_ACLK;
-  S_AXIS_ARESETN_1 <= S_AXIS_ARESETN;
-  S_AXIS_tready <= m01_couplers_to_auto_ss_k_TREADY;
-  auto_ss_slidr_to_m01_couplers_TREADY <= M_AXIS_tready;
-  m01_couplers_to_auto_ss_k_TDATA(23 downto 0) <= S_AXIS_tdata(23 downto 0);
-  m01_couplers_to_auto_ss_k_TDEST(0) <= S_AXIS_tdest(0);
-  m01_couplers_to_auto_ss_k_TLAST <= S_AXIS_tlast;
-  m01_couplers_to_auto_ss_k_TUSER(0) <= S_AXIS_tuser(0);
-  m01_couplers_to_auto_ss_k_TVALID <= S_AXIS_tvalid;
-auto_ss_k: component hdmi_auto_ss_k_1
-     port map (
-      aclk => S_AXIS_ACLK_1,
-      aresetn => S_AXIS_ARESETN_1,
-      m_axis_tdata(23 downto 0) => auto_ss_k_to_auto_ss_slidr_TDATA(23 downto 0),
-      m_axis_tdest(0) => auto_ss_k_to_auto_ss_slidr_TDEST(0),
-      m_axis_tkeep(2 downto 0) => auto_ss_k_to_auto_ss_slidr_TKEEP(2 downto 0),
-      m_axis_tlast => auto_ss_k_to_auto_ss_slidr_TLAST,
-      m_axis_tready => auto_ss_k_to_auto_ss_slidr_TREADY,
-      m_axis_tuser(0) => auto_ss_k_to_auto_ss_slidr_TUSER(0),
-      m_axis_tvalid => auto_ss_k_to_auto_ss_slidr_TVALID,
-      s_axis_tdata(23 downto 0) => m01_couplers_to_auto_ss_k_TDATA(23 downto 0),
-      s_axis_tdest(0) => m01_couplers_to_auto_ss_k_TDEST(0),
-      s_axis_tlast => m01_couplers_to_auto_ss_k_TLAST,
-      s_axis_tready => m01_couplers_to_auto_ss_k_TREADY,
-      s_axis_tuser(0) => m01_couplers_to_auto_ss_k_TUSER(0),
-      s_axis_tvalid => m01_couplers_to_auto_ss_k_TVALID
-    );
-auto_ss_slidr: component hdmi_auto_ss_slidr_1
-     port map (
-      aclk => S_AXIS_ACLK_1,
-      aresetn => S_AXIS_ARESETN_1,
-      m_axis_tdata(23 downto 0) => auto_ss_slidr_to_m01_couplers_TDATA(23 downto 0),
-      m_axis_tdest(0) => auto_ss_slidr_to_m01_couplers_TDEST(0),
-      m_axis_tid(0) => auto_ss_slidr_to_m01_couplers_TID(0),
-      m_axis_tkeep(2 downto 0) => auto_ss_slidr_to_m01_couplers_TKEEP(2 downto 0),
-      m_axis_tlast => auto_ss_slidr_to_m01_couplers_TLAST,
-      m_axis_tready => auto_ss_slidr_to_m01_couplers_TREADY,
-      m_axis_tstrb(2 downto 0) => auto_ss_slidr_to_m01_couplers_TSTRB(2 downto 0),
-      m_axis_tuser(0) => auto_ss_slidr_to_m01_couplers_TUSER(0),
-      m_axis_tvalid => auto_ss_slidr_to_m01_couplers_TVALID,
-      s_axis_tdata(23 downto 0) => auto_ss_k_to_auto_ss_slidr_TDATA(23 downto 0),
-      s_axis_tdest(0) => auto_ss_k_to_auto_ss_slidr_TDEST(0),
-      s_axis_tkeep(2 downto 0) => auto_ss_k_to_auto_ss_slidr_TKEEP(2 downto 0),
-      s_axis_tlast => auto_ss_k_to_auto_ss_slidr_TLAST,
-      s_axis_tready => auto_ss_k_to_auto_ss_slidr_TREADY,
-      s_axis_tuser(0) => auto_ss_k_to_auto_ss_slidr_TUSER(0),
-      s_axis_tvalid => auto_ss_k_to_auto_ss_slidr_TVALID
     );
 end STRUCTURE;
 library IEEE;
@@ -3037,158 +2733,6 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity s00_couplers_imp_1SJAMVN is
-  port (
-    M_AXIS_ACLK : in STD_LOGIC;
-    M_AXIS_ARESETN : in STD_LOGIC;
-    M_AXIS_tdata : out STD_LOGIC_VECTOR ( 23 downto 0 );
-    M_AXIS_tdest : out STD_LOGIC_VECTOR ( 0 to 0 );
-    M_AXIS_tid : out STD_LOGIC_VECTOR ( 0 to 0 );
-    M_AXIS_tkeep : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    M_AXIS_tlast : out STD_LOGIC;
-    M_AXIS_tready : in STD_LOGIC;
-    M_AXIS_tstrb : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    M_AXIS_tuser : out STD_LOGIC_VECTOR ( 0 to 0 );
-    M_AXIS_tvalid : out STD_LOGIC;
-    S_AXIS_ACLK : in STD_LOGIC;
-    S_AXIS_ARESETN : in STD_LOGIC;
-    S_AXIS_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    S_AXIS_tdest : in STD_LOGIC_VECTOR ( 0 to 0 );
-    S_AXIS_tlast : in STD_LOGIC_VECTOR ( 0 to 0 );
-    S_AXIS_tready : out STD_LOGIC_VECTOR ( 0 to 0 );
-    S_AXIS_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
-    S_AXIS_tvalid : in STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-end s00_couplers_imp_1SJAMVN;
-
-architecture STRUCTURE of s00_couplers_imp_1SJAMVN is
-  component hdmi_auto_ss_k_0 is
-  port (
-    aclk : in STD_LOGIC;
-    aresetn : in STD_LOGIC;
-    s_axis_tvalid : in STD_LOGIC;
-    s_axis_tready : out STD_LOGIC;
-    s_axis_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    s_axis_tlast : in STD_LOGIC;
-    s_axis_tdest : in STD_LOGIC_VECTOR ( 0 to 0 );
-    s_axis_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axis_tvalid : out STD_LOGIC;
-    m_axis_tready : in STD_LOGIC;
-    m_axis_tdata : out STD_LOGIC_VECTOR ( 23 downto 0 );
-    m_axis_tkeep : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    m_axis_tlast : out STD_LOGIC;
-    m_axis_tdest : out STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axis_tuser : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component hdmi_auto_ss_k_0;
-  component hdmi_auto_ss_slid_0 is
-  port (
-    aclk : in STD_LOGIC;
-    aresetn : in STD_LOGIC;
-    s_axis_tvalid : in STD_LOGIC;
-    s_axis_tready : out STD_LOGIC;
-    s_axis_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    s_axis_tkeep : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s_axis_tlast : in STD_LOGIC;
-    s_axis_tdest : in STD_LOGIC_VECTOR ( 0 to 0 );
-    s_axis_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axis_tvalid : out STD_LOGIC;
-    m_axis_tready : in STD_LOGIC;
-    m_axis_tdata : out STD_LOGIC_VECTOR ( 23 downto 0 );
-    m_axis_tstrb : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    m_axis_tkeep : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    m_axis_tlast : out STD_LOGIC;
-    m_axis_tid : out STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axis_tdest : out STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axis_tuser : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component hdmi_auto_ss_slid_0;
-  signal S_AXIS_ACLK_1 : STD_LOGIC;
-  signal S_AXIS_ARESETN_1 : STD_LOGIC;
-  signal auto_ss_k_to_auto_ss_slid_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal auto_ss_k_to_auto_ss_slid_TDEST : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal auto_ss_k_to_auto_ss_slid_TKEEP : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal auto_ss_k_to_auto_ss_slid_TLAST : STD_LOGIC;
-  signal auto_ss_k_to_auto_ss_slid_TREADY : STD_LOGIC;
-  signal auto_ss_k_to_auto_ss_slid_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal auto_ss_k_to_auto_ss_slid_TVALID : STD_LOGIC;
-  signal auto_ss_slid_to_s00_couplers_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal auto_ss_slid_to_s00_couplers_TDEST : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal auto_ss_slid_to_s00_couplers_TID : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal auto_ss_slid_to_s00_couplers_TKEEP : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal auto_ss_slid_to_s00_couplers_TLAST : STD_LOGIC;
-  signal auto_ss_slid_to_s00_couplers_TREADY : STD_LOGIC;
-  signal auto_ss_slid_to_s00_couplers_TSTRB : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal auto_ss_slid_to_s00_couplers_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal auto_ss_slid_to_s00_couplers_TVALID : STD_LOGIC;
-  signal s00_couplers_to_auto_ss_k_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal s00_couplers_to_auto_ss_k_TDEST : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal s00_couplers_to_auto_ss_k_TLAST : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal s00_couplers_to_auto_ss_k_TREADY : STD_LOGIC;
-  signal s00_couplers_to_auto_ss_k_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal s00_couplers_to_auto_ss_k_TVALID : STD_LOGIC_VECTOR ( 0 to 0 );
-begin
-  M_AXIS_tdata(23 downto 0) <= auto_ss_slid_to_s00_couplers_TDATA(23 downto 0);
-  M_AXIS_tdest(0) <= auto_ss_slid_to_s00_couplers_TDEST(0);
-  M_AXIS_tid(0) <= auto_ss_slid_to_s00_couplers_TID(0);
-  M_AXIS_tkeep(2 downto 0) <= auto_ss_slid_to_s00_couplers_TKEEP(2 downto 0);
-  M_AXIS_tlast <= auto_ss_slid_to_s00_couplers_TLAST;
-  M_AXIS_tstrb(2 downto 0) <= auto_ss_slid_to_s00_couplers_TSTRB(2 downto 0);
-  M_AXIS_tuser(0) <= auto_ss_slid_to_s00_couplers_TUSER(0);
-  M_AXIS_tvalid <= auto_ss_slid_to_s00_couplers_TVALID;
-  S_AXIS_ACLK_1 <= S_AXIS_ACLK;
-  S_AXIS_ARESETN_1 <= S_AXIS_ARESETN;
-  S_AXIS_tready(0) <= s00_couplers_to_auto_ss_k_TREADY;
-  auto_ss_slid_to_s00_couplers_TREADY <= M_AXIS_tready;
-  s00_couplers_to_auto_ss_k_TDATA(23 downto 0) <= S_AXIS_tdata(23 downto 0);
-  s00_couplers_to_auto_ss_k_TDEST(0) <= S_AXIS_tdest(0);
-  s00_couplers_to_auto_ss_k_TLAST(0) <= S_AXIS_tlast(0);
-  s00_couplers_to_auto_ss_k_TUSER(0) <= S_AXIS_tuser(0);
-  s00_couplers_to_auto_ss_k_TVALID(0) <= S_AXIS_tvalid(0);
-auto_ss_k: component hdmi_auto_ss_k_0
-     port map (
-      aclk => S_AXIS_ACLK_1,
-      aresetn => S_AXIS_ARESETN_1,
-      m_axis_tdata(23 downto 0) => auto_ss_k_to_auto_ss_slid_TDATA(23 downto 0),
-      m_axis_tdest(0) => auto_ss_k_to_auto_ss_slid_TDEST(0),
-      m_axis_tkeep(2 downto 0) => auto_ss_k_to_auto_ss_slid_TKEEP(2 downto 0),
-      m_axis_tlast => auto_ss_k_to_auto_ss_slid_TLAST,
-      m_axis_tready => auto_ss_k_to_auto_ss_slid_TREADY,
-      m_axis_tuser(0) => auto_ss_k_to_auto_ss_slid_TUSER(0),
-      m_axis_tvalid => auto_ss_k_to_auto_ss_slid_TVALID,
-      s_axis_tdata(23 downto 0) => s00_couplers_to_auto_ss_k_TDATA(23 downto 0),
-      s_axis_tdest(0) => s00_couplers_to_auto_ss_k_TDEST(0),
-      s_axis_tlast => s00_couplers_to_auto_ss_k_TLAST(0),
-      s_axis_tready => s00_couplers_to_auto_ss_k_TREADY,
-      s_axis_tuser(0) => s00_couplers_to_auto_ss_k_TUSER(0),
-      s_axis_tvalid => s00_couplers_to_auto_ss_k_TVALID(0)
-    );
-auto_ss_slid: component hdmi_auto_ss_slid_0
-     port map (
-      aclk => S_AXIS_ACLK_1,
-      aresetn => S_AXIS_ARESETN_1,
-      m_axis_tdata(23 downto 0) => auto_ss_slid_to_s00_couplers_TDATA(23 downto 0),
-      m_axis_tdest(0) => auto_ss_slid_to_s00_couplers_TDEST(0),
-      m_axis_tid(0) => auto_ss_slid_to_s00_couplers_TID(0),
-      m_axis_tkeep(2 downto 0) => auto_ss_slid_to_s00_couplers_TKEEP(2 downto 0),
-      m_axis_tlast => auto_ss_slid_to_s00_couplers_TLAST,
-      m_axis_tready => auto_ss_slid_to_s00_couplers_TREADY,
-      m_axis_tstrb(2 downto 0) => auto_ss_slid_to_s00_couplers_TSTRB(2 downto 0),
-      m_axis_tuser(0) => auto_ss_slid_to_s00_couplers_TUSER(0),
-      m_axis_tvalid => auto_ss_slid_to_s00_couplers_TVALID,
-      s_axis_tdata(23 downto 0) => auto_ss_k_to_auto_ss_slid_TDATA(23 downto 0),
-      s_axis_tdest(0) => auto_ss_k_to_auto_ss_slid_TDEST(0),
-      s_axis_tkeep(2 downto 0) => auto_ss_k_to_auto_ss_slid_TKEEP(2 downto 0),
-      s_axis_tlast => auto_ss_k_to_auto_ss_slid_TLAST,
-      s_axis_tready => auto_ss_k_to_auto_ss_slid_TREADY,
-      s_axis_tuser(0) => auto_ss_k_to_auto_ss_slid_TUSER(0),
-      s_axis_tvalid => auto_ss_k_to_auto_ss_slid_TVALID
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
 entity s00_couplers_imp_1UVR5X is
   port (
     M_ACLK : in STD_LOGIC;
@@ -3295,92 +2839,6 @@ begin
   s00_couplers_to_s00_couplers_WREADY(0) <= M_AXI_wready(0);
   s00_couplers_to_s00_couplers_WSTRB(3 downto 0) <= S_AXI_wstrb(3 downto 0);
   s00_couplers_to_s00_couplers_WVALID(0) <= S_AXI_wvalid(0);
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity s00_couplers_imp_25M5RM is
-  port (
-    M_AXIS_ACLK : in STD_LOGIC;
-    M_AXIS_ARESETN : in STD_LOGIC;
-    M_AXIS_tdata : out STD_LOGIC_VECTOR ( 23 downto 0 );
-    M_AXIS_tdest : out STD_LOGIC_VECTOR ( 0 to 0 );
-    M_AXIS_tlast : out STD_LOGIC;
-    M_AXIS_tready : in STD_LOGIC;
-    M_AXIS_tuser : out STD_LOGIC_VECTOR ( 0 to 0 );
-    M_AXIS_tvalid : out STD_LOGIC;
-    S_AXIS_ACLK : in STD_LOGIC;
-    S_AXIS_ARESETN : in STD_LOGIC;
-    S_AXIS_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    S_AXIS_tlast : in STD_LOGIC;
-    S_AXIS_tready : out STD_LOGIC;
-    S_AXIS_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
-    S_AXIS_tvalid : in STD_LOGIC
-  );
-end s00_couplers_imp_25M5RM;
-
-architecture STRUCTURE of s00_couplers_imp_25M5RM is
-  component hdmi_auto_ss_slid_1 is
-  port (
-    aclk : in STD_LOGIC;
-    aresetn : in STD_LOGIC;
-    s_axis_tvalid : in STD_LOGIC;
-    s_axis_tready : out STD_LOGIC;
-    s_axis_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    s_axis_tlast : in STD_LOGIC;
-    s_axis_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axis_tvalid : out STD_LOGIC;
-    m_axis_tready : in STD_LOGIC;
-    m_axis_tdata : out STD_LOGIC_VECTOR ( 23 downto 0 );
-    m_axis_tlast : out STD_LOGIC;
-    m_axis_tdest : out STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axis_tuser : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component hdmi_auto_ss_slid_1;
-  signal S_AXIS_ACLK_1 : STD_LOGIC;
-  signal S_AXIS_ARESETN_1 : STD_LOGIC;
-  signal auto_ss_slid_to_s00_couplers_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal auto_ss_slid_to_s00_couplers_TDEST : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal auto_ss_slid_to_s00_couplers_TLAST : STD_LOGIC;
-  signal auto_ss_slid_to_s00_couplers_TREADY : STD_LOGIC;
-  signal auto_ss_slid_to_s00_couplers_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal auto_ss_slid_to_s00_couplers_TVALID : STD_LOGIC;
-  signal s00_couplers_to_auto_ss_slid_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal s00_couplers_to_auto_ss_slid_TLAST : STD_LOGIC;
-  signal s00_couplers_to_auto_ss_slid_TREADY : STD_LOGIC;
-  signal s00_couplers_to_auto_ss_slid_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal s00_couplers_to_auto_ss_slid_TVALID : STD_LOGIC;
-begin
-  M_AXIS_tdata(23 downto 0) <= auto_ss_slid_to_s00_couplers_TDATA(23 downto 0);
-  M_AXIS_tdest(0) <= auto_ss_slid_to_s00_couplers_TDEST(0);
-  M_AXIS_tlast <= auto_ss_slid_to_s00_couplers_TLAST;
-  M_AXIS_tuser(0) <= auto_ss_slid_to_s00_couplers_TUSER(0);
-  M_AXIS_tvalid <= auto_ss_slid_to_s00_couplers_TVALID;
-  S_AXIS_ACLK_1 <= S_AXIS_ACLK;
-  S_AXIS_ARESETN_1 <= S_AXIS_ARESETN;
-  S_AXIS_tready <= s00_couplers_to_auto_ss_slid_TREADY;
-  auto_ss_slid_to_s00_couplers_TREADY <= M_AXIS_tready;
-  s00_couplers_to_auto_ss_slid_TDATA(23 downto 0) <= S_AXIS_tdata(23 downto 0);
-  s00_couplers_to_auto_ss_slid_TLAST <= S_AXIS_tlast;
-  s00_couplers_to_auto_ss_slid_TUSER(0) <= S_AXIS_tuser(0);
-  s00_couplers_to_auto_ss_slid_TVALID <= S_AXIS_tvalid;
-auto_ss_slid: component hdmi_auto_ss_slid_1
-     port map (
-      aclk => S_AXIS_ACLK_1,
-      aresetn => S_AXIS_ARESETN_1,
-      m_axis_tdata(23 downto 0) => auto_ss_slid_to_s00_couplers_TDATA(23 downto 0),
-      m_axis_tdest(0) => auto_ss_slid_to_s00_couplers_TDEST(0),
-      m_axis_tlast => auto_ss_slid_to_s00_couplers_TLAST,
-      m_axis_tready => auto_ss_slid_to_s00_couplers_TREADY,
-      m_axis_tuser(0) => auto_ss_slid_to_s00_couplers_TUSER(0),
-      m_axis_tvalid => auto_ss_slid_to_s00_couplers_TVALID,
-      s_axis_tdata(23 downto 0) => s00_couplers_to_auto_ss_slid_TDATA(23 downto 0),
-      s_axis_tlast => s00_couplers_to_auto_ss_slid_TLAST,
-      s_axis_tready => s00_couplers_to_auto_ss_slid_TREADY,
-      s_axis_tuser(0) => s00_couplers_to_auto_ss_slid_TUSER(0),
-      s_axis_tvalid => s00_couplers_to_auto_ss_slid_TVALID
-    );
 end STRUCTURE;
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -3803,67 +3261,6 @@ s01_regslice: component hdmi_s01_regslice_0
       s_axi_wstrb(7 downto 0) => s01_couplers_to_s01_regslice_WSTRB(7 downto 0),
       s_axi_wvalid => s01_couplers_to_s01_regslice_WVALID
     );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity s01_couplers_imp_WMMJVP is
-  port (
-    M_AXIS_ACLK : in STD_LOGIC;
-    M_AXIS_ARESETN : in STD_LOGIC;
-    M_AXIS_tdata : out STD_LOGIC_VECTOR ( 23 downto 0 );
-    M_AXIS_tdest : out STD_LOGIC_VECTOR ( 0 to 0 );
-    M_AXIS_tid : out STD_LOGIC_VECTOR ( 0 to 0 );
-    M_AXIS_tkeep : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    M_AXIS_tlast : out STD_LOGIC_VECTOR ( 0 to 0 );
-    M_AXIS_tready : in STD_LOGIC;
-    M_AXIS_tstrb : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    M_AXIS_tuser : out STD_LOGIC_VECTOR ( 0 to 0 );
-    M_AXIS_tvalid : out STD_LOGIC;
-    S_AXIS_ACLK : in STD_LOGIC;
-    S_AXIS_ARESETN : in STD_LOGIC;
-    S_AXIS_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    S_AXIS_tdest : in STD_LOGIC_VECTOR ( 0 to 0 );
-    S_AXIS_tid : in STD_LOGIC_VECTOR ( 0 to 0 );
-    S_AXIS_tkeep : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    S_AXIS_tlast : in STD_LOGIC_VECTOR ( 0 to 0 );
-    S_AXIS_tready : out STD_LOGIC;
-    S_AXIS_tstrb : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    S_AXIS_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
-    S_AXIS_tvalid : in STD_LOGIC
-  );
-end s01_couplers_imp_WMMJVP;
-
-architecture STRUCTURE of s01_couplers_imp_WMMJVP is
-  signal s01_couplers_to_s01_couplers_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal s01_couplers_to_s01_couplers_TDEST : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal s01_couplers_to_s01_couplers_TID : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal s01_couplers_to_s01_couplers_TKEEP : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal s01_couplers_to_s01_couplers_TLAST : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal s01_couplers_to_s01_couplers_TREADY : STD_LOGIC;
-  signal s01_couplers_to_s01_couplers_TSTRB : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal s01_couplers_to_s01_couplers_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal s01_couplers_to_s01_couplers_TVALID : STD_LOGIC;
-begin
-  M_AXIS_tdata(23 downto 0) <= s01_couplers_to_s01_couplers_TDATA(23 downto 0);
-  M_AXIS_tdest(0) <= s01_couplers_to_s01_couplers_TDEST(0);
-  M_AXIS_tid(0) <= s01_couplers_to_s01_couplers_TID(0);
-  M_AXIS_tkeep(2 downto 0) <= s01_couplers_to_s01_couplers_TKEEP(2 downto 0);
-  M_AXIS_tlast(0) <= s01_couplers_to_s01_couplers_TLAST(0);
-  M_AXIS_tstrb(2 downto 0) <= s01_couplers_to_s01_couplers_TSTRB(2 downto 0);
-  M_AXIS_tuser(0) <= s01_couplers_to_s01_couplers_TUSER(0);
-  M_AXIS_tvalid <= s01_couplers_to_s01_couplers_TVALID;
-  S_AXIS_tready <= s01_couplers_to_s01_couplers_TREADY;
-  s01_couplers_to_s01_couplers_TDATA(23 downto 0) <= S_AXIS_tdata(23 downto 0);
-  s01_couplers_to_s01_couplers_TDEST(0) <= S_AXIS_tdest(0);
-  s01_couplers_to_s01_couplers_TID(0) <= S_AXIS_tid(0);
-  s01_couplers_to_s01_couplers_TKEEP(2 downto 0) <= S_AXIS_tkeep(2 downto 0);
-  s01_couplers_to_s01_couplers_TLAST(0) <= S_AXIS_tlast(0);
-  s01_couplers_to_s01_couplers_TREADY <= M_AXIS_tready;
-  s01_couplers_to_s01_couplers_TSTRB(2 downto 0) <= S_AXIS_tstrb(2 downto 0);
-  s01_couplers_to_s01_couplers_TUSER(0) <= S_AXIS_tuser(0);
-  s01_couplers_to_s01_couplers_TVALID <= S_AXIS_tvalid;
 end STRUCTURE;
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -5462,475 +4859,6 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity hdmi_axis_interconnect_0_0 is
-  port (
-    ACLK : in STD_LOGIC;
-    ARESETN : in STD_LOGIC;
-    M00_AXIS_ACLK : in STD_LOGIC;
-    M00_AXIS_ARESETN : in STD_LOGIC;
-    M00_AXIS_tdata : out STD_LOGIC_VECTOR ( 23 downto 0 );
-    M00_AXIS_tkeep : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    M00_AXIS_tlast : out STD_LOGIC;
-    M00_AXIS_tready : in STD_LOGIC;
-    M00_AXIS_tuser : out STD_LOGIC_VECTOR ( 0 to 0 );
-    M00_AXIS_tvalid : out STD_LOGIC;
-    S00_ARB_REQ_SUPPRESS : in STD_LOGIC;
-    S00_AXIS_ACLK : in STD_LOGIC;
-    S00_AXIS_ARESETN : in STD_LOGIC;
-    S00_AXIS_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    S00_AXIS_tdest : in STD_LOGIC_VECTOR ( 0 to 0 );
-    S00_AXIS_tlast : in STD_LOGIC_VECTOR ( 0 to 0 );
-    S00_AXIS_tready : out STD_LOGIC_VECTOR ( 0 to 0 );
-    S00_AXIS_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
-    S00_AXIS_tvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
-    S01_ARB_REQ_SUPPRESS : in STD_LOGIC;
-    S01_AXIS_ACLK : in STD_LOGIC;
-    S01_AXIS_ARESETN : in STD_LOGIC;
-    S01_AXIS_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    S01_AXIS_tdest : in STD_LOGIC_VECTOR ( 0 to 0 );
-    S01_AXIS_tid : in STD_LOGIC_VECTOR ( 0 to 0 );
-    S01_AXIS_tkeep : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    S01_AXIS_tlast : in STD_LOGIC_VECTOR ( 0 to 0 );
-    S01_AXIS_tready : out STD_LOGIC;
-    S01_AXIS_tstrb : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    S01_AXIS_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
-    S01_AXIS_tvalid : in STD_LOGIC
-  );
-end hdmi_axis_interconnect_0_0;
-
-architecture STRUCTURE of hdmi_axis_interconnect_0_0 is
-  component hdmi_xbar_2 is
-  port (
-    aclk : in STD_LOGIC;
-    aresetn : in STD_LOGIC;
-    s_axis_tvalid : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    s_axis_tready : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s_axis_tdata : in STD_LOGIC_VECTOR ( 47 downto 0 );
-    s_axis_tstrb : in STD_LOGIC_VECTOR ( 5 downto 0 );
-    s_axis_tkeep : in STD_LOGIC_VECTOR ( 5 downto 0 );
-    s_axis_tlast : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    s_axis_tid : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    s_axis_tdest : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    s_axis_tuser : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axis_tvalid : out STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axis_tready : in STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axis_tdata : out STD_LOGIC_VECTOR ( 23 downto 0 );
-    m_axis_tstrb : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    m_axis_tkeep : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    m_axis_tlast : out STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axis_tid : out STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axis_tdest : out STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axis_tuser : out STD_LOGIC_VECTOR ( 0 to 0 );
-    s_req_suppress : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    s_decode_err : out STD_LOGIC_VECTOR ( 1 downto 0 )
-  );
-  end component hdmi_xbar_2;
-  component hdmi_s_arb_req_suppress_concat_0 is
-  port (
-    In0 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    In1 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    dout : out STD_LOGIC_VECTOR ( 1 downto 0 )
-  );
-  end component hdmi_s_arb_req_suppress_concat_0;
-  signal axis_interconnect_0_ACLK_net : STD_LOGIC;
-  signal axis_interconnect_0_ARESETN_net : STD_LOGIC;
-  signal axis_interconnect_0_to_s00_couplers_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal axis_interconnect_0_to_s00_couplers_TDEST : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal axis_interconnect_0_to_s00_couplers_TLAST : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal axis_interconnect_0_to_s00_couplers_TREADY : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal axis_interconnect_0_to_s00_couplers_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal axis_interconnect_0_to_s00_couplers_TVALID : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal axis_interconnect_0_to_s01_couplers_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal axis_interconnect_0_to_s01_couplers_TDEST : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal axis_interconnect_0_to_s01_couplers_TID : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal axis_interconnect_0_to_s01_couplers_TKEEP : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal axis_interconnect_0_to_s01_couplers_TLAST : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal axis_interconnect_0_to_s01_couplers_TREADY : STD_LOGIC;
-  signal axis_interconnect_0_to_s01_couplers_TSTRB : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal axis_interconnect_0_to_s01_couplers_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal axis_interconnect_0_to_s01_couplers_TVALID : STD_LOGIC;
-  signal m00_couplers_to_axis_interconnect_0_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal m00_couplers_to_axis_interconnect_0_TKEEP : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal m00_couplers_to_axis_interconnect_0_TLAST : STD_LOGIC;
-  signal m00_couplers_to_axis_interconnect_0_TREADY : STD_LOGIC;
-  signal m00_couplers_to_axis_interconnect_0_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal m00_couplers_to_axis_interconnect_0_TVALID : STD_LOGIC;
-  signal s00_arb_req_suppress_to_s_arb_req_suppress_concat : STD_LOGIC;
-  signal s00_couplers_to_xbar_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal s00_couplers_to_xbar_TDEST : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal s00_couplers_to_xbar_TID : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal s00_couplers_to_xbar_TKEEP : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal s00_couplers_to_xbar_TLAST : STD_LOGIC;
-  signal s00_couplers_to_xbar_TREADY : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal s00_couplers_to_xbar_TSTRB : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal s00_couplers_to_xbar_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal s00_couplers_to_xbar_TVALID : STD_LOGIC;
-  signal s01_arb_req_suppress_to_s_arb_req_suppress_concat : STD_LOGIC;
-  signal s01_couplers_to_xbar_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal s01_couplers_to_xbar_TDEST : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal s01_couplers_to_xbar_TID : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal s01_couplers_to_xbar_TKEEP : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal s01_couplers_to_xbar_TLAST : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal s01_couplers_to_xbar_TREADY : STD_LOGIC_VECTOR ( 1 to 1 );
-  signal s01_couplers_to_xbar_TSTRB : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal s01_couplers_to_xbar_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal s01_couplers_to_xbar_TVALID : STD_LOGIC;
-  signal s_arb_req_suppress_concat_dout : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal xbar_to_m00_couplers_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal xbar_to_m00_couplers_TDEST : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal xbar_to_m00_couplers_TID : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal xbar_to_m00_couplers_TKEEP : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal xbar_to_m00_couplers_TLAST : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal xbar_to_m00_couplers_TREADY : STD_LOGIC;
-  signal xbar_to_m00_couplers_TSTRB : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal xbar_to_m00_couplers_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal xbar_to_m00_couplers_TVALID : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal NLW_xbar_s_decode_err_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
-begin
-  M00_AXIS_tdata(23 downto 0) <= m00_couplers_to_axis_interconnect_0_TDATA(23 downto 0);
-  M00_AXIS_tkeep(2 downto 0) <= m00_couplers_to_axis_interconnect_0_TKEEP(2 downto 0);
-  M00_AXIS_tlast <= m00_couplers_to_axis_interconnect_0_TLAST;
-  M00_AXIS_tuser(0) <= m00_couplers_to_axis_interconnect_0_TUSER(0);
-  M00_AXIS_tvalid <= m00_couplers_to_axis_interconnect_0_TVALID;
-  S00_AXIS_tready(0) <= axis_interconnect_0_to_s00_couplers_TREADY(0);
-  S01_AXIS_tready <= axis_interconnect_0_to_s01_couplers_TREADY;
-  axis_interconnect_0_ACLK_net <= ACLK;
-  axis_interconnect_0_ARESETN_net <= ARESETN;
-  axis_interconnect_0_to_s00_couplers_TDATA(23 downto 0) <= S00_AXIS_tdata(23 downto 0);
-  axis_interconnect_0_to_s00_couplers_TDEST(0) <= S00_AXIS_tdest(0);
-  axis_interconnect_0_to_s00_couplers_TLAST(0) <= S00_AXIS_tlast(0);
-  axis_interconnect_0_to_s00_couplers_TUSER(0) <= S00_AXIS_tuser(0);
-  axis_interconnect_0_to_s00_couplers_TVALID(0) <= S00_AXIS_tvalid(0);
-  axis_interconnect_0_to_s01_couplers_TDATA(23 downto 0) <= S01_AXIS_tdata(23 downto 0);
-  axis_interconnect_0_to_s01_couplers_TDEST(0) <= S01_AXIS_tdest(0);
-  axis_interconnect_0_to_s01_couplers_TID(0) <= S01_AXIS_tid(0);
-  axis_interconnect_0_to_s01_couplers_TKEEP(2 downto 0) <= S01_AXIS_tkeep(2 downto 0);
-  axis_interconnect_0_to_s01_couplers_TLAST(0) <= S01_AXIS_tlast(0);
-  axis_interconnect_0_to_s01_couplers_TSTRB(2 downto 0) <= S01_AXIS_tstrb(2 downto 0);
-  axis_interconnect_0_to_s01_couplers_TUSER(0) <= S01_AXIS_tuser(0);
-  axis_interconnect_0_to_s01_couplers_TVALID <= S01_AXIS_tvalid;
-  m00_couplers_to_axis_interconnect_0_TREADY <= M00_AXIS_tready;
-  s00_arb_req_suppress_to_s_arb_req_suppress_concat <= S00_ARB_REQ_SUPPRESS;
-  s01_arb_req_suppress_to_s_arb_req_suppress_concat <= S01_ARB_REQ_SUPPRESS;
-m00_couplers: entity work.m00_couplers_imp_CTFZAE
-     port map (
-      M_AXIS_ACLK => axis_interconnect_0_ACLK_net,
-      M_AXIS_ARESETN => axis_interconnect_0_ARESETN_net,
-      M_AXIS_tdata(23 downto 0) => m00_couplers_to_axis_interconnect_0_TDATA(23 downto 0),
-      M_AXIS_tkeep(2 downto 0) => m00_couplers_to_axis_interconnect_0_TKEEP(2 downto 0),
-      M_AXIS_tlast => m00_couplers_to_axis_interconnect_0_TLAST,
-      M_AXIS_tready => m00_couplers_to_axis_interconnect_0_TREADY,
-      M_AXIS_tuser(0) => m00_couplers_to_axis_interconnect_0_TUSER(0),
-      M_AXIS_tvalid => m00_couplers_to_axis_interconnect_0_TVALID,
-      S_AXIS_ACLK => axis_interconnect_0_ACLK_net,
-      S_AXIS_ARESETN => axis_interconnect_0_ARESETN_net,
-      S_AXIS_tdata(23 downto 0) => xbar_to_m00_couplers_TDATA(23 downto 0),
-      S_AXIS_tdest(0) => xbar_to_m00_couplers_TDEST(0),
-      S_AXIS_tid(0) => xbar_to_m00_couplers_TID(0),
-      S_AXIS_tkeep(2 downto 0) => xbar_to_m00_couplers_TKEEP(2 downto 0),
-      S_AXIS_tlast => xbar_to_m00_couplers_TLAST(0),
-      S_AXIS_tready => xbar_to_m00_couplers_TREADY,
-      S_AXIS_tstrb(2 downto 0) => xbar_to_m00_couplers_TSTRB(2 downto 0),
-      S_AXIS_tuser(0) => xbar_to_m00_couplers_TUSER(0),
-      S_AXIS_tvalid => xbar_to_m00_couplers_TVALID(0)
-    );
-s00_couplers: entity work.s00_couplers_imp_1SJAMVN
-     port map (
-      M_AXIS_ACLK => axis_interconnect_0_ACLK_net,
-      M_AXIS_ARESETN => axis_interconnect_0_ARESETN_net,
-      M_AXIS_tdata(23 downto 0) => s00_couplers_to_xbar_TDATA(23 downto 0),
-      M_AXIS_tdest(0) => s00_couplers_to_xbar_TDEST(0),
-      M_AXIS_tid(0) => s00_couplers_to_xbar_TID(0),
-      M_AXIS_tkeep(2 downto 0) => s00_couplers_to_xbar_TKEEP(2 downto 0),
-      M_AXIS_tlast => s00_couplers_to_xbar_TLAST,
-      M_AXIS_tready => s00_couplers_to_xbar_TREADY(0),
-      M_AXIS_tstrb(2 downto 0) => s00_couplers_to_xbar_TSTRB(2 downto 0),
-      M_AXIS_tuser(0) => s00_couplers_to_xbar_TUSER(0),
-      M_AXIS_tvalid => s00_couplers_to_xbar_TVALID,
-      S_AXIS_ACLK => axis_interconnect_0_ACLK_net,
-      S_AXIS_ARESETN => axis_interconnect_0_ARESETN_net,
-      S_AXIS_tdata(23 downto 0) => axis_interconnect_0_to_s00_couplers_TDATA(23 downto 0),
-      S_AXIS_tdest(0) => axis_interconnect_0_to_s00_couplers_TDEST(0),
-      S_AXIS_tlast(0) => axis_interconnect_0_to_s00_couplers_TLAST(0),
-      S_AXIS_tready(0) => axis_interconnect_0_to_s00_couplers_TREADY(0),
-      S_AXIS_tuser(0) => axis_interconnect_0_to_s00_couplers_TUSER(0),
-      S_AXIS_tvalid(0) => axis_interconnect_0_to_s00_couplers_TVALID(0)
-    );
-s01_couplers: entity work.s01_couplers_imp_WMMJVP
-     port map (
-      M_AXIS_ACLK => axis_interconnect_0_ACLK_net,
-      M_AXIS_ARESETN => axis_interconnect_0_ARESETN_net,
-      M_AXIS_tdata(23 downto 0) => s01_couplers_to_xbar_TDATA(23 downto 0),
-      M_AXIS_tdest(0) => s01_couplers_to_xbar_TDEST(0),
-      M_AXIS_tid(0) => s01_couplers_to_xbar_TID(0),
-      M_AXIS_tkeep(2 downto 0) => s01_couplers_to_xbar_TKEEP(2 downto 0),
-      M_AXIS_tlast(0) => s01_couplers_to_xbar_TLAST(0),
-      M_AXIS_tready => s01_couplers_to_xbar_TREADY(1),
-      M_AXIS_tstrb(2 downto 0) => s01_couplers_to_xbar_TSTRB(2 downto 0),
-      M_AXIS_tuser(0) => s01_couplers_to_xbar_TUSER(0),
-      M_AXIS_tvalid => s01_couplers_to_xbar_TVALID,
-      S_AXIS_ACLK => axis_interconnect_0_ACLK_net,
-      S_AXIS_ARESETN => axis_interconnect_0_ARESETN_net,
-      S_AXIS_tdata(23 downto 0) => axis_interconnect_0_to_s01_couplers_TDATA(23 downto 0),
-      S_AXIS_tdest(0) => axis_interconnect_0_to_s01_couplers_TDEST(0),
-      S_AXIS_tid(0) => axis_interconnect_0_to_s01_couplers_TID(0),
-      S_AXIS_tkeep(2 downto 0) => axis_interconnect_0_to_s01_couplers_TKEEP(2 downto 0),
-      S_AXIS_tlast(0) => axis_interconnect_0_to_s01_couplers_TLAST(0),
-      S_AXIS_tready => axis_interconnect_0_to_s01_couplers_TREADY,
-      S_AXIS_tstrb(2 downto 0) => axis_interconnect_0_to_s01_couplers_TSTRB(2 downto 0),
-      S_AXIS_tuser(0) => axis_interconnect_0_to_s01_couplers_TUSER(0),
-      S_AXIS_tvalid => axis_interconnect_0_to_s01_couplers_TVALID
-    );
-s_arb_req_suppress_concat: component hdmi_s_arb_req_suppress_concat_0
-     port map (
-      In0(0) => s00_arb_req_suppress_to_s_arb_req_suppress_concat,
-      In1(0) => s01_arb_req_suppress_to_s_arb_req_suppress_concat,
-      dout(1 downto 0) => s_arb_req_suppress_concat_dout(1 downto 0)
-    );
-xbar: component hdmi_xbar_2
-     port map (
-      aclk => axis_interconnect_0_ACLK_net,
-      aresetn => axis_interconnect_0_ARESETN_net,
-      m_axis_tdata(23 downto 0) => xbar_to_m00_couplers_TDATA(23 downto 0),
-      m_axis_tdest(0) => xbar_to_m00_couplers_TDEST(0),
-      m_axis_tid(0) => xbar_to_m00_couplers_TID(0),
-      m_axis_tkeep(2 downto 0) => xbar_to_m00_couplers_TKEEP(2 downto 0),
-      m_axis_tlast(0) => xbar_to_m00_couplers_TLAST(0),
-      m_axis_tready(0) => xbar_to_m00_couplers_TREADY,
-      m_axis_tstrb(2 downto 0) => xbar_to_m00_couplers_TSTRB(2 downto 0),
-      m_axis_tuser(0) => xbar_to_m00_couplers_TUSER(0),
-      m_axis_tvalid(0) => xbar_to_m00_couplers_TVALID(0),
-      s_axis_tdata(47 downto 24) => s01_couplers_to_xbar_TDATA(23 downto 0),
-      s_axis_tdata(23 downto 0) => s00_couplers_to_xbar_TDATA(23 downto 0),
-      s_axis_tdest(1) => s01_couplers_to_xbar_TDEST(0),
-      s_axis_tdest(0) => s00_couplers_to_xbar_TDEST(0),
-      s_axis_tid(1) => s01_couplers_to_xbar_TID(0),
-      s_axis_tid(0) => s00_couplers_to_xbar_TID(0),
-      s_axis_tkeep(5 downto 3) => s01_couplers_to_xbar_TKEEP(2 downto 0),
-      s_axis_tkeep(2 downto 0) => s00_couplers_to_xbar_TKEEP(2 downto 0),
-      s_axis_tlast(1) => s01_couplers_to_xbar_TLAST(0),
-      s_axis_tlast(0) => s00_couplers_to_xbar_TLAST,
-      s_axis_tready(1) => s01_couplers_to_xbar_TREADY(1),
-      s_axis_tready(0) => s00_couplers_to_xbar_TREADY(0),
-      s_axis_tstrb(5 downto 3) => s01_couplers_to_xbar_TSTRB(2 downto 0),
-      s_axis_tstrb(2 downto 0) => s00_couplers_to_xbar_TSTRB(2 downto 0),
-      s_axis_tuser(1) => s01_couplers_to_xbar_TUSER(0),
-      s_axis_tuser(0) => s00_couplers_to_xbar_TUSER(0),
-      s_axis_tvalid(1) => s01_couplers_to_xbar_TVALID,
-      s_axis_tvalid(0) => s00_couplers_to_xbar_TVALID,
-      s_decode_err(1 downto 0) => NLW_xbar_s_decode_err_UNCONNECTED(1 downto 0),
-      s_req_suppress(1 downto 0) => s_arb_req_suppress_concat_dout(1 downto 0)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity hdmi_axis_interconnect_0_1 is
-  port (
-    ACLK : in STD_LOGIC;
-    ARESETN : in STD_LOGIC;
-    M00_AXIS_ACLK : in STD_LOGIC;
-    M00_AXIS_ARESETN : in STD_LOGIC;
-    M00_AXIS_tdata : out STD_LOGIC_VECTOR ( 23 downto 0 );
-    M00_AXIS_tdest : out STD_LOGIC_VECTOR ( 0 to 0 );
-    M00_AXIS_tlast : out STD_LOGIC_VECTOR ( 0 to 0 );
-    M00_AXIS_tready : in STD_LOGIC_VECTOR ( 0 to 0 );
-    M00_AXIS_tuser : out STD_LOGIC_VECTOR ( 0 to 0 );
-    M00_AXIS_tvalid : out STD_LOGIC_VECTOR ( 0 to 0 );
-    M01_AXIS_ACLK : in STD_LOGIC;
-    M01_AXIS_ARESETN : in STD_LOGIC;
-    M01_AXIS_tdata : out STD_LOGIC_VECTOR ( 23 downto 0 );
-    M01_AXIS_tdest : out STD_LOGIC_VECTOR ( 0 to 0 );
-    M01_AXIS_tid : out STD_LOGIC_VECTOR ( 0 to 0 );
-    M01_AXIS_tkeep : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    M01_AXIS_tlast : out STD_LOGIC;
-    M01_AXIS_tready : in STD_LOGIC;
-    M01_AXIS_tstrb : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    M01_AXIS_tuser : out STD_LOGIC_VECTOR ( 0 to 0 );
-    M01_AXIS_tvalid : out STD_LOGIC;
-    S00_AXIS_ACLK : in STD_LOGIC;
-    S00_AXIS_ARESETN : in STD_LOGIC;
-    S00_AXIS_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    S00_AXIS_tlast : in STD_LOGIC;
-    S00_AXIS_tready : out STD_LOGIC;
-    S00_AXIS_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
-    S00_AXIS_tvalid : in STD_LOGIC
-  );
-end hdmi_axis_interconnect_0_1;
-
-architecture STRUCTURE of hdmi_axis_interconnect_0_1 is
-  component hdmi_xbar_3 is
-  port (
-    aclk : in STD_LOGIC;
-    aresetn : in STD_LOGIC;
-    s_axis_tvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
-    s_axis_tready : out STD_LOGIC_VECTOR ( 0 to 0 );
-    s_axis_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    s_axis_tlast : in STD_LOGIC_VECTOR ( 0 to 0 );
-    s_axis_tdest : in STD_LOGIC_VECTOR ( 0 to 0 );
-    s_axis_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axis_tvalid : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axis_tready : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axis_tdata : out STD_LOGIC_VECTOR ( 47 downto 0 );
-    m_axis_tlast : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axis_tdest : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axis_tuser : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s_decode_err : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component hdmi_xbar_3;
-  signal axis_interconnect_1_ACLK_net : STD_LOGIC;
-  signal axis_interconnect_1_ARESETN_net : STD_LOGIC;
-  signal axis_interconnect_1_to_s00_couplers_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal axis_interconnect_1_to_s00_couplers_TLAST : STD_LOGIC;
-  signal axis_interconnect_1_to_s00_couplers_TREADY : STD_LOGIC;
-  signal axis_interconnect_1_to_s00_couplers_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal axis_interconnect_1_to_s00_couplers_TVALID : STD_LOGIC;
-  signal m00_couplers_to_axis_interconnect_1_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal m00_couplers_to_axis_interconnect_1_TDEST : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal m00_couplers_to_axis_interconnect_1_TLAST : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal m00_couplers_to_axis_interconnect_1_TREADY : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal m00_couplers_to_axis_interconnect_1_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal m00_couplers_to_axis_interconnect_1_TVALID : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal m01_couplers_to_axis_interconnect_1_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal m01_couplers_to_axis_interconnect_1_TDEST : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal m01_couplers_to_axis_interconnect_1_TID : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal m01_couplers_to_axis_interconnect_1_TKEEP : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal m01_couplers_to_axis_interconnect_1_TLAST : STD_LOGIC;
-  signal m01_couplers_to_axis_interconnect_1_TREADY : STD_LOGIC;
-  signal m01_couplers_to_axis_interconnect_1_TSTRB : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal m01_couplers_to_axis_interconnect_1_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal m01_couplers_to_axis_interconnect_1_TVALID : STD_LOGIC;
-  signal s00_couplers_to_xbar_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal s00_couplers_to_xbar_TDEST : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal s00_couplers_to_xbar_TLAST : STD_LOGIC;
-  signal s00_couplers_to_xbar_TREADY : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal s00_couplers_to_xbar_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal s00_couplers_to_xbar_TVALID : STD_LOGIC;
-  signal xbar_to_m00_couplers_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal xbar_to_m00_couplers_TDEST : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal xbar_to_m00_couplers_TLAST : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal xbar_to_m00_couplers_TREADY : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal xbar_to_m00_couplers_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal xbar_to_m00_couplers_TVALID : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal xbar_to_m01_couplers_TDATA : STD_LOGIC_VECTOR ( 47 downto 24 );
-  signal xbar_to_m01_couplers_TDEST : STD_LOGIC_VECTOR ( 1 to 1 );
-  signal xbar_to_m01_couplers_TLAST : STD_LOGIC_VECTOR ( 1 to 1 );
-  signal xbar_to_m01_couplers_TREADY : STD_LOGIC;
-  signal xbar_to_m01_couplers_TUSER : STD_LOGIC_VECTOR ( 1 to 1 );
-  signal xbar_to_m01_couplers_TVALID : STD_LOGIC_VECTOR ( 1 to 1 );
-  signal NLW_xbar_s_decode_err_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
-begin
-  M00_AXIS_tdata(23 downto 0) <= m00_couplers_to_axis_interconnect_1_TDATA(23 downto 0);
-  M00_AXIS_tdest(0) <= m00_couplers_to_axis_interconnect_1_TDEST(0);
-  M00_AXIS_tlast(0) <= m00_couplers_to_axis_interconnect_1_TLAST(0);
-  M00_AXIS_tuser(0) <= m00_couplers_to_axis_interconnect_1_TUSER(0);
-  M00_AXIS_tvalid(0) <= m00_couplers_to_axis_interconnect_1_TVALID(0);
-  M01_AXIS_tdata(23 downto 0) <= m01_couplers_to_axis_interconnect_1_TDATA(23 downto 0);
-  M01_AXIS_tdest(0) <= m01_couplers_to_axis_interconnect_1_TDEST(0);
-  M01_AXIS_tid(0) <= m01_couplers_to_axis_interconnect_1_TID(0);
-  M01_AXIS_tkeep(2 downto 0) <= m01_couplers_to_axis_interconnect_1_TKEEP(2 downto 0);
-  M01_AXIS_tlast <= m01_couplers_to_axis_interconnect_1_TLAST;
-  M01_AXIS_tstrb(2 downto 0) <= m01_couplers_to_axis_interconnect_1_TSTRB(2 downto 0);
-  M01_AXIS_tuser(0) <= m01_couplers_to_axis_interconnect_1_TUSER(0);
-  M01_AXIS_tvalid <= m01_couplers_to_axis_interconnect_1_TVALID;
-  S00_AXIS_tready <= axis_interconnect_1_to_s00_couplers_TREADY;
-  axis_interconnect_1_ACLK_net <= ACLK;
-  axis_interconnect_1_ARESETN_net <= ARESETN;
-  axis_interconnect_1_to_s00_couplers_TDATA(23 downto 0) <= S00_AXIS_tdata(23 downto 0);
-  axis_interconnect_1_to_s00_couplers_TLAST <= S00_AXIS_tlast;
-  axis_interconnect_1_to_s00_couplers_TUSER(0) <= S00_AXIS_tuser(0);
-  axis_interconnect_1_to_s00_couplers_TVALID <= S00_AXIS_tvalid;
-  m00_couplers_to_axis_interconnect_1_TREADY(0) <= M00_AXIS_tready(0);
-  m01_couplers_to_axis_interconnect_1_TREADY <= M01_AXIS_tready;
-m00_couplers: entity work.m00_couplers_imp_1HNLV2F
-     port map (
-      M_AXIS_ACLK => axis_interconnect_1_ACLK_net,
-      M_AXIS_ARESETN => axis_interconnect_1_ARESETN_net,
-      M_AXIS_tdata(23 downto 0) => m00_couplers_to_axis_interconnect_1_TDATA(23 downto 0),
-      M_AXIS_tdest(0) => m00_couplers_to_axis_interconnect_1_TDEST(0),
-      M_AXIS_tlast(0) => m00_couplers_to_axis_interconnect_1_TLAST(0),
-      M_AXIS_tready(0) => m00_couplers_to_axis_interconnect_1_TREADY(0),
-      M_AXIS_tuser(0) => m00_couplers_to_axis_interconnect_1_TUSER(0),
-      M_AXIS_tvalid(0) => m00_couplers_to_axis_interconnect_1_TVALID(0),
-      S_AXIS_ACLK => axis_interconnect_1_ACLK_net,
-      S_AXIS_ARESETN => axis_interconnect_1_ARESETN_net,
-      S_AXIS_tdata(23 downto 0) => xbar_to_m00_couplers_TDATA(23 downto 0),
-      S_AXIS_tdest(0) => xbar_to_m00_couplers_TDEST(0),
-      S_AXIS_tlast(0) => xbar_to_m00_couplers_TLAST(0),
-      S_AXIS_tready(0) => xbar_to_m00_couplers_TREADY(0),
-      S_AXIS_tuser(0) => xbar_to_m00_couplers_TUSER(0),
-      S_AXIS_tvalid(0) => xbar_to_m00_couplers_TVALID(0)
-    );
-m01_couplers: entity work.m01_couplers_imp_PNAPKH
-     port map (
-      M_AXIS_ACLK => axis_interconnect_1_ACLK_net,
-      M_AXIS_ARESETN => axis_interconnect_1_ARESETN_net,
-      M_AXIS_tdata(23 downto 0) => m01_couplers_to_axis_interconnect_1_TDATA(23 downto 0),
-      M_AXIS_tdest(0) => m01_couplers_to_axis_interconnect_1_TDEST(0),
-      M_AXIS_tid(0) => m01_couplers_to_axis_interconnect_1_TID(0),
-      M_AXIS_tkeep(2 downto 0) => m01_couplers_to_axis_interconnect_1_TKEEP(2 downto 0),
-      M_AXIS_tlast => m01_couplers_to_axis_interconnect_1_TLAST,
-      M_AXIS_tready => m01_couplers_to_axis_interconnect_1_TREADY,
-      M_AXIS_tstrb(2 downto 0) => m01_couplers_to_axis_interconnect_1_TSTRB(2 downto 0),
-      M_AXIS_tuser(0) => m01_couplers_to_axis_interconnect_1_TUSER(0),
-      M_AXIS_tvalid => m01_couplers_to_axis_interconnect_1_TVALID,
-      S_AXIS_ACLK => axis_interconnect_1_ACLK_net,
-      S_AXIS_ARESETN => axis_interconnect_1_ARESETN_net,
-      S_AXIS_tdata(23 downto 0) => xbar_to_m01_couplers_TDATA(47 downto 24),
-      S_AXIS_tdest(0) => xbar_to_m01_couplers_TDEST(1),
-      S_AXIS_tlast => xbar_to_m01_couplers_TLAST(1),
-      S_AXIS_tready => xbar_to_m01_couplers_TREADY,
-      S_AXIS_tuser(0) => xbar_to_m01_couplers_TUSER(1),
-      S_AXIS_tvalid => xbar_to_m01_couplers_TVALID(1)
-    );
-s00_couplers: entity work.s00_couplers_imp_25M5RM
-     port map (
-      M_AXIS_ACLK => axis_interconnect_1_ACLK_net,
-      M_AXIS_ARESETN => axis_interconnect_1_ARESETN_net,
-      M_AXIS_tdata(23 downto 0) => s00_couplers_to_xbar_TDATA(23 downto 0),
-      M_AXIS_tdest(0) => s00_couplers_to_xbar_TDEST(0),
-      M_AXIS_tlast => s00_couplers_to_xbar_TLAST,
-      M_AXIS_tready => s00_couplers_to_xbar_TREADY(0),
-      M_AXIS_tuser(0) => s00_couplers_to_xbar_TUSER(0),
-      M_AXIS_tvalid => s00_couplers_to_xbar_TVALID,
-      S_AXIS_ACLK => axis_interconnect_1_ACLK_net,
-      S_AXIS_ARESETN => axis_interconnect_1_ARESETN_net,
-      S_AXIS_tdata(23 downto 0) => axis_interconnect_1_to_s00_couplers_TDATA(23 downto 0),
-      S_AXIS_tlast => axis_interconnect_1_to_s00_couplers_TLAST,
-      S_AXIS_tready => axis_interconnect_1_to_s00_couplers_TREADY,
-      S_AXIS_tuser(0) => axis_interconnect_1_to_s00_couplers_TUSER(0),
-      S_AXIS_tvalid => axis_interconnect_1_to_s00_couplers_TVALID
-    );
-xbar: component hdmi_xbar_3
-     port map (
-      aclk => axis_interconnect_1_ACLK_net,
-      aresetn => axis_interconnect_1_ARESETN_net,
-      m_axis_tdata(47 downto 24) => xbar_to_m01_couplers_TDATA(47 downto 24),
-      m_axis_tdata(23 downto 0) => xbar_to_m00_couplers_TDATA(23 downto 0),
-      m_axis_tdest(1) => xbar_to_m01_couplers_TDEST(1),
-      m_axis_tdest(0) => xbar_to_m00_couplers_TDEST(0),
-      m_axis_tlast(1) => xbar_to_m01_couplers_TLAST(1),
-      m_axis_tlast(0) => xbar_to_m00_couplers_TLAST(0),
-      m_axis_tready(1) => xbar_to_m01_couplers_TREADY,
-      m_axis_tready(0) => xbar_to_m00_couplers_TREADY(0),
-      m_axis_tuser(1) => xbar_to_m01_couplers_TUSER(1),
-      m_axis_tuser(0) => xbar_to_m00_couplers_TUSER(0),
-      m_axis_tvalid(1) => xbar_to_m01_couplers_TVALID(1),
-      m_axis_tvalid(0) => xbar_to_m00_couplers_TVALID(0),
-      s_axis_tdata(23 downto 0) => s00_couplers_to_xbar_TDATA(23 downto 0),
-      s_axis_tdest(0) => s00_couplers_to_xbar_TDEST(0),
-      s_axis_tlast(0) => s00_couplers_to_xbar_TLAST,
-      s_axis_tready(0) => s00_couplers_to_xbar_TREADY(0),
-      s_axis_tuser(0) => s00_couplers_to_xbar_TUSER(0),
-      s_axis_tvalid(0) => s00_couplers_to_xbar_TVALID,
-      s_decode_err(0) => NLW_xbar_s_decode_err_UNCONNECTED(0)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
 entity hdmi_microblaze_0_axi_periph_0 is
   port (
     ACLK : in STD_LOGIC;
@@ -7517,7 +6445,7 @@ entity hdmi is
     usb_uart_txd : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of hdmi : entity is "hdmi,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=hdmi,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=79,numReposBlks=52,numNonXlnxBlks=3,numHierBlks=27,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_clkrst_cnt=7,synth_mode=Global}";
+  attribute CORE_GENERATION_INFO of hdmi : entity is "hdmi,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=hdmi,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=64,numReposBlks=45,numNonXlnxBlks=3,numHierBlks=19,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_clkrst_cnt=7,synth_mode=Global}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of hdmi : entity is "hdmi.hwdef";
 end hdmi;
@@ -8286,19 +7214,63 @@ architecture STRUCTURE of hdmi is
     s_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_rvalid : out STD_LOGIC;
     s_axi_rready : in STD_LOGIC;
-    gpio_io_o : out STD_LOGIC_VECTOR ( 0 to 0 );
+    gpio_io_o : out STD_LOGIC_VECTOR ( 1 downto 0 );
     gpio2_io_o : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component hdmi_axi_gpio_1_0;
+  component hdmi_axis_switch_0_0 is
+  port (
+    aclk : in STD_LOGIC;
+    aresetn : in STD_LOGIC;
+    s_axis_tvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
+    s_axis_tready : out STD_LOGIC_VECTOR ( 0 to 0 );
+    s_axis_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    s_axis_tlast : in STD_LOGIC_VECTOR ( 0 to 0 );
+    s_axis_tdest : in STD_LOGIC_VECTOR ( 0 to 0 );
+    s_axis_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axis_tvalid : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axis_tready : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axis_tdata : out STD_LOGIC_VECTOR ( 47 downto 0 );
+    m_axis_tlast : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axis_tdest : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axis_tuser : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s_decode_err : out STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component hdmi_axis_switch_0_0;
+  component hdmi_axis_switch_0_1 is
+  port (
+    aclk : in STD_LOGIC;
+    aresetn : in STD_LOGIC;
+    s_axis_tvalid : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    s_axis_tready : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s_axis_tdata : in STD_LOGIC_VECTOR ( 47 downto 0 );
+    s_axis_tstrb : in STD_LOGIC_VECTOR ( 5 downto 0 );
+    s_axis_tkeep : in STD_LOGIC_VECTOR ( 5 downto 0 );
+    s_axis_tlast : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    s_axis_tid : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    s_axis_tdest : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    s_axis_tuser : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axis_tvalid : out STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axis_tready : in STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axis_tdata : out STD_LOGIC_VECTOR ( 23 downto 0 );
+    m_axis_tstrb : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m_axis_tkeep : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m_axis_tlast : out STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axis_tid : out STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axis_tdest : out STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axis_tuser : out STD_LOGIC_VECTOR ( 0 to 0 );
+    s_req_suppress : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    s_decode_err : out STD_LOGIC_VECTOR ( 1 downto 0 )
+  );
+  end component hdmi_axis_switch_0_1;
   signal Net : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal S01_ARB_REQ_SUPPRESS_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal SYS_Rst_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal SobelFilter_0_OUTPUT_STREAM_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
   signal SobelFilter_0_OUTPUT_STREAM_TDEST : STD_LOGIC_VECTOR ( 0 to 0 );
   signal SobelFilter_0_OUTPUT_STREAM_TID : STD_LOGIC_VECTOR ( 0 to 0 );
   signal SobelFilter_0_OUTPUT_STREAM_TKEEP : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal SobelFilter_0_OUTPUT_STREAM_TLAST : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal SobelFilter_0_OUTPUT_STREAM_TREADY : STD_LOGIC;
+  signal SobelFilter_0_OUTPUT_STREAM_TREADY : STD_LOGIC_VECTOR ( 1 to 1 );
   signal SobelFilter_0_OUTPUT_STREAM_TSTRB : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal SobelFilter_0_OUTPUT_STREAM_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
   signal SobelFilter_0_OUTPUT_STREAM_TVALID : STD_LOGIC;
@@ -8309,7 +7281,7 @@ architecture STRUCTURE of hdmi is
   signal axi_dynclk_0_PXL_CLK_5X_O : STD_LOGIC;
   signal axi_dynclk_0_PXL_CLK_O : STD_LOGIC;
   signal axi_gpio_0_gpio2_io_o : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal axi_gpio_1_gpio_io_o : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal axi_gpio_1_gpio_io_o : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal axi_gpio_video_gpio_io_o : STD_LOGIC_VECTOR ( 0 to 0 );
   signal axi_gpio_video_ip2intc_irpt : STD_LOGIC;
   signal axi_mem_intercon_M00_AXI_ARADDR : STD_LOGIC_VECTOR ( 28 downto 0 );
@@ -8385,27 +7357,6 @@ architecture STRUCTURE of hdmi is
   signal axi_vdma_0_M_AXI_S2MM_WVALID : STD_LOGIC;
   signal axi_vdma_0_mm2s_introut : STD_LOGIC;
   signal axi_vdma_0_s2mm_introut : STD_LOGIC;
-  signal axis_interconnect_0_M00_AXIS_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal axis_interconnect_0_M00_AXIS_TKEEP : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal axis_interconnect_0_M00_AXIS_TLAST : STD_LOGIC;
-  signal axis_interconnect_0_M00_AXIS_TREADY : STD_LOGIC;
-  signal axis_interconnect_0_M00_AXIS_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal axis_interconnect_0_M00_AXIS_TVALID : STD_LOGIC;
-  signal axis_interconnect_1_M00_AXIS_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal axis_interconnect_1_M00_AXIS_TDEST : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal axis_interconnect_1_M00_AXIS_TLAST : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal axis_interconnect_1_M00_AXIS_TREADY : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal axis_interconnect_1_M00_AXIS_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal axis_interconnect_1_M00_AXIS_TVALID : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal axis_interconnect_1_M01_AXIS_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal axis_interconnect_1_M01_AXIS_TDEST : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal axis_interconnect_1_M01_AXIS_TID : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal axis_interconnect_1_M01_AXIS_TKEEP : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal axis_interconnect_1_M01_AXIS_TLAST : STD_LOGIC;
-  signal axis_interconnect_1_M01_AXIS_TREADY : STD_LOGIC;
-  signal axis_interconnect_1_M01_AXIS_TSTRB : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal axis_interconnect_1_M01_AXIS_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal axis_interconnect_1_M01_AXIS_TVALID : STD_LOGIC;
   signal axis_subset_converter_0_M_AXIS_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
   signal axis_subset_converter_0_M_AXIS_TLAST : STD_LOGIC;
   signal axis_subset_converter_0_M_AXIS_TREADY : STD_LOGIC;
@@ -8413,9 +7364,27 @@ architecture STRUCTURE of hdmi is
   signal axis_subset_converter_0_M_AXIS_TVALID : STD_LOGIC;
   signal axis_subset_converter_1_M_AXIS_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
   signal axis_subset_converter_1_M_AXIS_TLAST : STD_LOGIC;
-  signal axis_subset_converter_1_M_AXIS_TREADY : STD_LOGIC;
+  signal axis_subset_converter_1_M_AXIS_TREADY : STD_LOGIC_VECTOR ( 0 to 0 );
   signal axis_subset_converter_1_M_AXIS_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
   signal axis_subset_converter_1_M_AXIS_TVALID : STD_LOGIC;
+  signal axis_switch_0_M00_AXIS_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
+  signal axis_switch_0_M00_AXIS_TDEST : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal axis_switch_0_M00_AXIS_TLAST : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal axis_switch_0_M00_AXIS_TREADY : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal axis_switch_0_M00_AXIS_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal axis_switch_0_M00_AXIS_TVALID : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal axis_switch_0_M01_AXIS_TDATA : STD_LOGIC_VECTOR ( 47 downto 24 );
+  signal axis_switch_0_M01_AXIS_TDEST : STD_LOGIC_VECTOR ( 1 to 1 );
+  signal axis_switch_0_M01_AXIS_TLAST : STD_LOGIC_VECTOR ( 1 to 1 );
+  signal axis_switch_0_M01_AXIS_TREADY : STD_LOGIC;
+  signal axis_switch_0_M01_AXIS_TUSER : STD_LOGIC_VECTOR ( 1 to 1 );
+  signal axis_switch_0_M01_AXIS_TVALID : STD_LOGIC_VECTOR ( 1 to 1 );
+  signal axis_switch_1_M00_AXIS_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
+  signal axis_switch_1_M00_AXIS_TKEEP : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal axis_switch_1_M00_AXIS_TLAST : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal axis_switch_1_M00_AXIS_TREADY : STD_LOGIC;
+  signal axis_switch_1_M00_AXIS_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal axis_switch_1_M00_AXIS_TVALID : STD_LOGIC_VECTOR ( 0 to 0 );
   signal dvi2rgb_0_DDC_SCL_I : STD_LOGIC;
   signal dvi2rgb_0_DDC_SCL_O : STD_LOGIC;
   signal dvi2rgb_0_DDC_SCL_T : STD_LOGIC;
@@ -8752,6 +7721,7 @@ architecture STRUCTURE of hdmi is
   signal NLW_SobelFilter_0_ap_idle_UNCONNECTED : STD_LOGIC;
   signal NLW_SobelFilter_0_ap_ready_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_dynclk_0_LOCKED_O_UNCONNECTED : STD_LOGIC;
+  signal NLW_axi_gpio_1_gpio2_io_o_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_axi_timer_0_generateout0_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_timer_0_generateout1_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_timer_0_pwm0_UNCONNECTED : STD_LOGIC;
@@ -8759,6 +7729,11 @@ architecture STRUCTURE of hdmi is
   signal NLW_axi_vdma_0_mm2s_frame_ptr_out_UNCONNECTED : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal NLW_axi_vdma_0_s2mm_frame_ptr_out_UNCONNECTED : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal NLW_axis_subset_converter_0_m_axis_tkeep_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal NLW_axis_switch_0_s_decode_err_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal NLW_axis_switch_1_m_axis_tdest_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal NLW_axis_switch_1_m_axis_tid_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal NLW_axis_switch_1_m_axis_tstrb_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal NLW_axis_switch_1_s_decode_err_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_mdm_1_Debug_SYS_Rst_UNCONNECTED : STD_LOGIC;
   signal NLW_microblaze_0_M_AXI_IC_AWLOCK_UNCONNECTED : STD_LOGIC;
   signal NLW_microblaze_0_M_AXI_IC_AWVALID_UNCONNECTED : STD_LOGIC;
@@ -8883,21 +7858,21 @@ begin
   usb_uart_txd <= axi_uartlite_0_UART_TxD;
 SobelFilter_0: component hdmi_SobelFilter_0_0
      port map (
-      INPUT_STREAM_TDATA(23 downto 0) => axis_interconnect_1_M01_AXIS_TDATA(23 downto 0),
-      INPUT_STREAM_TDEST(0) => axis_interconnect_1_M01_AXIS_TDEST(0),
-      INPUT_STREAM_TID(0) => axis_interconnect_1_M01_AXIS_TID(0),
-      INPUT_STREAM_TKEEP(2 downto 0) => axis_interconnect_1_M01_AXIS_TKEEP(2 downto 0),
-      INPUT_STREAM_TLAST(0) => axis_interconnect_1_M01_AXIS_TLAST,
-      INPUT_STREAM_TREADY => axis_interconnect_1_M01_AXIS_TREADY,
-      INPUT_STREAM_TSTRB(2 downto 0) => axis_interconnect_1_M01_AXIS_TSTRB(2 downto 0),
-      INPUT_STREAM_TUSER(0) => axis_interconnect_1_M01_AXIS_TUSER(0),
-      INPUT_STREAM_TVALID => axis_interconnect_1_M01_AXIS_TVALID,
+      INPUT_STREAM_TDATA(23 downto 0) => axis_switch_0_M01_AXIS_TDATA(47 downto 24),
+      INPUT_STREAM_TDEST(0) => axis_switch_0_M01_AXIS_TDEST(1),
+      INPUT_STREAM_TID(0) => '0',
+      INPUT_STREAM_TKEEP(2 downto 0) => B"111",
+      INPUT_STREAM_TLAST(0) => axis_switch_0_M01_AXIS_TLAST(1),
+      INPUT_STREAM_TREADY => axis_switch_0_M01_AXIS_TREADY,
+      INPUT_STREAM_TSTRB(2 downto 0) => B"111",
+      INPUT_STREAM_TUSER(0) => axis_switch_0_M01_AXIS_TUSER(1),
+      INPUT_STREAM_TVALID => axis_switch_0_M01_AXIS_TVALID(1),
       OUTPUT_STREAM_TDATA(23 downto 0) => SobelFilter_0_OUTPUT_STREAM_TDATA(23 downto 0),
       OUTPUT_STREAM_TDEST(0) => SobelFilter_0_OUTPUT_STREAM_TDEST(0),
       OUTPUT_STREAM_TID(0) => SobelFilter_0_OUTPUT_STREAM_TID(0),
       OUTPUT_STREAM_TKEEP(2 downto 0) => SobelFilter_0_OUTPUT_STREAM_TKEEP(2 downto 0),
       OUTPUT_STREAM_TLAST(0) => SobelFilter_0_OUTPUT_STREAM_TLAST(0),
-      OUTPUT_STREAM_TREADY => SobelFilter_0_OUTPUT_STREAM_TREADY,
+      OUTPUT_STREAM_TREADY => SobelFilter_0_OUTPUT_STREAM_TREADY(1),
       OUTPUT_STREAM_TSTRB(2 downto 0) => SobelFilter_0_OUTPUT_STREAM_TSTRB(2 downto 0),
       OUTPUT_STREAM_TUSER(0) => SobelFilter_0_OUTPUT_STREAM_TUSER(0),
       OUTPUT_STREAM_TVALID => SobelFilter_0_OUTPUT_STREAM_TVALID,
@@ -8962,8 +7937,8 @@ axi_gpio_0: component hdmi_axi_gpio_0_0
     );
 axi_gpio_1: component hdmi_axi_gpio_1_0
      port map (
-      gpio2_io_o(0) => S01_ARB_REQ_SUPPRESS_1(0),
-      gpio_io_o(0) => axi_gpio_1_gpio_io_o(0),
+      gpio2_io_o(0) => NLW_axi_gpio_1_gpio2_io_o_UNCONNECTED(0),
+      gpio_io_o(1 downto 0) => axi_gpio_1_gpio_io_o(1 downto 0),
       s_axi_aclk => mig_7series_0_ui_clk,
       s_axi_araddr(8 downto 0) => microblaze_0_axi_periph_M09_AXI_ARADDR(8 downto 0),
       s_axi_aresetn => rst_mig_7series_0_100M_peripheral_aresetn(0),
@@ -9251,77 +8226,12 @@ axi_vdma_0: component hdmi_axi_vdma_0_0
       s_axi_lite_wready => microblaze_0_axi_periph_M01_AXI_WREADY,
       s_axi_lite_wvalid => microblaze_0_axi_periph_M01_AXI_WVALID(0),
       s_axis_s2mm_aclk => mig_7series_0_ui_addn_clk_0,
-      s_axis_s2mm_tdata(23 downto 0) => axis_interconnect_0_M00_AXIS_TDATA(23 downto 0),
-      s_axis_s2mm_tkeep(2 downto 0) => axis_interconnect_0_M00_AXIS_TKEEP(2 downto 0),
-      s_axis_s2mm_tlast => axis_interconnect_0_M00_AXIS_TLAST,
-      s_axis_s2mm_tready => axis_interconnect_0_M00_AXIS_TREADY,
-      s_axis_s2mm_tuser(0) => axis_interconnect_0_M00_AXIS_TUSER(0),
-      s_axis_s2mm_tvalid => axis_interconnect_0_M00_AXIS_TVALID
-    );
-axis_interconnect_0: entity work.hdmi_axis_interconnect_0_0
-     port map (
-      ACLK => mig_7series_0_ui_addn_clk_0,
-      ARESETN => Net(0),
-      M00_AXIS_ACLK => mig_7series_0_ui_addn_clk_0,
-      M00_AXIS_ARESETN => Net(0),
-      M00_AXIS_tdata(23 downto 0) => axis_interconnect_0_M00_AXIS_TDATA(23 downto 0),
-      M00_AXIS_tkeep(2 downto 0) => axis_interconnect_0_M00_AXIS_TKEEP(2 downto 0),
-      M00_AXIS_tlast => axis_interconnect_0_M00_AXIS_TLAST,
-      M00_AXIS_tready => axis_interconnect_0_M00_AXIS_TREADY,
-      M00_AXIS_tuser(0) => axis_interconnect_0_M00_AXIS_TUSER(0),
-      M00_AXIS_tvalid => axis_interconnect_0_M00_AXIS_TVALID,
-      S00_ARB_REQ_SUPPRESS => axi_gpio_1_gpio_io_o(0),
-      S00_AXIS_ACLK => mig_7series_0_ui_addn_clk_0,
-      S00_AXIS_ARESETN => Net(0),
-      S00_AXIS_tdata(23 downto 0) => axis_interconnect_1_M00_AXIS_TDATA(23 downto 0),
-      S00_AXIS_tdest(0) => axis_interconnect_1_M00_AXIS_TDEST(0),
-      S00_AXIS_tlast(0) => axis_interconnect_1_M00_AXIS_TLAST(0),
-      S00_AXIS_tready(0) => axis_interconnect_1_M00_AXIS_TREADY(0),
-      S00_AXIS_tuser(0) => axis_interconnect_1_M00_AXIS_TUSER(0),
-      S00_AXIS_tvalid(0) => axis_interconnect_1_M00_AXIS_TVALID(0),
-      S01_ARB_REQ_SUPPRESS => S01_ARB_REQ_SUPPRESS_1(0),
-      S01_AXIS_ACLK => mig_7series_0_ui_addn_clk_0,
-      S01_AXIS_ARESETN => Net(0),
-      S01_AXIS_tdata(23 downto 0) => SobelFilter_0_OUTPUT_STREAM_TDATA(23 downto 0),
-      S01_AXIS_tdest(0) => SobelFilter_0_OUTPUT_STREAM_TDEST(0),
-      S01_AXIS_tid(0) => SobelFilter_0_OUTPUT_STREAM_TID(0),
-      S01_AXIS_tkeep(2 downto 0) => SobelFilter_0_OUTPUT_STREAM_TKEEP(2 downto 0),
-      S01_AXIS_tlast(0) => SobelFilter_0_OUTPUT_STREAM_TLAST(0),
-      S01_AXIS_tready => SobelFilter_0_OUTPUT_STREAM_TREADY,
-      S01_AXIS_tstrb(2 downto 0) => SobelFilter_0_OUTPUT_STREAM_TSTRB(2 downto 0),
-      S01_AXIS_tuser(0) => SobelFilter_0_OUTPUT_STREAM_TUSER(0),
-      S01_AXIS_tvalid => SobelFilter_0_OUTPUT_STREAM_TVALID
-    );
-axis_interconnect_1: entity work.hdmi_axis_interconnect_0_1
-     port map (
-      ACLK => mig_7series_0_ui_addn_clk_0,
-      ARESETN => Net(0),
-      M00_AXIS_ACLK => mig_7series_0_ui_addn_clk_0,
-      M00_AXIS_ARESETN => Net(0),
-      M00_AXIS_tdata(23 downto 0) => axis_interconnect_1_M00_AXIS_TDATA(23 downto 0),
-      M00_AXIS_tdest(0) => axis_interconnect_1_M00_AXIS_TDEST(0),
-      M00_AXIS_tlast(0) => axis_interconnect_1_M00_AXIS_TLAST(0),
-      M00_AXIS_tready(0) => axis_interconnect_1_M00_AXIS_TREADY(0),
-      M00_AXIS_tuser(0) => axis_interconnect_1_M00_AXIS_TUSER(0),
-      M00_AXIS_tvalid(0) => axis_interconnect_1_M00_AXIS_TVALID(0),
-      M01_AXIS_ACLK => mig_7series_0_ui_addn_clk_0,
-      M01_AXIS_ARESETN => Net(0),
-      M01_AXIS_tdata(23 downto 0) => axis_interconnect_1_M01_AXIS_TDATA(23 downto 0),
-      M01_AXIS_tdest(0) => axis_interconnect_1_M01_AXIS_TDEST(0),
-      M01_AXIS_tid(0) => axis_interconnect_1_M01_AXIS_TID(0),
-      M01_AXIS_tkeep(2 downto 0) => axis_interconnect_1_M01_AXIS_TKEEP(2 downto 0),
-      M01_AXIS_tlast => axis_interconnect_1_M01_AXIS_TLAST,
-      M01_AXIS_tready => axis_interconnect_1_M01_AXIS_TREADY,
-      M01_AXIS_tstrb(2 downto 0) => axis_interconnect_1_M01_AXIS_TSTRB(2 downto 0),
-      M01_AXIS_tuser(0) => axis_interconnect_1_M01_AXIS_TUSER(0),
-      M01_AXIS_tvalid => axis_interconnect_1_M01_AXIS_TVALID,
-      S00_AXIS_ACLK => mig_7series_0_ui_addn_clk_0,
-      S00_AXIS_ARESETN => Net(0),
-      S00_AXIS_tdata(23 downto 0) => axis_subset_converter_1_M_AXIS_TDATA(23 downto 0),
-      S00_AXIS_tlast => axis_subset_converter_1_M_AXIS_TLAST,
-      S00_AXIS_tready => axis_subset_converter_1_M_AXIS_TREADY,
-      S00_AXIS_tuser(0) => axis_subset_converter_1_M_AXIS_TUSER(0),
-      S00_AXIS_tvalid => axis_subset_converter_1_M_AXIS_TVALID
+      s_axis_s2mm_tdata(23 downto 0) => axis_switch_1_M00_AXIS_TDATA(23 downto 0),
+      s_axis_s2mm_tkeep(2 downto 0) => axis_switch_1_M00_AXIS_TKEEP(2 downto 0),
+      s_axis_s2mm_tlast => axis_switch_1_M00_AXIS_TLAST(0),
+      s_axis_s2mm_tready => axis_switch_1_M00_AXIS_TREADY,
+      s_axis_s2mm_tuser(0) => axis_switch_1_M00_AXIS_TUSER(0),
+      s_axis_s2mm_tvalid => axis_switch_1_M00_AXIS_TVALID(0)
     );
 axis_subset_converter_0: component hdmi_axis_subset_converter_0_0
      port map (
@@ -9346,7 +8256,7 @@ axis_subset_converter_1: component hdmi_axis_subset_converter_0_1
       aresetn => Net(0),
       m_axis_tdata(23 downto 0) => axis_subset_converter_1_M_AXIS_TDATA(23 downto 0),
       m_axis_tlast => axis_subset_converter_1_M_AXIS_TLAST,
-      m_axis_tready => axis_subset_converter_1_M_AXIS_TREADY,
+      m_axis_tready => axis_subset_converter_1_M_AXIS_TREADY(0),
       m_axis_tuser(0) => axis_subset_converter_1_M_AXIS_TUSER(0),
       m_axis_tvalid => axis_subset_converter_1_M_AXIS_TVALID,
       s_axis_tdata(23 downto 0) => v_vid_in_axi4s_0_video_out_TDATA(23 downto 0),
@@ -9354,6 +8264,64 @@ axis_subset_converter_1: component hdmi_axis_subset_converter_0_1
       s_axis_tready => v_vid_in_axi4s_0_video_out_TREADY,
       s_axis_tuser(0) => v_vid_in_axi4s_0_video_out_TUSER,
       s_axis_tvalid => v_vid_in_axi4s_0_video_out_TVALID
+    );
+axis_switch_0: component hdmi_axis_switch_0_0
+     port map (
+      aclk => mig_7series_0_ui_addn_clk_0,
+      aresetn => Net(0),
+      m_axis_tdata(47 downto 24) => axis_switch_0_M01_AXIS_TDATA(47 downto 24),
+      m_axis_tdata(23 downto 0) => axis_switch_0_M00_AXIS_TDATA(23 downto 0),
+      m_axis_tdest(1) => axis_switch_0_M01_AXIS_TDEST(1),
+      m_axis_tdest(0) => axis_switch_0_M00_AXIS_TDEST(0),
+      m_axis_tlast(1) => axis_switch_0_M01_AXIS_TLAST(1),
+      m_axis_tlast(0) => axis_switch_0_M00_AXIS_TLAST(0),
+      m_axis_tready(1) => axis_switch_0_M01_AXIS_TREADY,
+      m_axis_tready(0) => axis_switch_0_M00_AXIS_TREADY(0),
+      m_axis_tuser(1) => axis_switch_0_M01_AXIS_TUSER(1),
+      m_axis_tuser(0) => axis_switch_0_M00_AXIS_TUSER(0),
+      m_axis_tvalid(1) => axis_switch_0_M01_AXIS_TVALID(1),
+      m_axis_tvalid(0) => axis_switch_0_M00_AXIS_TVALID(0),
+      s_axis_tdata(23 downto 0) => axis_subset_converter_1_M_AXIS_TDATA(23 downto 0),
+      s_axis_tdest(0) => '0',
+      s_axis_tlast(0) => axis_subset_converter_1_M_AXIS_TLAST,
+      s_axis_tready(0) => axis_subset_converter_1_M_AXIS_TREADY(0),
+      s_axis_tuser(0) => axis_subset_converter_1_M_AXIS_TUSER(0),
+      s_axis_tvalid(0) => axis_subset_converter_1_M_AXIS_TVALID,
+      s_decode_err(0) => NLW_axis_switch_0_s_decode_err_UNCONNECTED(0)
+    );
+axis_switch_1: component hdmi_axis_switch_0_1
+     port map (
+      aclk => mig_7series_0_ui_addn_clk_0,
+      aresetn => Net(0),
+      m_axis_tdata(23 downto 0) => axis_switch_1_M00_AXIS_TDATA(23 downto 0),
+      m_axis_tdest(0) => NLW_axis_switch_1_m_axis_tdest_UNCONNECTED(0),
+      m_axis_tid(0) => NLW_axis_switch_1_m_axis_tid_UNCONNECTED(0),
+      m_axis_tkeep(2 downto 0) => axis_switch_1_M00_AXIS_TKEEP(2 downto 0),
+      m_axis_tlast(0) => axis_switch_1_M00_AXIS_TLAST(0),
+      m_axis_tready(0) => axis_switch_1_M00_AXIS_TREADY,
+      m_axis_tstrb(2 downto 0) => NLW_axis_switch_1_m_axis_tstrb_UNCONNECTED(2 downto 0),
+      m_axis_tuser(0) => axis_switch_1_M00_AXIS_TUSER(0),
+      m_axis_tvalid(0) => axis_switch_1_M00_AXIS_TVALID(0),
+      s_axis_tdata(47 downto 24) => SobelFilter_0_OUTPUT_STREAM_TDATA(23 downto 0),
+      s_axis_tdata(23 downto 0) => axis_switch_0_M00_AXIS_TDATA(23 downto 0),
+      s_axis_tdest(1) => SobelFilter_0_OUTPUT_STREAM_TDEST(0),
+      s_axis_tdest(0) => axis_switch_0_M00_AXIS_TDEST(0),
+      s_axis_tid(1) => SobelFilter_0_OUTPUT_STREAM_TID(0),
+      s_axis_tid(0) => '0',
+      s_axis_tkeep(5 downto 3) => SobelFilter_0_OUTPUT_STREAM_TKEEP(2 downto 0),
+      s_axis_tkeep(2 downto 0) => B"111",
+      s_axis_tlast(1) => SobelFilter_0_OUTPUT_STREAM_TLAST(0),
+      s_axis_tlast(0) => axis_switch_0_M00_AXIS_TLAST(0),
+      s_axis_tready(1) => SobelFilter_0_OUTPUT_STREAM_TREADY(1),
+      s_axis_tready(0) => axis_switch_0_M00_AXIS_TREADY(0),
+      s_axis_tstrb(5 downto 3) => SobelFilter_0_OUTPUT_STREAM_TSTRB(2 downto 0),
+      s_axis_tstrb(2 downto 0) => B"111",
+      s_axis_tuser(1) => SobelFilter_0_OUTPUT_STREAM_TUSER(0),
+      s_axis_tuser(0) => axis_switch_0_M00_AXIS_TUSER(0),
+      s_axis_tvalid(1) => SobelFilter_0_OUTPUT_STREAM_TVALID,
+      s_axis_tvalid(0) => axis_switch_0_M00_AXIS_TVALID(0),
+      s_decode_err(1 downto 0) => NLW_axis_switch_1_s_decode_err_UNCONNECTED(1 downto 0),
+      s_req_suppress(1 downto 0) => axi_gpio_1_gpio_io_o(1 downto 0)
     );
 dvi2rgb_0: component hdmi_dvi2rgb_0_0
      port map (

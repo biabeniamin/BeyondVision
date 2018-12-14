@@ -218,12 +218,12 @@ proc create_root_design { parentCell } {
  ] $axis_subset_converter_1
 
   # Create instance: dvi2rgb_1, and set properties
-  set dvi2rgb_1 [ create_bd_cell -type ip -vlnv digilentinc.com:ip:dvi2rgb:1.9 dvi2rgb_1 ]
+  set dvi2rgb_1 [ create_bd_cell -type ip -vlnv digilentinc.com:ip:dvi2rgb:2.0 dvi2rgb_1 ]
   set_property -dict [ list \
-   CONFIG.IIC_BOARD_INTERFACE {hdmi_in_ddc} \
-   CONFIG.TMDS_BOARD_INTERFACE {hdmi_in} \
+   CONFIG.IIC_BOARD_INTERFACE {} \
+   CONFIG.TMDS_BOARD_INTERFACE {} \
    CONFIG.kAddBUFG {true} \
-   CONFIG.kClkRange {1} \
+   CONFIG.kClkRange {2} \
    CONFIG.kEdidFileName {720p_edid.data} \
    CONFIG.kEnableSerialClkOutput {false} \
    CONFIG.kRstActiveHigh {true} \
