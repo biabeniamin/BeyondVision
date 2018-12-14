@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:hls:sobel:1.0
--- IP Revision: 1812141201
+-- IP Revision: 1812141241
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
