@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Fri Dec 14 20:06:03 2018
+--Date        : Fri Dec 14 20:57:58 2018
 --Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
 --Command     : generate_target hdmi_wrapper.bd
 --Design      : hdmi_wrapper
@@ -40,8 +40,6 @@ entity hdmi_wrapper is
     hdmi_hpd : out STD_LOGIC_VECTOR ( 0 to 0 );
     hdmi_rx_txen : out STD_LOGIC_VECTOR ( 0 to 0 );
     reset : in STD_LOGIC;
-    s1 : in STD_LOGIC;
-    s2 : in STD_LOGIC;
     sys_clk_i : in STD_LOGIC;
     usb_uart_rxd : in STD_LOGIC;
     usb_uart_txd : out STD_LOGIC
@@ -84,9 +82,7 @@ architecture STRUCTURE of hdmi_wrapper is
     hdmi_hpd : out STD_LOGIC_VECTOR ( 0 to 0 );
     reset : in STD_LOGIC;
     sys_clk_i : in STD_LOGIC;
-    hdmi_rx_txen : out STD_LOGIC_VECTOR ( 0 to 0 );
-    s1 : in STD_LOGIC;
-    s2 : in STD_LOGIC
+    hdmi_rx_txen : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component hdmi;
   component IOBUF is
@@ -151,8 +147,6 @@ hdmi_i: component hdmi
       hdmi_hpd(0) => hdmi_hpd(0),
       hdmi_rx_txen(0) => hdmi_rx_txen(0),
       reset => reset,
-      s1 => s1,
-      s2 => s2,
       sys_clk_i => sys_clk_i,
       usb_uart_rxd => usb_uart_rxd,
       usb_uart_txd => usb_uart_txd

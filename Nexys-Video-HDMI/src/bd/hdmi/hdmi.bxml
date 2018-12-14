@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="36">
   <CompositeFile CompositeFileTopName="hdmi" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="STALE" Timestamp="1544813776"/>
-    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1544813776"/>
-    <Generation Name="SIMULATION" State="STALE" Timestamp="1544813776"/>
-    <Generation Name="HW_HANDOFF" State="STALE" Timestamp="1544813776"/>
+    <Generation Name="SYNTHESIS" State="STALE" Timestamp="1544816224"/>
+    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1544816224"/>
+    <Generation Name="SIMULATION" State="STALE" Timestamp="1544816224"/>
+    <Generation Name="HW_HANDOFF" State="STALE" Timestamp="1544816224"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\hdmi_axi_dynclk_0_0\hdmi_axi_dynclk_0_0.xci" Type="IP">
         <Instance HierarchyPath="axi_dynclk_0"/>
@@ -281,88 +281,8 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\hdmi_axis_interconnect_0_0\hdmi_axis_interconnect_0_0.xci" Type="IP">
-        <Instance HierarchyPath="axis_interconnect_0"/>
-        <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\hdmi_xbar_2\hdmi_xbar_2.xci" Type="IP">
-        <Instance HierarchyPath="axis_interconnect_0/xbar"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\hdmi_axis_interconnect_0_1\hdmi_axis_interconnect_0_1.xci" Type="IP">
-        <Instance HierarchyPath="axis_interconnect_1"/>
-        <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\hdmi_xbar_3\hdmi_xbar_3.xci" Type="IP">
-        <Instance HierarchyPath="axis_interconnect_1/xbar"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\hdmi_auto_ss_k_1\hdmi_auto_ss_k_1.xci" Type="IP">
-        <Instance HierarchyPath="axis_interconnect_1/m01_couplers/auto_ss_k"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\hdmi_auto_ss_slidr_1\hdmi_auto_ss_slidr_1.xci" Type="IP">
-        <Instance HierarchyPath="axis_interconnect_1/m01_couplers/auto_ss_slidr"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\hdmi_auto_ss_slid_1\hdmi_auto_ss_slid_1.xci" Type="IP">
-        <Instance HierarchyPath="axis_interconnect_1/s00_couplers/auto_ss_slid"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\hdmi_s_arb_req_suppress_concat_0\hdmi_s_arb_req_suppress_concat_0.xci" Type="IP">
-        <Instance HierarchyPath="axis_interconnect_0/s_arb_req_suppress_concat"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\hdmi_auto_ss_slidr_0\hdmi_auto_ss_slidr_0.xci" Type="IP">
-        <Instance HierarchyPath="axis_interconnect_0/m00_couplers/auto_ss_slidr"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\hdmi_auto_ss_k_0\hdmi_auto_ss_k_0.xci" Type="IP">
-        <Instance HierarchyPath="axis_interconnect_0/s00_couplers/auto_ss_k"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\hdmi_auto_ss_slid_0\hdmi_auto_ss_slid_0.xci" Type="IP">
-        <Instance HierarchyPath="axis_interconnect_0/s00_couplers/auto_ss_slid"/>
+      <File Name="ip\hdmi_axi_gpio_1_0\hdmi_axi_gpio_1_0.xci" Type="IP">
+        <Instance HierarchyPath="axi_gpio_1"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -485,8 +405,16 @@
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>
       </File>
-      <File Name="ip\hdmi_axi_gpio_1_0\hdmi_axi_gpio_1_0.xci" Type="IP">
-        <Instance HierarchyPath="axi_gpio_1"/>
+      <File Name="ip\hdmi_axis_switch_0_0\hdmi_axis_switch_0_0.xci" Type="IP">
+        <Instance HierarchyPath="axis_switch_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\hdmi_axis_switch_0_1\hdmi_axis_switch_0_1.xci" Type="IP">
+        <Instance HierarchyPath="axis_switch_1"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
