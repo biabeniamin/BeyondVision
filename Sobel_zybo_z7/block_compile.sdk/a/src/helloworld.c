@@ -91,8 +91,7 @@ int main()
     //configure and assert the HPD
     XGpio_Initialize(&hpd_in, XPAR_AXI_GPIO_0_DEVICE_ID);
     XGpio_DiscreteWrite(&hpd_in,1,0x1);
-    sleep(20);
-    XGpio_DiscreteWrite(&hpd_in,2,0x1); ///needs time here
+
 
     video = VMODE_1280x720;
 	vtcTiming.HActiveVideo = video.width;	/**< Horizontal Active Video Size */
