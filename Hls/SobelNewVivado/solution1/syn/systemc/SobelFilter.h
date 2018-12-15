@@ -35,7 +35,7 @@
 namespace ap_rtl {
 
 struct SobelFilter : public sc_module {
-    // Port declarations 25
+    // Port declarations 24
     sc_in< sc_lv<24> > INPUT_STREAM_TDATA;
     sc_in< sc_lv<3> > INPUT_STREAM_TKEEP;
     sc_in< sc_lv<3> > INPUT_STREAM_TSTRB;
@@ -50,7 +50,6 @@ struct SobelFilter : public sc_module {
     sc_out< sc_lv<1> > OUTPUT_STREAM_TLAST;
     sc_out< sc_lv<1> > OUTPUT_STREAM_TID;
     sc_out< sc_lv<1> > OUTPUT_STREAM_TDEST;
-    sc_in< sc_lv<32> > Selection;
     sc_in_clk ap_clk;
     sc_in< sc_logic > ap_rst_n;
     sc_in< sc_logic > ap_start;

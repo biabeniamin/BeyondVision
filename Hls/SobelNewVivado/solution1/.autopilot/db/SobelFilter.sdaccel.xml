@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'SobelFilter'" level="0">
-<item name = "Date">Sat Dec 15 16:19:56 2018
+<item name = "Date">Sat Dec 15 17:02:33 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">SobelNewVivado</item>
@@ -163,7 +163,6 @@
 <column name="OUTPUT_STREAM_TDEST">out, 1, axis, OUTPUT_STREAM_V_dest_V, pointer</column>
 <column name="OUTPUT_STREAM_TVALID">out, 1, axis, OUTPUT_STREAM_V_dest_V, pointer</column>
 <column name="OUTPUT_STREAM_TREADY">in, 1, axis, OUTPUT_STREAM_V_dest_V, pointer</column>
-<column name="Selection">in, 32, ap_none, Selection, scalar</column>
 <column name="ap_clk">in, 1, ap_ctrl_hs, SobelFilter, return value</column>
 <column name="ap_rst_n">in, 1, ap_ctrl_hs, SobelFilter, return value</column>
 <column name="ap_start">in, 1, ap_ctrl_hs, SobelFilter, return value</column>

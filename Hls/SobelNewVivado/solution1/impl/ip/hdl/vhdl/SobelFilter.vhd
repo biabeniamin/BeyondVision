@@ -25,7 +25,6 @@ port (
     OUTPUT_STREAM_TLAST : OUT STD_LOGIC_VECTOR (0 downto 0);
     OUTPUT_STREAM_TID : OUT STD_LOGIC_VECTOR (0 downto 0);
     OUTPUT_STREAM_TDEST : OUT STD_LOGIC_VECTOR (0 downto 0);
-    Selection : IN STD_LOGIC_VECTOR (31 downto 0);
     ap_clk : IN STD_LOGIC;
     ap_rst_n : IN STD_LOGIC;
     ap_start : IN STD_LOGIC;

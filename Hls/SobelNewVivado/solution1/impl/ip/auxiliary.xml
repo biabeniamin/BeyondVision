@@ -15,7 +15,6 @@
   <xd:arg xd:name="OUTPUT_STREAM.last" xd:originalName="OUTPUT_STREAM" xd:direction="out" xd:interfaceRef="OUTPUT_STREAM" xd:busTypeRef="axis" xd:dataWidth="1"/>
   <xd:arg xd:name="OUTPUT_STREAM.id" xd:originalName="OUTPUT_STREAM" xd:direction="out" xd:interfaceRef="OUTPUT_STREAM" xd:busTypeRef="axis" xd:dataWidth="1"/>
   <xd:arg xd:name="OUTPUT_STREAM.dest" xd:originalName="OUTPUT_STREAM" xd:direction="out" xd:interfaceRef="OUTPUT_STREAM" xd:busTypeRef="axis" xd:dataWidth="1"/>
-  <xd:arg xd:name="Selection" xd:originalName="Selection" xd:direction="in" xd:interfaceRef="Selection" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="32" xd:firstOut="3"/>
   <xd:latencyEstimates xd:best-case="2108179" xd:worst-case="2108179" xd:average-case="undef"/>
   <xd:resourceEstimates xd:LUT="21976" xd:FF="13451" xd:BRAM="27" xd:DSP="111"/>
 </xd:acceleratorMap>

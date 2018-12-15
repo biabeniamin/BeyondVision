@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'Filter2D'
 ================================================================
-* Date:           Sat Dec 15 16:19:40 2018
+* Date:           Sat Dec 15 17:02:17 2018
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        SobelNewVivado
@@ -673,8 +673,8 @@ The critical path consists of the following:
 
  <State 5>: 3.26ns
 The critical path consists of the following:
-	'getelementptr' operation ('k_buf_1_val_5_addr', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:835->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:843->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:458->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277) [309]  (0 ns)
-	'load' operation ('k_buf_1_val_5_load', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:458->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277) on array 'k_buf[1].val[5]', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277 [310]  (3.26 ns)
+	'getelementptr' operation ('k_buf_1_val_3_addr', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:835->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:843->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:458->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277) [301]  (0 ns)
+	'load' operation ('k_buf_1_val_3_load', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:458->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277) on array 'k_buf[1].val[3]', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277 [302]  (3.26 ns)
 
  <State 6>: 7.18ns
 The critical path consists of the following:

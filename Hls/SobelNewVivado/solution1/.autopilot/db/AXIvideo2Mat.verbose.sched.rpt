@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'AXIvideo2Mat'
 ================================================================
-* Date:           Sat Dec 15 16:19:36 2018
+* Date:           Sat Dec 15 17:02:13 2018
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        SobelNewVivado
@@ -262,7 +262,7 @@ The critical path consists of the following:
 	'phi' operation ('eol', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:100) with incoming values : ('tmp.last.V', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:68) ('tmp.last.V', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:81) ('tmp.last.V', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:100) [65]  (0 ns)
 	multiplexor before 'phi' operation ('axi.data.V') with incoming values : ('tmp.data.V', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:68) ('tmp.data.V', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:81) ('tmp.data.V', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:100) [87]  (1.66 ns)
 	'phi' operation ('axi.data.V') with incoming values : ('tmp.data.V', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:68) ('tmp.data.V', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:81) ('tmp.data.V', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:100) [87]  (0 ns)
-	fifo write on port 'img_data_stream_2_V' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:648->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:662->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:94) [95]  (3.91 ns)
+	fifo write on port 'img_data_stream_1_V' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:648->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:662->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:94) [94]  (3.91 ns)
 
  <State 7>: 1.66ns
 The critical path consists of the following:

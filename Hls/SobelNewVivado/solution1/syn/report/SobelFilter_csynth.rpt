@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'SobelFilter'
 ================================================================
-* Date:           Sat Dec 15 16:19:56 2018
+* Date:           Sat Dec 15 17:02:33 2018
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        SobelNewVivado
@@ -184,7 +184,6 @@
 |OUTPUT_STREAM_TDEST   | out |    1|    axis    | OUTPUT_STREAM_V_dest_V |    pointer   |
 |OUTPUT_STREAM_TVALID  | out |    1|    axis    | OUTPUT_STREAM_V_dest_V |    pointer   |
 |OUTPUT_STREAM_TREADY  |  in |    1|    axis    | OUTPUT_STREAM_V_dest_V |    pointer   |
-|Selection             |  in |   32|   ap_none  |        Selection       |    scalar    |
 |ap_clk                |  in |    1| ap_ctrl_hs |       SobelFilter      | return value |
 |ap_rst_n              |  in |    1| ap_ctrl_hs |       SobelFilter      | return value |
 |ap_start              |  in |    1| ap_ctrl_hs |       SobelFilter      | return value |
