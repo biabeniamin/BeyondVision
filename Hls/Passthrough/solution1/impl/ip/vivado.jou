@@ -9,3 +9,4 @@
 # Log file: C:/Digilent19/Hls/Passthrough/solution1/impl/ip/vivado.log
 # Journal file: C:/Digilent19/Hls/Passthrough/solution1/impl/ip\vivado.jou
 #-----------------------------------------------------------
+source run_ippack.tcl -notrace
