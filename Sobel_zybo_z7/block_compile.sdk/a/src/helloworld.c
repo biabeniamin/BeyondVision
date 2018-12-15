@@ -60,7 +60,7 @@
 #include "xvtc.h"
 #include "xaxivdma.h"
 #include "xaxivdma_i.h"
-#include "vga_modes.h"
+#include "display_ctrl/vga_modes.h"
 #include "display_ctrl/display_ctrl.h"
 #include "dynclk.h"
 
@@ -200,12 +200,15 @@ int main()
 			xil_printf("Display Ctrl initialization failed during demo initialization%d\r\n", Status);
 			return;
 		}
+		dispCtrl.vMode = VMODE_1280x720;
 		Status = DisplayStart(&dispCtrl);
 		if (Status != XST_SUCCESS)
 		{
 			xil_printf("Couldn't start display during demo initialization%d\r\n", Status);
 			return;
 		}
+
+
 
 		DemoPrintTest(dispCtrl.framePtr[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, dispCtrl.stride, DEMO_PATTERN_1);
 
