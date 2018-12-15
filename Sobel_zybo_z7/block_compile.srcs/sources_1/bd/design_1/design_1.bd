@@ -1011,6 +1011,7 @@
         <spirit:internalPortReference spirit:componentRef="v_vid_in_axi4s_0" spirit:portRef="aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_gpio_1" spirit:portRef="s_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="system_ila_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="system_ila_2" spirit:portRef="clk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>processing_system7_0_FCLK_RESET0_N</spirit:name>

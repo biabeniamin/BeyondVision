@@ -121,3 +121,7 @@ apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
 endgroup
 save_bd_design
 reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (200 MHz)" }  [get_bd_pins system_ila_2/clk]
+save_bd_design
+launch_runs impl_1 -to_step write_bitstream -jobs 12
