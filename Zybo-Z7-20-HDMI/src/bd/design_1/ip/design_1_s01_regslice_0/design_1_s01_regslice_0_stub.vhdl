@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Fri Dec 14 18:21:30 2018
+-- Date        : Fri Dec 14 18:21:29 2018
 -- Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/Digilent19/Zybo-Z7-20-HDMI/src/bd/design_1/ip/design_1_s01_regslice_0/design_1_s01_regslice_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top design_1_s01_regslice_0 -prefix
+--               design_1_s01_regslice_0_ design_1_s01_regslice_0_stub.vhdl
 -- Design      : design_1_s01_regslice_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1
