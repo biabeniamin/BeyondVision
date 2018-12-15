@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Sat Dec 15 16:15:26 2018
+--Date        : Sat Dec 15 16:40:21 2018
 --Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -3319,7 +3319,7 @@ entity design_1 is
     hdmi_out_data_p : out STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=32,numReposBlks=20,numNonXlnxBlks=3,numHierBlks=12,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=4,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=35,numReposBlks=23,numNonXlnxBlks=3,numHierBlks=12,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=4,da_clkrst_cnt=1,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
 end design_1;
@@ -3822,6 +3822,52 @@ architecture STRUCTURE of design_1 is
     gpio2_io_o : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component design_1_axi_gpio_1_0;
+  component design_1_system_ila_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    SLOT_0_AXIS_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    SLOT_0_AXIS_tlast : in STD_LOGIC;
+    SLOT_0_AXIS_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
+    SLOT_0_AXIS_tvalid : in STD_LOGIC;
+    SLOT_0_AXIS_tready : in STD_LOGIC;
+    SLOT_1_AXIS_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    SLOT_1_AXIS_tkeep : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    SLOT_1_AXIS_tlast : in STD_LOGIC;
+    SLOT_1_AXIS_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
+    SLOT_1_AXIS_tvalid : in STD_LOGIC;
+    SLOT_1_AXIS_tready : in STD_LOGIC;
+    SLOT_2_AXIS_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    SLOT_2_AXIS_tkeep : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    SLOT_2_AXIS_tlast : in STD_LOGIC;
+    SLOT_2_AXIS_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
+    SLOT_2_AXIS_tvalid : in STD_LOGIC;
+    SLOT_2_AXIS_tready : in STD_LOGIC;
+    SLOT_3_AXIS_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    SLOT_3_AXIS_tlast : in STD_LOGIC;
+    SLOT_3_AXIS_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
+    SLOT_3_AXIS_tvalid : in STD_LOGIC;
+    SLOT_3_AXIS_tready : in STD_LOGIC;
+    resetn : in STD_LOGIC
+  );
+  end component design_1_system_ila_0_0;
+  component design_1_system_ila_1_0 is
+  port (
+    clk : in STD_LOGIC;
+    SLOT_0_VID_IO_data : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    SLOT_0_VID_IO_active_video : in STD_LOGIC;
+    SLOT_0_VID_IO_hblank : in STD_LOGIC;
+    SLOT_0_VID_IO_vblank : in STD_LOGIC;
+    SLOT_0_VID_IO_hsync : in STD_LOGIC;
+    SLOT_0_VID_IO_vsync : in STD_LOGIC;
+    SLOT_0_VID_IO_field : in STD_LOGIC
+  );
+  end component design_1_system_ila_1_0;
+  component design_1_system_ila_2_0 is
+  port (
+    clk : in STD_LOGIC;
+    probe0 : in STD_LOGIC_VECTOR ( 23 downto 0 )
+  );
+  end component design_1_system_ila_2_0;
   signal axi_dynclk_0_PXL_CLK_5X_O : STD_LOGIC;
   signal axi_dynclk_0_PXL_CLK_O : STD_LOGIC;
   signal axi_gpio_0_gpio_io_o : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -3864,11 +3910,32 @@ architecture STRUCTURE of design_1 is
   signal axi_interconnect_0_M00_AXI_WSTRB : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal axi_interconnect_0_M00_AXI_WVALID : STD_LOGIC;
   signal axi_vdma_0_M_AXIS_MM2S_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
+  attribute CONN_BUS_INFO : string;
+  attribute CONN_BUS_INFO of axi_vdma_0_M_AXIS_MM2S_TDATA : signal is "axi_vdma_0_M_AXIS_MM2S xilinx.com:interface:axis:1.0 None TDATA";
+  attribute DEBUG : string;
+  attribute DEBUG of axi_vdma_0_M_AXIS_MM2S_TDATA : signal is "true";
+  attribute MARK_DEBUG : boolean;
+  attribute MARK_DEBUG of axi_vdma_0_M_AXIS_MM2S_TDATA : signal is std.standard.true;
   signal axi_vdma_0_M_AXIS_MM2S_TKEEP : STD_LOGIC_VECTOR ( 2 downto 0 );
+  attribute CONN_BUS_INFO of axi_vdma_0_M_AXIS_MM2S_TKEEP : signal is "axi_vdma_0_M_AXIS_MM2S xilinx.com:interface:axis:1.0 None TKEEP";
+  attribute DEBUG of axi_vdma_0_M_AXIS_MM2S_TKEEP : signal is "true";
+  attribute MARK_DEBUG of axi_vdma_0_M_AXIS_MM2S_TKEEP : signal is std.standard.true;
   signal axi_vdma_0_M_AXIS_MM2S_TLAST : STD_LOGIC;
+  attribute CONN_BUS_INFO of axi_vdma_0_M_AXIS_MM2S_TLAST : signal is "axi_vdma_0_M_AXIS_MM2S xilinx.com:interface:axis:1.0 None TLAST";
+  attribute DEBUG of axi_vdma_0_M_AXIS_MM2S_TLAST : signal is "true";
+  attribute MARK_DEBUG of axi_vdma_0_M_AXIS_MM2S_TLAST : signal is std.standard.true;
   signal axi_vdma_0_M_AXIS_MM2S_TREADY : STD_LOGIC;
+  attribute CONN_BUS_INFO of axi_vdma_0_M_AXIS_MM2S_TREADY : signal is "axi_vdma_0_M_AXIS_MM2S xilinx.com:interface:axis:1.0 None TREADY";
+  attribute DEBUG of axi_vdma_0_M_AXIS_MM2S_TREADY : signal is "true";
+  attribute MARK_DEBUG of axi_vdma_0_M_AXIS_MM2S_TREADY : signal is std.standard.true;
   signal axi_vdma_0_M_AXIS_MM2S_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
+  attribute CONN_BUS_INFO of axi_vdma_0_M_AXIS_MM2S_TUSER : signal is "axi_vdma_0_M_AXIS_MM2S xilinx.com:interface:axis:1.0 None TUSER";
+  attribute DEBUG of axi_vdma_0_M_AXIS_MM2S_TUSER : signal is "true";
+  attribute MARK_DEBUG of axi_vdma_0_M_AXIS_MM2S_TUSER : signal is std.standard.true;
   signal axi_vdma_0_M_AXIS_MM2S_TVALID : STD_LOGIC;
+  attribute CONN_BUS_INFO of axi_vdma_0_M_AXIS_MM2S_TVALID : signal is "axi_vdma_0_M_AXIS_MM2S xilinx.com:interface:axis:1.0 None TVALID";
+  attribute DEBUG of axi_vdma_0_M_AXIS_MM2S_TVALID : signal is "true";
+  attribute MARK_DEBUG of axi_vdma_0_M_AXIS_MM2S_TVALID : signal is std.standard.true;
   signal axi_vdma_0_M_AXI_MM2S_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal axi_vdma_0_M_AXI_MM2S_ARBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal axi_vdma_0_M_AXI_MM2S_ARCACHE : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -3899,15 +3966,49 @@ architecture STRUCTURE of design_1 is
   signal axi_vdma_0_M_AXI_S2MM_WSTRB : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal axi_vdma_0_M_AXI_S2MM_WVALID : STD_LOGIC;
   signal axis_subset_converter_0_M_AXIS_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
+  attribute CONN_BUS_INFO of axis_subset_converter_0_M_AXIS_TDATA : signal is "axis_subset_converter_0_M_AXIS xilinx.com:interface:axis:1.0 None TDATA";
+  attribute DEBUG of axis_subset_converter_0_M_AXIS_TDATA : signal is "true";
+  attribute MARK_DEBUG of axis_subset_converter_0_M_AXIS_TDATA : signal is std.standard.true;
   signal axis_subset_converter_0_M_AXIS_TLAST : STD_LOGIC;
+  attribute CONN_BUS_INFO of axis_subset_converter_0_M_AXIS_TLAST : signal is "axis_subset_converter_0_M_AXIS xilinx.com:interface:axis:1.0 None TLAST";
+  attribute DEBUG of axis_subset_converter_0_M_AXIS_TLAST : signal is "true";
+  attribute MARK_DEBUG of axis_subset_converter_0_M_AXIS_TLAST : signal is std.standard.true;
   signal axis_subset_converter_0_M_AXIS_TREADY : STD_LOGIC;
+  attribute CONN_BUS_INFO of axis_subset_converter_0_M_AXIS_TREADY : signal is "axis_subset_converter_0_M_AXIS xilinx.com:interface:axis:1.0 None TREADY";
+  attribute DEBUG of axis_subset_converter_0_M_AXIS_TREADY : signal is "true";
+  attribute MARK_DEBUG of axis_subset_converter_0_M_AXIS_TREADY : signal is std.standard.true;
   signal axis_subset_converter_0_M_AXIS_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
+  attribute CONN_BUS_INFO of axis_subset_converter_0_M_AXIS_TUSER : signal is "axis_subset_converter_0_M_AXIS xilinx.com:interface:axis:1.0 None TUSER";
+  attribute DEBUG of axis_subset_converter_0_M_AXIS_TUSER : signal is "true";
+  attribute MARK_DEBUG of axis_subset_converter_0_M_AXIS_TUSER : signal is std.standard.true;
   signal axis_subset_converter_0_M_AXIS_TVALID : STD_LOGIC;
+  attribute CONN_BUS_INFO of axis_subset_converter_0_M_AXIS_TVALID : signal is "axis_subset_converter_0_M_AXIS xilinx.com:interface:axis:1.0 None TVALID";
+  attribute DEBUG of axis_subset_converter_0_M_AXIS_TVALID : signal is "true";
+  attribute MARK_DEBUG of axis_subset_converter_0_M_AXIS_TVALID : signal is std.standard.true;
   signal axis_subset_converter_1_M_AXIS_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
+  attribute CONN_BUS_INFO of axis_subset_converter_1_M_AXIS_TDATA : signal is "axis_subset_converter_1_M_AXIS xilinx.com:interface:axis:1.0 None TDATA";
+  attribute DEBUG of axis_subset_converter_1_M_AXIS_TDATA : signal is "true";
+  attribute MARK_DEBUG of axis_subset_converter_1_M_AXIS_TDATA : signal is std.standard.true;
+  signal axis_subset_converter_1_M_AXIS_TKEEP : STD_LOGIC_VECTOR ( 2 downto 0 );
+  attribute CONN_BUS_INFO of axis_subset_converter_1_M_AXIS_TKEEP : signal is "axis_subset_converter_1_M_AXIS xilinx.com:interface:axis:1.0 None TKEEP";
+  attribute DEBUG of axis_subset_converter_1_M_AXIS_TKEEP : signal is "true";
+  attribute MARK_DEBUG of axis_subset_converter_1_M_AXIS_TKEEP : signal is std.standard.true;
   signal axis_subset_converter_1_M_AXIS_TLAST : STD_LOGIC;
+  attribute CONN_BUS_INFO of axis_subset_converter_1_M_AXIS_TLAST : signal is "axis_subset_converter_1_M_AXIS xilinx.com:interface:axis:1.0 None TLAST";
+  attribute DEBUG of axis_subset_converter_1_M_AXIS_TLAST : signal is "true";
+  attribute MARK_DEBUG of axis_subset_converter_1_M_AXIS_TLAST : signal is std.standard.true;
   signal axis_subset_converter_1_M_AXIS_TREADY : STD_LOGIC;
+  attribute CONN_BUS_INFO of axis_subset_converter_1_M_AXIS_TREADY : signal is "axis_subset_converter_1_M_AXIS xilinx.com:interface:axis:1.0 None TREADY";
+  attribute DEBUG of axis_subset_converter_1_M_AXIS_TREADY : signal is "true";
+  attribute MARK_DEBUG of axis_subset_converter_1_M_AXIS_TREADY : signal is std.standard.true;
   signal axis_subset_converter_1_M_AXIS_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
+  attribute CONN_BUS_INFO of axis_subset_converter_1_M_AXIS_TUSER : signal is "axis_subset_converter_1_M_AXIS xilinx.com:interface:axis:1.0 None TUSER";
+  attribute DEBUG of axis_subset_converter_1_M_AXIS_TUSER : signal is "true";
+  attribute MARK_DEBUG of axis_subset_converter_1_M_AXIS_TUSER : signal is std.standard.true;
   signal axis_subset_converter_1_M_AXIS_TVALID : STD_LOGIC;
+  attribute CONN_BUS_INFO of axis_subset_converter_1_M_AXIS_TVALID : signal is "axis_subset_converter_1_M_AXIS xilinx.com:interface:axis:1.0 None TVALID";
+  attribute DEBUG of axis_subset_converter_1_M_AXIS_TVALID : signal is "true";
+  attribute MARK_DEBUG of axis_subset_converter_1_M_AXIS_TVALID : signal is std.standard.true;
   signal dvi2rgb_0_PixelClk : STD_LOGIC;
   signal dvi2rgb_1_DDC_SCL_I : STD_LOGIC;
   signal dvi2rgb_1_DDC_SCL_O : STD_LOGIC;
@@ -3916,6 +4017,8 @@ architecture STRUCTURE of design_1 is
   signal dvi2rgb_1_DDC_SDA_O : STD_LOGIC;
   signal dvi2rgb_1_DDC_SDA_T : STD_LOGIC;
   signal dvi2rgb_1_vid_pData : STD_LOGIC_VECTOR ( 23 downto 0 );
+  attribute DEBUG of dvi2rgb_1_vid_pData : signal is "true";
+  attribute MARK_DEBUG of dvi2rgb_1_vid_pData : signal is std.standard.true;
   signal dvi2rgb_1_vid_pHSync : STD_LOGIC;
   signal dvi2rgb_1_vid_pVDE : STD_LOGIC;
   signal dvi2rgb_1_vid_pVSync : STD_LOGIC;
@@ -4096,19 +4199,58 @@ architecture STRUCTURE of design_1 is
   signal rst_ps7_0_50M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal rst_ps7_0_50M_peripheral_reset : STD_LOGIC_VECTOR ( 0 to 0 );
   signal v_axi4s_vid_out_0_vid_io_out_ACTIVE_VIDEO : STD_LOGIC;
+  attribute CONN_BUS_INFO of v_axi4s_vid_out_0_vid_io_out_ACTIVE_VIDEO : signal is "v_axi4s_vid_out_0_vid_io_out xilinx.com:interface:vid_io:1.0 None ACTIVE_VIDEO";
+  attribute DEBUG of v_axi4s_vid_out_0_vid_io_out_ACTIVE_VIDEO : signal is "true";
+  attribute MARK_DEBUG of v_axi4s_vid_out_0_vid_io_out_ACTIVE_VIDEO : signal is std.standard.true;
   signal v_axi4s_vid_out_0_vid_io_out_DATA : STD_LOGIC_VECTOR ( 23 downto 0 );
+  attribute CONN_BUS_INFO of v_axi4s_vid_out_0_vid_io_out_DATA : signal is "v_axi4s_vid_out_0_vid_io_out xilinx.com:interface:vid_io:1.0 None DATA";
+  attribute DEBUG of v_axi4s_vid_out_0_vid_io_out_DATA : signal is "true";
+  attribute MARK_DEBUG of v_axi4s_vid_out_0_vid_io_out_DATA : signal is std.standard.true;
+  signal v_axi4s_vid_out_0_vid_io_out_FIELD : STD_LOGIC;
+  attribute CONN_BUS_INFO of v_axi4s_vid_out_0_vid_io_out_FIELD : signal is "v_axi4s_vid_out_0_vid_io_out xilinx.com:interface:vid_io:1.0 None FIELD";
+  attribute DEBUG of v_axi4s_vid_out_0_vid_io_out_FIELD : signal is "true";
+  attribute MARK_DEBUG of v_axi4s_vid_out_0_vid_io_out_FIELD : signal is std.standard.true;
+  signal v_axi4s_vid_out_0_vid_io_out_HBLANK : STD_LOGIC;
+  attribute CONN_BUS_INFO of v_axi4s_vid_out_0_vid_io_out_HBLANK : signal is "v_axi4s_vid_out_0_vid_io_out xilinx.com:interface:vid_io:1.0 None HBLANK";
+  attribute DEBUG of v_axi4s_vid_out_0_vid_io_out_HBLANK : signal is "true";
+  attribute MARK_DEBUG of v_axi4s_vid_out_0_vid_io_out_HBLANK : signal is std.standard.true;
   signal v_axi4s_vid_out_0_vid_io_out_HSYNC : STD_LOGIC;
+  attribute CONN_BUS_INFO of v_axi4s_vid_out_0_vid_io_out_HSYNC : signal is "v_axi4s_vid_out_0_vid_io_out xilinx.com:interface:vid_io:1.0 None HSYNC";
+  attribute DEBUG of v_axi4s_vid_out_0_vid_io_out_HSYNC : signal is "true";
+  attribute MARK_DEBUG of v_axi4s_vid_out_0_vid_io_out_HSYNC : signal is std.standard.true;
+  signal v_axi4s_vid_out_0_vid_io_out_VBLANK : STD_LOGIC;
+  attribute CONN_BUS_INFO of v_axi4s_vid_out_0_vid_io_out_VBLANK : signal is "v_axi4s_vid_out_0_vid_io_out xilinx.com:interface:vid_io:1.0 None VBLANK";
+  attribute DEBUG of v_axi4s_vid_out_0_vid_io_out_VBLANK : signal is "true";
+  attribute MARK_DEBUG of v_axi4s_vid_out_0_vid_io_out_VBLANK : signal is std.standard.true;
   signal v_axi4s_vid_out_0_vid_io_out_VSYNC : STD_LOGIC;
+  attribute CONN_BUS_INFO of v_axi4s_vid_out_0_vid_io_out_VSYNC : signal is "v_axi4s_vid_out_0_vid_io_out xilinx.com:interface:vid_io:1.0 None VSYNC";
+  attribute DEBUG of v_axi4s_vid_out_0_vid_io_out_VSYNC : signal is "true";
+  attribute MARK_DEBUG of v_axi4s_vid_out_0_vid_io_out_VSYNC : signal is std.standard.true;
   signal v_tc_1_vtiming_out_ACTIVE_VIDEO : STD_LOGIC;
   signal v_tc_1_vtiming_out_HBLANK : STD_LOGIC;
   signal v_tc_1_vtiming_out_HSYNC : STD_LOGIC;
   signal v_tc_1_vtiming_out_VBLANK : STD_LOGIC;
   signal v_tc_1_vtiming_out_VSYNC : STD_LOGIC;
   signal v_vid_in_axi4s_0_video_out_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
+  attribute CONN_BUS_INFO of v_vid_in_axi4s_0_video_out_TDATA : signal is "v_vid_in_axi4s_0_video_out xilinx.com:interface:axis:1.0 None TDATA";
+  attribute DEBUG of v_vid_in_axi4s_0_video_out_TDATA : signal is "true";
+  attribute MARK_DEBUG of v_vid_in_axi4s_0_video_out_TDATA : signal is std.standard.true;
   signal v_vid_in_axi4s_0_video_out_TLAST : STD_LOGIC;
+  attribute CONN_BUS_INFO of v_vid_in_axi4s_0_video_out_TLAST : signal is "v_vid_in_axi4s_0_video_out xilinx.com:interface:axis:1.0 None TLAST";
+  attribute DEBUG of v_vid_in_axi4s_0_video_out_TLAST : signal is "true";
+  attribute MARK_DEBUG of v_vid_in_axi4s_0_video_out_TLAST : signal is std.standard.true;
   signal v_vid_in_axi4s_0_video_out_TREADY : STD_LOGIC;
+  attribute CONN_BUS_INFO of v_vid_in_axi4s_0_video_out_TREADY : signal is "v_vid_in_axi4s_0_video_out xilinx.com:interface:axis:1.0 None TREADY";
+  attribute DEBUG of v_vid_in_axi4s_0_video_out_TREADY : signal is "true";
+  attribute MARK_DEBUG of v_vid_in_axi4s_0_video_out_TREADY : signal is std.standard.true;
   signal v_vid_in_axi4s_0_video_out_TUSER : STD_LOGIC;
+  attribute CONN_BUS_INFO of v_vid_in_axi4s_0_video_out_TUSER : signal is "v_vid_in_axi4s_0_video_out xilinx.com:interface:axis:1.0 None TUSER";
+  attribute DEBUG of v_vid_in_axi4s_0_video_out_TUSER : signal is "true";
+  attribute MARK_DEBUG of v_vid_in_axi4s_0_video_out_TUSER : signal is std.standard.true;
   signal v_vid_in_axi4s_0_video_out_TVALID : STD_LOGIC;
+  attribute CONN_BUS_INFO of v_vid_in_axi4s_0_video_out_TVALID : signal is "v_vid_in_axi4s_0_video_out xilinx.com:interface:axis:1.0 None TVALID";
+  attribute DEBUG of v_vid_in_axi4s_0_video_out_TVALID : signal is "true";
+  attribute MARK_DEBUG of v_vid_in_axi4s_0_video_out_TVALID : signal is std.standard.true;
   signal xlconstant_0_dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal xlconstant_1_dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_axi_dynclk_0_LOCKED_O_UNCONNECTED : STD_LOGIC;
@@ -4119,7 +4261,6 @@ architecture STRUCTURE of design_1 is
   signal NLW_axi_vdma_0_s2mm_introut_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_vdma_0_mm2s_frame_ptr_out_UNCONNECTED : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal NLW_axi_vdma_0_s2mm_frame_ptr_out_UNCONNECTED : STD_LOGIC_VECTOR ( 5 downto 0 );
-  signal NLW_axis_subset_converter_1_m_axis_tkeep_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal NLW_dvi2rgb_1_aPixelClkLckd_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_USB0_VBUS_PWRSELECT_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_S_AXI_HP0_RACOUNT_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -4132,9 +4273,6 @@ architecture STRUCTURE of design_1 is
   signal NLW_v_axi4s_vid_out_0_locked_UNCONNECTED : STD_LOGIC;
   signal NLW_v_axi4s_vid_out_0_overflow_UNCONNECTED : STD_LOGIC;
   signal NLW_v_axi4s_vid_out_0_underflow_UNCONNECTED : STD_LOGIC;
-  signal NLW_v_axi4s_vid_out_0_vid_field_id_UNCONNECTED : STD_LOGIC;
-  signal NLW_v_axi4s_vid_out_0_vid_hblank_UNCONNECTED : STD_LOGIC;
-  signal NLW_v_axi4s_vid_out_0_vid_vblank_UNCONNECTED : STD_LOGIC;
   signal NLW_v_axi4s_vid_out_0_vtg_ce_UNCONNECTED : STD_LOGIC;
   signal NLW_v_axi4s_vid_out_0_status_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal NLW_v_tc_0_irq_UNCONNECTED : STD_LOGIC;
@@ -4448,7 +4586,7 @@ axis_subset_converter_1: component design_1_axis_subset_converter_0_1
       aclk => processing_system7_0_FCLK_CLK0,
       aresetn => rst_ps7_0_50M_peripheral_aresetn(0),
       m_axis_tdata(23 downto 0) => axis_subset_converter_1_M_AXIS_TDATA(23 downto 0),
-      m_axis_tkeep(2 downto 0) => NLW_axis_subset_converter_1_m_axis_tkeep_UNCONNECTED(2 downto 0),
+      m_axis_tkeep(2 downto 0) => axis_subset_converter_1_M_AXIS_TKEEP(2 downto 0),
       m_axis_tlast => axis_subset_converter_1_M_AXIS_TLAST,
       m_axis_tready => axis_subset_converter_1_M_AXIS_TREADY,
       m_axis_tuser(0) => axis_subset_converter_1_M_AXIS_TUSER(0),
@@ -4786,6 +4924,49 @@ rst_ps7_0_50M: component design_1_rst_ps7_0_50M_0
       peripheral_reset(0) => rst_ps7_0_50M_peripheral_reset(0),
       slowest_sync_clk => processing_system7_0_FCLK_CLK0
     );
+system_ila_0: component design_1_system_ila_0_0
+     port map (
+      SLOT_0_AXIS_tdata(23 downto 0) => v_vid_in_axi4s_0_video_out_TDATA(23 downto 0),
+      SLOT_0_AXIS_tlast => v_vid_in_axi4s_0_video_out_TLAST,
+      SLOT_0_AXIS_tready => v_vid_in_axi4s_0_video_out_TREADY,
+      SLOT_0_AXIS_tuser(0) => v_vid_in_axi4s_0_video_out_TUSER,
+      SLOT_0_AXIS_tvalid => v_vid_in_axi4s_0_video_out_TVALID,
+      SLOT_1_AXIS_tdata(23 downto 0) => axis_subset_converter_1_M_AXIS_TDATA(23 downto 0),
+      SLOT_1_AXIS_tkeep(2 downto 0) => axis_subset_converter_1_M_AXIS_TKEEP(2 downto 0),
+      SLOT_1_AXIS_tlast => axis_subset_converter_1_M_AXIS_TLAST,
+      SLOT_1_AXIS_tready => axis_subset_converter_1_M_AXIS_TREADY,
+      SLOT_1_AXIS_tuser(0) => axis_subset_converter_1_M_AXIS_TUSER(0),
+      SLOT_1_AXIS_tvalid => axis_subset_converter_1_M_AXIS_TVALID,
+      SLOT_2_AXIS_tdata(23 downto 0) => axi_vdma_0_M_AXIS_MM2S_TDATA(23 downto 0),
+      SLOT_2_AXIS_tkeep(2 downto 0) => axi_vdma_0_M_AXIS_MM2S_TKEEP(2 downto 0),
+      SLOT_2_AXIS_tlast => axi_vdma_0_M_AXIS_MM2S_TLAST,
+      SLOT_2_AXIS_tready => axi_vdma_0_M_AXIS_MM2S_TREADY,
+      SLOT_2_AXIS_tuser(0) => axi_vdma_0_M_AXIS_MM2S_TUSER(0),
+      SLOT_2_AXIS_tvalid => axi_vdma_0_M_AXIS_MM2S_TVALID,
+      SLOT_3_AXIS_tdata(23 downto 0) => axis_subset_converter_0_M_AXIS_TDATA(23 downto 0),
+      SLOT_3_AXIS_tlast => axis_subset_converter_0_M_AXIS_TLAST,
+      SLOT_3_AXIS_tready => axis_subset_converter_0_M_AXIS_TREADY,
+      SLOT_3_AXIS_tuser(0) => axis_subset_converter_0_M_AXIS_TUSER(0),
+      SLOT_3_AXIS_tvalid => axis_subset_converter_0_M_AXIS_TVALID,
+      clk => processing_system7_0_FCLK_CLK0,
+      resetn => rst_ps7_0_50M_peripheral_aresetn(0)
+    );
+system_ila_1: component design_1_system_ila_1_0
+     port map (
+      SLOT_0_VID_IO_active_video => v_axi4s_vid_out_0_vid_io_out_ACTIVE_VIDEO,
+      SLOT_0_VID_IO_data(23 downto 0) => v_axi4s_vid_out_0_vid_io_out_DATA(23 downto 0),
+      SLOT_0_VID_IO_field => v_axi4s_vid_out_0_vid_io_out_FIELD,
+      SLOT_0_VID_IO_hblank => v_axi4s_vid_out_0_vid_io_out_HBLANK,
+      SLOT_0_VID_IO_hsync => v_axi4s_vid_out_0_vid_io_out_HSYNC,
+      SLOT_0_VID_IO_vblank => v_axi4s_vid_out_0_vid_io_out_VBLANK,
+      SLOT_0_VID_IO_vsync => v_axi4s_vid_out_0_vid_io_out_VSYNC,
+      clk => axi_dynclk_0_PXL_CLK_O
+    );
+system_ila_2: component design_1_system_ila_2_0
+     port map (
+      clk => processing_system7_0_FCLK_CLK0,
+      probe0(23 downto 0) => dvi2rgb_1_vid_pData(23 downto 0)
+    );
 v_axi4s_vid_out_0: component design_1_v_axi4s_vid_out_0_0
      port map (
       aclk => processing_system7_0_FCLK_CLK0,
@@ -4803,13 +4984,13 @@ v_axi4s_vid_out_0: component design_1_v_axi4s_vid_out_0_0
       underflow => NLW_v_axi4s_vid_out_0_underflow_UNCONNECTED,
       vid_active_video => v_axi4s_vid_out_0_vid_io_out_ACTIVE_VIDEO,
       vid_data(23 downto 0) => v_axi4s_vid_out_0_vid_io_out_DATA(23 downto 0),
-      vid_field_id => NLW_v_axi4s_vid_out_0_vid_field_id_UNCONNECTED,
-      vid_hblank => NLW_v_axi4s_vid_out_0_vid_hblank_UNCONNECTED,
+      vid_field_id => v_axi4s_vid_out_0_vid_io_out_FIELD,
+      vid_hblank => v_axi4s_vid_out_0_vid_io_out_HBLANK,
       vid_hsync => v_axi4s_vid_out_0_vid_io_out_HSYNC,
       vid_io_out_ce => xlconstant_0_dout(0),
       vid_io_out_clk => axi_dynclk_0_PXL_CLK_O,
       vid_io_out_reset => rst_ps7_0_50M_peripheral_reset(0),
-      vid_vblank => NLW_v_axi4s_vid_out_0_vid_vblank_UNCONNECTED,
+      vid_vblank => v_axi4s_vid_out_0_vid_io_out_VBLANK,
       vid_vsync => v_axi4s_vid_out_0_vid_io_out_VSYNC,
       vtg_active_video => v_tc_1_vtiming_out_ACTIVE_VIDEO,
       vtg_ce => NLW_v_axi4s_vid_out_0_vtg_ce_UNCONNECTED,

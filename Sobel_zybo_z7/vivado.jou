@@ -125,3 +125,58 @@ launch_runs impl_1 -to_step write_bitstream -jobs 12
 apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (200 MHz)" }  [get_bd_pins system_ila_2/clk]
 save_bd_design
 launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+file copy -force C:/Digilent19/Sobel_zybo_z7/block_compile.runs/impl_1/design_1_wrapper.sysdef C:/Digilent19/Sobel_zybo_z7/block_compile.sdk/design_1_wrapper.hdf
+
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Digilent19/Sobel_zybo_z7/block_compile.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {C:/Digilent19/Sobel_zybo_z7/block_compile.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Digilent19/Sobel_zybo_z7/block_compile.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {C:/Digilent19/Sobel_zybo_z7/block_compile.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Digilent19/Sobel_zybo_z7/block_compile.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Digilent19/Sobel_zybo_z7/block_compile.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_1/U0/ila_lib"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_3 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_2/U0/ila_lib"}]]
+add_wave -into {hw_ila_data_2.wcfg} -radix hex { {design_1_i/system_ila_1/U0/SLOT_0_VID_IO_active_video_1} {design_1_i/system_ila_1/U0/SLOT_0_VID_IO_data_1} {design_1_i/system_ila_1/U0/SLOT_0_VID_IO_field_1} {design_1_i/system_ila_1/U0/SLOT_0_VID_IO_hblank_1} {design_1_i/system_ila_1/U0/SLOT_0_VID_IO_hsync_1} {design_1_i/system_ila_1/U0/SLOT_0_VID_IO_vblank_1} {design_1_i/system_ila_1/U0/SLOT_0_VID_IO_vsync_1} }
+add_wave -into {hw_ila_data_3.wcfg} -radix hex { {design_1_i/system_ila_2/U0/probe0_1} }
+set_property NAME.CUSTOM dvi2rgb_1_vid_pData [get_hw_probes design_1_i/system_ila_2/U0/probe0_1] 
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_2/U0/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_2/U0/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_2/U0/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_2/U0/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_2/U0/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_2/U0/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_2/U0/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_2/U0/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_2/U0/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_1/U0/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_1/U0/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_1/U0/ila_lib"}]]
+open_bd_design {C:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/design_1.bd}
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+open_bd_design {C:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/design_1.bd}
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+disconnect_bd_net /rst_ps7_0_50M_peripheral_aresetn [get_bd_pins axi_vdma_0/axi_resetn]
+connect_bd_net [get_bd_pins axi_gpio_1/gpio_io_o] [get_bd_pins axi_vdma_0/axi_resetn]
+save_bd_design
+reset_run synth_1
