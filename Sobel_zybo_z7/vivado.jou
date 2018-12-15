@@ -11,3 +11,15 @@
 #-----------------------------------------------------------
 start_gui
 open_project C:/Digilent19/Sobel_zybo_z7/block_compile.xpr
+report_ip_status -name ip_status 
+update_compile_order -fileset sources_1
+set_property  ip_repo_paths  {c:/Digilent19/digilent C:/Digilent19/vivado-library-master c:/Digilent19/hls_lib} [current_project]
+update_ip_catalog
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {design_1_axis_subset_converter_0_1 design_1_ila_4_0 design_1_v_vid_in_axi4s_0_0 design_1_ila_1_0 design_1_ila_3_0 design_1_axi_interconnect_0_0 design_1_xlconstant_0_1 design_1_ila_5_0 design_1_axis_subset_converter_0_0 design_1_ila_0_0 design_1_xlconstant_0_0 design_1_axi_gpio_0_0 design_1_axi_vdma_0_0 design_1_ila_1_1 design_1_dvi2rgb_1_1 design_1_ps7_0_axi_periph_0 design_1_v_axi4s_vid_out_0_0}] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips {design_1_axis_subset_converter_0_1 design_1_ila_4_0 design_1_v_vid_in_axi4s_0_0 design_1_ila_1_0 design_1_ila_3_0 design_1_axi_interconnect_0_0 design_1_xlconstant_0_1 design_1_ila_5_0 design_1_axis_subset_converter_0_0 design_1_ila_0_0 design_1_xlconstant_0_0 design_1_axi_gpio_0_0 design_1_axi_vdma_0_0 design_1_ila_1_1 design_1_dvi2rgb_1_1 design_1_ps7_0_axi_periph_0 design_1_v_axi4s_vid_out_0_0}] -no_script -sync -force -quiet
+delete_bd_objs [get_bd_intf_nets axis_subset_converter_0_M_AXIS]
+delete_bd_objs [get_bd_intf_nets image_filter_0_OUTPUT_STREAM]
+connect_bd_intf_net [get_bd_intf_pins axis_subset_converter_0/M_AXIS] [get_bd_intf_pins axi_vdma_0/S_AXIS_S2MM]
+delete_bd_objs [get_bd_nets dvi2rgb_1_aPixelClkLckd] [get_bd_nets v_axi4s_vid_out_0_locked] [get_bd_nets v_axi4s_vid_out_0_overflow] [get_bd_nets axi_dynclk_0_LOCKED_O] [get_bd_nets v_axi4s_vid_out_0_underflow] [get_bd_nets v_axi4s_vid_out_0_status] [get_bd_nets image_filter_0_ap_done] [get_bd_nets image_filter_0_ap_ready] [get_bd_nets image_filter_0_ap_idle] [get_bd_cells ila_0] [get_bd_cells ila_1] [get_bd_cells ila_2] [get_bd_cells ila_3] [get_bd_cells ila_4] [get_bd_cells ila_5]
+delete_bd_objs [get_bd_nets axi_gpio_0_gpio2_io_o] [get_bd_cells image_filter_0]
