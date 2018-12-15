@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Sat Dec 15 16:40:37 2018">
+<application name="pa" timeStamp="Sat Dec 15 16:58:03 2018">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="1687cceb14d44f509c303fc24fc47a9e" type="ProjectID"/>
-<property name="ProjectIteration" value="64" type="ProjectIteration"/>
+<property name="ProjectIteration" value="65" type="ProjectIteration"/>
 </section>
 <section name="PlanAhead Usage" visible="true">
 <item name="Project Data">
@@ -42,7 +42,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="NewHardwareDashboard" value="6" type="JavaHandler"/>
 <property name="NewLaunchHardware" value="23" type="JavaHandler"/>
 <property name="NewProject" value="1" type="JavaHandler"/>
-<property name="OpenBlockDesign" value="33" type="JavaHandler"/>
+<property name="OpenBlockDesign" value="34" type="JavaHandler"/>
 <property name="OpenHardwareDashboard" value="6" type="JavaHandler"/>
 <property name="OpenHardwareManager" value="51" type="JavaHandler"/>
 <property name="OpenInNewWindowIPIntegrator" value="2" type="JavaHandler"/>
@@ -55,7 +55,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="RefreshTarget" value="13" type="JavaHandler"/>
 <property name="RegenerateRSBLayout" value="2" type="JavaHandler"/>
 <property name="ReportIPStatus" value="7" type="JavaHandler"/>
-<property name="RunBitgen" value="67" type="JavaHandler"/>
+<property name="RunBitgen" value="68" type="JavaHandler"/>
 <property name="RunTrigger" value="216" type="JavaHandler"/>
 <property name="RunTriggerImmediate" value="31" type="JavaHandler"/>
 <property name="SaveRSBDesign" value="39" type="JavaHandler"/>
@@ -79,8 +79,8 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ArchiveProjectDialog_ARCHIVE_NAME" value="2" type="GuiHandlerData"/>
 <property name="BaseDialog_CANCEL" value="65" type="GuiHandlerData"/>
 <property name="BaseDialog_NO" value="2" type="GuiHandlerData"/>
-<property name="BaseDialog_OK" value="266" type="GuiHandlerData"/>
-<property name="BaseDialog_YES" value="10" type="GuiHandlerData"/>
+<property name="BaseDialog_OK" value="267" type="GuiHandlerData"/>
+<property name="BaseDialog_YES" value="11" type="GuiHandlerData"/>
 <property name="BaseReportTab_RERUN" value="9" type="GuiHandlerData"/>
 <property name="BoardTreePanel_BOARD_TREE_PANEL" value="4" type="GuiHandlerData"/>
 <property name="ClkConfigTreeTablePanel_CLK_CONFIG_TREE_TABLE" value="9" type="GuiHandlerData"/>
@@ -96,7 +96,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ExpRunTreePanel_EXP_RUN_TREE_TABLE" value="8" type="GuiHandlerData"/>
 <property name="ExploreAheadView_LAUNCH_SELECTED_RUNS" value="1" type="GuiHandlerData"/>
 <property name="FileSetPanel_FILE_SET_PANEL_TREE" value="99" type="GuiHandlerData"/>
-<property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="127" type="GuiHandlerData"/>
+<property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="129" type="GuiHandlerData"/>
 <property name="GraphicalView_ZOOM_FIT" value="8" type="GuiHandlerData"/>
 <property name="GraphicalView_ZOOM_IN" value="1" type="GuiHandlerData"/>
 <property name="GraphicalView_ZOOM_OUT" value="10" type="GuiHandlerData"/>
@@ -228,7 +228,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="SmartConnect_SHOW_ADVANCED_PROPERTIES" value="1" type="GuiHandlerData"/>
 <property name="SrcMenu_IP_HIERARCHY" value="1" type="GuiHandlerData"/>
 <property name="StateMonitor_RESET_RUN" value="1" type="GuiHandlerData"/>
-<property name="SyntheticaGettingStartedView_RECENT_PROJECTS" value="25" type="GuiHandlerData"/>
+<property name="SyntheticaGettingStartedView_RECENT_PROJECTS" value="26" type="GuiHandlerData"/>
 <property name="SyntheticaStateMonitor_CANCEL" value="6" type="GuiHandlerData"/>
 <property name="SystemBuilderMenu_ASSIGN_ADDRESS" value="1" type="GuiHandlerData"/>
 <property name="SystemBuilderMenu_DEBUG" value="6" type="GuiHandlerData"/>
