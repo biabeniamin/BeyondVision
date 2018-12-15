@@ -23,3 +23,33 @@ delete_bd_objs [get_bd_intf_nets image_filter_0_OUTPUT_STREAM]
 connect_bd_intf_net [get_bd_intf_pins axis_subset_converter_0/M_AXIS] [get_bd_intf_pins axi_vdma_0/S_AXIS_S2MM]
 delete_bd_objs [get_bd_nets dvi2rgb_1_aPixelClkLckd] [get_bd_nets v_axi4s_vid_out_0_locked] [get_bd_nets v_axi4s_vid_out_0_overflow] [get_bd_nets axi_dynclk_0_LOCKED_O] [get_bd_nets v_axi4s_vid_out_0_underflow] [get_bd_nets v_axi4s_vid_out_0_status] [get_bd_nets image_filter_0_ap_done] [get_bd_nets image_filter_0_ap_ready] [get_bd_nets image_filter_0_ap_idle] [get_bd_cells ila_0] [get_bd_cells ila_1] [get_bd_cells ila_2] [get_bd_cells ila_3] [get_bd_cells ila_4] [get_bd_cells ila_5]
 delete_bd_objs [get_bd_nets axi_gpio_0_gpio2_io_o] [get_bd_cells image_filter_0]
+save_bd_design
+reset_run synth_1
+reset_run design_1_processing_system7_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+launch_sdk -workspace C:/Digilent19/Sobel_zybo_z7/block_compile.sdk -hwspec C:/Digilent19/Sobel_zybo_z7/block_compile.sdk/design_1_wrapper.hdf
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Digilent19/Sobel_zybo_z7/block_compile.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Digilent19/Sobel_zybo_z7/block_compile.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+file copy -force C:/Digilent19/Sobel_zybo_z7/block_compile.runs/impl_1/design_1_wrapper.sysdef C:/Digilent19/Sobel_zybo_z7/block_compile.sdk/design_1_wrapper.hdf
+
+file copy -force C:/Digilent19/Sobel_zybo_z7/block_compile.runs/impl_1/design_1_wrapper.sysdef C:/Digilent19/Sobel_zybo_z7/block_compile.sdk/design_1_wrapper.hdf
+
+file mkdir C:/Digilent19/Sobel_zybo_z7/block_compile.sdk
+file copy -force C:/Digilent19/Sobel_zybo_z7/block_compile.runs/impl_1/design_1_wrapper.sysdef C:/Digilent19/Sobel_zybo_z7/block_compile.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace C:/Digilent19/Sobel_zybo_z7/block_compile.sdk -hwspec C:/Digilent19/Sobel_zybo_z7/block_compile.sdk/design_1_wrapper.hdf
+open_bd_design {C:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/design_1.bd}
+regenerate_bd_layout
+undo
+regenerate_bd_layout
+save_bd_design
+file copy -force C:/Digilent19/Sobel_zybo_z7/block_compile.runs/impl_1/design_1_wrapper.sysdef C:/Digilent19/Sobel_zybo_z7/block_compile.sdk/design_1_wrapper.hdf
+
