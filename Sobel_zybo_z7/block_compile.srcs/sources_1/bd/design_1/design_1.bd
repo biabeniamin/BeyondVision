@@ -1046,7 +1046,7 @@
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>rst_ps7_0_50M_peripheral_aresetn</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="axi_gpio_1" spirit:portRef="gpio_io_o"/>
+        <spirit:internalPortReference spirit:componentRef="rst_ps7_0_50M" spirit:portRef="peripheral_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="v_tc_0" spirit:portRef="resetn"/>
         <spirit:internalPortReference spirit:componentRef="v_tc_0" spirit:portRef="s_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="v_tc_1" spirit:portRef="resetn"/>
@@ -1102,7 +1102,7 @@
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>rst_ps7_0_50M_peripheral_reset</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="axi_gpio_1" spirit:portRef="gpio2_io_o"/>
+        <spirit:internalPortReference spirit:componentRef="rst_ps7_0_50M" spirit:portRef="peripheral_reset"/>
         <spirit:internalPortReference spirit:componentRef="rgb2dvi_0" spirit:portRef="aRst"/>
         <spirit:internalPortReference spirit:componentRef="v_axi4s_vid_out_0" spirit:portRef="vid_io_out_reset"/>
         <spirit:internalPortReference spirit:componentRef="v_vid_in_axi4s_0" spirit:portRef="vid_io_in_reset"/>
@@ -1153,11 +1153,6 @@
         <spirit:name>axi_gpio_0_gpio_io_o</spirit:name>
         <spirit:internalPortReference spirit:componentRef="axi_gpio_0" spirit:portRef="gpio_io_o"/>
         <spirit:externalPortReference spirit:portRef="HDMI_HPD_IN"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>rst_ps7_0_50M_peripheral_aresetn1</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="rst_ps7_0_50M" spirit:portRef="peripheral_aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="axi_gpio_1" spirit:portRef="s_axi_aresetn"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>

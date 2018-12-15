@@ -66,3 +66,37 @@ apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/process
 save_bd_design
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+file copy -force C:/Digilent19/Sobel_zybo_z7/block_compile.runs/impl_1/design_1_wrapper.sysdef C:/Digilent19/Sobel_zybo_z7/block_compile.sdk/design_1_wrapper.hdf
+
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Digilent19/Sobel_zybo_z7/block_compile.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+close_hw
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Digilent19/Sobel_zybo_z7/block_compile.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Digilent19/Sobel_zybo_z7/block_compile.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+file copy -force C:/Digilent19/Sobel_zybo_z7/block_compile.runs/impl_1/design_1_wrapper.sysdef C:/Digilent19/Sobel_zybo_z7/block_compile.sdk/design_1_wrapper.hdf
+
+close_hw
+disconnect_bd_net /rst_ps7_0_50M_peripheral_reset [get_bd_pins axi_gpio_1/gpio2_io_o]
+undo
+delete_bd_objs [get_bd_nets rst_ps7_0_50M_peripheral_aresetn1]
+disconnect_bd_net /rst_ps7_0_50M_peripheral_reset [get_bd_pins axi_gpio_1/gpio2_io_o]
+disconnect_bd_net /rst_ps7_0_50M_peripheral_aresetn [get_bd_pins axi_gpio_1/gpio_io_o]
+connect_bd_net [get_bd_pins rst_ps7_0_50M/peripheral_aresetn] [get_bd_pins v_tc_0/resetn]
+connect_bd_net [get_bd_pins rst_ps7_0_50M/peripheral_reset] [get_bd_pins rgb2dvi_0/aRst]
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12

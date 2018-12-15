@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Sat Dec 15 15:19:37 2018
+--Date        : Sat Dec 15 16:15:26 2018
 --Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -4094,7 +4094,6 @@ architecture STRUCTURE of design_1 is
   signal rgb2dvi_0_TMDS_DATA_P : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal rst_ps7_0_50M_interconnect_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal rst_ps7_0_50M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal rst_ps7_0_50M_peripheral_aresetn1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal rst_ps7_0_50M_peripheral_reset : STD_LOGIC_VECTOR ( 0 to 0 );
   signal v_axi4s_vid_out_0_vid_io_out_ACTIVE_VIDEO : STD_LOGIC;
   signal v_axi4s_vid_out_0_vid_io_out_DATA : STD_LOGIC_VECTOR ( 23 downto 0 );
@@ -4114,6 +4113,8 @@ architecture STRUCTURE of design_1 is
   signal xlconstant_1_dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_axi_dynclk_0_LOCKED_O_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_gpio_0_gpio2_io_o_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal NLW_axi_gpio_1_gpio2_io_o_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal NLW_axi_gpio_1_gpio_io_o_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_axi_vdma_0_mm2s_introut_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_vdma_0_s2mm_introut_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_vdma_0_mm2s_frame_ptr_out_UNCONNECTED : STD_LOGIC_VECTOR ( 5 downto 0 );
@@ -4128,7 +4129,6 @@ architecture STRUCTURE of design_1 is
   signal NLW_processing_system7_0_USB0_PORT_INDCTL_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_rst_ps7_0_50M_mb_reset_UNCONNECTED : STD_LOGIC;
   signal NLW_rst_ps7_0_50M_bus_struct_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal NLW_rst_ps7_0_50M_peripheral_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_v_axi4s_vid_out_0_locked_UNCONNECTED : STD_LOGIC;
   signal NLW_v_axi4s_vid_out_0_overflow_UNCONNECTED : STD_LOGIC;
   signal NLW_v_axi4s_vid_out_0_underflow_UNCONNECTED : STD_LOGIC;
@@ -4258,11 +4258,11 @@ axi_gpio_0: component design_1_axi_gpio_0_0
     );
 axi_gpio_1: component design_1_axi_gpio_1_0
      port map (
-      gpio2_io_o(0) => rst_ps7_0_50M_peripheral_reset(0),
-      gpio_io_o(0) => rst_ps7_0_50M_peripheral_aresetn(0),
+      gpio2_io_o(0) => NLW_axi_gpio_1_gpio2_io_o_UNCONNECTED(0),
+      gpio_io_o(0) => NLW_axi_gpio_1_gpio_io_o_UNCONNECTED(0),
       s_axi_aclk => processing_system7_0_FCLK_CLK0,
       s_axi_araddr(8 downto 0) => ps7_0_axi_periph_M05_AXI_ARADDR(8 downto 0),
-      s_axi_aresetn => rst_ps7_0_50M_peripheral_aresetn1(0),
+      s_axi_aresetn => '1',
       s_axi_arready => ps7_0_axi_periph_M05_AXI_ARREADY,
       s_axi_arvalid => ps7_0_axi_periph_M05_AXI_ARVALID,
       s_axi_awaddr(8 downto 0) => ps7_0_axi_periph_M05_AXI_AWADDR(8 downto 0),
@@ -4782,8 +4782,8 @@ rst_ps7_0_50M: component design_1_rst_ps7_0_50M_0
       interconnect_aresetn(0) => rst_ps7_0_50M_interconnect_aresetn(0),
       mb_debug_sys_rst => '0',
       mb_reset => NLW_rst_ps7_0_50M_mb_reset_UNCONNECTED,
-      peripheral_aresetn(0) => rst_ps7_0_50M_peripheral_aresetn1(0),
-      peripheral_reset(0) => NLW_rst_ps7_0_50M_peripheral_reset_UNCONNECTED(0),
+      peripheral_aresetn(0) => rst_ps7_0_50M_peripheral_aresetn(0),
+      peripheral_reset(0) => rst_ps7_0_50M_peripheral_reset(0),
       slowest_sync_clk => processing_system7_0_FCLK_CLK0
     );
 v_axi4s_vid_out_0: component design_1_v_axi4s_vid_out_0_0
