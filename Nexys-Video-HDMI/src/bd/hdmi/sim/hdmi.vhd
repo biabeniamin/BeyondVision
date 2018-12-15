@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Fri Dec 14 21:40:54 2018
+--Date        : Sat Dec 15 20:25:03 2018
 --Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
 --Command     : generate_target hdmi.bd
 --Design      : hdmi
@@ -6445,7 +6445,7 @@ entity hdmi is
     usb_uart_txd : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of hdmi : entity is "hdmi,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=hdmi,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=64,numReposBlks=45,numNonXlnxBlks=3,numHierBlks=19,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_clkrst_cnt=7,synth_mode=Global}";
+  attribute CORE_GENERATION_INFO of hdmi : entity is "hdmi,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=hdmi,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=65,numReposBlks=46,numNonXlnxBlks=3,numHierBlks=19,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=2,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_clkrst_cnt=7,synth_mode=Global}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of hdmi : entity is "hdmi.hwdef";
 end hdmi;
@@ -7165,34 +7165,6 @@ architecture STRUCTURE of hdmi is
     peripheral_aresetn : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component hdmi_rst_hdmi_160M_0;
-  component hdmi_SobelFilter_0_0 is
-  port (
-    INPUT_STREAM_TVALID : in STD_LOGIC;
-    INPUT_STREAM_TREADY : out STD_LOGIC;
-    INPUT_STREAM_TDATA : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    INPUT_STREAM_TKEEP : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    INPUT_STREAM_TSTRB : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    INPUT_STREAM_TUSER : in STD_LOGIC_VECTOR ( 0 to 0 );
-    INPUT_STREAM_TLAST : in STD_LOGIC_VECTOR ( 0 to 0 );
-    INPUT_STREAM_TID : in STD_LOGIC_VECTOR ( 0 to 0 );
-    INPUT_STREAM_TDEST : in STD_LOGIC_VECTOR ( 0 to 0 );
-    OUTPUT_STREAM_TVALID : out STD_LOGIC;
-    OUTPUT_STREAM_TREADY : in STD_LOGIC;
-    OUTPUT_STREAM_TDATA : out STD_LOGIC_VECTOR ( 23 downto 0 );
-    OUTPUT_STREAM_TKEEP : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    OUTPUT_STREAM_TSTRB : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    OUTPUT_STREAM_TUSER : out STD_LOGIC_VECTOR ( 0 to 0 );
-    OUTPUT_STREAM_TLAST : out STD_LOGIC_VECTOR ( 0 to 0 );
-    OUTPUT_STREAM_TID : out STD_LOGIC_VECTOR ( 0 to 0 );
-    OUTPUT_STREAM_TDEST : out STD_LOGIC_VECTOR ( 0 to 0 );
-    ap_clk : in STD_LOGIC;
-    ap_rst_n : in STD_LOGIC;
-    ap_start : in STD_LOGIC;
-    ap_done : out STD_LOGIC;
-    ap_ready : out STD_LOGIC;
-    ap_idle : out STD_LOGIC
-  );
-  end component hdmi_SobelFilter_0_0;
   component hdmi_axi_gpio_1_0 is
   port (
     s_axi_aclk : in STD_LOGIC;
@@ -7263,7 +7235,72 @@ architecture STRUCTURE of hdmi is
     s_decode_err : out STD_LOGIC_VECTOR ( 1 downto 0 )
   );
   end component hdmi_axis_switch_0_1;
+  component hdmi_SobelFilter_0_0 is
+  port (
+    INPUT_STREAM_TVALID : in STD_LOGIC;
+    INPUT_STREAM_TREADY : out STD_LOGIC;
+    INPUT_STREAM_TDATA : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    INPUT_STREAM_TKEEP : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    INPUT_STREAM_TSTRB : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    INPUT_STREAM_TUSER : in STD_LOGIC_VECTOR ( 0 to 0 );
+    INPUT_STREAM_TLAST : in STD_LOGIC_VECTOR ( 0 to 0 );
+    INPUT_STREAM_TID : in STD_LOGIC_VECTOR ( 0 to 0 );
+    INPUT_STREAM_TDEST : in STD_LOGIC_VECTOR ( 0 to 0 );
+    OUTPUT_STREAM_TVALID : out STD_LOGIC;
+    OUTPUT_STREAM_TREADY : in STD_LOGIC;
+    OUTPUT_STREAM_TDATA : out STD_LOGIC_VECTOR ( 23 downto 0 );
+    OUTPUT_STREAM_TKEEP : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    OUTPUT_STREAM_TSTRB : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    OUTPUT_STREAM_TUSER : out STD_LOGIC_VECTOR ( 0 to 0 );
+    OUTPUT_STREAM_TLAST : out STD_LOGIC_VECTOR ( 0 to 0 );
+    OUTPUT_STREAM_TID : out STD_LOGIC_VECTOR ( 0 to 0 );
+    OUTPUT_STREAM_TDEST : out STD_LOGIC_VECTOR ( 0 to 0 );
+    ap_clk : in STD_LOGIC;
+    ap_rst_n : in STD_LOGIC;
+    ap_start : in STD_LOGIC;
+    ap_done : out STD_LOGIC;
+    ap_ready : out STD_LOGIC;
+    ap_idle : out STD_LOGIC
+  );
+  end component hdmi_SobelFilter_0_0;
+  component hdmi_PassThrough_0_0 is
+  port (
+    INPUT_STREAM_TVALID : in STD_LOGIC;
+    INPUT_STREAM_TREADY : out STD_LOGIC;
+    INPUT_STREAM_TDATA : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    INPUT_STREAM_TKEEP : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    INPUT_STREAM_TSTRB : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    INPUT_STREAM_TUSER : in STD_LOGIC_VECTOR ( 0 to 0 );
+    INPUT_STREAM_TLAST : in STD_LOGIC_VECTOR ( 0 to 0 );
+    INPUT_STREAM_TID : in STD_LOGIC_VECTOR ( 0 to 0 );
+    INPUT_STREAM_TDEST : in STD_LOGIC_VECTOR ( 0 to 0 );
+    OUTPUT_STREAM_TVALID : out STD_LOGIC;
+    OUTPUT_STREAM_TREADY : in STD_LOGIC;
+    OUTPUT_STREAM_TDATA : out STD_LOGIC_VECTOR ( 23 downto 0 );
+    OUTPUT_STREAM_TKEEP : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    OUTPUT_STREAM_TSTRB : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    OUTPUT_STREAM_TUSER : out STD_LOGIC_VECTOR ( 0 to 0 );
+    OUTPUT_STREAM_TLAST : out STD_LOGIC_VECTOR ( 0 to 0 );
+    OUTPUT_STREAM_TID : out STD_LOGIC_VECTOR ( 0 to 0 );
+    OUTPUT_STREAM_TDEST : out STD_LOGIC_VECTOR ( 0 to 0 );
+    ap_clk : in STD_LOGIC;
+    ap_rst_n : in STD_LOGIC;
+    ap_start : in STD_LOGIC;
+    ap_done : out STD_LOGIC;
+    ap_ready : out STD_LOGIC;
+    ap_idle : out STD_LOGIC
+  );
+  end component hdmi_PassThrough_0_0;
   signal Net : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal PassThrough_0_OUTPUT_STREAM_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
+  signal PassThrough_0_OUTPUT_STREAM_TDEST : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal PassThrough_0_OUTPUT_STREAM_TID : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal PassThrough_0_OUTPUT_STREAM_TKEEP : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal PassThrough_0_OUTPUT_STREAM_TLAST : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal PassThrough_0_OUTPUT_STREAM_TREADY : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal PassThrough_0_OUTPUT_STREAM_TSTRB : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal PassThrough_0_OUTPUT_STREAM_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal PassThrough_0_OUTPUT_STREAM_TVALID : STD_LOGIC;
   signal SYS_Rst_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal SobelFilter_0_OUTPUT_STREAM_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
   signal SobelFilter_0_OUTPUT_STREAM_TDEST : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -7281,6 +7318,7 @@ architecture STRUCTURE of hdmi is
   signal axi_dynclk_0_PXL_CLK_5X_O : STD_LOGIC;
   signal axi_dynclk_0_PXL_CLK_O : STD_LOGIC;
   signal axi_gpio_0_gpio2_io_o : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal axi_gpio_1_gpio2_io_o : STD_LOGIC_VECTOR ( 0 to 0 );
   signal axi_gpio_1_gpio_io_o : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal axi_gpio_video_gpio_io_o : STD_LOGIC_VECTOR ( 0 to 0 );
   signal axi_gpio_video_ip2intc_irpt : STD_LOGIC;
@@ -7370,7 +7408,7 @@ architecture STRUCTURE of hdmi is
   signal axis_switch_0_M00_AXIS_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
   signal axis_switch_0_M00_AXIS_TDEST : STD_LOGIC_VECTOR ( 0 to 0 );
   signal axis_switch_0_M00_AXIS_TLAST : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal axis_switch_0_M00_AXIS_TREADY : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal axis_switch_0_M00_AXIS_TREADY : STD_LOGIC;
   signal axis_switch_0_M00_AXIS_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
   signal axis_switch_0_M00_AXIS_TVALID : STD_LOGIC_VECTOR ( 0 to 0 );
   signal axis_switch_0_M01_AXIS_TDATA : STD_LOGIC_VECTOR ( 47 downto 24 );
@@ -7717,11 +7755,13 @@ architecture STRUCTURE of hdmi is
   signal v_vid_in_axi4s_0_vtiming_out_HSYNC : STD_LOGIC;
   signal v_vid_in_axi4s_0_vtiming_out_VSYNC : STD_LOGIC;
   signal xlconstant_0_dout : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal NLW_PassThrough_0_ap_done_UNCONNECTED : STD_LOGIC;
+  signal NLW_PassThrough_0_ap_idle_UNCONNECTED : STD_LOGIC;
+  signal NLW_PassThrough_0_ap_ready_UNCONNECTED : STD_LOGIC;
   signal NLW_SobelFilter_0_ap_done_UNCONNECTED : STD_LOGIC;
   signal NLW_SobelFilter_0_ap_idle_UNCONNECTED : STD_LOGIC;
   signal NLW_SobelFilter_0_ap_ready_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_dynclk_0_LOCKED_O_UNCONNECTED : STD_LOGIC;
-  signal NLW_axi_gpio_1_gpio2_io_o_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_axi_timer_0_generateout0_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_timer_0_generateout1_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_timer_0_pwm0_UNCONNECTED : STD_LOGIC;
@@ -7856,6 +7896,33 @@ begin
   reset_1 <= reset;
   sys_clk_i_1 <= sys_clk_i;
   usb_uart_txd <= axi_uartlite_0_UART_TxD;
+PassThrough_0: component hdmi_PassThrough_0_0
+     port map (
+      INPUT_STREAM_TDATA(23 downto 0) => axis_switch_0_M00_AXIS_TDATA(23 downto 0),
+      INPUT_STREAM_TDEST(0) => axis_switch_0_M00_AXIS_TDEST(0),
+      INPUT_STREAM_TID(0) => '0',
+      INPUT_STREAM_TKEEP(2 downto 0) => B"111",
+      INPUT_STREAM_TLAST(0) => axis_switch_0_M00_AXIS_TLAST(0),
+      INPUT_STREAM_TREADY => axis_switch_0_M00_AXIS_TREADY,
+      INPUT_STREAM_TSTRB(2 downto 0) => B"111",
+      INPUT_STREAM_TUSER(0) => axis_switch_0_M00_AXIS_TUSER(0),
+      INPUT_STREAM_TVALID => axis_switch_0_M00_AXIS_TVALID(0),
+      OUTPUT_STREAM_TDATA(23 downto 0) => PassThrough_0_OUTPUT_STREAM_TDATA(23 downto 0),
+      OUTPUT_STREAM_TDEST(0) => PassThrough_0_OUTPUT_STREAM_TDEST(0),
+      OUTPUT_STREAM_TID(0) => PassThrough_0_OUTPUT_STREAM_TID(0),
+      OUTPUT_STREAM_TKEEP(2 downto 0) => PassThrough_0_OUTPUT_STREAM_TKEEP(2 downto 0),
+      OUTPUT_STREAM_TLAST(0) => PassThrough_0_OUTPUT_STREAM_TLAST(0),
+      OUTPUT_STREAM_TREADY => PassThrough_0_OUTPUT_STREAM_TREADY(0),
+      OUTPUT_STREAM_TSTRB(2 downto 0) => PassThrough_0_OUTPUT_STREAM_TSTRB(2 downto 0),
+      OUTPUT_STREAM_TUSER(0) => PassThrough_0_OUTPUT_STREAM_TUSER(0),
+      OUTPUT_STREAM_TVALID => PassThrough_0_OUTPUT_STREAM_TVALID,
+      ap_clk => mig_7series_0_ui_addn_clk_0,
+      ap_done => NLW_PassThrough_0_ap_done_UNCONNECTED,
+      ap_idle => NLW_PassThrough_0_ap_idle_UNCONNECTED,
+      ap_ready => NLW_PassThrough_0_ap_ready_UNCONNECTED,
+      ap_rst_n => Net(0),
+      ap_start => axi_gpio_1_gpio2_io_o(0)
+    );
 SobelFilter_0: component hdmi_SobelFilter_0_0
      port map (
       INPUT_STREAM_TDATA(23 downto 0) => axis_switch_0_M01_AXIS_TDATA(47 downto 24),
@@ -7937,7 +8004,7 @@ axi_gpio_0: component hdmi_axi_gpio_0_0
     );
 axi_gpio_1: component hdmi_axi_gpio_1_0
      port map (
-      gpio2_io_o(0) => NLW_axi_gpio_1_gpio2_io_o_UNCONNECTED(0),
+      gpio2_io_o(0) => axi_gpio_1_gpio2_io_o(0),
       gpio_io_o(1 downto 0) => axi_gpio_1_gpio_io_o(1 downto 0),
       s_axi_aclk => mig_7series_0_ui_clk,
       s_axi_araddr(8 downto 0) => microblaze_0_axi_periph_M09_AXI_ARADDR(8 downto 0),
@@ -8276,7 +8343,7 @@ axis_switch_0: component hdmi_axis_switch_0_0
       m_axis_tlast(1) => axis_switch_0_M01_AXIS_TLAST(1),
       m_axis_tlast(0) => axis_switch_0_M00_AXIS_TLAST(0),
       m_axis_tready(1) => axis_switch_0_M01_AXIS_TREADY,
-      m_axis_tready(0) => axis_switch_0_M00_AXIS_TREADY(0),
+      m_axis_tready(0) => axis_switch_0_M00_AXIS_TREADY,
       m_axis_tuser(1) => axis_switch_0_M01_AXIS_TUSER(1),
       m_axis_tuser(0) => axis_switch_0_M00_AXIS_TUSER(0),
       m_axis_tvalid(1) => axis_switch_0_M01_AXIS_TVALID(1),
@@ -8303,23 +8370,23 @@ axis_switch_1: component hdmi_axis_switch_0_1
       m_axis_tuser(0) => axis_switch_1_M00_AXIS_TUSER(0),
       m_axis_tvalid(0) => axis_switch_1_M00_AXIS_TVALID(0),
       s_axis_tdata(47 downto 24) => SobelFilter_0_OUTPUT_STREAM_TDATA(23 downto 0),
-      s_axis_tdata(23 downto 0) => axis_switch_0_M00_AXIS_TDATA(23 downto 0),
+      s_axis_tdata(23 downto 0) => PassThrough_0_OUTPUT_STREAM_TDATA(23 downto 0),
       s_axis_tdest(1) => SobelFilter_0_OUTPUT_STREAM_TDEST(0),
-      s_axis_tdest(0) => axis_switch_0_M00_AXIS_TDEST(0),
+      s_axis_tdest(0) => PassThrough_0_OUTPUT_STREAM_TDEST(0),
       s_axis_tid(1) => SobelFilter_0_OUTPUT_STREAM_TID(0),
-      s_axis_tid(0) => '0',
+      s_axis_tid(0) => PassThrough_0_OUTPUT_STREAM_TID(0),
       s_axis_tkeep(5 downto 3) => SobelFilter_0_OUTPUT_STREAM_TKEEP(2 downto 0),
-      s_axis_tkeep(2 downto 0) => B"111",
+      s_axis_tkeep(2 downto 0) => PassThrough_0_OUTPUT_STREAM_TKEEP(2 downto 0),
       s_axis_tlast(1) => SobelFilter_0_OUTPUT_STREAM_TLAST(0),
-      s_axis_tlast(0) => axis_switch_0_M00_AXIS_TLAST(0),
+      s_axis_tlast(0) => PassThrough_0_OUTPUT_STREAM_TLAST(0),
       s_axis_tready(1) => SobelFilter_0_OUTPUT_STREAM_TREADY(1),
-      s_axis_tready(0) => axis_switch_0_M00_AXIS_TREADY(0),
+      s_axis_tready(0) => PassThrough_0_OUTPUT_STREAM_TREADY(0),
       s_axis_tstrb(5 downto 3) => SobelFilter_0_OUTPUT_STREAM_TSTRB(2 downto 0),
-      s_axis_tstrb(2 downto 0) => B"111",
+      s_axis_tstrb(2 downto 0) => PassThrough_0_OUTPUT_STREAM_TSTRB(2 downto 0),
       s_axis_tuser(1) => SobelFilter_0_OUTPUT_STREAM_TUSER(0),
-      s_axis_tuser(0) => axis_switch_0_M00_AXIS_TUSER(0),
+      s_axis_tuser(0) => PassThrough_0_OUTPUT_STREAM_TUSER(0),
       s_axis_tvalid(1) => SobelFilter_0_OUTPUT_STREAM_TVALID,
-      s_axis_tvalid(0) => axis_switch_0_M00_AXIS_TVALID(0),
+      s_axis_tvalid(0) => PassThrough_0_OUTPUT_STREAM_TVALID,
       s_decode_err(1 downto 0) => NLW_axis_switch_1_s_decode_err_UNCONNECTED(1 downto 0),
       s_req_suppress(1 downto 0) => axi_gpio_1_gpio_io_o(1 downto 0)
     );
