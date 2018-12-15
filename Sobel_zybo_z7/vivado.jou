@@ -100,3 +100,24 @@ connect_bd_net [get_bd_pins rst_ps7_0_50M/peripheral_reset] [get_bd_pins rgb2dvi
 save_bd_design
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+file copy -force C:/Digilent19/Sobel_zybo_z7/block_compile.runs/impl_1/design_1_wrapper.sysdef C:/Digilent19/Sobel_zybo_z7/block_compile.sdk/design_1_wrapper.hdf
+
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {axis_subset_converter_1_M_AXIS }]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {axi_vdma_0_M_AXIS_MM2S }]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {axis_subset_converter_0_M_AXIS }]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {v_vid_in_axi4s_0_video_out }]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {dvi2rgb_1_vid_pData }]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {v_axi4s_vid_out_0_vid_io_out }]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_intf_nets v_vid_in_axi4s_0_video_out] {AXIS_SIGNALS "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                          [get_bd_intf_nets v_axi4s_vid_out_0_vid_io_out] {NON_AXI_SIGNALS "Data and Trigger" CLK_SRC "/axi_dynclk_0/PXL_CLK_O" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_intf_nets axis_subset_converter_1_M_AXIS] {AXIS_SIGNALS "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                          [get_bd_intf_nets axi_vdma_0_M_AXIS_MM2S] {AXIS_SIGNALS "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                          [get_bd_intf_nets axis_subset_converter_0_M_AXIS] {AXIS_SIGNALS "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                          [get_bd_nets dvi2rgb_1_vid_pData] {PROBE_TYPE "Data and Trigger" CLK_SRC "None (Connect manually)" SYSTEM_ILA "Auto" } \
+                                                         ]
+endgroup
+save_bd_design
+reset_run synth_1
