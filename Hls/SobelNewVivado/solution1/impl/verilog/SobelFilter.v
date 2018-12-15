@@ -24,6 +24,7 @@ module SobelFilter (
         OUTPUT_STREAM_TLAST,
         OUTPUT_STREAM_TID,
         OUTPUT_STREAM_TDEST,
+        selection,
         ap_clk,
         ap_rst_n,
         ap_start,
@@ -51,6 +52,7 @@ output  [0:0] OUTPUT_STREAM_TUSER;
 output  [0:0] OUTPUT_STREAM_TLAST;
 output  [0:0] OUTPUT_STREAM_TID;
 output  [0:0] OUTPUT_STREAM_TDEST;
+input  [31:0] selection;
 input   ap_clk;
 input   ap_rst_n;
 input   ap_start;
