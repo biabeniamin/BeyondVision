@@ -1,0 +1,654 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sat Dec 15 20:29:33 2018
+# Process ID: 9140
+# Current directory: C:/Digilent19/Sobel_zybo_z7/block_compile.runs/design_1_PassThroughZybo_0_0_synth_1
+# Command line: vivado.exe -log design_1_PassThroughZybo_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_PassThroughZybo_0_0.tcl
+# Log file: C:/Digilent19/Sobel_zybo_z7/block_compile.runs/design_1_PassThroughZybo_0_0_synth_1/design_1_PassThroughZybo_0_0.vds
+# Journal file: C:/Digilent19/Sobel_zybo_z7/block_compile.runs/design_1_PassThroughZybo_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+Sourcing tcl script 'C:/Users/biabe/AppData/Roaming/Xilinx/Vivado/Vivado_init.tcl'
+source design_1_PassThroughZybo_0_0.tcl -notrace
+Command: synth_design -top design_1_PassThroughZybo_0_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 2740 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 444.070 ; gain = 97.332
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_PassThroughZybo_0_0' [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ip/design_1_PassThroughZybo_0_0/synth/design_1_PassThroughZybo_0_0.vhd:85]
+INFO: [Synth 8-3491] module 'PassThroughZybo' declared at 'c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/PassThroughZybo.vhd:12' bound to instance 'U0' of component 'PassThroughZybo' [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ip/design_1_PassThroughZybo_0_0/synth/design_1_PassThroughZybo_0_0.vhd:161]
+INFO: [Synth 8-638] synthesizing module 'PassThroughZybo' [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/PassThroughZybo.vhd:41]
+INFO: [Synth 8-3491] module 'Block_proc' declared at 'c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/Block_proc.vhd:12' bound to instance 'Block_proc_U0' of component 'Block_proc' [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/PassThroughZybo.vhd:278]
+INFO: [Synth 8-638] synthesizing module 'Block_proc' [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/Block_proc.vhd:30]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/Block_proc.vhd:40]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/Block_proc.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'Block_proc' (1#1) [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/Block_proc.vhd:30]
+INFO: [Synth 8-3491] module 'AXIvideo2Mat' declared at 'c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/AXIvideo2Mat.vhd:12' bound to instance 'AXIvideo2Mat_U0' of component 'AXIvideo2Mat' [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/PassThroughZybo.vhd:294]
+INFO: [Synth 8-638] synthesizing module 'AXIvideo2Mat' [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/AXIvideo2Mat.vhd:57]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/AXIvideo2Mat.vhd:92]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/AXIvideo2Mat.vhd:95]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/AXIvideo2Mat.vhd:144]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/AXIvideo2Mat.vhd:146]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/AXIvideo2Mat.vhd:152]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/AXIvideo2Mat.vhd:178]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/AXIvideo2Mat.vhd:195]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/AXIvideo2Mat.vhd:200]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/AXIvideo2Mat.vhd:202]
+INFO: [Synth 8-256] done synthesizing module 'AXIvideo2Mat' (2#1) [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/AXIvideo2Mat.vhd:57]
+INFO: [Synth 8-3491] module 'Mat2AXIvideo' declared at 'c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/Mat2AXIvideo.vhd:12' bound to instance 'Mat2AXIvideo_U0' of component 'Mat2AXIvideo' [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/PassThroughZybo.vhd:337]
+INFO: [Synth 8-638] synthesizing module 'Mat2AXIvideo' [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/Mat2AXIvideo.vhd:48]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/Mat2AXIvideo.vhd:72]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/Mat2AXIvideo.vhd:75]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/Mat2AXIvideo.vhd:154]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/Mat2AXIvideo.vhd:173]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/Mat2AXIvideo.vhd:193]
+WARNING: [Synth 8-6014] Unused sequential element AXI_video_strm_V_dest_V_1_sel_rd_reg was removed.  [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/Mat2AXIvideo.vhd:261]
+WARNING: [Synth 8-6014] Unused sequential element AXI_video_strm_V_id_V_1_sel_rd_reg was removed.  [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/Mat2AXIvideo.vhd:295]
+WARNING: [Synth 8-6014] Unused sequential element AXI_video_strm_V_keep_V_1_sel_rd_reg was removed.  [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/Mat2AXIvideo.vhd:329]
+WARNING: [Synth 8-6014] Unused sequential element AXI_video_strm_V_strb_V_1_sel_rd_reg was removed.  [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/Mat2AXIvideo.vhd:411]
+INFO: [Synth 8-256] done synthesizing module 'Mat2AXIvideo' (3#1) [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/Mat2AXIvideo.vhd:48]
+INFO: [Synth 8-3491] module 'fifo_w12_d2_A' declared at 'c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/fifo_w12_d2_A.vhd:50' bound to instance 'img_0_rows_V_c_U' of component 'fifo_w12_d2_A' [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/PassThroughZybo.vhd:371]
+INFO: [Synth 8-638] synthesizing module 'fifo_w12_d2_A' [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/fifo_w12_d2_A.vhd:69]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'fifo_w12_d2_A_shiftReg' declared at 'c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/fifo_w12_d2_A.vhd:13' bound to instance 'U_fifo_w12_d2_A_shiftReg' of component 'fifo_w12_d2_A_shiftReg' [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/fifo_w12_d2_A.vhd:127]
+INFO: [Synth 8-638] synthesizing module 'fifo_w12_d2_A_shiftReg' [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/fifo_w12_d2_A.vhd:26]
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'fifo_w12_d2_A_shiftReg' (4#1) [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/fifo_w12_d2_A.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'fifo_w12_d2_A' (5#1) [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/fifo_w12_d2_A.vhd:69]
+INFO: [Synth 8-3491] module 'fifo_w12_d2_A' declared at 'c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/fifo_w12_d2_A.vhd:50' bound to instance 'img_0_cols_V_c_U' of component 'fifo_w12_d2_A' [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/PassThroughZybo.vhd:384]
+INFO: [Synth 8-3491] module 'fifo_w8_d2_A' declared at 'c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/fifo_w8_d2_A.vhd:50' bound to instance 'img_0_data_stream_0_U' of component 'fifo_w8_d2_A' [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/PassThroughZybo.vhd:397]
+INFO: [Synth 8-638] synthesizing module 'fifo_w8_d2_A' [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/fifo_w8_d2_A.vhd:69]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'fifo_w8_d2_A_shiftReg' declared at 'c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/fifo_w8_d2_A.vhd:13' bound to instance 'U_fifo_w8_d2_A_shiftReg' of component 'fifo_w8_d2_A_shiftReg' [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/fifo_w8_d2_A.vhd:127]
+INFO: [Synth 8-638] synthesizing module 'fifo_w8_d2_A_shiftReg' [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/fifo_w8_d2_A.vhd:26]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'fifo_w8_d2_A_shiftReg' (6#1) [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/fifo_w8_d2_A.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'fifo_w8_d2_A' (7#1) [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/fifo_w8_d2_A.vhd:69]
+INFO: [Synth 8-3491] module 'fifo_w8_d2_A' declared at 'c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/fifo_w8_d2_A.vhd:50' bound to instance 'img_0_data_stream_1_U' of component 'fifo_w8_d2_A' [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/PassThroughZybo.vhd:410]
+INFO: [Synth 8-3491] module 'fifo_w8_d2_A' declared at 'c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/fifo_w8_d2_A.vhd:50' bound to instance 'img_0_data_stream_2_U' of component 'fifo_w8_d2_A' [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/PassThroughZybo.vhd:423]
+INFO: [Synth 8-3491] module 'fifo_w12_d2_A' declared at 'c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/fifo_w12_d2_A.vhd:50' bound to instance 'img_0_rows_V_c4_U' of component 'fifo_w12_d2_A' [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/PassThroughZybo.vhd:436]
+INFO: [Synth 8-3491] module 'fifo_w12_d2_A' declared at 'c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/fifo_w12_d2_A.vhd:50' bound to instance 'img_0_cols_V_c5_U' of component 'fifo_w12_d2_A' [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/PassThroughZybo.vhd:449]
+INFO: [Synth 8-3491] module 'start_for_Mat2AXIbkb' declared at 'c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/start_for_Mat2AXIbkb.vhd:50' bound to instance 'start_for_Mat2AXIbkb_U' of component 'start_for_Mat2AXIbkb' [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/PassThroughZybo.vhd:462]
+INFO: [Synth 8-638] synthesizing module 'start_for_Mat2AXIbkb' [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/start_for_Mat2AXIbkb.vhd:69]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'start_for_Mat2AXIbkb_shiftReg' declared at 'c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/start_for_Mat2AXIbkb.vhd:13' bound to instance 'U_start_for_Mat2AXIbkb_shiftReg' of component 'start_for_Mat2AXIbkb_shiftReg' [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/start_for_Mat2AXIbkb.vhd:127]
+INFO: [Synth 8-638] synthesizing module 'start_for_Mat2AXIbkb_shiftReg' [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/start_for_Mat2AXIbkb.vhd:26]
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'start_for_Mat2AXIbkb_shiftReg' (8#1) [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/start_for_Mat2AXIbkb.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'start_for_Mat2AXIbkb' (9#1) [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/start_for_Mat2AXIbkb.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 'PassThroughZybo' (10#1) [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ipshared/bc9f/hdl/vhdl/PassThroughZybo.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'design_1_PassThroughZybo_0_0' (11#1) [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ip/design_1_PassThroughZybo_0_0/synth/design_1_PassThroughZybo_0_0.vhd:85]
+WARNING: [Synth 8-3331] design AXIvideo2Mat has unconnected port INPUT_STREAM_TKEEP[2]
+WARNING: [Synth 8-3331] design AXIvideo2Mat has unconnected port INPUT_STREAM_TKEEP[1]
+WARNING: [Synth 8-3331] design AXIvideo2Mat has unconnected port INPUT_STREAM_TKEEP[0]
+WARNING: [Synth 8-3331] design AXIvideo2Mat has unconnected port INPUT_STREAM_TSTRB[2]
+WARNING: [Synth 8-3331] design AXIvideo2Mat has unconnected port INPUT_STREAM_TSTRB[1]
+WARNING: [Synth 8-3331] design AXIvideo2Mat has unconnected port INPUT_STREAM_TSTRB[0]
+WARNING: [Synth 8-3331] design AXIvideo2Mat has unconnected port INPUT_STREAM_TID[0]
+WARNING: [Synth 8-3331] design AXIvideo2Mat has unconnected port INPUT_STREAM_TDEST[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 501.117 ; gain = 154.379
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 501.117 ; gain = 154.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 501.117 ; gain = 154.379
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ip/design_1_PassThroughZybo_0_0/constraints/PassThroughZybo_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ip/design_1_PassThroughZybo_0_0/constraints/PassThroughZybo_ooc.xdc] for cell 'U0'
+Parsing XDC File [C:/Digilent19/Sobel_zybo_z7/block_compile.runs/design_1_PassThroughZybo_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Digilent19/Sobel_zybo_z7/block_compile.runs/design_1_PassThroughZybo_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 868.984 ; gain = 1.535
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 868.984 ; gain = 522.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 868.984 ; gain = 522.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for U0. (constraint file  C:/Digilent19/Sobel_zybo_z7/block_compile.runs/design_1_PassThroughZybo_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 868.984 ; gain = 522.246
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "AXI_video_strm_V_data_V_0_state_cmp_full" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "AXI_video_strm_V_last_V_0_state_cmp_full" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "AXI_video_strm_V_user_V_0_state_cmp_full" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "AXI_video_strm_V_data_V_1_state_cmp_full" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "AXI_video_strm_V_last_V_1_state_cmp_full" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "AXI_video_strm_V_user_V_1_state_cmp_full" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 868.984 ; gain = 522.246
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     33 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 8     
++---Registers : 
+	               33 Bit    Registers := 1     
+	               32 Bit    Registers := 8     
+	               24 Bit    Registers := 8     
+	               12 Bit    Registers := 8     
+	                8 Bit    Registers := 7     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 19    
+	                1 Bit    Registers := 63    
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 14    
+	   2 Input     12 Bit        Muxes := 4     
+	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   3 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 13    
+	   4 Input      2 Bit        Muxes := 11    
+	   2 Input      1 Bit        Muxes := 73    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Block_proc 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module AXIvideo2Mat 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 4     
+	               24 Bit    Registers := 6     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 25    
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 13    
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 5     
+	   4 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 29    
+Module Mat2AXIvideo 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     33 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               33 Bit    Registers := 1     
+	               32 Bit    Registers := 4     
+	               24 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 7     
+	                1 Bit    Registers := 18    
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 8     
+	   4 Input      2 Bit        Muxes := 7     
+	   2 Input      1 Bit        Muxes := 17    
+Module fifo_w12_d2_A_shiftReg 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module fifo_w12_d2_A 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module fifo_w8_d2_A_shiftReg 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+Module fifo_w8_d2_A 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module start_for_Mat2AXIbkb_shiftReg 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module start_for_Mat2AXIbkb 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design PassThroughZybo has unconnected port INPUT_STREAM_TKEEP[2]
+WARNING: [Synth 8-3331] design PassThroughZybo has unconnected port INPUT_STREAM_TKEEP[1]
+WARNING: [Synth 8-3331] design PassThroughZybo has unconnected port INPUT_STREAM_TKEEP[0]
+WARNING: [Synth 8-3331] design PassThroughZybo has unconnected port INPUT_STREAM_TSTRB[2]
+WARNING: [Synth 8-3331] design PassThroughZybo has unconnected port INPUT_STREAM_TSTRB[1]
+WARNING: [Synth 8-3331] design PassThroughZybo has unconnected port INPUT_STREAM_TSTRB[0]
+WARNING: [Synth 8-3331] design PassThroughZybo has unconnected port INPUT_STREAM_TID[0]
+WARNING: [Synth 8-3331] design PassThroughZybo has unconnected port INPUT_STREAM_TDEST[0]
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][0]' (FDE) to 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][1]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][1]' (FDE) to 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][0]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][1]' (FDE) to 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][2]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][2]' (FDE) to 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][0]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][2]' (FDE) to 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][3]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][3]' (FDE) to 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][0]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][3]' (FDE) to 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][4]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][4]' (FDE) to 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][0]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][4]' (FDE) to 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][5]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][5]' (FDE) to 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][0]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][5]' (FDE) to 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][6]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][6]' (FDE) to 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][0]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][6]' (FDE) to 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][11]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][7]' (FDE) to 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][8]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][8]' (FDE) to 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][7]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][8]' (FDE) to 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][9]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][9]' (FDE) to 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][7]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][9]' (FDE) to 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][10]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][10]' (FDE) to 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][7]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][10] )
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][11]' (FDE) to 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][11] )
+INFO: [Synth 8-3886] merging instance 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][0]' (FDE) to 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][1]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][1]' (FDE) to 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][0]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][1]' (FDE) to 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][2]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][2]' (FDE) to 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][0]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][2]' (FDE) to 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][6]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\Block_proc_U0/ap_done_reg_reg )
+INFO: [Synth 8-3886] merging instance 'U0/Mat2AXIvideo_U0/r_V_reg_322_reg[12]' (FDE) to 'U0/Mat2AXIvideo_U0/r_V_reg_322_reg[13]'
+INFO: [Synth 8-3886] merging instance 'U0/Mat2AXIvideo_U0/r_V_reg_322_reg[13]' (FDE) to 'U0/Mat2AXIvideo_U0/r_V_reg_322_reg[14]'
+INFO: [Synth 8-3886] merging instance 'U0/Mat2AXIvideo_U0/r_V_reg_322_reg[14]' (FDE) to 'U0/Mat2AXIvideo_U0/r_V_reg_322_reg[15]'
+INFO: [Synth 8-3886] merging instance 'U0/Mat2AXIvideo_U0/r_V_reg_322_reg[15]' (FDE) to 'U0/Mat2AXIvideo_U0/r_V_reg_322_reg[16]'
+INFO: [Synth 8-3886] merging instance 'U0/Mat2AXIvideo_U0/r_V_reg_322_reg[16]' (FDE) to 'U0/Mat2AXIvideo_U0/r_V_reg_322_reg[17]'
+INFO: [Synth 8-3886] merging instance 'U0/Mat2AXIvideo_U0/r_V_reg_322_reg[17]' (FDE) to 'U0/Mat2AXIvideo_U0/r_V_reg_322_reg[18]'
+INFO: [Synth 8-3886] merging instance 'U0/Mat2AXIvideo_U0/r_V_reg_322_reg[18]' (FDE) to 'U0/Mat2AXIvideo_U0/r_V_reg_322_reg[19]'
+INFO: [Synth 8-3886] merging instance 'U0/Mat2AXIvideo_U0/r_V_reg_322_reg[19]' (FDE) to 'U0/Mat2AXIvideo_U0/r_V_reg_322_reg[20]'
+INFO: [Synth 8-3886] merging instance 'U0/Mat2AXIvideo_U0/r_V_reg_322_reg[20]' (FDE) to 'U0/Mat2AXIvideo_U0/r_V_reg_322_reg[21]'
+INFO: [Synth 8-3886] merging instance 'U0/Mat2AXIvideo_U0/r_V_reg_322_reg[21]' (FDE) to 'U0/Mat2AXIvideo_U0/r_V_reg_322_reg[22]'
+INFO: [Synth 8-3886] merging instance 'U0/Mat2AXIvideo_U0/r_V_reg_322_reg[22]' (FDE) to 'U0/Mat2AXIvideo_U0/r_V_reg_322_reg[23]'
+INFO: [Synth 8-3886] merging instance 'U0/Mat2AXIvideo_U0/r_V_reg_322_reg[23]' (FDE) to 'U0/Mat2AXIvideo_U0/r_V_reg_322_reg[24]'
+INFO: [Synth 8-3886] merging instance 'U0/Mat2AXIvideo_U0/r_V_reg_322_reg[24]' (FDE) to 'U0/Mat2AXIvideo_U0/r_V_reg_322_reg[25]'
+INFO: [Synth 8-3886] merging instance 'U0/Mat2AXIvideo_U0/r_V_reg_322_reg[25]' (FDE) to 'U0/Mat2AXIvideo_U0/r_V_reg_322_reg[26]'
+INFO: [Synth 8-3886] merging instance 'U0/Mat2AXIvideo_U0/r_V_reg_322_reg[26]' (FDE) to 'U0/Mat2AXIvideo_U0/r_V_reg_322_reg[27]'
+INFO: [Synth 8-3886] merging instance 'U0/Mat2AXIvideo_U0/r_V_reg_322_reg[27]' (FDE) to 'U0/Mat2AXIvideo_U0/r_V_reg_322_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/Mat2AXIvideo_U0/r_V_reg_322_reg[28]' (FDE) to 'U0/Mat2AXIvideo_U0/r_V_reg_322_reg[29]'
+INFO: [Synth 8-3886] merging instance 'U0/Mat2AXIvideo_U0/r_V_reg_322_reg[29]' (FDE) to 'U0/Mat2AXIvideo_U0/r_V_reg_322_reg[30]'
+INFO: [Synth 8-3886] merging instance 'U0/Mat2AXIvideo_U0/r_V_reg_322_reg[30]' (FDE) to 'U0/Mat2AXIvideo_U0/r_V_reg_322_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][3]' (FDE) to 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][4]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][4]' (FDE) to 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][3]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][4]' (FDE) to 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][5]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][5]' (FDE) to 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][3]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][5]' (FDE) to 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][10]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][6]' (FDE) to 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][0]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][6]' (FDE) to 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][7]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][7]' (FDE) to 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][0]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][7]' (FDE) to 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][8]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][8]' (FDE) to 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][0]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][8]' (FDE) to 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][9]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][9]' (FDE) to 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][0]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][9]' (FDE) to 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][11]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][10]' (FDE) to 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][3]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][10] )
+INFO: [Synth 8-3886] merging instance 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][11]' (FDE) to 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\AXIvideo2Mat_U0/ap_done_reg_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\Block_proc_U0/ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\Mat2AXIvideo_U0/ap_done_reg_reg )
+INFO: [Synth 8-3886] merging instance 'U0/AXIvideo2Mat_U0/cols_V_reg_480_reg[0]' (FDE) to 'U0/AXIvideo2Mat_U0/cols_V_reg_480_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/AXIvideo2Mat_U0/cols_V_reg_480_reg[1]' (FDE) to 'U0/AXIvideo2Mat_U0/cols_V_reg_480_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U0/AXIvideo2Mat_U0/cols_V_reg_480_reg[2]' (FDE) to 'U0/AXIvideo2Mat_U0/cols_V_reg_480_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][10]' (FDE) to 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][7]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][7] )
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][11]' (FDE) to 'U0/img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][0] )
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][0]' (FDE) to 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][1]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][1]' (FDE) to 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][0]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][1]' (FDE) to 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][2]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][2]' (FDE) to 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][0]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][2]' (FDE) to 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][3]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][3]' (FDE) to 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][0]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][3]' (FDE) to 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][4]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][4]' (FDE) to 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][0]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][4]' (FDE) to 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][5]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][5]' (FDE) to 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][0]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][5]' (FDE) to 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][6]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][6]' (FDE) to 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][0]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][6]' (FDE) to 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][11]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][7]' (FDE) to 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][8]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][8]' (FDE) to 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][7]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][8]' (FDE) to 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][9]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][9]' (FDE) to 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][7]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][9]' (FDE) to 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][10]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][10]' (FDE) to 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][7]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][11]' (FDE) to 'U0/img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][0]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_rows_V_c4_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][0]' (FDE) to 'U0/img_0_rows_V_c4_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][1]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_rows_V_c4_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][1]' (FDE) to 'U0/img_0_rows_V_c4_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][0]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_rows_V_c4_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][1]' (FDE) to 'U0/img_0_rows_V_c4_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][2]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_rows_V_c4_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][2]' (FDE) to 'U0/img_0_rows_V_c4_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][0]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_rows_V_c4_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][2]' (FDE) to 'U0/img_0_rows_V_c4_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][6]'
+INFO: [Synth 8-3886] merging instance 'U0/AXIvideo2Mat_U0/cols_V_reg_480_reg[3]' (FDE) to 'U0/AXIvideo2Mat_U0/cols_V_reg_480_reg[4]'
+INFO: [Synth 8-3886] merging instance 'U0/AXIvideo2Mat_U0/cols_V_reg_480_reg[4]' (FDE) to 'U0/AXIvideo2Mat_U0/cols_V_reg_480_reg[5]'
+INFO: [Synth 8-3886] merging instance 'U0/AXIvideo2Mat_U0/cols_V_reg_480_reg[5]' (FDE) to 'U0/AXIvideo2Mat_U0/cols_V_reg_480_reg[6]'
+INFO: [Synth 8-3886] merging instance 'U0/AXIvideo2Mat_U0/cols_V_reg_480_reg[6]' (FDE) to 'U0/AXIvideo2Mat_U0/cols_V_reg_480_reg[11]'
+INFO: [Synth 8-3886] merging instance 'U0/AXIvideo2Mat_U0/cols_V_reg_480_reg[7]' (FDE) to 'U0/AXIvideo2Mat_U0/cols_V_reg_480_reg[8]'
+INFO: [Synth 8-3886] merging instance 'U0/AXIvideo2Mat_U0/cols_V_reg_480_reg[8]' (FDE) to 'U0/AXIvideo2Mat_U0/cols_V_reg_480_reg[9]'
+INFO: [Synth 8-3886] merging instance 'U0/AXIvideo2Mat_U0/cols_V_reg_480_reg[9]' (FDE) to 'U0/AXIvideo2Mat_U0/cols_V_reg_480_reg[10]'
+INFO: [Synth 8-3886] merging instance 'U0/AXIvideo2Mat_U0/rows_V_reg_475_reg[0]' (FDE) to 'U0/AXIvideo2Mat_U0/rows_V_reg_475_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/AXIvideo2Mat_U0/rows_V_reg_475_reg[1]' (FDE) to 'U0/AXIvideo2Mat_U0/rows_V_reg_475_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U0/AXIvideo2Mat_U0/rows_V_reg_475_reg[2]' (FDE) to 'U0/AXIvideo2Mat_U0/rows_V_reg_475_reg[6]'
+INFO: [Synth 8-3886] merging instance 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][10]' (FDE) to 'U0/img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][3]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][11] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\Mat2AXIvideo_U0/r_V_reg_322_reg[6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\img_0_rows_V_c4_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\img_0_rows_V_c4_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[0][11] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\AXIvideo2Mat_U0/rows_V_reg_475_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\AXIvideo2Mat_U0/rows_V_reg_475_reg[11] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\img_0_rows_V_c4_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\img_0_rows_V_c4_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\Mat2AXIvideo_U0/rows_V_reg_312_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\Mat2AXIvideo_U0/rows_V_reg_312_reg[11] )
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/ap_done_reg_reg) is unused and will be removed from module PassThroughZybo.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/ap_CS_fsm_reg[0]) is unused and will be removed from module PassThroughZybo.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/ap_done_reg_reg) is unused and will be removed from module PassThroughZybo.
+WARNING: [Synth 8-3332] Sequential element (Mat2AXIvideo_U0/ap_done_reg_reg) is unused and will be removed from module PassThroughZybo.
+WARNING: [Synth 8-3332] Sequential element (start_for_Mat2AXIbkb_U/U_start_for_Mat2AXIbkb_shiftReg/SRL_SIG_reg[0][0]) is unused and will be removed from module PassThroughZybo.
+WARNING: [Synth 8-3332] Sequential element (start_for_Mat2AXIbkb_U/U_start_for_Mat2AXIbkb_shiftReg/SRL_SIG_reg[1][0]) is unused and will be removed from module PassThroughZybo.
+WARNING: [Synth 8-3332] Sequential element (img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][7]) is unused and will be removed from module PassThroughZybo.
+WARNING: [Synth 8-3332] Sequential element (img_0_cols_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][0]) is unused and will be removed from module PassThroughZybo.
+WARNING: [Synth 8-3332] Sequential element (img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][3]) is unused and will be removed from module PassThroughZybo.
+WARNING: [Synth 8-3332] Sequential element (img_0_rows_V_c_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][0]) is unused and will be removed from module PassThroughZybo.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/rows_V_reg_475_reg[10]) is unused and will be removed from module PassThroughZybo.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/rows_V_reg_475_reg[11]) is unused and will be removed from module PassThroughZybo.
+WARNING: [Synth 8-3332] Sequential element (img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][7]) is unused and will be removed from module PassThroughZybo.
+WARNING: [Synth 8-3332] Sequential element (img_0_cols_V_c5_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][0]) is unused and will be removed from module PassThroughZybo.
+WARNING: [Synth 8-3332] Sequential element (img_0_rows_V_c4_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][3]) is unused and will be removed from module PassThroughZybo.
+WARNING: [Synth 8-3332] Sequential element (img_0_rows_V_c4_U/U_fifo_w12_d2_A_shiftReg/SRL_SIG_reg[1][0]) is unused and will be removed from module PassThroughZybo.
+WARNING: [Synth 8-3332] Sequential element (Mat2AXIvideo_U0/rows_V_reg_312_reg[10]) is unused and will be removed from module PassThroughZybo.
+WARNING: [Synth 8-3332] Sequential element (Mat2AXIvideo_U0/rows_V_reg_312_reg[11]) is unused and will be removed from module PassThroughZybo.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\Mat2AXIvideo_U0/r_V_reg_322_reg[0] )
+WARNING: [Synth 8-3332] Sequential element (Mat2AXIvideo_U0/r_V_reg_322_reg[0]) is unused and will be removed from module PassThroughZybo.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 868.984 ; gain = 522.246
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 868.984 ; gain = 522.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 893.254 ; gain = 546.516
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 902.281 ; gain = 555.543
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 902.281 ; gain = 555.543
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 902.281 ; gain = 555.543
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 902.281 ; gain = 555.543
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 902.281 ; gain = 555.543
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 902.281 ; gain = 555.543
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 902.281 ; gain = 555.543
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |    47|
+|2     |LUT1   |    13|
+|3     |LUT2   |    13|
+|4     |LUT3   |   154|
+|5     |LUT4   |    53|
+|6     |LUT5   |   114|
+|7     |LUT6   |    35|
+|8     |FDRE   |   521|
+|9     |FDSE   |    18|
++------+-------+------+
+
+Report Instance Areas: 
++------+------------------------------+------------------------+------+
+|      |Instance                      |Module                  |Cells |
++------+------------------------------+------------------------+------+
+|1     |top                           |                        |   968|
+|2     |  U0                          |PassThroughZybo         |   968|
+|3     |    AXIvideo2Mat_U0           |AXIvideo2Mat            |   509|
+|4     |    Mat2AXIvideo_U0           |Mat2AXIvideo            |   315|
+|5     |    img_0_cols_V_c5_U         |fifo_w12_d2_A           |     8|
+|6     |    img_0_cols_V_c_U          |fifo_w12_d2_A_0         |    10|
+|7     |    img_0_data_stream_0_U     |fifo_w8_d2_A            |    32|
+|8     |      U_fifo_w8_d2_A_shiftReg |fifo_w8_d2_A_shiftReg_6 |    24|
+|9     |    img_0_data_stream_1_U     |fifo_w8_d2_A_1          |    32|
+|10    |      U_fifo_w8_d2_A_shiftReg |fifo_w8_d2_A_shiftReg_5 |    24|
+|11    |    img_0_data_stream_2_U     |fifo_w8_d2_A_2          |    33|
+|12    |      U_fifo_w8_d2_A_shiftReg |fifo_w8_d2_A_shiftReg   |    24|
+|13    |    img_0_rows_V_c4_U         |fifo_w12_d2_A_3         |    10|
+|14    |    img_0_rows_V_c_U          |fifo_w12_d2_A_4         |     8|
+|15    |    start_for_Mat2AXIbkb_U    |start_for_Mat2AXIbkb    |    11|
++------+------------------------------+------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 902.281 ; gain = 555.543
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 27 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 902.281 ; gain = 187.676
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 902.281 ; gain = 555.543
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 47 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+200 Infos, 39 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 902.281 ; gain = 567.008
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Digilent19/Sobel_zybo_z7/block_compile.runs/design_1_PassThroughZybo_0_0_synth_1/design_1_PassThroughZybo_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ip/design_1_PassThroughZybo_0_0/design_1_PassThroughZybo_0_0.xci
+INFO: [Coretcl 2-1174] Renamed 14 cell refs.
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Digilent19/Sobel_zybo_z7/block_compile.runs/design_1_PassThroughZybo_0_0_synth_1/design_1_PassThroughZybo_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_PassThroughZybo_0_0_utilization_synth.rpt -pb design_1_PassThroughZybo_0_0_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 902.281 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 15 20:30:06 2018...

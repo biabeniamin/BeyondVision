@@ -99,7 +99,7 @@ int main()
     sleep(1);
     //recover
     XGpio_DiscreteWrite(&hpd_in2,1,0x1);
-    XGpio_DiscreteWrite(&hpd_in2,2,0x0);
+    XGpio_DiscreteWrite(&hpd_in2,2,0x1);
 
 
     video = VMODE_1280x720;
