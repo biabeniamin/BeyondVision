@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Sat Dec 15 20:29:16 2018
+--Date        : Sat Dec 15 20:56:02 2018
 --Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -3319,7 +3319,7 @@ entity design_1 is
     hdmi_out_data_p : out STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=36,numReposBlks=24,numNonXlnxBlks=3,numHierBlks=12,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=4,da_clkrst_cnt=1,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=35,numReposBlks=23,numNonXlnxBlks=3,numHierBlks=12,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=4,da_clkrst_cnt=1,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
 end design_1;
@@ -3822,9 +3822,22 @@ architecture STRUCTURE of design_1 is
     gpio2_io_o : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component design_1_axi_gpio_1_0;
-  component design_1_system_ila_0_0 is
+  component design_1_system_ila_1_0 is
   port (
     clk : in STD_LOGIC;
+    SLOT_0_VID_IO_data : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    SLOT_0_VID_IO_active_video : in STD_LOGIC;
+    SLOT_0_VID_IO_hblank : in STD_LOGIC;
+    SLOT_0_VID_IO_vblank : in STD_LOGIC;
+    SLOT_0_VID_IO_hsync : in STD_LOGIC;
+    SLOT_0_VID_IO_vsync : in STD_LOGIC;
+    SLOT_0_VID_IO_field : in STD_LOGIC
+  );
+  end component design_1_system_ila_1_0;
+  component design_1_system_ila_2_0 is
+  port (
+    clk : in STD_LOGIC;
+    probe0 : in STD_LOGIC_VECTOR ( 23 downto 0 );
     SLOT_0_AXIS_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
     SLOT_0_AXIS_tlast : in STD_LOGIC;
     SLOT_0_AXIS_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -3848,24 +3861,6 @@ architecture STRUCTURE of design_1 is
     SLOT_3_AXIS_tvalid : in STD_LOGIC;
     SLOT_3_AXIS_tready : in STD_LOGIC;
     resetn : in STD_LOGIC
-  );
-  end component design_1_system_ila_0_0;
-  component design_1_system_ila_1_0 is
-  port (
-    clk : in STD_LOGIC;
-    SLOT_0_VID_IO_data : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    SLOT_0_VID_IO_active_video : in STD_LOGIC;
-    SLOT_0_VID_IO_hblank : in STD_LOGIC;
-    SLOT_0_VID_IO_vblank : in STD_LOGIC;
-    SLOT_0_VID_IO_hsync : in STD_LOGIC;
-    SLOT_0_VID_IO_vsync : in STD_LOGIC;
-    SLOT_0_VID_IO_field : in STD_LOGIC
-  );
-  end component design_1_system_ila_1_0;
-  component design_1_system_ila_2_0 is
-  port (
-    clk : in STD_LOGIC;
-    probe0 : in STD_LOGIC_VECTOR ( 23 downto 0 )
   );
   end component design_1_system_ila_2_0;
   component design_1_PassThroughZybo_0_0 is
@@ -4991,7 +4986,18 @@ rst_ps7_0_50M: component design_1_rst_ps7_0_50M_0
       peripheral_reset(0) => rst_ps7_0_50M_peripheral_reset(0),
       slowest_sync_clk => processing_system7_0_FCLK_CLK0
     );
-system_ila_0: component design_1_system_ila_0_0
+system_ila_1: component design_1_system_ila_1_0
+     port map (
+      SLOT_0_VID_IO_active_video => v_axi4s_vid_out_0_vid_io_out_ACTIVE_VIDEO,
+      SLOT_0_VID_IO_data(23 downto 0) => v_axi4s_vid_out_0_vid_io_out_DATA(23 downto 0),
+      SLOT_0_VID_IO_field => v_axi4s_vid_out_0_vid_io_out_FIELD,
+      SLOT_0_VID_IO_hblank => v_axi4s_vid_out_0_vid_io_out_HBLANK,
+      SLOT_0_VID_IO_hsync => v_axi4s_vid_out_0_vid_io_out_HSYNC,
+      SLOT_0_VID_IO_vblank => v_axi4s_vid_out_0_vid_io_out_VBLANK,
+      SLOT_0_VID_IO_vsync => v_axi4s_vid_out_0_vid_io_out_VSYNC,
+      clk => axi_dynclk_0_PXL_CLK_O
+    );
+system_ila_2: component design_1_system_ila_2_0
      port map (
       SLOT_0_AXIS_tdata(23 downto 0) => v_vid_in_axi4s_0_video_out_TDATA(23 downto 0),
       SLOT_0_AXIS_tlast => v_vid_in_axi4s_0_video_out_TLAST,
@@ -5016,23 +5022,8 @@ system_ila_0: component design_1_system_ila_0_0
       SLOT_3_AXIS_tuser(0) => axis_subset_converter_0_M_AXIS_TUSER(0),
       SLOT_3_AXIS_tvalid => axis_subset_converter_0_M_AXIS_TVALID,
       clk => processing_system7_0_FCLK_CLK0,
+      probe0(23 downto 0) => dvi2rgb_1_vid_pData(23 downto 0),
       resetn => rst_ps7_0_50M_peripheral_aresetn(0)
-    );
-system_ila_1: component design_1_system_ila_1_0
-     port map (
-      SLOT_0_VID_IO_active_video => v_axi4s_vid_out_0_vid_io_out_ACTIVE_VIDEO,
-      SLOT_0_VID_IO_data(23 downto 0) => v_axi4s_vid_out_0_vid_io_out_DATA(23 downto 0),
-      SLOT_0_VID_IO_field => v_axi4s_vid_out_0_vid_io_out_FIELD,
-      SLOT_0_VID_IO_hblank => v_axi4s_vid_out_0_vid_io_out_HBLANK,
-      SLOT_0_VID_IO_hsync => v_axi4s_vid_out_0_vid_io_out_HSYNC,
-      SLOT_0_VID_IO_vblank => v_axi4s_vid_out_0_vid_io_out_VBLANK,
-      SLOT_0_VID_IO_vsync => v_axi4s_vid_out_0_vid_io_out_VSYNC,
-      clk => axi_dynclk_0_PXL_CLK_O
-    );
-system_ila_2: component design_1_system_ila_2_0
-     port map (
-      clk => processing_system7_0_FCLK_CLK0,
-      probe0(23 downto 0) => dvi2rgb_1_vid_pData(23 downto 0)
     );
 v_axi4s_vid_out_0: component design_1_v_axi4s_vid_out_0_0
      port map (
