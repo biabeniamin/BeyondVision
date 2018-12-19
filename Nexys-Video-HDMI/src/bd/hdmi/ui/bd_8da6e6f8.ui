@@ -42,70 +42,70 @@ preplace inst axi_mem_intercon -pg 1 -lvl 9 -y 430 -defaultsOSRD
 preplace inst dvi2rgb_0 -pg 1 -lvl 4 -y 1710 -defaultsOSRD
 preplace inst microblaze_0_local_memory -pg 1 -lvl 7 -y 610 -defaultsOSRD
 preplace netloc axis_switch_0_M01_AXIS 1 6 1 2700J
-preplace netloc axis_subset_converter_1_M_AXIS 1 4 2 1580 1040 N
-preplace netloc mig_7series_0_mmcm_locked 1 0 11 -290J 950 NJ 950 N 950 1030J 950 NJ 950 NJ 950 NJ 950 NJ 950 4010J 1040 4440J 1010 4750
-preplace netloc v_vid_in_axi4s_0_video_out 1 3 5 1080 1620 NJ 1620 N 1620 N 1620 3420
-preplace netloc microblaze_0_axi_periph_M08_AXI 1 3 5 1080 710 NJ 710 N 710 N 710 3430
+preplace netloc axis_subset_converter_1_M_AXIS 1 4 2 1600 1040 N
+preplace netloc mig_7series_0_mmcm_locked 1 0 11 -290J 950 NJ 950 N 950 1050J 950 NJ 950 NJ 950 NJ 950 NJ 950 4010J 1040 4440J 1010 4750
+preplace netloc v_vid_in_axi4s_0_video_out 1 3 5 1100 1620 NJ 1620 N 1620 N 1620 3390
+preplace netloc microblaze_0_axi_periph_M08_AXI 1 3 5 1100 710 NJ 710 N 710 N 710 3400
 preplace netloc axis_subset_converter_0_M_AXIS 1 8 2 4070 220 4390
-preplace netloc microblaze_0_axi_periph_M04_AXI 1 3 5 1070J 740 NJ 740 N 740 N 740 3450
-preplace netloc sys_clk_i_1 1 0 10 NJ 1110 NJ 1110 650J 980 NJ 980 NJ 980 NJ 980 NJ 980 NJ 980 3980J 1060 4410J
+preplace netloc microblaze_0_axi_periph_M04_AXI 1 3 5 1090J 740 NJ 740 N 740 N 740 3420
+preplace netloc sys_clk_i_1 1 0 10 NJ 1110 NJ 1110 660J 980 NJ 980 NJ 980 NJ 980 NJ 980 NJ 980 3980J 1060 4410J
 preplace netloc axi_vdma_0_s2mm_introut 1 0 9 -280J 940 NJ 940 NJ 940 NJ 940 NJ 940 NJ 940 NJ 940 NJ 940 3940
-preplace netloc axi_gpio_video_ip2intc_irpt 1 0 9 -290J 1600 NJ 1600 NJ 1600 NJ 1600 NJ 1600 NJ 1600 NJ 1600 3430J 1680 3940
-preplace netloc axi_dynclk_0_PXL_CLK_O 1 4 6 NJ 500 N 500 2720 750 3590 780 4050 200 4470J
-preplace netloc SYS_Rst_1 1 1 6 340J 790 640J 730 1030J 700 NJ 700 NJ 700 2710J
-preplace netloc mig_7series_0_DDR3 1 10 2 4780J 1080 5140
-preplace netloc mig_7series_0_ui_addn_clk_0 1 3 8 1090 1200 N 1200 2310J 1200 2750J 1200 3560J 1020 3960J 1050 4430J 1000 4790
+preplace netloc axi_gpio_video_ip2intc_irpt 1 0 9 -290J 1600 NJ 1600 NJ 1600 NJ 1600 NJ 1600 NJ 1600 NJ 1600 3400J 1680 3940
+preplace netloc axi_dynclk_0_PXL_CLK_O 1 4 6 NJ 500 N 500 2720 750 3560 780 4050 200 4470J
+preplace netloc SYS_Rst_1 1 1 6 340J 790 650J 730 1050J 700 NJ 700 NJ 700 2710J
+preplace netloc mig_7series_0_DDR3 1 10 2 4780J 1080 5150
+preplace netloc mig_7series_0_ui_addn_clk_0 1 3 8 1110 1200 N 1200 2310J 1200 2750J 1200 3530J 1020 3960J 1050 4430J 1000 4790
 preplace netloc microblaze_0_intr 1 1 1 350
 preplace netloc v_axi4s_vid_out_0_vid_io_out 1 9 1 4460
 preplace netloc axi_vdma_0_M_AXI_MM2S 1 8 1 4000
-preplace netloc rst_mig_7series_0_pxl_peripheral_reset 1 3 4 1060 1580 N 1580 N 1580 2710
+preplace netloc rst_mig_7series_0_pxl_peripheral_reset 1 3 4 1080 1580 N 1580 N 1580 2710
 preplace netloc axi_vdma_0_M_AXIS_MM2S 1 8 1 4030
-preplace netloc microblaze_0_interrupt 1 2 2 660 300 N
-preplace netloc microblaze_0_intc_axi 1 1 7 380J 770 NJ 770 NJ 770 NJ 770 N 770 N 770 3470
-preplace netloc microblaze_0_axi_periph_M06_AXI 1 7 1 3530
-preplace netloc microblaze_0_axi_periph_M03_AXI 1 7 1 3570
+preplace netloc microblaze_0_interrupt 1 2 2 670 300 N
+preplace netloc microblaze_0_intc_axi 1 1 7 380J 770 NJ 770 NJ 770 NJ 770 N 770 N 770 3440
+preplace netloc microblaze_0_axi_periph_M06_AXI 1 7 1 3500
+preplace netloc microblaze_0_axi_periph_M03_AXI 1 7 1 3540
 preplace netloc v_tc_0_irq 1 0 9 -320J 930 NJ 930 NJ 930 NJ 930 NJ 930 NJ 930 NJ 930 NJ 930 3940
-preplace netloc rst_mig_7series_0_pxl_peripheral_aresetn 1 3 5 1040 1550 1590 1540 NJ 1540 NJ 1540 3460J
-preplace netloc mig_7series_0_ui_addn_clk_2 1 3 8 1070J 960 NJ 960 NJ 960 NJ 960 NJ 960 3970J 1080 4390 1250 4740
+preplace netloc rst_mig_7series_0_pxl_peripheral_aresetn 1 3 5 1060 1550 1610 1540 NJ 1540 NJ 1540 3430J
+preplace netloc mig_7series_0_ui_addn_clk_2 1 3 8 1090J 960 NJ 960 NJ 960 NJ 960 NJ 960 3970J 1080 4390 1250 4740
 preplace netloc microblaze_0_ilmb_1 1 4 3 N 310 N 310 2760
-preplace netloc microblaze_0_M_AXI_DC 1 4 5 NJ 350 NJ 350 2750J 690 3480J 320 NJ
+preplace netloc microblaze_0_M_AXI_DC 1 4 5 NJ 350 NJ 350 2750J 690 3450J 320 NJ
 preplace netloc axi_mem_intercon_M00_AXI 1 9 1 4450
-preplace netloc axi_dynclk_0_PXL_CLK_5X_O 1 4 6 1570J -80 NJ -80 NJ -80 NJ -80 NJ -80 4480J
-preplace netloc rgb2dvi_0_TMDS 1 10 2 4790J 880 5140
-preplace netloc microblaze_0_axi_periph_M05_AXI 1 1 7 370J 780 NJ 780 NJ 780 NJ 780 N 780 N 780 3460
-preplace netloc microblaze_0_axi_dp 1 4 3 1620 0 N 0 N
+preplace netloc axi_dynclk_0_PXL_CLK_5X_O 1 4 6 1590J -80 NJ -80 NJ -80 NJ -80 NJ -80 4480J
+preplace netloc rgb2dvi_0_TMDS 1 10 2 4790J 880 5150
+preplace netloc microblaze_0_axi_periph_M05_AXI 1 1 7 370J 780 NJ 780 NJ 780 NJ 780 N 780 N 780 3430
+preplace netloc microblaze_0_axi_dp 1 4 3 1640 0 N 0 N
 preplace netloc axi_gpio_1_gpio_io_o 1 5 2 2310 1340 NJ
-preplace netloc v_tc_1_irq 1 0 9 -300J 1590 NJ 1590 NJ 1590 NJ 1590 NJ 1590 NJ 1590 NJ 1590 3590J 1400 3930
-preplace netloc mig_7series_0_ui_clk 1 0 11 -290 360 330 830 N 830 1050 790 1610 790 N 790 2690 790 3550 490 4060 190 NJ 190 4760
-preplace netloc SobelFilter_0_OUTPUT_STREAM 1 7 1 3520
-preplace netloc TMDS_IN_1 1 0 4 NJ 1510 NJ 1510 N 1510 1010
-preplace netloc dvi2rgb_0_DDC 1 4 8 1620J 1560 NJ 1560 NJ 1560 3560J 1390 NJ 1390 NJ 1390 NJ 1390 5140
+preplace netloc v_tc_1_irq 1 0 9 -300J 1590 NJ 1590 NJ 1590 NJ 1590 NJ 1590 NJ 1590 NJ 1590 3560J 1400 3930
+preplace netloc mig_7series_0_ui_clk 1 0 11 -290 360 330 830 N 830 1070 790 1630 790 N 790 2690 790 3520 490 4060 190 NJ 190 4760
+preplace netloc TMDS_IN_1 1 0 4 NJ 1510 NJ 1510 N 1510 1030
+preplace netloc dvi2rgb_0_DDC 1 4 8 1640J 1560 NJ 1560 NJ 1560 3530J 1390 NJ 1390 NJ 1390 NJ 1390 5150
+preplace netloc SobelFilter_0_OUTPUT_STREAM 1 7 1 3490
 preplace netloc xlconstant_0_dout 1 10 2 NJ -210 N
-preplace netloc rst_mig_7series_0_100M_peripheral_aresetn 1 0 10 -280 380 320 820 NJ 820 1060 800 1600 800 N 800 2730 800 3570 770 3950 210 4420J
-preplace netloc rst_mig_7series_0_100M_interconnect_aresetn 1 1 8 310J 800 660J 750 1040 730 N 730 NJ 730 2700J 730 3500J 380 NJ
-preplace netloc dvi2rgb_0_aPixelClkLckd 1 2 7 660 1800 N 1800 1600 1780 NJ 1780 NJ 1780 3480J 1890 3930
-preplace netloc microblaze_0_axi_periph_M01_AXI 1 7 1 3580
-preplace netloc microblaze_0_M_AXI_IC 1 4 5 NJ 370 NJ 370 2740J 700 3490J 340 NJ
-preplace netloc axi_vdma_0_mm2s_introut 1 0 9 -310J 1560 NJ 1560 NJ 1560 NJ 1560 1610J 1550 NJ 1550 NJ 1550 3540J 1380 3930
-preplace netloc axi_uartlite_0_UART 1 1 11 370J -70 NJ -70 NJ -70 NJ -70 NJ -70 NJ -70 NJ -70 NJ -70 NJ -70 NJ -70 5140
-preplace netloc rst_mig_7series_0_100M_mb_reset 1 1 3 360 810 650J 720 1020J
+preplace netloc rst_mig_7series_0_100M_peripheral_aresetn 1 0 10 -280 380 320 820 NJ 820 1080 800 1620 800 N 800 2730 800 3540 770 3950 210 4420J
+preplace netloc rst_mig_7series_0_100M_interconnect_aresetn 1 1 8 310J 800 670J 750 1060 730 N 730 NJ 730 2700J 730 3470J 380 NJ
+preplace netloc dvi2rgb_0_aPixelClkLckd 1 2 7 670 1800 N 1800 1620 1780 NJ 1780 NJ 1780 3450J 1890 3930
+preplace netloc microblaze_0_axi_periph_M01_AXI 1 7 1 3550
+preplace netloc microblaze_0_M_AXI_IC 1 4 5 NJ 370 NJ 370 2740J 700 3460J 340 NJ
+preplace netloc axi_vdma_0_mm2s_introut 1 0 9 -310J 1560 NJ 1560 NJ 1560 NJ 1560 1630J 1550 NJ 1550 NJ 1550 3510J 1380 3930
+preplace netloc axi_uartlite_0_UART 1 1 11 370J -70 NJ -70 NJ -70 NJ -70 NJ -70 NJ -70 NJ -70 NJ -70 NJ -70 NJ -70 5150
+preplace netloc rst_mig_7series_0_100M_mb_reset 1 1 3 360 810 660J 720 1040J
 preplace netloc mig_7series_0_ui_clk_sync_rst 1 0 11 -320J -70 310J -60 NJ -60 NJ -60 NJ -60 NJ -60 NJ -60 NJ -60 NJ -60 NJ -60 4770
 preplace netloc microblaze_0_dlmb_1 1 4 3 N 290 N 290 2770
-preplace netloc microblaze_0_axi_periph_M07_AXI 1 0 8 -310J 760 NJ 760 NJ 760 NJ 760 NJ 760 N 760 N 760 3440
-preplace netloc microblaze_0_axi_periph_M02_AXI 1 7 1 3510
-preplace netloc axi_gpio_0_gpio2_io_o 1 4 3 1590 1320 N 1320 N
-preplace netloc Net 1 3 4 1090 1540 1570 1300 2320 1300 2690
-preplace netloc v_vid_in_axi4s_0_vtiming_out 1 7 1 3440
+preplace netloc microblaze_0_axi_periph_M07_AXI 1 0 8 -310J 760 NJ 760 NJ 760 NJ 760 NJ 760 N 760 N 760 3410
+preplace netloc microblaze_0_axi_periph_M02_AXI 1 7 1 3480
+preplace netloc axi_gpio_0_gpio2_io_o 1 4 3 1610 1320 N 1320 N
+preplace netloc Net 1 3 4 1110 1540 1590 1300 2320 1300 2690
+preplace netloc v_vid_in_axi4s_0_vtiming_out 1 7 1 3410
 preplace netloc v_tc_0_vtiming_out 1 8 1 4040
-preplace netloc microblaze_0_debug 1 2 2 NJ 680 1010
+preplace netloc microblaze_0_debug 1 2 2 NJ 680 1030
 preplace netloc axi_vdma_0_M_AXI_S2MM 1 8 1 4020
-preplace netloc reset_1 1 0 10 NJ 1170 NJ 1170 640J 970 NJ 970 NJ 970 NJ 970 2730J 1010 NJ 1010 3950J 1070 4400J
+preplace netloc reset_1 1 0 10 NJ 1170 NJ 1170 650J 970 NJ 970 NJ 970 NJ 970 2730J 1010 NJ 1010 3950J 1070 4400J
 preplace netloc axi_gpio_video_gpio_io_o 1 8 4 3990 -40 NJ -40 NJ -40 N
-preplace netloc microblaze_0_axi_periph_M09_AXI 1 4 4 1620 720 NJ 720 N 720 3420
+preplace netloc microblaze_0_axi_periph_M09_AXI 1 4 4 1640 720 NJ 720 N 720 3390
 preplace netloc dvi2rgb_0_RGB 1 4 3 N 1700 N 1700 2730
-preplace netloc dvi2rgb_0_PixelClk 1 2 6 650 1570 N 1570 1590 1570 NJ 1570 2770J 1500 NJ
-preplace netloc axi_timer_0_interrupt 1 0 3 -280J 1410 NJ 1410 630
-levelinfo -pg 1 -340 140 510 840 1330 2170 2560 3214 3760 4230 4610 4970 5160 -top -470 -bot 2300
+preplace netloc dvi2rgb_0_PixelClk 1 2 6 660 1570 N 1570 1610 1570 NJ 1570 2770J 1500 NJ
+preplace netloc axi_timer_0_interrupt 1 0 3 -280J 1410 NJ 1410 640
+levelinfo -pg 1 -340 140 520 860 1350 2170 2560 3214 3760 4230 4610 4980 5170 -top -470 -bot 2300
 ",
 }
 {

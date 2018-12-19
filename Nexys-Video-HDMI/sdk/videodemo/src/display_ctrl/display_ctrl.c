@@ -63,6 +63,7 @@
 #include "display_ctrl.h"
 #include "xdebug.h"
 #include "xil_io.h"
+#include "../dynclk/dynclk.h"
 
 /* ------------------------------------------------------------ */
 /*				Procedure Definitions							*/

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Dec 15 20:25:49 2018" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Dec 19 22:54:46 2018" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:nexys_video:part0:1.1" DEVICE="7a200t" NAME="hdmi" PACKAGE="sbg484" SPEEDGRADE="-1"/>
 
@@ -125,177 +125,6 @@
   </EXTERNALINTERFACES>
 
   <MODULES>
-    <MODULE FULLNAME="/PassThrough_0" HWVERSION="1.0" INSTANCE="PassThrough_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="PassThrough" VLNV="xilinx.com:hls:PassThrough:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="hdmi_PassThrough_0_0"/>
-        <PARAMETER NAME="clk_period" VALUE="10"/>
-        <PARAMETER NAME="machine" VALUE="64"/>
-        <PARAMETER NAME="combinational" VALUE="0"/>
-        <PARAMETER NAME="latency" VALUE="5"/>
-        <PARAMETER NAME="II" VALUE="x"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" NAME="INPUT_STREAM_TVALID" SIGIS="undef" SIGNAME="PassThrough_0_INPUT_STREAM_TVALID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_switch_0" PORT="m_axis_tvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="INPUT_STREAM_TREADY" SIGIS="undef" SIGNAME="PassThrough_0_INPUT_STREAM_TREADY">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_switch_0" PORT="m_axis_tready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="23" NAME="INPUT_STREAM_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="PassThrough_0_INPUT_STREAM_TDATA">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_switch_0" PORT="m_axis_tdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="2" NAME="INPUT_STREAM_TKEEP" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="2" NAME="INPUT_STREAM_TSTRB" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="0" NAME="INPUT_STREAM_TUSER" RIGHT="0" SIGIS="undef" SIGNAME="PassThrough_0_INPUT_STREAM_TUSER">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_switch_0" PORT="m_axis_tuser"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="INPUT_STREAM_TLAST" RIGHT="0" SIGIS="undef" SIGNAME="PassThrough_0_INPUT_STREAM_TLAST">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_switch_0" PORT="m_axis_tlast"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="INPUT_STREAM_TID" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="0" NAME="INPUT_STREAM_TDEST" RIGHT="0" SIGIS="undef" SIGNAME="PassThrough_0_INPUT_STREAM_TDEST">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_switch_0" PORT="m_axis_tdest"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="OUTPUT_STREAM_TVALID" SIGIS="undef" SIGNAME="PassThrough_0_OUTPUT_STREAM_TVALID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_switch_1" PORT="s_axis_tvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="OUTPUT_STREAM_TREADY" SIGIS="undef" SIGNAME="PassThrough_0_OUTPUT_STREAM_TREADY">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_switch_1" PORT="s_axis_tready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="23" NAME="OUTPUT_STREAM_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="PassThrough_0_OUTPUT_STREAM_TDATA">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_switch_1" PORT="s_axis_tdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="2" NAME="OUTPUT_STREAM_TKEEP" RIGHT="0" SIGIS="undef" SIGNAME="PassThrough_0_OUTPUT_STREAM_TKEEP">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_switch_1" PORT="s_axis_tkeep"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="2" NAME="OUTPUT_STREAM_TSTRB" RIGHT="0" SIGIS="undef" SIGNAME="PassThrough_0_OUTPUT_STREAM_TSTRB">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_switch_1" PORT="s_axis_tstrb"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="OUTPUT_STREAM_TUSER" RIGHT="0" SIGIS="undef" SIGNAME="PassThrough_0_OUTPUT_STREAM_TUSER">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_switch_1" PORT="s_axis_tuser"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="OUTPUT_STREAM_TLAST" RIGHT="0" SIGIS="undef" SIGNAME="PassThrough_0_OUTPUT_STREAM_TLAST">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_switch_1" PORT="s_axis_tlast"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="OUTPUT_STREAM_TID" RIGHT="0" SIGIS="undef" SIGNAME="PassThrough_0_OUTPUT_STREAM_TID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_switch_1" PORT="s_axis_tid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="OUTPUT_STREAM_TDEST" RIGHT="0" SIGIS="undef" SIGNAME="PassThrough_0_OUTPUT_STREAM_TDEST">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_switch_1" PORT="s_axis_tdest"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="160000000" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="mig_7series_0_ui_addn_clk_0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="mig_7series_0" PORT="ui_addn_clk_0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="ap_rst_n" SIGIS="rst" SIGNAME="axi_gpio_0_gpio_io_o">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_o"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="ap_start" SIGIS="undef" SIGNAME="axi_gpio_1_gpio2_io_o">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_gpio_1" PORT="gpio2_io_o"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="ap_done" SIGIS="undef"/>
-        <PORT DIR="O" NAME="ap_ready" SIGIS="undef"/>
-        <PORT DIR="O" NAME="ap_idle" SIGIS="undef"/>
-      </PORTS>
-      <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="axis_switch_0_M00_AXIS" NAME="INPUT_STREAM" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
-          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
-          <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
-          <PARAMETER NAME="TID_WIDTH" VALUE="1"/>
-          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
-          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
-          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
-          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
-          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
-          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="160000000"/>
-          <PARAMETER NAME="PHASE" VALUE="0"/>
-          <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_mig_7series_0_0_ui_clk"/>
-          <PORTMAPS>
-            <PORTMAP LOGICAL="TVALID" PHYSICAL="INPUT_STREAM_TVALID"/>
-            <PORTMAP LOGICAL="TREADY" PHYSICAL="INPUT_STREAM_TREADY"/>
-            <PORTMAP LOGICAL="TDATA" PHYSICAL="INPUT_STREAM_TDATA"/>
-            <PORTMAP LOGICAL="TKEEP" PHYSICAL="INPUT_STREAM_TKEEP"/>
-            <PORTMAP LOGICAL="TSTRB" PHYSICAL="INPUT_STREAM_TSTRB"/>
-            <PORTMAP LOGICAL="TUSER" PHYSICAL="INPUT_STREAM_TUSER"/>
-            <PORTMAP LOGICAL="TLAST" PHYSICAL="INPUT_STREAM_TLAST"/>
-            <PORTMAP LOGICAL="TID" PHYSICAL="INPUT_STREAM_TID"/>
-            <PORTMAP LOGICAL="TDEST" PHYSICAL="INPUT_STREAM_TDEST"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="PassThrough_0_OUTPUT_STREAM" NAME="OUTPUT_STREAM" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
-          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
-          <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
-          <PARAMETER NAME="TID_WIDTH" VALUE="1"/>
-          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
-          <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TDATA_WIDTH 24 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TUSER_WIDTH 1}"/>
-          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
-          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
-          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
-          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="160000000"/>
-          <PARAMETER NAME="PHASE" VALUE="0"/>
-          <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_mig_7series_0_0_ui_clk"/>
-          <PORTMAPS>
-            <PORTMAP LOGICAL="TVALID" PHYSICAL="OUTPUT_STREAM_TVALID"/>
-            <PORTMAP LOGICAL="TREADY" PHYSICAL="OUTPUT_STREAM_TREADY"/>
-            <PORTMAP LOGICAL="TDATA" PHYSICAL="OUTPUT_STREAM_TDATA"/>
-            <PORTMAP LOGICAL="TKEEP" PHYSICAL="OUTPUT_STREAM_TKEEP"/>
-            <PORTMAP LOGICAL="TSTRB" PHYSICAL="OUTPUT_STREAM_TSTRB"/>
-            <PORTMAP LOGICAL="TUSER" PHYSICAL="OUTPUT_STREAM_TUSER"/>
-            <PORTMAP LOGICAL="TLAST" PHYSICAL="OUTPUT_STREAM_TLAST"/>
-            <PORTMAP LOGICAL="TID" PHYSICAL="OUTPUT_STREAM_TID"/>
-            <PORTMAP LOGICAL="TDEST" PHYSICAL="OUTPUT_STREAM_TDEST"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="ap_ctrl" TYPE="TARGET" VLNV="xilinx.com:interface:acc_handshake:1.0">
-          <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {start {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} done {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} ready {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} idle {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}"/>
-          <PORTMAPS>
-            <PORTMAP LOGICAL="start" PHYSICAL="ap_start"/>
-            <PORTMAP LOGICAL="done" PHYSICAL="ap_done"/>
-            <PORTMAP LOGICAL="ready" PHYSICAL="ap_ready"/>
-            <PORTMAP LOGICAL="idle" PHYSICAL="ap_idle"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-      </BUSINTERFACES>
-    </MODULE>
     <MODULE FULLNAME="/SobelFilter_0" HWVERSION="1.0" INSTANCE="SobelFilter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="SobelFilter" VLNV="xilinx.com:hls:SobelFilter:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
@@ -303,7 +132,7 @@
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
-        <PARAMETER NAME="latency" VALUE="2108179"/>
+        <PARAMETER NAME="latency" VALUE="2081163"/>
         <PARAMETER NAME="II" VALUE="x"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -343,47 +172,40 @@
         </PORT>
         <PORT DIR="O" NAME="OUTPUT_STREAM_TVALID" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TVALID">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_switch_1" PORT="s_axis_tvalid"/>
+            <CONNECTION INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_tvalid"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="OUTPUT_STREAM_TREADY" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TREADY">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_switch_1" PORT="s_axis_tready"/>
+            <CONNECTION INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_tready"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="23" NAME="OUTPUT_STREAM_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TDATA">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_switch_1" PORT="s_axis_tdata"/>
+            <CONNECTION INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_tdata"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="2" NAME="OUTPUT_STREAM_TKEEP" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TKEEP">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_switch_1" PORT="s_axis_tkeep"/>
+            <CONNECTION INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_tkeep"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="2" NAME="OUTPUT_STREAM_TSTRB" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TSTRB">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_switch_1" PORT="s_axis_tstrb"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="OUTPUT_STREAM_TSTRB" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" LEFT="0" NAME="OUTPUT_STREAM_TUSER" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TUSER">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_switch_1" PORT="s_axis_tuser"/>
+            <CONNECTION INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_tuser"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="OUTPUT_STREAM_TLAST" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TLAST">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_switch_1" PORT="s_axis_tlast"/>
+            <CONNECTION INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_tlast"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="0" NAME="OUTPUT_STREAM_TID" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TID">
+        <PORT DIR="O" LEFT="0" NAME="OUTPUT_STREAM_TID" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="0" NAME="OUTPUT_STREAM_TDEST" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="0" NAME="Enabled_V" RIGHT="0" SIGIS="data" SIGNAME="axi_gpio_1_gpio_io_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_switch_1" PORT="s_axis_tid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="OUTPUT_STREAM_TDEST" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TDEST">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_switch_1" PORT="s_axis_tdest"/>
+            <CONNECTION INSTANCE="axi_gpio_1" PORT="gpio_io_o"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="160000000" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="mig_7series_0_ui_addn_clk_0">
@@ -396,12 +218,12 @@
             <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_o"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" NAME="ap_done" SIGIS="undef"/>
         <PORT DIR="I" NAME="ap_start" SIGIS="undef" SIGNAME="axi_gpio_0_gpio2_io_o">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio2_io_o"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="ap_done" SIGIS="undef"/>
         <PORT DIR="O" NAME="ap_ready" SIGIS="undef"/>
         <PORT DIR="O" NAME="ap_idle" SIGIS="undef"/>
       </PORTS>
@@ -436,7 +258,7 @@
           <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="1"/>
           <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
-          <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TDATA_WIDTH 24 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TUSER_WIDTH 1}"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
           <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
@@ -457,10 +279,10 @@
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="__NOC__" NAME="ap_ctrl" TYPE="TARGET" VLNV="xilinx.com:interface:acc_handshake:1.0">
-          <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {start {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} done {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} ready {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} idle {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {done {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} start {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} ready {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} idle {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}"/>
           <PORTMAPS>
-            <PORTMAP LOGICAL="start" PHYSICAL="ap_start"/>
             <PORTMAP LOGICAL="done" PHYSICAL="ap_done"/>
+            <PORTMAP LOGICAL="start" PHYSICAL="ap_start"/>
             <PORTMAP LOGICAL="ready" PHYSICAL="ap_ready"/>
             <PORTMAP LOGICAL="idle" PHYSICAL="ap_idle"/>
           </PORTMAPS>
@@ -960,9 +782,7 @@
             <CONNECTION INSTANCE="v_vid_in_axi4s_0" PORT="aresetn"/>
             <CONNECTION INSTANCE="axis_subset_converter_1" PORT="aresetn"/>
             <CONNECTION INSTANCE="axis_switch_0" PORT="aresetn"/>
-            <CONNECTION INSTANCE="axis_switch_1" PORT="aresetn"/>
             <CONNECTION INSTANCE="SobelFilter_0" PORT="ap_rst_n"/>
-            <CONNECTION INSTANCE="PassThrough_0" PORT="ap_rst_n"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="gpio2_io_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio2_io_o">
@@ -1327,14 +1147,10 @@
         </PORT>
         <PORT DIR="O" LEFT="1" NAME="gpio_io_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_1_gpio_io_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_switch_1" PORT="s_req_suppress"/>
+            <CONNECTION INSTANCE="SobelFilter_0" PORT="Enabled_V"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="0" NAME="gpio2_io_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_1_gpio2_io_o">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="PassThrough_0" PORT="ap_start"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="gpio2_io_o" RIGHT="0" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="microblaze_0_axi_periph_M09_AXI" DATAWIDTH="32" NAME="S_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
@@ -5812,34 +5628,34 @@
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S01_AXI_bready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="23" NAME="s_axis_s2mm_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_vdma_0_s_axis_s2mm_tdata">
+        <PORT DIR="I" LEFT="23" NAME="s_axis_s2mm_tdata" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TDATA">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_switch_1" PORT="m_axis_tdata"/>
+            <CONNECTION INSTANCE="SobelFilter_0" PORT="OUTPUT_STREAM_TDATA"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="2" NAME="s_axis_s2mm_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="axi_vdma_0_s_axis_s2mm_tkeep">
+        <PORT DIR="I" LEFT="2" NAME="s_axis_s2mm_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TKEEP">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_switch_1" PORT="m_axis_tkeep"/>
+            <CONNECTION INSTANCE="SobelFilter_0" PORT="OUTPUT_STREAM_TKEEP"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="s_axis_s2mm_tuser" RIGHT="0" SIGIS="undef" SIGNAME="axi_vdma_0_s_axis_s2mm_tuser">
+        <PORT DIR="I" LEFT="0" NAME="s_axis_s2mm_tuser" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TUSER">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_switch_1" PORT="m_axis_tuser"/>
+            <CONNECTION INSTANCE="SobelFilter_0" PORT="OUTPUT_STREAM_TUSER"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axis_s2mm_tvalid" SIGIS="undef" SIGNAME="axi_vdma_0_s_axis_s2mm_tvalid">
+        <PORT DIR="I" NAME="s_axis_s2mm_tvalid" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TVALID">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_switch_1" PORT="m_axis_tvalid"/>
+            <CONNECTION INSTANCE="SobelFilter_0" PORT="OUTPUT_STREAM_TVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axis_s2mm_tready" SIGIS="undef" SIGNAME="axi_vdma_0_s_axis_s2mm_tready">
+        <PORT DIR="O" NAME="s_axis_s2mm_tready" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TREADY">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_switch_1" PORT="m_axis_tready"/>
+            <CONNECTION INSTANCE="SobelFilter_0" PORT="OUTPUT_STREAM_TREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axis_s2mm_tlast" SIGIS="undef" SIGNAME="axi_vdma_0_s_axis_s2mm_tlast">
+        <PORT DIR="I" NAME="s_axis_s2mm_tlast" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TLAST">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_switch_1" PORT="m_axis_tlast"/>
+            <CONNECTION INSTANCE="SobelFilter_0" PORT="OUTPUT_STREAM_TLAST"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="mm2s_introut" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="axi_vdma_0_mm2s_introut">
@@ -6023,7 +5839,7 @@
             <PORTMAP LOGICAL="TVALID" PHYSICAL="m_axis_mm2s_tvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="axis_switch_1_M00_AXIS" NAME="S_AXIS_S2MM" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+        <BUSINTERFACE BUSNAME="SobelFilter_0_OUTPUT_STREAM" NAME="S_AXIS_S2MM" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
@@ -6035,7 +5851,7 @@
           <PARAMETER NAME="FREQ_HZ" VALUE="160000000"/>
           <PARAMETER NAME="PHASE" VALUE="0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_mig_7series_0_0_ui_clk"/>
-          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}"/>
           <PORTMAPS>
             <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_s2mm_tdata"/>
             <PORTMAP LOGICAL="TKEEP" PHYSICAL="s_axis_s2mm_tkeep"/>
@@ -6743,48 +6559,30 @@
         </PORT>
         <PORT DIR="O" LEFT="1" NAME="m_axis_tvalid" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TVALID">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="PassThrough_0" PORT="INPUT_STREAM_TVALID"/>
-          </CONNECTIONS>
-          <CONNECTIONS>
             <CONNECTION INSTANCE="SobelFilter_0" PORT="INPUT_STREAM_TVALID"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="1" NAME="m_axis_tready" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TREADY">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="PassThrough_0" PORT="INPUT_STREAM_TREADY"/>
-          </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="SobelFilter_0" PORT="INPUT_STREAM_TREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="47" NAME="m_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TDATA">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="PassThrough_0" PORT="INPUT_STREAM_TDATA"/>
-          </CONNECTIONS>
-          <CONNECTIONS>
             <CONNECTION INSTANCE="SobelFilter_0" PORT="INPUT_STREAM_TDATA"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="1" NAME="m_axis_tlast" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TLAST">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="PassThrough_0" PORT="INPUT_STREAM_TLAST"/>
-          </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="SobelFilter_0" PORT="INPUT_STREAM_TLAST"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="1" NAME="m_axis_tdest" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TDEST">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="PassThrough_0" PORT="INPUT_STREAM_TDEST"/>
-          </CONNECTIONS>
-          <CONNECTIONS>
             <CONNECTION INSTANCE="SobelFilter_0" PORT="INPUT_STREAM_TDEST"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="1" NAME="m_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TUSER">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="PassThrough_0" PORT="INPUT_STREAM_TUSER"/>
-          </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="SobelFilter_0" PORT="INPUT_STREAM_TUSER"/>
           </CONNECTIONS>
@@ -6814,7 +6612,7 @@
             <PORTMAP LOGICAL="TUSER" PHYSICAL="s_axis_tuser"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="axis_switch_0_M00_AXIS" NAME="M00_AXIS" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="M00_AXIS" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
@@ -6856,545 +6654,6 @@
             <PORTMAP LOGICAL="TLAST" PHYSICAL="m_axis_tlast"/>
             <PORTMAP LOGICAL="TDEST" PHYSICAL="m_axis_tdest"/>
             <PORTMAP LOGICAL="TUSER" PHYSICAL="m_axis_tuser"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-      </BUSINTERFACES>
-    </MODULE>
-    <MODULE FULLNAME="/axis_switch_1" HWVERSION="1.1" INSTANCE="axis_switch_1" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="axis_switch" VLNV="xilinx.com:ip:axis_switch:1.1">
-      <DOCUMENTS>
-        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axis_infrastructure_ip_suite;v=v1_1;d=pg085-axi4stream-infrastructure.pdf"/>
-      </DOCUMENTS>
-      <PARAMETERS>
-        <PARAMETER NAME="C_FAMILY" VALUE="artix7"/>
-        <PARAMETER NAME="C_NUM_SI_SLOTS" VALUE="2"/>
-        <PARAMETER NAME="C_LOG_SI_SLOTS" VALUE="1"/>
-        <PARAMETER NAME="C_NUM_MI_SLOTS" VALUE="1"/>
-        <PARAMETER NAME="C_AXIS_TDATA_WIDTH" VALUE="24"/>
-        <PARAMETER NAME="C_AXIS_TID_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_AXIS_TDEST_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_AXIS_TUSER_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_AXIS_SIGNAL_SET" VALUE="0b00000000000000000000000011111111"/>
-        <PARAMETER NAME="C_ARB_ON_MAX_XFERS" VALUE="1"/>
-        <PARAMETER NAME="C_ARB_ON_NUM_CYCLES" VALUE="0"/>
-        <PARAMETER NAME="C_ARB_ON_TLAST" VALUE="0"/>
-        <PARAMETER NAME="C_INCLUDE_ARBITER" VALUE="1"/>
-        <PARAMETER NAME="C_ARB_ALGORITHM" VALUE="0"/>
-        <PARAMETER NAME="C_OUTPUT_REG" VALUE="0"/>
-        <PARAMETER NAME="C_DECODER_REG" VALUE="0"/>
-        <PARAMETER NAME="C_M_AXIS_CONNECTIVITY_ARRAY" VALUE="0b11"/>
-        <PARAMETER NAME="C_M_AXIS_BASETDEST_ARRAY" VALUE="0b0"/>
-        <PARAMETER NAME="C_M_AXIS_HIGHTDEST_ARRAY" VALUE="0b0"/>
-        <PARAMETER NAME="C_ROUTING_MODE" VALUE="0"/>
-        <PARAMETER NAME="C_S_AXI_CTRL_ADDR_WIDTH" VALUE="7"/>
-        <PARAMETER NAME="C_S_AXI_CTRL_DATA_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="C_COMMON_CLOCK" VALUE="0"/>
-        <PARAMETER NAME="NUM_SI" VALUE="2"/>
-        <PARAMETER NAME="NUM_MI" VALUE="1"/>
-        <PARAMETER NAME="ROUTING_MODE" VALUE="0"/>
-        <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
-        <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
-        <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
-        <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
-        <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
-        <PARAMETER NAME="TID_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="HAS_ACLKEN" VALUE="0"/>
-        <PARAMETER NAME="ARB_ON_MAX_XFERS" VALUE="1"/>
-        <PARAMETER NAME="ARB_ON_NUM_CYCLES" VALUE="0"/>
-        <PARAMETER NAME="ARB_ON_TLAST" VALUE="0"/>
-        <PARAMETER NAME="ARB_ALGORITHM" VALUE="0"/>
-        <PARAMETER NAME="DECODER_REG" VALUE="0"/>
-        <PARAMETER NAME="OUTPUT_REG" VALUE="0"/>
-        <PARAMETER NAME="COMMON_CLOCK" VALUE="0"/>
-        <PARAMETER NAME="M00_AXIS_BASETDEST" VALUE="0x00000000"/>
-        <PARAMETER NAME="M01_AXIS_BASETDEST" VALUE="0x00000001"/>
-        <PARAMETER NAME="M02_AXIS_BASETDEST" VALUE="0x00000002"/>
-        <PARAMETER NAME="M03_AXIS_BASETDEST" VALUE="0x00000003"/>
-        <PARAMETER NAME="M04_AXIS_BASETDEST" VALUE="0x00000004"/>
-        <PARAMETER NAME="M05_AXIS_BASETDEST" VALUE="0x00000005"/>
-        <PARAMETER NAME="M06_AXIS_BASETDEST" VALUE="0x00000006"/>
-        <PARAMETER NAME="M07_AXIS_BASETDEST" VALUE="0x00000007"/>
-        <PARAMETER NAME="M08_AXIS_BASETDEST" VALUE="0x00000008"/>
-        <PARAMETER NAME="M09_AXIS_BASETDEST" VALUE="0x00000009"/>
-        <PARAMETER NAME="M10_AXIS_BASETDEST" VALUE="0x0000000a"/>
-        <PARAMETER NAME="M11_AXIS_BASETDEST" VALUE="0x0000000b"/>
-        <PARAMETER NAME="M12_AXIS_BASETDEST" VALUE="0x0000000c"/>
-        <PARAMETER NAME="M13_AXIS_BASETDEST" VALUE="0x0000000d"/>
-        <PARAMETER NAME="M14_AXIS_BASETDEST" VALUE="0x0000000e"/>
-        <PARAMETER NAME="M15_AXIS_BASETDEST" VALUE="0x0000000f"/>
-        <PARAMETER NAME="M00_AXIS_HIGHTDEST" VALUE="0x00000000"/>
-        <PARAMETER NAME="M01_AXIS_HIGHTDEST" VALUE="0x00000001"/>
-        <PARAMETER NAME="M02_AXIS_HIGHTDEST" VALUE="0x00000002"/>
-        <PARAMETER NAME="M03_AXIS_HIGHTDEST" VALUE="0x00000003"/>
-        <PARAMETER NAME="M04_AXIS_HIGHTDEST" VALUE="0x00000004"/>
-        <PARAMETER NAME="M05_AXIS_HIGHTDEST" VALUE="0x00000005"/>
-        <PARAMETER NAME="M06_AXIS_HIGHTDEST" VALUE="0x00000006"/>
-        <PARAMETER NAME="M07_AXIS_HIGHTDEST" VALUE="0x00000007"/>
-        <PARAMETER NAME="M08_AXIS_HIGHTDEST" VALUE="0x00000008"/>
-        <PARAMETER NAME="M09_AXIS_HIGHTDEST" VALUE="0x00000009"/>
-        <PARAMETER NAME="M10_AXIS_HIGHTDEST" VALUE="0x0000000a"/>
-        <PARAMETER NAME="M11_AXIS_HIGHTDEST" VALUE="0x0000000b"/>
-        <PARAMETER NAME="M12_AXIS_HIGHTDEST" VALUE="0x0000000c"/>
-        <PARAMETER NAME="M13_AXIS_HIGHTDEST" VALUE="0x0000000d"/>
-        <PARAMETER NAME="M14_AXIS_HIGHTDEST" VALUE="0x0000000e"/>
-        <PARAMETER NAME="M15_AXIS_HIGHTDEST" VALUE="0x0000000f"/>
-        <PARAMETER NAME="M00_S00_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M00_S01_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M00_S02_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M00_S03_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M00_S04_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M00_S05_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M00_S06_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M00_S07_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M00_S08_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M00_S09_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M00_S10_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M00_S11_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M00_S12_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M00_S13_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M00_S14_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M00_S15_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M01_S00_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M01_S01_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M01_S02_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M01_S03_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M01_S04_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M01_S05_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M01_S06_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M01_S07_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M01_S08_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M01_S09_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M01_S10_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M01_S11_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M01_S12_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M01_S13_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M01_S14_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M01_S15_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M02_S00_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M02_S01_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M02_S02_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M02_S03_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M02_S04_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M02_S05_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M02_S06_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M02_S07_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M02_S08_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M02_S09_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M02_S10_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M02_S11_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M02_S12_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M02_S13_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M02_S14_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M02_S15_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M03_S00_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M03_S01_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M03_S02_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M03_S03_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M03_S04_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M03_S05_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M03_S06_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M03_S07_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M03_S08_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M03_S09_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M03_S10_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M03_S11_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M03_S12_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M03_S13_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M03_S14_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M03_S15_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M04_S00_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M04_S01_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M04_S02_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M04_S03_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M04_S04_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M04_S05_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M04_S06_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M04_S07_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M04_S08_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M04_S09_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M04_S10_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M04_S11_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M04_S12_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M04_S13_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M04_S14_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M04_S15_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M05_S00_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M05_S01_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M05_S02_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M05_S03_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M05_S04_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M05_S05_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M05_S06_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M05_S07_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M05_S08_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M05_S09_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M05_S10_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M05_S11_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M05_S12_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M05_S13_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M05_S14_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M05_S15_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M06_S00_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M06_S01_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M06_S02_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M06_S03_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M06_S04_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M06_S05_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M06_S06_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M06_S07_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M06_S08_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M06_S09_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M06_S10_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M06_S11_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M06_S12_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M06_S13_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M06_S14_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M06_S15_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M07_S00_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M07_S01_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M07_S02_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M07_S03_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M07_S04_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M07_S05_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M07_S06_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M07_S07_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M07_S08_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M07_S09_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M07_S10_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M07_S11_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M07_S12_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M07_S13_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M07_S14_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M07_S15_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M08_S00_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M08_S01_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M08_S02_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M08_S03_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M08_S04_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M08_S05_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M08_S06_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M08_S07_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M08_S08_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M08_S09_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M08_S10_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M08_S11_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M08_S12_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M08_S13_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M08_S14_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M08_S15_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M09_S00_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M09_S01_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M09_S02_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M09_S03_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M09_S04_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M09_S05_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M09_S06_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M09_S07_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M09_S08_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M09_S09_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M09_S10_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M09_S11_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M09_S12_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M09_S13_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M09_S14_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M09_S15_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M10_S00_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M10_S01_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M10_S02_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M10_S03_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M10_S04_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M10_S05_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M10_S06_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M10_S07_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M10_S08_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M10_S09_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M10_S10_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M10_S11_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M10_S12_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M10_S13_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M10_S14_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M10_S15_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M11_S00_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M11_S01_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M11_S02_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M11_S03_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M11_S04_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M11_S05_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M11_S06_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M11_S07_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M11_S08_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M11_S09_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M11_S10_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M11_S11_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M11_S12_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M11_S13_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M11_S14_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M11_S15_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M12_S00_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M12_S01_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M12_S02_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M12_S03_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M12_S04_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M12_S05_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M12_S06_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M12_S07_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M12_S08_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M12_S09_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M12_S10_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M12_S11_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M12_S12_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M12_S13_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M12_S14_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M12_S15_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M13_S00_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M13_S01_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M13_S02_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M13_S03_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M13_S04_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M13_S05_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M13_S06_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M13_S07_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M13_S08_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M13_S09_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M13_S10_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M13_S11_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M13_S12_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M13_S13_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M13_S14_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M13_S15_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M14_S00_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M14_S01_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M14_S02_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M14_S03_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M14_S04_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M14_S05_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M14_S06_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M14_S07_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M14_S08_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M14_S09_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M14_S10_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M14_S11_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M14_S12_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M14_S13_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M14_S14_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M14_S15_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M15_S00_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M15_S01_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M15_S02_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M15_S03_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M15_S04_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M15_S05_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M15_S06_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M15_S07_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M15_S08_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M15_S09_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M15_S10_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M15_S11_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M15_S12_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M15_S13_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M15_S14_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="M15_S15_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="Component_Name" VALUE="hdmi_axis_switch_0_1"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT CLKFREQUENCY="160000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="mig_7series_0_ui_addn_clk_0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="mig_7series_0" PORT="ui_addn_clk_0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="aresetn" SIGIS="rst" SIGNAME="axi_gpio_0_gpio_io_o">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_o"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="s_axis_tvalid" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TVALID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="PassThrough_0" PORT="OUTPUT_STREAM_TVALID"/>
-          </CONNECTIONS>
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="SobelFilter_0" PORT="OUTPUT_STREAM_TVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="1" NAME="s_axis_tready" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TREADY">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="PassThrough_0" PORT="OUTPUT_STREAM_TREADY"/>
-          </CONNECTIONS>
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="SobelFilter_0" PORT="OUTPUT_STREAM_TREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="47" NAME="s_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TDATA">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="PassThrough_0" PORT="OUTPUT_STREAM_TDATA"/>
-          </CONNECTIONS>
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="SobelFilter_0" PORT="OUTPUT_STREAM_TDATA"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="5" NAME="s_axis_tstrb" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TSTRB">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="PassThrough_0" PORT="OUTPUT_STREAM_TSTRB"/>
-          </CONNECTIONS>
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="SobelFilter_0" PORT="OUTPUT_STREAM_TSTRB"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="5" NAME="s_axis_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TKEEP">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="PassThrough_0" PORT="OUTPUT_STREAM_TKEEP"/>
-          </CONNECTIONS>
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="SobelFilter_0" PORT="OUTPUT_STREAM_TKEEP"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="s_axis_tlast" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TLAST">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="PassThrough_0" PORT="OUTPUT_STREAM_TLAST"/>
-          </CONNECTIONS>
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="SobelFilter_0" PORT="OUTPUT_STREAM_TLAST"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="s_axis_tid" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="PassThrough_0" PORT="OUTPUT_STREAM_TID"/>
-          </CONNECTIONS>
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="SobelFilter_0" PORT="OUTPUT_STREAM_TID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="s_axis_tdest" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TDEST">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="PassThrough_0" PORT="OUTPUT_STREAM_TDEST"/>
-          </CONNECTIONS>
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="SobelFilter_0" PORT="OUTPUT_STREAM_TDEST"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="s_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TUSER">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="PassThrough_0" PORT="OUTPUT_STREAM_TUSER"/>
-          </CONNECTIONS>
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="SobelFilter_0" PORT="OUTPUT_STREAM_TUSER"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="m_axis_tvalid" RIGHT="0" SIGIS="undef" SIGNAME="axi_vdma_0_s_axis_s2mm_tvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_tvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="m_axis_tready" RIGHT="0" SIGIS="undef" SIGNAME="axi_vdma_0_s_axis_s2mm_tready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_tready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="23" NAME="m_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_vdma_0_s_axis_s2mm_tdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_tdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="2" NAME="m_axis_tstrb" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="2" NAME="m_axis_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="axi_vdma_0_s_axis_s2mm_tkeep">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_tkeep"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="m_axis_tlast" RIGHT="0" SIGIS="undef" SIGNAME="axi_vdma_0_s_axis_s2mm_tlast">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_tlast"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="m_axis_tid" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="0" NAME="m_axis_tdest" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="0" NAME="m_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="axi_vdma_0_s_axis_s2mm_tuser">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_tuser"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="s_req_suppress" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_1_gpio_io_o">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_gpio_1" PORT="gpio_io_o"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="1" NAME="s_decode_err" RIGHT="0" SIGIS="undef"/>
-      </PORTS>
-      <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="PassThrough_0_OUTPUT_STREAM" NAME="S00_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
-          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
-          <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
-          <PARAMETER NAME="TID_WIDTH" VALUE="1"/>
-          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
-          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
-          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
-          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
-          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="160000000"/>
-          <PARAMETER NAME="PHASE" VALUE="0"/>
-          <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_mig_7series_0_0_ui_clk"/>
-          <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TDATA_WIDTH 24 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TUSER_WIDTH 1}"/>
-          <PORTMAPS>
-            <PORTMAP LOGICAL="TVALID" PHYSICAL="s_axis_tvalid"/>
-            <PORTMAP LOGICAL="TREADY" PHYSICAL="s_axis_tready"/>
-            <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_tdata"/>
-            <PORTMAP LOGICAL="TSTRB" PHYSICAL="s_axis_tstrb"/>
-            <PORTMAP LOGICAL="TKEEP" PHYSICAL="s_axis_tkeep"/>
-            <PORTMAP LOGICAL="TLAST" PHYSICAL="s_axis_tlast"/>
-            <PORTMAP LOGICAL="TID" PHYSICAL="s_axis_tid"/>
-            <PORTMAP LOGICAL="TDEST" PHYSICAL="s_axis_tdest"/>
-            <PORTMAP LOGICAL="TUSER" PHYSICAL="s_axis_tuser"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="axis_switch_1_M00_AXIS" NAME="M00_AXIS" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
-          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
-          <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
-          <PARAMETER NAME="TID_WIDTH" VALUE="1"/>
-          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
-          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
-          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
-          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
-          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="160000000"/>
-          <PARAMETER NAME="PHASE" VALUE="0"/>
-          <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_mig_7series_0_0_ui_clk"/>
-          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
-          <PORTMAPS>
-            <PORTMAP LOGICAL="TVALID" PHYSICAL="m_axis_tvalid"/>
-            <PORTMAP LOGICAL="TREADY" PHYSICAL="m_axis_tready"/>
-            <PORTMAP LOGICAL="TDATA" PHYSICAL="m_axis_tdata"/>
-            <PORTMAP LOGICAL="TSTRB" PHYSICAL="m_axis_tstrb"/>
-            <PORTMAP LOGICAL="TKEEP" PHYSICAL="m_axis_tkeep"/>
-            <PORTMAP LOGICAL="TLAST" PHYSICAL="m_axis_tlast"/>
-            <PORTMAP LOGICAL="TID" PHYSICAL="m_axis_tid"/>
-            <PORTMAP LOGICAL="TDEST" PHYSICAL="m_axis_tdest"/>
-            <PORTMAP LOGICAL="TUSER" PHYSICAL="m_axis_tuser"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="SobelFilter_0_OUTPUT_STREAM" NAME="S01_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
-          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
-          <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
-          <PARAMETER NAME="TID_WIDTH" VALUE="1"/>
-          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
-          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
-          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
-          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
-          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="160000000"/>
-          <PARAMETER NAME="PHASE" VALUE="0"/>
-          <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_mig_7series_0_0_ui_clk"/>
-          <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TDATA_WIDTH 24 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TUSER_WIDTH 1}"/>
-          <PORTMAPS>
-            <PORTMAP LOGICAL="TVALID" PHYSICAL="s_axis_tvalid"/>
-            <PORTMAP LOGICAL="TREADY" PHYSICAL="s_axis_tready"/>
-            <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_tdata"/>
-            <PORTMAP LOGICAL="TSTRB" PHYSICAL="s_axis_tstrb"/>
-            <PORTMAP LOGICAL="TKEEP" PHYSICAL="s_axis_tkeep"/>
-            <PORTMAP LOGICAL="TLAST" PHYSICAL="s_axis_tlast"/>
-            <PORTMAP LOGICAL="TID" PHYSICAL="s_axis_tid"/>
-            <PORTMAP LOGICAL="TDEST" PHYSICAL="s_axis_tdest"/>
-            <PORTMAP LOGICAL="TUSER" PHYSICAL="s_axis_tuser"/>
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
@@ -13745,9 +13004,7 @@
             <CONNECTION INSTANCE="axis_subset_converter_1" PORT="aclk"/>
             <CONNECTION INSTANCE="rst_hdmi_160M" PORT="slowest_sync_clk"/>
             <CONNECTION INSTANCE="axis_switch_0" PORT="aclk"/>
-            <CONNECTION INSTANCE="axis_switch_1" PORT="aclk"/>
             <CONNECTION INSTANCE="SobelFilter_0" PORT="ap_clk"/>
-            <CONNECTION INSTANCE="PassThrough_0" PORT="ap_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="200000000" DIR="O" NAME="ui_addn_clk_1" SIGIS="clk" SIGNAME="mig_7series_0_ui_addn_clk_1">
