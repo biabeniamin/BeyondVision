@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'SobelFilter'" level="0">
-<item name = "Date">Sat Dec 15 17:02:24 2018
+<item name = "Date">Wed Dec 19 22:30:14 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">SobelNewVivado</item>
@@ -24,23 +24,17 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">2108179, 2108179, 2108163, 2108163, dataflow</column>
+<column name="">2081163, 14596148, 2081164, 14594227, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_AddWeighted_fu_700">AddWeighted, 2108162, 2108162, 2108162, 2108162, none</column>
-<column name="grp_Sobel_fu_713">Sobel, 2087183, 2087183, 2087183, 2087183, none</column>
-<column name="grp_Sobel_1_fu_723">Sobel_1, 2087183, 2087183, 2087183, 2087183, none</column>
-<column name="grp_GaussianBlur_fu_733">GaussianBlur, 2087183, 2087183, 2087183, 2087183, none</column>
-<column name="grp_AXIvideo2Mat_fu_743">AXIvideo2Mat, 3, 2081163, 3, 2081163, none</column>
-<column name="grp_CvtColor_1_fu_768">CvtColor_1, 1, 2080081, 1, 2080081, none</column>
-<column name="grp_Mat2AXIvideo_fu_780">Mat2AXIvideo, 2077921, 2077921, 2077921, 2077921, none</column>
-<column name="grp_Duplicate_fu_801">Duplicate, 2076841, 2076841, 2076841, 2076841, none</column>
-<column name="grp_CvtColor_fu_814">CvtColor, 2076841, 2076841, 2076841, 2076841, none</column>
-<column name="StgValue_50_Block_proc_fu_824">Block_proc, 0, 0, 0, 0, none</column>
+<column name="grp_Block_proc307309_fu_180">Block_proc307309, 2077923, 14594226, 2077923, 14594226, none</column>
+<column name="grp_AXIvideo2Mat_fu_202">AXIvideo2Mat, 2081163, 2081163, 2081163, 2081163, none</column>
+<column name="StgValue_13_SobelFilter_entry3_fu_223">SobelFilter_entry3, 0, 0, 0, 0, none</column>
+<column name="StgValue_15_Block_proc308667_fu_230">Block_proc308667, 0, 0, 0, 0, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

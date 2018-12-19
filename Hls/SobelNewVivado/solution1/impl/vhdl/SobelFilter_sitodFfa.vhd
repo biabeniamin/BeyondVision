@@ -10,7 +10,7 @@ use ieee.std_logic_1164.all;
 
 entity SobelFilter_sitodFfa is
     generic (
-        ID         : integer := 151;
+        ID         : integer := 147;
         NUM_STAGE  : integer := 6;
         din0_WIDTH : integer := 32;
         dout_WIDTH : integer := 64

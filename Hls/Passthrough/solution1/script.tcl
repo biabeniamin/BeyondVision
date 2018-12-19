@@ -5,8 +5,8 @@
 ############################################################
 open_project Passthrough
 set_top PassThrough
-add_files Passthrough/a.cpp
 add_files Passthrough/a.hpp
+add_files Passthrough/a.cpp
 open_solution "solution1"
 set_part {xc7a200tsbg484-1} -tool vivado
 create_clock -period 10 -name default

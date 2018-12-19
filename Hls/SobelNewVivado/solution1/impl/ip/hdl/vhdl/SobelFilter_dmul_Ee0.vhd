@@ -10,7 +10,7 @@ use ieee.std_logic_1164.all;
 
 entity SobelFilter_dmul_Ee0 is
     generic (
-        ID         : integer := 145;
+        ID         : integer := 141;
         NUM_STAGE  : integer := 6;
         din0_WIDTH : integer := 64;
         din1_WIDTH : integer := 64;

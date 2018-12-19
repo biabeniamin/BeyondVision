@@ -16,17 +16,13 @@
 namespace ap_rtl {
 
 struct Sobel : public sc_module {
-    // Port declarations 28
+    // Port declarations 24
     sc_in_clk ap_clk;
     sc_in< sc_logic > ap_rst;
     sc_in< sc_logic > ap_start;
-    sc_in< sc_logic > start_full_n;
     sc_out< sc_logic > ap_done;
-    sc_in< sc_logic > ap_continue;
     sc_out< sc_logic > ap_idle;
     sc_out< sc_logic > ap_ready;
-    sc_out< sc_logic > start_out;
-    sc_out< sc_logic > start_write;
     sc_in< sc_lv<8> > p_src_data_stream_0_V_dout;
     sc_in< sc_logic > p_src_data_stream_0_V_empty_n;
     sc_out< sc_logic > p_src_data_stream_0_V_read;
@@ -62,12 +58,8 @@ struct Sobel : public sc_module {
     sc_trace_file* mVcdFile;
 
     Filter2D* grp_Filter2D_fu_108;
-    sc_signal< sc_logic > real_start;
-    sc_signal< sc_logic > start_once_reg;
-    sc_signal< sc_logic > ap_done_reg;
     sc_signal< sc_lv<2> > ap_CS_fsm;
     sc_signal< sc_logic > ap_CS_fsm_state1;
-    sc_signal< sc_logic > internal_ap_ready;
     sc_signal< sc_logic > grp_Filter2D_fu_108_ap_start;
     sc_signal< sc_logic > grp_Filter2D_fu_108_ap_done;
     sc_signal< sc_logic > grp_Filter2D_fu_108_ap_idle;
@@ -82,10 +74,8 @@ struct Sobel : public sc_module {
     sc_signal< sc_lv<8> > grp_Filter2D_fu_108_p_dst_data_stream_2_V_din;
     sc_signal< sc_logic > grp_Filter2D_fu_108_p_dst_data_stream_2_V_write;
     sc_signal< sc_logic > grp_Filter2D_fu_108_ap_start_reg;
-    sc_signal< bool > ap_block_state1_ignore_call6;
     sc_signal< sc_logic > ap_CS_fsm_state2;
     sc_signal< sc_lv<2> > ap_NS_fsm;
-    sc_signal< bool > ap_block_state1;
     static const sc_logic ap_const_logic_1;
     static const sc_logic ap_const_logic_0;
     static const sc_lv<2> ap_ST_fsm_state1;
@@ -109,13 +99,10 @@ struct Sobel : public sc_module {
     void thread_ap_clk_no_reset_();
     void thread_ap_CS_fsm_state1();
     void thread_ap_CS_fsm_state2();
-    void thread_ap_block_state1();
-    void thread_ap_block_state1_ignore_call6();
     void thread_ap_done();
     void thread_ap_idle();
     void thread_ap_ready();
     void thread_grp_Filter2D_fu_108_ap_start();
-    void thread_internal_ap_ready();
     void thread_p_dst_data_stream_0_V_din();
     void thread_p_dst_data_stream_0_V_write();
     void thread_p_dst_data_stream_1_V_din();
@@ -125,9 +112,6 @@ struct Sobel : public sc_module {
     void thread_p_src_data_stream_0_V_read();
     void thread_p_src_data_stream_1_V_read();
     void thread_p_src_data_stream_2_V_read();
-    void thread_real_start();
-    void thread_start_out();
-    void thread_start_write();
     void thread_ap_NS_fsm();
 };
 

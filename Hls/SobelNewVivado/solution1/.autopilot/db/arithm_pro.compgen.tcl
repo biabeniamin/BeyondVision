@@ -1,6 +1,6 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 139
+set id 135
 set name SobelFilter_dadd_DeQ
 set corename simcore_dadd
 set op dadd
@@ -91,7 +91,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 145
+set id 141
 set name SobelFilter_dmul_Ee0
 set corename simcore_dmul
 set op dmul
@@ -182,7 +182,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 151
+set id 147
 set name SobelFilter_sitodFfa
 set corename simcore_sitodp
 set op sitodp
@@ -274,7 +274,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 160 \
+    id 156 \
     name src1_data_stream_0_V \
     type fifo \
     dir I \
@@ -289,7 +289,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 161 \
+    id 157 \
     name src1_data_stream_1_V \
     type fifo \
     dir I \
@@ -304,7 +304,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 162 \
+    id 158 \
     name src1_data_stream_2_V \
     type fifo \
     dir I \
@@ -319,7 +319,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 163 \
+    id 159 \
     name src2_data_stream_0_V \
     type fifo \
     dir I \
@@ -334,7 +334,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 164 \
+    id 160 \
     name src2_data_stream_1_V \
     type fifo \
     dir I \
@@ -349,7 +349,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 165 \
+    id 161 \
     name src2_data_stream_2_V \
     type fifo \
     dir I \
@@ -364,7 +364,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 166 \
+    id 162 \
     name dst_data_stream_0_V \
     type fifo \
     dir O \
@@ -379,7 +379,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 167 \
+    id 163 \
     name dst_data_stream_1_V \
     type fifo \
     dir O \
@@ -394,7 +394,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 168 \
+    id 164 \
     name dst_data_stream_2_V \
     type fifo \
     dir O \

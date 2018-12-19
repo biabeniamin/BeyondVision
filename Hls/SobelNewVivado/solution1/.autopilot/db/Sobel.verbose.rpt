@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'Sobel'
 ================================================================
-* Date:           Sat Dec 15 17:02:29 2018
+* Date:           Wed Dec 19 22:30:20 2018
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        SobelNewVivado
@@ -54,14 +54,14 @@
 |       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
 +-----------------+---------+-------+--------+--------+
 |DSP              |        -|      -|       -|       -|
-|Expression       |        -|      -|       0|       2|
+|Expression       |        -|      -|       -|       -|
 |FIFO             |        -|      -|       -|       -|
-|Instance         |        9|      6|     949|    2169|
+|Instance         |        9|      6|     951|    2175|
 |Memory           |        -|      -|       -|       -|
-|Multiplexer      |        -|      -|       -|      87|
-|Register         |        -|      -|       5|       -|
+|Multiplexer      |        -|      -|       -|      69|
+|Register         |        -|      -|       3|       -|
 +-----------------+---------+-------+--------+--------+
-|Total            |        9|      6|     954|    2258|
+|Total            |        9|      6|     954|    2244|
 +-----------------+---------+-------+--------+--------+
 |Available        |      730|    740|  269200|  129000|
 +-----------------+---------+-------+--------+--------+
@@ -73,9 +73,9 @@
     +---------------------+----------+---------+-------+-----+------+
     |       Instance      |  Module  | BRAM_18K| DSP48E|  FF |  LUT |
     +---------------------+----------+---------+-------+-----+------+
-    |grp_Filter2D_fu_108  |Filter2D  |        9|      6|  949|  2169|
+    |grp_Filter2D_fu_108  |Filter2D  |        9|      6|  951|  2175|
     +---------------------+----------+---------+-------+-----+------+
-    |Total                |          |        9|      6|  949|  2169|
+    |Total                |          |        9|      6|  951|  2175|
     +---------------------+----------+---------+-------+-----+------+
 
     * DSP48: 
@@ -88,29 +88,21 @@
     N/A
 
     * Expression: 
-    +-----------------+----------+-------+---+----+------------+------------+
-    |  Variable Name  | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
-    +-----------------+----------+-------+---+----+------------+------------+
-    |ap_block_state1  |    or    |      0|  0|   2|           1|           1|
-    +-----------------+----------+-------+---+----+------------+------------+
-    |Total            |          |      0|  0|   2|           1|           1|
-    +-----------------+----------+-------+---+----+------------+------------+
+    N/A
 
     * Multiplexer: 
     +-----------------------------+----+-----------+-----+-----------+
     |             Name            | LUT| Input Size| Bits| Total Bits|
     +-----------------------------+----+-----------+-----+-----------+
     |ap_NS_fsm                    |  15|          3|    1|          3|
-    |ap_done                      |   9|          2|    1|          2|
     |p_dst_data_stream_0_V_write  |   9|          2|    1|          2|
     |p_dst_data_stream_1_V_write  |   9|          2|    1|          2|
     |p_dst_data_stream_2_V_write  |   9|          2|    1|          2|
     |p_src_data_stream_0_V_read   |   9|          2|    1|          2|
     |p_src_data_stream_1_V_read   |   9|          2|    1|          2|
     |p_src_data_stream_2_V_read   |   9|          2|    1|          2|
-    |real_start                   |   9|          2|    1|          2|
     +-----------------------------+----+-----------+-----+-----------+
-    |Total                        |  87|         19|    9|         19|
+    |Total                        |  69|         15|    7|         15|
     +-----------------------------+----+-----------+-----+-----------+
 
     * Register: 
@@ -118,11 +110,9 @@
     |               Name               | FF| LUT| Bits| Const Bits|
     +----------------------------------+---+----+-----+-----------+
     |ap_CS_fsm                         |  2|   0|    2|          0|
-    |ap_done_reg                       |  1|   0|    1|          0|
     |grp_Filter2D_fu_108_ap_start_reg  |  1|   0|    1|          0|
-    |start_once_reg                    |  1|   0|    1|          0|
     +----------------------------------+---+----+-----+-----------+
-    |Total                             |  5|   0|    5|          0|
+    |Total                             |  3|   0|    3|          0|
     +----------------------------------+---+----+-----+-----------+
 
 
@@ -137,13 +127,9 @@
 |ap_clk                         |  in |    1| ap_ctrl_hs |         Sobel         | return value |
 |ap_rst                         |  in |    1| ap_ctrl_hs |         Sobel         | return value |
 |ap_start                       |  in |    1| ap_ctrl_hs |         Sobel         | return value |
-|start_full_n                   |  in |    1| ap_ctrl_hs |         Sobel         | return value |
 |ap_done                        | out |    1| ap_ctrl_hs |         Sobel         | return value |
-|ap_continue                    |  in |    1| ap_ctrl_hs |         Sobel         | return value |
 |ap_idle                        | out |    1| ap_ctrl_hs |         Sobel         | return value |
 |ap_ready                       | out |    1| ap_ctrl_hs |         Sobel         | return value |
-|start_out                      | out |    1| ap_ctrl_hs |         Sobel         | return value |
-|start_write                    | out |    1| ap_ctrl_hs |         Sobel         | return value |
 |p_src_data_stream_0_V_dout     |  in |    8|   ap_fifo  | p_src_data_stream_0_V |    pointer   |
 |p_src_data_stream_0_V_empty_n  |  in |    1|   ap_fifo  | p_src_data_stream_0_V |    pointer   |
 |p_src_data_stream_0_V_read     | out |    1|   ap_fifo  | p_src_data_stream_0_V |    pointer   |
@@ -175,7 +161,7 @@ ExposeGlobal: 0
 IsTopModel: 0
 ResetActiveHigh: 1
 IsCombinational: 2
-IsDatapathOnly: 0
+IsDatapathOnly: 2
 HasWiredReturn: 1
 HasMFsm: 0
 HasVarLatency: 1
@@ -205,12 +191,12 @@ State 1 <SV = 0> <Delay = 0.00>
 ST_1 : Operation 3 [2/2] (0.00ns)   --->   "call fastcc void @Filter2D(i8* %p_src_data_stream_0_V, i8* %p_src_data_stream_1_V, i8* %p_src_data_stream_2_V, i8* %p_dst_data_stream_0_V, i8* %p_dst_data_stream_1_V, i8* %p_dst_data_stream_2_V, i2 0, i2 1, i3 -2, i4 2, i2 -1, i3 0)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:2591->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:2599]   --->   Operation 3 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 2 <SV = 1> <Delay = 0.00>
-ST_2 : Operation 4 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %p_dst_data_stream_2_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str410, i32 0, i32 0, [1 x i8]* @p_str411, [1 x i8]* @p_str412, [1 x i8]* @p_str413, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str414, [1 x i8]* @p_str415)"   --->   Operation 4 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %p_dst_data_stream_1_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str403, i32 0, i32 0, [1 x i8]* @p_str404, [1 x i8]* @p_str405, [1 x i8]* @p_str406, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str407, [1 x i8]* @p_str408)"   --->   Operation 5 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %p_dst_data_stream_0_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str396, i32 0, i32 0, [1 x i8]* @p_str397, [1 x i8]* @p_str398, [1 x i8]* @p_str399, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str400, [1 x i8]* @p_str401)"   --->   Operation 6 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %p_src_data_stream_2_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str368, i32 0, i32 0, [1 x i8]* @p_str369, [1 x i8]* @p_str370, [1 x i8]* @p_str371, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str372, [1 x i8]* @p_str373)"   --->   Operation 7 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %p_src_data_stream_1_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str361, i32 0, i32 0, [1 x i8]* @p_str362, [1 x i8]* @p_str363, [1 x i8]* @p_str364, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str365, [1 x i8]* @p_str366)"   --->   Operation 8 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %p_src_data_stream_0_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str354, i32 0, i32 0, [1 x i8]* @p_str355, [1 x i8]* @p_str356, [1 x i8]* @p_str357, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str358, [1 x i8]* @p_str359)"   --->   Operation 9 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 4 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %p_dst_data_stream_2_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str598, i32 0, i32 0, [1 x i8]* @p_str599, [1 x i8]* @p_str600, [1 x i8]* @p_str601, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str602, [1 x i8]* @p_str603)"   --->   Operation 4 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %p_dst_data_stream_1_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str591, i32 0, i32 0, [1 x i8]* @p_str592, [1 x i8]* @p_str593, [1 x i8]* @p_str594, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str595, [1 x i8]* @p_str596)"   --->   Operation 5 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %p_dst_data_stream_0_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str584, i32 0, i32 0, [1 x i8]* @p_str585, [1 x i8]* @p_str586, [1 x i8]* @p_str587, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str588, [1 x i8]* @p_str589)"   --->   Operation 6 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %p_src_data_stream_2_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str556, i32 0, i32 0, [1 x i8]* @p_str557, [1 x i8]* @p_str558, [1 x i8]* @p_str559, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str560, [1 x i8]* @p_str561)"   --->   Operation 7 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %p_src_data_stream_1_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str549, i32 0, i32 0, [1 x i8]* @p_str550, [1 x i8]* @p_str551, [1 x i8]* @p_str552, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str553, [1 x i8]* @p_str554)"   --->   Operation 8 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %p_src_data_stream_0_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str542, i32 0, i32 0, [1 x i8]* @p_str543, [1 x i8]* @p_str544, [1 x i8]* @p_str545, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str546, [1 x i8]* @p_str547)"   --->   Operation 9 'specinterface' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 10 [1/2] (0.00ns)   --->   "call fastcc void @Filter2D(i8* %p_src_data_stream_0_V, i8* %p_src_data_stream_1_V, i8* %p_src_data_stream_2_V, i8* %p_dst_data_stream_0_V, i8* %p_dst_data_stream_1_V, i8* %p_dst_data_stream_2_V, i2 0, i2 1, i3 -2, i4 2, i2 -1, i3 0)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:2591->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:2599]   --->   Operation 10 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_2 : Operation 11 [1/1] (0.00ns)   --->   "ret void" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:2600]   --->   Operation 11 'ret' <Predicate = true> <Delay = 0.00>
 
@@ -400,7 +386,7 @@ StgValue_11 (ret          ) [ 000]
 <pin id="33" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str410"/></StgValue>
+<StgValue><ssdm name="p_str598"/></StgValue>
 </bind>
 </comp>
 
@@ -409,7 +395,7 @@ StgValue_11 (ret          ) [ 000]
 <pin id="35" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str411"/></StgValue>
+<StgValue><ssdm name="p_str599"/></StgValue>
 </bind>
 </comp>
 
@@ -418,7 +404,7 @@ StgValue_11 (ret          ) [ 000]
 <pin id="37" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str412"/></StgValue>
+<StgValue><ssdm name="p_str600"/></StgValue>
 </bind>
 </comp>
 
@@ -427,7 +413,7 @@ StgValue_11 (ret          ) [ 000]
 <pin id="39" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str413"/></StgValue>
+<StgValue><ssdm name="p_str601"/></StgValue>
 </bind>
 </comp>
 
@@ -454,7 +440,7 @@ StgValue_11 (ret          ) [ 000]
 <pin id="45" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str414"/></StgValue>
+<StgValue><ssdm name="p_str602"/></StgValue>
 </bind>
 </comp>
 
@@ -463,7 +449,7 @@ StgValue_11 (ret          ) [ 000]
 <pin id="47" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str415"/></StgValue>
+<StgValue><ssdm name="p_str603"/></StgValue>
 </bind>
 </comp>
 
@@ -472,7 +458,7 @@ StgValue_11 (ret          ) [ 000]
 <pin id="49" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str403"/></StgValue>
+<StgValue><ssdm name="p_str591"/></StgValue>
 </bind>
 </comp>
 
@@ -481,7 +467,7 @@ StgValue_11 (ret          ) [ 000]
 <pin id="51" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str404"/></StgValue>
+<StgValue><ssdm name="p_str592"/></StgValue>
 </bind>
 </comp>
 
@@ -490,7 +476,7 @@ StgValue_11 (ret          ) [ 000]
 <pin id="53" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str405"/></StgValue>
+<StgValue><ssdm name="p_str593"/></StgValue>
 </bind>
 </comp>
 
@@ -499,7 +485,7 @@ StgValue_11 (ret          ) [ 000]
 <pin id="55" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str406"/></StgValue>
+<StgValue><ssdm name="p_str594"/></StgValue>
 </bind>
 </comp>
 
@@ -508,7 +494,7 @@ StgValue_11 (ret          ) [ 000]
 <pin id="57" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str407"/></StgValue>
+<StgValue><ssdm name="p_str595"/></StgValue>
 </bind>
 </comp>
 
@@ -517,7 +503,7 @@ StgValue_11 (ret          ) [ 000]
 <pin id="59" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str408"/></StgValue>
+<StgValue><ssdm name="p_str596"/></StgValue>
 </bind>
 </comp>
 
@@ -526,7 +512,7 @@ StgValue_11 (ret          ) [ 000]
 <pin id="61" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str396"/></StgValue>
+<StgValue><ssdm name="p_str584"/></StgValue>
 </bind>
 </comp>
 
@@ -535,7 +521,7 @@ StgValue_11 (ret          ) [ 000]
 <pin id="63" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str397"/></StgValue>
+<StgValue><ssdm name="p_str585"/></StgValue>
 </bind>
 </comp>
 
@@ -544,7 +530,7 @@ StgValue_11 (ret          ) [ 000]
 <pin id="65" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str398"/></StgValue>
+<StgValue><ssdm name="p_str586"/></StgValue>
 </bind>
 </comp>
 
@@ -553,7 +539,7 @@ StgValue_11 (ret          ) [ 000]
 <pin id="67" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str399"/></StgValue>
+<StgValue><ssdm name="p_str587"/></StgValue>
 </bind>
 </comp>
 
@@ -562,7 +548,7 @@ StgValue_11 (ret          ) [ 000]
 <pin id="69" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str400"/></StgValue>
+<StgValue><ssdm name="p_str588"/></StgValue>
 </bind>
 </comp>
 
@@ -571,7 +557,7 @@ StgValue_11 (ret          ) [ 000]
 <pin id="71" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str401"/></StgValue>
+<StgValue><ssdm name="p_str589"/></StgValue>
 </bind>
 </comp>
 
@@ -580,7 +566,7 @@ StgValue_11 (ret          ) [ 000]
 <pin id="73" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str368"/></StgValue>
+<StgValue><ssdm name="p_str556"/></StgValue>
 </bind>
 </comp>
 
@@ -589,7 +575,7 @@ StgValue_11 (ret          ) [ 000]
 <pin id="75" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str369"/></StgValue>
+<StgValue><ssdm name="p_str557"/></StgValue>
 </bind>
 </comp>
 
@@ -598,7 +584,7 @@ StgValue_11 (ret          ) [ 000]
 <pin id="77" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str370"/></StgValue>
+<StgValue><ssdm name="p_str558"/></StgValue>
 </bind>
 </comp>
 
@@ -607,7 +593,7 @@ StgValue_11 (ret          ) [ 000]
 <pin id="79" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str371"/></StgValue>
+<StgValue><ssdm name="p_str559"/></StgValue>
 </bind>
 </comp>
 
@@ -616,7 +602,7 @@ StgValue_11 (ret          ) [ 000]
 <pin id="81" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str372"/></StgValue>
+<StgValue><ssdm name="p_str560"/></StgValue>
 </bind>
 </comp>
 
@@ -625,7 +611,7 @@ StgValue_11 (ret          ) [ 000]
 <pin id="83" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str373"/></StgValue>
+<StgValue><ssdm name="p_str561"/></StgValue>
 </bind>
 </comp>
 
@@ -634,7 +620,7 @@ StgValue_11 (ret          ) [ 000]
 <pin id="85" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str361"/></StgValue>
+<StgValue><ssdm name="p_str549"/></StgValue>
 </bind>
 </comp>
 
@@ -643,7 +629,7 @@ StgValue_11 (ret          ) [ 000]
 <pin id="87" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str362"/></StgValue>
+<StgValue><ssdm name="p_str550"/></StgValue>
 </bind>
 </comp>
 
@@ -652,7 +638,7 @@ StgValue_11 (ret          ) [ 000]
 <pin id="89" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str363"/></StgValue>
+<StgValue><ssdm name="p_str551"/></StgValue>
 </bind>
 </comp>
 
@@ -661,7 +647,7 @@ StgValue_11 (ret          ) [ 000]
 <pin id="91" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str364"/></StgValue>
+<StgValue><ssdm name="p_str552"/></StgValue>
 </bind>
 </comp>
 
@@ -670,7 +656,7 @@ StgValue_11 (ret          ) [ 000]
 <pin id="93" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str365"/></StgValue>
+<StgValue><ssdm name="p_str553"/></StgValue>
 </bind>
 </comp>
 
@@ -679,7 +665,7 @@ StgValue_11 (ret          ) [ 000]
 <pin id="95" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str366"/></StgValue>
+<StgValue><ssdm name="p_str554"/></StgValue>
 </bind>
 </comp>
 
@@ -688,7 +674,7 @@ StgValue_11 (ret          ) [ 000]
 <pin id="97" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str354"/></StgValue>
+<StgValue><ssdm name="p_str542"/></StgValue>
 </bind>
 </comp>
 
@@ -697,7 +683,7 @@ StgValue_11 (ret          ) [ 000]
 <pin id="99" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str355"/></StgValue>
+<StgValue><ssdm name="p_str543"/></StgValue>
 </bind>
 </comp>
 
@@ -706,7 +692,7 @@ StgValue_11 (ret          ) [ 000]
 <pin id="101" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str356"/></StgValue>
+<StgValue><ssdm name="p_str544"/></StgValue>
 </bind>
 </comp>
 
@@ -715,7 +701,7 @@ StgValue_11 (ret          ) [ 000]
 <pin id="103" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str357"/></StgValue>
+<StgValue><ssdm name="p_str545"/></StgValue>
 </bind>
 </comp>
 
@@ -724,7 +710,7 @@ StgValue_11 (ret          ) [ 000]
 <pin id="105" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str358"/></StgValue>
+<StgValue><ssdm name="p_str546"/></StgValue>
 </bind>
 </comp>
 
@@ -733,7 +719,7 @@ StgValue_11 (ret          ) [ 000]
 <pin id="107" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str359"/></StgValue>
+<StgValue><ssdm name="p_str547"/></StgValue>
 </bind>
 </comp>
 
@@ -816,9 +802,9 @@ StgValue_11 (ret          ) [ 000]
 |----------|---------------------|---------|---------|---------|---------|---------|
 | Operation|   Functional Unit   |   BRAM  |  DSP48E |  Delay  |    FF   |   LUT   |
 |----------|---------------------|---------|---------|---------|---------|---------|
-|   call   | grp_Filter2D_fu_108 |    9    |    6    |  29.952 |   852   |   2029  |
+|   call   | grp_Filter2D_fu_108 |    9    |    6    |  29.952 |   854   |   2034  |
 |----------|---------------------|---------|---------|---------|---------|---------|
-|   Total  |                     |    9    |    6    |  29.952 |   852   |   2029  |
+|   Total  |                     |    9    |    6    |  29.952 |   854   |   2034  |
 |----------|---------------------|---------|---------|---------|---------|---------|
 
 Memories:
@@ -840,10 +826,10 @@ N/A
 +-----------+--------+--------+--------+--------+--------+
 |           |  BRAM  | DSP48E |  Delay |   FF   |   LUT  |
 +-----------+--------+--------+--------+--------+--------+
-|  Function |    9   |    6   |   29   |   852  |  2029  |
+|  Function |    9   |    6   |   29   |   854  |  2034  |
 |   Memory  |    -   |    -   |    -   |    -   |    -   |
 |Multiplexer|    -   |    -   |    -   |    -   |    -   |
 |  Register |    -   |    -   |    -   |    -   |    -   |
 +-----------+--------+--------+--------+--------+--------+
-|   Total   |    9   |    6   |   29   |   852  |  2029  |
+|   Total   |    9   |    6   |   29   |   854  |  2034  |
 +-----------+--------+--------+--------+--------+--------+

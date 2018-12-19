@@ -10,7 +10,7 @@ use ieee.std_logic_1164.all;
 
 entity SobelFilter_dadd_DeQ is
     generic (
-        ID         : integer := 139;
+        ID         : integer := 135;
         NUM_STAGE  : integer := 6;
         din0_WIDTH : integer := 64;
         din1_WIDTH : integer := 64;

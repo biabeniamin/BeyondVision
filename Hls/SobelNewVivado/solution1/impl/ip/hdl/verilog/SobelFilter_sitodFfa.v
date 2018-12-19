@@ -10,7 +10,7 @@
 
 module SobelFilter_sitodFfa
 #(parameter
-    ID         = 151,
+    ID         = 147,
     NUM_STAGE  = 6,
     din0_WIDTH = 32,
     dout_WIDTH = 64

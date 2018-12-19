@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'CvtColor_1'" level="0">
-<item name = "Date">Sat Dec 15 17:02:14 2018
+<item name = "Date">Wed Dec 19 22:30:04 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">SobelNewVivado</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">1, 2080081, 1, 2080081, none</column>
+<column name="">2080081, 2080081, 2080081, 2080081, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,8 +35,8 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- loop_height">0, 2080080, 3 ~ 1926, -, -, 0 ~ 1080, no</column>
-<column name=" + loop_width">0, 1923, 5, 1, 1, 0 ~ 1920, yes</column>
+<column name="- loop_height">2080080, 2080080, 1926, -, -, 1080, no</column>
+<column name=" + loop_width">1923, 1923, 5, 1, 1, 1920, yes</column>
 </table>
 </item>
 </section>

@@ -15,7 +15,6 @@ port (
     ap_rst : IN STD_LOGIC;
     ap_start : IN STD_LOGIC;
     ap_done : OUT STD_LOGIC;
-    ap_continue : IN STD_LOGIC;
     ap_idle : OUT STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
     p_src_data_stream_0_V_dout : IN STD_LOGIC_VECTOR (7 downto 0);
@@ -54,7 +53,6 @@ architecture behav of Sobel_1 is
     constant ap_const_lv3_2 : STD_LOGIC_VECTOR (2 downto 0) := "010";
     constant ap_const_boolean_1 : BOOLEAN := true;
 
-    signal ap_done_reg : STD_LOGIC := '0';
     signal ap_CS_fsm : STD_LOGIC_VECTOR (1 downto 0) := "01";
     attribute fsm_encoding : string;
     attribute fsm_encoding of ap_CS_fsm : signal is "none";
@@ -74,11 +72,9 @@ architecture behav of Sobel_1 is
     signal grp_Filter2D_fu_108_p_dst_data_stream_2_V_din : STD_LOGIC_VECTOR (7 downto 0);
     signal grp_Filter2D_fu_108_p_dst_data_stream_2_V_write : STD_LOGIC;
     signal grp_Filter2D_fu_108_ap_start_reg : STD_LOGIC := '0';
-    signal ap_block_state1_ignore_call6 : BOOLEAN;
     signal ap_CS_fsm_state2 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
     signal ap_NS_fsm : STD_LOGIC_VECTOR (1 downto 0);
-    signal ap_block_state1 : BOOLEAN;
 
     component Filter2D IS
     port (
@@ -166,29 +162,13 @@ begin
     end process;
 
 
-    ap_done_reg_assign_proc : process(ap_clk)
-    begin
-        if (ap_clk'event and ap_clk =  '1') then
-            if (ap_rst = '1') then
-                ap_done_reg <= ap_const_logic_0;
-            else
-                if ((ap_continue = ap_const_logic_1)) then 
-                    ap_done_reg <= ap_const_logic_0;
-                elsif (((grp_Filter2D_fu_108_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    ap_done_reg <= ap_const_logic_1;
-                end if; 
-            end if;
-        end if;
-    end process;
-
-
     grp_Filter2D_fu_108_ap_start_reg_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst = '1') then
                 grp_Filter2D_fu_108_ap_start_reg <= ap_const_logic_0;
             else
-                if ((not(((ap_start = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+                if (((ap_start = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                     grp_Filter2D_fu_108_ap_start_reg <= ap_const_logic_1;
                 elsif ((grp_Filter2D_fu_108_ap_ready = ap_const_logic_1)) then 
                     grp_Filter2D_fu_108_ap_start_reg <= ap_const_logic_0;
@@ -198,11 +178,11 @@ begin
     end process;
 
 
-    ap_NS_fsm_assign_proc : process (ap_start, ap_done_reg, ap_CS_fsm, ap_CS_fsm_state1, grp_Filter2D_fu_108_ap_done, ap_CS_fsm_state2)
+    ap_NS_fsm_assign_proc : process (ap_start, ap_CS_fsm, ap_CS_fsm_state1, grp_Filter2D_fu_108_ap_done, ap_CS_fsm_state2)
     begin
         case ap_CS_fsm is
             when ap_ST_fsm_state1 => 
-                if ((not(((ap_start = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then
+                if (((ap_start = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state1))) then
                     ap_NS_fsm <= ap_ST_fsm_state2;
                 else
                     ap_NS_fsm <= ap_ST_fsm_state1;
@@ -220,24 +200,12 @@ begin
     ap_CS_fsm_state1 <= ap_CS_fsm(0);
     ap_CS_fsm_state2 <= ap_CS_fsm(1);
 
-    ap_block_state1_assign_proc : process(ap_start, ap_done_reg)
+    ap_done_assign_proc : process(ap_start, ap_CS_fsm_state1, grp_Filter2D_fu_108_ap_done, ap_CS_fsm_state2)
     begin
-                ap_block_state1 <= ((ap_start = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1));
-    end process;
-
-
-    ap_block_state1_ignore_call6_assign_proc : process(ap_start, ap_done_reg)
-    begin
-                ap_block_state1_ignore_call6 <= ((ap_start = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1));
-    end process;
-
-
-    ap_done_assign_proc : process(ap_done_reg, grp_Filter2D_fu_108_ap_done, ap_CS_fsm_state2)
-    begin
-        if (((grp_Filter2D_fu_108_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+        if ((((ap_start = ap_const_logic_0) and (ap_const_logic_1 = ap_CS_fsm_state1)) or ((grp_Filter2D_fu_108_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state2)))) then 
             ap_done <= ap_const_logic_1;
         else 
-            ap_done <= ap_done_reg;
+            ap_done <= ap_const_logic_0;
         end if; 
     end process;
 

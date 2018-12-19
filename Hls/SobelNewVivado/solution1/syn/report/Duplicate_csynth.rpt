@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'Duplicate'
 ================================================================
-* Date:           Sat Dec 15 17:02:27 2018
+* Date:           Wed Dec 19 22:30:18 2018
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        SobelNewVivado
@@ -55,14 +55,14 @@
 |       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
 +-----------------+---------+-------+--------+--------+
 |DSP              |        -|      -|       -|       -|
-|Expression       |        -|      -|       0|      72|
+|Expression       |        -|      -|       0|      70|
 |FIFO             |        -|      -|       -|       -|
 |Instance         |        -|      -|       -|       -|
 |Memory           |        -|      -|       -|       -|
-|Multiplexer      |        -|      -|       -|     159|
-|Register         |        -|      -|      42|       -|
+|Multiplexer      |        -|      -|       -|     141|
+|Register         |        -|      -|      40|       -|
 +-----------------+---------+-------+--------+--------+
-|Total            |        0|      0|      42|     231|
+|Total            |        0|      0|      40|     211|
 +-----------------+---------+-------+--------+--------+
 |Available        |      730|    740|  269200|  129000|
 +-----------------+---------+-------+--------+--------+
@@ -91,12 +91,11 @@
     |ap_block_pp0_stage0_01001         |    and   |      0|  0|   2|           1|           1|
     |exitcond3_fu_264_p2               |   icmp   |      0|  0|  13|          11|          11|
     |exitcond_fu_276_p2                |   icmp   |      0|  0|  13|          11|           9|
-    |ap_block_state1                   |    or    |      0|  0|   2|           1|           1|
     |ap_block_state4_pp0_stage0_iter1  |    or    |      0|  0|   2|           1|           1|
     |ap_enable_pp0                     |    xor   |      0|  0|   2|           1|           2|
     |ap_enable_reg_pp0_iter1           |    xor   |      0|  0|   2|           2|           1|
     +----------------------------------+----------+-------+---+----+------------+------------+
-    |Total                             |          |      0|  0|  72|          50|          28|
+    |Total                             |          |      0|  0|  70|          49|          27|
     +----------------------------------+----------+-------+---+----+------------+------------+
 
     * Multiplexer: 
@@ -104,7 +103,6 @@
     |            Name            | LUT| Input Size| Bits| Total Bits|
     +----------------------------+----+-----------+-----+-----------+
     |ap_NS_fsm                   |  27|          5|    1|          5|
-    |ap_done                     |   9|          2|    1|          2|
     |ap_enable_reg_pp0_iter1     |  15|          3|    1|          3|
     |dst1_data_stream_0_V_blk_n  |   9|          2|    1|          2|
     |dst1_data_stream_1_V_blk_n  |   9|          2|    1|          2|
@@ -112,14 +110,13 @@
     |dst2_data_stream_0_V_blk_n  |   9|          2|    1|          2|
     |dst2_data_stream_1_V_blk_n  |   9|          2|    1|          2|
     |dst2_data_stream_2_V_blk_n  |   9|          2|    1|          2|
-    |real_start                  |   9|          2|    1|          2|
     |src_data_stream_0_V_blk_n   |   9|          2|    1|          2|
     |src_data_stream_1_V_blk_n   |   9|          2|    1|          2|
     |src_data_stream_2_V_blk_n   |   9|          2|    1|          2|
     |t_V_4_reg_253               |   9|          2|   11|         22|
     |t_V_reg_242                 |   9|          2|   11|         22|
     +----------------------------+----+-----------+-----+-----------+
-    |Total                       | 159|         34|   35|         74|
+    |Total                       | 141|         30|   33|         70|
     +----------------------------+----+-----------+-----+-----------+
 
     * Register: 
@@ -127,16 +124,14 @@
     |           Name          | FF | LUT| Bits| Const Bits|
     +-------------------------+----+----+-----+-----------+
     |ap_CS_fsm                |   4|   0|    4|          0|
-    |ap_done_reg              |   1|   0|    1|          0|
     |ap_enable_reg_pp0_iter0  |   1|   0|    1|          0|
     |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
     |exitcond_reg_297         |   1|   0|    1|          0|
     |i_V_reg_292              |  11|   0|   11|          0|
-    |start_once_reg           |   1|   0|    1|          0|
     |t_V_4_reg_253            |  11|   0|   11|          0|
     |t_V_reg_242              |  11|   0|   11|          0|
     +-------------------------+----+----+-----+-----------+
-    |Total                    |  42|   0|   42|          0|
+    |Total                    |  40|   0|   40|          0|
     +-------------------------+----+----+-----+-----------+
 
 
@@ -151,13 +146,9 @@
 |ap_clk                       |  in |    1| ap_ctrl_hs |       Duplicate      | return value |
 |ap_rst                       |  in |    1| ap_ctrl_hs |       Duplicate      | return value |
 |ap_start                     |  in |    1| ap_ctrl_hs |       Duplicate      | return value |
-|start_full_n                 |  in |    1| ap_ctrl_hs |       Duplicate      | return value |
 |ap_done                      | out |    1| ap_ctrl_hs |       Duplicate      | return value |
-|ap_continue                  |  in |    1| ap_ctrl_hs |       Duplicate      | return value |
 |ap_idle                      | out |    1| ap_ctrl_hs |       Duplicate      | return value |
 |ap_ready                     | out |    1| ap_ctrl_hs |       Duplicate      | return value |
-|start_out                    | out |    1| ap_ctrl_hs |       Duplicate      | return value |
-|start_write                  | out |    1| ap_ctrl_hs |       Duplicate      | return value |
 |src_data_stream_0_V_dout     |  in |    8|   ap_fifo  |  src_data_stream_0_V |    pointer   |
 |src_data_stream_0_V_empty_n  |  in |    1|   ap_fifo  |  src_data_stream_0_V |    pointer   |
 |src_data_stream_0_V_read     | out |    1|   ap_fifo  |  src_data_stream_0_V |    pointer   |
