@@ -105,7 +105,7 @@ int main()
       }
       Status = XAxiDma_CfgInitialize(&AxiDma,CfgPtr);
       if(Status != XST_SUCCESS){
-      print("Error initializing DMA\n\r");
+      xil_printf("Error initializing DMA %d\n\r", Status);
       return XST_FAILURE;
       }
 
@@ -238,6 +238,33 @@ int main()
 			xil_printf("Couldn't start display during demo initialization%d\r\n", Status);
 			return;
 		}
+
+
+
+
+
+
+
+		int out[100000];
+		 Xil_DCacheFlushRange((unsigned int)out,32*4);
+
+		 //get results from the Vivado HLS block
+			 		Status = XAxiDma_SimpleTransfer(&AxiDma, (unsigned int) out, 32*4, XAXIDMA_DEVICE_TO_DMA);
+			 		if (Status != XST_SUCCESS) {
+			 			xil_printf("Error: DMA transfer from Vivado  HLS block failed\n");
+			 			return XST_FAILURE;
+			 		}
+			 		xil_printf("\rWainting dma\r\n");
+ 			 		while (XAxiDma_Busy(&AxiDma, XAXIDMA_DEVICE_TO_DMA)) ;
+			 		xil_printf("\rReceive ressults done\r\n");
+			 		Xil_DCacheFlushRange((unsigned int)out,32*4);
+			 		Xil_DCacheInvalidateRange(out, 32*4);
+
+			 for(int i=0;i<32;i++)
+			 {
+				 printf("%d ", out[i]);
+			 }
+
 
 
 
