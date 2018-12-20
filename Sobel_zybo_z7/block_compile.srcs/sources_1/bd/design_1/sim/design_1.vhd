@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Thu Dec 20 21:07:30 2018
+--Date        : Thu Dec 20 21:40:23 2018
 --Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -1043,11 +1043,9 @@ entity m06_couplers_imp_16EQN6L is
     M_ACLK : in STD_LOGIC;
     M_ARESETN : in STD_LOGIC;
     M_AXI_araddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    M_AXI_arprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
     M_AXI_arready : in STD_LOGIC;
     M_AXI_arvalid : out STD_LOGIC;
     M_AXI_awaddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    M_AXI_awprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
     M_AXI_awready : in STD_LOGIC;
     M_AXI_awvalid : out STD_LOGIC;
     M_AXI_bready : out STD_LOGIC;
@@ -1059,16 +1057,13 @@ entity m06_couplers_imp_16EQN6L is
     M_AXI_rvalid : in STD_LOGIC;
     M_AXI_wdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     M_AXI_wready : in STD_LOGIC;
-    M_AXI_wstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
     M_AXI_wvalid : out STD_LOGIC;
     S_ACLK : in STD_LOGIC;
     S_ARESETN : in STD_LOGIC;
     S_AXI_araddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    S_AXI_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
     S_AXI_arready : out STD_LOGIC;
     S_AXI_arvalid : in STD_LOGIC;
     S_AXI_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    S_AXI_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
     S_AXI_awready : out STD_LOGIC;
     S_AXI_awvalid : in STD_LOGIC;
     S_AXI_bready : in STD_LOGIC;
@@ -1080,18 +1075,15 @@ entity m06_couplers_imp_16EQN6L is
     S_AXI_rvalid : out STD_LOGIC;
     S_AXI_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     S_AXI_wready : out STD_LOGIC;
-    S_AXI_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
     S_AXI_wvalid : in STD_LOGIC
   );
 end m06_couplers_imp_16EQN6L;
 
 architecture STRUCTURE of m06_couplers_imp_16EQN6L is
   signal m06_couplers_to_m06_couplers_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal m06_couplers_to_m06_couplers_ARPROT : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal m06_couplers_to_m06_couplers_ARREADY : STD_LOGIC;
   signal m06_couplers_to_m06_couplers_ARVALID : STD_LOGIC;
   signal m06_couplers_to_m06_couplers_AWADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal m06_couplers_to_m06_couplers_AWPROT : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal m06_couplers_to_m06_couplers_AWREADY : STD_LOGIC;
   signal m06_couplers_to_m06_couplers_AWVALID : STD_LOGIC;
   signal m06_couplers_to_m06_couplers_BREADY : STD_LOGIC;
@@ -1103,19 +1095,15 @@ architecture STRUCTURE of m06_couplers_imp_16EQN6L is
   signal m06_couplers_to_m06_couplers_RVALID : STD_LOGIC;
   signal m06_couplers_to_m06_couplers_WDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal m06_couplers_to_m06_couplers_WREADY : STD_LOGIC;
-  signal m06_couplers_to_m06_couplers_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal m06_couplers_to_m06_couplers_WVALID : STD_LOGIC;
 begin
   M_AXI_araddr(31 downto 0) <= m06_couplers_to_m06_couplers_ARADDR(31 downto 0);
-  M_AXI_arprot(2 downto 0) <= m06_couplers_to_m06_couplers_ARPROT(2 downto 0);
   M_AXI_arvalid <= m06_couplers_to_m06_couplers_ARVALID;
   M_AXI_awaddr(31 downto 0) <= m06_couplers_to_m06_couplers_AWADDR(31 downto 0);
-  M_AXI_awprot(2 downto 0) <= m06_couplers_to_m06_couplers_AWPROT(2 downto 0);
   M_AXI_awvalid <= m06_couplers_to_m06_couplers_AWVALID;
   M_AXI_bready <= m06_couplers_to_m06_couplers_BREADY;
   M_AXI_rready <= m06_couplers_to_m06_couplers_RREADY;
   M_AXI_wdata(31 downto 0) <= m06_couplers_to_m06_couplers_WDATA(31 downto 0);
-  M_AXI_wstrb(3 downto 0) <= m06_couplers_to_m06_couplers_WSTRB(3 downto 0);
   M_AXI_wvalid <= m06_couplers_to_m06_couplers_WVALID;
   S_AXI_arready <= m06_couplers_to_m06_couplers_ARREADY;
   S_AXI_awready <= m06_couplers_to_m06_couplers_AWREADY;
@@ -1126,11 +1114,9 @@ begin
   S_AXI_rvalid <= m06_couplers_to_m06_couplers_RVALID;
   S_AXI_wready <= m06_couplers_to_m06_couplers_WREADY;
   m06_couplers_to_m06_couplers_ARADDR(31 downto 0) <= S_AXI_araddr(31 downto 0);
-  m06_couplers_to_m06_couplers_ARPROT(2 downto 0) <= S_AXI_arprot(2 downto 0);
   m06_couplers_to_m06_couplers_ARREADY <= M_AXI_arready;
   m06_couplers_to_m06_couplers_ARVALID <= S_AXI_arvalid;
   m06_couplers_to_m06_couplers_AWADDR(31 downto 0) <= S_AXI_awaddr(31 downto 0);
-  m06_couplers_to_m06_couplers_AWPROT(2 downto 0) <= S_AXI_awprot(2 downto 0);
   m06_couplers_to_m06_couplers_AWREADY <= M_AXI_awready;
   m06_couplers_to_m06_couplers_AWVALID <= S_AXI_awvalid;
   m06_couplers_to_m06_couplers_BREADY <= S_AXI_bready;
@@ -1142,7 +1128,6 @@ begin
   m06_couplers_to_m06_couplers_RVALID <= M_AXI_rvalid;
   m06_couplers_to_m06_couplers_WDATA(31 downto 0) <= S_AXI_wdata(31 downto 0);
   m06_couplers_to_m06_couplers_WREADY <= M_AXI_wready;
-  m06_couplers_to_m06_couplers_WSTRB(3 downto 0) <= S_AXI_wstrb(3 downto 0);
   m06_couplers_to_m06_couplers_WVALID <= S_AXI_wvalid;
 end STRUCTURE;
 library IEEE;
@@ -3295,11 +3280,9 @@ entity design_1_ps7_0_axi_periph_0 is
     M06_ACLK : in STD_LOGIC;
     M06_ARESETN : in STD_LOGIC;
     M06_AXI_araddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    M06_AXI_arprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
     M06_AXI_arready : in STD_LOGIC;
     M06_AXI_arvalid : out STD_LOGIC;
     M06_AXI_awaddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    M06_AXI_awprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
     M06_AXI_awready : in STD_LOGIC;
     M06_AXI_awvalid : out STD_LOGIC;
     M06_AXI_bready : out STD_LOGIC;
@@ -3311,7 +3294,6 @@ entity design_1_ps7_0_axi_periph_0 is
     M06_AXI_rvalid : in STD_LOGIC;
     M06_AXI_wdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     M06_AXI_wready : in STD_LOGIC;
-    M06_AXI_wstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
     M06_AXI_wvalid : out STD_LOGIC;
     S00_ACLK : in STD_LOGIC;
     S00_ARESETN : in STD_LOGIC;
@@ -3521,11 +3503,9 @@ architecture STRUCTURE of design_1_ps7_0_axi_periph_0 is
   signal m05_couplers_to_ps7_0_axi_periph_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal m05_couplers_to_ps7_0_axi_periph_WVALID : STD_LOGIC;
   signal m06_couplers_to_ps7_0_axi_periph_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal m06_couplers_to_ps7_0_axi_periph_ARPROT : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal m06_couplers_to_ps7_0_axi_periph_ARREADY : STD_LOGIC;
   signal m06_couplers_to_ps7_0_axi_periph_ARVALID : STD_LOGIC;
   signal m06_couplers_to_ps7_0_axi_periph_AWADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal m06_couplers_to_ps7_0_axi_periph_AWPROT : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal m06_couplers_to_ps7_0_axi_periph_AWREADY : STD_LOGIC;
   signal m06_couplers_to_ps7_0_axi_periph_AWVALID : STD_LOGIC;
   signal m06_couplers_to_ps7_0_axi_periph_BREADY : STD_LOGIC;
@@ -3537,7 +3517,6 @@ architecture STRUCTURE of design_1_ps7_0_axi_periph_0 is
   signal m06_couplers_to_ps7_0_axi_periph_RVALID : STD_LOGIC;
   signal m06_couplers_to_ps7_0_axi_periph_WDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal m06_couplers_to_ps7_0_axi_periph_WREADY : STD_LOGIC;
-  signal m06_couplers_to_ps7_0_axi_periph_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal m06_couplers_to_ps7_0_axi_periph_WVALID : STD_LOGIC;
   signal ps7_0_axi_periph_ACLK_net : STD_LOGIC;
   signal ps7_0_axi_periph_ARESETN_net : STD_LOGIC;
@@ -3702,11 +3681,9 @@ architecture STRUCTURE of design_1_ps7_0_axi_periph_0 is
   signal xbar_to_m05_couplers_WSTRB : STD_LOGIC_VECTOR ( 23 downto 20 );
   signal xbar_to_m05_couplers_WVALID : STD_LOGIC_VECTOR ( 5 to 5 );
   signal xbar_to_m06_couplers_ARADDR : STD_LOGIC_VECTOR ( 223 downto 192 );
-  signal xbar_to_m06_couplers_ARPROT : STD_LOGIC_VECTOR ( 20 downto 18 );
   signal xbar_to_m06_couplers_ARREADY : STD_LOGIC;
   signal xbar_to_m06_couplers_ARVALID : STD_LOGIC_VECTOR ( 6 to 6 );
   signal xbar_to_m06_couplers_AWADDR : STD_LOGIC_VECTOR ( 223 downto 192 );
-  signal xbar_to_m06_couplers_AWPROT : STD_LOGIC_VECTOR ( 20 downto 18 );
   signal xbar_to_m06_couplers_AWREADY : STD_LOGIC;
   signal xbar_to_m06_couplers_AWVALID : STD_LOGIC_VECTOR ( 6 to 6 );
   signal xbar_to_m06_couplers_BREADY : STD_LOGIC_VECTOR ( 6 to 6 );
@@ -3718,11 +3695,10 @@ architecture STRUCTURE of design_1_ps7_0_axi_periph_0 is
   signal xbar_to_m06_couplers_RVALID : STD_LOGIC;
   signal xbar_to_m06_couplers_WDATA : STD_LOGIC_VECTOR ( 223 downto 192 );
   signal xbar_to_m06_couplers_WREADY : STD_LOGIC;
-  signal xbar_to_m06_couplers_WSTRB : STD_LOGIC_VECTOR ( 27 downto 24 );
   signal xbar_to_m06_couplers_WVALID : STD_LOGIC_VECTOR ( 6 to 6 );
-  signal NLW_xbar_m_axi_arprot_UNCONNECTED : STD_LOGIC_VECTOR ( 17 downto 0 );
-  signal NLW_xbar_m_axi_awprot_UNCONNECTED : STD_LOGIC_VECTOR ( 17 downto 0 );
-  signal NLW_xbar_m_axi_wstrb_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal NLW_xbar_m_axi_arprot_UNCONNECTED : STD_LOGIC_VECTOR ( 20 downto 0 );
+  signal NLW_xbar_m_axi_awprot_UNCONNECTED : STD_LOGIC_VECTOR ( 20 downto 0 );
+  signal NLW_xbar_m_axi_wstrb_UNCONNECTED : STD_LOGIC_VECTOR ( 27 downto 0 );
 begin
   M00_ACLK_1 <= M00_ACLK;
   M00_ARESETN_1 <= M00_ARESETN;
@@ -3794,15 +3770,12 @@ begin
   M06_ACLK_1 <= M06_ACLK;
   M06_ARESETN_1 <= M06_ARESETN;
   M06_AXI_araddr(31 downto 0) <= m06_couplers_to_ps7_0_axi_periph_ARADDR(31 downto 0);
-  M06_AXI_arprot(2 downto 0) <= m06_couplers_to_ps7_0_axi_periph_ARPROT(2 downto 0);
   M06_AXI_arvalid <= m06_couplers_to_ps7_0_axi_periph_ARVALID;
   M06_AXI_awaddr(31 downto 0) <= m06_couplers_to_ps7_0_axi_periph_AWADDR(31 downto 0);
-  M06_AXI_awprot(2 downto 0) <= m06_couplers_to_ps7_0_axi_periph_AWPROT(2 downto 0);
   M06_AXI_awvalid <= m06_couplers_to_ps7_0_axi_periph_AWVALID;
   M06_AXI_bready <= m06_couplers_to_ps7_0_axi_periph_BREADY;
   M06_AXI_rready <= m06_couplers_to_ps7_0_axi_periph_RREADY;
   M06_AXI_wdata(31 downto 0) <= m06_couplers_to_ps7_0_axi_periph_WDATA(31 downto 0);
-  M06_AXI_wstrb(3 downto 0) <= m06_couplers_to_ps7_0_axi_periph_WSTRB(3 downto 0);
   M06_AXI_wvalid <= m06_couplers_to_ps7_0_axi_periph_WVALID;
   S00_ACLK_1 <= S00_ACLK;
   S00_ARESETN_1 <= S00_ARESETN;
@@ -4155,11 +4128,9 @@ m06_couplers: entity work.m06_couplers_imp_16EQN6L
       M_ACLK => M06_ACLK_1,
       M_ARESETN => M06_ARESETN_1,
       M_AXI_araddr(31 downto 0) => m06_couplers_to_ps7_0_axi_periph_ARADDR(31 downto 0),
-      M_AXI_arprot(2 downto 0) => m06_couplers_to_ps7_0_axi_periph_ARPROT(2 downto 0),
       M_AXI_arready => m06_couplers_to_ps7_0_axi_periph_ARREADY,
       M_AXI_arvalid => m06_couplers_to_ps7_0_axi_periph_ARVALID,
       M_AXI_awaddr(31 downto 0) => m06_couplers_to_ps7_0_axi_periph_AWADDR(31 downto 0),
-      M_AXI_awprot(2 downto 0) => m06_couplers_to_ps7_0_axi_periph_AWPROT(2 downto 0),
       M_AXI_awready => m06_couplers_to_ps7_0_axi_periph_AWREADY,
       M_AXI_awvalid => m06_couplers_to_ps7_0_axi_periph_AWVALID,
       M_AXI_bready => m06_couplers_to_ps7_0_axi_periph_BREADY,
@@ -4171,16 +4142,13 @@ m06_couplers: entity work.m06_couplers_imp_16EQN6L
       M_AXI_rvalid => m06_couplers_to_ps7_0_axi_periph_RVALID,
       M_AXI_wdata(31 downto 0) => m06_couplers_to_ps7_0_axi_periph_WDATA(31 downto 0),
       M_AXI_wready => m06_couplers_to_ps7_0_axi_periph_WREADY,
-      M_AXI_wstrb(3 downto 0) => m06_couplers_to_ps7_0_axi_periph_WSTRB(3 downto 0),
       M_AXI_wvalid => m06_couplers_to_ps7_0_axi_periph_WVALID,
       S_ACLK => ps7_0_axi_periph_ACLK_net,
       S_ARESETN => ps7_0_axi_periph_ARESETN_net,
       S_AXI_araddr(31 downto 0) => xbar_to_m06_couplers_ARADDR(223 downto 192),
-      S_AXI_arprot(2 downto 0) => xbar_to_m06_couplers_ARPROT(20 downto 18),
       S_AXI_arready => xbar_to_m06_couplers_ARREADY,
       S_AXI_arvalid => xbar_to_m06_couplers_ARVALID(6),
       S_AXI_awaddr(31 downto 0) => xbar_to_m06_couplers_AWADDR(223 downto 192),
-      S_AXI_awprot(2 downto 0) => xbar_to_m06_couplers_AWPROT(20 downto 18),
       S_AXI_awready => xbar_to_m06_couplers_AWREADY,
       S_AXI_awvalid => xbar_to_m06_couplers_AWVALID(6),
       S_AXI_bready => xbar_to_m06_couplers_BREADY(6),
@@ -4192,7 +4160,6 @@ m06_couplers: entity work.m06_couplers_imp_16EQN6L
       S_AXI_rvalid => xbar_to_m06_couplers_RVALID,
       S_AXI_wdata(31 downto 0) => xbar_to_m06_couplers_WDATA(223 downto 192),
       S_AXI_wready => xbar_to_m06_couplers_WREADY,
-      S_AXI_wstrb(3 downto 0) => xbar_to_m06_couplers_WSTRB(27 downto 24),
       S_AXI_wvalid => xbar_to_m06_couplers_WVALID(6)
     );
 s00_couplers: entity work.s00_couplers_imp_UYSKKA
@@ -4270,8 +4237,7 @@ xbar: component design_1_xbar_0
       m_axi_araddr(95 downto 64) => xbar_to_m02_couplers_ARADDR(95 downto 64),
       m_axi_araddr(63 downto 32) => xbar_to_m01_couplers_ARADDR(63 downto 32),
       m_axi_araddr(31 downto 0) => xbar_to_m00_couplers_ARADDR(31 downto 0),
-      m_axi_arprot(20 downto 18) => xbar_to_m06_couplers_ARPROT(20 downto 18),
-      m_axi_arprot(17 downto 12) => NLW_xbar_m_axi_arprot_UNCONNECTED(17 downto 12),
+      m_axi_arprot(20 downto 12) => NLW_xbar_m_axi_arprot_UNCONNECTED(20 downto 12),
       m_axi_arprot(11 downto 9) => xbar_to_m03_couplers_ARPROT(11 downto 9),
       m_axi_arprot(8 downto 0) => NLW_xbar_m_axi_arprot_UNCONNECTED(8 downto 0),
       m_axi_arready(6) => xbar_to_m06_couplers_ARREADY,
@@ -4295,8 +4261,7 @@ xbar: component design_1_xbar_0
       m_axi_awaddr(95 downto 64) => xbar_to_m02_couplers_AWADDR(95 downto 64),
       m_axi_awaddr(63 downto 32) => xbar_to_m01_couplers_AWADDR(63 downto 32),
       m_axi_awaddr(31 downto 0) => xbar_to_m00_couplers_AWADDR(31 downto 0),
-      m_axi_awprot(20 downto 18) => xbar_to_m06_couplers_AWPROT(20 downto 18),
-      m_axi_awprot(17 downto 12) => NLW_xbar_m_axi_awprot_UNCONNECTED(17 downto 12),
+      m_axi_awprot(20 downto 12) => NLW_xbar_m_axi_awprot_UNCONNECTED(20 downto 12),
       m_axi_awprot(11 downto 9) => xbar_to_m03_couplers_AWPROT(11 downto 9),
       m_axi_awprot(8 downto 0) => NLW_xbar_m_axi_awprot_UNCONNECTED(8 downto 0),
       m_axi_awready(6) => xbar_to_m06_couplers_AWREADY,
@@ -4376,7 +4341,7 @@ xbar: component design_1_xbar_0
       m_axi_wready(2) => xbar_to_m02_couplers_WREADY(0),
       m_axi_wready(1) => xbar_to_m01_couplers_WREADY(0),
       m_axi_wready(0) => xbar_to_m00_couplers_WREADY(0),
-      m_axi_wstrb(27 downto 24) => xbar_to_m06_couplers_WSTRB(27 downto 24),
+      m_axi_wstrb(27 downto 24) => NLW_xbar_m_axi_wstrb_UNCONNECTED(27 downto 24),
       m_axi_wstrb(23 downto 20) => xbar_to_m05_couplers_WSTRB(23 downto 20),
       m_axi_wstrb(19 downto 16) => xbar_to_m04_couplers_WSTRB(19 downto 16),
       m_axi_wstrb(15 downto 12) => xbar_to_m03_couplers_WSTRB(15 downto 12),
@@ -5061,25 +5026,6 @@ architecture STRUCTURE of design_1 is
     SLOT_0_AXIS_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
     SLOT_0_AXIS_tvalid : in STD_LOGIC;
     SLOT_0_AXIS_tready : in STD_LOGIC;
-    SLOT_1_AXI_awaddr : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    SLOT_1_AXI_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    SLOT_1_AXI_awvalid : in STD_LOGIC;
-    SLOT_1_AXI_awready : in STD_LOGIC;
-    SLOT_1_AXI_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    SLOT_1_AXI_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    SLOT_1_AXI_wvalid : in STD_LOGIC;
-    SLOT_1_AXI_wready : in STD_LOGIC;
-    SLOT_1_AXI_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    SLOT_1_AXI_bvalid : in STD_LOGIC;
-    SLOT_1_AXI_bready : in STD_LOGIC;
-    SLOT_1_AXI_araddr : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    SLOT_1_AXI_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    SLOT_1_AXI_arvalid : in STD_LOGIC;
-    SLOT_1_AXI_arready : in STD_LOGIC;
-    SLOT_1_AXI_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    SLOT_1_AXI_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    SLOT_1_AXI_rvalid : in STD_LOGIC;
-    SLOT_1_AXI_rready : in STD_LOGIC;
     resetn : in STD_LOGIC
   );
   end component design_1_system_ila_0_0;
@@ -5399,81 +5345,21 @@ architecture STRUCTURE of design_1 is
   signal ps7_0_axi_periph_M05_AXI_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal ps7_0_axi_periph_M05_AXI_WVALID : STD_LOGIC;
   signal ps7_0_axi_periph_M06_AXI_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
-  attribute CONN_BUS_INFO of ps7_0_axi_periph_M06_AXI_ARADDR : signal is "ps7_0_axi_periph_M06_AXI xilinx.com:interface:aximm:1.0 AXI4LITE ARADDR";
-  attribute DEBUG of ps7_0_axi_periph_M06_AXI_ARADDR : signal is "true";
-  attribute MARK_DEBUG of ps7_0_axi_periph_M06_AXI_ARADDR : signal is std.standard.true;
-  signal ps7_0_axi_periph_M06_AXI_ARPROT : STD_LOGIC_VECTOR ( 2 downto 0 );
-  attribute CONN_BUS_INFO of ps7_0_axi_periph_M06_AXI_ARPROT : signal is "ps7_0_axi_periph_M06_AXI xilinx.com:interface:aximm:1.0 AXI4LITE ARPROT";
-  attribute DEBUG of ps7_0_axi_periph_M06_AXI_ARPROT : signal is "true";
-  attribute MARK_DEBUG of ps7_0_axi_periph_M06_AXI_ARPROT : signal is std.standard.true;
   signal ps7_0_axi_periph_M06_AXI_ARREADY : STD_LOGIC;
-  attribute CONN_BUS_INFO of ps7_0_axi_periph_M06_AXI_ARREADY : signal is "ps7_0_axi_periph_M06_AXI xilinx.com:interface:aximm:1.0 AXI4LITE ARREADY";
-  attribute DEBUG of ps7_0_axi_periph_M06_AXI_ARREADY : signal is "true";
-  attribute MARK_DEBUG of ps7_0_axi_periph_M06_AXI_ARREADY : signal is std.standard.true;
   signal ps7_0_axi_periph_M06_AXI_ARVALID : STD_LOGIC;
-  attribute CONN_BUS_INFO of ps7_0_axi_periph_M06_AXI_ARVALID : signal is "ps7_0_axi_periph_M06_AXI xilinx.com:interface:aximm:1.0 AXI4LITE ARVALID";
-  attribute DEBUG of ps7_0_axi_periph_M06_AXI_ARVALID : signal is "true";
-  attribute MARK_DEBUG of ps7_0_axi_periph_M06_AXI_ARVALID : signal is std.standard.true;
   signal ps7_0_axi_periph_M06_AXI_AWADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
-  attribute CONN_BUS_INFO of ps7_0_axi_periph_M06_AXI_AWADDR : signal is "ps7_0_axi_periph_M06_AXI xilinx.com:interface:aximm:1.0 AXI4LITE AWADDR";
-  attribute DEBUG of ps7_0_axi_periph_M06_AXI_AWADDR : signal is "true";
-  attribute MARK_DEBUG of ps7_0_axi_periph_M06_AXI_AWADDR : signal is std.standard.true;
-  signal ps7_0_axi_periph_M06_AXI_AWPROT : STD_LOGIC_VECTOR ( 2 downto 0 );
-  attribute CONN_BUS_INFO of ps7_0_axi_periph_M06_AXI_AWPROT : signal is "ps7_0_axi_periph_M06_AXI xilinx.com:interface:aximm:1.0 AXI4LITE AWPROT";
-  attribute DEBUG of ps7_0_axi_periph_M06_AXI_AWPROT : signal is "true";
-  attribute MARK_DEBUG of ps7_0_axi_periph_M06_AXI_AWPROT : signal is std.standard.true;
   signal ps7_0_axi_periph_M06_AXI_AWREADY : STD_LOGIC;
-  attribute CONN_BUS_INFO of ps7_0_axi_periph_M06_AXI_AWREADY : signal is "ps7_0_axi_periph_M06_AXI xilinx.com:interface:aximm:1.0 AXI4LITE AWREADY";
-  attribute DEBUG of ps7_0_axi_periph_M06_AXI_AWREADY : signal is "true";
-  attribute MARK_DEBUG of ps7_0_axi_periph_M06_AXI_AWREADY : signal is std.standard.true;
   signal ps7_0_axi_periph_M06_AXI_AWVALID : STD_LOGIC;
-  attribute CONN_BUS_INFO of ps7_0_axi_periph_M06_AXI_AWVALID : signal is "ps7_0_axi_periph_M06_AXI xilinx.com:interface:aximm:1.0 AXI4LITE AWVALID";
-  attribute DEBUG of ps7_0_axi_periph_M06_AXI_AWVALID : signal is "true";
-  attribute MARK_DEBUG of ps7_0_axi_periph_M06_AXI_AWVALID : signal is std.standard.true;
   signal ps7_0_axi_periph_M06_AXI_BREADY : STD_LOGIC;
-  attribute CONN_BUS_INFO of ps7_0_axi_periph_M06_AXI_BREADY : signal is "ps7_0_axi_periph_M06_AXI xilinx.com:interface:aximm:1.0 AXI4LITE BREADY";
-  attribute DEBUG of ps7_0_axi_periph_M06_AXI_BREADY : signal is "true";
-  attribute MARK_DEBUG of ps7_0_axi_periph_M06_AXI_BREADY : signal is std.standard.true;
   signal ps7_0_axi_periph_M06_AXI_BRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
-  attribute CONN_BUS_INFO of ps7_0_axi_periph_M06_AXI_BRESP : signal is "ps7_0_axi_periph_M06_AXI xilinx.com:interface:aximm:1.0 AXI4LITE BRESP";
-  attribute DEBUG of ps7_0_axi_periph_M06_AXI_BRESP : signal is "true";
-  attribute MARK_DEBUG of ps7_0_axi_periph_M06_AXI_BRESP : signal is std.standard.true;
   signal ps7_0_axi_periph_M06_AXI_BVALID : STD_LOGIC;
-  attribute CONN_BUS_INFO of ps7_0_axi_periph_M06_AXI_BVALID : signal is "ps7_0_axi_periph_M06_AXI xilinx.com:interface:aximm:1.0 AXI4LITE BVALID";
-  attribute DEBUG of ps7_0_axi_periph_M06_AXI_BVALID : signal is "true";
-  attribute MARK_DEBUG of ps7_0_axi_periph_M06_AXI_BVALID : signal is std.standard.true;
   signal ps7_0_axi_periph_M06_AXI_RDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
-  attribute CONN_BUS_INFO of ps7_0_axi_periph_M06_AXI_RDATA : signal is "ps7_0_axi_periph_M06_AXI xilinx.com:interface:aximm:1.0 AXI4LITE RDATA";
-  attribute DEBUG of ps7_0_axi_periph_M06_AXI_RDATA : signal is "true";
-  attribute MARK_DEBUG of ps7_0_axi_periph_M06_AXI_RDATA : signal is std.standard.true;
   signal ps7_0_axi_periph_M06_AXI_RREADY : STD_LOGIC;
-  attribute CONN_BUS_INFO of ps7_0_axi_periph_M06_AXI_RREADY : signal is "ps7_0_axi_periph_M06_AXI xilinx.com:interface:aximm:1.0 AXI4LITE RREADY";
-  attribute DEBUG of ps7_0_axi_periph_M06_AXI_RREADY : signal is "true";
-  attribute MARK_DEBUG of ps7_0_axi_periph_M06_AXI_RREADY : signal is std.standard.true;
   signal ps7_0_axi_periph_M06_AXI_RRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
-  attribute CONN_BUS_INFO of ps7_0_axi_periph_M06_AXI_RRESP : signal is "ps7_0_axi_periph_M06_AXI xilinx.com:interface:aximm:1.0 AXI4LITE RRESP";
-  attribute DEBUG of ps7_0_axi_periph_M06_AXI_RRESP : signal is "true";
-  attribute MARK_DEBUG of ps7_0_axi_periph_M06_AXI_RRESP : signal is std.standard.true;
   signal ps7_0_axi_periph_M06_AXI_RVALID : STD_LOGIC;
-  attribute CONN_BUS_INFO of ps7_0_axi_periph_M06_AXI_RVALID : signal is "ps7_0_axi_periph_M06_AXI xilinx.com:interface:aximm:1.0 AXI4LITE RVALID";
-  attribute DEBUG of ps7_0_axi_periph_M06_AXI_RVALID : signal is "true";
-  attribute MARK_DEBUG of ps7_0_axi_periph_M06_AXI_RVALID : signal is std.standard.true;
   signal ps7_0_axi_periph_M06_AXI_WDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
-  attribute CONN_BUS_INFO of ps7_0_axi_periph_M06_AXI_WDATA : signal is "ps7_0_axi_periph_M06_AXI xilinx.com:interface:aximm:1.0 AXI4LITE WDATA";
-  attribute DEBUG of ps7_0_axi_periph_M06_AXI_WDATA : signal is "true";
-  attribute MARK_DEBUG of ps7_0_axi_periph_M06_AXI_WDATA : signal is std.standard.true;
   signal ps7_0_axi_periph_M06_AXI_WREADY : STD_LOGIC;
-  attribute CONN_BUS_INFO of ps7_0_axi_periph_M06_AXI_WREADY : signal is "ps7_0_axi_periph_M06_AXI xilinx.com:interface:aximm:1.0 AXI4LITE WREADY";
-  attribute DEBUG of ps7_0_axi_periph_M06_AXI_WREADY : signal is "true";
-  attribute MARK_DEBUG of ps7_0_axi_periph_M06_AXI_WREADY : signal is std.standard.true;
-  signal ps7_0_axi_periph_M06_AXI_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
-  attribute CONN_BUS_INFO of ps7_0_axi_periph_M06_AXI_WSTRB : signal is "ps7_0_axi_periph_M06_AXI xilinx.com:interface:aximm:1.0 AXI4LITE WSTRB";
-  attribute DEBUG of ps7_0_axi_periph_M06_AXI_WSTRB : signal is "true";
-  attribute MARK_DEBUG of ps7_0_axi_periph_M06_AXI_WSTRB : signal is std.standard.true;
   signal ps7_0_axi_periph_M06_AXI_WVALID : STD_LOGIC;
-  attribute CONN_BUS_INFO of ps7_0_axi_periph_M06_AXI_WVALID : signal is "ps7_0_axi_periph_M06_AXI xilinx.com:interface:aximm:1.0 AXI4LITE WVALID";
-  attribute DEBUG of ps7_0_axi_periph_M06_AXI_WVALID : signal is "true";
-  attribute MARK_DEBUG of ps7_0_axi_periph_M06_AXI_WVALID : signal is std.standard.true;
   signal rgb2dvi_0_TMDS_CLK_N : STD_LOGIC;
   signal rgb2dvi_0_TMDS_CLK_P : STD_LOGIC;
   signal rgb2dvi_0_TMDS_DATA_N : STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -6252,11 +6138,9 @@ ps7_0_axi_periph: entity work.design_1_ps7_0_axi_periph_0
       M06_ACLK => processing_system7_0_FCLK_CLK0,
       M06_ARESETN => rst_ps7_0_50M_peripheral_aresetn(0),
       M06_AXI_araddr(31 downto 0) => ps7_0_axi_periph_M06_AXI_ARADDR(31 downto 0),
-      M06_AXI_arprot(2 downto 0) => ps7_0_axi_periph_M06_AXI_ARPROT(2 downto 0),
       M06_AXI_arready => ps7_0_axi_periph_M06_AXI_ARREADY,
       M06_AXI_arvalid => ps7_0_axi_periph_M06_AXI_ARVALID,
       M06_AXI_awaddr(31 downto 0) => ps7_0_axi_periph_M06_AXI_AWADDR(31 downto 0),
-      M06_AXI_awprot(2 downto 0) => ps7_0_axi_periph_M06_AXI_AWPROT(2 downto 0),
       M06_AXI_awready => ps7_0_axi_periph_M06_AXI_AWREADY,
       M06_AXI_awvalid => ps7_0_axi_periph_M06_AXI_AWVALID,
       M06_AXI_bready => ps7_0_axi_periph_M06_AXI_BREADY,
@@ -6268,7 +6152,6 @@ ps7_0_axi_periph: entity work.design_1_ps7_0_axi_periph_0
       M06_AXI_rvalid => ps7_0_axi_periph_M06_AXI_RVALID,
       M06_AXI_wdata(31 downto 0) => ps7_0_axi_periph_M06_AXI_WDATA(31 downto 0),
       M06_AXI_wready => ps7_0_axi_periph_M06_AXI_WREADY,
-      M06_AXI_wstrb(3 downto 0) => ps7_0_axi_periph_M06_AXI_WSTRB(3 downto 0),
       M06_AXI_wvalid => ps7_0_axi_periph_M06_AXI_WVALID,
       S00_ACLK => processing_system7_0_FCLK_CLK0,
       S00_ARESETN => rst_ps7_0_50M_peripheral_aresetn(0),
@@ -6345,25 +6228,6 @@ system_ila_0: component design_1_system_ila_0_0
       SLOT_0_AXIS_tready => axis_subset_converter_0_M_AXIS_TREADY,
       SLOT_0_AXIS_tuser(0) => axis_subset_converter_0_M_AXIS_TUSER(0),
       SLOT_0_AXIS_tvalid => axis_subset_converter_0_M_AXIS_TVALID,
-      SLOT_1_AXI_araddr(9 downto 0) => ps7_0_axi_periph_M06_AXI_ARADDR(9 downto 0),
-      SLOT_1_AXI_arprot(2 downto 0) => ps7_0_axi_periph_M06_AXI_ARPROT(2 downto 0),
-      SLOT_1_AXI_arready => ps7_0_axi_periph_M06_AXI_ARREADY,
-      SLOT_1_AXI_arvalid => ps7_0_axi_periph_M06_AXI_ARVALID,
-      SLOT_1_AXI_awaddr(9 downto 0) => ps7_0_axi_periph_M06_AXI_AWADDR(9 downto 0),
-      SLOT_1_AXI_awprot(2 downto 0) => ps7_0_axi_periph_M06_AXI_AWPROT(2 downto 0),
-      SLOT_1_AXI_awready => ps7_0_axi_periph_M06_AXI_AWREADY,
-      SLOT_1_AXI_awvalid => ps7_0_axi_periph_M06_AXI_AWVALID,
-      SLOT_1_AXI_bready => ps7_0_axi_periph_M06_AXI_BREADY,
-      SLOT_1_AXI_bresp(1 downto 0) => ps7_0_axi_periph_M06_AXI_BRESP(1 downto 0),
-      SLOT_1_AXI_bvalid => ps7_0_axi_periph_M06_AXI_BVALID,
-      SLOT_1_AXI_rdata(31 downto 0) => ps7_0_axi_periph_M06_AXI_RDATA(31 downto 0),
-      SLOT_1_AXI_rready => ps7_0_axi_periph_M06_AXI_RREADY,
-      SLOT_1_AXI_rresp(1 downto 0) => ps7_0_axi_periph_M06_AXI_RRESP(1 downto 0),
-      SLOT_1_AXI_rvalid => ps7_0_axi_periph_M06_AXI_RVALID,
-      SLOT_1_AXI_wdata(31 downto 0) => ps7_0_axi_periph_M06_AXI_WDATA(31 downto 0),
-      SLOT_1_AXI_wready => ps7_0_axi_periph_M06_AXI_WREADY,
-      SLOT_1_AXI_wstrb(3 downto 0) => ps7_0_axi_periph_M06_AXI_WSTRB(3 downto 0),
-      SLOT_1_AXI_wvalid => ps7_0_axi_periph_M06_AXI_WVALID,
       clk => processing_system7_0_FCLK_CLK0,
       resetn => rst_ps7_0_50M_peripheral_aresetn(0)
     );
