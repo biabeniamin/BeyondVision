@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Thu Dec 20 15:27:43 2018
+// Date        : Thu Dec 20 15:27:42 2018
 // Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               C:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ip/design_1_xbar_1/design_1_xbar_1_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top design_1_xbar_1 -prefix
+//               design_1_xbar_1_ design_1_xbar_1_stub.v
 // Design      : design_1_xbar_1
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1

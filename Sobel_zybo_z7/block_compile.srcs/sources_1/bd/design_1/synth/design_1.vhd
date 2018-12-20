@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Thu Dec 20 15:26:29 2018
+--Date        : Thu Dec 20 15:53:26 2018
 --Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -4191,7 +4191,7 @@ entity design_1 is
     hdmi_out_data_p : out STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=36,numReposBlks=22,numNonXlnxBlks=3,numHierBlks=14,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=7,da_clkrst_cnt=1,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=37,numReposBlks=23,numNonXlnxBlks=3,numHierBlks=14,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=7,da_clkrst_cnt=1,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
 end design_1;
@@ -4789,6 +4789,17 @@ architecture STRUCTURE of design_1 is
     s2mm_introut : out STD_LOGIC
   );
   end component design_1_axi_dma_0_0;
+  component design_1_system_ila_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    SLOT_0_AXIS_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    SLOT_0_AXIS_tlast : in STD_LOGIC;
+    SLOT_0_AXIS_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
+    SLOT_0_AXIS_tvalid : in STD_LOGIC;
+    SLOT_0_AXIS_tready : in STD_LOGIC;
+    resetn : in STD_LOGIC
+  );
+  end component design_1_system_ila_0_0;
   signal axi_dynclk_0_PXL_CLK_5X_O : STD_LOGIC;
   signal axi_dynclk_0_PXL_CLK_O : STD_LOGIC;
   signal axi_gpio_0_gpio_io_o : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -4868,9 +4879,28 @@ architecture STRUCTURE of design_1 is
   signal axi_vdma_0_M_AXI_S2MM_WSTRB : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal axi_vdma_0_M_AXI_S2MM_WVALID : STD_LOGIC;
   signal axis_subset_converter_0_M_AXIS_TDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
+  attribute CONN_BUS_INFO : string;
+  attribute CONN_BUS_INFO of axis_subset_converter_0_M_AXIS_TDATA : signal is "axis_subset_converter_0_M_AXIS xilinx.com:interface:axis:1.0 None TDATA";
+  attribute DEBUG : string;
+  attribute DEBUG of axis_subset_converter_0_M_AXIS_TDATA : signal is "true";
+  attribute MARK_DEBUG : boolean;
+  attribute MARK_DEBUG of axis_subset_converter_0_M_AXIS_TDATA : signal is std.standard.true;
   signal axis_subset_converter_0_M_AXIS_TLAST : STD_LOGIC;
+  attribute CONN_BUS_INFO of axis_subset_converter_0_M_AXIS_TLAST : signal is "axis_subset_converter_0_M_AXIS xilinx.com:interface:axis:1.0 None TLAST";
+  attribute DEBUG of axis_subset_converter_0_M_AXIS_TLAST : signal is "true";
+  attribute MARK_DEBUG of axis_subset_converter_0_M_AXIS_TLAST : signal is std.standard.true;
   signal axis_subset_converter_0_M_AXIS_TREADY : STD_LOGIC;
+  attribute CONN_BUS_INFO of axis_subset_converter_0_M_AXIS_TREADY : signal is "axis_subset_converter_0_M_AXIS xilinx.com:interface:axis:1.0 None TREADY";
+  attribute DEBUG of axis_subset_converter_0_M_AXIS_TREADY : signal is "true";
+  attribute MARK_DEBUG of axis_subset_converter_0_M_AXIS_TREADY : signal is std.standard.true;
+  signal axis_subset_converter_0_M_AXIS_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
+  attribute CONN_BUS_INFO of axis_subset_converter_0_M_AXIS_TUSER : signal is "axis_subset_converter_0_M_AXIS xilinx.com:interface:axis:1.0 None TUSER";
+  attribute DEBUG of axis_subset_converter_0_M_AXIS_TUSER : signal is "true";
+  attribute MARK_DEBUG of axis_subset_converter_0_M_AXIS_TUSER : signal is std.standard.true;
   signal axis_subset_converter_0_M_AXIS_TVALID : STD_LOGIC;
+  attribute CONN_BUS_INFO of axis_subset_converter_0_M_AXIS_TVALID : signal is "axis_subset_converter_0_M_AXIS xilinx.com:interface:axis:1.0 None TVALID";
+  attribute DEBUG of axis_subset_converter_0_M_AXIS_TVALID : signal is "true";
+  attribute MARK_DEBUG of axis_subset_converter_0_M_AXIS_TVALID : signal is std.standard.true;
   signal axis_subset_converter_1_M_AXIS_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
   signal axis_subset_converter_1_M_AXIS_TLAST : STD_LOGIC;
   signal axis_subset_converter_1_M_AXIS_TREADY : STD_LOGIC;
@@ -5151,7 +5181,6 @@ architecture STRUCTURE of design_1 is
   signal NLW_axi_vdma_0_s_axis_s2mm_tready_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_vdma_0_mm2s_frame_ptr_out_UNCONNECTED : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal NLW_axi_vdma_0_s2mm_frame_ptr_out_UNCONNECTED : STD_LOGIC_VECTOR ( 5 downto 0 );
-  signal NLW_axis_subset_converter_0_m_axis_tuser_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_axis_subset_converter_1_m_axis_tkeep_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal NLW_dvi2rgb_1_aPixelClkLckd_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_USB0_VBUS_PWRSELECT_UNCONNECTED : STD_LOGIC;
@@ -5592,7 +5621,7 @@ axis_subset_converter_0: component design_1_axis_subset_converter_0_0
       m_axis_tdata(31 downto 0) => axis_subset_converter_0_M_AXIS_TDATA(31 downto 0),
       m_axis_tlast => axis_subset_converter_0_M_AXIS_TLAST,
       m_axis_tready => axis_subset_converter_0_M_AXIS_TREADY,
-      m_axis_tuser(0) => NLW_axis_subset_converter_0_m_axis_tuser_UNCONNECTED(0),
+      m_axis_tuser(0) => axis_subset_converter_0_M_AXIS_TUSER(0),
       m_axis_tvalid => axis_subset_converter_0_M_AXIS_TVALID,
       s_axis_tdata(23 downto 0) => v_vid_in_axi4s_0_video_out_TDATA(23 downto 0),
       s_axis_tlast => v_vid_in_axi4s_0_video_out_TLAST,
@@ -5960,6 +5989,16 @@ rst_ps7_0_50M: component design_1_rst_ps7_0_50M_0
       peripheral_aresetn(0) => rst_ps7_0_50M_peripheral_aresetn(0),
       peripheral_reset(0) => rst_ps7_0_50M_peripheral_reset(0),
       slowest_sync_clk => processing_system7_0_FCLK_CLK0
+    );
+system_ila_0: component design_1_system_ila_0_0
+     port map (
+      SLOT_0_AXIS_tdata(31 downto 0) => axis_subset_converter_0_M_AXIS_TDATA(31 downto 0),
+      SLOT_0_AXIS_tlast => axis_subset_converter_0_M_AXIS_TLAST,
+      SLOT_0_AXIS_tready => axis_subset_converter_0_M_AXIS_TREADY,
+      SLOT_0_AXIS_tuser(0) => axis_subset_converter_0_M_AXIS_TUSER(0),
+      SLOT_0_AXIS_tvalid => axis_subset_converter_0_M_AXIS_TVALID,
+      clk => processing_system7_0_FCLK_CLK0,
+      resetn => rst_ps7_0_50M_peripheral_aresetn(0)
     );
 v_axi4s_vid_out_0: component design_1_v_axi4s_vid_out_0_0
      port map (
