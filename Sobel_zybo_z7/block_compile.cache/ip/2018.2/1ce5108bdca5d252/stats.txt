@@ -1,4 +1,4 @@
-NumberHits:17
-Timestamp: Thu Dec 20 19:25:51 UTC 2018
+NumberHits:18
+Timestamp: Thu Dec 20 19:40:30 UTC 2018
 VLNV: xilinx.com:ip:v_tc:6.1
 SynthRuntime: 75
