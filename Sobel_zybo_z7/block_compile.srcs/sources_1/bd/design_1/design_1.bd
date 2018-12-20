@@ -836,6 +836,19 @@
           <spirit:configurableElementValue spirit:referenceId="C_MON_TYPE">INTERFACE</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>system_ila_1</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="system_ila" spirit:vendor="xilinx.com" spirit:version="1.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_system_ila_1_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_SLOT_0_APC_EN">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_SLOT_0_AXI_DATA_SEL">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_SLOT_0_AXI_TRIG_SEL">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_NUM_MONITOR_SLOTS">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_SLOT_0_INTF_TYPE">xilinx.com:interface:axis_rtl:1.0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_MON_TYPE">INTERFACE</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
     </spirit:componentInstances>
     <spirit:interconnections>
       <spirit:interconnection>
@@ -926,7 +939,16 @@
         <spirit:name>axis_subset_converter_0_M_AXIS</spirit:name>
         <spirit:activeInterface spirit:busRef="M_AXIS" spirit:componentRef="axis_subset_converter_0"/>
         <spirit:activeInterface spirit:busRef="S_AXIS_S2MM" spirit:componentRef="axi_dma_0"/>
+        <bd:hdl_attributes>
+          <bd:hdl_attribute bd:name="DEBUG" bd:value="true"/>
+          <bd:hdl_attribute bd:name="MARK_DEBUG" bd:value="true"/>
+        </bd:hdl_attributes>
       </spirit:interconnection>
+      <spirit:monitorInterconnection>
+        <spirit:name>axis_subset_converter_0_M_AXIS</spirit:name>
+        <spirit:monitoredActiveInterface spirit:busRef="M_AXIS" spirit:componentRef="axis_subset_converter_0"/>
+        <spirit:monitorInterface spirit:busRef="SLOT_0_AXIS" spirit:componentRef="system_ila_1"/>
+      </spirit:monitorInterconnection>
       <spirit:interconnection>
         <spirit:name>ps7_0_axi_periph_M06_AXI</spirit:name>
         <spirit:activeInterface spirit:busRef="M06_AXI" spirit:componentRef="ps7_0_axi_periph"/>
@@ -985,6 +1007,7 @@
         <spirit:internalPortReference spirit:componentRef="axi_dma_0" spirit:portRef="m_axi_mm2s_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="S03_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="system_ila_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="system_ila_1" spirit:portRef="clk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>processing_system7_0_FCLK_RESET0_N</spirit:name>
@@ -1022,6 +1045,7 @@
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="S02_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="S03_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="system_ila_0" spirit:portRef="resetn"/>
+        <spirit:internalPortReference spirit:componentRef="system_ila_1" spirit:portRef="resetn"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>rst_ps7_0_50M_interconnect_aresetn</spirit:name>

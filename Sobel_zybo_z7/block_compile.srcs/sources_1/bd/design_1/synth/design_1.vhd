@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Thu Dec 20 21:40:22 2018
+--Date        : Thu Dec 20 21:57:05 2018
 --Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -5018,17 +5018,17 @@ architecture STRUCTURE of design_1 is
     s2mm_introut : out STD_LOGIC
   );
   end component design_1_axi_dma_0_0;
-  component design_1_system_ila_0_0 is
+  component design_1_system_ila_0_1 is
   port (
     clk : in STD_LOGIC;
-    SLOT_0_AXIS_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    SLOT_0_AXIS_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
     SLOT_0_AXIS_tlast : in STD_LOGIC;
     SLOT_0_AXIS_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
     SLOT_0_AXIS_tvalid : in STD_LOGIC;
     SLOT_0_AXIS_tready : in STD_LOGIC;
     resetn : in STD_LOGIC
   );
-  end component design_1_system_ila_0_0;
+  end component design_1_system_ila_0_1;
   signal axi_dma_0_M_AXI_MM2S_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal axi_dma_0_M_AXI_MM2S_ARBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal axi_dma_0_M_AXI_MM2S_ARCACHE : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -5137,28 +5137,9 @@ architecture STRUCTURE of design_1 is
   signal axi_vdma_0_M_AXI_S2MM_WSTRB : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal axi_vdma_0_M_AXI_S2MM_WVALID : STD_LOGIC;
   signal axis_subset_converter_0_M_AXIS_TDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
-  attribute CONN_BUS_INFO : string;
-  attribute CONN_BUS_INFO of axis_subset_converter_0_M_AXIS_TDATA : signal is "axis_subset_converter_0_M_AXIS xilinx.com:interface:axis:1.0 None TDATA";
-  attribute DEBUG : string;
-  attribute DEBUG of axis_subset_converter_0_M_AXIS_TDATA : signal is "true";
-  attribute MARK_DEBUG : boolean;
-  attribute MARK_DEBUG of axis_subset_converter_0_M_AXIS_TDATA : signal is std.standard.true;
   signal axis_subset_converter_0_M_AXIS_TLAST : STD_LOGIC;
-  attribute CONN_BUS_INFO of axis_subset_converter_0_M_AXIS_TLAST : signal is "axis_subset_converter_0_M_AXIS xilinx.com:interface:axis:1.0 None TLAST";
-  attribute DEBUG of axis_subset_converter_0_M_AXIS_TLAST : signal is "true";
-  attribute MARK_DEBUG of axis_subset_converter_0_M_AXIS_TLAST : signal is std.standard.true;
   signal axis_subset_converter_0_M_AXIS_TREADY : STD_LOGIC;
-  attribute CONN_BUS_INFO of axis_subset_converter_0_M_AXIS_TREADY : signal is "axis_subset_converter_0_M_AXIS xilinx.com:interface:axis:1.0 None TREADY";
-  attribute DEBUG of axis_subset_converter_0_M_AXIS_TREADY : signal is "true";
-  attribute MARK_DEBUG of axis_subset_converter_0_M_AXIS_TREADY : signal is std.standard.true;
-  signal axis_subset_converter_0_M_AXIS_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
-  attribute CONN_BUS_INFO of axis_subset_converter_0_M_AXIS_TUSER : signal is "axis_subset_converter_0_M_AXIS xilinx.com:interface:axis:1.0 None TUSER";
-  attribute DEBUG of axis_subset_converter_0_M_AXIS_TUSER : signal is "true";
-  attribute MARK_DEBUG of axis_subset_converter_0_M_AXIS_TUSER : signal is std.standard.true;
   signal axis_subset_converter_0_M_AXIS_TVALID : STD_LOGIC;
-  attribute CONN_BUS_INFO of axis_subset_converter_0_M_AXIS_TVALID : signal is "axis_subset_converter_0_M_AXIS xilinx.com:interface:axis:1.0 None TVALID";
-  attribute DEBUG of axis_subset_converter_0_M_AXIS_TVALID : signal is "true";
-  attribute MARK_DEBUG of axis_subset_converter_0_M_AXIS_TVALID : signal is std.standard.true;
   signal axis_subset_converter_1_M_AXIS_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
   signal axis_subset_converter_1_M_AXIS_TLAST : STD_LOGIC;
   signal axis_subset_converter_1_M_AXIS_TREADY : STD_LOGIC;
@@ -5377,10 +5358,28 @@ architecture STRUCTURE of design_1 is
   signal v_tc_1_vtiming_out_VBLANK : STD_LOGIC;
   signal v_tc_1_vtiming_out_VSYNC : STD_LOGIC;
   signal v_vid_in_axi4s_0_video_out_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
+  attribute CONN_BUS_INFO : string;
+  attribute CONN_BUS_INFO of v_vid_in_axi4s_0_video_out_TDATA : signal is "v_vid_in_axi4s_0_video_out xilinx.com:interface:axis:1.0 None TDATA";
+  attribute DEBUG : string;
+  attribute DEBUG of v_vid_in_axi4s_0_video_out_TDATA : signal is "true";
+  attribute MARK_DEBUG : boolean;
+  attribute MARK_DEBUG of v_vid_in_axi4s_0_video_out_TDATA : signal is std.standard.true;
   signal v_vid_in_axi4s_0_video_out_TLAST : STD_LOGIC;
+  attribute CONN_BUS_INFO of v_vid_in_axi4s_0_video_out_TLAST : signal is "v_vid_in_axi4s_0_video_out xilinx.com:interface:axis:1.0 None TLAST";
+  attribute DEBUG of v_vid_in_axi4s_0_video_out_TLAST : signal is "true";
+  attribute MARK_DEBUG of v_vid_in_axi4s_0_video_out_TLAST : signal is std.standard.true;
   signal v_vid_in_axi4s_0_video_out_TREADY : STD_LOGIC;
+  attribute CONN_BUS_INFO of v_vid_in_axi4s_0_video_out_TREADY : signal is "v_vid_in_axi4s_0_video_out xilinx.com:interface:axis:1.0 None TREADY";
+  attribute DEBUG of v_vid_in_axi4s_0_video_out_TREADY : signal is "true";
+  attribute MARK_DEBUG of v_vid_in_axi4s_0_video_out_TREADY : signal is std.standard.true;
   signal v_vid_in_axi4s_0_video_out_TUSER : STD_LOGIC;
+  attribute CONN_BUS_INFO of v_vid_in_axi4s_0_video_out_TUSER : signal is "v_vid_in_axi4s_0_video_out xilinx.com:interface:axis:1.0 None TUSER";
+  attribute DEBUG of v_vid_in_axi4s_0_video_out_TUSER : signal is "true";
+  attribute MARK_DEBUG of v_vid_in_axi4s_0_video_out_TUSER : signal is std.standard.true;
   signal v_vid_in_axi4s_0_video_out_TVALID : STD_LOGIC;
+  attribute CONN_BUS_INFO of v_vid_in_axi4s_0_video_out_TVALID : signal is "v_vid_in_axi4s_0_video_out xilinx.com:interface:axis:1.0 None TVALID";
+  attribute DEBUG of v_vid_in_axi4s_0_video_out_TVALID : signal is "true";
+  attribute MARK_DEBUG of v_vid_in_axi4s_0_video_out_TVALID : signal is std.standard.true;
   signal xlconstant_0_dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal xlconstant_1_dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_PassThroughZybo_0_INPUT_STREAM_TREADY_UNCONNECTED : STD_LOGIC;
@@ -5410,6 +5409,7 @@ architecture STRUCTURE of design_1 is
   signal NLW_axi_vdma_0_s_axis_s2mm_tready_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_vdma_0_mm2s_frame_ptr_out_UNCONNECTED : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal NLW_axi_vdma_0_s2mm_frame_ptr_out_UNCONNECTED : STD_LOGIC_VECTOR ( 5 downto 0 );
+  signal NLW_axis_subset_converter_0_m_axis_tuser_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_axis_subset_converter_1_m_axis_tkeep_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal NLW_dvi2rgb_1_aPixelClkLckd_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_USB0_VBUS_PWRSELECT_UNCONNECTED : STD_LOGIC;
@@ -5852,7 +5852,7 @@ axis_subset_converter_0: component design_1_axis_subset_converter_0_0
       m_axis_tdata(31 downto 0) => axis_subset_converter_0_M_AXIS_TDATA(31 downto 0),
       m_axis_tlast => axis_subset_converter_0_M_AXIS_TLAST,
       m_axis_tready => axis_subset_converter_0_M_AXIS_TREADY,
-      m_axis_tuser(0) => axis_subset_converter_0_M_AXIS_TUSER(0),
+      m_axis_tuser(0) => NLW_axis_subset_converter_0_m_axis_tuser_UNCONNECTED(0),
       m_axis_tvalid => axis_subset_converter_0_M_AXIS_TVALID,
       s_axis_tdata(23 downto 0) => v_vid_in_axi4s_0_video_out_TDATA(23 downto 0),
       s_axis_tlast => v_vid_in_axi4s_0_video_out_TLAST,
@@ -6221,13 +6221,13 @@ rst_ps7_0_50M: component design_1_rst_ps7_0_50M_0
       peripheral_reset(0) => rst_ps7_0_50M_peripheral_reset(0),
       slowest_sync_clk => processing_system7_0_FCLK_CLK0
     );
-system_ila_0: component design_1_system_ila_0_0
+system_ila_0: component design_1_system_ila_0_1
      port map (
-      SLOT_0_AXIS_tdata(31 downto 0) => axis_subset_converter_0_M_AXIS_TDATA(31 downto 0),
-      SLOT_0_AXIS_tlast => axis_subset_converter_0_M_AXIS_TLAST,
-      SLOT_0_AXIS_tready => axis_subset_converter_0_M_AXIS_TREADY,
-      SLOT_0_AXIS_tuser(0) => axis_subset_converter_0_M_AXIS_TUSER(0),
-      SLOT_0_AXIS_tvalid => axis_subset_converter_0_M_AXIS_TVALID,
+      SLOT_0_AXIS_tdata(23 downto 0) => v_vid_in_axi4s_0_video_out_TDATA(23 downto 0),
+      SLOT_0_AXIS_tlast => v_vid_in_axi4s_0_video_out_TLAST,
+      SLOT_0_AXIS_tready => v_vid_in_axi4s_0_video_out_TREADY,
+      SLOT_0_AXIS_tuser(0) => v_vid_in_axi4s_0_video_out_TUSER,
+      SLOT_0_AXIS_tvalid => v_vid_in_axi4s_0_video_out_TVALID,
       clk => processing_system7_0_FCLK_CLK0,
       resetn => rst_ps7_0_50M_peripheral_aresetn(0)
     );
