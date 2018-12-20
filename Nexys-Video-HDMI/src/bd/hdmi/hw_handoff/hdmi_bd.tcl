@@ -416,8 +416,8 @@ proc create_root_design { parentCell } {
    CONFIG.PHASE {0.0} \
  ] $sys_clk_i
 
-  # Create instance: PassThrough_0, and set properties
-  set PassThrough_0 [ create_bd_cell -type ip -vlnv xilinx.com:hls:PassThrough:1.0 PassThrough_0 ]
+  # Create instance: SobelFilter_0, and set properties
+  set SobelFilter_0 [ create_bd_cell -type ip -vlnv xilinx.com:hls:SobelFilter:1.0 SobelFilter_0 ]
 
   # Create instance: axi_dynclk_0, and set properties
   set axi_dynclk_0 [ create_bd_cell -type ip -vlnv digilentinc.com:ip:axi_dynclk:1.0 axi_dynclk_0 ]
@@ -687,7 +687,7 @@ proc create_root_design { parentCell } {
   set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 ]
 
   # Create interface connections
-  connect_bd_intf_net -intf_net PassThrough_0_OUTPUT_STREAM [get_bd_intf_pins PassThrough_0/OUTPUT_STREAM] [get_bd_intf_pins axi_vdma_0/S_AXIS_S2MM]
+  connect_bd_intf_net -intf_net SobelFilter_0_OUTPUT_STREAM [get_bd_intf_pins SobelFilter_0/OUTPUT_STREAM] [get_bd_intf_pins axi_vdma_0/S_AXIS_S2MM]
   connect_bd_intf_net -intf_net TMDS_IN_1 [get_bd_intf_ports TMDS_IN] [get_bd_intf_pins dvi2rgb_0/TMDS]
   connect_bd_intf_net -intf_net axi_mem_intercon_M00_AXI [get_bd_intf_pins axi_mem_intercon/M00_AXI] [get_bd_intf_pins mig_7series_0/S_AXI]
   connect_bd_intf_net -intf_net axi_uartlite_0_UART [get_bd_intf_ports usb_uart] [get_bd_intf_pins axi_uartlite_0/UART]
@@ -696,7 +696,7 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net axi_vdma_0_M_AXI_S2MM [get_bd_intf_pins axi_mem_intercon/S01_AXI] [get_bd_intf_pins axi_vdma_0/M_AXI_S2MM]
   connect_bd_intf_net -intf_net axis_subset_converter_0_M_AXIS [get_bd_intf_pins axis_subset_converter_0/M_AXIS] [get_bd_intf_pins v_axi4s_vid_out_0/video_in]
   connect_bd_intf_net -intf_net axis_subset_converter_1_M_AXIS [get_bd_intf_pins axis_subset_converter_1/M_AXIS] [get_bd_intf_pins axis_switch_0/S00_AXIS]
-  connect_bd_intf_net -intf_net axis_switch_0_M00_AXIS [get_bd_intf_pins PassThrough_0/INPUT_STREAM] [get_bd_intf_pins axis_switch_0/M00_AXIS]
+  connect_bd_intf_net -intf_net axis_switch_0_M00_AXIS [get_bd_intf_pins SobelFilter_0/INPUT_STREAM] [get_bd_intf_pins axis_switch_0/M00_AXIS]
   connect_bd_intf_net -intf_net dvi2rgb_0_DDC [get_bd_intf_ports DDC] [get_bd_intf_pins dvi2rgb_0/DDC]
   connect_bd_intf_net -intf_net dvi2rgb_0_RGB [get_bd_intf_pins dvi2rgb_0/RGB] [get_bd_intf_pins v_vid_in_axi4s_0/vid_io_in]
   connect_bd_intf_net -intf_net microblaze_0_M_AXI_DC [get_bd_intf_pins axi_mem_intercon/S02_AXI] [get_bd_intf_pins microblaze_0/M_AXI_DC]
@@ -724,11 +724,11 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net v_vid_in_axi4s_0_vtiming_out [get_bd_intf_pins v_tc_1/vtiming_in] [get_bd_intf_pins v_vid_in_axi4s_0/vtiming_out]
 
   # Create port connections
-  connect_bd_net -net Net [get_bd_pins PassThrough_0/ap_rst_n] [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins axis_subset_converter_1/aresetn] [get_bd_pins axis_switch_0/aresetn] [get_bd_pins v_vid_in_axi4s_0/aresetn]
+  connect_bd_net -net Net [get_bd_pins SobelFilter_0/ap_rst_n] [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins axis_subset_converter_1/aresetn] [get_bd_pins axis_switch_0/aresetn] [get_bd_pins v_vid_in_axi4s_0/aresetn]
   connect_bd_net -net SYS_Rst_1 [get_bd_pins microblaze_0_local_memory/SYS_Rst] [get_bd_pins rst_mig_7series_0_100M/bus_struct_reset]
   connect_bd_net -net axi_dynclk_0_PXL_CLK_5X_O [get_bd_pins axi_dynclk_0/PXL_CLK_5X_O] [get_bd_pins rgb2dvi_0/SerialClk]
   connect_bd_net -net axi_dynclk_0_PXL_CLK_O [get_bd_pins axi_dynclk_0/PXL_CLK_O] [get_bd_pins axi_vdma_0/m_axis_mm2s_aclk] [get_bd_pins axis_subset_converter_0/aclk] [get_bd_pins rgb2dvi_0/PixelClk] [get_bd_pins v_axi4s_vid_out_0/aclk] [get_bd_pins v_axi4s_vid_out_0/vid_io_out_clk] [get_bd_pins v_tc_0/clk]
-  connect_bd_net -net axi_gpio_0_gpio2_io_o [get_bd_pins PassThrough_0/ap_start] [get_bd_pins axi_gpio_0/gpio2_io_o]
+  connect_bd_net -net axi_gpio_0_gpio2_io_o [get_bd_pins SobelFilter_0/ap_start] [get_bd_pins axi_gpio_0/gpio2_io_o]
   connect_bd_net -net axi_gpio_video_gpio_io_o [get_bd_ports hdmi_hpd] [get_bd_pins axi_gpio_video/gpio_io_o]
   connect_bd_net -net axi_gpio_video_ip2intc_irpt [get_bd_pins axi_gpio_video/ip2intc_irpt] [get_bd_pins microblaze_0_xlconcat/In4]
   connect_bd_net -net axi_timer_0_interrupt [get_bd_pins axi_timer_0/interrupt] [get_bd_pins microblaze_0_xlconcat/In5]
@@ -738,7 +738,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net dvi2rgb_0_aPixelClkLckd [get_bd_pins axi_gpio_video/gpio2_io_i] [get_bd_pins dvi2rgb_0/aPixelClkLckd] [get_bd_pins rst_mig_7series_0_pxl/dcm_locked]
   connect_bd_net -net microblaze_0_intr [get_bd_pins microblaze_0_axi_intc/intr] [get_bd_pins microblaze_0_xlconcat/dout]
   connect_bd_net -net mig_7series_0_mmcm_locked [get_bd_pins dvi2rgb_0/aRst_n] [get_bd_pins mig_7series_0/mmcm_locked] [get_bd_pins rst_mig_7series_0_100M/dcm_locked]
-  connect_bd_net -net mig_7series_0_ui_addn_clk_0 [get_bd_pins PassThrough_0/ap_clk] [get_bd_pins axi_vdma_0/s_axis_s2mm_aclk] [get_bd_pins axis_subset_converter_1/aclk] [get_bd_pins axis_switch_0/aclk] [get_bd_pins mig_7series_0/ui_addn_clk_0] [get_bd_pins rst_hdmi_160M/slowest_sync_clk] [get_bd_pins v_vid_in_axi4s_0/aclk]
+  connect_bd_net -net mig_7series_0_ui_addn_clk_0 [get_bd_pins SobelFilter_0/ap_clk] [get_bd_pins axi_vdma_0/s_axis_s2mm_aclk] [get_bd_pins axis_subset_converter_1/aclk] [get_bd_pins axis_switch_0/aclk] [get_bd_pins mig_7series_0/ui_addn_clk_0] [get_bd_pins rst_hdmi_160M/slowest_sync_clk] [get_bd_pins v_vid_in_axi4s_0/aclk]
   connect_bd_net -net mig_7series_0_ui_addn_clk_2 [get_bd_pins dvi2rgb_0/RefClk] [get_bd_pins mig_7series_0/clk_ref_i] [get_bd_pins mig_7series_0/ui_addn_clk_1]
   connect_bd_net -net mig_7series_0_ui_clk [get_bd_pins axi_dynclk_0/REF_CLK_I] [get_bd_pins axi_dynclk_0/s00_axi_aclk] [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins axi_gpio_1/s_axi_aclk] [get_bd_pins axi_gpio_video/s_axi_aclk] [get_bd_pins axi_mem_intercon/ACLK] [get_bd_pins axi_mem_intercon/M00_ACLK] [get_bd_pins axi_mem_intercon/S00_ACLK] [get_bd_pins axi_mem_intercon/S01_ACLK] [get_bd_pins axi_mem_intercon/S02_ACLK] [get_bd_pins axi_mem_intercon/S03_ACLK] [get_bd_pins axi_timer_0/s_axi_aclk] [get_bd_pins axi_uartlite_0/s_axi_aclk] [get_bd_pins axi_vdma_0/m_axi_mm2s_aclk] [get_bd_pins axi_vdma_0/m_axi_s2mm_aclk] [get_bd_pins axi_vdma_0/s_axi_lite_aclk] [get_bd_pins microblaze_0/Clk] [get_bd_pins microblaze_0_axi_intc/processor_clk] [get_bd_pins microblaze_0_axi_intc/s_axi_aclk] [get_bd_pins microblaze_0_axi_periph/ACLK] [get_bd_pins microblaze_0_axi_periph/M00_ACLK] [get_bd_pins microblaze_0_axi_periph/M01_ACLK] [get_bd_pins microblaze_0_axi_periph/M02_ACLK] [get_bd_pins microblaze_0_axi_periph/M03_ACLK] [get_bd_pins microblaze_0_axi_periph/M04_ACLK] [get_bd_pins microblaze_0_axi_periph/M05_ACLK] [get_bd_pins microblaze_0_axi_periph/M06_ACLK] [get_bd_pins microblaze_0_axi_periph/M07_ACLK] [get_bd_pins microblaze_0_axi_periph/M08_ACLK] [get_bd_pins microblaze_0_axi_periph/M09_ACLK] [get_bd_pins microblaze_0_axi_periph/S00_ACLK] [get_bd_pins microblaze_0_local_memory/LMB_Clk] [get_bd_pins mig_7series_0/ui_clk] [get_bd_pins rst_mig_7series_0_100M/slowest_sync_clk] [get_bd_pins v_tc_0/s_axi_aclk] [get_bd_pins v_tc_1/s_axi_aclk]
   connect_bd_net -net mig_7series_0_ui_clk_sync_rst [get_bd_pins mig_7series_0/ui_clk_sync_rst] [get_bd_pins rst_mig_7series_0_100M/ext_reset_in]
