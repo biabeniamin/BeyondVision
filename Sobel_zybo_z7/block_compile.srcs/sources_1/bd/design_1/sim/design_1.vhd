@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Thu Dec 20 10:14:46 2018
+--Date        : Thu Dec 20 13:55:06 2018
 --Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -4157,12 +4157,6 @@ architecture STRUCTURE of design_1 is
     ap_idle : out STD_LOGIC
   );
   end component design_1_PassThroughZybo_0_0;
-  signal PassThroughZybo_0_OUTPUT_STREAM_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal PassThroughZybo_0_OUTPUT_STREAM_TKEEP : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal PassThroughZybo_0_OUTPUT_STREAM_TLAST : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal PassThroughZybo_0_OUTPUT_STREAM_TREADY : STD_LOGIC;
-  signal PassThroughZybo_0_OUTPUT_STREAM_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal PassThroughZybo_0_OUTPUT_STREAM_TVALID : STD_LOGIC;
   signal axi_dynclk_0_PXL_CLK_5X_O : STD_LOGIC;
   signal axi_dynclk_0_PXL_CLK_O : STD_LOGIC;
   signal axi_gpio_0_gpio_io_o : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -4550,12 +4544,18 @@ architecture STRUCTURE of design_1 is
   attribute MARK_DEBUG of v_vid_in_axi4s_0_video_out_TVALID : signal is std.standard.true;
   signal xlconstant_0_dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal xlconstant_1_dout : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal NLW_PassThroughZybo_0_INPUT_STREAM_TREADY_UNCONNECTED : STD_LOGIC;
+  signal NLW_PassThroughZybo_0_OUTPUT_STREAM_TVALID_UNCONNECTED : STD_LOGIC;
   signal NLW_PassThroughZybo_0_ap_done_UNCONNECTED : STD_LOGIC;
   signal NLW_PassThroughZybo_0_ap_idle_UNCONNECTED : STD_LOGIC;
   signal NLW_PassThroughZybo_0_ap_ready_UNCONNECTED : STD_LOGIC;
+  signal NLW_PassThroughZybo_0_OUTPUT_STREAM_TDATA_UNCONNECTED : STD_LOGIC_VECTOR ( 23 downto 0 );
   signal NLW_PassThroughZybo_0_OUTPUT_STREAM_TDEST_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_PassThroughZybo_0_OUTPUT_STREAM_TID_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal NLW_PassThroughZybo_0_OUTPUT_STREAM_TKEEP_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal NLW_PassThroughZybo_0_OUTPUT_STREAM_TLAST_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_PassThroughZybo_0_OUTPUT_STREAM_TSTRB_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal NLW_PassThroughZybo_0_OUTPUT_STREAM_TUSER_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_axi_dynclk_0_LOCKED_O_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_gpio_0_gpio2_io_o_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_axi_vdma_0_mm2s_introut_UNCONNECTED : STD_LOGIC;
@@ -4654,24 +4654,24 @@ begin
   hdmi_out_data_p(2 downto 0) <= rgb2dvi_0_TMDS_DATA_P(2 downto 0);
 PassThroughZybo_0: component design_1_PassThroughZybo_0_0
      port map (
-      INPUT_STREAM_TDATA(23 downto 0) => axis_subset_converter_0_M_AXIS_TDATA(23 downto 0),
+      INPUT_STREAM_TDATA(23 downto 0) => B"000000000000000000000000",
       INPUT_STREAM_TDEST(0) => '0',
       INPUT_STREAM_TID(0) => '0',
       INPUT_STREAM_TKEEP(2 downto 0) => B"111",
-      INPUT_STREAM_TLAST(0) => axis_subset_converter_0_M_AXIS_TLAST,
-      INPUT_STREAM_TREADY => axis_subset_converter_0_M_AXIS_TREADY,
+      INPUT_STREAM_TLAST(0) => '0',
+      INPUT_STREAM_TREADY => NLW_PassThroughZybo_0_INPUT_STREAM_TREADY_UNCONNECTED,
       INPUT_STREAM_TSTRB(2 downto 0) => B"111",
-      INPUT_STREAM_TUSER(0) => axis_subset_converter_0_M_AXIS_TUSER(0),
-      INPUT_STREAM_TVALID => axis_subset_converter_0_M_AXIS_TVALID,
-      OUTPUT_STREAM_TDATA(23 downto 0) => PassThroughZybo_0_OUTPUT_STREAM_TDATA(23 downto 0),
+      INPUT_STREAM_TUSER(0) => '0',
+      INPUT_STREAM_TVALID => '0',
+      OUTPUT_STREAM_TDATA(23 downto 0) => NLW_PassThroughZybo_0_OUTPUT_STREAM_TDATA_UNCONNECTED(23 downto 0),
       OUTPUT_STREAM_TDEST(0) => NLW_PassThroughZybo_0_OUTPUT_STREAM_TDEST_UNCONNECTED(0),
       OUTPUT_STREAM_TID(0) => NLW_PassThroughZybo_0_OUTPUT_STREAM_TID_UNCONNECTED(0),
-      OUTPUT_STREAM_TKEEP(2 downto 0) => PassThroughZybo_0_OUTPUT_STREAM_TKEEP(2 downto 0),
-      OUTPUT_STREAM_TLAST(0) => PassThroughZybo_0_OUTPUT_STREAM_TLAST(0),
-      OUTPUT_STREAM_TREADY => PassThroughZybo_0_OUTPUT_STREAM_TREADY,
+      OUTPUT_STREAM_TKEEP(2 downto 0) => NLW_PassThroughZybo_0_OUTPUT_STREAM_TKEEP_UNCONNECTED(2 downto 0),
+      OUTPUT_STREAM_TLAST(0) => NLW_PassThroughZybo_0_OUTPUT_STREAM_TLAST_UNCONNECTED(0),
+      OUTPUT_STREAM_TREADY => '1',
       OUTPUT_STREAM_TSTRB(2 downto 0) => NLW_PassThroughZybo_0_OUTPUT_STREAM_TSTRB_UNCONNECTED(2 downto 0),
-      OUTPUT_STREAM_TUSER(0) => PassThroughZybo_0_OUTPUT_STREAM_TUSER(0),
-      OUTPUT_STREAM_TVALID => PassThroughZybo_0_OUTPUT_STREAM_TVALID,
+      OUTPUT_STREAM_TUSER(0) => NLW_PassThroughZybo_0_OUTPUT_STREAM_TUSER_UNCONNECTED(0),
+      OUTPUT_STREAM_TVALID => NLW_PassThroughZybo_0_OUTPUT_STREAM_TVALID_UNCONNECTED,
       ap_clk => processing_system7_0_FCLK_CLK0,
       ap_done => NLW_PassThroughZybo_0_ap_done_UNCONNECTED,
       ap_idle => NLW_PassThroughZybo_0_ap_idle_UNCONNECTED,
@@ -4896,12 +4896,12 @@ axi_vdma_0: component design_1_axi_vdma_0_0
       s_axi_lite_wready => ps7_0_axi_periph_M00_AXI_WREADY,
       s_axi_lite_wvalid => ps7_0_axi_periph_M00_AXI_WVALID(0),
       s_axis_s2mm_aclk => processing_system7_0_FCLK_CLK0,
-      s_axis_s2mm_tdata(23 downto 0) => PassThroughZybo_0_OUTPUT_STREAM_TDATA(23 downto 0),
-      s_axis_s2mm_tkeep(2 downto 0) => PassThroughZybo_0_OUTPUT_STREAM_TKEEP(2 downto 0),
-      s_axis_s2mm_tlast => PassThroughZybo_0_OUTPUT_STREAM_TLAST(0),
-      s_axis_s2mm_tready => PassThroughZybo_0_OUTPUT_STREAM_TREADY,
-      s_axis_s2mm_tuser(0) => PassThroughZybo_0_OUTPUT_STREAM_TUSER(0),
-      s_axis_s2mm_tvalid => PassThroughZybo_0_OUTPUT_STREAM_TVALID
+      s_axis_s2mm_tdata(23 downto 0) => axis_subset_converter_0_M_AXIS_TDATA(23 downto 0),
+      s_axis_s2mm_tkeep(2 downto 0) => B"111",
+      s_axis_s2mm_tlast => axis_subset_converter_0_M_AXIS_TLAST,
+      s_axis_s2mm_tready => axis_subset_converter_0_M_AXIS_TREADY,
+      s_axis_s2mm_tuser(0) => axis_subset_converter_0_M_AXIS_TUSER(0),
+      s_axis_s2mm_tvalid => axis_subset_converter_0_M_AXIS_TVALID
     );
 axis_subset_converter_0: component design_1_axis_subset_converter_0_0
      port map (

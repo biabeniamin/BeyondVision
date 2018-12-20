@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Sat Dec 15 20:30:06 2018
+// Date        : Sat Dec 15 20:30:05 2018
 // Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/Digilent19/Sobel_zybo_z7/block_compile.srcs/sources_1/bd/design_1/ip/design_1_PassThroughZybo_0_0/design_1_PassThroughZybo_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top design_1_PassThroughZybo_0_0 -prefix
+//               design_1_PassThroughZybo_0_0_ design_1_PassThroughZybo_0_0_sim_netlist.v
 // Design      : design_1_PassThroughZybo_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,112 +12,6 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "design_1_PassThroughZybo_0_0,PassThroughZybo,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "HLS" *) 
-(* x_core_info = "PassThroughZybo,Vivado 2018.2" *) 
-(* NotValidForBitStream *)
-module design_1_PassThroughZybo_0_0
-   (INPUT_STREAM_TVALID,
-    INPUT_STREAM_TREADY,
-    INPUT_STREAM_TDATA,
-    INPUT_STREAM_TKEEP,
-    INPUT_STREAM_TSTRB,
-    INPUT_STREAM_TUSER,
-    INPUT_STREAM_TLAST,
-    INPUT_STREAM_TID,
-    INPUT_STREAM_TDEST,
-    OUTPUT_STREAM_TVALID,
-    OUTPUT_STREAM_TREADY,
-    OUTPUT_STREAM_TDATA,
-    OUTPUT_STREAM_TKEEP,
-    OUTPUT_STREAM_TSTRB,
-    OUTPUT_STREAM_TUSER,
-    OUTPUT_STREAM_TLAST,
-    OUTPUT_STREAM_TID,
-    OUTPUT_STREAM_TDEST,
-    ap_clk,
-    ap_rst_n,
-    ap_start,
-    ap_done,
-    ap_ready,
-    ap_idle);
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 INPUT_STREAM TVALID" *) (* x_interface_parameter = "XIL_INTERFACENAME INPUT_STREAM, TDATA_NUM_BYTES 3, TDEST_WIDTH 1, TID_WIDTH 1, TUSER_WIDTH 1, LAYERED_METADATA undef, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 200000000, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0" *) input INPUT_STREAM_TVALID;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 INPUT_STREAM TREADY" *) output INPUT_STREAM_TREADY;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 INPUT_STREAM TDATA" *) input [23:0]INPUT_STREAM_TDATA;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 INPUT_STREAM TKEEP" *) input [2:0]INPUT_STREAM_TKEEP;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 INPUT_STREAM TSTRB" *) input [2:0]INPUT_STREAM_TSTRB;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 INPUT_STREAM TUSER" *) input [0:0]INPUT_STREAM_TUSER;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 INPUT_STREAM TLAST" *) input [0:0]INPUT_STREAM_TLAST;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 INPUT_STREAM TID" *) input [0:0]INPUT_STREAM_TID;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 INPUT_STREAM TDEST" *) input [0:0]INPUT_STREAM_TDEST;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TVALID" *) (* x_interface_parameter = "XIL_INTERFACENAME OUTPUT_STREAM, TDATA_NUM_BYTES 3, TDEST_WIDTH 1, TID_WIDTH 1, TUSER_WIDTH 1, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TDATA_WIDTH 24 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TUSER_WIDTH 1}, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 200000000, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0" *) output OUTPUT_STREAM_TVALID;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TREADY" *) input OUTPUT_STREAM_TREADY;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TDATA" *) output [23:0]OUTPUT_STREAM_TDATA;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TKEEP" *) output [2:0]OUTPUT_STREAM_TKEEP;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TSTRB" *) output [2:0]OUTPUT_STREAM_TSTRB;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TUSER" *) output [0:0]OUTPUT_STREAM_TUSER;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TLAST" *) output [0:0]OUTPUT_STREAM_TLAST;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TID" *) output [0:0]OUTPUT_STREAM_TID;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TDEST" *) output [0:0]OUTPUT_STREAM_TDEST;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 ap_clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME ap_clk, ASSOCIATED_BUSIF INPUT_STREAM:OUTPUT_STREAM, ASSOCIATED_RESET ap_rst_n, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, FREQ_HZ 200000000, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0" *) input ap_clk;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 ap_rst_n RST" *) (* x_interface_parameter = "XIL_INTERFACENAME ap_rst_n, POLARITY ACTIVE_LOW, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {RST {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}" *) input ap_rst_n;
-  (* x_interface_info = "xilinx.com:interface:acc_handshake:1.0 ap_ctrl start" *) (* x_interface_parameter = "XIL_INTERFACENAME ap_ctrl, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {start {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} done {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} ready {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} idle {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}" *) input ap_start;
-  (* x_interface_info = "xilinx.com:interface:acc_handshake:1.0 ap_ctrl done" *) output ap_done;
-  (* x_interface_info = "xilinx.com:interface:acc_handshake:1.0 ap_ctrl ready" *) output ap_ready;
-  (* x_interface_info = "xilinx.com:interface:acc_handshake:1.0 ap_ctrl idle" *) output ap_idle;
-
-  wire [23:0]INPUT_STREAM_TDATA;
-  wire [0:0]INPUT_STREAM_TDEST;
-  wire [0:0]INPUT_STREAM_TID;
-  wire [2:0]INPUT_STREAM_TKEEP;
-  wire [0:0]INPUT_STREAM_TLAST;
-  wire INPUT_STREAM_TREADY;
-  wire [2:0]INPUT_STREAM_TSTRB;
-  wire [0:0]INPUT_STREAM_TUSER;
-  wire INPUT_STREAM_TVALID;
-  wire [23:0]OUTPUT_STREAM_TDATA;
-  wire [0:0]OUTPUT_STREAM_TDEST;
-  wire [0:0]OUTPUT_STREAM_TID;
-  wire [2:0]OUTPUT_STREAM_TKEEP;
-  wire [0:0]OUTPUT_STREAM_TLAST;
-  wire OUTPUT_STREAM_TREADY;
-  wire [2:0]OUTPUT_STREAM_TSTRB;
-  wire [0:0]OUTPUT_STREAM_TUSER;
-  wire OUTPUT_STREAM_TVALID;
-  wire ap_clk;
-  wire ap_done;
-  wire ap_idle;
-  wire ap_ready;
-  wire ap_rst_n;
-  wire ap_start;
-
-  design_1_PassThroughZybo_0_0_PassThroughZybo U0
-       (.INPUT_STREAM_TDATA(INPUT_STREAM_TDATA),
-        .INPUT_STREAM_TDEST(INPUT_STREAM_TDEST),
-        .INPUT_STREAM_TID(INPUT_STREAM_TID),
-        .INPUT_STREAM_TKEEP(INPUT_STREAM_TKEEP),
-        .INPUT_STREAM_TLAST(INPUT_STREAM_TLAST),
-        .INPUT_STREAM_TREADY(INPUT_STREAM_TREADY),
-        .INPUT_STREAM_TSTRB(INPUT_STREAM_TSTRB),
-        .INPUT_STREAM_TUSER(INPUT_STREAM_TUSER),
-        .INPUT_STREAM_TVALID(INPUT_STREAM_TVALID),
-        .OUTPUT_STREAM_TDATA(OUTPUT_STREAM_TDATA),
-        .OUTPUT_STREAM_TDEST(OUTPUT_STREAM_TDEST),
-        .OUTPUT_STREAM_TID(OUTPUT_STREAM_TID),
-        .OUTPUT_STREAM_TKEEP(OUTPUT_STREAM_TKEEP),
-        .OUTPUT_STREAM_TLAST(OUTPUT_STREAM_TLAST),
-        .OUTPUT_STREAM_TREADY(OUTPUT_STREAM_TREADY),
-        .OUTPUT_STREAM_TSTRB(OUTPUT_STREAM_TSTRB),
-        .OUTPUT_STREAM_TUSER(OUTPUT_STREAM_TUSER),
-        .OUTPUT_STREAM_TVALID(OUTPUT_STREAM_TVALID),
-        .ap_clk(ap_clk),
-        .ap_done(ap_done),
-        .ap_idle(ap_idle),
-        .ap_ready(ap_ready),
-        .ap_rst_n(ap_rst_n),
-        .ap_start(ap_start));
-endmodule
-
-(* ORIG_REF_NAME = "AXIvideo2Mat" *) 
 module design_1_PassThroughZybo_0_0_AXIvideo2Mat
    (ap_rst,
     INPUT_STREAM_TREADY,
@@ -4193,7 +4087,6 @@ module design_1_PassThroughZybo_0_0_AXIvideo2Mat
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "Mat2AXIvideo" *) 
 module design_1_PassThroughZybo_0_0_Mat2AXIvideo
    (AXI_video_strm_V_data_V_1_ack_in,
     OUTPUT_STREAM_TVALID,
@@ -6689,7 +6582,6 @@ module design_1_PassThroughZybo_0_0_Mat2AXIvideo
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "PassThroughZybo" *) 
 module design_1_PassThroughZybo_0_0_PassThroughZybo
    (INPUT_STREAM_TDATA,
     INPUT_STREAM_TKEEP,
@@ -6982,7 +6874,111 @@ module design_1_PassThroughZybo_0_0_PassThroughZybo
         .start_once_reg_reg(AXIvideo2Mat_U0_n_3));
 endmodule
 
-(* ORIG_REF_NAME = "fifo_w12_d2_A" *) 
+(* CHECK_LICENSE_TYPE = "design_1_PassThroughZybo_0_0,PassThroughZybo,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "HLS" *) 
+(* x_core_info = "PassThroughZybo,Vivado 2018.2" *) 
+(* NotValidForBitStream *)
+module design_1_PassThroughZybo_0_0
+   (INPUT_STREAM_TVALID,
+    INPUT_STREAM_TREADY,
+    INPUT_STREAM_TDATA,
+    INPUT_STREAM_TKEEP,
+    INPUT_STREAM_TSTRB,
+    INPUT_STREAM_TUSER,
+    INPUT_STREAM_TLAST,
+    INPUT_STREAM_TID,
+    INPUT_STREAM_TDEST,
+    OUTPUT_STREAM_TVALID,
+    OUTPUT_STREAM_TREADY,
+    OUTPUT_STREAM_TDATA,
+    OUTPUT_STREAM_TKEEP,
+    OUTPUT_STREAM_TSTRB,
+    OUTPUT_STREAM_TUSER,
+    OUTPUT_STREAM_TLAST,
+    OUTPUT_STREAM_TID,
+    OUTPUT_STREAM_TDEST,
+    ap_clk,
+    ap_rst_n,
+    ap_start,
+    ap_done,
+    ap_ready,
+    ap_idle);
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 INPUT_STREAM TVALID" *) (* x_interface_parameter = "XIL_INTERFACENAME INPUT_STREAM, TDATA_NUM_BYTES 3, TDEST_WIDTH 1, TID_WIDTH 1, TUSER_WIDTH 1, LAYERED_METADATA undef, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 200000000, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0" *) input INPUT_STREAM_TVALID;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 INPUT_STREAM TREADY" *) output INPUT_STREAM_TREADY;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 INPUT_STREAM TDATA" *) input [23:0]INPUT_STREAM_TDATA;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 INPUT_STREAM TKEEP" *) input [2:0]INPUT_STREAM_TKEEP;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 INPUT_STREAM TSTRB" *) input [2:0]INPUT_STREAM_TSTRB;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 INPUT_STREAM TUSER" *) input [0:0]INPUT_STREAM_TUSER;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 INPUT_STREAM TLAST" *) input [0:0]INPUT_STREAM_TLAST;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 INPUT_STREAM TID" *) input [0:0]INPUT_STREAM_TID;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 INPUT_STREAM TDEST" *) input [0:0]INPUT_STREAM_TDEST;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TVALID" *) (* x_interface_parameter = "XIL_INTERFACENAME OUTPUT_STREAM, TDATA_NUM_BYTES 3, TDEST_WIDTH 1, TID_WIDTH 1, TUSER_WIDTH 1, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TDATA_WIDTH 24 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TUSER_WIDTH 1}, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 200000000, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0" *) output OUTPUT_STREAM_TVALID;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TREADY" *) input OUTPUT_STREAM_TREADY;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TDATA" *) output [23:0]OUTPUT_STREAM_TDATA;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TKEEP" *) output [2:0]OUTPUT_STREAM_TKEEP;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TSTRB" *) output [2:0]OUTPUT_STREAM_TSTRB;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TUSER" *) output [0:0]OUTPUT_STREAM_TUSER;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TLAST" *) output [0:0]OUTPUT_STREAM_TLAST;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TID" *) output [0:0]OUTPUT_STREAM_TID;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TDEST" *) output [0:0]OUTPUT_STREAM_TDEST;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 ap_clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME ap_clk, ASSOCIATED_BUSIF INPUT_STREAM:OUTPUT_STREAM, ASSOCIATED_RESET ap_rst_n, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, FREQ_HZ 200000000, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0" *) input ap_clk;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 ap_rst_n RST" *) (* x_interface_parameter = "XIL_INTERFACENAME ap_rst_n, POLARITY ACTIVE_LOW, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {RST {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}" *) input ap_rst_n;
+  (* x_interface_info = "xilinx.com:interface:acc_handshake:1.0 ap_ctrl start" *) (* x_interface_parameter = "XIL_INTERFACENAME ap_ctrl, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {start {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} done {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} ready {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} idle {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}" *) input ap_start;
+  (* x_interface_info = "xilinx.com:interface:acc_handshake:1.0 ap_ctrl done" *) output ap_done;
+  (* x_interface_info = "xilinx.com:interface:acc_handshake:1.0 ap_ctrl ready" *) output ap_ready;
+  (* x_interface_info = "xilinx.com:interface:acc_handshake:1.0 ap_ctrl idle" *) output ap_idle;
+
+  wire [23:0]INPUT_STREAM_TDATA;
+  wire [0:0]INPUT_STREAM_TDEST;
+  wire [0:0]INPUT_STREAM_TID;
+  wire [2:0]INPUT_STREAM_TKEEP;
+  wire [0:0]INPUT_STREAM_TLAST;
+  wire INPUT_STREAM_TREADY;
+  wire [2:0]INPUT_STREAM_TSTRB;
+  wire [0:0]INPUT_STREAM_TUSER;
+  wire INPUT_STREAM_TVALID;
+  wire [23:0]OUTPUT_STREAM_TDATA;
+  wire [0:0]OUTPUT_STREAM_TDEST;
+  wire [0:0]OUTPUT_STREAM_TID;
+  wire [2:0]OUTPUT_STREAM_TKEEP;
+  wire [0:0]OUTPUT_STREAM_TLAST;
+  wire OUTPUT_STREAM_TREADY;
+  wire [2:0]OUTPUT_STREAM_TSTRB;
+  wire [0:0]OUTPUT_STREAM_TUSER;
+  wire OUTPUT_STREAM_TVALID;
+  wire ap_clk;
+  wire ap_done;
+  wire ap_idle;
+  wire ap_ready;
+  wire ap_rst_n;
+  wire ap_start;
+
+  design_1_PassThroughZybo_0_0_PassThroughZybo U0
+       (.INPUT_STREAM_TDATA(INPUT_STREAM_TDATA),
+        .INPUT_STREAM_TDEST(INPUT_STREAM_TDEST),
+        .INPUT_STREAM_TID(INPUT_STREAM_TID),
+        .INPUT_STREAM_TKEEP(INPUT_STREAM_TKEEP),
+        .INPUT_STREAM_TLAST(INPUT_STREAM_TLAST),
+        .INPUT_STREAM_TREADY(INPUT_STREAM_TREADY),
+        .INPUT_STREAM_TSTRB(INPUT_STREAM_TSTRB),
+        .INPUT_STREAM_TUSER(INPUT_STREAM_TUSER),
+        .INPUT_STREAM_TVALID(INPUT_STREAM_TVALID),
+        .OUTPUT_STREAM_TDATA(OUTPUT_STREAM_TDATA),
+        .OUTPUT_STREAM_TDEST(OUTPUT_STREAM_TDEST),
+        .OUTPUT_STREAM_TID(OUTPUT_STREAM_TID),
+        .OUTPUT_STREAM_TKEEP(OUTPUT_STREAM_TKEEP),
+        .OUTPUT_STREAM_TLAST(OUTPUT_STREAM_TLAST),
+        .OUTPUT_STREAM_TREADY(OUTPUT_STREAM_TREADY),
+        .OUTPUT_STREAM_TSTRB(OUTPUT_STREAM_TSTRB),
+        .OUTPUT_STREAM_TUSER(OUTPUT_STREAM_TUSER),
+        .OUTPUT_STREAM_TVALID(OUTPUT_STREAM_TVALID),
+        .ap_clk(ap_clk),
+        .ap_done(ap_done),
+        .ap_idle(ap_idle),
+        .ap_ready(ap_ready),
+        .ap_rst_n(ap_rst_n),
+        .ap_start(ap_start));
+endmodule
+
 module design_1_PassThroughZybo_0_0_fifo_w12_d2_A
    (img_0_cols_V_c5_full_n,
     img_0_cols_V_c5_empty_n,
@@ -7458,7 +7454,6 @@ module design_1_PassThroughZybo_0_0_fifo_w12_d2_A_4
         .S(ap_rst));
 endmodule
 
-(* ORIG_REF_NAME = "fifo_w8_d2_A" *) 
 module design_1_PassThroughZybo_0_0_fifo_w8_d2_A
    (img_0_data_stream_0_full_n,
     img_0_data_stream_0_empty_n,
@@ -7821,7 +7816,6 @@ module design_1_PassThroughZybo_0_0_fifo_w8_d2_A_2
         .S(ap_rst));
 endmodule
 
-(* ORIG_REF_NAME = "fifo_w8_d2_A_shiftReg" *) 
 module design_1_PassThroughZybo_0_0_fifo_w8_d2_A_shiftReg
    (D,
     Q,
@@ -8412,7 +8406,6 @@ module design_1_PassThroughZybo_0_0_fifo_w8_d2_A_shiftReg_6
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "start_for_Mat2AXIbkb" *) 
 module design_1_PassThroughZybo_0_0_start_for_Mat2AXIbkb
    (start_for_Mat2AXIvideo_U0_full_n,
     start_for_Mat2AXIvideo_U0_empty_n,

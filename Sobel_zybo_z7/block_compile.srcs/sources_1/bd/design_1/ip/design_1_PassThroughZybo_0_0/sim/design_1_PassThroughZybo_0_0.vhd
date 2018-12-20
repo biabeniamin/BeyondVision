@@ -149,7 +149,8 @@ ARCHITECTURE design_1_PassThroughZybo_0_0_arch OF design_1_PassThroughZybo_0_0 I
   ATTRIBUTE X_INTERFACE_INFO OF INPUT_STREAM_TKEEP: SIGNAL IS "xilinx.com:interface:axis:1.0 INPUT_STREAM TKEEP";
   ATTRIBUTE X_INTERFACE_INFO OF INPUT_STREAM_TDATA: SIGNAL IS "xilinx.com:interface:axis:1.0 INPUT_STREAM TDATA";
   ATTRIBUTE X_INTERFACE_INFO OF INPUT_STREAM_TREADY: SIGNAL IS "xilinx.com:interface:axis:1.0 INPUT_STREAM TREADY";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF INPUT_STREAM_TVALID: SIGNAL IS "XIL_INTERFACENAME INPUT_STREAM, TDATA_NUM_BYTES 3, TDEST_WIDTH 1, TID_WIDTH 1, TUSER_WIDTH 1, LAYERED_METADATA undef, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 200000000, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF INPUT_STREAM_TVALID: SIGNAL IS "XIL_INTERFACENAME INPUT_STREAM, TDATA_NUM_BYTES 3, TDEST_WIDTH 1, TID_WIDTH 1, TUSER_WIDTH 1, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKE" & 
+"EP 1, HAS_TLAST 1, FREQ_HZ 200000000, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0";
   ATTRIBUTE X_INTERFACE_INFO OF INPUT_STREAM_TVALID: SIGNAL IS "xilinx.com:interface:axis:1.0 INPUT_STREAM TVALID";
 BEGIN
   U0 : PassThroughZybo
