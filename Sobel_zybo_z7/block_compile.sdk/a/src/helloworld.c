@@ -63,6 +63,7 @@
 #include "display_ctrl/vga_modes.h"
 #include "display_ctrl/display_ctrl.h"
 #include "dynclk.h"
+#include "xaxidma.h"
 
 #define DEMO_MAX_FRAME (720*1280)
 #define DEMO_STRIDE (1280*3)
@@ -77,8 +78,8 @@ XAxiVdma_DmaSetup vdmaDMA;
 XAxiVdma_Config *vdmaConfig;
 
 
-
-
+XAxiDma AxiDma;
+XAxiDma_Config *CfgPtr;
 
 ClkConfig clkReg;
 ClkMode clkMode;
@@ -94,14 +95,33 @@ int main()
     init_platform();
     disable_caches();
 
+    int Status;
 
 
+    CfgPtr = XAxiDma_LookupConfig(XPAR_AXI_DMA_0_DEVICE_ID);
+      if(!CfgPtr){
+      print("Error looking for AXI DMA config\n\r");
+      return XST_FAILURE;
+      }
+      Status = XAxiDma_CfgInitialize(&AxiDma,CfgPtr);
+      if(Status != XST_SUCCESS){
+      print("Error initializing DMA\n\r");
+      return XST_FAILURE;
+      }
 
+      //check for scatter gather mode
+       if(XAxiDma_HasSg(&AxiDma)){
+       print("Error DMA configured in SG mode\n\r");
+       return XST_FAILURE;
+       }
+       /* Disable interrupts, we use polling mode */
+      XAxiDma_IntrDisable(&AxiDma, XAXIDMA_IRQ_ALL_MASK,XAXIDMA_DEVICE_TO_DMA);
+       XAxiDma_IntrDisable(&AxiDma, XAXIDMA_IRQ_ALL_MASK,XAXIDMA_DMA_TO_DEVICE);
 
 
     XVtc_Timing vtcTiming;
     XVtc_SourceSelect SourceSelect;
-    int Status;
+
     u16 result;
     xil_printf("Hello World\n\r");
     vtc_config = XVtc_LookupConfig(XPAR_VTC_0_DEVICE_ID);
