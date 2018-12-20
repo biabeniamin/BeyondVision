@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'Duplicate'
 ================================================================
-* Date:           Thu Dec 20 08:48:51 2018
+* Date:           Thu Dec 20 08:58:20 2018
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        SobelNewVivado
@@ -176,7 +176,7 @@ The critical path consists of the following:
  <State 4>: 7.82ns
 The critical path consists of the following:
 	fifo read on port 'src_data_stream_0_V' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:624->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:656->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:1505) [42]  (3.91 ns)
-	fifo write on port 'dst1_data_stream_0_V' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:648->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:662->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:1506) [48]  (3.91 ns)
+	fifo write on port 'dst2_data_stream_0_V' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:648->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:662->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:1507) [54]  (3.91 ns)
 
  <State 5>: 0ns
 The critical path consists of the following:

@@ -1783,8 +1783,8 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
       </xilinx:taxonomies>
       <xilinx:displayName>Sobelfilter</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>1812200851</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2018-12-20T06:51:43Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>1812200858</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2018-12-20T06:59:00Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.2</xilinx:xilinxVersion>
