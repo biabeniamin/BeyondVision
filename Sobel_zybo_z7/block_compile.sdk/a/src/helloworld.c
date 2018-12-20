@@ -98,6 +98,7 @@ int main()
 
 
 
+
     XVtc_Timing vtcTiming;
     XVtc_SourceSelect SourceSelect;
     int Status;
@@ -114,11 +115,11 @@ int main()
     XGpio_Initialize(&hpd_in2, XPAR_AXI_GPIO_1_DEVICE_ID);
     XGpio_DiscreteWrite(&hpd_in,1,0x1);
     //reset
-    XGpio_DiscreteWrite(&hpd_in2,1,0x0);
+    /*XGpio_DiscreteWrite(&hpd_in2,1,0x0);
     XGpio_DiscreteWrite(&hpd_in2,2,0x1);
-    sleep(1);
+    sleep(1);*/
     //recover
-    XGpio_DiscreteWrite(&hpd_in2,1,0x1);
+    XGpio_DiscreteWrite(&hpd_in2,1,0x0);
     XGpio_DiscreteWrite(&hpd_in2,2,0x1);
 
 
@@ -198,10 +199,10 @@ int main()
 	Status = XAxiVdma_DmaStart(&vdma, XAXIVDMA_WRITE);
 	Status = XAxiVdma_StartParking(&vdma, 0, XAXIVDMA_WRITE);
 
-	XAxiVdma_DmaConfig(&vdma, XAXIVDMA_READ, &(vdmaDMA));
-	XAxiVdma_DmaSetBufferAddr(&vdma, XAXIVDMA_READ,vdmaDMA.FrameStoreStartAddr);
-	XAxiVdma_DmaStart(&vdma, XAXIVDMA_READ);
-	XAxiVdma_StartParking(&vdma, 0, XAXIVDMA_READ);
+	Status=XAxiVdma_DmaConfig(&vdma, XAXIVDMA_READ, &(vdmaDMA));
+	Status=XAxiVdma_DmaSetBufferAddr(&vdma, XAXIVDMA_READ,vdmaDMA.FrameStoreStartAddr);
+	Status=XAxiVdma_DmaStart(&vdma, XAXIVDMA_READ);
+	Status=XAxiVdma_StartParking(&vdma, 0, XAXIVDMA_READ);
 
 
 	Status = DisplayInitialize(&dispCtrl, &vdma, XPAR_V_TC_1_DEVICE_ID, XPAR_AXI_DYNCLK_0_BASEADDR, pFrames, DEMO_STRIDE);
@@ -224,7 +225,15 @@ int main()
 
 	while(1) {
 sleep(10);
-DemoPrintTest(dispCtrl.framePtr[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, dispCtrl.stride, DEMO_PATTERN_1);
+Status=XAxiVdma_DmaConfig(&vdma, XAXIVDMA_READ, &(vdmaDMA));
+	Status=XAxiVdma_DmaSetBufferAddr(&vdma, XAXIVDMA_READ,vdmaDMA.FrameStoreStartAddr);
+	Status=XAxiVdma_DmaStart(&vdma, XAXIVDMA_READ);
+for(int i=0;i< 10;i++)
+{
+	xil_printf("%x ", pFrames[0][i]);
+}
+xil_printf("\r\n");
+//DemoPrintTest(dispCtrl.framePtr[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, dispCtrl.stride, DEMO_PATTERN_1);
    }
 
     cleanup_platform();

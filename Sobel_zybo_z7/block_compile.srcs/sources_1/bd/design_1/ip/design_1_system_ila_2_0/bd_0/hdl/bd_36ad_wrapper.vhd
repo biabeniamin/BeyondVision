@@ -11,12 +11,8 @@ use UNISIM.VCOMPONENTS.ALL;
 entity bd_36ad_wrapper is
   port (
     SLOT_0_AXIS_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    SLOT_0_AXIS_tdest : in STD_LOGIC_VECTOR ( 0 to 0 );
-    SLOT_0_AXIS_tid : in STD_LOGIC_VECTOR ( 0 to 0 );
-    SLOT_0_AXIS_tkeep : in STD_LOGIC_VECTOR ( 2 downto 0 );
     SLOT_0_AXIS_tlast : in STD_LOGIC;
     SLOT_0_AXIS_tready : in STD_LOGIC;
-    SLOT_0_AXIS_tstrb : in STD_LOGIC_VECTOR ( 2 downto 0 );
     SLOT_0_AXIS_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
     SLOT_0_AXIS_tvalid : in STD_LOGIC;
     SLOT_1_AXIS_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
@@ -32,12 +28,8 @@ entity bd_36ad_wrapper is
     SLOT_2_AXIS_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
     SLOT_2_AXIS_tvalid : in STD_LOGIC;
     SLOT_3_AXIS_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    SLOT_3_AXIS_tdest : in STD_LOGIC_VECTOR ( 0 to 0 );
-    SLOT_3_AXIS_tid : in STD_LOGIC_VECTOR ( 0 to 0 );
-    SLOT_3_AXIS_tkeep : in STD_LOGIC_VECTOR ( 2 downto 0 );
     SLOT_3_AXIS_tlast : in STD_LOGIC;
     SLOT_3_AXIS_tready : in STD_LOGIC;
-    SLOT_3_AXIS_tstrb : in STD_LOGIC_VECTOR ( 2 downto 0 );
     SLOT_3_AXIS_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
     SLOT_3_AXIS_tvalid : in STD_LOGIC;
     clk : in STD_LOGIC;
@@ -53,12 +45,8 @@ architecture STRUCTURE of bd_36ad_wrapper is
     probe0 : in STD_LOGIC_VECTOR ( 23 downto 0 );
     resetn : in STD_LOGIC;
     SLOT_0_AXIS_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    SLOT_0_AXIS_tdest : in STD_LOGIC_VECTOR ( 0 to 0 );
-    SLOT_0_AXIS_tid : in STD_LOGIC_VECTOR ( 0 to 0 );
-    SLOT_0_AXIS_tkeep : in STD_LOGIC_VECTOR ( 2 downto 0 );
     SLOT_0_AXIS_tlast : in STD_LOGIC;
     SLOT_0_AXIS_tready : in STD_LOGIC;
-    SLOT_0_AXIS_tstrb : in STD_LOGIC_VECTOR ( 2 downto 0 );
     SLOT_0_AXIS_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
     SLOT_0_AXIS_tvalid : in STD_LOGIC;
     SLOT_1_AXIS_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
@@ -74,12 +62,8 @@ architecture STRUCTURE of bd_36ad_wrapper is
     SLOT_2_AXIS_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
     SLOT_2_AXIS_tvalid : in STD_LOGIC;
     SLOT_3_AXIS_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    SLOT_3_AXIS_tdest : in STD_LOGIC_VECTOR ( 0 to 0 );
-    SLOT_3_AXIS_tid : in STD_LOGIC_VECTOR ( 0 to 0 );
-    SLOT_3_AXIS_tkeep : in STD_LOGIC_VECTOR ( 2 downto 0 );
     SLOT_3_AXIS_tlast : in STD_LOGIC;
     SLOT_3_AXIS_tready : in STD_LOGIC;
-    SLOT_3_AXIS_tstrb : in STD_LOGIC_VECTOR ( 2 downto 0 );
     SLOT_3_AXIS_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
     SLOT_3_AXIS_tvalid : in STD_LOGIC
   );
@@ -88,12 +72,8 @@ begin
 bd_36ad_i: component bd_36ad
      port map (
       SLOT_0_AXIS_tdata(23 downto 0) => SLOT_0_AXIS_tdata(23 downto 0),
-      SLOT_0_AXIS_tdest(0) => SLOT_0_AXIS_tdest(0),
-      SLOT_0_AXIS_tid(0) => SLOT_0_AXIS_tid(0),
-      SLOT_0_AXIS_tkeep(2 downto 0) => SLOT_0_AXIS_tkeep(2 downto 0),
       SLOT_0_AXIS_tlast => SLOT_0_AXIS_tlast,
       SLOT_0_AXIS_tready => SLOT_0_AXIS_tready,
-      SLOT_0_AXIS_tstrb(2 downto 0) => SLOT_0_AXIS_tstrb(2 downto 0),
       SLOT_0_AXIS_tuser(0) => SLOT_0_AXIS_tuser(0),
       SLOT_0_AXIS_tvalid => SLOT_0_AXIS_tvalid,
       SLOT_1_AXIS_tdata(23 downto 0) => SLOT_1_AXIS_tdata(23 downto 0),
@@ -109,12 +89,8 @@ bd_36ad_i: component bd_36ad
       SLOT_2_AXIS_tuser(0) => SLOT_2_AXIS_tuser(0),
       SLOT_2_AXIS_tvalid => SLOT_2_AXIS_tvalid,
       SLOT_3_AXIS_tdata(23 downto 0) => SLOT_3_AXIS_tdata(23 downto 0),
-      SLOT_3_AXIS_tdest(0) => SLOT_3_AXIS_tdest(0),
-      SLOT_3_AXIS_tid(0) => SLOT_3_AXIS_tid(0),
-      SLOT_3_AXIS_tkeep(2 downto 0) => SLOT_3_AXIS_tkeep(2 downto 0),
       SLOT_3_AXIS_tlast => SLOT_3_AXIS_tlast,
       SLOT_3_AXIS_tready => SLOT_3_AXIS_tready,
-      SLOT_3_AXIS_tstrb(2 downto 0) => SLOT_3_AXIS_tstrb(2 downto 0),
       SLOT_3_AXIS_tuser(0) => SLOT_3_AXIS_tuser(0),
       SLOT_3_AXIS_tvalid => SLOT_3_AXIS_tvalid,
       clk => clk,

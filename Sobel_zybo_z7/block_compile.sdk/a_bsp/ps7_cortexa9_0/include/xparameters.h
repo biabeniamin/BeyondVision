@@ -523,51 +523,6 @@
 
 /******************************************************************/
 
-/* Definitions for driver V_TPG */
-#define XPAR_XV_TPG_NUM_INSTANCES 1
-
-/* Definitions for peripheral V_TPG_0 */
-#define XPAR_V_TPG_0_DEVICE_ID 0
-#define XPAR_V_TPG_0_S_AXI_CTRL_BASEADDR 0x43C30000
-#define XPAR_V_TPG_0_S_AXI_CTRL_HIGHADDR 0x43C3FFFF
-#define XPAR_V_TPG_0_HAS_AXI4S_SLAVE 0
-#define XPAR_V_TPG_0_SAMPLES_PER_CLOCK 1
-#define XPAR_V_TPG_0_NUM_VIDEO_COMPONENTS 3
-#define XPAR_V_TPG_0_MAX_COLS 4096
-#define XPAR_V_TPG_0_MAX_ROWS 2160
-#define XPAR_V_TPG_0_MAX_DATA_WIDTH 8
-#define XPAR_V_TPG_0_SOLID_COLOR 1
-#define XPAR_V_TPG_0_RAMP 1
-#define XPAR_V_TPG_0_COLOR_BAR 1
-#define XPAR_V_TPG_0_DISPLAY_PORT 1
-#define XPAR_V_TPG_0_COLOR_SWEEP 1
-#define XPAR_V_TPG_0_ZONE_PLATE 1
-#define XPAR_V_TPG_0_FOREGROUND 1
-
-
-/******************************************************************/
-
-/* Canonical definitions for peripheral V_TPG_0 */
-#define XPAR_XV_TPG_0_DEVICE_ID XPAR_V_TPG_0_DEVICE_ID
-#define XPAR_XV_TPG_0_S_AXI_CTRL_BASEADDR 0x43C30000
-#define XPAR_XV_TPG_0_S_AXI_CTRL_HIGHADDR 0x43C3FFFF
-#define XPAR_XV_TPG_0_HAS_AXI4S_SLAVE 0
-#define XPAR_XV_TPG_0_SAMPLES_PER_CLOCK 1
-#define XPAR_XV_TPG_0_NUM_VIDEO_COMPONENTS 3
-#define XPAR_XV_TPG_0_MAX_COLS 4096
-#define XPAR_XV_TPG_0_MAX_ROWS 2160
-#define XPAR_XV_TPG_0_MAX_DATA_WIDTH 8
-#define XPAR_XV_TPG_0_SOLID_COLOR 1
-#define XPAR_XV_TPG_0_RAMP 1
-#define XPAR_XV_TPG_0_COLOR_BAR 1
-#define XPAR_XV_TPG_0_DISPLAY_PORT 1
-#define XPAR_XV_TPG_0_COLOR_SWEEP 1
-#define XPAR_XV_TPG_0_ZONE_PLATE 1
-#define XPAR_XV_TPG_0_FOREGROUND 1
-
-
-/******************************************************************/
-
 /* Definitions for driver VTC */
 #define XPAR_XVTC_NUM_INSTANCES 2
 
