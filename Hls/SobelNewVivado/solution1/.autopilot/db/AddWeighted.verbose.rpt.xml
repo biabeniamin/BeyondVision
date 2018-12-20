@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'AddWeighted'" level="0">
-<item name = "Date">Wed Dec 19 22:30:22 2018
+<item name = "Date">Thu Dec 20 08:49:05 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">SobelNewVivado</item>
@@ -48,12 +48,12 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="DSP">-, -, -, -</column>
-<column name="Expression">-, -, -, -</column>
+<column name="Expression">-, -, 0, 2</column>
 <column name="FIFO">-, -, -, -</column>
 <column name="Instance">0, 84, 9457, 13139</column>
 <column name="Memory">-, -, -, -</column>
-<column name="Multiplexer">-, -, -, 96</column>
-<column name="Register">-, -, 3, -</column>
+<column name="Multiplexer">-, -, -, 114</column>
+<column name="Register">-, -, 5, -</column>
 <specialColumn name="Available">730, 740, 269200, 129000</specialColumn>
 <specialColumn name="Utilization (%)">0, 11, 3, 10</specialColumn>
 </table>
@@ -79,14 +79,17 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_NS_fsm">15, 3, 1, 3</column>
+<column name="ap_done">9, 2, 1, 2</column>
 <column name="dst_data_stream_0_V_write">9, 2, 1, 2</column>
 <column name="dst_data_stream_1_V_write">9, 2, 1, 2</column>
 <column name="dst_data_stream_2_V_write">9, 2, 1, 2</column>
+<column name="real_start">9, 2, 1, 2</column>
 <column name="src1_data_stream_0_V_read">9, 2, 1, 2</column>
 <column name="src1_data_stream_1_V_read">9, 2, 1, 2</column>
 <column name="src1_data_stream_2_V_read">9, 2, 1, 2</column>
@@ -98,7 +101,9 @@
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">2, 0, 2, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
 <column name="grp_arithm_pro_fu_138_ap_start_reg">1, 0, 1, 0</column>
+<column name="start_once_reg">1, 0, 1, 0</column>
 </table>
 </item>
 </section>
@@ -111,9 +116,13 @@
 <column name="ap_clk">in, 1, ap_ctrl_hs, AddWeighted, return value</column>
 <column name="ap_rst">in, 1, ap_ctrl_hs, AddWeighted, return value</column>
 <column name="ap_start">in, 1, ap_ctrl_hs, AddWeighted, return value</column>
+<column name="start_full_n">in, 1, ap_ctrl_hs, AddWeighted, return value</column>
 <column name="ap_done">out, 1, ap_ctrl_hs, AddWeighted, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, AddWeighted, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, AddWeighted, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, AddWeighted, return value</column>
+<column name="start_out">out, 1, ap_ctrl_hs, AddWeighted, return value</column>
+<column name="start_write">out, 1, ap_ctrl_hs, AddWeighted, return value</column>
 <column name="src1_data_stream_0_V_dout">in, 8, ap_fifo, src1_data_stream_0_V, pointer</column>
 <column name="src1_data_stream_0_V_empty_n">in, 1, ap_fifo, src1_data_stream_0_V, pointer</column>
 <column name="src1_data_stream_0_V_read">out, 1, ap_fifo, src1_data_stream_0_V, pointer</column>

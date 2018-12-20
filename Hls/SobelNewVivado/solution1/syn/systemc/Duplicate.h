@@ -15,13 +15,17 @@
 namespace ap_rtl {
 
 struct Duplicate : public sc_module {
-    // Port declarations 33
+    // Port declarations 37
     sc_in_clk ap_clk;
     sc_in< sc_logic > ap_rst;
     sc_in< sc_logic > ap_start;
+    sc_in< sc_logic > start_full_n;
     sc_out< sc_logic > ap_done;
+    sc_in< sc_logic > ap_continue;
     sc_out< sc_logic > ap_idle;
     sc_out< sc_logic > ap_ready;
+    sc_out< sc_logic > start_out;
+    sc_out< sc_logic > start_write;
     sc_in< sc_lv<8> > src_data_stream_0_V_dout;
     sc_in< sc_logic > src_data_stream_0_V_empty_n;
     sc_out< sc_logic > src_data_stream_0_V_read;
@@ -59,8 +63,12 @@ struct Duplicate : public sc_module {
 
     sc_trace_file* mVcdFile;
 
+    sc_signal< sc_logic > real_start;
+    sc_signal< sc_logic > start_once_reg;
+    sc_signal< sc_logic > ap_done_reg;
     sc_signal< sc_lv<4> > ap_CS_fsm;
     sc_signal< sc_logic > ap_CS_fsm_state1;
+    sc_signal< sc_logic > internal_ap_ready;
     sc_signal< sc_logic > src_data_stream_0_V_blk_n;
     sc_signal< sc_logic > ap_CS_fsm_pp0_stage0;
     sc_signal< sc_logic > ap_enable_reg_pp0_iter1;
@@ -88,6 +96,7 @@ struct Duplicate : public sc_module {
     sc_signal< bool > ap_block_pp0_stage0_subdone;
     sc_signal< sc_logic > ap_condition_pp0_exit_iter0_state3;
     sc_signal< sc_lv<11> > t_V_reg_242;
+    sc_signal< bool > ap_block_state1;
     sc_signal< sc_logic > ap_CS_fsm_state5;
     sc_signal< bool > ap_block_pp0_stage0_01001;
     sc_signal< sc_lv<4> > ap_NS_fsm;
@@ -121,6 +130,7 @@ struct Duplicate : public sc_module {
     void thread_ap_block_pp0_stage0_01001();
     void thread_ap_block_pp0_stage0_11001();
     void thread_ap_block_pp0_stage0_subdone();
+    void thread_ap_block_state1();
     void thread_ap_block_state3_pp0_stage0_iter0();
     void thread_ap_block_state4_pp0_stage0_iter1();
     void thread_ap_condition_pp0_exit_iter0_state3();
@@ -150,13 +160,17 @@ struct Duplicate : public sc_module {
     void thread_exitcond3_fu_264_p2();
     void thread_exitcond_fu_276_p2();
     void thread_i_V_fu_270_p2();
+    void thread_internal_ap_ready();
     void thread_j_V_fu_282_p2();
+    void thread_real_start();
     void thread_src_data_stream_0_V_blk_n();
     void thread_src_data_stream_0_V_read();
     void thread_src_data_stream_1_V_blk_n();
     void thread_src_data_stream_1_V_read();
     void thread_src_data_stream_2_V_blk_n();
     void thread_src_data_stream_2_V_read();
+    void thread_start_out();
+    void thread_start_write();
     void thread_ap_NS_fsm();
 };
 

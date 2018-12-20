@@ -15,11 +15,12 @@
 namespace ap_rtl {
 
 struct Mat2AXIvideo : public sc_module {
-    // Port declarations 24
+    // Port declarations 25
     sc_in_clk ap_clk;
     sc_in< sc_logic > ap_rst;
     sc_in< sc_logic > ap_start;
     sc_out< sc_logic > ap_done;
+    sc_in< sc_logic > ap_continue;
     sc_out< sc_logic > ap_idle;
     sc_out< sc_logic > ap_ready;
     sc_in< sc_lv<8> > img_data_stream_0_V_dout;
@@ -50,6 +51,7 @@ struct Mat2AXIvideo : public sc_module {
 
     sc_trace_file* mVcdFile;
 
+    sc_signal< sc_logic > ap_done_reg;
     sc_signal< sc_lv<4> > ap_CS_fsm;
     sc_signal< sc_logic > ap_CS_fsm_state1;
     sc_signal< sc_lv<24> > AXI_video_strm_V_data_V_1_data_out;
@@ -157,6 +159,7 @@ struct Mat2AXIvideo : public sc_module {
     sc_signal< bool > ap_block_pp0_stage0_subdone;
     sc_signal< sc_logic > ap_condition_pp0_exit_iter0_state3;
     sc_signal< sc_lv<11> > t_V_reg_173;
+    sc_signal< bool > ap_block_state1;
     sc_signal< sc_logic > ap_CS_fsm_state6;
     sc_signal< sc_lv<1> > tmp_user_V_fu_122;
     sc_signal< bool > ap_block_pp0_stage0_01001;
@@ -169,8 +172,8 @@ struct Mat2AXIvideo : public sc_module {
     static const sc_lv<4> ap_ST_fsm_state2;
     static const sc_lv<4> ap_ST_fsm_pp0_stage0;
     static const sc_lv<4> ap_ST_fsm_state6;
-    static const bool ap_const_boolean_1;
     static const sc_lv<32> ap_const_lv32_0;
+    static const bool ap_const_boolean_1;
     static const sc_lv<1> ap_const_lv1_0;
     static const sc_lv<1> ap_const_lv1_1;
     static const sc_lv<2> ap_const_lv2_0;
@@ -258,6 +261,7 @@ struct Mat2AXIvideo : public sc_module {
     void thread_ap_block_pp0_stage0_01001();
     void thread_ap_block_pp0_stage0_11001();
     void thread_ap_block_pp0_stage0_subdone();
+    void thread_ap_block_state1();
     void thread_ap_block_state2();
     void thread_ap_block_state3_pp0_stage0_iter0();
     void thread_ap_block_state4_io();

@@ -5,10 +5,10 @@
 ############################################################
 open_project SobelNewVivado
 set_top SobelFilter
-add_files SobelVideo/test.bmp
-add_files SobelNewVivado/a.hpp
 add_files SobelNewVivado/a.cpp
-add_files -tb SobelNewVivado/test.cpp -cflags "-Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas"
+add_files SobelNewVivado/a.hpp
+add_files SobelVideo/test.bmp
+add_files -tb SobelNewVivado/test.cpp -cflags "-Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas"
 open_solution "solution1"
 set_part {xc7a200tsbg484-1} -tool vivado
 create_clock -period 10 -name default

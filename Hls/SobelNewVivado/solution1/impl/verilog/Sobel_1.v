@@ -12,6 +12,7 @@ module Sobel_1 (
         ap_rst,
         ap_start,
         ap_done,
+        ap_continue,
         ap_idle,
         ap_ready,
         p_src_data_stream_0_V_dout,
@@ -41,6 +42,7 @@ input   ap_clk;
 input   ap_rst;
 input   ap_start;
 output   ap_done;
+input   ap_continue;
 output   ap_idle;
 output   ap_ready;
 input  [7:0] p_src_data_stream_0_V_dout;
@@ -72,6 +74,7 @@ reg p_dst_data_stream_0_V_write;
 reg p_dst_data_stream_1_V_write;
 reg p_dst_data_stream_2_V_write;
 
+reg    ap_done_reg;
 (* fsm_encoding = "none" *) reg   [1:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
 wire    grp_Filter2D_fu_108_ap_start;
@@ -88,11 +91,14 @@ wire    grp_Filter2D_fu_108_p_dst_data_stream_1_V_write;
 wire   [7:0] grp_Filter2D_fu_108_p_dst_data_stream_2_V_din;
 wire    grp_Filter2D_fu_108_p_dst_data_stream_2_V_write;
 reg    grp_Filter2D_fu_108_ap_start_reg;
+reg    ap_block_state1_ignore_call6;
 wire    ap_CS_fsm_state2;
 reg   [1:0] ap_NS_fsm;
+reg    ap_block_state1;
 
 // power-on initialization
 initial begin
+#0 ap_done_reg = 1'b0;
 #0 ap_CS_fsm = 2'd1;
 #0 grp_Filter2D_fu_108_ap_start_reg = 1'b0;
 end
@@ -140,9 +146,21 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
+        ap_done_reg <= 1'b0;
+    end else begin
+        if ((ap_continue == 1'b1)) begin
+            ap_done_reg <= 1'b0;
+        end else if (((grp_Filter2D_fu_108_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
+            ap_done_reg <= 1'b1;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst == 1'b1) begin
         grp_Filter2D_fu_108_ap_start_reg <= 1'b0;
     end else begin
-        if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
+        if ((~((ap_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
             grp_Filter2D_fu_108_ap_start_reg <= 1'b1;
         end else if ((grp_Filter2D_fu_108_ap_ready == 1'b1)) begin
             grp_Filter2D_fu_108_ap_start_reg <= 1'b0;
@@ -151,10 +169,10 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (*) begin
-    if ((((ap_start == 1'b0) & (1'b1 == ap_CS_fsm_state1)) | ((grp_Filter2D_fu_108_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state2)))) begin
+    if (((grp_Filter2D_fu_108_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
         ap_done = 1'b1;
     end else begin
-        ap_done = 1'b0;
+        ap_done = ap_done_reg;
     end
 end
 
@@ -225,7 +243,7 @@ end
 always @ (*) begin
     case (ap_CS_fsm)
         ap_ST_fsm_state1 : begin
-            if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
+            if ((~((ap_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
                 ap_NS_fsm = ap_ST_fsm_state2;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state1;
@@ -247,6 +265,14 @@ end
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
 assign ap_CS_fsm_state2 = ap_CS_fsm[32'd1];
+
+always @ (*) begin
+    ap_block_state1 = ((ap_start == 1'b0) | (ap_done_reg == 1'b1));
+end
+
+always @ (*) begin
+    ap_block_state1_ignore_call6 = ((ap_start == 1'b0) | (ap_done_reg == 1'b1));
+end
 
 assign grp_Filter2D_fu_108_ap_start = grp_Filter2D_fu_108_ap_start_reg;
 

@@ -21,17 +21,12 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>2081163</Best-caseLatency>
-<Average-caseLatency>8337997</Average-caseLatency>
-<Worst-caseLatency>14596148</Worst-caseLatency>
-<DataflowPipelineThroughput>
-<range>
-<min>2081164</min>
-<max>14594227</max>
-</range>
-</DataflowPipelineThroughput>
-<Interval-min>2081164</Interval-min>
-<Interval-max>14594227</Interval-max>
+<Best-caseLatency>2108179</Best-caseLatency>
+<Average-caseLatency>undef</Average-caseLatency>
+<Worst-caseLatency>2108179</Worst-caseLatency>
+<DataflowPipelineThroughput>2108163</DataflowPipelineThroughput>
+<Interval-min>2108163</Interval-min>
+<Interval-max>2108163</Interval-max>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
 
@@ -39,8 +34,8 @@
 <Resources>
 <BRAM_18K>27</BRAM_18K>
 <DSP48E>111</DSP48E>
-<FF>13412</FF>
-<LUT>22734</LUT>
+<FF>13451</FF>
+<LUT>21976</LUT>
 </Resources>
 <AvailableResources>
 <BRAM_18K>730</BRAM_18K>
@@ -302,17 +297,6 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>ap_done</name>
-<Object>SobelFilter</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
-<RtlPorts>
 <name>ap_start</name>
 <Object>SobelFilter</Object>
 <Type>return value</Type>
@@ -320,6 +304,17 @@
 <IOProtocol>ap_ctrl_hs</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_done</name>
+<Object>SobelFilter</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>

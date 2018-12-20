@@ -10,7 +10,7 @@
 
 module SobelFilter_dadd_DeQ
 #(parameter
-    ID         = 135,
+    ID         = 139,
     NUM_STAGE  = 6,
     din0_WIDTH = 64,
     din1_WIDTH = 64,

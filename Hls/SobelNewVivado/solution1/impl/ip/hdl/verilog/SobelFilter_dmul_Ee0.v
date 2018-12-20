@@ -10,7 +10,7 @@
 
 module SobelFilter_dmul_Ee0
 #(parameter
-    ID         = 141,
+    ID         = 145,
     NUM_STAGE  = 6,
     din0_WIDTH = 64,
     din1_WIDTH = 64,

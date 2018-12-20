@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'CvtColor'" level="0">
-<item name = "Date">Wed Dec 19 22:30:22 2018
+<item name = "Date">Thu Dec 20 08:49:05 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">SobelNewVivado</item>
@@ -49,12 +49,12 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="DSP">-, -, -, -</column>
-<column name="Expression">-, -, 0, 70</column>
+<column name="Expression">-, -, 0, 72</column>
 <column name="FIFO">-, -, -, -</column>
 <column name="Instance">-, -, -, -</column>
 <column name="Memory">-, -, -, -</column>
-<column name="Multiplexer">-, -, -, 114</column>
-<column name="Register">-, -, 40, -</column>
+<column name="Multiplexer">-, -, -, 132</column>
+<column name="Register">-, -, 42, -</column>
 <specialColumn name="Available">730, 740, 269200, 129000</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, ~0</specialColumn>
 </table>
@@ -82,8 +82,9 @@
 <column name="i_1_fu_206_p2">+, 0, 0, 18, 11, 1</column>
 <column name="j_1_fu_218_p2">+, 0, 0, 18, 11, 1</column>
 <column name="ap_block_pp0_stage0_01001">and, 0, 0, 2, 1, 1</column>
-<column name="tmp_71_fu_212_p2">icmp, 0, 0, 13, 11, 9</column>
-<column name="tmp_s_fu_200_p2">icmp, 0, 0, 13, 11, 11</column>
+<column name="exitcond1_fu_200_p2">icmp, 0, 0, 13, 11, 11</column>
+<column name="exitcond_fu_212_p2">icmp, 0, 0, 13, 11, 9</column>
+<column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state4_pp0_stage0_iter1">or, 0, 0, 2, 1, 1</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 <column name="ap_enable_reg_pp0_iter1">xor, 0, 0, 2, 2, 1</column>
@@ -92,6 +93,7 @@
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_NS_fsm">27, 5, 1, 5</column>
+<column name="ap_done">9, 2, 1, 2</column>
 <column name="ap_enable_reg_pp0_iter1">15, 3, 1, 3</column>
 <column name="i_reg_178">9, 2, 11, 22</column>
 <column name="j_reg_189">9, 2, 11, 22</column>
@@ -101,17 +103,20 @@
 <column name="p_src_data_stream_0_V_blk_n">9, 2, 1, 2</column>
 <column name="p_src_data_stream_1_V_blk_n">9, 2, 1, 2</column>
 <column name="p_src_data_stream_2_V_blk_n">9, 2, 1, 2</column>
+<column name="real_start">9, 2, 1, 2</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">4, 0, 4, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter0">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="exitcond_reg_233">1, 0, 1, 0</column>
 <column name="i_1_reg_228">11, 0, 11, 0</column>
 <column name="i_reg_178">11, 0, 11, 0</column>
 <column name="j_reg_189">11, 0, 11, 0</column>
-<column name="tmp_71_reg_233">1, 0, 1, 0</column>
+<column name="start_once_reg">1, 0, 1, 0</column>
 </table>
 </item>
 </section>
@@ -124,9 +129,13 @@
 <column name="ap_clk">in, 1, ap_ctrl_hs, CvtColor, return value</column>
 <column name="ap_rst">in, 1, ap_ctrl_hs, CvtColor, return value</column>
 <column name="ap_start">in, 1, ap_ctrl_hs, CvtColor, return value</column>
+<column name="start_full_n">in, 1, ap_ctrl_hs, CvtColor, return value</column>
 <column name="ap_done">out, 1, ap_ctrl_hs, CvtColor, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, CvtColor, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, CvtColor, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, CvtColor, return value</column>
+<column name="start_out">out, 1, ap_ctrl_hs, CvtColor, return value</column>
+<column name="start_write">out, 1, ap_ctrl_hs, CvtColor, return value</column>
 <column name="p_src_data_stream_0_V_dout">in, 8, ap_fifo, p_src_data_stream_0_V, pointer</column>
 <column name="p_src_data_stream_0_V_empty_n">in, 1, ap_fifo, p_src_data_stream_0_V, pointer</column>
 <column name="p_src_data_stream_0_V_read">out, 1, ap_fifo, p_src_data_stream_0_V, pointer</column>

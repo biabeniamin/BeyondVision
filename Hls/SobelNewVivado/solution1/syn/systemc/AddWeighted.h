@@ -16,13 +16,17 @@
 namespace ap_rtl {
 
 struct AddWeighted : public sc_module {
-    // Port declarations 33
+    // Port declarations 37
     sc_in_clk ap_clk;
     sc_in< sc_logic > ap_rst;
     sc_in< sc_logic > ap_start;
+    sc_in< sc_logic > start_full_n;
     sc_out< sc_logic > ap_done;
+    sc_in< sc_logic > ap_continue;
     sc_out< sc_logic > ap_idle;
     sc_out< sc_logic > ap_ready;
+    sc_out< sc_logic > start_out;
+    sc_out< sc_logic > start_write;
     sc_in< sc_lv<8> > src1_data_stream_0_V_dout;
     sc_in< sc_logic > src1_data_stream_0_V_empty_n;
     sc_out< sc_logic > src1_data_stream_0_V_read;
@@ -61,8 +65,12 @@ struct AddWeighted : public sc_module {
     sc_trace_file* mVcdFile;
 
     arithm_pro* grp_arithm_pro_fu_138;
+    sc_signal< sc_logic > real_start;
+    sc_signal< sc_logic > start_once_reg;
+    sc_signal< sc_logic > ap_done_reg;
     sc_signal< sc_lv<2> > ap_CS_fsm;
     sc_signal< sc_logic > ap_CS_fsm_state1;
+    sc_signal< sc_logic > internal_ap_ready;
     sc_signal< sc_logic > grp_arithm_pro_fu_138_ap_start;
     sc_signal< sc_logic > grp_arithm_pro_fu_138_ap_done;
     sc_signal< sc_logic > grp_arithm_pro_fu_138_ap_idle;
@@ -80,8 +88,10 @@ struct AddWeighted : public sc_module {
     sc_signal< sc_lv<8> > grp_arithm_pro_fu_138_dst_data_stream_2_V_din;
     sc_signal< sc_logic > grp_arithm_pro_fu_138_dst_data_stream_2_V_write;
     sc_signal< sc_logic > grp_arithm_pro_fu_138_ap_start_reg;
+    sc_signal< bool > ap_block_state1_ignore_call9;
     sc_signal< sc_logic > ap_CS_fsm_state2;
     sc_signal< sc_lv<2> > ap_NS_fsm;
+    sc_signal< bool > ap_block_state1;
     static const sc_logic ap_const_logic_1;
     static const sc_logic ap_const_logic_0;
     static const sc_lv<2> ap_ST_fsm_state1;
@@ -93,6 +103,8 @@ struct AddWeighted : public sc_module {
     void thread_ap_clk_no_reset_();
     void thread_ap_CS_fsm_state1();
     void thread_ap_CS_fsm_state2();
+    void thread_ap_block_state1();
+    void thread_ap_block_state1_ignore_call9();
     void thread_ap_done();
     void thread_ap_idle();
     void thread_ap_ready();
@@ -103,12 +115,16 @@ struct AddWeighted : public sc_module {
     void thread_dst_data_stream_2_V_din();
     void thread_dst_data_stream_2_V_write();
     void thread_grp_arithm_pro_fu_138_ap_start();
+    void thread_internal_ap_ready();
+    void thread_real_start();
     void thread_src1_data_stream_0_V_read();
     void thread_src1_data_stream_1_V_read();
     void thread_src1_data_stream_2_V_read();
     void thread_src2_data_stream_0_V_read();
     void thread_src2_data_stream_1_V_read();
     void thread_src2_data_stream_2_V_read();
+    void thread_start_out();
+    void thread_start_write();
     void thread_ap_NS_fsm();
 };
 
