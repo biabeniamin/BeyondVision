@@ -33,6 +33,7 @@ set_property target_language VHDL [current_project]
 set_property ip_repo_paths {
   c:/Digilent19/digilent
   c:/Digilent19/vivado-library-master
+  c:/Digilent19/Hls
   c:/Digilent19/hls_lib
 } [current_project]
 set_property ip_output_repo c:/Digilent19/Sobel_zybo_z7/block_compile.cache/ip [current_project]

@@ -732,7 +732,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:a5d95c6c</spirit:value>
+            <spirit:value>8:3d0c0c5c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -751,7 +751,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:a5d95c6c</spirit:value>
+            <spirit:value>8:3d0c0c5c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -769,7 +769,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:96d939a3</spirit:value>
+            <spirit:value>8:f0d785e5</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -788,7 +788,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:96d939a3</spirit:value>
+            <spirit:value>8:f0d785e5</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -806,7 +806,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:a5d95c6c</spirit:value>
+            <spirit:value>8:3d0c0c5c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>

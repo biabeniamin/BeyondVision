@@ -75,6 +75,11 @@ XGpio hpd_in2;
 XAxiVdma vdma;
 XAxiVdma_DmaSetup vdmaDMA;
 XAxiVdma_Config *vdmaConfig;
+
+
+
+
+
 ClkConfig clkReg;
 ClkMode clkMode;
 u32 frameBuf[DISPLAY_NUM_FRAMES][DEMO_MAX_FRAME];
@@ -88,6 +93,11 @@ int main()
 {
     init_platform();
     disable_caches();
+
+
+
+
+
     XVtc_Timing vtcTiming;
     XVtc_SourceSelect SourceSelect;
     int Status;
