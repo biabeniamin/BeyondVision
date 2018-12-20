@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Dec 19 22:54:46 2018" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Dec 20 08:10:21 2018" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:nexys_video:part0:1.1" DEVICE="7a200t" NAME="hdmi" PACKAGE="sbg484" SPEEDGRADE="-1"/>
 
@@ -125,89 +125,84 @@
   </EXTERNALINTERFACES>
 
   <MODULES>
-    <MODULE FULLNAME="/SobelFilter_0" HWVERSION="1.0" INSTANCE="SobelFilter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="SobelFilter" VLNV="xilinx.com:hls:SobelFilter:1.0">
+    <MODULE FULLNAME="/PassThrough_0" HWVERSION="1.0" INSTANCE="PassThrough_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="PassThrough" VLNV="xilinx.com:hls:PassThrough:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="hdmi_SobelFilter_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="hdmi_PassThrough_0_0"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
-        <PARAMETER NAME="latency" VALUE="2081163"/>
+        <PARAMETER NAME="latency" VALUE="5"/>
         <PARAMETER NAME="II" VALUE="x"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="INPUT_STREAM_TVALID" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TVALID">
+        <PORT DIR="I" NAME="INPUT_STREAM_TVALID" SIGIS="undef" SIGNAME="PassThrough_0_INPUT_STREAM_TVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axis_switch_0" PORT="m_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="INPUT_STREAM_TREADY" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TREADY">
+        <PORT DIR="O" NAME="INPUT_STREAM_TREADY" SIGIS="undef" SIGNAME="PassThrough_0_INPUT_STREAM_TREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axis_switch_0" PORT="m_axis_tready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="23" NAME="INPUT_STREAM_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TDATA">
+        <PORT DIR="I" LEFT="23" NAME="INPUT_STREAM_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="PassThrough_0_INPUT_STREAM_TDATA">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axis_switch_0" PORT="m_axis_tdata"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="2" NAME="INPUT_STREAM_TKEEP" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="I" LEFT="2" NAME="INPUT_STREAM_TSTRB" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="0" NAME="INPUT_STREAM_TUSER" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TUSER">
+        <PORT DIR="I" LEFT="0" NAME="INPUT_STREAM_TUSER" RIGHT="0" SIGIS="undef" SIGNAME="PassThrough_0_INPUT_STREAM_TUSER">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axis_switch_0" PORT="m_axis_tuser"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="INPUT_STREAM_TLAST" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TLAST">
+        <PORT DIR="I" LEFT="0" NAME="INPUT_STREAM_TLAST" RIGHT="0" SIGIS="undef" SIGNAME="PassThrough_0_INPUT_STREAM_TLAST">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axis_switch_0" PORT="m_axis_tlast"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="0" NAME="INPUT_STREAM_TID" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="0" NAME="INPUT_STREAM_TDEST" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TDEST">
+        <PORT DIR="I" LEFT="0" NAME="INPUT_STREAM_TDEST" RIGHT="0" SIGIS="undef" SIGNAME="PassThrough_0_INPUT_STREAM_TDEST">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axis_switch_0" PORT="m_axis_tdest"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="OUTPUT_STREAM_TVALID" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TVALID">
+        <PORT DIR="O" NAME="OUTPUT_STREAM_TVALID" SIGIS="undef" SIGNAME="PassThrough_0_OUTPUT_STREAM_TVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="OUTPUT_STREAM_TREADY" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TREADY">
+        <PORT DIR="I" NAME="OUTPUT_STREAM_TREADY" SIGIS="undef" SIGNAME="PassThrough_0_OUTPUT_STREAM_TREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_tready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="23" NAME="OUTPUT_STREAM_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TDATA">
+        <PORT DIR="O" LEFT="23" NAME="OUTPUT_STREAM_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="PassThrough_0_OUTPUT_STREAM_TDATA">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_tdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="2" NAME="OUTPUT_STREAM_TKEEP" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TKEEP">
+        <PORT DIR="O" LEFT="2" NAME="OUTPUT_STREAM_TKEEP" RIGHT="0" SIGIS="undef" SIGNAME="PassThrough_0_OUTPUT_STREAM_TKEEP">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_tkeep"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="2" NAME="OUTPUT_STREAM_TSTRB" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="0" NAME="OUTPUT_STREAM_TUSER" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TUSER">
+        <PORT DIR="O" LEFT="0" NAME="OUTPUT_STREAM_TUSER" RIGHT="0" SIGIS="undef" SIGNAME="PassThrough_0_OUTPUT_STREAM_TUSER">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_tuser"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="0" NAME="OUTPUT_STREAM_TLAST" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TLAST">
+        <PORT DIR="O" LEFT="0" NAME="OUTPUT_STREAM_TLAST" RIGHT="0" SIGIS="undef" SIGNAME="PassThrough_0_OUTPUT_STREAM_TLAST">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_tlast"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="OUTPUT_STREAM_TID" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" LEFT="0" NAME="OUTPUT_STREAM_TDEST" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="0" NAME="Enabled_V" RIGHT="0" SIGIS="data" SIGNAME="axi_gpio_1_gpio_io_o">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_gpio_1" PORT="gpio_io_o"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT CLKFREQUENCY="160000000" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="mig_7series_0_ui_addn_clk_0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="mig_7series_0" PORT="ui_addn_clk_0"/>
@@ -218,17 +213,17 @@
             <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_o"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="ap_done" SIGIS="undef"/>
         <PORT DIR="I" NAME="ap_start" SIGIS="undef" SIGNAME="axi_gpio_0_gpio2_io_o">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio2_io_o"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" NAME="ap_done" SIGIS="undef"/>
         <PORT DIR="O" NAME="ap_ready" SIGIS="undef"/>
         <PORT DIR="O" NAME="ap_idle" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="axis_switch_0_M01_AXIS" NAME="INPUT_STREAM" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+        <BUSINTERFACE BUSNAME="axis_switch_0_M00_AXIS" NAME="INPUT_STREAM" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="1"/>
@@ -253,12 +248,12 @@
             <PORTMAP LOGICAL="TDEST" PHYSICAL="INPUT_STREAM_TDEST"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="SobelFilter_0_OUTPUT_STREAM" NAME="OUTPUT_STREAM" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+        <BUSINTERFACE BUSNAME="PassThrough_0_OUTPUT_STREAM" NAME="OUTPUT_STREAM" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="1"/>
           <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
-          <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TDATA_WIDTH 24 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TUSER_WIDTH 1}"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
           <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
@@ -279,10 +274,10 @@
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="__NOC__" NAME="ap_ctrl" TYPE="TARGET" VLNV="xilinx.com:interface:acc_handshake:1.0">
-          <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {done {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} start {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} ready {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} idle {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {start {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} done {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} ready {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} idle {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}"/>
           <PORTMAPS>
-            <PORTMAP LOGICAL="done" PHYSICAL="ap_done"/>
             <PORTMAP LOGICAL="start" PHYSICAL="ap_start"/>
+            <PORTMAP LOGICAL="done" PHYSICAL="ap_done"/>
             <PORTMAP LOGICAL="ready" PHYSICAL="ap_ready"/>
             <PORTMAP LOGICAL="idle" PHYSICAL="ap_idle"/>
           </PORTMAPS>
@@ -782,12 +777,12 @@
             <CONNECTION INSTANCE="v_vid_in_axi4s_0" PORT="aresetn"/>
             <CONNECTION INSTANCE="axis_subset_converter_1" PORT="aresetn"/>
             <CONNECTION INSTANCE="axis_switch_0" PORT="aresetn"/>
-            <CONNECTION INSTANCE="SobelFilter_0" PORT="ap_rst_n"/>
+            <CONNECTION INSTANCE="PassThrough_0" PORT="ap_rst_n"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="gpio2_io_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio2_io_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="SobelFilter_0" PORT="ap_start"/>
+            <CONNECTION INSTANCE="PassThrough_0" PORT="ap_start"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1145,11 +1140,7 @@
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M09_AXI_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="1" NAME="gpio_io_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_1_gpio_io_o">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="SobelFilter_0" PORT="Enabled_V"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="gpio_io_o" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" LEFT="0" NAME="gpio2_io_o" RIGHT="0" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES>
@@ -5628,34 +5619,34 @@
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S01_AXI_bready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="23" NAME="s_axis_s2mm_tdata" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TDATA">
+        <PORT DIR="I" LEFT="23" NAME="s_axis_s2mm_tdata" RIGHT="0" SIGIS="undef" SIGNAME="PassThrough_0_OUTPUT_STREAM_TDATA">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="SobelFilter_0" PORT="OUTPUT_STREAM_TDATA"/>
+            <CONNECTION INSTANCE="PassThrough_0" PORT="OUTPUT_STREAM_TDATA"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="2" NAME="s_axis_s2mm_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TKEEP">
+        <PORT DIR="I" LEFT="2" NAME="s_axis_s2mm_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="PassThrough_0_OUTPUT_STREAM_TKEEP">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="SobelFilter_0" PORT="OUTPUT_STREAM_TKEEP"/>
+            <CONNECTION INSTANCE="PassThrough_0" PORT="OUTPUT_STREAM_TKEEP"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="s_axis_s2mm_tuser" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TUSER">
+        <PORT DIR="I" LEFT="0" NAME="s_axis_s2mm_tuser" RIGHT="0" SIGIS="undef" SIGNAME="PassThrough_0_OUTPUT_STREAM_TUSER">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="SobelFilter_0" PORT="OUTPUT_STREAM_TUSER"/>
+            <CONNECTION INSTANCE="PassThrough_0" PORT="OUTPUT_STREAM_TUSER"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axis_s2mm_tvalid" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TVALID">
+        <PORT DIR="I" NAME="s_axis_s2mm_tvalid" SIGIS="undef" SIGNAME="PassThrough_0_OUTPUT_STREAM_TVALID">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="SobelFilter_0" PORT="OUTPUT_STREAM_TVALID"/>
+            <CONNECTION INSTANCE="PassThrough_0" PORT="OUTPUT_STREAM_TVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axis_s2mm_tready" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TREADY">
+        <PORT DIR="O" NAME="s_axis_s2mm_tready" SIGIS="undef" SIGNAME="PassThrough_0_OUTPUT_STREAM_TREADY">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="SobelFilter_0" PORT="OUTPUT_STREAM_TREADY"/>
+            <CONNECTION INSTANCE="PassThrough_0" PORT="OUTPUT_STREAM_TREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axis_s2mm_tlast" SIGIS="undef" SIGNAME="SobelFilter_0_OUTPUT_STREAM_TLAST">
+        <PORT DIR="I" NAME="s_axis_s2mm_tlast" SIGIS="undef" SIGNAME="PassThrough_0_OUTPUT_STREAM_TLAST">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="SobelFilter_0" PORT="OUTPUT_STREAM_TLAST"/>
+            <CONNECTION INSTANCE="PassThrough_0" PORT="OUTPUT_STREAM_TLAST"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="mm2s_introut" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="axi_vdma_0_mm2s_introut">
@@ -5839,7 +5830,7 @@
             <PORTMAP LOGICAL="TVALID" PHYSICAL="m_axis_mm2s_tvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="SobelFilter_0_OUTPUT_STREAM" NAME="S_AXIS_S2MM" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+        <BUSINTERFACE BUSNAME="PassThrough_0_OUTPUT_STREAM" NAME="S_AXIS_S2MM" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
@@ -5851,7 +5842,7 @@
           <PARAMETER NAME="FREQ_HZ" VALUE="160000000"/>
           <PARAMETER NAME="PHASE" VALUE="0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="hdmi_mig_7series_0_0_ui_clk"/>
-          <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TDATA_WIDTH 24 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TUSER_WIDTH 1}"/>
           <PORTMAPS>
             <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_s2mm_tdata"/>
             <PORTMAP LOGICAL="TKEEP" PHYSICAL="s_axis_s2mm_tkeep"/>
@@ -6557,34 +6548,34 @@
             <CONNECTION INSTANCE="axis_subset_converter_1" PORT="m_axis_tuser"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="1" NAME="m_axis_tvalid" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TVALID">
+        <PORT DIR="O" LEFT="1" NAME="m_axis_tvalid" RIGHT="0" SIGIS="undef" SIGNAME="PassThrough_0_INPUT_STREAM_TVALID">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="SobelFilter_0" PORT="INPUT_STREAM_TVALID"/>
+            <CONNECTION INSTANCE="PassThrough_0" PORT="INPUT_STREAM_TVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="m_axis_tready" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TREADY">
+        <PORT DIR="I" LEFT="1" NAME="m_axis_tready" RIGHT="0" SIGIS="undef" SIGNAME="PassThrough_0_INPUT_STREAM_TREADY">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="SobelFilter_0" PORT="INPUT_STREAM_TREADY"/>
+            <CONNECTION INSTANCE="PassThrough_0" PORT="INPUT_STREAM_TREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="47" NAME="m_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TDATA">
+        <PORT DIR="O" LEFT="47" NAME="m_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="PassThrough_0_INPUT_STREAM_TDATA">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="SobelFilter_0" PORT="INPUT_STREAM_TDATA"/>
+            <CONNECTION INSTANCE="PassThrough_0" PORT="INPUT_STREAM_TDATA"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="1" NAME="m_axis_tlast" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TLAST">
+        <PORT DIR="O" LEFT="1" NAME="m_axis_tlast" RIGHT="0" SIGIS="undef" SIGNAME="PassThrough_0_INPUT_STREAM_TLAST">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="SobelFilter_0" PORT="INPUT_STREAM_TLAST"/>
+            <CONNECTION INSTANCE="PassThrough_0" PORT="INPUT_STREAM_TLAST"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="1" NAME="m_axis_tdest" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TDEST">
+        <PORT DIR="O" LEFT="1" NAME="m_axis_tdest" RIGHT="0" SIGIS="undef" SIGNAME="PassThrough_0_INPUT_STREAM_TDEST">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="SobelFilter_0" PORT="INPUT_STREAM_TDEST"/>
+            <CONNECTION INSTANCE="PassThrough_0" PORT="INPUT_STREAM_TDEST"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="1" NAME="m_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="SobelFilter_0_INPUT_STREAM_TUSER">
+        <PORT DIR="O" LEFT="1" NAME="m_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="PassThrough_0_INPUT_STREAM_TUSER">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="SobelFilter_0" PORT="INPUT_STREAM_TUSER"/>
+            <CONNECTION INSTANCE="PassThrough_0" PORT="INPUT_STREAM_TUSER"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="s_decode_err" RIGHT="0" SIGIS="undef"/>
@@ -6612,7 +6603,7 @@
             <PORTMAP LOGICAL="TUSER" PHYSICAL="s_axis_tuser"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="M00_AXIS" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
+        <BUSINTERFACE BUSNAME="axis_switch_0_M00_AXIS" NAME="M00_AXIS" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
@@ -6634,7 +6625,7 @@
             <PORTMAP LOGICAL="TUSER" PHYSICAL="m_axis_tuser"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="axis_switch_0_M01_AXIS" NAME="M01_AXIS" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="M01_AXIS" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
@@ -13004,7 +12995,7 @@
             <CONNECTION INSTANCE="axis_subset_converter_1" PORT="aclk"/>
             <CONNECTION INSTANCE="rst_hdmi_160M" PORT="slowest_sync_clk"/>
             <CONNECTION INSTANCE="axis_switch_0" PORT="aclk"/>
-            <CONNECTION INSTANCE="SobelFilter_0" PORT="ap_clk"/>
+            <CONNECTION INSTANCE="PassThrough_0" PORT="ap_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="200000000" DIR="O" NAME="ui_addn_clk_1" SIGIS="clk" SIGNAME="mig_7series_0_ui_addn_clk_1">

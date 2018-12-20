@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="36">
   <CompositeFile CompositeFileTopName="hdmi" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1545252886"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1545252886"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1545252886"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1545252886"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1545286221"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1545286221"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1545286221"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1545286221"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\hdmi_axi_dynclk_0_0\hdmi_axi_dynclk_0_0.xci" Type="IP">
         <Instance HierarchyPath="axi_dynclk_0"/>
@@ -273,14 +273,6 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\hdmi_SobelFilter_0_0\hdmi_SobelFilter_0_0.xci" Type="IP">
-        <Instance HierarchyPath="SobelFilter_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
       <File Name="ip\hdmi_axi_gpio_1_0\hdmi_axi_gpio_1_0.xci" Type="IP">
         <Instance HierarchyPath="axi_gpio_1"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
@@ -291,6 +283,14 @@
       </File>
       <File Name="ip\hdmi_axis_switch_0_0\hdmi_axis_switch_0_0.xci" Type="IP">
         <Instance HierarchyPath="axis_switch_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\hdmi_PassThrough_0_0\hdmi_PassThrough_0_0.xci" Type="IP">
+        <Instance HierarchyPath="PassThrough_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

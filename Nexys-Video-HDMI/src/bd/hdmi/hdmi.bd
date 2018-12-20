@@ -609,10 +609,10 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>SobelFilter_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="hls" spirit:name="SobelFilter" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:instanceName>PassThrough_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="hls" spirit:name="PassThrough" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">hdmi_SobelFilter_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">hdmi_PassThrough_0_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>
@@ -758,13 +758,13 @@
         <spirit:activeInterface spirit:busRef="S00_AXIS" spirit:componentRef="axis_switch_0"/>
       </spirit:interconnection>
       <spirit:interconnection>
-        <spirit:name>axis_switch_0_M01_AXIS</spirit:name>
-        <spirit:activeInterface spirit:busRef="INPUT_STREAM" spirit:componentRef="SobelFilter_0"/>
-        <spirit:activeInterface spirit:busRef="M01_AXIS" spirit:componentRef="axis_switch_0"/>
+        <spirit:name>axis_switch_0_M00_AXIS</spirit:name>
+        <spirit:activeInterface spirit:busRef="M00_AXIS" spirit:componentRef="axis_switch_0"/>
+        <spirit:activeInterface spirit:busRef="INPUT_STREAM" spirit:componentRef="PassThrough_0"/>
       </spirit:interconnection>
       <spirit:interconnection>
-        <spirit:name>SobelFilter_0_OUTPUT_STREAM</spirit:name>
-        <spirit:activeInterface spirit:busRef="OUTPUT_STREAM" spirit:componentRef="SobelFilter_0"/>
+        <spirit:name>PassThrough_0_OUTPUT_STREAM</spirit:name>
+        <spirit:activeInterface spirit:busRef="OUTPUT_STREAM" spirit:componentRef="PassThrough_0"/>
         <spirit:activeInterface spirit:busRef="S_AXIS_S2MM" spirit:componentRef="axi_vdma_0"/>
       </spirit:interconnection>
     </spirit:interconnections>
@@ -846,7 +846,7 @@
         <spirit:internalPortReference spirit:componentRef="axis_subset_converter_1" spirit:portRef="aclk"/>
         <spirit:internalPortReference spirit:componentRef="rst_hdmi_160M" spirit:portRef="slowest_sync_clk"/>
         <spirit:internalPortReference spirit:componentRef="axis_switch_0" spirit:portRef="aclk"/>
-        <spirit:internalPortReference spirit:componentRef="SobelFilter_0" spirit:portRef="ap_clk"/>
+        <spirit:internalPortReference spirit:componentRef="PassThrough_0" spirit:portRef="ap_clk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>mig_7series_0_ui_addn_clk_2</spirit:name>
@@ -984,17 +984,12 @@
         <spirit:internalPortReference spirit:componentRef="v_vid_in_axi4s_0" spirit:portRef="aresetn"/>
         <spirit:internalPortReference spirit:componentRef="axis_subset_converter_1" spirit:portRef="aresetn"/>
         <spirit:internalPortReference spirit:componentRef="axis_switch_0" spirit:portRef="aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="SobelFilter_0" spirit:portRef="ap_rst_n"/>
+        <spirit:internalPortReference spirit:componentRef="PassThrough_0" spirit:portRef="ap_rst_n"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>axi_gpio_0_gpio2_io_o</spirit:name>
         <spirit:internalPortReference spirit:componentRef="axi_gpio_0" spirit:portRef="gpio2_io_o"/>
-        <spirit:internalPortReference spirit:componentRef="SobelFilter_0" spirit:portRef="ap_start"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>axi_gpio_1_gpio_io_o</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="axi_gpio_1" spirit:portRef="gpio_io_o"/>
-        <spirit:internalPortReference spirit:componentRef="SobelFilter_0" spirit:portRef="Enabled_V"/>
+        <spirit:internalPortReference spirit:componentRef="PassThrough_0" spirit:portRef="ap_start"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>
@@ -6205,6 +6200,14 @@
     <spirit:version>10.0</spirit:version>
     <spirit:busInterfaces>
       <spirit:busInterface>
+        <spirit:name>M_AXI_DC</spirit:name>
+        <spirit:master>
+          <spirit:addressSpaceRef spirit:addressSpaceRef="Data"/>
+        </spirit:master>
+        <spirit:busType spirit:library="interface" spirit:name="aximm" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="interface" spirit:name="aximm_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+      </spirit:busInterface>
+      <spirit:busInterface>
         <spirit:name>DLMB</spirit:name>
         <spirit:master>
           <spirit:addressSpaceRef spirit:addressSpaceRef="Data"/>
@@ -6221,9 +6224,9 @@
         <spirit:abstractionType spirit:library="interface" spirit:name="aximm_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
       </spirit:busInterface>
       <spirit:busInterface>
-        <spirit:name>M_AXI_DC</spirit:name>
+        <spirit:name>M_AXI_IC</spirit:name>
         <spirit:master>
-          <spirit:addressSpaceRef spirit:addressSpaceRef="Data"/>
+          <spirit:addressSpaceRef spirit:addressSpaceRef="Instruction"/>
         </spirit:master>
         <spirit:busType spirit:library="interface" spirit:name="aximm" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:abstractionType spirit:library="interface" spirit:name="aximm_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
@@ -6235,14 +6238,6 @@
         </spirit:master>
         <spirit:busType spirit:library="interface" spirit:name="lmb" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:abstractionType spirit:library="interface" spirit:name="lmb_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>M_AXI_IC</spirit:name>
-        <spirit:master>
-          <spirit:addressSpaceRef spirit:addressSpaceRef="Instruction"/>
-        </spirit:master>
-        <spirit:busType spirit:library="interface" spirit:name="aximm" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="interface" spirit:name="aximm_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
       </spirit:busInterface>
     </spirit:busInterfaces>
     <spirit:addressSpaces>
