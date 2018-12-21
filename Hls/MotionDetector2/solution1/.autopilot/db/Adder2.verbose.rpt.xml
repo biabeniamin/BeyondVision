@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'Adder2'" level="0">
-<item name = "Date">Fri Dec 21 12:39:11 2018
+<item name = "Date">Fri Dec 21 20:36:04 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">MotionDetector2</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 5.852, 1.25</column>
+<column name="ap_clk">10.00, 4.217, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">5, 8371204, 5, 8371204, none</column>
+<column name="">3, 8371202, 3, 8371202, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- read_A">3, 8371202, 3, 1, 1, 1 ~ 8371200, yes</column>
+<column name="- read_A">1, 8371200, 1, 1, 1, 1 ~ 8371200, yes</column>
 </table>
 </item>
 </section>
@@ -48,14 +48,14 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="DSP">-, -, -, -</column>
-<column name="Expression">-, -, 0, 527</column>
+<column name="Expression">-, -, 0, 115</column>
 <column name="FIFO">-, -, -, -</column>
 <column name="Instance">0, -, 302, 488</column>
 <column name="Memory">-, -, -, -</column>
-<column name="Multiplexer">-, -, -, 222</column>
-<column name="Register">-, -, 580, -</column>
+<column name="Multiplexer">-, -, -, 129</column>
+<column name="Register">-, -, 189, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
-<specialColumn name="Utilization (%)">0, 0, ~0, 2</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, 1</specialColumn>
 </table>
 </item>
 <item name = "Detail">
@@ -79,43 +79,17 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="differentBytes_3_fu_548_p2">+, 0, 0, 39, 1, 32</column>
-<column name="in1Count_3_fu_289_p2">+, 0, 0, 30, 23, 1</column>
-<column name="suma_1_3_fu_566_p2">+, 0, 0, 32, 32, 32</column>
-<column name="tmp3_fu_536_p2">+, 0, 0, 14, 10, 10</column>
-<column name="tmp4_fu_560_p2">+, 0, 0, 32, 32, 32</column>
-<column name="tmp5_fu_542_p2">+, 0, 0, 14, 10, 10</column>
-<column name="diff_1_1_fu_420_p2">-, 0, 0, 15, 1, 9</column>
-<column name="diff_1_2_fu_469_p2">-, 0, 0, 15, 1, 9</column>
-<column name="diff_1_3_fu_518_p2">-, 0, 0, 15, 1, 9</column>
-<column name="diff_1_fu_371_p2">-, 0, 0, 15, 1, 9</column>
-<column name="diff_3_fu_504_p2">-, 0, 0, 15, 9, 9</column>
-<column name="diff_4_fu_455_p2">-, 0, 0, 15, 9, 9</column>
-<column name="diff_fu_357_p2">-, 0, 0, 15, 9, 9</column>
-<column name="diff_s_fu_406_p2">-, 0, 0, 15, 9, 9</column>
+<column name="differentBytes_2_fu_215_p2">+, 0, 0, 39, 32, 32</column>
+<column name="in1Count_3_fu_201_p2">+, 0, 0, 30, 23, 1</column>
 <column name="INPUT_STREAM_V_data_V_0_load_A">and, 0, 0, 2, 1, 1</column>
 <column name="INPUT_STREAM_V_data_V_0_load_B">and, 0, 0, 2, 1, 1</column>
 <column name="INPUT_STREAM_V_last_V_0_load_A">and, 0, 0, 2, 1, 1</column>
 <column name="INPUT_STREAM_V_last_V_0_load_B">and, 0, 0, 2, 1, 1</column>
-<column name="LAST_STREAM_V_data_V_0_load_A">and, 0, 0, 2, 1, 1</column>
-<column name="LAST_STREAM_V_data_V_0_load_B">and, 0, 0, 2, 1, 1</column>
-<column name="ap_block_state2_pp0_stage0_iter0">and, 0, 0, 2, 1, 1</column>
-<column name="ap_block_state3_pp0_stage0_iter1">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_497">and, 0, 0, 2, 1, 1</column>
 <column name="INPUT_STREAM_V_data_V_0_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
 <column name="INPUT_STREAM_V_last_V_0_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
-<column name="LAST_STREAM_V_data_V_0_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
-<column name="tmp_3_fu_345_p2">icmp, 0, 0, 18, 32, 32</column>
-<column name="tmp_fu_283_p2">icmp, 0, 0, 18, 23, 16</column>
-<column name="ap_block_pp0_stage0_11001">or, 0, 0, 2, 1, 1</column>
-<column name="ap_predicate_tran4to5_state2">or, 0, 0, 2, 1, 1</column>
-<column name="diff_2_1_fu_426_p3">select, 0, 0, 9, 1, 9</column>
-<column name="diff_2_2_fu_475_p3">select, 0, 0, 9, 1, 9</column>
-<column name="diff_2_3_fu_524_p3">select, 0, 0, 9, 1, 9</column>
-<column name="diff_2_fu_377_p3">select, 0, 0, 9, 1, 9</column>
-<column name="differentBytes_1_fu_583_p3">select, 0, 0, 32, 1, 32</column>
-<column name="sum_V_1_fu_576_p3">select, 0, 0, 64, 1, 64</column>
-<column name="suma_2_fu_590_p3">select, 0, 0, 32, 1, 32</column>
-<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+<column name="tmp_fu_195_p2">icmp, 0, 0, 18, 23, 16</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -126,20 +100,11 @@
 <column name="INPUT_STREAM_V_dest_V_0_state">15, 3, 2, 6</column>
 <column name="INPUT_STREAM_V_last_V_0_data_out">9, 2, 1, 2</column>
 <column name="INPUT_STREAM_V_last_V_0_state">15, 3, 2, 6</column>
-<column name="LAST_STREAM_TDATA_blk_n">9, 2, 1, 2</column>
-<column name="LAST_STREAM_V_data_V_0_data_out">9, 2, 32, 64</column>
-<column name="LAST_STREAM_V_data_V_0_state">15, 3, 2, 6</column>
-<column name="LAST_STREAM_V_dest_V_0_state">15, 3, 2, 6</column>
 <column name="ap_NS_fsm">21, 4, 1, 4</column>
-<column name="ap_enable_reg_pp0_iter2">9, 2, 1, 2</column>
-<column name="ap_phi_mux_in1Count_phi_fu_209_p4">9, 2, 23, 46</column>
-<column name="differentBytes_2_reg_262">9, 2, 32, 64</column>
-<column name="differentBytes_reg_229">9, 2, 32, 64</column>
-<column name="in1Count_1_reg_273">9, 2, 23, 46</column>
-<column name="in1Count_reg_205">9, 2, 23, 46</column>
-<column name="lhs_V_reg_252">9, 2, 64, 128</column>
-<column name="p_0_reg_217">9, 2, 64, 128</column>
-<column name="suma_reg_241">9, 2, 32, 64</column>
+<column name="differentBytes_1_reg_174">9, 2, 32, 64</column>
+<column name="differentBytes_reg_150">9, 2, 32, 64</column>
+<column name="in1Count_1_reg_185">9, 2, 23, 46</column>
+<column name="in1Count_reg_162">9, 2, 23, 46</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
@@ -155,38 +120,11 @@
 <column name="INPUT_STREAM_V_last_V_0_sel_rd">1, 0, 1, 0</column>
 <column name="INPUT_STREAM_V_last_V_0_sel_wr">1, 0, 1, 0</column>
 <column name="INPUT_STREAM_V_last_V_0_state">2, 0, 2, 0</column>
-<column name="LAST_STREAM_V_data_V_0_payload_A">32, 0, 32, 0</column>
-<column name="LAST_STREAM_V_data_V_0_payload_B">32, 0, 32, 0</column>
-<column name="LAST_STREAM_V_data_V_0_sel_rd">1, 0, 1, 0</column>
-<column name="LAST_STREAM_V_data_V_0_sel_wr">1, 0, 1, 0</column>
-<column name="LAST_STREAM_V_data_V_0_state">2, 0, 2, 0</column>
-<column name="LAST_STREAM_V_dest_V_0_state">2, 0, 2, 0</column>
 <column name="ap_CS_fsm">3, 0, 3, 0</column>
-<column name="ap_enable_reg_pp0_iter0">1, 0, 1, 0</column>
-<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
-<column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
-<column name="differentBytes_2_reg_262">32, 0, 32, 0</column>
-<column name="differentBytes_reg_229">32, 0, 32, 0</column>
-<column name="in1Count_1_reg_273">23, 0, 23, 0</column>
-<column name="in1Count_3_reg_623">23, 0, 23, 0</column>
-<column name="in1Count_3_reg_623_pp0_iter1_reg">23, 0, 23, 0</column>
-<column name="in1Count_reg_205">23, 0, 23, 0</column>
-<column name="in1Count_reg_205_pp0_iter1_reg">23, 0, 23, 0</column>
-<column name="lhs_V_reg_252">64, 0, 64, 0</column>
-<column name="p_0_reg_217">64, 0, 64, 0</column>
-<column name="suma_reg_241">32, 0, 32, 0</column>
-<column name="tmp3_reg_665">10, 0, 10, 0</column>
-<column name="tmp5_reg_670">10, 0, 10, 0</column>
-<column name="tmp_1_reg_653">8, 0, 8, 0</column>
-<column name="tmp_2_reg_638">8, 0, 8, 0</column>
-<column name="tmp_3_reg_658">1, 0, 1, 0</column>
-<column name="tmp_8_1_cast_reg_643">8, 0, 8, 0</column>
-<column name="tmp_8_2_cast_reg_648">8, 0, 8, 0</column>
-<column name="tmp_data_V_reg_629">32, 0, 32, 0</column>
-<column name="tmp_last_V_reg_634">1, 0, 1, 0</column>
-<column name="tmp_last_V_reg_634_pp0_iter1_reg">1, 0, 1, 0</column>
-<column name="tmp_reg_619">1, 0, 1, 0</column>
-<column name="tmp_reg_619_pp0_iter1_reg">1, 0, 1, 0</column>
+<column name="differentBytes_1_reg_174">32, 0, 32, 0</column>
+<column name="differentBytes_reg_150">32, 0, 32, 0</column>
+<column name="in1Count_1_reg_185">23, 0, 23, 0</column>
+<column name="in1Count_reg_162">23, 0, 23, 0</column>
 </table>
 </item>
 </section>
@@ -225,15 +163,6 @@
 <column name="INPUT_STREAM_TUSER">in, 2, axis, INPUT_STREAM_V_user_V, pointer</column>
 <column name="INPUT_STREAM_TLAST">in, 1, axis, INPUT_STREAM_V_last_V, pointer</column>
 <column name="INPUT_STREAM_TID">in, 5, axis, INPUT_STREAM_V_id_V, pointer</column>
-<column name="LAST_STREAM_TDATA">in, 32, axis, LAST_STREAM_V_data_V, pointer</column>
-<column name="LAST_STREAM_TVALID">in, 1, axis, LAST_STREAM_V_dest_V, pointer</column>
-<column name="LAST_STREAM_TREADY">out, 1, axis, LAST_STREAM_V_dest_V, pointer</column>
-<column name="LAST_STREAM_TDEST">in, 6, axis, LAST_STREAM_V_dest_V, pointer</column>
-<column name="LAST_STREAM_TKEEP">in, 4, axis, LAST_STREAM_V_keep_V, pointer</column>
-<column name="LAST_STREAM_TSTRB">in, 4, axis, LAST_STREAM_V_strb_V, pointer</column>
-<column name="LAST_STREAM_TUSER">in, 2, axis, LAST_STREAM_V_user_V, pointer</column>
-<column name="LAST_STREAM_TLAST">in, 1, axis, LAST_STREAM_V_last_V, pointer</column>
-<column name="LAST_STREAM_TID">in, 5, axis, LAST_STREAM_V_id_V, pointer</column>
 </table>
 </item>
 </section>

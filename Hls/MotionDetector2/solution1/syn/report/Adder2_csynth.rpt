@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'Adder2'
 ================================================================
-* Date:           Fri Dec 21 12:39:11 2018
+* Date:           Fri Dec 21 20:36:04 2018
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        MotionDetector2
@@ -20,7 +20,7 @@
     +--------+-------+----------+------------+
     |  Clock | Target| Estimated| Uncertainty|
     +--------+-------+----------+------------+
-    |ap_clk  |  10.00|     5.852|        1.25|
+    |ap_clk  |  10.00|     4.217|        1.25|
     +--------+-------+----------+------------+
 
 + Latency (clock cycles): 
@@ -29,7 +29,7 @@
     |    Latency    |    Interval   | Pipeline|
     | min |   max   | min |   max   |   Type  |
     +-----+---------+-----+---------+---------+
-    |    5|  8371204|    5|  8371204|   none  |
+    |    3|  8371202|    3|  8371202|   none  |
     +-----+---------+-----+---------+---------+
 
     + Detail: 
@@ -41,7 +41,7 @@
         |          |    Latency    | Iteration|  Initiation Interval  |     Trip    |          |
         | Loop Name| min |   max   |  Latency |  achieved |   target  |    Count    | Pipelined|
         +----------+-----+---------+----------+-----------+-----------+-------------+----------+
-        |- read_A  |    3|  8371202|         3|          1|          1| 1 ~ 8371200 |    yes   |
+        |- read_A  |    1|  8371200|         1|          1|          1| 1 ~ 8371200 |    yes   |
         +----------+-----+---------+----------+-----------+-----------+-------------+----------+
 
 
@@ -54,18 +54,18 @@
 |       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
 +-----------------+---------+-------+--------+-------+
 |DSP              |        -|      -|       -|      -|
-|Expression       |        -|      -|       0|    527|
+|Expression       |        -|      -|       0|    115|
 |FIFO             |        -|      -|       -|      -|
 |Instance         |        0|      -|     302|    488|
 |Memory           |        -|      -|       -|      -|
-|Multiplexer      |        -|      -|       -|    222|
-|Register         |        -|      -|     580|      -|
+|Multiplexer      |        -|      -|       -|    129|
+|Register         |        -|      -|     189|      -|
 +-----------------+---------+-------+--------+-------+
-|Total            |        0|      0|     882|   1237|
+|Total            |        0|      0|     491|    732|
 +-----------------+---------+-------+--------+-------+
 |Available        |      280|    220|  106400|  53200|
 +-----------------+---------+-------+--------+-------+
-|Utilization (%)  |        0|      0|   ~0   |      2|
+|Utilization (%)  |        0|      0|   ~0   |      1|
 +-----------------+---------+-------+--------+-------+
 
 + Detail: 
@@ -91,74 +91,39 @@
     +----------------------------------------+----------+-------+---+----+------------+------------+
     |              Variable Name             | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
     +----------------------------------------+----------+-------+---+----+------------+------------+
-    |differentBytes_3_fu_548_p2              |     +    |      0|  0|  39|           1|          32|
-    |in1Count_3_fu_289_p2                    |     +    |      0|  0|  30|          23|           1|
-    |suma_1_3_fu_566_p2                      |     +    |      0|  0|  32|          32|          32|
-    |tmp3_fu_536_p2                          |     +    |      0|  0|  14|          10|          10|
-    |tmp4_fu_560_p2                          |     +    |      0|  0|  32|          32|          32|
-    |tmp5_fu_542_p2                          |     +    |      0|  0|  14|          10|          10|
-    |diff_1_1_fu_420_p2                      |     -    |      0|  0|  15|           1|           9|
-    |diff_1_2_fu_469_p2                      |     -    |      0|  0|  15|           1|           9|
-    |diff_1_3_fu_518_p2                      |     -    |      0|  0|  15|           1|           9|
-    |diff_1_fu_371_p2                        |     -    |      0|  0|  15|           1|           9|
-    |diff_3_fu_504_p2                        |     -    |      0|  0|  15|           9|           9|
-    |diff_4_fu_455_p2                        |     -    |      0|  0|  15|           9|           9|
-    |diff_fu_357_p2                          |     -    |      0|  0|  15|           9|           9|
-    |diff_s_fu_406_p2                        |     -    |      0|  0|  15|           9|           9|
+    |differentBytes_2_fu_215_p2              |     +    |      0|  0|  39|          32|          32|
+    |in1Count_3_fu_201_p2                    |     +    |      0|  0|  30|          23|           1|
     |INPUT_STREAM_V_data_V_0_load_A          |    and   |      0|  0|   2|           1|           1|
     |INPUT_STREAM_V_data_V_0_load_B          |    and   |      0|  0|   2|           1|           1|
     |INPUT_STREAM_V_last_V_0_load_A          |    and   |      0|  0|   2|           1|           1|
     |INPUT_STREAM_V_last_V_0_load_B          |    and   |      0|  0|   2|           1|           1|
-    |LAST_STREAM_V_data_V_0_load_A           |    and   |      0|  0|   2|           1|           1|
-    |LAST_STREAM_V_data_V_0_load_B           |    and   |      0|  0|   2|           1|           1|
-    |ap_block_state2_pp0_stage0_iter0        |    and   |      0|  0|   2|           1|           1|
-    |ap_block_state3_pp0_stage0_iter1        |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state2                         |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_497                        |    and   |      0|  0|   2|           1|           1|
     |INPUT_STREAM_V_data_V_0_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
     |INPUT_STREAM_V_last_V_0_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
-    |LAST_STREAM_V_data_V_0_state_cmp_full   |   icmp   |      0|  0|   8|           2|           1|
-    |tmp_3_fu_345_p2                         |   icmp   |      0|  0|  18|          32|          32|
-    |tmp_fu_283_p2                           |   icmp   |      0|  0|  18|          23|          16|
-    |ap_block_pp0_stage0_11001               |    or    |      0|  0|   2|           1|           1|
-    |ap_predicate_tran4to5_state2            |    or    |      0|  0|   2|           1|           1|
-    |diff_2_1_fu_426_p3                      |  select  |      0|  0|   9|           1|           9|
-    |diff_2_2_fu_475_p3                      |  select  |      0|  0|   9|           1|           9|
-    |diff_2_3_fu_524_p3                      |  select  |      0|  0|   9|           1|           9|
-    |diff_2_fu_377_p3                        |  select  |      0|  0|   9|           1|           9|
-    |differentBytes_1_fu_583_p3              |  select  |      0|  0|  32|           1|          32|
-    |sum_V_1_fu_576_p3                       |  select  |      0|  0|  64|           1|          64|
-    |suma_2_fu_590_p3                        |  select  |      0|  0|  32|           1|          32|
-    |ap_enable_pp0                           |    xor   |      0|  0|   2|           1|           2|
+    |tmp_fu_195_p2                           |   icmp   |      0|  0|  18|          23|          16|
     +----------------------------------------+----------+-------+---+----+------------+------------+
-    |Total                                   |          |      0|  0| 527|         227|         416|
+    |Total                                   |          |      0|  0| 115|          88|          57|
     +----------------------------------------+----------+-------+---+----+------------+------------+
 
     * Multiplexer: 
-    +-----------------------------------+----+-----------+-----+-----------+
-    |                Name               | LUT| Input Size| Bits| Total Bits|
-    +-----------------------------------+----+-----------+-----+-----------+
-    |INPUT_STREAM_TDATA_blk_n           |   9|          2|    1|          2|
-    |INPUT_STREAM_V_data_V_0_data_out   |   9|          2|   32|         64|
-    |INPUT_STREAM_V_data_V_0_state      |  15|          3|    2|          6|
-    |INPUT_STREAM_V_dest_V_0_state      |  15|          3|    2|          6|
-    |INPUT_STREAM_V_last_V_0_data_out   |   9|          2|    1|          2|
-    |INPUT_STREAM_V_last_V_0_state      |  15|          3|    2|          6|
-    |LAST_STREAM_TDATA_blk_n            |   9|          2|    1|          2|
-    |LAST_STREAM_V_data_V_0_data_out    |   9|          2|   32|         64|
-    |LAST_STREAM_V_data_V_0_state       |  15|          3|    2|          6|
-    |LAST_STREAM_V_dest_V_0_state       |  15|          3|    2|          6|
-    |ap_NS_fsm                          |  21|          4|    1|          4|
-    |ap_enable_reg_pp0_iter2            |   9|          2|    1|          2|
-    |ap_phi_mux_in1Count_phi_fu_209_p4  |   9|          2|   23|         46|
-    |differentBytes_2_reg_262           |   9|          2|   32|         64|
-    |differentBytes_reg_229             |   9|          2|   32|         64|
-    |in1Count_1_reg_273                 |   9|          2|   23|         46|
-    |in1Count_reg_205                   |   9|          2|   23|         46|
-    |lhs_V_reg_252                      |   9|          2|   64|        128|
-    |p_0_reg_217                        |   9|          2|   64|        128|
-    |suma_reg_241                       |   9|          2|   32|         64|
-    +-----------------------------------+----+-----------+-----+-----------+
-    |Total                              | 222|         47|  372|        756|
-    +-----------------------------------+----+-----------+-----+-----------+
+    +----------------------------------+----+-----------+-----+-----------+
+    |               Name               | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------+----+-----------+-----+-----------+
+    |INPUT_STREAM_TDATA_blk_n          |   9|          2|    1|          2|
+    |INPUT_STREAM_V_data_V_0_data_out  |   9|          2|   32|         64|
+    |INPUT_STREAM_V_data_V_0_state     |  15|          3|    2|          6|
+    |INPUT_STREAM_V_dest_V_0_state     |  15|          3|    2|          6|
+    |INPUT_STREAM_V_last_V_0_data_out  |   9|          2|    1|          2|
+    |INPUT_STREAM_V_last_V_0_state     |  15|          3|    2|          6|
+    |ap_NS_fsm                         |  21|          4|    1|          4|
+    |differentBytes_1_reg_174          |   9|          2|   32|         64|
+    |differentBytes_reg_150            |   9|          2|   32|         64|
+    |in1Count_1_reg_185                |   9|          2|   23|         46|
+    |in1Count_reg_162                  |   9|          2|   23|         46|
+    +----------------------------------+----+-----------+-----+-----------+
+    |Total                             | 129|         27|  151|        310|
+    +----------------------------------+----+-----------+-----+-----------+
 
     * Register: 
     +-----------------------------------+----+----+-----+-----------+
@@ -175,40 +140,13 @@
     |INPUT_STREAM_V_last_V_0_sel_rd     |   1|   0|    1|          0|
     |INPUT_STREAM_V_last_V_0_sel_wr     |   1|   0|    1|          0|
     |INPUT_STREAM_V_last_V_0_state      |   2|   0|    2|          0|
-    |LAST_STREAM_V_data_V_0_payload_A   |  32|   0|   32|          0|
-    |LAST_STREAM_V_data_V_0_payload_B   |  32|   0|   32|          0|
-    |LAST_STREAM_V_data_V_0_sel_rd      |   1|   0|    1|          0|
-    |LAST_STREAM_V_data_V_0_sel_wr      |   1|   0|    1|          0|
-    |LAST_STREAM_V_data_V_0_state       |   2|   0|    2|          0|
-    |LAST_STREAM_V_dest_V_0_state       |   2|   0|    2|          0|
     |ap_CS_fsm                          |   3|   0|    3|          0|
-    |ap_enable_reg_pp0_iter0            |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter1            |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter2            |   1|   0|    1|          0|
-    |differentBytes_2_reg_262           |  32|   0|   32|          0|
-    |differentBytes_reg_229             |  32|   0|   32|          0|
-    |in1Count_1_reg_273                 |  23|   0|   23|          0|
-    |in1Count_3_reg_623                 |  23|   0|   23|          0|
-    |in1Count_3_reg_623_pp0_iter1_reg   |  23|   0|   23|          0|
-    |in1Count_reg_205                   |  23|   0|   23|          0|
-    |in1Count_reg_205_pp0_iter1_reg     |  23|   0|   23|          0|
-    |lhs_V_reg_252                      |  64|   0|   64|          0|
-    |p_0_reg_217                        |  64|   0|   64|          0|
-    |suma_reg_241                       |  32|   0|   32|          0|
-    |tmp3_reg_665                       |  10|   0|   10|          0|
-    |tmp5_reg_670                       |  10|   0|   10|          0|
-    |tmp_1_reg_653                      |   8|   0|    8|          0|
-    |tmp_2_reg_638                      |   8|   0|    8|          0|
-    |tmp_3_reg_658                      |   1|   0|    1|          0|
-    |tmp_8_1_cast_reg_643               |   8|   0|    8|          0|
-    |tmp_8_2_cast_reg_648               |   8|   0|    8|          0|
-    |tmp_data_V_reg_629                 |  32|   0|   32|          0|
-    |tmp_last_V_reg_634                 |   1|   0|    1|          0|
-    |tmp_last_V_reg_634_pp0_iter1_reg   |   1|   0|    1|          0|
-    |tmp_reg_619                        |   1|   0|    1|          0|
-    |tmp_reg_619_pp0_iter1_reg          |   1|   0|    1|          0|
+    |differentBytes_1_reg_174           |  32|   0|   32|          0|
+    |differentBytes_reg_150             |  32|   0|   32|          0|
+    |in1Count_1_reg_185                 |  23|   0|   23|          0|
+    |in1Count_reg_162                   |  23|   0|   23|          0|
     +-----------------------------------+----+----+-----+-----------+
-    |Total                              | 580|   0|  580|          0|
+    |Total                              | 189|   0|  189|          0|
     +-----------------------------------+----+----+-----+-----------+
 
 
@@ -249,14 +187,5 @@
 |INPUT_STREAM_TUSER         |  in |    2|    axis    | INPUT_STREAM_V_user_V |    pointer   |
 |INPUT_STREAM_TLAST         |  in |    1|    axis    | INPUT_STREAM_V_last_V |    pointer   |
 |INPUT_STREAM_TID           |  in |    5|    axis    |  INPUT_STREAM_V_id_V  |    pointer   |
-|LAST_STREAM_TDATA          |  in |   32|    axis    |  LAST_STREAM_V_data_V |    pointer   |
-|LAST_STREAM_TVALID         |  in |    1|    axis    |  LAST_STREAM_V_dest_V |    pointer   |
-|LAST_STREAM_TREADY         | out |    1|    axis    |  LAST_STREAM_V_dest_V |    pointer   |
-|LAST_STREAM_TDEST          |  in |    6|    axis    |  LAST_STREAM_V_dest_V |    pointer   |
-|LAST_STREAM_TKEEP          |  in |    4|    axis    |  LAST_STREAM_V_keep_V |    pointer   |
-|LAST_STREAM_TSTRB          |  in |    4|    axis    |  LAST_STREAM_V_strb_V |    pointer   |
-|LAST_STREAM_TUSER          |  in |    2|    axis    |  LAST_STREAM_V_user_V |    pointer   |
-|LAST_STREAM_TLAST          |  in |    1|    axis    |  LAST_STREAM_V_last_V |    pointer   |
-|LAST_STREAM_TID            |  in |    5|    axis    |   LAST_STREAM_V_id_V  |    pointer   |
 +---------------------------+-----+-----+------------+-----------------------+--------------+
 
