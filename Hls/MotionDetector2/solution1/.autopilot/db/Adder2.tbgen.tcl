@@ -1,15 +1,15 @@
 set C_TypeInfoList {{ 
 "Adder2" : [[], {"return": [[],"0"] }, [{"ExternC" : 0}], [ {"INPUT_STREAM": [[], {"reference": "1"}] }, {"OUTPUT_STREAM": [[], {"reference": "1"}] }, {"searched": [[], {"scalar": "int"}] }],[],""], 
 "0": [ "asdf", {"typedef": [[[],"2"],""]}], 
-"2": [ "asd", {"struct": [[],[],[{ "a": [[],  {"scalar": "int"}]},{ "b": [[],  {"scalar": "int"}]},{ "c": [[],  {"scalar": "int"}]},{ "d": [[],  {"scalar": "int"}]},{ "e": [[],  {"scalar": "int"}]},{ "f": [[],  {"scalar": "int"}]}],""]}], 
 "1": [ "stream<ap_axiu<32, 2, 5, 6> >", {"hls_type": {"stream": [[[[],"3"]],"4"]}}], 
+"2": [ "asd", {"struct": [[],[],[{ "a": [[],  {"scalar": "int"}]},{ "b": [[],  {"scalar": "int"}]},{ "c": [[],  {"scalar": "int"}]},{ "d": [[],  {"scalar": "int"}]},{ "e": [[],  {"scalar": "int"}]},{ "f": [[],  {"scalar": "int"}]}],""]}], 
 "3": [ "ap_axiu<32, 2, 5, 6>", {"struct": [[],[{"D":[[], {"scalar": { "int": 32}}]},{"U":[[], {"scalar": { "int": 2}}]},{"TI":[[], {"scalar": { "int": 5}}]},{"TD":[[], {"scalar": { "int": 6}}]}],[{ "data": [[], "5"]},{ "keep": [[], "6"]},{ "strb": [[], "6"]},{ "user": [[], "7"]},{ "last": [[], "8"]},{ "id": [[], "9"]},{ "dest": [[], "10"]}],""]}], 
+"10": [ "ap_uint<6>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 6}}]],""]}}], 
 "5": [ "ap_uint<32>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 32}}]],""]}}], 
 "6": [ "ap_uint<4>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 4}}]],""]}}], 
-"9": [ "ap_uint<5>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 5}}]],""]}}], 
 "7": [ "ap_uint<2>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 2}}]],""]}}], 
-"8": [ "ap_uint<1>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 1}}]],""]}}], 
-"10": [ "ap_uint<6>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 6}}]],""]}}],
+"9": [ "ap_uint<5>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 5}}]],""]}}], 
+"8": [ "ap_uint<1>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 1}}]],""]}}],
 "4": ["hls", ""]
 }}
 set moduleName Adder2
@@ -159,7 +159,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "4", "EstimateLatencyMax" : "8371203",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "5", "EstimateLatencyMax" : "8371204",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -197,12 +197,12 @@ set RtlHierarchyInfo {[
 
 set ArgLastReadFirstWriteLatency {
 	Adder2 {
-		agg_result_a {Type O LastRead -1 FirstWrite 2}
-		agg_result_b {Type O LastRead -1 FirstWrite 2}
-		agg_result_c {Type O LastRead -1 FirstWrite 2}
-		agg_result_d {Type O LastRead -1 FirstWrite 2}
-		agg_result_e {Type O LastRead -1 FirstWrite 2}
-		agg_result_f {Type O LastRead -1 FirstWrite 2}
+		agg_result_a {Type O LastRead -1 FirstWrite 4}
+		agg_result_b {Type O LastRead -1 FirstWrite 4}
+		agg_result_c {Type O LastRead -1 FirstWrite 4}
+		agg_result_d {Type O LastRead -1 FirstWrite 4}
+		agg_result_e {Type O LastRead -1 FirstWrite 4}
+		agg_result_f {Type O LastRead -1 FirstWrite 4}
 		INPUT_STREAM_V_data_V {Type I LastRead 1 FirstWrite -1}
 		INPUT_STREAM_V_keep_V {Type I LastRead 1 FirstWrite -1}
 		INPUT_STREAM_V_strb_V {Type I LastRead 1 FirstWrite -1}
@@ -222,8 +222,8 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "4", "Max" : "8371203"}
-	, {"Name" : "Interval", "Min" : "5", "Max" : "8371204"}
+	{"Name" : "Latency", "Min" : "5", "Max" : "8371204"}
+	, {"Name" : "Interval", "Min" : "6", "Max" : "8371205"}
 ]}
 
 set PipelineEnableSignalInfo {[
