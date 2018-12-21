@@ -2,16 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="VMODE_1920x1080" key="selection"/>
+		<item value="XST_FAILURE" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="VMODE_1920x1080"/>
-			<item value="for peripheral v_t"/>
-			<item value="for peripheral"/>
-			<item value="tc_out"/>
+			<item value="XAxiDma_CfgInitialize"/>
+			<item value="XST_FAILURE"/>
+			<item value="XST_INVALID_PARAM"/>
+			<item value="dma"/>
+			<item value="frameBuf"/>
+			<item value="frameBuf]"/>
+			<item value="pFrames"/>
+			<item value="FrameStoreStartAddr"/>
 		</list>
 		<list key="replacehistory">
 		</list>
