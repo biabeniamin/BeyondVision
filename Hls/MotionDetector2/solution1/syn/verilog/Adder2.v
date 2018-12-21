@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="Adder2,hls_ip_2018_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=4.217250,HLS_SYN_LAT=4185602,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=491,HLS_SYN_LUT=732,HLS_VERSION=2018_2}" *)
+(* CORE_GENERATION_INFO="Adder2,hls_ip_2018_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=4.217250,HLS_SYN_LAT=4185603,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=799,HLS_SYN_LUT=1193,HLS_VERSION=2018_2}" *)
 
 module Adder2 (
         ap_clk,
@@ -21,6 +21,15 @@ module Adder2 (
         INPUT_STREAM_TLAST,
         INPUT_STREAM_TID,
         INPUT_STREAM_TDEST,
+        OUTPUT_STREAM_TDATA,
+        OUTPUT_STREAM_TVALID,
+        OUTPUT_STREAM_TREADY,
+        OUTPUT_STREAM_TKEEP,
+        OUTPUT_STREAM_TSTRB,
+        OUTPUT_STREAM_TUSER,
+        OUTPUT_STREAM_TLAST,
+        OUTPUT_STREAM_TID,
+        OUTPUT_STREAM_TDEST,
         s_axi_CONTROL_BUS_AWVALID,
         s_axi_CONTROL_BUS_AWREADY,
         s_axi_CONTROL_BUS_AWADDR,
@@ -42,8 +51,8 @@ module Adder2 (
 );
 
 parameter    ap_ST_fsm_state1 = 3'd1;
-parameter    ap_ST_fsm_state2 = 3'd2;
-parameter    ap_ST_fsm_state3 = 3'd4;
+parameter    ap_ST_fsm_pp0_stage0 = 3'd2;
+parameter    ap_ST_fsm_state5 = 3'd4;
 parameter    C_S_AXI_CONTROL_BUS_DATA_WIDTH = 32;
 parameter    C_S_AXI_CONTROL_BUS_ADDR_WIDTH = 7;
 parameter    C_S_AXI_DATA_WIDTH = 32;
@@ -62,6 +71,15 @@ input  [1:0] INPUT_STREAM_TUSER;
 input  [0:0] INPUT_STREAM_TLAST;
 input  [4:0] INPUT_STREAM_TID;
 input  [5:0] INPUT_STREAM_TDEST;
+output  [31:0] OUTPUT_STREAM_TDATA;
+output   OUTPUT_STREAM_TVALID;
+input   OUTPUT_STREAM_TREADY;
+output  [3:0] OUTPUT_STREAM_TKEEP;
+output  [3:0] OUTPUT_STREAM_TSTRB;
+output  [1:0] OUTPUT_STREAM_TUSER;
+output  [0:0] OUTPUT_STREAM_TLAST;
+output  [4:0] OUTPUT_STREAM_TID;
+output  [5:0] OUTPUT_STREAM_TDEST;
 input   s_axi_CONTROL_BUS_AWVALID;
 output   s_axi_CONTROL_BUS_AWREADY;
 input  [C_S_AXI_CONTROL_BUS_ADDR_WIDTH - 1:0] s_axi_CONTROL_BUS_AWADDR;
@@ -109,6 +127,48 @@ wire    INPUT_STREAM_V_data_V_0_load_A;
 wire    INPUT_STREAM_V_data_V_0_load_B;
 reg   [1:0] INPUT_STREAM_V_data_V_0_state;
 wire    INPUT_STREAM_V_data_V_0_state_cmp_full;
+reg   [3:0] INPUT_STREAM_V_keep_V_0_data_out;
+wire    INPUT_STREAM_V_keep_V_0_vld_in;
+wire    INPUT_STREAM_V_keep_V_0_vld_out;
+wire    INPUT_STREAM_V_keep_V_0_ack_in;
+reg    INPUT_STREAM_V_keep_V_0_ack_out;
+reg   [3:0] INPUT_STREAM_V_keep_V_0_payload_A;
+reg   [3:0] INPUT_STREAM_V_keep_V_0_payload_B;
+reg    INPUT_STREAM_V_keep_V_0_sel_rd;
+reg    INPUT_STREAM_V_keep_V_0_sel_wr;
+wire    INPUT_STREAM_V_keep_V_0_sel;
+wire    INPUT_STREAM_V_keep_V_0_load_A;
+wire    INPUT_STREAM_V_keep_V_0_load_B;
+reg   [1:0] INPUT_STREAM_V_keep_V_0_state;
+wire    INPUT_STREAM_V_keep_V_0_state_cmp_full;
+reg   [3:0] INPUT_STREAM_V_strb_V_0_data_out;
+wire    INPUT_STREAM_V_strb_V_0_vld_in;
+wire    INPUT_STREAM_V_strb_V_0_vld_out;
+wire    INPUT_STREAM_V_strb_V_0_ack_in;
+reg    INPUT_STREAM_V_strb_V_0_ack_out;
+reg   [3:0] INPUT_STREAM_V_strb_V_0_payload_A;
+reg   [3:0] INPUT_STREAM_V_strb_V_0_payload_B;
+reg    INPUT_STREAM_V_strb_V_0_sel_rd;
+reg    INPUT_STREAM_V_strb_V_0_sel_wr;
+wire    INPUT_STREAM_V_strb_V_0_sel;
+wire    INPUT_STREAM_V_strb_V_0_load_A;
+wire    INPUT_STREAM_V_strb_V_0_load_B;
+reg   [1:0] INPUT_STREAM_V_strb_V_0_state;
+wire    INPUT_STREAM_V_strb_V_0_state_cmp_full;
+reg   [1:0] INPUT_STREAM_V_user_V_0_data_out;
+wire    INPUT_STREAM_V_user_V_0_vld_in;
+wire    INPUT_STREAM_V_user_V_0_vld_out;
+wire    INPUT_STREAM_V_user_V_0_ack_in;
+reg    INPUT_STREAM_V_user_V_0_ack_out;
+reg   [1:0] INPUT_STREAM_V_user_V_0_payload_A;
+reg   [1:0] INPUT_STREAM_V_user_V_0_payload_B;
+reg    INPUT_STREAM_V_user_V_0_sel_rd;
+reg    INPUT_STREAM_V_user_V_0_sel_wr;
+wire    INPUT_STREAM_V_user_V_0_sel;
+wire    INPUT_STREAM_V_user_V_0_load_A;
+wire    INPUT_STREAM_V_user_V_0_load_B;
+reg   [1:0] INPUT_STREAM_V_user_V_0_state;
+wire    INPUT_STREAM_V_user_V_0_state_cmp_full;
 reg   [0:0] INPUT_STREAM_V_last_V_0_data_out;
 wire    INPUT_STREAM_V_last_V_0_vld_in;
 wire    INPUT_STREAM_V_last_V_0_vld_out;
@@ -123,24 +183,173 @@ wire    INPUT_STREAM_V_last_V_0_load_A;
 wire    INPUT_STREAM_V_last_V_0_load_B;
 reg   [1:0] INPUT_STREAM_V_last_V_0_state;
 wire    INPUT_STREAM_V_last_V_0_state_cmp_full;
+reg   [4:0] INPUT_STREAM_V_id_V_0_data_out;
+wire    INPUT_STREAM_V_id_V_0_vld_in;
+wire    INPUT_STREAM_V_id_V_0_vld_out;
+wire    INPUT_STREAM_V_id_V_0_ack_in;
+reg    INPUT_STREAM_V_id_V_0_ack_out;
+reg   [4:0] INPUT_STREAM_V_id_V_0_payload_A;
+reg   [4:0] INPUT_STREAM_V_id_V_0_payload_B;
+reg    INPUT_STREAM_V_id_V_0_sel_rd;
+reg    INPUT_STREAM_V_id_V_0_sel_wr;
+wire    INPUT_STREAM_V_id_V_0_sel;
+wire    INPUT_STREAM_V_id_V_0_load_A;
+wire    INPUT_STREAM_V_id_V_0_load_B;
+reg   [1:0] INPUT_STREAM_V_id_V_0_state;
+wire    INPUT_STREAM_V_id_V_0_state_cmp_full;
+reg   [5:0] INPUT_STREAM_V_dest_V_0_data_out;
 wire    INPUT_STREAM_V_dest_V_0_vld_in;
+wire    INPUT_STREAM_V_dest_V_0_vld_out;
+wire    INPUT_STREAM_V_dest_V_0_ack_in;
 reg    INPUT_STREAM_V_dest_V_0_ack_out;
+reg   [5:0] INPUT_STREAM_V_dest_V_0_payload_A;
+reg   [5:0] INPUT_STREAM_V_dest_V_0_payload_B;
+reg    INPUT_STREAM_V_dest_V_0_sel_rd;
+reg    INPUT_STREAM_V_dest_V_0_sel_wr;
+wire    INPUT_STREAM_V_dest_V_0_sel;
+wire    INPUT_STREAM_V_dest_V_0_load_A;
+wire    INPUT_STREAM_V_dest_V_0_load_B;
 reg   [1:0] INPUT_STREAM_V_dest_V_0_state;
+wire    INPUT_STREAM_V_dest_V_0_state_cmp_full;
+reg   [31:0] OUTPUT_STREAM_V_data_V_1_data_out;
+reg    OUTPUT_STREAM_V_data_V_1_vld_in;
+wire    OUTPUT_STREAM_V_data_V_1_vld_out;
+wire    OUTPUT_STREAM_V_data_V_1_ack_in;
+wire    OUTPUT_STREAM_V_data_V_1_ack_out;
+reg   [31:0] OUTPUT_STREAM_V_data_V_1_payload_A;
+reg   [31:0] OUTPUT_STREAM_V_data_V_1_payload_B;
+reg    OUTPUT_STREAM_V_data_V_1_sel_rd;
+reg    OUTPUT_STREAM_V_data_V_1_sel_wr;
+wire    OUTPUT_STREAM_V_data_V_1_sel;
+wire    OUTPUT_STREAM_V_data_V_1_load_A;
+wire    OUTPUT_STREAM_V_data_V_1_load_B;
+reg   [1:0] OUTPUT_STREAM_V_data_V_1_state;
+wire    OUTPUT_STREAM_V_data_V_1_state_cmp_full;
+reg   [3:0] OUTPUT_STREAM_V_keep_V_1_data_out;
+reg    OUTPUT_STREAM_V_keep_V_1_vld_in;
+wire    OUTPUT_STREAM_V_keep_V_1_vld_out;
+wire    OUTPUT_STREAM_V_keep_V_1_ack_in;
+wire    OUTPUT_STREAM_V_keep_V_1_ack_out;
+reg   [3:0] OUTPUT_STREAM_V_keep_V_1_payload_A;
+reg   [3:0] OUTPUT_STREAM_V_keep_V_1_payload_B;
+reg    OUTPUT_STREAM_V_keep_V_1_sel_rd;
+reg    OUTPUT_STREAM_V_keep_V_1_sel_wr;
+wire    OUTPUT_STREAM_V_keep_V_1_sel;
+wire    OUTPUT_STREAM_V_keep_V_1_load_A;
+wire    OUTPUT_STREAM_V_keep_V_1_load_B;
+reg   [1:0] OUTPUT_STREAM_V_keep_V_1_state;
+wire    OUTPUT_STREAM_V_keep_V_1_state_cmp_full;
+reg   [3:0] OUTPUT_STREAM_V_strb_V_1_data_out;
+reg    OUTPUT_STREAM_V_strb_V_1_vld_in;
+wire    OUTPUT_STREAM_V_strb_V_1_vld_out;
+wire    OUTPUT_STREAM_V_strb_V_1_ack_in;
+wire    OUTPUT_STREAM_V_strb_V_1_ack_out;
+reg   [3:0] OUTPUT_STREAM_V_strb_V_1_payload_A;
+reg   [3:0] OUTPUT_STREAM_V_strb_V_1_payload_B;
+reg    OUTPUT_STREAM_V_strb_V_1_sel_rd;
+reg    OUTPUT_STREAM_V_strb_V_1_sel_wr;
+wire    OUTPUT_STREAM_V_strb_V_1_sel;
+wire    OUTPUT_STREAM_V_strb_V_1_load_A;
+wire    OUTPUT_STREAM_V_strb_V_1_load_B;
+reg   [1:0] OUTPUT_STREAM_V_strb_V_1_state;
+wire    OUTPUT_STREAM_V_strb_V_1_state_cmp_full;
+reg   [1:0] OUTPUT_STREAM_V_user_V_1_data_out;
+reg    OUTPUT_STREAM_V_user_V_1_vld_in;
+wire    OUTPUT_STREAM_V_user_V_1_vld_out;
+wire    OUTPUT_STREAM_V_user_V_1_ack_in;
+wire    OUTPUT_STREAM_V_user_V_1_ack_out;
+reg   [1:0] OUTPUT_STREAM_V_user_V_1_payload_A;
+reg   [1:0] OUTPUT_STREAM_V_user_V_1_payload_B;
+reg    OUTPUT_STREAM_V_user_V_1_sel_rd;
+reg    OUTPUT_STREAM_V_user_V_1_sel_wr;
+wire    OUTPUT_STREAM_V_user_V_1_sel;
+wire    OUTPUT_STREAM_V_user_V_1_load_A;
+wire    OUTPUT_STREAM_V_user_V_1_load_B;
+reg   [1:0] OUTPUT_STREAM_V_user_V_1_state;
+wire    OUTPUT_STREAM_V_user_V_1_state_cmp_full;
+wire   [0:0] OUTPUT_STREAM_V_last_V_1_data_out;
+reg    OUTPUT_STREAM_V_last_V_1_vld_in;
+wire    OUTPUT_STREAM_V_last_V_1_vld_out;
+wire    OUTPUT_STREAM_V_last_V_1_ack_in;
+wire    OUTPUT_STREAM_V_last_V_1_ack_out;
+reg    OUTPUT_STREAM_V_last_V_1_sel_rd;
+wire    OUTPUT_STREAM_V_last_V_1_sel;
+reg   [1:0] OUTPUT_STREAM_V_last_V_1_state;
+reg   [4:0] OUTPUT_STREAM_V_id_V_1_data_out;
+reg    OUTPUT_STREAM_V_id_V_1_vld_in;
+wire    OUTPUT_STREAM_V_id_V_1_vld_out;
+wire    OUTPUT_STREAM_V_id_V_1_ack_in;
+wire    OUTPUT_STREAM_V_id_V_1_ack_out;
+reg   [4:0] OUTPUT_STREAM_V_id_V_1_payload_A;
+reg   [4:0] OUTPUT_STREAM_V_id_V_1_payload_B;
+reg    OUTPUT_STREAM_V_id_V_1_sel_rd;
+reg    OUTPUT_STREAM_V_id_V_1_sel_wr;
+wire    OUTPUT_STREAM_V_id_V_1_sel;
+wire    OUTPUT_STREAM_V_id_V_1_load_A;
+wire    OUTPUT_STREAM_V_id_V_1_load_B;
+reg   [1:0] OUTPUT_STREAM_V_id_V_1_state;
+wire    OUTPUT_STREAM_V_id_V_1_state_cmp_full;
+reg   [5:0] OUTPUT_STREAM_V_dest_V_1_data_out;
+reg    OUTPUT_STREAM_V_dest_V_1_vld_in;
+wire    OUTPUT_STREAM_V_dest_V_1_vld_out;
+wire    OUTPUT_STREAM_V_dest_V_1_ack_in;
+wire    OUTPUT_STREAM_V_dest_V_1_ack_out;
+reg   [5:0] OUTPUT_STREAM_V_dest_V_1_payload_A;
+reg   [5:0] OUTPUT_STREAM_V_dest_V_1_payload_B;
+reg    OUTPUT_STREAM_V_dest_V_1_sel_rd;
+reg    OUTPUT_STREAM_V_dest_V_1_sel_wr;
+wire    OUTPUT_STREAM_V_dest_V_1_sel;
+wire    OUTPUT_STREAM_V_dest_V_1_load_A;
+wire    OUTPUT_STREAM_V_dest_V_1_load_B;
+reg   [1:0] OUTPUT_STREAM_V_dest_V_1_state;
+wire    OUTPUT_STREAM_V_dest_V_1_state_cmp_full;
 wire   [31:0] searched;
 reg    INPUT_STREAM_TDATA_blk_n;
-wire    ap_CS_fsm_state2;
-wire   [0:0] tmp_fu_195_p2;
-wire   [22:0] in1Count_3_fu_201_p2;
-reg    ap_block_state2;
-wire   [31:0] differentBytes_2_fu_215_p2;
-reg   [31:0] differentBytes_reg_150;
-wire   [0:0] tmp_last_V_fu_211_p1;
-reg   [22:0] in1Count_reg_162;
-reg   [31:0] differentBytes_1_reg_174;
-reg   [22:0] in1Count_1_reg_185;
-wire    ap_CS_fsm_state3;
+wire    ap_CS_fsm_pp0_stage0;
+reg    ap_enable_reg_pp0_iter0;
+wire    ap_block_pp0_stage0;
+wire   [0:0] tmp_fu_241_p2;
+reg    OUTPUT_STREAM_TDATA_blk_n;
+reg    ap_enable_reg_pp0_iter1;
+reg   [0:0] tmp_reg_292;
+reg   [0:0] tmp_last_V_reg_322;
+reg    ap_enable_reg_pp0_iter2;
+reg   [0:0] tmp_reg_292_pp0_iter1_reg;
+reg   [0:0] tmp_last_V_reg_322_pp0_iter1_reg;
+reg   [31:0] differentBytes_reg_196;
+reg   [22:0] in1Count_reg_208;
+reg    ap_block_state2_pp0_stage0_iter0;
+wire    ap_block_state3_pp0_stage0_iter1;
+reg    ap_predicate_op53_write_state3;
+reg    ap_block_state3_io;
+wire    ap_block_state4_pp0_stage0_iter2;
+reg    ap_predicate_op54_write_state4;
+reg    ap_block_state4_io;
+reg    ap_block_pp0_stage0_11001;
+wire   [22:0] in1Count_3_fu_247_p2;
+reg   [22:0] in1Count_3_reg_296;
+reg   [31:0] tmp_data_V_reg_302;
+reg   [3:0] tmp_keep_V_reg_307;
+reg   [3:0] tmp_strb_V_reg_312;
+reg   [1:0] tmp_user_V_reg_317;
+reg   [4:0] tmp_id_V_reg_326;
+reg   [5:0] tmp_dest_V_reg_331;
+wire   [31:0] differentBytes_2_fu_281_p2;
+reg   [31:0] differentBytes_2_reg_336;
+reg    ap_block_pp0_stage0_subdone;
+reg    ap_predicate_tran2to5_state2;
+reg    ap_condition_pp0_exit_iter0_state2;
+reg   [31:0] ap_phi_mux_differentBytes_phi_fu_200_p4;
+reg   [22:0] ap_phi_mux_in1Count_phi_fu_212_p4;
+reg   [31:0] differentBytes_1_reg_220;
+reg   [22:0] in1Count_1_reg_231;
+reg    ap_block_pp0_stage0_01001;
+wire    ap_CS_fsm_state5;
+reg    ap_block_state5;
 reg   [2:0] ap_NS_fsm;
-reg    ap_condition_497;
+reg    ap_idle_pp0;
+wire    ap_enable_pp0;
+reg    ap_condition_953;
 
 // power-on initialization
 initial begin
@@ -148,10 +357,47 @@ initial begin
 #0 INPUT_STREAM_V_data_V_0_sel_rd = 1'b0;
 #0 INPUT_STREAM_V_data_V_0_sel_wr = 1'b0;
 #0 INPUT_STREAM_V_data_V_0_state = 2'd0;
+#0 INPUT_STREAM_V_keep_V_0_sel_rd = 1'b0;
+#0 INPUT_STREAM_V_keep_V_0_sel_wr = 1'b0;
+#0 INPUT_STREAM_V_keep_V_0_state = 2'd0;
+#0 INPUT_STREAM_V_strb_V_0_sel_rd = 1'b0;
+#0 INPUT_STREAM_V_strb_V_0_sel_wr = 1'b0;
+#0 INPUT_STREAM_V_strb_V_0_state = 2'd0;
+#0 INPUT_STREAM_V_user_V_0_sel_rd = 1'b0;
+#0 INPUT_STREAM_V_user_V_0_sel_wr = 1'b0;
+#0 INPUT_STREAM_V_user_V_0_state = 2'd0;
 #0 INPUT_STREAM_V_last_V_0_sel_rd = 1'b0;
 #0 INPUT_STREAM_V_last_V_0_sel_wr = 1'b0;
 #0 INPUT_STREAM_V_last_V_0_state = 2'd0;
+#0 INPUT_STREAM_V_id_V_0_sel_rd = 1'b0;
+#0 INPUT_STREAM_V_id_V_0_sel_wr = 1'b0;
+#0 INPUT_STREAM_V_id_V_0_state = 2'd0;
+#0 INPUT_STREAM_V_dest_V_0_sel_rd = 1'b0;
+#0 INPUT_STREAM_V_dest_V_0_sel_wr = 1'b0;
 #0 INPUT_STREAM_V_dest_V_0_state = 2'd0;
+#0 OUTPUT_STREAM_V_data_V_1_sel_rd = 1'b0;
+#0 OUTPUT_STREAM_V_data_V_1_sel_wr = 1'b0;
+#0 OUTPUT_STREAM_V_data_V_1_state = 2'd0;
+#0 OUTPUT_STREAM_V_keep_V_1_sel_rd = 1'b0;
+#0 OUTPUT_STREAM_V_keep_V_1_sel_wr = 1'b0;
+#0 OUTPUT_STREAM_V_keep_V_1_state = 2'd0;
+#0 OUTPUT_STREAM_V_strb_V_1_sel_rd = 1'b0;
+#0 OUTPUT_STREAM_V_strb_V_1_sel_wr = 1'b0;
+#0 OUTPUT_STREAM_V_strb_V_1_state = 2'd0;
+#0 OUTPUT_STREAM_V_user_V_1_sel_rd = 1'b0;
+#0 OUTPUT_STREAM_V_user_V_1_sel_wr = 1'b0;
+#0 OUTPUT_STREAM_V_user_V_1_state = 2'd0;
+#0 OUTPUT_STREAM_V_last_V_1_sel_rd = 1'b0;
+#0 OUTPUT_STREAM_V_last_V_1_state = 2'd0;
+#0 OUTPUT_STREAM_V_id_V_1_sel_rd = 1'b0;
+#0 OUTPUT_STREAM_V_id_V_1_sel_wr = 1'b0;
+#0 OUTPUT_STREAM_V_id_V_1_state = 2'd0;
+#0 OUTPUT_STREAM_V_dest_V_1_sel_rd = 1'b0;
+#0 OUTPUT_STREAM_V_dest_V_1_sel_wr = 1'b0;
+#0 OUTPUT_STREAM_V_dest_V_1_state = 2'd0;
+#0 ap_enable_reg_pp0_iter0 = 1'b0;
+#0 ap_enable_reg_pp0_iter1 = 1'b0;
+#0 ap_enable_reg_pp0_iter2 = 1'b0;
 end
 
 Adder2_CONTROL_BUS_s_axi #(
@@ -183,7 +429,7 @@ Adder2_CONTROL_BUS_s_axi_U(
     .ap_ready(ap_ready),
     .ap_done(ap_done),
     .ap_idle(ap_idle),
-    .agg_result_a(differentBytes_1_reg_174),
+    .agg_result_a(differentBytes_1_reg_220),
     .agg_result_a_ap_vld(agg_result_a_ap_vld),
     .agg_result_b(agg_result_b),
     .agg_result_b_ap_vld(agg_result_b_ap_vld),
@@ -236,6 +482,26 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
+        INPUT_STREAM_V_dest_V_0_sel_rd <= 1'b0;
+    end else begin
+        if (((1'b1 == INPUT_STREAM_V_dest_V_0_ack_out) & (1'b1 == INPUT_STREAM_V_dest_V_0_vld_out))) begin
+            INPUT_STREAM_V_dest_V_0_sel_rd <= ~INPUT_STREAM_V_dest_V_0_sel_rd;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        INPUT_STREAM_V_dest_V_0_sel_wr <= 1'b0;
+    end else begin
+        if (((1'b1 == INPUT_STREAM_V_dest_V_0_ack_in) & (1'b1 == INPUT_STREAM_V_dest_V_0_vld_in))) begin
+            INPUT_STREAM_V_dest_V_0_sel_wr <= ~INPUT_STREAM_V_dest_V_0_sel_wr;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
         INPUT_STREAM_V_dest_V_0_state <= 2'd0;
     end else begin
         if ((((2'd2 == INPUT_STREAM_V_dest_V_0_state) & (1'b0 == INPUT_STREAM_V_dest_V_0_vld_in)) | ((2'd3 == INPUT_STREAM_V_dest_V_0_state) & (1'b0 == INPUT_STREAM_V_dest_V_0_vld_in) & (1'b1 == INPUT_STREAM_V_dest_V_0_ack_out)))) begin
@@ -246,6 +512,78 @@ always @ (posedge ap_clk) begin
             INPUT_STREAM_V_dest_V_0_state <= 2'd3;
         end else begin
             INPUT_STREAM_V_dest_V_0_state <= 2'd2;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        INPUT_STREAM_V_id_V_0_sel_rd <= 1'b0;
+    end else begin
+        if (((1'b1 == INPUT_STREAM_V_id_V_0_ack_out) & (1'b1 == INPUT_STREAM_V_id_V_0_vld_out))) begin
+            INPUT_STREAM_V_id_V_0_sel_rd <= ~INPUT_STREAM_V_id_V_0_sel_rd;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        INPUT_STREAM_V_id_V_0_sel_wr <= 1'b0;
+    end else begin
+        if (((1'b1 == INPUT_STREAM_V_id_V_0_ack_in) & (1'b1 == INPUT_STREAM_V_id_V_0_vld_in))) begin
+            INPUT_STREAM_V_id_V_0_sel_wr <= ~INPUT_STREAM_V_id_V_0_sel_wr;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        INPUT_STREAM_V_id_V_0_state <= 2'd0;
+    end else begin
+        if ((((2'd2 == INPUT_STREAM_V_id_V_0_state) & (1'b0 == INPUT_STREAM_V_id_V_0_vld_in)) | ((2'd3 == INPUT_STREAM_V_id_V_0_state) & (1'b0 == INPUT_STREAM_V_id_V_0_vld_in) & (1'b1 == INPUT_STREAM_V_id_V_0_ack_out)))) begin
+            INPUT_STREAM_V_id_V_0_state <= 2'd2;
+        end else if ((((2'd1 == INPUT_STREAM_V_id_V_0_state) & (1'b0 == INPUT_STREAM_V_id_V_0_ack_out)) | ((2'd3 == INPUT_STREAM_V_id_V_0_state) & (1'b0 == INPUT_STREAM_V_id_V_0_ack_out) & (1'b1 == INPUT_STREAM_V_id_V_0_vld_in)))) begin
+            INPUT_STREAM_V_id_V_0_state <= 2'd1;
+        end else if (((~((1'b0 == INPUT_STREAM_V_id_V_0_vld_in) & (1'b1 == INPUT_STREAM_V_id_V_0_ack_out)) & ~((1'b0 == INPUT_STREAM_V_id_V_0_ack_out) & (1'b1 == INPUT_STREAM_V_id_V_0_vld_in)) & (2'd3 == INPUT_STREAM_V_id_V_0_state)) | ((2'd1 == INPUT_STREAM_V_id_V_0_state) & (1'b1 == INPUT_STREAM_V_id_V_0_ack_out)) | ((2'd2 == INPUT_STREAM_V_id_V_0_state) & (1'b1 == INPUT_STREAM_V_id_V_0_vld_in)))) begin
+            INPUT_STREAM_V_id_V_0_state <= 2'd3;
+        end else begin
+            INPUT_STREAM_V_id_V_0_state <= 2'd2;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        INPUT_STREAM_V_keep_V_0_sel_rd <= 1'b0;
+    end else begin
+        if (((1'b1 == INPUT_STREAM_V_keep_V_0_ack_out) & (1'b1 == INPUT_STREAM_V_keep_V_0_vld_out))) begin
+            INPUT_STREAM_V_keep_V_0_sel_rd <= ~INPUT_STREAM_V_keep_V_0_sel_rd;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        INPUT_STREAM_V_keep_V_0_sel_wr <= 1'b0;
+    end else begin
+        if (((1'b1 == INPUT_STREAM_V_keep_V_0_ack_in) & (1'b1 == INPUT_STREAM_V_keep_V_0_vld_in))) begin
+            INPUT_STREAM_V_keep_V_0_sel_wr <= ~INPUT_STREAM_V_keep_V_0_sel_wr;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        INPUT_STREAM_V_keep_V_0_state <= 2'd0;
+    end else begin
+        if ((((2'd2 == INPUT_STREAM_V_keep_V_0_state) & (1'b0 == INPUT_STREAM_V_keep_V_0_vld_in)) | ((2'd3 == INPUT_STREAM_V_keep_V_0_state) & (1'b0 == INPUT_STREAM_V_keep_V_0_vld_in) & (1'b1 == INPUT_STREAM_V_keep_V_0_ack_out)))) begin
+            INPUT_STREAM_V_keep_V_0_state <= 2'd2;
+        end else if ((((2'd1 == INPUT_STREAM_V_keep_V_0_state) & (1'b0 == INPUT_STREAM_V_keep_V_0_ack_out)) | ((2'd3 == INPUT_STREAM_V_keep_V_0_state) & (1'b0 == INPUT_STREAM_V_keep_V_0_ack_out) & (1'b1 == INPUT_STREAM_V_keep_V_0_vld_in)))) begin
+            INPUT_STREAM_V_keep_V_0_state <= 2'd1;
+        end else if (((~((1'b0 == INPUT_STREAM_V_keep_V_0_vld_in) & (1'b1 == INPUT_STREAM_V_keep_V_0_ack_out)) & ~((1'b0 == INPUT_STREAM_V_keep_V_0_ack_out) & (1'b1 == INPUT_STREAM_V_keep_V_0_vld_in)) & (2'd3 == INPUT_STREAM_V_keep_V_0_state)) | ((2'd1 == INPUT_STREAM_V_keep_V_0_state) & (1'b1 == INPUT_STREAM_V_keep_V_0_ack_out)) | ((2'd2 == INPUT_STREAM_V_keep_V_0_state) & (1'b1 == INPUT_STREAM_V_keep_V_0_vld_in)))) begin
+            INPUT_STREAM_V_keep_V_0_state <= 2'd3;
+        end else begin
+            INPUT_STREAM_V_keep_V_0_state <= 2'd2;
         end
     end
 end
@@ -288,6 +626,320 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
+        INPUT_STREAM_V_strb_V_0_sel_rd <= 1'b0;
+    end else begin
+        if (((1'b1 == INPUT_STREAM_V_strb_V_0_ack_out) & (1'b1 == INPUT_STREAM_V_strb_V_0_vld_out))) begin
+            INPUT_STREAM_V_strb_V_0_sel_rd <= ~INPUT_STREAM_V_strb_V_0_sel_rd;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        INPUT_STREAM_V_strb_V_0_sel_wr <= 1'b0;
+    end else begin
+        if (((1'b1 == INPUT_STREAM_V_strb_V_0_ack_in) & (1'b1 == INPUT_STREAM_V_strb_V_0_vld_in))) begin
+            INPUT_STREAM_V_strb_V_0_sel_wr <= ~INPUT_STREAM_V_strb_V_0_sel_wr;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        INPUT_STREAM_V_strb_V_0_state <= 2'd0;
+    end else begin
+        if ((((2'd2 == INPUT_STREAM_V_strb_V_0_state) & (1'b0 == INPUT_STREAM_V_strb_V_0_vld_in)) | ((2'd3 == INPUT_STREAM_V_strb_V_0_state) & (1'b0 == INPUT_STREAM_V_strb_V_0_vld_in) & (1'b1 == INPUT_STREAM_V_strb_V_0_ack_out)))) begin
+            INPUT_STREAM_V_strb_V_0_state <= 2'd2;
+        end else if ((((2'd1 == INPUT_STREAM_V_strb_V_0_state) & (1'b0 == INPUT_STREAM_V_strb_V_0_ack_out)) | ((2'd3 == INPUT_STREAM_V_strb_V_0_state) & (1'b0 == INPUT_STREAM_V_strb_V_0_ack_out) & (1'b1 == INPUT_STREAM_V_strb_V_0_vld_in)))) begin
+            INPUT_STREAM_V_strb_V_0_state <= 2'd1;
+        end else if (((~((1'b0 == INPUT_STREAM_V_strb_V_0_vld_in) & (1'b1 == INPUT_STREAM_V_strb_V_0_ack_out)) & ~((1'b0 == INPUT_STREAM_V_strb_V_0_ack_out) & (1'b1 == INPUT_STREAM_V_strb_V_0_vld_in)) & (2'd3 == INPUT_STREAM_V_strb_V_0_state)) | ((2'd1 == INPUT_STREAM_V_strb_V_0_state) & (1'b1 == INPUT_STREAM_V_strb_V_0_ack_out)) | ((2'd2 == INPUT_STREAM_V_strb_V_0_state) & (1'b1 == INPUT_STREAM_V_strb_V_0_vld_in)))) begin
+            INPUT_STREAM_V_strb_V_0_state <= 2'd3;
+        end else begin
+            INPUT_STREAM_V_strb_V_0_state <= 2'd2;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        INPUT_STREAM_V_user_V_0_sel_rd <= 1'b0;
+    end else begin
+        if (((1'b1 == INPUT_STREAM_V_user_V_0_ack_out) & (1'b1 == INPUT_STREAM_V_user_V_0_vld_out))) begin
+            INPUT_STREAM_V_user_V_0_sel_rd <= ~INPUT_STREAM_V_user_V_0_sel_rd;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        INPUT_STREAM_V_user_V_0_sel_wr <= 1'b0;
+    end else begin
+        if (((1'b1 == INPUT_STREAM_V_user_V_0_ack_in) & (1'b1 == INPUT_STREAM_V_user_V_0_vld_in))) begin
+            INPUT_STREAM_V_user_V_0_sel_wr <= ~INPUT_STREAM_V_user_V_0_sel_wr;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        INPUT_STREAM_V_user_V_0_state <= 2'd0;
+    end else begin
+        if ((((2'd2 == INPUT_STREAM_V_user_V_0_state) & (1'b0 == INPUT_STREAM_V_user_V_0_vld_in)) | ((2'd3 == INPUT_STREAM_V_user_V_0_state) & (1'b0 == INPUT_STREAM_V_user_V_0_vld_in) & (1'b1 == INPUT_STREAM_V_user_V_0_ack_out)))) begin
+            INPUT_STREAM_V_user_V_0_state <= 2'd2;
+        end else if ((((2'd1 == INPUT_STREAM_V_user_V_0_state) & (1'b0 == INPUT_STREAM_V_user_V_0_ack_out)) | ((2'd3 == INPUT_STREAM_V_user_V_0_state) & (1'b0 == INPUT_STREAM_V_user_V_0_ack_out) & (1'b1 == INPUT_STREAM_V_user_V_0_vld_in)))) begin
+            INPUT_STREAM_V_user_V_0_state <= 2'd1;
+        end else if (((~((1'b0 == INPUT_STREAM_V_user_V_0_vld_in) & (1'b1 == INPUT_STREAM_V_user_V_0_ack_out)) & ~((1'b0 == INPUT_STREAM_V_user_V_0_ack_out) & (1'b1 == INPUT_STREAM_V_user_V_0_vld_in)) & (2'd3 == INPUT_STREAM_V_user_V_0_state)) | ((2'd1 == INPUT_STREAM_V_user_V_0_state) & (1'b1 == INPUT_STREAM_V_user_V_0_ack_out)) | ((2'd2 == INPUT_STREAM_V_user_V_0_state) & (1'b1 == INPUT_STREAM_V_user_V_0_vld_in)))) begin
+            INPUT_STREAM_V_user_V_0_state <= 2'd3;
+        end else begin
+            INPUT_STREAM_V_user_V_0_state <= 2'd2;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        OUTPUT_STREAM_V_data_V_1_sel_rd <= 1'b0;
+    end else begin
+        if (((1'b1 == OUTPUT_STREAM_V_data_V_1_ack_out) & (1'b1 == OUTPUT_STREAM_V_data_V_1_vld_out))) begin
+            OUTPUT_STREAM_V_data_V_1_sel_rd <= ~OUTPUT_STREAM_V_data_V_1_sel_rd;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        OUTPUT_STREAM_V_data_V_1_sel_wr <= 1'b0;
+    end else begin
+        if (((1'b1 == OUTPUT_STREAM_V_data_V_1_ack_in) & (1'b1 == OUTPUT_STREAM_V_data_V_1_vld_in))) begin
+            OUTPUT_STREAM_V_data_V_1_sel_wr <= ~OUTPUT_STREAM_V_data_V_1_sel_wr;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        OUTPUT_STREAM_V_data_V_1_state <= 2'd0;
+    end else begin
+        if ((((2'd2 == OUTPUT_STREAM_V_data_V_1_state) & (1'b0 == OUTPUT_STREAM_V_data_V_1_vld_in)) | ((2'd3 == OUTPUT_STREAM_V_data_V_1_state) & (1'b0 == OUTPUT_STREAM_V_data_V_1_vld_in) & (1'b1 == OUTPUT_STREAM_V_data_V_1_ack_out)))) begin
+            OUTPUT_STREAM_V_data_V_1_state <= 2'd2;
+        end else if ((((2'd1 == OUTPUT_STREAM_V_data_V_1_state) & (1'b0 == OUTPUT_STREAM_V_data_V_1_ack_out)) | ((2'd3 == OUTPUT_STREAM_V_data_V_1_state) & (1'b0 == OUTPUT_STREAM_V_data_V_1_ack_out) & (1'b1 == OUTPUT_STREAM_V_data_V_1_vld_in)))) begin
+            OUTPUT_STREAM_V_data_V_1_state <= 2'd1;
+        end else if (((~((1'b0 == OUTPUT_STREAM_V_data_V_1_vld_in) & (1'b1 == OUTPUT_STREAM_V_data_V_1_ack_out)) & ~((1'b0 == OUTPUT_STREAM_V_data_V_1_ack_out) & (1'b1 == OUTPUT_STREAM_V_data_V_1_vld_in)) & (2'd3 == OUTPUT_STREAM_V_data_V_1_state)) | ((2'd1 == OUTPUT_STREAM_V_data_V_1_state) & (1'b1 == OUTPUT_STREAM_V_data_V_1_ack_out)) | ((2'd2 == OUTPUT_STREAM_V_data_V_1_state) & (1'b1 == OUTPUT_STREAM_V_data_V_1_vld_in)))) begin
+            OUTPUT_STREAM_V_data_V_1_state <= 2'd3;
+        end else begin
+            OUTPUT_STREAM_V_data_V_1_state <= 2'd2;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        OUTPUT_STREAM_V_dest_V_1_sel_rd <= 1'b0;
+    end else begin
+        if (((1'b1 == OUTPUT_STREAM_V_dest_V_1_ack_out) & (1'b1 == OUTPUT_STREAM_V_dest_V_1_vld_out))) begin
+            OUTPUT_STREAM_V_dest_V_1_sel_rd <= ~OUTPUT_STREAM_V_dest_V_1_sel_rd;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        OUTPUT_STREAM_V_dest_V_1_sel_wr <= 1'b0;
+    end else begin
+        if (((1'b1 == OUTPUT_STREAM_V_dest_V_1_ack_in) & (1'b1 == OUTPUT_STREAM_V_dest_V_1_vld_in))) begin
+            OUTPUT_STREAM_V_dest_V_1_sel_wr <= ~OUTPUT_STREAM_V_dest_V_1_sel_wr;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        OUTPUT_STREAM_V_dest_V_1_state <= 2'd0;
+    end else begin
+        if ((((2'd2 == OUTPUT_STREAM_V_dest_V_1_state) & (1'b0 == OUTPUT_STREAM_V_dest_V_1_vld_in)) | ((2'd3 == OUTPUT_STREAM_V_dest_V_1_state) & (1'b0 == OUTPUT_STREAM_V_dest_V_1_vld_in) & (1'b1 == OUTPUT_STREAM_V_dest_V_1_ack_out)))) begin
+            OUTPUT_STREAM_V_dest_V_1_state <= 2'd2;
+        end else if ((((2'd1 == OUTPUT_STREAM_V_dest_V_1_state) & (1'b0 == OUTPUT_STREAM_V_dest_V_1_ack_out)) | ((2'd3 == OUTPUT_STREAM_V_dest_V_1_state) & (1'b0 == OUTPUT_STREAM_V_dest_V_1_ack_out) & (1'b1 == OUTPUT_STREAM_V_dest_V_1_vld_in)))) begin
+            OUTPUT_STREAM_V_dest_V_1_state <= 2'd1;
+        end else if (((~((1'b0 == OUTPUT_STREAM_V_dest_V_1_vld_in) & (1'b1 == OUTPUT_STREAM_V_dest_V_1_ack_out)) & ~((1'b0 == OUTPUT_STREAM_V_dest_V_1_ack_out) & (1'b1 == OUTPUT_STREAM_V_dest_V_1_vld_in)) & (2'd3 == OUTPUT_STREAM_V_dest_V_1_state)) | ((2'd1 == OUTPUT_STREAM_V_dest_V_1_state) & (1'b1 == OUTPUT_STREAM_V_dest_V_1_ack_out)) | ((2'd2 == OUTPUT_STREAM_V_dest_V_1_state) & (1'b1 == OUTPUT_STREAM_V_dest_V_1_vld_in)))) begin
+            OUTPUT_STREAM_V_dest_V_1_state <= 2'd3;
+        end else begin
+            OUTPUT_STREAM_V_dest_V_1_state <= 2'd2;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        OUTPUT_STREAM_V_id_V_1_sel_rd <= 1'b0;
+    end else begin
+        if (((1'b1 == OUTPUT_STREAM_V_id_V_1_ack_out) & (1'b1 == OUTPUT_STREAM_V_id_V_1_vld_out))) begin
+            OUTPUT_STREAM_V_id_V_1_sel_rd <= ~OUTPUT_STREAM_V_id_V_1_sel_rd;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        OUTPUT_STREAM_V_id_V_1_sel_wr <= 1'b0;
+    end else begin
+        if (((1'b1 == OUTPUT_STREAM_V_id_V_1_ack_in) & (1'b1 == OUTPUT_STREAM_V_id_V_1_vld_in))) begin
+            OUTPUT_STREAM_V_id_V_1_sel_wr <= ~OUTPUT_STREAM_V_id_V_1_sel_wr;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        OUTPUT_STREAM_V_id_V_1_state <= 2'd0;
+    end else begin
+        if ((((2'd2 == OUTPUT_STREAM_V_id_V_1_state) & (1'b0 == OUTPUT_STREAM_V_id_V_1_vld_in)) | ((2'd3 == OUTPUT_STREAM_V_id_V_1_state) & (1'b0 == OUTPUT_STREAM_V_id_V_1_vld_in) & (1'b1 == OUTPUT_STREAM_V_id_V_1_ack_out)))) begin
+            OUTPUT_STREAM_V_id_V_1_state <= 2'd2;
+        end else if ((((2'd1 == OUTPUT_STREAM_V_id_V_1_state) & (1'b0 == OUTPUT_STREAM_V_id_V_1_ack_out)) | ((2'd3 == OUTPUT_STREAM_V_id_V_1_state) & (1'b0 == OUTPUT_STREAM_V_id_V_1_ack_out) & (1'b1 == OUTPUT_STREAM_V_id_V_1_vld_in)))) begin
+            OUTPUT_STREAM_V_id_V_1_state <= 2'd1;
+        end else if (((~((1'b0 == OUTPUT_STREAM_V_id_V_1_vld_in) & (1'b1 == OUTPUT_STREAM_V_id_V_1_ack_out)) & ~((1'b0 == OUTPUT_STREAM_V_id_V_1_ack_out) & (1'b1 == OUTPUT_STREAM_V_id_V_1_vld_in)) & (2'd3 == OUTPUT_STREAM_V_id_V_1_state)) | ((2'd1 == OUTPUT_STREAM_V_id_V_1_state) & (1'b1 == OUTPUT_STREAM_V_id_V_1_ack_out)) | ((2'd2 == OUTPUT_STREAM_V_id_V_1_state) & (1'b1 == OUTPUT_STREAM_V_id_V_1_vld_in)))) begin
+            OUTPUT_STREAM_V_id_V_1_state <= 2'd3;
+        end else begin
+            OUTPUT_STREAM_V_id_V_1_state <= 2'd2;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        OUTPUT_STREAM_V_keep_V_1_sel_rd <= 1'b0;
+    end else begin
+        if (((1'b1 == OUTPUT_STREAM_V_keep_V_1_ack_out) & (1'b1 == OUTPUT_STREAM_V_keep_V_1_vld_out))) begin
+            OUTPUT_STREAM_V_keep_V_1_sel_rd <= ~OUTPUT_STREAM_V_keep_V_1_sel_rd;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        OUTPUT_STREAM_V_keep_V_1_sel_wr <= 1'b0;
+    end else begin
+        if (((1'b1 == OUTPUT_STREAM_V_keep_V_1_ack_in) & (1'b1 == OUTPUT_STREAM_V_keep_V_1_vld_in))) begin
+            OUTPUT_STREAM_V_keep_V_1_sel_wr <= ~OUTPUT_STREAM_V_keep_V_1_sel_wr;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        OUTPUT_STREAM_V_keep_V_1_state <= 2'd0;
+    end else begin
+        if ((((2'd2 == OUTPUT_STREAM_V_keep_V_1_state) & (1'b0 == OUTPUT_STREAM_V_keep_V_1_vld_in)) | ((2'd3 == OUTPUT_STREAM_V_keep_V_1_state) & (1'b0 == OUTPUT_STREAM_V_keep_V_1_vld_in) & (1'b1 == OUTPUT_STREAM_V_keep_V_1_ack_out)))) begin
+            OUTPUT_STREAM_V_keep_V_1_state <= 2'd2;
+        end else if ((((2'd1 == OUTPUT_STREAM_V_keep_V_1_state) & (1'b0 == OUTPUT_STREAM_V_keep_V_1_ack_out)) | ((2'd3 == OUTPUT_STREAM_V_keep_V_1_state) & (1'b0 == OUTPUT_STREAM_V_keep_V_1_ack_out) & (1'b1 == OUTPUT_STREAM_V_keep_V_1_vld_in)))) begin
+            OUTPUT_STREAM_V_keep_V_1_state <= 2'd1;
+        end else if (((~((1'b0 == OUTPUT_STREAM_V_keep_V_1_vld_in) & (1'b1 == OUTPUT_STREAM_V_keep_V_1_ack_out)) & ~((1'b0 == OUTPUT_STREAM_V_keep_V_1_ack_out) & (1'b1 == OUTPUT_STREAM_V_keep_V_1_vld_in)) & (2'd3 == OUTPUT_STREAM_V_keep_V_1_state)) | ((2'd1 == OUTPUT_STREAM_V_keep_V_1_state) & (1'b1 == OUTPUT_STREAM_V_keep_V_1_ack_out)) | ((2'd2 == OUTPUT_STREAM_V_keep_V_1_state) & (1'b1 == OUTPUT_STREAM_V_keep_V_1_vld_in)))) begin
+            OUTPUT_STREAM_V_keep_V_1_state <= 2'd3;
+        end else begin
+            OUTPUT_STREAM_V_keep_V_1_state <= 2'd2;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        OUTPUT_STREAM_V_last_V_1_sel_rd <= 1'b0;
+    end else begin
+        if (((1'b1 == OUTPUT_STREAM_V_last_V_1_ack_out) & (1'b1 == OUTPUT_STREAM_V_last_V_1_vld_out))) begin
+            OUTPUT_STREAM_V_last_V_1_sel_rd <= ~OUTPUT_STREAM_V_last_V_1_sel_rd;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        OUTPUT_STREAM_V_last_V_1_state <= 2'd0;
+    end else begin
+        if ((((2'd2 == OUTPUT_STREAM_V_last_V_1_state) & (1'b0 == OUTPUT_STREAM_V_last_V_1_vld_in)) | ((2'd3 == OUTPUT_STREAM_V_last_V_1_state) & (1'b0 == OUTPUT_STREAM_V_last_V_1_vld_in) & (1'b1 == OUTPUT_STREAM_V_last_V_1_ack_out)))) begin
+            OUTPUT_STREAM_V_last_V_1_state <= 2'd2;
+        end else if ((((2'd1 == OUTPUT_STREAM_V_last_V_1_state) & (1'b0 == OUTPUT_STREAM_V_last_V_1_ack_out)) | ((2'd3 == OUTPUT_STREAM_V_last_V_1_state) & (1'b0 == OUTPUT_STREAM_V_last_V_1_ack_out) & (1'b1 == OUTPUT_STREAM_V_last_V_1_vld_in)))) begin
+            OUTPUT_STREAM_V_last_V_1_state <= 2'd1;
+        end else if (((~((1'b0 == OUTPUT_STREAM_V_last_V_1_vld_in) & (1'b1 == OUTPUT_STREAM_V_last_V_1_ack_out)) & ~((1'b0 == OUTPUT_STREAM_V_last_V_1_ack_out) & (1'b1 == OUTPUT_STREAM_V_last_V_1_vld_in)) & (2'd3 == OUTPUT_STREAM_V_last_V_1_state)) | ((2'd1 == OUTPUT_STREAM_V_last_V_1_state) & (1'b1 == OUTPUT_STREAM_V_last_V_1_ack_out)) | ((2'd2 == OUTPUT_STREAM_V_last_V_1_state) & (1'b1 == OUTPUT_STREAM_V_last_V_1_vld_in)))) begin
+            OUTPUT_STREAM_V_last_V_1_state <= 2'd3;
+        end else begin
+            OUTPUT_STREAM_V_last_V_1_state <= 2'd2;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        OUTPUT_STREAM_V_strb_V_1_sel_rd <= 1'b0;
+    end else begin
+        if (((1'b1 == OUTPUT_STREAM_V_strb_V_1_ack_out) & (1'b1 == OUTPUT_STREAM_V_strb_V_1_vld_out))) begin
+            OUTPUT_STREAM_V_strb_V_1_sel_rd <= ~OUTPUT_STREAM_V_strb_V_1_sel_rd;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        OUTPUT_STREAM_V_strb_V_1_sel_wr <= 1'b0;
+    end else begin
+        if (((1'b1 == OUTPUT_STREAM_V_strb_V_1_ack_in) & (1'b1 == OUTPUT_STREAM_V_strb_V_1_vld_in))) begin
+            OUTPUT_STREAM_V_strb_V_1_sel_wr <= ~OUTPUT_STREAM_V_strb_V_1_sel_wr;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        OUTPUT_STREAM_V_strb_V_1_state <= 2'd0;
+    end else begin
+        if ((((2'd2 == OUTPUT_STREAM_V_strb_V_1_state) & (1'b0 == OUTPUT_STREAM_V_strb_V_1_vld_in)) | ((2'd3 == OUTPUT_STREAM_V_strb_V_1_state) & (1'b0 == OUTPUT_STREAM_V_strb_V_1_vld_in) & (1'b1 == OUTPUT_STREAM_V_strb_V_1_ack_out)))) begin
+            OUTPUT_STREAM_V_strb_V_1_state <= 2'd2;
+        end else if ((((2'd1 == OUTPUT_STREAM_V_strb_V_1_state) & (1'b0 == OUTPUT_STREAM_V_strb_V_1_ack_out)) | ((2'd3 == OUTPUT_STREAM_V_strb_V_1_state) & (1'b0 == OUTPUT_STREAM_V_strb_V_1_ack_out) & (1'b1 == OUTPUT_STREAM_V_strb_V_1_vld_in)))) begin
+            OUTPUT_STREAM_V_strb_V_1_state <= 2'd1;
+        end else if (((~((1'b0 == OUTPUT_STREAM_V_strb_V_1_vld_in) & (1'b1 == OUTPUT_STREAM_V_strb_V_1_ack_out)) & ~((1'b0 == OUTPUT_STREAM_V_strb_V_1_ack_out) & (1'b1 == OUTPUT_STREAM_V_strb_V_1_vld_in)) & (2'd3 == OUTPUT_STREAM_V_strb_V_1_state)) | ((2'd1 == OUTPUT_STREAM_V_strb_V_1_state) & (1'b1 == OUTPUT_STREAM_V_strb_V_1_ack_out)) | ((2'd2 == OUTPUT_STREAM_V_strb_V_1_state) & (1'b1 == OUTPUT_STREAM_V_strb_V_1_vld_in)))) begin
+            OUTPUT_STREAM_V_strb_V_1_state <= 2'd3;
+        end else begin
+            OUTPUT_STREAM_V_strb_V_1_state <= 2'd2;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        OUTPUT_STREAM_V_user_V_1_sel_rd <= 1'b0;
+    end else begin
+        if (((1'b1 == OUTPUT_STREAM_V_user_V_1_ack_out) & (1'b1 == OUTPUT_STREAM_V_user_V_1_vld_out))) begin
+            OUTPUT_STREAM_V_user_V_1_sel_rd <= ~OUTPUT_STREAM_V_user_V_1_sel_rd;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        OUTPUT_STREAM_V_user_V_1_sel_wr <= 1'b0;
+    end else begin
+        if (((1'b1 == OUTPUT_STREAM_V_user_V_1_ack_in) & (1'b1 == OUTPUT_STREAM_V_user_V_1_vld_in))) begin
+            OUTPUT_STREAM_V_user_V_1_sel_wr <= ~OUTPUT_STREAM_V_user_V_1_sel_wr;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        OUTPUT_STREAM_V_user_V_1_state <= 2'd0;
+    end else begin
+        if ((((2'd2 == OUTPUT_STREAM_V_user_V_1_state) & (1'b0 == OUTPUT_STREAM_V_user_V_1_vld_in)) | ((2'd3 == OUTPUT_STREAM_V_user_V_1_state) & (1'b0 == OUTPUT_STREAM_V_user_V_1_vld_in) & (1'b1 == OUTPUT_STREAM_V_user_V_1_ack_out)))) begin
+            OUTPUT_STREAM_V_user_V_1_state <= 2'd2;
+        end else if ((((2'd1 == OUTPUT_STREAM_V_user_V_1_state) & (1'b0 == OUTPUT_STREAM_V_user_V_1_ack_out)) | ((2'd3 == OUTPUT_STREAM_V_user_V_1_state) & (1'b0 == OUTPUT_STREAM_V_user_V_1_ack_out) & (1'b1 == OUTPUT_STREAM_V_user_V_1_vld_in)))) begin
+            OUTPUT_STREAM_V_user_V_1_state <= 2'd1;
+        end else if (((~((1'b0 == OUTPUT_STREAM_V_user_V_1_vld_in) & (1'b1 == OUTPUT_STREAM_V_user_V_1_ack_out)) & ~((1'b0 == OUTPUT_STREAM_V_user_V_1_ack_out) & (1'b1 == OUTPUT_STREAM_V_user_V_1_vld_in)) & (2'd3 == OUTPUT_STREAM_V_user_V_1_state)) | ((2'd1 == OUTPUT_STREAM_V_user_V_1_state) & (1'b1 == OUTPUT_STREAM_V_user_V_1_ack_out)) | ((2'd2 == OUTPUT_STREAM_V_user_V_1_state) & (1'b1 == OUTPUT_STREAM_V_user_V_1_vld_in)))) begin
+            OUTPUT_STREAM_V_user_V_1_state <= 2'd3;
+        end else begin
+            OUTPUT_STREAM_V_user_V_1_state <= 2'd2;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
         ap_CS_fsm <= ap_ST_fsm_state1;
     end else begin
         ap_CS_fsm <= ap_NS_fsm;
@@ -295,38 +947,76 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_497)) begin
-        if (((tmp_last_V_fu_211_p1 == 1'd1) & (tmp_fu_195_p2 == 1'd1))) begin
-            differentBytes_1_reg_174 <= differentBytes_2_fu_215_p2;
-        end else if ((tmp_fu_195_p2 == 1'd0)) begin
-            differentBytes_1_reg_174 <= differentBytes_reg_150;
+    if (ap_rst_n_inv == 1'b1) begin
+        ap_enable_reg_pp0_iter0 <= 1'b0;
+    end else begin
+        if (((1'b0 == ap_block_pp0_stage0_subdone) & (1'b1 == ap_condition_pp0_exit_iter0_state2) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+            ap_enable_reg_pp0_iter0 <= 1'b0;
+        end else if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
+            ap_enable_reg_pp0_iter0 <= 1'b1;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((~((tmp_fu_195_p2 == 1'd1) & (1'b0 == INPUT_STREAM_V_data_V_0_vld_out)) & (tmp_fu_195_p2 == 1'd1) & (tmp_last_V_fu_211_p1 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
-        differentBytes_reg_150 <= differentBytes_2_fu_215_p2;
-    end else if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
-        differentBytes_reg_150 <= 32'd0;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_497)) begin
-        if (((tmp_last_V_fu_211_p1 == 1'd1) & (tmp_fu_195_p2 == 1'd1))) begin
-            in1Count_1_reg_185 <= in1Count_3_fu_201_p2;
-        end else if ((tmp_fu_195_p2 == 1'd0)) begin
-            in1Count_1_reg_185 <= in1Count_reg_162;
+    if (ap_rst_n_inv == 1'b1) begin
+        ap_enable_reg_pp0_iter1 <= 1'b0;
+    end else begin
+        if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
+            if ((1'b1 == ap_condition_pp0_exit_iter0_state2)) begin
+                ap_enable_reg_pp0_iter1 <= (1'b1 ^ ap_condition_pp0_exit_iter0_state2);
+            end else if ((1'b1 == 1'b1)) begin
+                ap_enable_reg_pp0_iter1 <= ap_enable_reg_pp0_iter0;
+            end
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((~((tmp_fu_195_p2 == 1'd1) & (1'b0 == INPUT_STREAM_V_data_V_0_vld_out)) & (tmp_fu_195_p2 == 1'd1) & (tmp_last_V_fu_211_p1 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
-        in1Count_reg_162 <= in1Count_3_fu_201_p2;
+    if (ap_rst_n_inv == 1'b1) begin
+        ap_enable_reg_pp0_iter2 <= 1'b0;
+    end else begin
+        if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
+            ap_enable_reg_pp0_iter2 <= ap_enable_reg_pp0_iter1;
+        end else if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
+            ap_enable_reg_pp0_iter2 <= 1'b0;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_condition_953)) begin
+        if (((1'd1 == INPUT_STREAM_V_last_V_0_data_out) & (tmp_fu_241_p2 == 1'd1))) begin
+            differentBytes_1_reg_220 <= differentBytes_2_fu_281_p2;
+        end else if ((tmp_fu_241_p2 == 1'd0)) begin
+            differentBytes_1_reg_220 <= ap_phi_mux_differentBytes_phi_fu_200_p4;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (tmp_reg_292 == 1'd1) & (tmp_last_V_reg_322 == 1'd0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        differentBytes_reg_196 <= differentBytes_2_reg_336;
     end else if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
-        in1Count_reg_162 <= 23'd0;
+        differentBytes_reg_196 <= 32'd0;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_condition_953)) begin
+        if (((1'd1 == INPUT_STREAM_V_last_V_0_data_out) & (tmp_fu_241_p2 == 1'd1))) begin
+            in1Count_1_reg_231 <= in1Count_3_fu_247_p2;
+        end else if ((tmp_fu_241_p2 == 1'd0)) begin
+            in1Count_1_reg_231 <= ap_phi_mux_in1Count_phi_fu_212_p4;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (tmp_reg_292 == 1'd1) & (tmp_last_V_reg_322 == 1'd0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        in1Count_reg_208 <= in1Count_3_reg_296;
+    end else if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
+        in1Count_reg_208 <= 23'd0;
     end
 end
 
@@ -343,6 +1033,42 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
+    if ((1'b1 == INPUT_STREAM_V_dest_V_0_load_A)) begin
+        INPUT_STREAM_V_dest_V_0_payload_A <= INPUT_STREAM_TDEST;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == INPUT_STREAM_V_dest_V_0_load_B)) begin
+        INPUT_STREAM_V_dest_V_0_payload_B <= INPUT_STREAM_TDEST;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == INPUT_STREAM_V_id_V_0_load_A)) begin
+        INPUT_STREAM_V_id_V_0_payload_A <= INPUT_STREAM_TID;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == INPUT_STREAM_V_id_V_0_load_B)) begin
+        INPUT_STREAM_V_id_V_0_payload_B <= INPUT_STREAM_TID;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == INPUT_STREAM_V_keep_V_0_load_A)) begin
+        INPUT_STREAM_V_keep_V_0_payload_A <= INPUT_STREAM_TKEEP;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == INPUT_STREAM_V_keep_V_0_load_B)) begin
+        INPUT_STREAM_V_keep_V_0_payload_B <= INPUT_STREAM_TKEEP;
+    end
+end
+
+always @ (posedge ap_clk) begin
     if ((1'b1 == INPUT_STREAM_V_last_V_0_load_A)) begin
         INPUT_STREAM_V_last_V_0_payload_A <= INPUT_STREAM_TLAST;
     end
@@ -354,8 +1080,136 @@ always @ (posedge ap_clk) begin
     end
 end
 
+always @ (posedge ap_clk) begin
+    if ((1'b1 == INPUT_STREAM_V_strb_V_0_load_A)) begin
+        INPUT_STREAM_V_strb_V_0_payload_A <= INPUT_STREAM_TSTRB;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == INPUT_STREAM_V_strb_V_0_load_B)) begin
+        INPUT_STREAM_V_strb_V_0_payload_B <= INPUT_STREAM_TSTRB;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == INPUT_STREAM_V_user_V_0_load_A)) begin
+        INPUT_STREAM_V_user_V_0_payload_A <= INPUT_STREAM_TUSER;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == INPUT_STREAM_V_user_V_0_load_B)) begin
+        INPUT_STREAM_V_user_V_0_payload_B <= INPUT_STREAM_TUSER;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == OUTPUT_STREAM_V_data_V_1_load_A)) begin
+        OUTPUT_STREAM_V_data_V_1_payload_A <= tmp_data_V_reg_302;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == OUTPUT_STREAM_V_data_V_1_load_B)) begin
+        OUTPUT_STREAM_V_data_V_1_payload_B <= tmp_data_V_reg_302;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == OUTPUT_STREAM_V_dest_V_1_load_A)) begin
+        OUTPUT_STREAM_V_dest_V_1_payload_A <= tmp_dest_V_reg_331;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == OUTPUT_STREAM_V_dest_V_1_load_B)) begin
+        OUTPUT_STREAM_V_dest_V_1_payload_B <= tmp_dest_V_reg_331;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == OUTPUT_STREAM_V_id_V_1_load_A)) begin
+        OUTPUT_STREAM_V_id_V_1_payload_A <= tmp_id_V_reg_326;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == OUTPUT_STREAM_V_id_V_1_load_B)) begin
+        OUTPUT_STREAM_V_id_V_1_payload_B <= tmp_id_V_reg_326;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == OUTPUT_STREAM_V_keep_V_1_load_A)) begin
+        OUTPUT_STREAM_V_keep_V_1_payload_A <= tmp_keep_V_reg_307;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == OUTPUT_STREAM_V_keep_V_1_load_B)) begin
+        OUTPUT_STREAM_V_keep_V_1_payload_B <= tmp_keep_V_reg_307;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == OUTPUT_STREAM_V_strb_V_1_load_A)) begin
+        OUTPUT_STREAM_V_strb_V_1_payload_A <= tmp_strb_V_reg_312;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == OUTPUT_STREAM_V_strb_V_1_load_B)) begin
+        OUTPUT_STREAM_V_strb_V_1_payload_B <= tmp_strb_V_reg_312;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == OUTPUT_STREAM_V_user_V_1_load_A)) begin
+        OUTPUT_STREAM_V_user_V_1_payload_A <= tmp_user_V_reg_317;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == OUTPUT_STREAM_V_user_V_1_load_B)) begin
+        OUTPUT_STREAM_V_user_V_1_payload_B <= tmp_user_V_reg_317;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (tmp_fu_241_p2 == 1'd1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        differentBytes_2_reg_336 <= differentBytes_2_fu_281_p2;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        in1Count_3_reg_296 <= in1Count_3_fu_247_p2;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (tmp_fu_241_p2 == 1'd1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        tmp_data_V_reg_302 <= INPUT_STREAM_V_data_V_0_data_out;
+        tmp_dest_V_reg_331 <= INPUT_STREAM_V_dest_V_0_data_out;
+        tmp_id_V_reg_326 <= INPUT_STREAM_V_id_V_0_data_out;
+        tmp_keep_V_reg_307 <= INPUT_STREAM_V_keep_V_0_data_out;
+        tmp_last_V_reg_322 <= INPUT_STREAM_V_last_V_0_data_out;
+        tmp_strb_V_reg_312 <= INPUT_STREAM_V_strb_V_0_data_out;
+        tmp_user_V_reg_317 <= INPUT_STREAM_V_user_V_0_data_out;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        tmp_last_V_reg_322_pp0_iter1_reg <= tmp_last_V_reg_322;
+        tmp_reg_292 <= tmp_fu_241_p2;
+        tmp_reg_292_pp0_iter1_reg <= tmp_reg_292;
+    end
+end
+
 always @ (*) begin
-    if (((tmp_fu_195_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
+    if (((1'b0 == ap_block_pp0_stage0) & (tmp_fu_241_p2 == 1'd1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         INPUT_STREAM_TDATA_blk_n = INPUT_STREAM_V_data_V_0_state[1'd0];
     end else begin
         INPUT_STREAM_TDATA_blk_n = 1'b1;
@@ -363,7 +1217,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((~((tmp_fu_195_p2 == 1'd1) & (1'b0 == INPUT_STREAM_V_data_V_0_vld_out)) & (tmp_fu_195_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (tmp_fu_241_p2 == 1'd1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         INPUT_STREAM_V_data_V_0_ack_out = 1'b1;
     end else begin
         INPUT_STREAM_V_data_V_0_ack_out = 1'b0;
@@ -379,7 +1233,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((~((tmp_fu_195_p2 == 1'd1) & (1'b0 == INPUT_STREAM_V_data_V_0_vld_out)) & (tmp_fu_195_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (tmp_fu_241_p2 == 1'd1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         INPUT_STREAM_V_dest_V_0_ack_out = 1'b1;
     end else begin
         INPUT_STREAM_V_dest_V_0_ack_out = 1'b0;
@@ -387,7 +1241,47 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((~((tmp_fu_195_p2 == 1'd1) & (1'b0 == INPUT_STREAM_V_data_V_0_vld_out)) & (tmp_fu_195_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
+    if ((1'b1 == INPUT_STREAM_V_dest_V_0_sel)) begin
+        INPUT_STREAM_V_dest_V_0_data_out = INPUT_STREAM_V_dest_V_0_payload_B;
+    end else begin
+        INPUT_STREAM_V_dest_V_0_data_out = INPUT_STREAM_V_dest_V_0_payload_A;
+    end
+end
+
+always @ (*) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (tmp_fu_241_p2 == 1'd1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        INPUT_STREAM_V_id_V_0_ack_out = 1'b1;
+    end else begin
+        INPUT_STREAM_V_id_V_0_ack_out = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == INPUT_STREAM_V_id_V_0_sel)) begin
+        INPUT_STREAM_V_id_V_0_data_out = INPUT_STREAM_V_id_V_0_payload_B;
+    end else begin
+        INPUT_STREAM_V_id_V_0_data_out = INPUT_STREAM_V_id_V_0_payload_A;
+    end
+end
+
+always @ (*) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (tmp_fu_241_p2 == 1'd1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        INPUT_STREAM_V_keep_V_0_ack_out = 1'b1;
+    end else begin
+        INPUT_STREAM_V_keep_V_0_ack_out = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == INPUT_STREAM_V_keep_V_0_sel)) begin
+        INPUT_STREAM_V_keep_V_0_data_out = INPUT_STREAM_V_keep_V_0_payload_B;
+    end else begin
+        INPUT_STREAM_V_keep_V_0_data_out = INPUT_STREAM_V_keep_V_0_payload_A;
+    end
+end
+
+always @ (*) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (tmp_fu_241_p2 == 1'd1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         INPUT_STREAM_V_last_V_0_ack_out = 1'b1;
     end else begin
         INPUT_STREAM_V_last_V_0_ack_out = 1'b0;
@@ -403,7 +1297,151 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state3)) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (tmp_fu_241_p2 == 1'd1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        INPUT_STREAM_V_strb_V_0_ack_out = 1'b1;
+    end else begin
+        INPUT_STREAM_V_strb_V_0_ack_out = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == INPUT_STREAM_V_strb_V_0_sel)) begin
+        INPUT_STREAM_V_strb_V_0_data_out = INPUT_STREAM_V_strb_V_0_payload_B;
+    end else begin
+        INPUT_STREAM_V_strb_V_0_data_out = INPUT_STREAM_V_strb_V_0_payload_A;
+    end
+end
+
+always @ (*) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (tmp_fu_241_p2 == 1'd1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        INPUT_STREAM_V_user_V_0_ack_out = 1'b1;
+    end else begin
+        INPUT_STREAM_V_user_V_0_ack_out = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == INPUT_STREAM_V_user_V_0_sel)) begin
+        INPUT_STREAM_V_user_V_0_data_out = INPUT_STREAM_V_user_V_0_payload_B;
+    end else begin
+        INPUT_STREAM_V_user_V_0_data_out = INPUT_STREAM_V_user_V_0_payload_A;
+    end
+end
+
+always @ (*) begin
+    if ((((1'b0 == ap_block_pp0_stage0) & (tmp_reg_292_pp0_iter1_reg == 1'd1) & (tmp_last_V_reg_322_pp0_iter1_reg == 1'd0) & (ap_enable_reg_pp0_iter2 == 1'b1)) | ((1'b0 == ap_block_pp0_stage0) & (tmp_reg_292 == 1'd1) & (tmp_last_V_reg_322 == 1'd0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0)))) begin
+        OUTPUT_STREAM_TDATA_blk_n = OUTPUT_STREAM_V_data_V_1_state[1'd1];
+    end else begin
+        OUTPUT_STREAM_TDATA_blk_n = 1'b1;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == OUTPUT_STREAM_V_data_V_1_sel)) begin
+        OUTPUT_STREAM_V_data_V_1_data_out = OUTPUT_STREAM_V_data_V_1_payload_B;
+    end else begin
+        OUTPUT_STREAM_V_data_V_1_data_out = OUTPUT_STREAM_V_data_V_1_payload_A;
+    end
+end
+
+always @ (*) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_predicate_op53_write_state3 == 1'b1) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        OUTPUT_STREAM_V_data_V_1_vld_in = 1'b1;
+    end else begin
+        OUTPUT_STREAM_V_data_V_1_vld_in = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == OUTPUT_STREAM_V_dest_V_1_sel)) begin
+        OUTPUT_STREAM_V_dest_V_1_data_out = OUTPUT_STREAM_V_dest_V_1_payload_B;
+    end else begin
+        OUTPUT_STREAM_V_dest_V_1_data_out = OUTPUT_STREAM_V_dest_V_1_payload_A;
+    end
+end
+
+always @ (*) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_predicate_op53_write_state3 == 1'b1) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        OUTPUT_STREAM_V_dest_V_1_vld_in = 1'b1;
+    end else begin
+        OUTPUT_STREAM_V_dest_V_1_vld_in = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == OUTPUT_STREAM_V_id_V_1_sel)) begin
+        OUTPUT_STREAM_V_id_V_1_data_out = OUTPUT_STREAM_V_id_V_1_payload_B;
+    end else begin
+        OUTPUT_STREAM_V_id_V_1_data_out = OUTPUT_STREAM_V_id_V_1_payload_A;
+    end
+end
+
+always @ (*) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_predicate_op53_write_state3 == 1'b1) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        OUTPUT_STREAM_V_id_V_1_vld_in = 1'b1;
+    end else begin
+        OUTPUT_STREAM_V_id_V_1_vld_in = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == OUTPUT_STREAM_V_keep_V_1_sel)) begin
+        OUTPUT_STREAM_V_keep_V_1_data_out = OUTPUT_STREAM_V_keep_V_1_payload_B;
+    end else begin
+        OUTPUT_STREAM_V_keep_V_1_data_out = OUTPUT_STREAM_V_keep_V_1_payload_A;
+    end
+end
+
+always @ (*) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_predicate_op53_write_state3 == 1'b1) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        OUTPUT_STREAM_V_keep_V_1_vld_in = 1'b1;
+    end else begin
+        OUTPUT_STREAM_V_keep_V_1_vld_in = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_predicate_op53_write_state3 == 1'b1) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        OUTPUT_STREAM_V_last_V_1_vld_in = 1'b1;
+    end else begin
+        OUTPUT_STREAM_V_last_V_1_vld_in = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == OUTPUT_STREAM_V_strb_V_1_sel)) begin
+        OUTPUT_STREAM_V_strb_V_1_data_out = OUTPUT_STREAM_V_strb_V_1_payload_B;
+    end else begin
+        OUTPUT_STREAM_V_strb_V_1_data_out = OUTPUT_STREAM_V_strb_V_1_payload_A;
+    end
+end
+
+always @ (*) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_predicate_op53_write_state3 == 1'b1) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        OUTPUT_STREAM_V_strb_V_1_vld_in = 1'b1;
+    end else begin
+        OUTPUT_STREAM_V_strb_V_1_vld_in = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == OUTPUT_STREAM_V_user_V_1_sel)) begin
+        OUTPUT_STREAM_V_user_V_1_data_out = OUTPUT_STREAM_V_user_V_1_payload_B;
+    end else begin
+        OUTPUT_STREAM_V_user_V_1_data_out = OUTPUT_STREAM_V_user_V_1_payload_A;
+    end
+end
+
+always @ (*) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_predicate_op53_write_state3 == 1'b1) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        OUTPUT_STREAM_V_user_V_1_vld_in = 1'b1;
+    end else begin
+        OUTPUT_STREAM_V_user_V_1_vld_in = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((~((1'b0 == OUTPUT_STREAM_V_dest_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_id_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_last_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_user_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_strb_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_keep_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_data_V_1_ack_in)) & (1'b1 == ap_CS_fsm_state5))) begin
         agg_result_a_ap_vld = 1'b1;
     end else begin
         agg_result_a_ap_vld = 1'b0;
@@ -411,7 +1449,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state3)) begin
+    if ((~((1'b0 == OUTPUT_STREAM_V_dest_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_id_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_last_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_user_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_strb_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_keep_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_data_V_1_ack_in)) & (1'b1 == ap_CS_fsm_state5))) begin
         agg_result_b_ap_vld = 1'b1;
     end else begin
         agg_result_b_ap_vld = 1'b0;
@@ -419,7 +1457,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state3)) begin
+    if ((~((1'b0 == OUTPUT_STREAM_V_dest_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_id_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_last_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_user_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_strb_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_keep_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_data_V_1_ack_in)) & (1'b1 == ap_CS_fsm_state5))) begin
         agg_result_c_ap_vld = 1'b1;
     end else begin
         agg_result_c_ap_vld = 1'b0;
@@ -427,7 +1465,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state3)) begin
+    if ((~((1'b0 == OUTPUT_STREAM_V_dest_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_id_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_last_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_user_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_strb_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_keep_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_data_V_1_ack_in)) & (1'b1 == ap_CS_fsm_state5))) begin
         agg_result_d_ap_vld = 1'b1;
     end else begin
         agg_result_d_ap_vld = 1'b0;
@@ -435,7 +1473,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state3)) begin
+    if ((~((1'b0 == OUTPUT_STREAM_V_dest_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_id_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_last_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_user_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_strb_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_keep_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_data_V_1_ack_in)) & (1'b1 == ap_CS_fsm_state5))) begin
         agg_result_e_ap_vld = 1'b1;
     end else begin
         agg_result_e_ap_vld = 1'b0;
@@ -443,7 +1481,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state3)) begin
+    if ((~((1'b0 == OUTPUT_STREAM_V_dest_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_id_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_last_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_user_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_strb_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_keep_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_data_V_1_ack_in)) & (1'b1 == ap_CS_fsm_state5))) begin
         agg_result_f_ap_vld = 1'b1;
     end else begin
         agg_result_f_ap_vld = 1'b0;
@@ -451,7 +1489,15 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state3)) begin
+    if ((ap_predicate_tran2to5_state2 == 1'b1)) begin
+        ap_condition_pp0_exit_iter0_state2 = 1'b1;
+    end else begin
+        ap_condition_pp0_exit_iter0_state2 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((~((1'b0 == OUTPUT_STREAM_V_dest_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_id_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_last_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_user_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_strb_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_keep_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_data_V_1_ack_in)) & (1'b1 == ap_CS_fsm_state5))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -467,7 +1513,31 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state3)) begin
+    if (((ap_enable_reg_pp0_iter2 == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b0) & (ap_enable_reg_pp0_iter0 == 1'b0))) begin
+        ap_idle_pp0 = 1'b1;
+    end else begin
+        ap_idle_pp0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b0 == ap_block_pp0_stage0) & (tmp_reg_292 == 1'd1) & (tmp_last_V_reg_322 == 1'd0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        ap_phi_mux_differentBytes_phi_fu_200_p4 = differentBytes_2_reg_336;
+    end else begin
+        ap_phi_mux_differentBytes_phi_fu_200_p4 = differentBytes_reg_196;
+    end
+end
+
+always @ (*) begin
+    if (((1'b0 == ap_block_pp0_stage0) & (tmp_reg_292 == 1'd1) & (tmp_last_V_reg_322 == 1'd0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        ap_phi_mux_in1Count_phi_fu_212_p4 = in1Count_3_reg_296;
+    end else begin
+        ap_phi_mux_in1Count_phi_fu_212_p4 = in1Count_reg_208;
+    end
+end
+
+always @ (*) begin
+    if ((~((1'b0 == OUTPUT_STREAM_V_dest_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_id_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_last_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_user_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_strb_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_keep_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_data_V_1_ack_in)) & (1'b1 == ap_CS_fsm_state5))) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -478,22 +1548,26 @@ always @ (*) begin
     case (ap_CS_fsm)
         ap_ST_fsm_state1 : begin
             if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
-                ap_NS_fsm = ap_ST_fsm_state2;
+                ap_NS_fsm = ap_ST_fsm_pp0_stage0;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state1;
             end
         end
-        ap_ST_fsm_state2 : begin
-            if ((~((tmp_fu_195_p2 == 1'd1) & (1'b0 == INPUT_STREAM_V_data_V_0_vld_out)) & (tmp_fu_195_p2 == 1'd1) & (tmp_last_V_fu_211_p1 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
-                ap_NS_fsm = ap_ST_fsm_state2;
-            end else if ((~((tmp_fu_195_p2 == 1'd1) & (1'b0 == INPUT_STREAM_V_data_V_0_vld_out)) & (1'b1 == ap_CS_fsm_state2) & ((tmp_fu_195_p2 == 1'd0) | ((tmp_last_V_fu_211_p1 == 1'd1) & (tmp_fu_195_p2 == 1'd1))))) begin
-                ap_NS_fsm = ap_ST_fsm_state3;
+        ap_ST_fsm_pp0_stage0 : begin
+            if ((~((1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter1 == 1'b0) & (ap_predicate_tran2to5_state2 == 1'b1) & (ap_enable_reg_pp0_iter0 == 1'b1)) & ~((1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter1 == 1'b0) & (ap_enable_reg_pp0_iter2 == 1'b1)))) begin
+                ap_NS_fsm = ap_ST_fsm_pp0_stage0;
+            end else if ((((1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter1 == 1'b0) & (ap_enable_reg_pp0_iter2 == 1'b1)) | ((1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter1 == 1'b0) & (ap_predicate_tran2to5_state2 == 1'b1) & (ap_enable_reg_pp0_iter0 == 1'b1)))) begin
+                ap_NS_fsm = ap_ST_fsm_state5;
             end else begin
-                ap_NS_fsm = ap_ST_fsm_state2;
+                ap_NS_fsm = ap_ST_fsm_pp0_stage0;
             end
         end
-        ap_ST_fsm_state3 : begin
-            ap_NS_fsm = ap_ST_fsm_state1;
+        ap_ST_fsm_state5 : begin
+            if ((~((1'b0 == OUTPUT_STREAM_V_dest_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_id_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_last_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_user_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_strb_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_keep_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_data_V_1_ack_in)) & (1'b1 == ap_CS_fsm_state5))) begin
+                ap_NS_fsm = ap_ST_fsm_state1;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state5;
+            end
         end
         default : begin
             ap_NS_fsm = 'bx;
@@ -517,7 +1591,47 @@ assign INPUT_STREAM_V_data_V_0_vld_in = INPUT_STREAM_TVALID;
 
 assign INPUT_STREAM_V_data_V_0_vld_out = INPUT_STREAM_V_data_V_0_state[1'd0];
 
+assign INPUT_STREAM_V_dest_V_0_ack_in = INPUT_STREAM_V_dest_V_0_state[1'd1];
+
+assign INPUT_STREAM_V_dest_V_0_load_A = (~INPUT_STREAM_V_dest_V_0_sel_wr & INPUT_STREAM_V_dest_V_0_state_cmp_full);
+
+assign INPUT_STREAM_V_dest_V_0_load_B = (INPUT_STREAM_V_dest_V_0_state_cmp_full & INPUT_STREAM_V_dest_V_0_sel_wr);
+
+assign INPUT_STREAM_V_dest_V_0_sel = INPUT_STREAM_V_dest_V_0_sel_rd;
+
+assign INPUT_STREAM_V_dest_V_0_state_cmp_full = ((INPUT_STREAM_V_dest_V_0_state != 2'd1) ? 1'b1 : 1'b0);
+
 assign INPUT_STREAM_V_dest_V_0_vld_in = INPUT_STREAM_TVALID;
+
+assign INPUT_STREAM_V_dest_V_0_vld_out = INPUT_STREAM_V_dest_V_0_state[1'd0];
+
+assign INPUT_STREAM_V_id_V_0_ack_in = INPUT_STREAM_V_id_V_0_state[1'd1];
+
+assign INPUT_STREAM_V_id_V_0_load_A = (~INPUT_STREAM_V_id_V_0_sel_wr & INPUT_STREAM_V_id_V_0_state_cmp_full);
+
+assign INPUT_STREAM_V_id_V_0_load_B = (INPUT_STREAM_V_id_V_0_state_cmp_full & INPUT_STREAM_V_id_V_0_sel_wr);
+
+assign INPUT_STREAM_V_id_V_0_sel = INPUT_STREAM_V_id_V_0_sel_rd;
+
+assign INPUT_STREAM_V_id_V_0_state_cmp_full = ((INPUT_STREAM_V_id_V_0_state != 2'd1) ? 1'b1 : 1'b0);
+
+assign INPUT_STREAM_V_id_V_0_vld_in = INPUT_STREAM_TVALID;
+
+assign INPUT_STREAM_V_id_V_0_vld_out = INPUT_STREAM_V_id_V_0_state[1'd0];
+
+assign INPUT_STREAM_V_keep_V_0_ack_in = INPUT_STREAM_V_keep_V_0_state[1'd1];
+
+assign INPUT_STREAM_V_keep_V_0_load_A = (~INPUT_STREAM_V_keep_V_0_sel_wr & INPUT_STREAM_V_keep_V_0_state_cmp_full);
+
+assign INPUT_STREAM_V_keep_V_0_load_B = (INPUT_STREAM_V_keep_V_0_state_cmp_full & INPUT_STREAM_V_keep_V_0_sel_wr);
+
+assign INPUT_STREAM_V_keep_V_0_sel = INPUT_STREAM_V_keep_V_0_sel_rd;
+
+assign INPUT_STREAM_V_keep_V_0_state_cmp_full = ((INPUT_STREAM_V_keep_V_0_state != 2'd1) ? 1'b1 : 1'b0);
+
+assign INPUT_STREAM_V_keep_V_0_vld_in = INPUT_STREAM_TVALID;
+
+assign INPUT_STREAM_V_keep_V_0_vld_out = INPUT_STREAM_V_keep_V_0_state[1'd0];
 
 assign INPUT_STREAM_V_last_V_0_ack_in = INPUT_STREAM_V_last_V_0_state[1'd1];
 
@@ -533,32 +1647,212 @@ assign INPUT_STREAM_V_last_V_0_vld_in = INPUT_STREAM_TVALID;
 
 assign INPUT_STREAM_V_last_V_0_vld_out = INPUT_STREAM_V_last_V_0_state[1'd0];
 
-assign agg_result_b = in1Count_1_reg_185;
+assign INPUT_STREAM_V_strb_V_0_ack_in = INPUT_STREAM_V_strb_V_0_state[1'd1];
+
+assign INPUT_STREAM_V_strb_V_0_load_A = (~INPUT_STREAM_V_strb_V_0_sel_wr & INPUT_STREAM_V_strb_V_0_state_cmp_full);
+
+assign INPUT_STREAM_V_strb_V_0_load_B = (INPUT_STREAM_V_strb_V_0_state_cmp_full & INPUT_STREAM_V_strb_V_0_sel_wr);
+
+assign INPUT_STREAM_V_strb_V_0_sel = INPUT_STREAM_V_strb_V_0_sel_rd;
+
+assign INPUT_STREAM_V_strb_V_0_state_cmp_full = ((INPUT_STREAM_V_strb_V_0_state != 2'd1) ? 1'b1 : 1'b0);
+
+assign INPUT_STREAM_V_strb_V_0_vld_in = INPUT_STREAM_TVALID;
+
+assign INPUT_STREAM_V_strb_V_0_vld_out = INPUT_STREAM_V_strb_V_0_state[1'd0];
+
+assign INPUT_STREAM_V_user_V_0_ack_in = INPUT_STREAM_V_user_V_0_state[1'd1];
+
+assign INPUT_STREAM_V_user_V_0_load_A = (~INPUT_STREAM_V_user_V_0_sel_wr & INPUT_STREAM_V_user_V_0_state_cmp_full);
+
+assign INPUT_STREAM_V_user_V_0_load_B = (INPUT_STREAM_V_user_V_0_state_cmp_full & INPUT_STREAM_V_user_V_0_sel_wr);
+
+assign INPUT_STREAM_V_user_V_0_sel = INPUT_STREAM_V_user_V_0_sel_rd;
+
+assign INPUT_STREAM_V_user_V_0_state_cmp_full = ((INPUT_STREAM_V_user_V_0_state != 2'd1) ? 1'b1 : 1'b0);
+
+assign INPUT_STREAM_V_user_V_0_vld_in = INPUT_STREAM_TVALID;
+
+assign INPUT_STREAM_V_user_V_0_vld_out = INPUT_STREAM_V_user_V_0_state[1'd0];
+
+assign OUTPUT_STREAM_TDATA = OUTPUT_STREAM_V_data_V_1_data_out;
+
+assign OUTPUT_STREAM_TDEST = OUTPUT_STREAM_V_dest_V_1_data_out;
+
+assign OUTPUT_STREAM_TID = OUTPUT_STREAM_V_id_V_1_data_out;
+
+assign OUTPUT_STREAM_TKEEP = OUTPUT_STREAM_V_keep_V_1_data_out;
+
+assign OUTPUT_STREAM_TLAST = OUTPUT_STREAM_V_last_V_1_data_out;
+
+assign OUTPUT_STREAM_TSTRB = OUTPUT_STREAM_V_strb_V_1_data_out;
+
+assign OUTPUT_STREAM_TUSER = OUTPUT_STREAM_V_user_V_1_data_out;
+
+assign OUTPUT_STREAM_TVALID = OUTPUT_STREAM_V_dest_V_1_state[1'd0];
+
+assign OUTPUT_STREAM_V_data_V_1_ack_in = OUTPUT_STREAM_V_data_V_1_state[1'd1];
+
+assign OUTPUT_STREAM_V_data_V_1_ack_out = OUTPUT_STREAM_TREADY;
+
+assign OUTPUT_STREAM_V_data_V_1_load_A = (~OUTPUT_STREAM_V_data_V_1_sel_wr & OUTPUT_STREAM_V_data_V_1_state_cmp_full);
+
+assign OUTPUT_STREAM_V_data_V_1_load_B = (OUTPUT_STREAM_V_data_V_1_state_cmp_full & OUTPUT_STREAM_V_data_V_1_sel_wr);
+
+assign OUTPUT_STREAM_V_data_V_1_sel = OUTPUT_STREAM_V_data_V_1_sel_rd;
+
+assign OUTPUT_STREAM_V_data_V_1_state_cmp_full = ((OUTPUT_STREAM_V_data_V_1_state != 2'd1) ? 1'b1 : 1'b0);
+
+assign OUTPUT_STREAM_V_data_V_1_vld_out = OUTPUT_STREAM_V_data_V_1_state[1'd0];
+
+assign OUTPUT_STREAM_V_dest_V_1_ack_in = OUTPUT_STREAM_V_dest_V_1_state[1'd1];
+
+assign OUTPUT_STREAM_V_dest_V_1_ack_out = OUTPUT_STREAM_TREADY;
+
+assign OUTPUT_STREAM_V_dest_V_1_load_A = (~OUTPUT_STREAM_V_dest_V_1_sel_wr & OUTPUT_STREAM_V_dest_V_1_state_cmp_full);
+
+assign OUTPUT_STREAM_V_dest_V_1_load_B = (OUTPUT_STREAM_V_dest_V_1_state_cmp_full & OUTPUT_STREAM_V_dest_V_1_sel_wr);
+
+assign OUTPUT_STREAM_V_dest_V_1_sel = OUTPUT_STREAM_V_dest_V_1_sel_rd;
+
+assign OUTPUT_STREAM_V_dest_V_1_state_cmp_full = ((OUTPUT_STREAM_V_dest_V_1_state != 2'd1) ? 1'b1 : 1'b0);
+
+assign OUTPUT_STREAM_V_dest_V_1_vld_out = OUTPUT_STREAM_V_dest_V_1_state[1'd0];
+
+assign OUTPUT_STREAM_V_id_V_1_ack_in = OUTPUT_STREAM_V_id_V_1_state[1'd1];
+
+assign OUTPUT_STREAM_V_id_V_1_ack_out = OUTPUT_STREAM_TREADY;
+
+assign OUTPUT_STREAM_V_id_V_1_load_A = (~OUTPUT_STREAM_V_id_V_1_sel_wr & OUTPUT_STREAM_V_id_V_1_state_cmp_full);
+
+assign OUTPUT_STREAM_V_id_V_1_load_B = (OUTPUT_STREAM_V_id_V_1_state_cmp_full & OUTPUT_STREAM_V_id_V_1_sel_wr);
+
+assign OUTPUT_STREAM_V_id_V_1_sel = OUTPUT_STREAM_V_id_V_1_sel_rd;
+
+assign OUTPUT_STREAM_V_id_V_1_state_cmp_full = ((OUTPUT_STREAM_V_id_V_1_state != 2'd1) ? 1'b1 : 1'b0);
+
+assign OUTPUT_STREAM_V_id_V_1_vld_out = OUTPUT_STREAM_V_id_V_1_state[1'd0];
+
+assign OUTPUT_STREAM_V_keep_V_1_ack_in = OUTPUT_STREAM_V_keep_V_1_state[1'd1];
+
+assign OUTPUT_STREAM_V_keep_V_1_ack_out = OUTPUT_STREAM_TREADY;
+
+assign OUTPUT_STREAM_V_keep_V_1_load_A = (~OUTPUT_STREAM_V_keep_V_1_sel_wr & OUTPUT_STREAM_V_keep_V_1_state_cmp_full);
+
+assign OUTPUT_STREAM_V_keep_V_1_load_B = (OUTPUT_STREAM_V_keep_V_1_state_cmp_full & OUTPUT_STREAM_V_keep_V_1_sel_wr);
+
+assign OUTPUT_STREAM_V_keep_V_1_sel = OUTPUT_STREAM_V_keep_V_1_sel_rd;
+
+assign OUTPUT_STREAM_V_keep_V_1_state_cmp_full = ((OUTPUT_STREAM_V_keep_V_1_state != 2'd1) ? 1'b1 : 1'b0);
+
+assign OUTPUT_STREAM_V_keep_V_1_vld_out = OUTPUT_STREAM_V_keep_V_1_state[1'd0];
+
+assign OUTPUT_STREAM_V_last_V_1_ack_in = OUTPUT_STREAM_V_last_V_1_state[1'd1];
+
+assign OUTPUT_STREAM_V_last_V_1_ack_out = OUTPUT_STREAM_TREADY;
+
+assign OUTPUT_STREAM_V_last_V_1_data_out = 1'd0;
+
+assign OUTPUT_STREAM_V_last_V_1_sel = OUTPUT_STREAM_V_last_V_1_sel_rd;
+
+assign OUTPUT_STREAM_V_last_V_1_vld_out = OUTPUT_STREAM_V_last_V_1_state[1'd0];
+
+assign OUTPUT_STREAM_V_strb_V_1_ack_in = OUTPUT_STREAM_V_strb_V_1_state[1'd1];
+
+assign OUTPUT_STREAM_V_strb_V_1_ack_out = OUTPUT_STREAM_TREADY;
+
+assign OUTPUT_STREAM_V_strb_V_1_load_A = (~OUTPUT_STREAM_V_strb_V_1_sel_wr & OUTPUT_STREAM_V_strb_V_1_state_cmp_full);
+
+assign OUTPUT_STREAM_V_strb_V_1_load_B = (OUTPUT_STREAM_V_strb_V_1_state_cmp_full & OUTPUT_STREAM_V_strb_V_1_sel_wr);
+
+assign OUTPUT_STREAM_V_strb_V_1_sel = OUTPUT_STREAM_V_strb_V_1_sel_rd;
+
+assign OUTPUT_STREAM_V_strb_V_1_state_cmp_full = ((OUTPUT_STREAM_V_strb_V_1_state != 2'd1) ? 1'b1 : 1'b0);
+
+assign OUTPUT_STREAM_V_strb_V_1_vld_out = OUTPUT_STREAM_V_strb_V_1_state[1'd0];
+
+assign OUTPUT_STREAM_V_user_V_1_ack_in = OUTPUT_STREAM_V_user_V_1_state[1'd1];
+
+assign OUTPUT_STREAM_V_user_V_1_ack_out = OUTPUT_STREAM_TREADY;
+
+assign OUTPUT_STREAM_V_user_V_1_load_A = (~OUTPUT_STREAM_V_user_V_1_sel_wr & OUTPUT_STREAM_V_user_V_1_state_cmp_full);
+
+assign OUTPUT_STREAM_V_user_V_1_load_B = (OUTPUT_STREAM_V_user_V_1_state_cmp_full & OUTPUT_STREAM_V_user_V_1_sel_wr);
+
+assign OUTPUT_STREAM_V_user_V_1_sel = OUTPUT_STREAM_V_user_V_1_sel_rd;
+
+assign OUTPUT_STREAM_V_user_V_1_state_cmp_full = ((OUTPUT_STREAM_V_user_V_1_state != 2'd1) ? 1'b1 : 1'b0);
+
+assign OUTPUT_STREAM_V_user_V_1_vld_out = OUTPUT_STREAM_V_user_V_1_state[1'd0];
+
+assign agg_result_b = in1Count_1_reg_231;
+
+assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd1];
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
-assign ap_CS_fsm_state2 = ap_CS_fsm[32'd1];
+assign ap_CS_fsm_state5 = ap_CS_fsm[32'd2];
 
-assign ap_CS_fsm_state3 = ap_CS_fsm[32'd2];
+assign ap_block_pp0_stage0 = ~(1'b1 == 1'b1);
 
 always @ (*) begin
-    ap_block_state2 = ((tmp_fu_195_p2 == 1'd1) & (1'b0 == INPUT_STREAM_V_data_V_0_vld_out));
+    ap_block_pp0_stage0_01001 = ((tmp_fu_241_p2 == 1'd1) & (1'b0 == INPUT_STREAM_V_data_V_0_vld_out) & (ap_enable_reg_pp0_iter0 == 1'b1));
 end
 
 always @ (*) begin
-    ap_condition_497 = (~((tmp_fu_195_p2 == 1'd1) & (1'b0 == INPUT_STREAM_V_data_V_0_vld_out)) & (1'b1 == ap_CS_fsm_state2));
+    ap_block_pp0_stage0_11001 = (((1'b1 == ap_block_state4_io) & (ap_enable_reg_pp0_iter2 == 1'b1)) | ((1'b1 == ap_block_state3_io) & (ap_enable_reg_pp0_iter1 == 1'b1)) | ((tmp_fu_241_p2 == 1'd1) & (1'b0 == INPUT_STREAM_V_data_V_0_vld_out) & (ap_enable_reg_pp0_iter0 == 1'b1)));
+end
+
+always @ (*) begin
+    ap_block_pp0_stage0_subdone = (((1'b1 == ap_block_state4_io) & (ap_enable_reg_pp0_iter2 == 1'b1)) | ((1'b1 == ap_block_state3_io) & (ap_enable_reg_pp0_iter1 == 1'b1)) | ((tmp_fu_241_p2 == 1'd1) & (1'b0 == INPUT_STREAM_V_data_V_0_vld_out) & (ap_enable_reg_pp0_iter0 == 1'b1)));
+end
+
+always @ (*) begin
+    ap_block_state2_pp0_stage0_iter0 = ((tmp_fu_241_p2 == 1'd1) & (1'b0 == INPUT_STREAM_V_data_V_0_vld_out));
+end
+
+always @ (*) begin
+    ap_block_state3_io = ((1'b0 == OUTPUT_STREAM_V_data_V_1_ack_in) & (ap_predicate_op53_write_state3 == 1'b1));
+end
+
+assign ap_block_state3_pp0_stage0_iter1 = ~(1'b1 == 1'b1);
+
+always @ (*) begin
+    ap_block_state4_io = ((1'b0 == OUTPUT_STREAM_V_data_V_1_ack_in) & (ap_predicate_op54_write_state4 == 1'b1));
+end
+
+assign ap_block_state4_pp0_stage0_iter2 = ~(1'b1 == 1'b1);
+
+always @ (*) begin
+    ap_block_state5 = ((1'b0 == OUTPUT_STREAM_V_dest_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_id_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_last_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_user_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_strb_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_keep_V_1_ack_in) | (1'b0 == OUTPUT_STREAM_V_data_V_1_ack_in));
+end
+
+always @ (*) begin
+    ap_condition_953 = ((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0));
+end
+
+assign ap_enable_pp0 = (ap_idle_pp0 ^ 1'b1);
+
+always @ (*) begin
+    ap_predicate_op53_write_state3 = ((tmp_reg_292 == 1'd1) & (tmp_last_V_reg_322 == 1'd0));
+end
+
+always @ (*) begin
+    ap_predicate_op54_write_state4 = ((tmp_reg_292_pp0_iter1_reg == 1'd1) & (tmp_last_V_reg_322_pp0_iter1_reg == 1'd0));
+end
+
+always @ (*) begin
+    ap_predicate_tran2to5_state2 = ((tmp_fu_241_p2 == 1'd0) | ((1'd1 == INPUT_STREAM_V_last_V_0_data_out) & (tmp_fu_241_p2 == 1'd1)));
 end
 
 always @ (*) begin
     ap_rst_n_inv = ~ap_rst_n;
 end
 
-assign differentBytes_2_fu_215_p2 = (INPUT_STREAM_V_data_V_0_data_out + differentBytes_reg_150);
+assign differentBytes_2_fu_281_p2 = (INPUT_STREAM_V_data_V_0_data_out + ap_phi_mux_differentBytes_phi_fu_200_p4);
 
-assign in1Count_3_fu_201_p2 = (in1Count_reg_162 + 23'd1);
+assign in1Count_3_fu_247_p2 = (ap_phi_mux_in1Count_phi_fu_212_p4 + 23'd1);
 
-assign tmp_fu_195_p2 = ((in1Count_reg_162 < 23'd8371200) ? 1'b1 : 1'b0);
-
-assign tmp_last_V_fu_211_p1 = INPUT_STREAM_V_last_V_0_data_out;
+assign tmp_fu_241_p2 = ((ap_phi_mux_in1Count_phi_fu_212_p4 < 23'd8371200) ? 1'b1 : 1'b0);
 
 endmodule //Adder2

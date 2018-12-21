@@ -11,13 +11,7 @@
   </errorLogs>
   <warningLogs>
     <logs>
-      <synLog>
-        <logs message="WARNING: [HLS 200-433] Loop - read_A has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="MotionDetector2" solutionName="solution1" date="2018-12-21T20:36:05.228+0200" type="Warning"/>
-        <logs message="WARNING: [HLS 200-433] Loop - read_A has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="MotionDetector2" solutionName="solution1" date="2018-12-21T20:36:04.464+0200" type="Warning"/>
-        <logs message="WARNING: [HLS 200-433] Loop - read_A has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="MotionDetector2" solutionName="solution1" date="2018-12-21T20:36:04.442+0200" type="Warning"/>
-        <logs message="WARNING: [HLS 200-433] Loop - read_A has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="MotionDetector2" solutionName="solution1" date="2018-12-21T20:36:04.248+0200" type="Warning"/>
-        <logs message="WARNING: [HLS 200-433] Loop - read_A has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="MotionDetector2" solutionName="solution1" date="2018-12-21T20:36:04.190+0200" type="Warning"/>
-      </synLog>
+      <synLog/>
       <simLog/>
       <mgLog/>
       <packageLog/>

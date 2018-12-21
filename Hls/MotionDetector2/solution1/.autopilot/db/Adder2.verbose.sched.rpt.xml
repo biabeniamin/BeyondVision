@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'Adder2'" level="0">
-<item name = "Date">Fri Dec 21 20:36:04 2018
+<item name = "Date">Fri Dec 21 20:54:01 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">MotionDetector2</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">3, 8371202, 3, 8371202, none</column>
+<column name="">4, 8371203, 4, 8371203, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- read_A">1, 8371200, 1, 1, 1, 1 ~ 8371200, yes</column>
+<column name="- read_A">2, 8371201, 3, 1, 1, 1 ~ 8371200, yes</column>
 </table>
 </item>
 </section>

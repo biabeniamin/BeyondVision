@@ -1,8 +1,8 @@
 <annotationInfo>
 <annotationInfo>
-<item  id="38" filename="MotionDetector2/main.cpp" linenumber="45" name="tmp" contextFuncName="Adder2" moduleName="Adder2" rtlName="tmp_fu_195_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="18" fileDirectory="C:\Digilent19\Hls"><\/item>
-<item  id="40" filename="MotionDetector2/main.cpp" linenumber="57" name="in1Count_3" contextFuncName="Adder2" moduleName="Adder2" rtlName="in1Count_3_fu_201_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="30" fileDirectory="C:\Digilent19\Hls"><\/item>
-<item  id="49" filename="MotionDetector2/main.cpp" linenumber="49" name="differentBytes_2" contextFuncName="Adder2" moduleName="Adder2" rtlName="differentBytes_2_fu_215_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="C:\Digilent19\Hls"><\/item>
-<item  id="57" filename="MotionDetector2/main.cpp" linenumber="69" name="in1Count_1_cast" contextFuncName="Adder2" moduleName="Adder2" rtlName="agg_result_b" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\Digilent19\Hls"><\/item>
+<item  id="53" filename="MotionDetector2/main.cpp" linenumber="47" name="tmp" contextFuncName="Adder2" moduleName="Adder2" rtlName="tmp_fu_241_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="18" fileDirectory="C:\Digilent19\Hls"><\/item>
+<item  id="55" filename="MotionDetector2/main.cpp" linenumber="59" name="in1Count_3" contextFuncName="Adder2" moduleName="Adder2" rtlName="in1Count_3_fu_247_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="30" fileDirectory="C:\Digilent19\Hls"><\/item>
+<item  id="69" filename="MotionDetector2/main.cpp" linenumber="51" name="differentBytes_2" contextFuncName="Adder2" moduleName="Adder2" rtlName="differentBytes_2_fu_281_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="C:\Digilent19\Hls"><\/item>
+<item  id="78" filename="MotionDetector2/main.cpp" linenumber="73" name="in1Count_1_cast" contextFuncName="Adder2" moduleName="Adder2" rtlName="agg_result_b" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\Digilent19\Hls"><\/item>
 <\/annotationInfo>
 </annotationInfo>
