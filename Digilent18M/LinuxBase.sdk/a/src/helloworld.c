@@ -40,6 +40,9 @@ int main()
 {
 	int x[500];
 	int y[500];
+
+	xil_printf("\rinit\r\n");
+
 	for(int i=0;i<200;i++)
 	{
 		x[i]=i;

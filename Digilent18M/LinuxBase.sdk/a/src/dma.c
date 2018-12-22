@@ -183,10 +183,12 @@ void Add(int *in,
 	int status;
 		int adderAddress;
 		int dmaAddress;
+		int generatorAddress;
 
 		print("dmi init\n");
 
 		adderAddress = 0x43C60000;
+		generatorAddress = 0x43C30000;
 		dmaAddress = 0x40400000;
 
 
@@ -205,7 +207,7 @@ void Add(int *in,
 
 
 		 xil_printf("\rSet receiving\r\n");
-		 status = XAxiDma_SimpleTransfer2(dmaAddress,  out, length * 4, XAXIDMA_DEVICE_TO_DMA);
+		 status = XAxiDma_SimpleTransfer2(dmaAddress,  out, 500 * 4, XAXIDMA_DEVICE_TO_DMA);
 		 Dump(dmaAddress);
 		 if (status != XST_SUCCESS)
 		 {
@@ -226,15 +228,19 @@ void Add(int *in,
 			 return XST_FAILURE;
 		 }
 
-		 startAdder(adderAddress);
+		 //startAdder(adderAddress);
+		 xil_printf("\rAdder started\r\n");
+		 Dump(generatorAddress);
+		 startAdder(generatorAddress);
+		 xil_printf("\rGenerator started\r\n");
 
 		 xil_printf("\rSend input \r\n");
-		 while (isDmaBusy(dmaAddress, XAXIDMA_DMA_TO_DEVICE)) ;
+		 //while (isDmaBusy(dmaAddress, XAXIDMA_DMA_TO_DEVICE)) ;
 
 		 xil_printf("\rSend input done\r\n");
 
 		 xil_printf("\rReceive ressults done %x\r\n", adderGetReturn(adderAddress));
-		 while (!isAdderDone(adderAddress)) ;
+		 //while (!isAdderDone(generatorAddress)) ;
 		 xil_printf("\rReceive ressults done %x\r\n", adderGetReturn(adderAddress));
 		 xil_printf("\rReceive ressults done %x\r\n", adderGetReturn(adderAddress));
 
@@ -249,6 +255,7 @@ void Add(int *in,
 			 sleep(3);
 			 Dump(dmaAddress);
 			 Dump(out);
+			 Dump(out + 0xF);
 		 }
 
 		 xil_printf("\rwait input done \r\n");

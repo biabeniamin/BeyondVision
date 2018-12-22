@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Sat Dec 22 14:46:46 2018
+--Date        : Sat Dec 22 18:07:54 2018
 --Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
 --Command     : generate_target system_wrapper.bd
 --Design      : system_wrapper
@@ -108,8 +108,8 @@ architecture STRUCTURE of system_wrapper is
     ac_bclk : out STD_LOGIC_VECTOR ( 0 to 0 );
     ac_pbdat : out STD_LOGIC_VECTOR ( 0 to 0 );
     hdmi_in_hpd : out STD_LOGIC_VECTOR ( 0 to 0 );
-    ac_reclrc : out STD_LOGIC_VECTOR ( 0 to 0 );
     ac_pblrc : out STD_LOGIC_VECTOR ( 0 to 0 );
+    ac_reclrc : out STD_LOGIC_VECTOR ( 0 to 0 );
     ac_muten : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component system;
