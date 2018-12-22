@@ -260,7 +260,7 @@ void Add(int *in,
 		 xil_printf("\Wait input \r\n");
 		 while (isDmaBusy(dmaAddress, XAXIDMA_DEVICE_TO_DMA))
 		 {
-			 sleep(300);
+			 sleep(3);
 			 Dump(dmaAddress);
 			 Dump(out);
 			 Dump(out + 0x24);

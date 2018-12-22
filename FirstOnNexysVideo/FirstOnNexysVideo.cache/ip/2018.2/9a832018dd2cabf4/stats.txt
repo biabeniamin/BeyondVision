@@ -1,4 +1,0 @@
-NumberHits:0
-Timestamp: Fri Dec 07 11:01:19 UTC 2018
-VLNV: xilinx.com:ip:microblaze:10.0
-SynthRuntime: 81

@@ -10,8 +10,8 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity bd_d5b8 is
   port (
-    SLOT_0_AXIS_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    SLOT_0_AXIS_tkeep : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    SLOT_0_AXIS_tdata : in STD_LOGIC_VECTOR ( 1023 downto 0 );
+    SLOT_0_AXIS_tkeep : in STD_LOGIC_VECTOR ( 127 downto 0 );
     SLOT_0_AXIS_tlast : in STD_LOGIC;
     SLOT_0_AXIS_tready : in STD_LOGIC;
     SLOT_0_AXIS_tvalid : in STD_LOGIC;
@@ -42,8 +42,8 @@ architecture STRUCTURE of bd_d5b8 is
   component bd_d5b8_ila_lib_0 is
   port (
     clk : in STD_LOGIC;
-    probe0 : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    probe1 : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    probe0 : in STD_LOGIC_VECTOR ( 1023 downto 0 );
+    probe1 : in STD_LOGIC_VECTOR ( 127 downto 0 );
     probe2 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe3 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -69,8 +69,8 @@ architecture STRUCTURE of bd_d5b8 is
     aresetn : in STD_LOGIC;
     slot_0_axis_tvalid : in STD_LOGIC;
     slot_0_axis_tready : in STD_LOGIC;
-    slot_0_axis_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    slot_0_axis_tkeep : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    slot_0_axis_tdata : in STD_LOGIC_VECTOR ( 1023 downto 0 );
+    slot_0_axis_tkeep : in STD_LOGIC_VECTOR ( 127 downto 0 );
     slot_0_axis_tlast : in STD_LOGIC;
     slot_1_axis_tvalid : in STD_LOGIC;
     slot_1_axis_tready : in STD_LOGIC;
@@ -88,8 +88,8 @@ architecture STRUCTURE of bd_d5b8 is
     slot_2_axis_tuser : in STD_LOGIC_VECTOR ( 1 downto 0 );
     m_slot_0_axis_tvalid : out STD_LOGIC;
     m_slot_0_axis_tready : out STD_LOGIC;
-    m_slot_0_axis_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    m_slot_0_axis_tkeep : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_slot_0_axis_tdata : out STD_LOGIC_VECTOR ( 1023 downto 0 );
+    m_slot_0_axis_tkeep : out STD_LOGIC_VECTOR ( 127 downto 0 );
     m_slot_0_axis_tlast : out STD_LOGIC;
     m_slot_1_axis_tvalid : out STD_LOGIC;
     m_slot_1_axis_tready : out STD_LOGIC;
@@ -121,14 +121,14 @@ architecture STRUCTURE of bd_d5b8 is
   signal Conn2_TSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal Conn2_TUSER : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal Conn2_TVALID : STD_LOGIC;
-  signal Conn_TDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal Conn_TKEEP : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal Conn_TDATA : STD_LOGIC_VECTOR ( 1023 downto 0 );
+  signal Conn_TKEEP : STD_LOGIC_VECTOR ( 127 downto 0 );
   signal Conn_TLAST : STD_LOGIC;
   signal Conn_TREADY : STD_LOGIC;
   signal Conn_TVALID : STD_LOGIC;
   signal clk_1 : STD_LOGIC;
-  signal net_slot_0_axis_tdata : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal net_slot_0_axis_tkeep : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal net_slot_0_axis_tdata : STD_LOGIC_VECTOR ( 1023 downto 0 );
+  signal net_slot_0_axis_tkeep : STD_LOGIC_VECTOR ( 127 downto 0 );
   signal net_slot_0_axis_tlast : STD_LOGIC;
   signal net_slot_0_axis_tready : STD_LOGIC;
   signal net_slot_0_axis_tvalid : STD_LOGIC;
@@ -163,7 +163,7 @@ architecture STRUCTURE of bd_d5b8 is
   attribute X_INTERFACE_INFO of resetn : signal is "xilinx.com:signal:reset:1.0 RST.RESETN RST";
   attribute X_INTERFACE_PARAMETER of resetn : signal is "XIL_INTERFACENAME RST.RESETN, POLARITY ACTIVE_LOW";
   attribute X_INTERFACE_INFO of SLOT_0_AXIS_tdata : signal is "xilinx.com:interface:axis:1.0 SLOT_0_AXIS TDATA";
-  attribute X_INTERFACE_PARAMETER of SLOT_0_AXIS_tdata : signal is "XIL_INTERFACENAME SLOT_0_AXIS, CLK_DOMAIN system_processing_system7_0_0_FCLK_CLK0, FREQ_HZ 100000000, HAS_TKEEP 1, HAS_TLAST 1, HAS_TREADY 1, HAS_TSTRB 0, LAYERED_METADATA undef, PHASE 0.000, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0";
+  attribute X_INTERFACE_PARAMETER of SLOT_0_AXIS_tdata : signal is "XIL_INTERFACENAME SLOT_0_AXIS, CLK_DOMAIN system_processing_system7_0_0_FCLK_CLK0, FREQ_HZ 100000000, HAS_TKEEP 1, HAS_TLAST 1, HAS_TREADY 1, HAS_TSTRB 0, LAYERED_METADATA undef, PHASE 0.000, TDATA_NUM_BYTES 128, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0";
   attribute X_INTERFACE_INFO of SLOT_0_AXIS_tkeep : signal is "xilinx.com:interface:axis:1.0 SLOT_0_AXIS TKEEP";
   attribute X_INTERFACE_INFO of SLOT_1_AXIS_tdata : signal is "xilinx.com:interface:axis:1.0 SLOT_1_AXIS TDATA";
   attribute X_INTERFACE_PARAMETER of SLOT_1_AXIS_tdata : signal is "XIL_INTERFACENAME SLOT_1_AXIS, CLK_DOMAIN system_processing_system7_0_0_FCLK_CLK0, FREQ_HZ 100000000, HAS_TKEEP 0, HAS_TLAST 1, HAS_TREADY 1, HAS_TSTRB 0, LAYERED_METADATA undef, PHASE 0.000, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1";
@@ -190,8 +190,8 @@ begin
   Conn2_TSTRB(3 downto 0) <= SLOT_2_AXIS_tstrb(3 downto 0);
   Conn2_TUSER(1 downto 0) <= SLOT_2_AXIS_tuser(1 downto 0);
   Conn2_TVALID <= SLOT_2_AXIS_tvalid;
-  Conn_TDATA(31 downto 0) <= SLOT_0_AXIS_tdata(31 downto 0);
-  Conn_TKEEP(3 downto 0) <= SLOT_0_AXIS_tkeep(3 downto 0);
+  Conn_TDATA(1023 downto 0) <= SLOT_0_AXIS_tdata(1023 downto 0);
+  Conn_TKEEP(127 downto 0) <= SLOT_0_AXIS_tkeep(127 downto 0);
   Conn_TLAST <= SLOT_0_AXIS_tlast;
   Conn_TREADY <= SLOT_0_AXIS_tready;
   Conn_TVALID <= SLOT_0_AXIS_tvalid;
@@ -201,8 +201,8 @@ g_inst: component bd_d5b8_g_inst_0
      port map (
       aclk => clk_1,
       aresetn => resetn_1,
-      m_slot_0_axis_tdata(31 downto 0) => net_slot_0_axis_tdata(31 downto 0),
-      m_slot_0_axis_tkeep(3 downto 0) => net_slot_0_axis_tkeep(3 downto 0),
+      m_slot_0_axis_tdata(1023 downto 0) => net_slot_0_axis_tdata(1023 downto 0),
+      m_slot_0_axis_tkeep(127 downto 0) => net_slot_0_axis_tkeep(127 downto 0),
       m_slot_0_axis_tlast => net_slot_0_axis_tlast,
       m_slot_0_axis_tready => net_slot_0_axis_tready,
       m_slot_0_axis_tvalid => net_slot_0_axis_tvalid,
@@ -220,8 +220,8 @@ g_inst: component bd_d5b8_g_inst_0
       m_slot_2_axis_tstrb(3 downto 0) => net_slot_2_axis_tstrb(3 downto 0),
       m_slot_2_axis_tuser(1 downto 0) => net_slot_2_axis_tuser(1 downto 0),
       m_slot_2_axis_tvalid => net_slot_2_axis_tvalid,
-      slot_0_axis_tdata(31 downto 0) => Conn_TDATA(31 downto 0),
-      slot_0_axis_tkeep(3 downto 0) => Conn_TKEEP(3 downto 0),
+      slot_0_axis_tdata(1023 downto 0) => Conn_TDATA(1023 downto 0),
+      slot_0_axis_tkeep(127 downto 0) => Conn_TKEEP(127 downto 0),
       slot_0_axis_tlast => Conn_TLAST,
       slot_0_axis_tready => Conn_TREADY,
       slot_0_axis_tvalid => Conn_TVALID,
@@ -243,8 +243,8 @@ g_inst: component bd_d5b8_g_inst_0
 ila_lib: component bd_d5b8_ila_lib_0
      port map (
       clk => clk_1,
-      probe0(31 downto 0) => net_slot_0_axis_tdata(31 downto 0),
-      probe1(3 downto 0) => net_slot_0_axis_tkeep(3 downto 0),
+      probe0(1023 downto 0) => net_slot_0_axis_tdata(1023 downto 0),
+      probe1(127 downto 0) => net_slot_0_axis_tkeep(127 downto 0),
       probe10(31 downto 0) => net_slot_2_axis_tdata(31 downto 0),
       probe11(5 downto 0) => net_slot_2_axis_tdest(5 downto 0),
       probe12(4 downto 0) => net_slot_2_axis_tid(4 downto 0),

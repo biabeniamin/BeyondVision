@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:hls:Adder2:1.0
--- IP Revision: 1812220004
+-- IP Revision: 1812221602
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -150,7 +150,7 @@ ARCHITECTURE design_1_Adder2_0_0_arch OF design_1_Adder2_0_0 IS
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF design_1_Adder2_0_0_arch : ARCHITECTURE IS "design_1_Adder2_0_0,Adder2,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF design_1_Adder2_0_0_arch: ARCHITECTURE IS "design_1_Adder2_0_0,Adder2,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=Adder2,x_ipVersion=1.0,x_ipCoreRevision=1812220004,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_S_AXI_CONTROL_BUS_ADDR_WIDTH=7,C_S_AXI_CONTROL_BUS_DATA_WIDTH=32}";
+  ATTRIBUTE CORE_GENERATION_INFO OF design_1_Adder2_0_0_arch: ARCHITECTURE IS "design_1_Adder2_0_0,Adder2,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=Adder2,x_ipVersion=1.0,x_ipCoreRevision=1812221602,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_S_AXI_CONTROL_BUS_ADDR_WIDTH=7,C_S_AXI_CONTROL_BUS_DATA_WIDTH=32}";
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
   ATTRIBUTE IP_DEFINITION_SOURCE OF design_1_Adder2_0_0_arch: ARCHITECTURE IS "HLS";
   ATTRIBUTE X_INTERFACE_INFO : STRING;

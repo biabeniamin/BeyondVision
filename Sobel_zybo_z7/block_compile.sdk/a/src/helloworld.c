@@ -129,7 +129,6 @@ int main()
 
     		    			xil_printf("\rSet receiving\r\n");
     		    					 status = XAxiDma_SimpleTransfer2(dmaAddress,  y, 32 * 4, XAXIDMA_DEVICE_TO_DMA);
-    		    					 Dump(dmaAddress2);
     		    					 if (status != XST_SUCCESS)
     		    					 {
     		    						xil_printf("Error: DMA transfer from Vivado HLS block failed\n");
@@ -264,7 +263,8 @@ int main()
 
 
 		int out[100000];
-		 Xil_DCacheFlushRange((unsigned int)out,32*4);
+		 Xil_DCacheFlushRange((unsigned int)y,32*4);
+		 Xil_DCacheInvalidateRange(out, 32*4);
 
 
 

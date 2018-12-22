@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:hls:Adder2:1.0
--- IP Revision: 1812220004
+-- IP Revision: 1812221602
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
