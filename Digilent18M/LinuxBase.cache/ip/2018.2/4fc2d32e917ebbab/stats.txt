@@ -1,4 +1,4 @@
-NumberHits:3
-Timestamp: Sat Dec 22 08:12:59 UTC 2018
+NumberHits:4
+Timestamp: Sat Dec 22 08:47:04 UTC 2018
 VLNV: xilinx.com:ip:axi_dma:7.1
 SynthRuntime: 247

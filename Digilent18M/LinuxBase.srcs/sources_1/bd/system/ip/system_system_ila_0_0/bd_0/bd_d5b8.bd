@@ -21,6 +21,13 @@
         <spirit:parameters/>
       </spirit:busInterface>
       <spirit:busInterface>
+        <spirit:name>SLOT_1_AXIS</spirit:name>
+        <spirit:monitor/>
+        <spirit:busType spirit:library="interface" spirit:name="axis" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="interface" spirit:name="axis_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:parameters/>
+      </spirit:busInterface>
+      <spirit:busInterface>
         <spirit:name>CLK.CLK</spirit:name>
         <spirit:displayName>Clk</spirit:displayName>
         <spirit:description>Clock</spirit:description>
@@ -40,7 +47,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>ASSOCIATED_BUSIF</spirit:name>
-            <spirit:value>SLOT_0_AXIS</spirit:value>
+            <spirit:value>SLOT_0_AXIS:SLOT_1_AXIS</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>ASSOCIATED_RESET</spirit:name>
@@ -98,103 +105,7 @@
     <spirit:library>BlockDiagram</spirit:library>
     <spirit:name>bd_d5b8_imp</spirit:name>
     <spirit:version>1.00.a</spirit:version>
-    <spirit:componentInstances>
-      <spirit:componentInstance>
-        <spirit:instanceName>ila_lib</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="ila" spirit:vendor="xilinx.com" spirit:version="6.2"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">bd_d5b8_ila_lib_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_PROBE4_TYPE">0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_PROBE3_TYPE">0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_PROBE2_TYPE">0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_PROBE1_TYPE">0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_PROBE0_TYPE">0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_PROBE4_WIDTH">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_PROBE3_WIDTH">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_PROBE2_WIDTH">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_PROBE1_WIDTH">4</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_PROBE0_WIDTH">32</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_DATA_DEPTH">1024</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_NUM_OF_PROBES">5</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_XLNX_HW_PROBE_INFO">DEFAULT</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_TRIGOUT_EN">false</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_EN_STRG_QUAL">0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_EN_TIME_TAG">0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_TIME_TAG_WIDTH">32</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_INPUT_PIPE_STAGES">0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_ILA_CLK_FREQ">100000000</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_ADV_TRIGGER">FALSE</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_TRIGIN_EN">false</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="ALL_PROBE_SAME_MU">TRUE</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="ALL_PROBE_SAME_MU_CNT">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_MONITOR_TYPE">Native</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>g_inst</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="gigantic_mux" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">bd_d5b8_g_inst_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_SLOT_0_HAS_TREADY">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_SLOT_0_HAS_TSTRB">0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_SLOT_0_HAS_TKEEP">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_SLOT_0_AXIS_TUSER_WIDTH">0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_SLOT_0_AXIS_TDEST_WIDTH">0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_SLOT_0_AXIS_TID_WIDTH">0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_SLOT_0_AXIS_TDATA_WIDTH">32</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_SLOT_0_AXI_PROTOCOL">AXI4S</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_NUM_OF_PROBES">0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_NUM_MONITOR_SLOTS">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_SLOT_0_MON_MODE">FT</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_EN_GIGAMUX">false</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-    </spirit:componentInstances>
-    <spirit:interconnections>
-      <spirit:monitorInterconnection>
-        <spirit:name>Conn</spirit:name>
-        <spirit:monitorInterface spirit:busRef="SLOT_0_AXIS"/>
-        <spirit:monitorInterface spirit:busRef="slot_0_axis" spirit:componentRef="g_inst"/>
-      </spirit:monitorInterconnection>
-    </spirit:interconnections>
-    <spirit:adHocConnections>
-      <spirit:adHocConnection>
-        <spirit:name>clk_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="clk"/>
-        <spirit:internalPortReference spirit:componentRef="ila_lib" spirit:portRef="clk"/>
-        <spirit:internalPortReference spirit:componentRef="g_inst" spirit:portRef="aclk"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>resetn_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="resetn"/>
-        <spirit:internalPortReference spirit:componentRef="g_inst" spirit:portRef="aresetn"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>net_slot_0_axis_tdata</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="g_inst" spirit:portRef="m_slot_0_axis_tdata"/>
-        <spirit:internalPortReference spirit:componentRef="ila_lib" spirit:portRef="probe0"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>net_slot_0_axis_tkeep</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="g_inst" spirit:portRef="m_slot_0_axis_tkeep"/>
-        <spirit:internalPortReference spirit:componentRef="ila_lib" spirit:portRef="probe1"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>net_slot_0_axis_tvalid</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="g_inst" spirit:portRef="m_slot_0_axis_tvalid"/>
-        <spirit:internalPortReference spirit:componentRef="ila_lib" spirit:portRef="probe2"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>net_slot_0_axis_tready</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="g_inst" spirit:portRef="m_slot_0_axis_tready"/>
-        <spirit:internalPortReference spirit:componentRef="ila_lib" spirit:portRef="probe3"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>net_slot_0_axis_tlast</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="g_inst" spirit:portRef="m_slot_0_axis_tlast"/>
-        <spirit:internalPortReference spirit:componentRef="ila_lib" spirit:portRef="probe4"/>
-      </spirit:adHocConnection>
-    </spirit:adHocConnections>
+    <spirit:adHocConnections/>
     <spirit:hierConnections/>
   </spirit:design>
 
