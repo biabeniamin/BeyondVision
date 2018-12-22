@@ -14,22 +14,22 @@
       <Cursor1Time time="517000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="390"></NameColumnWidth>
+      <NameColumnWidth column_width="386"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="2" />
    <wave_markers>
    </wave_markers>
-   <wvobject fp_name="group33" type="group">
+   <wvobject fp_name="group17" type="group">
       <obj_property name="label">slot_0 : axi_dma_M_AXIS_MM2S : Interface</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="Detail_Data">Interface_(i1:s0)_(axi_dma_M_AXIS_MM2S)_tooltip</obj_property>
       <obj_property name="Render_Data">Interface_(i1:s0)_(axi_dma_M_AXIS_MM2S)</obj_property>
       <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
-      <obj_property name="CustomSignalColor">OliveDrab</obj_property>
+      <obj_property name="CustomSignalColor">Cornsilk</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
-      <wvobject fp_name="group34" type="group">
+      <wvobject fp_name="group18" type="group">
          <obj_property name="label">slot_0 : axi_dma_M_AXIS_MM2S : T Channel</obj_property>
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="Detail_Data">T_Channel_(i1:s0)_(axi_dma_M_AXIS_MM2S)_tooltip</obj_property>
@@ -82,17 +82,17 @@
          </wvobject>
       </wvobject>
    </wvobject>
-   <wvobject fp_name="group40" type="group">
+   <wvobject fp_name="group24" type="group">
       <obj_property name="label">slot_1 : Adder2_0_OUTPUT_STREAM : Interface</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="Detail_Data">Interface_(i1:s1)_(Adder2_0_OUTPUT_STREAM)_tooltip</obj_property>
       <obj_property name="Render_Data">Interface_(i1:s1)_(Adder2_0_OUTPUT_STREAM)</obj_property>
       <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
-      <obj_property name="CustomSignalColor">OliveDrab</obj_property>
+      <obj_property name="CustomSignalColor">Cornsilk</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
       <obj_property name="isExpanded"></obj_property>
-      <wvobject fp_name="group41" type="group">
+      <wvobject fp_name="group25" type="group">
          <obj_property name="label">slot_1 : Adder2_0_OUTPUT_STREAM : T Channel</obj_property>
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="Detail_Data">T_Channel_(i1:s1)_(Adder2_0_OUTPUT_STREAM)_tooltip</obj_property>
