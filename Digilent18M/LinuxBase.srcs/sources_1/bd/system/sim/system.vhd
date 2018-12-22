@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Sat Dec 22 10:12:28 2018
+--Date        : Sat Dec 22 10:50:40 2018
 --Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
 --Command     : generate_target system.bd
 --Design      : system
@@ -9904,7 +9904,7 @@ entity system is
     hdmi_out_data_p : out STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of system : entity is "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=77,numReposBlks=44,numNonXlnxBlks=3,numHierBlks=33,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=2,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=16,da_axi4_s2mm_cnt=1,da_clkrst_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of system : entity is "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=77,numReposBlks=44,numNonXlnxBlks=3,numHierBlks=33,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=2,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=16,da_axi4_s2mm_cnt=1,da_board_cnt=1,da_clkrst_cnt=2,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of system : entity is "system.hwdef";
 end system;
@@ -10356,7 +10356,7 @@ architecture STRUCTURE of system is
     s_axis_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
     m_axis_tvalid : out STD_LOGIC;
     m_axis_tready : in STD_LOGIC;
-    m_axis_tdata : out STD_LOGIC_VECTOR ( 23 downto 0 );
+    m_axis_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     m_axis_tlast : out STD_LOGIC;
     m_axis_tuser : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
@@ -10759,26 +10759,6 @@ architecture STRUCTURE of system is
     dout : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component system_xlconstant_1_0;
-  component system_system_ila_0_1 is
-  port (
-    clk : in STD_LOGIC;
-    SLOT_0_AXIS_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    SLOT_0_AXIS_tkeep : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    SLOT_0_AXIS_tlast : in STD_LOGIC;
-    SLOT_0_AXIS_tvalid : in STD_LOGIC;
-    SLOT_0_AXIS_tready : in STD_LOGIC;
-    SLOT_1_AXIS_tid : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    SLOT_1_AXIS_tdest : in STD_LOGIC_VECTOR ( 5 downto 0 );
-    SLOT_1_AXIS_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    SLOT_1_AXIS_tstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    SLOT_1_AXIS_tkeep : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    SLOT_1_AXIS_tlast : in STD_LOGIC;
-    SLOT_1_AXIS_tuser : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    SLOT_1_AXIS_tvalid : in STD_LOGIC;
-    SLOT_1_AXIS_tready : in STD_LOGIC;
-    resetn : in STD_LOGIC
-  );
-  end component system_system_ila_0_1;
   component system_Adder2_0_0 is
   port (
     s_axi_CONTROL_BUS_AWADDR : in STD_LOGIC_VECTOR ( 6 downto 0 );
@@ -10821,6 +10801,22 @@ architecture STRUCTURE of system is
     OUTPUT_STREAM_TID : out STD_LOGIC_VECTOR ( 4 downto 0 )
   );
   end component system_Adder2_0_0;
+  component system_system_ila_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    SLOT_0_AXIS_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    SLOT_0_AXIS_tkeep : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    SLOT_0_AXIS_tlast : in STD_LOGIC;
+    SLOT_0_AXIS_tvalid : in STD_LOGIC;
+    SLOT_0_AXIS_tready : in STD_LOGIC;
+    resetn : in STD_LOGIC;
+    SLOT_1_AXIS_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    SLOT_1_AXIS_tlast : in STD_LOGIC;
+    SLOT_1_AXIS_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
+    SLOT_1_AXIS_tvalid : in STD_LOGIC;
+    SLOT_1_AXIS_tready : in STD_LOGIC
+  );
+  end component system_system_ila_0_0;
   signal Adder2_0_OUTPUT_STREAM_TDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
   attribute CONN_BUS_INFO : string;
   attribute CONN_BUS_INFO of Adder2_0_OUTPUT_STREAM_TDATA : signal is "Adder2_0_OUTPUT_STREAM xilinx.com:interface:axis:1.0 None TDATA";
@@ -10828,19 +10824,7 @@ architecture STRUCTURE of system is
   attribute DEBUG of Adder2_0_OUTPUT_STREAM_TDATA : signal is "true";
   attribute MARK_DEBUG : boolean;
   attribute MARK_DEBUG of Adder2_0_OUTPUT_STREAM_TDATA : signal is std.standard.true;
-  signal Adder2_0_OUTPUT_STREAM_TDEST : STD_LOGIC_VECTOR ( 5 downto 0 );
-  attribute CONN_BUS_INFO of Adder2_0_OUTPUT_STREAM_TDEST : signal is "Adder2_0_OUTPUT_STREAM xilinx.com:interface:axis:1.0 None TDEST";
-  attribute DEBUG of Adder2_0_OUTPUT_STREAM_TDEST : signal is "true";
-  attribute MARK_DEBUG of Adder2_0_OUTPUT_STREAM_TDEST : signal is std.standard.true;
-  signal Adder2_0_OUTPUT_STREAM_TID : STD_LOGIC_VECTOR ( 4 downto 0 );
-  attribute CONN_BUS_INFO of Adder2_0_OUTPUT_STREAM_TID : signal is "Adder2_0_OUTPUT_STREAM xilinx.com:interface:axis:1.0 None TID";
-  attribute DEBUG of Adder2_0_OUTPUT_STREAM_TID : signal is "true";
-  attribute MARK_DEBUG of Adder2_0_OUTPUT_STREAM_TID : signal is std.standard.true;
-  signal Adder2_0_OUTPUT_STREAM_TKEEP : STD_LOGIC_VECTOR ( 3 downto 0 );
-  attribute CONN_BUS_INFO of Adder2_0_OUTPUT_STREAM_TKEEP : signal is "Adder2_0_OUTPUT_STREAM xilinx.com:interface:axis:1.0 None TKEEP";
-  attribute DEBUG of Adder2_0_OUTPUT_STREAM_TKEEP : signal is "true";
-  attribute MARK_DEBUG of Adder2_0_OUTPUT_STREAM_TKEEP : signal is std.standard.true;
-  signal Adder2_0_OUTPUT_STREAM_TLAST : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal Adder2_0_OUTPUT_STREAM_TLAST : STD_LOGIC;
   attribute CONN_BUS_INFO of Adder2_0_OUTPUT_STREAM_TLAST : signal is "Adder2_0_OUTPUT_STREAM xilinx.com:interface:axis:1.0 None TLAST";
   attribute DEBUG of Adder2_0_OUTPUT_STREAM_TLAST : signal is "true";
   attribute MARK_DEBUG of Adder2_0_OUTPUT_STREAM_TLAST : signal is std.standard.true;
@@ -10848,11 +10832,7 @@ architecture STRUCTURE of system is
   attribute CONN_BUS_INFO of Adder2_0_OUTPUT_STREAM_TREADY : signal is "Adder2_0_OUTPUT_STREAM xilinx.com:interface:axis:1.0 None TREADY";
   attribute DEBUG of Adder2_0_OUTPUT_STREAM_TREADY : signal is "true";
   attribute MARK_DEBUG of Adder2_0_OUTPUT_STREAM_TREADY : signal is std.standard.true;
-  signal Adder2_0_OUTPUT_STREAM_TSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
-  attribute CONN_BUS_INFO of Adder2_0_OUTPUT_STREAM_TSTRB : signal is "Adder2_0_OUTPUT_STREAM xilinx.com:interface:axis:1.0 None TSTRB";
-  attribute DEBUG of Adder2_0_OUTPUT_STREAM_TSTRB : signal is "true";
-  attribute MARK_DEBUG of Adder2_0_OUTPUT_STREAM_TSTRB : signal is std.standard.true;
-  signal Adder2_0_OUTPUT_STREAM_TUSER : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal Adder2_0_OUTPUT_STREAM_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
   attribute CONN_BUS_INFO of Adder2_0_OUTPUT_STREAM_TUSER : signal is "Adder2_0_OUTPUT_STREAM xilinx.com:interface:axis:1.0 None TUSER";
   attribute DEBUG of Adder2_0_OUTPUT_STREAM_TUSER : signal is "true";
   attribute MARK_DEBUG of Adder2_0_OUTPUT_STREAM_TUSER : signal is std.standard.true;
@@ -11063,11 +11043,6 @@ architecture STRUCTURE of system is
   signal axi_vdma_1_M_AXI_MM2S_RRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal axi_vdma_1_M_AXI_MM2S_RVALID : STD_LOGIC;
   signal axi_vdma_1_mm2s_introut : STD_LOGIC;
-  signal axis_subset_converter_in_M_AXIS_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal axis_subset_converter_in_M_AXIS_TLAST : STD_LOGIC;
-  signal axis_subset_converter_in_M_AXIS_TREADY : STD_LOGIC;
-  signal axis_subset_converter_in_M_AXIS_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal axis_subset_converter_in_M_AXIS_TVALID : STD_LOGIC;
   signal axis_subset_converter_out_M_AXIS_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
   signal axis_subset_converter_out_M_AXIS_TLAST : STD_LOGIC;
   signal axis_subset_converter_out_M_AXIS_TREADY : STD_LOGIC;
@@ -11393,7 +11368,15 @@ architecture STRUCTURE of system is
   signal xlconcat_0_dout : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal xlconstant_0_dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal xlconstant_1_dout : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal NLW_Adder2_0_OUTPUT_STREAM_TVALID_UNCONNECTED : STD_LOGIC;
   signal NLW_Adder2_0_interrupt_UNCONNECTED : STD_LOGIC;
+  signal NLW_Adder2_0_OUTPUT_STREAM_TDATA_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal NLW_Adder2_0_OUTPUT_STREAM_TDEST_UNCONNECTED : STD_LOGIC_VECTOR ( 5 downto 0 );
+  signal NLW_Adder2_0_OUTPUT_STREAM_TID_UNCONNECTED : STD_LOGIC_VECTOR ( 4 downto 0 );
+  signal NLW_Adder2_0_OUTPUT_STREAM_TKEEP_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal NLW_Adder2_0_OUTPUT_STREAM_TLAST_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal NLW_Adder2_0_OUTPUT_STREAM_TSTRB_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal NLW_Adder2_0_OUTPUT_STREAM_TUSER_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_axi_dma_mm2s_introut_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_dma_mm2s_prmry_reset_out_n_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_dma_s2mm_introut_UNCONNECTED : STD_LOGIC;
@@ -11407,6 +11390,7 @@ architecture STRUCTURE of system is
   signal NLW_axi_dma_0_s2mm_prmry_reset_out_n_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_dma_0_m_axis_mm2s_tdata_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal NLW_axi_dma_0_m_axis_mm2s_tkeep_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal NLW_axi_vdma_0_s_axis_s2mm_tready_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_vdma_0_s2mm_frame_ptr_out_UNCONNECTED : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal NLW_axi_vdma_1_mm2s_frame_ptr_out_UNCONNECTED : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal NLW_axis_subset_converter_out_m_axis_tkeep_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -11619,15 +11603,15 @@ Adder2_0: component system_Adder2_0_0
       INPUT_STREAM_TSTRB(3 downto 0) => B"1111",
       INPUT_STREAM_TUSER(1 downto 0) => B"00",
       INPUT_STREAM_TVALID => axi_dma_M_AXIS_MM2S_TVALID,
-      OUTPUT_STREAM_TDATA(31 downto 0) => Adder2_0_OUTPUT_STREAM_TDATA(31 downto 0),
-      OUTPUT_STREAM_TDEST(5 downto 0) => Adder2_0_OUTPUT_STREAM_TDEST(5 downto 0),
-      OUTPUT_STREAM_TID(4 downto 0) => Adder2_0_OUTPUT_STREAM_TID(4 downto 0),
-      OUTPUT_STREAM_TKEEP(3 downto 0) => Adder2_0_OUTPUT_STREAM_TKEEP(3 downto 0),
-      OUTPUT_STREAM_TLAST(0) => Adder2_0_OUTPUT_STREAM_TLAST(0),
-      OUTPUT_STREAM_TREADY => Adder2_0_OUTPUT_STREAM_TREADY,
-      OUTPUT_STREAM_TSTRB(3 downto 0) => Adder2_0_OUTPUT_STREAM_TSTRB(3 downto 0),
-      OUTPUT_STREAM_TUSER(1 downto 0) => Adder2_0_OUTPUT_STREAM_TUSER(1 downto 0),
-      OUTPUT_STREAM_TVALID => Adder2_0_OUTPUT_STREAM_TVALID,
+      OUTPUT_STREAM_TDATA(31 downto 0) => NLW_Adder2_0_OUTPUT_STREAM_TDATA_UNCONNECTED(31 downto 0),
+      OUTPUT_STREAM_TDEST(5 downto 0) => NLW_Adder2_0_OUTPUT_STREAM_TDEST_UNCONNECTED(5 downto 0),
+      OUTPUT_STREAM_TID(4 downto 0) => NLW_Adder2_0_OUTPUT_STREAM_TID_UNCONNECTED(4 downto 0),
+      OUTPUT_STREAM_TKEEP(3 downto 0) => NLW_Adder2_0_OUTPUT_STREAM_TKEEP_UNCONNECTED(3 downto 0),
+      OUTPUT_STREAM_TLAST(0) => NLW_Adder2_0_OUTPUT_STREAM_TLAST_UNCONNECTED(0),
+      OUTPUT_STREAM_TREADY => '1',
+      OUTPUT_STREAM_TSTRB(3 downto 0) => NLW_Adder2_0_OUTPUT_STREAM_TSTRB_UNCONNECTED(3 downto 0),
+      OUTPUT_STREAM_TUSER(1 downto 0) => NLW_Adder2_0_OUTPUT_STREAM_TUSER_UNCONNECTED(1 downto 0),
+      OUTPUT_STREAM_TVALID => NLW_Adder2_0_OUTPUT_STREAM_TVALID_UNCONNECTED,
       ap_clk => processing_system7_0_FCLK_CLK0,
       ap_rst_n => rst_ps7_0_100M_peripheral_aresetn(0),
       interrupt => NLW_Adder2_0_interrupt_UNCONNECTED,
@@ -11776,8 +11760,8 @@ axi_dma_0: component system_axi_dma_0_0
       s_axi_lite_wready => ps7_0_axi_periph_GP0_M16_AXI_WREADY,
       s_axi_lite_wvalid => ps7_0_axi_periph_GP0_M16_AXI_WVALID(0),
       s_axis_s2mm_tdata(31 downto 0) => Adder2_0_OUTPUT_STREAM_TDATA(31 downto 0),
-      s_axis_s2mm_tkeep(3 downto 0) => Adder2_0_OUTPUT_STREAM_TKEEP(3 downto 0),
-      s_axis_s2mm_tlast => Adder2_0_OUTPUT_STREAM_TLAST(0),
+      s_axis_s2mm_tkeep(3 downto 0) => B"1111",
+      s_axis_s2mm_tlast => Adder2_0_OUTPUT_STREAM_TLAST,
       s_axis_s2mm_tready => Adder2_0_OUTPUT_STREAM_TREADY,
       s_axis_s2mm_tvalid => Adder2_0_OUTPUT_STREAM_TVALID
     );
@@ -12089,12 +12073,12 @@ axi_vdma_0: component system_axi_vdma_0_0
       s_axi_lite_wready => ps7_0_axi_periph_M00_AXI_WREADY,
       s_axi_lite_wvalid => ps7_0_axi_periph_M00_AXI_WVALID(0),
       s_axis_s2mm_aclk => processing_system7_0_FCLK_CLK1(0),
-      s_axis_s2mm_tdata(23 downto 0) => axis_subset_converter_in_M_AXIS_TDATA(23 downto 0),
+      s_axis_s2mm_tdata(23 downto 0) => B"000000000000000000000000",
       s_axis_s2mm_tkeep(2 downto 0) => B"111",
-      s_axis_s2mm_tlast => axis_subset_converter_in_M_AXIS_TLAST,
-      s_axis_s2mm_tready => axis_subset_converter_in_M_AXIS_TREADY,
-      s_axis_s2mm_tuser(0) => axis_subset_converter_in_M_AXIS_TUSER(0),
-      s_axis_s2mm_tvalid => axis_subset_converter_in_M_AXIS_TVALID
+      s_axis_s2mm_tlast => '0',
+      s_axis_s2mm_tready => NLW_axi_vdma_0_s_axis_s2mm_tready_UNCONNECTED,
+      s_axis_s2mm_tuser(0) => '0',
+      s_axis_s2mm_tvalid => '0'
     );
 axi_vdma_1: component system_axi_vdma_1_0
      port map (
@@ -12143,13 +12127,13 @@ axi_vdma_1: component system_axi_vdma_1_0
     );
 axis_subset_converter_in: component system_axis_subset_converter_in_0
      port map (
-      aclk => processing_system7_0_FCLK_CLK1(0),
+      aclk => processing_system7_0_FCLK_CLK0,
       aresetn => xlconstant_0_dout(0),
-      m_axis_tdata(23 downto 0) => axis_subset_converter_in_M_AXIS_TDATA(23 downto 0),
-      m_axis_tlast => axis_subset_converter_in_M_AXIS_TLAST,
-      m_axis_tready => axis_subset_converter_in_M_AXIS_TREADY,
-      m_axis_tuser(0) => axis_subset_converter_in_M_AXIS_TUSER(0),
-      m_axis_tvalid => axis_subset_converter_in_M_AXIS_TVALID,
+      m_axis_tdata(31 downto 0) => Adder2_0_OUTPUT_STREAM_TDATA(31 downto 0),
+      m_axis_tlast => Adder2_0_OUTPUT_STREAM_TLAST,
+      m_axis_tready => Adder2_0_OUTPUT_STREAM_TREADY,
+      m_axis_tuser(0) => Adder2_0_OUTPUT_STREAM_TUSER(0),
+      m_axis_tvalid => Adder2_0_OUTPUT_STREAM_TVALID,
       s_axis_tdata(23 downto 0) => v_vid_in_axi4s_0_video_out_TDATA(23 downto 0),
       s_axis_tlast => v_vid_in_axi4s_0_video_out_TLAST,
       s_axis_tready => v_vid_in_axi4s_0_video_out_TREADY,
@@ -12892,7 +12876,7 @@ sum_0: component system_sum_0_0
       s_axi_CRTLS_WSTRB(3 downto 0) => ps7_0_axi_periph_GP0_M15_AXI_WSTRB(3 downto 0),
       s_axi_CRTLS_WVALID => ps7_0_axi_periph_GP0_M15_AXI_WVALID(0)
     );
-system_ila_0: component system_system_ila_0_1
+system_ila_0: component system_system_ila_0_0
      port map (
       SLOT_0_AXIS_tdata(31 downto 0) => axi_dma_M_AXIS_MM2S_TDATA(31 downto 0),
       SLOT_0_AXIS_tkeep(3 downto 0) => axi_dma_M_AXIS_MM2S_TKEEP(3 downto 0),
@@ -12900,13 +12884,9 @@ system_ila_0: component system_system_ila_0_1
       SLOT_0_AXIS_tready => axi_dma_M_AXIS_MM2S_TREADY,
       SLOT_0_AXIS_tvalid => axi_dma_M_AXIS_MM2S_TVALID,
       SLOT_1_AXIS_tdata(31 downto 0) => Adder2_0_OUTPUT_STREAM_TDATA(31 downto 0),
-      SLOT_1_AXIS_tdest(5 downto 0) => Adder2_0_OUTPUT_STREAM_TDEST(5 downto 0),
-      SLOT_1_AXIS_tid(4 downto 0) => Adder2_0_OUTPUT_STREAM_TID(4 downto 0),
-      SLOT_1_AXIS_tkeep(3 downto 0) => Adder2_0_OUTPUT_STREAM_TKEEP(3 downto 0),
-      SLOT_1_AXIS_tlast => Adder2_0_OUTPUT_STREAM_TLAST(0),
+      SLOT_1_AXIS_tlast => Adder2_0_OUTPUT_STREAM_TLAST,
       SLOT_1_AXIS_tready => Adder2_0_OUTPUT_STREAM_TREADY,
-      SLOT_1_AXIS_tstrb(3 downto 0) => Adder2_0_OUTPUT_STREAM_TSTRB(3 downto 0),
-      SLOT_1_AXIS_tuser(1 downto 0) => Adder2_0_OUTPUT_STREAM_TUSER(1 downto 0),
+      SLOT_1_AXIS_tuser(0) => Adder2_0_OUTPUT_STREAM_TUSER(0),
       SLOT_1_AXIS_tvalid => Adder2_0_OUTPUT_STREAM_TVALID,
       clk => processing_system7_0_FCLK_CLK0,
       resetn => rst_ps7_0_100M_peripheral_aresetn(0)
@@ -13018,7 +12998,7 @@ v_tc_out: component system_v_tc_out_0
     );
 v_vid_in_axi4s_0: component system_v_vid_in_axi4s_0_0
      port map (
-      aclk => processing_system7_0_FCLK_CLK1(0),
+      aclk => processing_system7_0_FCLK_CLK0,
       aclken => '1',
       aresetn => xlconstant_0_dout(0),
       axis_enable => '1',

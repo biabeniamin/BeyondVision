@@ -4843,7 +4843,7 @@ Note: This value must be greater than or equal to the largest expected packet to
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Dec 22 08:47:03 UTC 2018</spirit:value>
+            <spirit:value>Sat Dec 22 08:51:11 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -4891,7 +4891,7 @@ Note: This value must be greater than or equal to the largest expected packet to
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:9c096b2b</spirit:value>
+            <spirit:value>8:e8c87e12</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -4907,11 +4907,11 @@ Note: This value must be greater than or equal to the largest expected packet to
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Dec 22 08:12:46 UTC 2018</spirit:value>
+            <spirit:value>Sat Dec 22 08:50:59 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:9c096b2b</spirit:value>
+            <spirit:value>8:e8c87e12</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -4952,7 +4952,7 @@ Note: This value must be greater than or equal to the largest expected packet to
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:ee18f072</spirit:value>
+            <spirit:value>8:dd97cf28</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -4968,11 +4968,11 @@ Note: This value must be greater than or equal to the largest expected packet to
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Dec 22 08:12:46 UTC 2018</spirit:value>
+            <spirit:value>Sat Dec 22 08:50:59 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:ee18f072</spirit:value>
+            <spirit:value>8:dd97cf28</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>

@@ -97,37 +97,9 @@ int main()
     init_platform();
     disable_caches();
 
-    int x[500];
-    	int y[500];
-    	for(int i=0;i<200;i++)
-    	{
-    		x[i]=i;
-    		y[i] = 0;
-    	}
-    	Add(x,y,12);
+
 
     int Status;
-
-
-    CfgPtr = XAxiDma_LookupConfig(XPAR_AXI_DMA_0_DEVICE_ID);
-      if(!CfgPtr){
-      print("Error looking for AXI DMA config\n\r");
-      return XST_FAILURE;
-      }
-      Status = XAxiDma_CfgInitialize(&AxiDma,CfgPtr);
-      if(Status != XST_SUCCESS){
-      xil_printf("Error initializing DMA %d\n\r", Status);
-      return XST_FAILURE;
-      }
-
-      //check for scatter gather mode
-       if(XAxiDma_HasSg(&AxiDma)){
-       print("Error DMA configured in SG mode\n\r");
-       return XST_FAILURE;
-       }
-       /* Disable interrupts, we use polling mode */
-      XAxiDma_IntrDisable(&AxiDma, XAXIDMA_IRQ_ALL_MASK,XAXIDMA_DEVICE_TO_DMA);
-       XAxiDma_IntrDisable(&AxiDma, XAXIDMA_IRQ_ALL_MASK,XAXIDMA_DMA_TO_DEVICE);
 
 
     XVtc_Timing vtcTiming;
@@ -259,17 +231,7 @@ int main()
 		int out[100000];
 		 Xil_DCacheFlushRange((unsigned int)out,32*4);
 
-		 //get results from the Vivado HLS block
-			 		Status = XAxiDma_SimpleTransfer(&AxiDma, (unsigned int) out, 32*4, XAXIDMA_DEVICE_TO_DMA);
-			 		if (Status != XST_SUCCESS) {
-			 			xil_printf("Error: DMA transfer from Vivado  HLS block failed\n");
-			 			return XST_FAILURE;
-			 		}
-			 		xil_printf("\rWainting dma\r\n");
- 			 		while (XAxiDma_Busy(&AxiDma, XAXIDMA_DEVICE_TO_DMA)) ;
-			 		xil_printf("\rReceive ressults done\r\n");
-			 		Xil_DCacheFlushRange((unsigned int)out,32*4);
-			 		Xil_DCacheInvalidateRange(out, 32*4);
+
 
 			 for(int i=0;i<32;i++)
 			 {
@@ -280,6 +242,17 @@ int main()
 
 
 		DemoPrintTest(dispCtrl.framePtr[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, dispCtrl.stride, DEMO_PATTERN_1);
+
+
+
+		int x[500];
+		    	int y[500];
+		    	for(int i=0;i<200;i++)
+		    	{
+		    		x[i]=i;
+		    		y[i] = 0;
+		    	}
+		    	Add(x,y,12);
 
 	while(1)
 	{

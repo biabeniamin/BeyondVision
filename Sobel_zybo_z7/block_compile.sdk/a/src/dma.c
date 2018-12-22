@@ -232,12 +232,12 @@ void Add(int *in,
 		 startAdder(adderAddress);
 
 		 xil_printf("\rSend input \r\n");
-		 while (isDmaBusy(dmaAddress, XAXIDMA_DMA_TO_DEVICE)) ;
+		 //while (isDmaBusy(dmaAddress, XAXIDMA_DMA_TO_DEVICE)) ;
 
 		 xil_printf("\rSend input done\r\n");
 
 		 xil_printf("\rReceive ressults done %x\r\n", adderGetReturn(adderAddress));
-		 while (!isAdderDone(adderAddress)) ;
+		 //while (!isAdderDone(adderAddress)) ;
 		 xil_printf("\rReceive ressults done %x\r\n", adderGetReturn(adderAddress));
 		 xil_printf("\rReceive ressults done %x\r\n", adderGetReturn(adderAddress));
 
