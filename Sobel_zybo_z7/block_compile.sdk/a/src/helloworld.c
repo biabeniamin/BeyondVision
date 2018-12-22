@@ -65,6 +65,8 @@
 #include "dynclk.h"
 #include "xaxidma.h"
 
+#include "dma.h"
+
 #define DEMO_MAX_FRAME (720*1280)
 #define DEMO_STRIDE (1280*3)
 #define DISPLAY_NUM_FRAMES 3
@@ -94,6 +96,15 @@ int main()
 {
     init_platform();
     disable_caches();
+
+    int x[500];
+    	int y[500];
+    	for(int i=0;i<200;i++)
+    	{
+    		x[i]=i;
+    		y[i] = 0;
+    	}
+    	Add(x,y,12);
 
     int Status;
 

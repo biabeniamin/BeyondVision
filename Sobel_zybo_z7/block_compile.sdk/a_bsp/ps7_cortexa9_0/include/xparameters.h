@@ -30,6 +30,25 @@
  
  
 /******************************************************************/
+/* Definitions for driver ADDER2 */
+#define XPAR_XADDER2_NUM_INSTANCES 1
+
+/* Definitions for peripheral ADDER2_0 */
+#define XPAR_ADDER2_0_DEVICE_ID 0
+#define XPAR_ADDER2_0_S_AXI_CONTROL_BUS_BASEADDR 0x43C30000
+#define XPAR_ADDER2_0_S_AXI_CONTROL_BUS_HIGHADDR 0x43C3FFFF
+
+
+/******************************************************************/
+
+/* Canonical definitions for peripheral ADDER2_0 */
+#define XPAR_XADDER2_0_DEVICE_ID XPAR_ADDER2_0_DEVICE_ID
+#define XPAR_XADDER2_0_S_AXI_CONTROL_BUS_BASEADDR 0x43C30000
+#define XPAR_XADDER2_0_S_AXI_CONTROL_BUS_HIGHADDR 0x43C3FFFF
+
+
+/******************************************************************/
+
 /* Definitions for driver AXIDMA */
 #define XPAR_XAXIDMA_NUM_INSTANCES 1
 
