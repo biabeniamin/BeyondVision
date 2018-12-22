@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Sat Dec 22 00:06:37 2018
+// Date        : Sat Dec 22 00:06:36 2018
 // Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               C:/Digilent19/Digilent18/LinuxBase.srcs/sources_1/bd/system/ip/system_Adder2_0_0/system_Adder2_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top system_Adder2_0_0 -prefix
+//               system_Adder2_0_0_ system_Adder2_0_0_sim_netlist.v
 // Design      : system_Adder2_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,170 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "system_Adder2_0_0,Adder2,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "HLS" *) 
-(* x_core_info = "Adder2,Vivado 2018.2" *) 
-(* NotValidForBitStream *)
-module system_Adder2_0_0
-   (s_axi_CONTROL_BUS_AWADDR,
-    s_axi_CONTROL_BUS_AWVALID,
-    s_axi_CONTROL_BUS_AWREADY,
-    s_axi_CONTROL_BUS_WDATA,
-    s_axi_CONTROL_BUS_WSTRB,
-    s_axi_CONTROL_BUS_WVALID,
-    s_axi_CONTROL_BUS_WREADY,
-    s_axi_CONTROL_BUS_BRESP,
-    s_axi_CONTROL_BUS_BVALID,
-    s_axi_CONTROL_BUS_BREADY,
-    s_axi_CONTROL_BUS_ARADDR,
-    s_axi_CONTROL_BUS_ARVALID,
-    s_axi_CONTROL_BUS_ARREADY,
-    s_axi_CONTROL_BUS_RDATA,
-    s_axi_CONTROL_BUS_RRESP,
-    s_axi_CONTROL_BUS_RVALID,
-    s_axi_CONTROL_BUS_RREADY,
-    ap_clk,
-    ap_rst_n,
-    interrupt,
-    INPUT_STREAM_TVALID,
-    INPUT_STREAM_TREADY,
-    INPUT_STREAM_TDATA,
-    INPUT_STREAM_TDEST,
-    INPUT_STREAM_TKEEP,
-    INPUT_STREAM_TSTRB,
-    INPUT_STREAM_TUSER,
-    INPUT_STREAM_TLAST,
-    INPUT_STREAM_TID,
-    OUTPUT_STREAM_TVALID,
-    OUTPUT_STREAM_TREADY,
-    OUTPUT_STREAM_TDATA,
-    OUTPUT_STREAM_TDEST,
-    OUTPUT_STREAM_TKEEP,
-    OUTPUT_STREAM_TSTRB,
-    OUTPUT_STREAM_TUSER,
-    OUTPUT_STREAM_TLAST,
-    OUTPUT_STREAM_TID);
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME s_axi_CONTROL_BUS, ADDR_WIDTH 7, DATA_WIDTH 32, PROTOCOL AXI4LITE, READ_WRITE_MODE READ_WRITE, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, FREQ_HZ 100000000, ID_WIDTH 0, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN system_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input [6:0]s_axi_CONTROL_BUS_AWADDR;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS AWVALID" *) input s_axi_CONTROL_BUS_AWVALID;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS AWREADY" *) output s_axi_CONTROL_BUS_AWREADY;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS WDATA" *) input [31:0]s_axi_CONTROL_BUS_WDATA;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS WSTRB" *) input [3:0]s_axi_CONTROL_BUS_WSTRB;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS WVALID" *) input s_axi_CONTROL_BUS_WVALID;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS WREADY" *) output s_axi_CONTROL_BUS_WREADY;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS BRESP" *) output [1:0]s_axi_CONTROL_BUS_BRESP;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS BVALID" *) output s_axi_CONTROL_BUS_BVALID;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS BREADY" *) input s_axi_CONTROL_BUS_BREADY;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS ARADDR" *) input [6:0]s_axi_CONTROL_BUS_ARADDR;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS ARVALID" *) input s_axi_CONTROL_BUS_ARVALID;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS ARREADY" *) output s_axi_CONTROL_BUS_ARREADY;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS RDATA" *) output [31:0]s_axi_CONTROL_BUS_RDATA;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS RRESP" *) output [1:0]s_axi_CONTROL_BUS_RRESP;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS RVALID" *) output s_axi_CONTROL_BUS_RVALID;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS RREADY" *) input s_axi_CONTROL_BUS_RREADY;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 ap_clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME ap_clk, ASSOCIATED_BUSIF s_axi_CONTROL_BUS:INPUT_STREAM:OUTPUT_STREAM, ASSOCIATED_RESET ap_rst_n, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN system_processing_system7_0_0_FCLK_CLK0" *) input ap_clk;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 ap_rst_n RST" *) (* x_interface_parameter = "XIL_INTERFACENAME ap_rst_n, POLARITY ACTIVE_LOW, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {RST {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}" *) input ap_rst_n;
-  (* x_interface_info = "xilinx.com:signal:interrupt:1.0 interrupt INTERRUPT" *) (* x_interface_parameter = "XIL_INTERFACENAME interrupt, SENSITIVITY LEVEL_HIGH, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {INTERRUPT {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, PortWidth 1" *) output interrupt;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 INPUT_STREAM TVALID" *) (* x_interface_parameter = "XIL_INTERFACENAME INPUT_STREAM, TDATA_NUM_BYTES 4, TDEST_WIDTH 6, TID_WIDTH 5, TUSER_WIDTH 2, LAYERED_METADATA undef, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN system_processing_system7_0_0_FCLK_CLK0" *) input INPUT_STREAM_TVALID;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 INPUT_STREAM TREADY" *) output INPUT_STREAM_TREADY;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 INPUT_STREAM TDATA" *) input [31:0]INPUT_STREAM_TDATA;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 INPUT_STREAM TDEST" *) input [5:0]INPUT_STREAM_TDEST;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 INPUT_STREAM TKEEP" *) input [3:0]INPUT_STREAM_TKEEP;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 INPUT_STREAM TSTRB" *) input [3:0]INPUT_STREAM_TSTRB;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 INPUT_STREAM TUSER" *) input [1:0]INPUT_STREAM_TUSER;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 INPUT_STREAM TLAST" *) input [0:0]INPUT_STREAM_TLAST;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 INPUT_STREAM TID" *) input [4:0]INPUT_STREAM_TID;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TVALID" *) (* x_interface_parameter = "XIL_INTERFACENAME OUTPUT_STREAM, TDATA_NUM_BYTES 4, TDEST_WIDTH 6, TID_WIDTH 5, TUSER_WIDTH 2, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN system_processing_system7_0_0_FCLK_CLK0" *) output OUTPUT_STREAM_TVALID;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TREADY" *) input OUTPUT_STREAM_TREADY;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TDATA" *) output [31:0]OUTPUT_STREAM_TDATA;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TDEST" *) output [5:0]OUTPUT_STREAM_TDEST;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TKEEP" *) output [3:0]OUTPUT_STREAM_TKEEP;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TSTRB" *) output [3:0]OUTPUT_STREAM_TSTRB;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TUSER" *) output [1:0]OUTPUT_STREAM_TUSER;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TLAST" *) output [0:0]OUTPUT_STREAM_TLAST;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TID" *) output [4:0]OUTPUT_STREAM_TID;
-
-  wire [31:0]INPUT_STREAM_TDATA;
-  wire [5:0]INPUT_STREAM_TDEST;
-  wire [4:0]INPUT_STREAM_TID;
-  wire [3:0]INPUT_STREAM_TKEEP;
-  wire [0:0]INPUT_STREAM_TLAST;
-  wire INPUT_STREAM_TREADY;
-  wire [3:0]INPUT_STREAM_TSTRB;
-  wire [1:0]INPUT_STREAM_TUSER;
-  wire INPUT_STREAM_TVALID;
-  wire [31:0]OUTPUT_STREAM_TDATA;
-  wire [5:0]OUTPUT_STREAM_TDEST;
-  wire [4:0]OUTPUT_STREAM_TID;
-  wire [3:0]OUTPUT_STREAM_TKEEP;
-  wire [0:0]OUTPUT_STREAM_TLAST;
-  wire OUTPUT_STREAM_TREADY;
-  wire [3:0]OUTPUT_STREAM_TSTRB;
-  wire [1:0]OUTPUT_STREAM_TUSER;
-  wire OUTPUT_STREAM_TVALID;
-  wire ap_clk;
-  wire ap_rst_n;
-  wire interrupt;
-  wire [6:0]s_axi_CONTROL_BUS_ARADDR;
-  wire s_axi_CONTROL_BUS_ARREADY;
-  wire s_axi_CONTROL_BUS_ARVALID;
-  wire [6:0]s_axi_CONTROL_BUS_AWADDR;
-  wire s_axi_CONTROL_BUS_AWREADY;
-  wire s_axi_CONTROL_BUS_AWVALID;
-  wire s_axi_CONTROL_BUS_BREADY;
-  wire [1:0]s_axi_CONTROL_BUS_BRESP;
-  wire s_axi_CONTROL_BUS_BVALID;
-  wire [31:0]s_axi_CONTROL_BUS_RDATA;
-  wire s_axi_CONTROL_BUS_RREADY;
-  wire [1:0]s_axi_CONTROL_BUS_RRESP;
-  wire s_axi_CONTROL_BUS_RVALID;
-  wire [31:0]s_axi_CONTROL_BUS_WDATA;
-  wire s_axi_CONTROL_BUS_WREADY;
-  wire [3:0]s_axi_CONTROL_BUS_WSTRB;
-  wire s_axi_CONTROL_BUS_WVALID;
-
-  (* C_S_AXI_CONTROL_BUS_ADDR_WIDTH = "7" *) 
-  (* C_S_AXI_CONTROL_BUS_DATA_WIDTH = "32" *) 
-  system_Adder2_0_0_Adder2 U0
-       (.INPUT_STREAM_TDATA(INPUT_STREAM_TDATA),
-        .INPUT_STREAM_TDEST(INPUT_STREAM_TDEST),
-        .INPUT_STREAM_TID(INPUT_STREAM_TID),
-        .INPUT_STREAM_TKEEP(INPUT_STREAM_TKEEP),
-        .INPUT_STREAM_TLAST(INPUT_STREAM_TLAST),
-        .INPUT_STREAM_TREADY(INPUT_STREAM_TREADY),
-        .INPUT_STREAM_TSTRB(INPUT_STREAM_TSTRB),
-        .INPUT_STREAM_TUSER(INPUT_STREAM_TUSER),
-        .INPUT_STREAM_TVALID(INPUT_STREAM_TVALID),
-        .OUTPUT_STREAM_TDATA(OUTPUT_STREAM_TDATA),
-        .OUTPUT_STREAM_TDEST(OUTPUT_STREAM_TDEST),
-        .OUTPUT_STREAM_TID(OUTPUT_STREAM_TID),
-        .OUTPUT_STREAM_TKEEP(OUTPUT_STREAM_TKEEP),
-        .OUTPUT_STREAM_TLAST(OUTPUT_STREAM_TLAST),
-        .OUTPUT_STREAM_TREADY(OUTPUT_STREAM_TREADY),
-        .OUTPUT_STREAM_TSTRB(OUTPUT_STREAM_TSTRB),
-        .OUTPUT_STREAM_TUSER(OUTPUT_STREAM_TUSER),
-        .OUTPUT_STREAM_TVALID(OUTPUT_STREAM_TVALID),
-        .ap_clk(ap_clk),
-        .ap_rst_n(ap_rst_n),
-        .interrupt(interrupt),
-        .s_axi_CONTROL_BUS_ARADDR(s_axi_CONTROL_BUS_ARADDR),
-        .s_axi_CONTROL_BUS_ARREADY(s_axi_CONTROL_BUS_ARREADY),
-        .s_axi_CONTROL_BUS_ARVALID(s_axi_CONTROL_BUS_ARVALID),
-        .s_axi_CONTROL_BUS_AWADDR(s_axi_CONTROL_BUS_AWADDR),
-        .s_axi_CONTROL_BUS_AWREADY(s_axi_CONTROL_BUS_AWREADY),
-        .s_axi_CONTROL_BUS_AWVALID(s_axi_CONTROL_BUS_AWVALID),
-        .s_axi_CONTROL_BUS_BREADY(s_axi_CONTROL_BUS_BREADY),
-        .s_axi_CONTROL_BUS_BRESP(s_axi_CONTROL_BUS_BRESP),
-        .s_axi_CONTROL_BUS_BVALID(s_axi_CONTROL_BUS_BVALID),
-        .s_axi_CONTROL_BUS_RDATA(s_axi_CONTROL_BUS_RDATA),
-        .s_axi_CONTROL_BUS_RREADY(s_axi_CONTROL_BUS_RREADY),
-        .s_axi_CONTROL_BUS_RRESP(s_axi_CONTROL_BUS_RRESP),
-        .s_axi_CONTROL_BUS_RVALID(s_axi_CONTROL_BUS_RVALID),
-        .s_axi_CONTROL_BUS_WDATA(s_axi_CONTROL_BUS_WDATA),
-        .s_axi_CONTROL_BUS_WREADY(s_axi_CONTROL_BUS_WREADY),
-        .s_axi_CONTROL_BUS_WSTRB(s_axi_CONTROL_BUS_WSTRB),
-        .s_axi_CONTROL_BUS_WVALID(s_axi_CONTROL_BUS_WVALID));
-endmodule
-
-(* C_S_AXI_CONTROL_BUS_ADDR_WIDTH = "7" *) (* C_S_AXI_CONTROL_BUS_DATA_WIDTH = "32" *) (* ORIG_REF_NAME = "Adder2" *) 
+(* C_S_AXI_CONTROL_BUS_ADDR_WIDTH = "7" *) (* C_S_AXI_CONTROL_BUS_DATA_WIDTH = "32" *) 
 module system_Adder2_0_0_Adder2
    (ap_clk,
     ap_rst_n,
@@ -7334,7 +7171,6 @@ module system_Adder2_0_0_Adder2
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "Adder2_CONTROL_BUS_s_axi" *) 
 module system_Adder2_0_0_Adder2_CONTROL_BUS_s_axi
    (out,
     s_axi_CONTROL_BUS_RVALID,
@@ -9944,6 +9780,169 @@ module system_Adder2_0_0_Adder2_CONTROL_BUS_s_axi
         .D(s_axi_CONTROL_BUS_AWADDR[6]),
         .Q(\waddr_reg_n_0_[6] ),
         .R(1'b0));
+endmodule
+
+(* CHECK_LICENSE_TYPE = "system_Adder2_0_0,Adder2,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "HLS" *) 
+(* x_core_info = "Adder2,Vivado 2018.2" *) 
+(* NotValidForBitStream *)
+module system_Adder2_0_0
+   (s_axi_CONTROL_BUS_AWADDR,
+    s_axi_CONTROL_BUS_AWVALID,
+    s_axi_CONTROL_BUS_AWREADY,
+    s_axi_CONTROL_BUS_WDATA,
+    s_axi_CONTROL_BUS_WSTRB,
+    s_axi_CONTROL_BUS_WVALID,
+    s_axi_CONTROL_BUS_WREADY,
+    s_axi_CONTROL_BUS_BRESP,
+    s_axi_CONTROL_BUS_BVALID,
+    s_axi_CONTROL_BUS_BREADY,
+    s_axi_CONTROL_BUS_ARADDR,
+    s_axi_CONTROL_BUS_ARVALID,
+    s_axi_CONTROL_BUS_ARREADY,
+    s_axi_CONTROL_BUS_RDATA,
+    s_axi_CONTROL_BUS_RRESP,
+    s_axi_CONTROL_BUS_RVALID,
+    s_axi_CONTROL_BUS_RREADY,
+    ap_clk,
+    ap_rst_n,
+    interrupt,
+    INPUT_STREAM_TVALID,
+    INPUT_STREAM_TREADY,
+    INPUT_STREAM_TDATA,
+    INPUT_STREAM_TDEST,
+    INPUT_STREAM_TKEEP,
+    INPUT_STREAM_TSTRB,
+    INPUT_STREAM_TUSER,
+    INPUT_STREAM_TLAST,
+    INPUT_STREAM_TID,
+    OUTPUT_STREAM_TVALID,
+    OUTPUT_STREAM_TREADY,
+    OUTPUT_STREAM_TDATA,
+    OUTPUT_STREAM_TDEST,
+    OUTPUT_STREAM_TKEEP,
+    OUTPUT_STREAM_TSTRB,
+    OUTPUT_STREAM_TUSER,
+    OUTPUT_STREAM_TLAST,
+    OUTPUT_STREAM_TID);
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME s_axi_CONTROL_BUS, ADDR_WIDTH 7, DATA_WIDTH 32, PROTOCOL AXI4LITE, READ_WRITE_MODE READ_WRITE, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, FREQ_HZ 100000000, ID_WIDTH 0, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN system_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input [6:0]s_axi_CONTROL_BUS_AWADDR;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS AWVALID" *) input s_axi_CONTROL_BUS_AWVALID;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS AWREADY" *) output s_axi_CONTROL_BUS_AWREADY;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS WDATA" *) input [31:0]s_axi_CONTROL_BUS_WDATA;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS WSTRB" *) input [3:0]s_axi_CONTROL_BUS_WSTRB;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS WVALID" *) input s_axi_CONTROL_BUS_WVALID;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS WREADY" *) output s_axi_CONTROL_BUS_WREADY;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS BRESP" *) output [1:0]s_axi_CONTROL_BUS_BRESP;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS BVALID" *) output s_axi_CONTROL_BUS_BVALID;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS BREADY" *) input s_axi_CONTROL_BUS_BREADY;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS ARADDR" *) input [6:0]s_axi_CONTROL_BUS_ARADDR;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS ARVALID" *) input s_axi_CONTROL_BUS_ARVALID;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS ARREADY" *) output s_axi_CONTROL_BUS_ARREADY;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS RDATA" *) output [31:0]s_axi_CONTROL_BUS_RDATA;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS RRESP" *) output [1:0]s_axi_CONTROL_BUS_RRESP;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS RVALID" *) output s_axi_CONTROL_BUS_RVALID;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS RREADY" *) input s_axi_CONTROL_BUS_RREADY;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 ap_clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME ap_clk, ASSOCIATED_BUSIF s_axi_CONTROL_BUS:INPUT_STREAM:OUTPUT_STREAM, ASSOCIATED_RESET ap_rst_n, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN system_processing_system7_0_0_FCLK_CLK0" *) input ap_clk;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 ap_rst_n RST" *) (* x_interface_parameter = "XIL_INTERFACENAME ap_rst_n, POLARITY ACTIVE_LOW, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {RST {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}" *) input ap_rst_n;
+  (* x_interface_info = "xilinx.com:signal:interrupt:1.0 interrupt INTERRUPT" *) (* x_interface_parameter = "XIL_INTERFACENAME interrupt, SENSITIVITY LEVEL_HIGH, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {INTERRUPT {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, PortWidth 1" *) output interrupt;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 INPUT_STREAM TVALID" *) (* x_interface_parameter = "XIL_INTERFACENAME INPUT_STREAM, TDATA_NUM_BYTES 4, TDEST_WIDTH 6, TID_WIDTH 5, TUSER_WIDTH 2, LAYERED_METADATA undef, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN system_processing_system7_0_0_FCLK_CLK0" *) input INPUT_STREAM_TVALID;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 INPUT_STREAM TREADY" *) output INPUT_STREAM_TREADY;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 INPUT_STREAM TDATA" *) input [31:0]INPUT_STREAM_TDATA;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 INPUT_STREAM TDEST" *) input [5:0]INPUT_STREAM_TDEST;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 INPUT_STREAM TKEEP" *) input [3:0]INPUT_STREAM_TKEEP;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 INPUT_STREAM TSTRB" *) input [3:0]INPUT_STREAM_TSTRB;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 INPUT_STREAM TUSER" *) input [1:0]INPUT_STREAM_TUSER;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 INPUT_STREAM TLAST" *) input [0:0]INPUT_STREAM_TLAST;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 INPUT_STREAM TID" *) input [4:0]INPUT_STREAM_TID;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TVALID" *) (* x_interface_parameter = "XIL_INTERFACENAME OUTPUT_STREAM, TDATA_NUM_BYTES 4, TDEST_WIDTH 6, TID_WIDTH 5, TUSER_WIDTH 2, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN system_processing_system7_0_0_FCLK_CLK0" *) output OUTPUT_STREAM_TVALID;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TREADY" *) input OUTPUT_STREAM_TREADY;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TDATA" *) output [31:0]OUTPUT_STREAM_TDATA;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TDEST" *) output [5:0]OUTPUT_STREAM_TDEST;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TKEEP" *) output [3:0]OUTPUT_STREAM_TKEEP;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TSTRB" *) output [3:0]OUTPUT_STREAM_TSTRB;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TUSER" *) output [1:0]OUTPUT_STREAM_TUSER;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TLAST" *) output [0:0]OUTPUT_STREAM_TLAST;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TID" *) output [4:0]OUTPUT_STREAM_TID;
+
+  wire [31:0]INPUT_STREAM_TDATA;
+  wire [5:0]INPUT_STREAM_TDEST;
+  wire [4:0]INPUT_STREAM_TID;
+  wire [3:0]INPUT_STREAM_TKEEP;
+  wire [0:0]INPUT_STREAM_TLAST;
+  wire INPUT_STREAM_TREADY;
+  wire [3:0]INPUT_STREAM_TSTRB;
+  wire [1:0]INPUT_STREAM_TUSER;
+  wire INPUT_STREAM_TVALID;
+  wire [31:0]OUTPUT_STREAM_TDATA;
+  wire [5:0]OUTPUT_STREAM_TDEST;
+  wire [4:0]OUTPUT_STREAM_TID;
+  wire [3:0]OUTPUT_STREAM_TKEEP;
+  wire [0:0]OUTPUT_STREAM_TLAST;
+  wire OUTPUT_STREAM_TREADY;
+  wire [3:0]OUTPUT_STREAM_TSTRB;
+  wire [1:0]OUTPUT_STREAM_TUSER;
+  wire OUTPUT_STREAM_TVALID;
+  wire ap_clk;
+  wire ap_rst_n;
+  wire interrupt;
+  wire [6:0]s_axi_CONTROL_BUS_ARADDR;
+  wire s_axi_CONTROL_BUS_ARREADY;
+  wire s_axi_CONTROL_BUS_ARVALID;
+  wire [6:0]s_axi_CONTROL_BUS_AWADDR;
+  wire s_axi_CONTROL_BUS_AWREADY;
+  wire s_axi_CONTROL_BUS_AWVALID;
+  wire s_axi_CONTROL_BUS_BREADY;
+  wire [1:0]s_axi_CONTROL_BUS_BRESP;
+  wire s_axi_CONTROL_BUS_BVALID;
+  wire [31:0]s_axi_CONTROL_BUS_RDATA;
+  wire s_axi_CONTROL_BUS_RREADY;
+  wire [1:0]s_axi_CONTROL_BUS_RRESP;
+  wire s_axi_CONTROL_BUS_RVALID;
+  wire [31:0]s_axi_CONTROL_BUS_WDATA;
+  wire s_axi_CONTROL_BUS_WREADY;
+  wire [3:0]s_axi_CONTROL_BUS_WSTRB;
+  wire s_axi_CONTROL_BUS_WVALID;
+
+  (* C_S_AXI_CONTROL_BUS_ADDR_WIDTH = "7" *) 
+  (* C_S_AXI_CONTROL_BUS_DATA_WIDTH = "32" *) 
+  system_Adder2_0_0_Adder2 U0
+       (.INPUT_STREAM_TDATA(INPUT_STREAM_TDATA),
+        .INPUT_STREAM_TDEST(INPUT_STREAM_TDEST),
+        .INPUT_STREAM_TID(INPUT_STREAM_TID),
+        .INPUT_STREAM_TKEEP(INPUT_STREAM_TKEEP),
+        .INPUT_STREAM_TLAST(INPUT_STREAM_TLAST),
+        .INPUT_STREAM_TREADY(INPUT_STREAM_TREADY),
+        .INPUT_STREAM_TSTRB(INPUT_STREAM_TSTRB),
+        .INPUT_STREAM_TUSER(INPUT_STREAM_TUSER),
+        .INPUT_STREAM_TVALID(INPUT_STREAM_TVALID),
+        .OUTPUT_STREAM_TDATA(OUTPUT_STREAM_TDATA),
+        .OUTPUT_STREAM_TDEST(OUTPUT_STREAM_TDEST),
+        .OUTPUT_STREAM_TID(OUTPUT_STREAM_TID),
+        .OUTPUT_STREAM_TKEEP(OUTPUT_STREAM_TKEEP),
+        .OUTPUT_STREAM_TLAST(OUTPUT_STREAM_TLAST),
+        .OUTPUT_STREAM_TREADY(OUTPUT_STREAM_TREADY),
+        .OUTPUT_STREAM_TSTRB(OUTPUT_STREAM_TSTRB),
+        .OUTPUT_STREAM_TUSER(OUTPUT_STREAM_TUSER),
+        .OUTPUT_STREAM_TVALID(OUTPUT_STREAM_TVALID),
+        .ap_clk(ap_clk),
+        .ap_rst_n(ap_rst_n),
+        .interrupt(interrupt),
+        .s_axi_CONTROL_BUS_ARADDR(s_axi_CONTROL_BUS_ARADDR),
+        .s_axi_CONTROL_BUS_ARREADY(s_axi_CONTROL_BUS_ARREADY),
+        .s_axi_CONTROL_BUS_ARVALID(s_axi_CONTROL_BUS_ARVALID),
+        .s_axi_CONTROL_BUS_AWADDR(s_axi_CONTROL_BUS_AWADDR),
+        .s_axi_CONTROL_BUS_AWREADY(s_axi_CONTROL_BUS_AWREADY),
+        .s_axi_CONTROL_BUS_AWVALID(s_axi_CONTROL_BUS_AWVALID),
+        .s_axi_CONTROL_BUS_BREADY(s_axi_CONTROL_BUS_BREADY),
+        .s_axi_CONTROL_BUS_BRESP(s_axi_CONTROL_BUS_BRESP),
+        .s_axi_CONTROL_BUS_BVALID(s_axi_CONTROL_BUS_BVALID),
+        .s_axi_CONTROL_BUS_RDATA(s_axi_CONTROL_BUS_RDATA),
+        .s_axi_CONTROL_BUS_RREADY(s_axi_CONTROL_BUS_RREADY),
+        .s_axi_CONTROL_BUS_RRESP(s_axi_CONTROL_BUS_RRESP),
+        .s_axi_CONTROL_BUS_RVALID(s_axi_CONTROL_BUS_RVALID),
+        .s_axi_CONTROL_BUS_WDATA(s_axi_CONTROL_BUS_WDATA),
+        .s_axi_CONTROL_BUS_WREADY(s_axi_CONTROL_BUS_WREADY),
+        .s_axi_CONTROL_BUS_WSTRB(s_axi_CONTROL_BUS_WSTRB),
+        .s_axi_CONTROL_BUS_WVALID(s_axi_CONTROL_BUS_WVALID));
 endmodule
 `ifndef GLBL
 `define GLBL

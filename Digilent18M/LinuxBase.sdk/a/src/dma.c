@@ -207,7 +207,7 @@ void Add(int *in,
 
 
 		 xil_printf("\rSet receiving\r\n");
-		 status = XAxiDma_SimpleTransfer2(dmaAddress2,  out, 4, XAXIDMA_DEVICE_TO_DMA);
+		 status = XAxiDma_SimpleTransfer2(dmaAddress2,  out, length * 4, XAXIDMA_DMA_TO_DEVICE);
 
 		 if (status != XST_SUCCESS)
 		 {
@@ -242,7 +242,7 @@ void Add(int *in,
 
 
 		 Xil_DCacheInvalidateRange(out, 32*4);
-			 	 	Xil_DCacheFlushRange((unsigned int)out,length*4);
+		Xil_DCacheFlushRange((unsigned int)out,length*4);
 
 
 		 xil_printf("\Wait input \r\n");

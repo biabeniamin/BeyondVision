@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Sat Dec 22 00:06:37 2018
+// Date        : Sat Dec 22 00:06:36 2018
 // Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               C:/Digilent19/Digilent18/LinuxBase.srcs/sources_1/bd/system/ip/system_Adder2_0_0/system_Adder2_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top system_Adder2_0_0 -prefix
+//               system_Adder2_0_0_ system_Adder2_0_0_stub.v
 // Design      : system_Adder2_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1
