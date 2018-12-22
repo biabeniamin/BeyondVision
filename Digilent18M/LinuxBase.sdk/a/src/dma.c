@@ -256,7 +256,7 @@ void Add(int *in,
 		 }
 
 		 xil_printf("\rwait input done \r\n");
-
+		 Dump(out);
 
 		return 0;
 }
