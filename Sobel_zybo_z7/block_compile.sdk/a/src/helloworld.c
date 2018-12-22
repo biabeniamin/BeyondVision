@@ -101,6 +101,41 @@ int main()
 
     int Status;
 
+    int x[500];
+    		    	int y[500];
+    		    	for(int i=0;i<200;i++)
+    		    	{
+    		    		x[i]=i;
+    		    		y[i] = 0;
+    		    	}
+
+    		    	int status;
+    		    			int adderAddress;
+    		    			int dmaAddress;
+    		    			int dmaAddress2;
+
+    		    			print("dmi init\n");
+
+    		    			adderAddress = 0x43C30000;
+    		    			dmaAddress = 0x40400000;
+
+    		    			Dump(dmaAddress2);
+
+    		    			printf("Reset dma\r\n");
+    		    			Reset(dmaAddress);
+    		    			Reset(dmaAddress2);
+
+    		    			printf("dma restarted\r\n");
+
+    		    			xil_printf("\rSet receiving\r\n");
+    		    					 status = XAxiDma_SimpleTransfer2(dmaAddress,  y, 32 * 4, XAXIDMA_DEVICE_TO_DMA);
+    		    					 Dump(dmaAddress2);
+    		    					 if (status != XST_SUCCESS)
+    		    					 {
+    		    						xil_printf("Error: DMA transfer from Vivado HLS block failed\n");
+    		    					 	 return XST_FAILURE;
+    		    					 }
+
 
     XVtc_Timing vtcTiming;
     XVtc_SourceSelect SourceSelect;
@@ -245,23 +280,14 @@ int main()
 
 
 
-		int x[500];
-		    	int y[500];
-		    	for(int i=0;i<200;i++)
-		    	{
-		    		x[i]=i;
-		    		y[i] = 0;
-		    	}
-		    	Add(x,y,12);
+
 
 	while(1)
 	{
-		xil_printf("in while");
+		xil_printf("in while\r\n");
 		sleep(5);
-		for(int i=0;i< 10;i++)
-		{
-			xil_printf("%x ", ((u32*)(vdmaDMA.FrameStoreStartAddr[0]))[i]);
-		}
+		Dump(dmaAddress);
+		Dump(y);
 		xil_printf("\r\n");
 		DemoPrintTest(dispCtrl.framePtr[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, dispCtrl.stride, DEMO_PATTERN_1);
    }

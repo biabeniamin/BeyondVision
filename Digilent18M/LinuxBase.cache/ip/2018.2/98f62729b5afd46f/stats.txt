@@ -1,4 +1,4 @@
-NumberHits:8
-Timestamp: Sat Dec 22 08:51:10 UTC 2018
+NumberHits:9
+Timestamp: Sat Dec 22 12:46:57 UTC 2018
 VLNV: xilinx.com:hls:Adder2:1.0
 SynthRuntime: 28

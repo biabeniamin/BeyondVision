@@ -183,19 +183,15 @@ void Add(int *in,
 	int status;
 		int adderAddress;
 		int dmaAddress;
-		int dmaAddress2;
 
 		print("dmi init\n");
 
 		adderAddress = 0x43C60000;
 		dmaAddress = 0x40400000;
-		dmaAddress2 = 0x40410000;
 
-		Dump(dmaAddress2);
 
 		printf("Reset dma\r\n");
 		Reset(dmaAddress);
-		Reset(dmaAddress2);
 
 		printf("dma restarted\r\n");
 
@@ -209,8 +205,8 @@ void Add(int *in,
 
 
 		 xil_printf("\rSet receiving\r\n");
-		 status = XAxiDma_SimpleTransfer2(dmaAddress2,  out, length * 4, XAXIDMA_DEVICE_TO_DMA);
-		 Dump(dmaAddress2);
+		 status = XAxiDma_SimpleTransfer2(dmaAddress,  out, length * 4, XAXIDMA_DEVICE_TO_DMA);
+		 Dump(dmaAddress);
 		 if (status != XST_SUCCESS)
 		 {
 			xil_printf("Error: DMA transfer from Vivado HLS block failed\n");
@@ -248,10 +244,10 @@ void Add(int *in,
 
 
 		 xil_printf("\Wait input \r\n");
-		 while (isDmaBusy(dmaAddress2, XAXIDMA_DEVICE_TO_DMA))
+		 while (isDmaBusy(dmaAddress, XAXIDMA_DEVICE_TO_DMA))
 		 {
 			 sleep(3);
-			 Dump(dmaAddress2);
+			 Dump(dmaAddress);
 			 Dump(out);
 		 }
 

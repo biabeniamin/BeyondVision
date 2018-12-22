@@ -247,12 +247,12 @@ void Add(int *in,
 
 
 		 xil_printf("\Wait input \r\n");
-		 while (isDmaBusy(dmaAddress, XAXIDMA_DEVICE_TO_DMA))
+		 /*while (isDmaBusy(dmaAddress, XAXIDMA_DEVICE_TO_DMA))
 		 {
 			 sleep(3);
 			 Dump(dmaAddress);
 			 Dump(out);
-		 }
+		 }*/
 
 		 xil_printf("\rwait input done \r\n");
 		 Dump(out);

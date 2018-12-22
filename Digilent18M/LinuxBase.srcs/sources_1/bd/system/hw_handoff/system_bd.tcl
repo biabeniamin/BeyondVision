@@ -1256,6 +1256,7 @@ connect_bd_intf_net -intf_net [get_bd_intf_nets Adder2_0_OUTPUT_STREAM] [get_bd_
   set_property -dict [ list \
 HDL_ATTRIBUTE.DEBUG {true} \
  ] [get_bd_intf_nets Adder2_0_OUTPUT_STREAM]
+  connect_bd_intf_net -intf_net Adder2_0_OUTPUT_STREAM1 [get_bd_intf_pins Adder2_0/OUTPUT_STREAM] [get_bd_intf_pins axi_dma/S_AXIS_S2MM]
   connect_bd_intf_net -intf_net Vaux14_1 [get_bd_intf_ports Vaux14] [get_bd_intf_pins xadc_wiz_0/Vaux14]
   connect_bd_intf_net -intf_net Vp_Vn_1 [get_bd_intf_ports Vp_Vn] [get_bd_intf_pins xadc_wiz_0/Vp_Vn]
   connect_bd_intf_net -intf_net axi_dma_0_M_AXI_MM2S [get_bd_intf_pins axi_dma_0/M_AXI_MM2S] [get_bd_intf_pins axi_mem_intercon/S03_AXI]
