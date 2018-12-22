@@ -39,7 +39,7 @@ static XAdcPs XADCMonInst;
 int main()
 {
 	int x[500];
-	int y[500];
+	int y[800];
 
 	xil_printf("\rinit\r\n");
 

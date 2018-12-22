@@ -29,9 +29,9 @@
     <Object name="system_i/system_ila_0/U0/net_slot_0_axi_rready" gui_info="Trigger Setup=0"/>
     <Object name="system_i/system_ila_0/U0/net_slot_0_axi_wdata[31:0]" gui_info=""/>
     <Object name="system_i/system_ila_0/U0/net_slot_0_axi_wready" gui_info="Trigger Setup=2"/>
-    <Object name="system_i/system_ila_0/U0/net_slot_1_axis_tdata[31:0]" gui_info="Trigger Setup=0"/>
+    <Object name="system_i/system_ila_0/U0/net_slot_1_axis_tdata[31:0]" gui_info=""/>
     <Object name="system_i/system_ila_0/U0/net_slot_1_axis_tlast" gui_info=""/>
-    <Object name="system_i/system_ila_0/U0/net_slot_2_axis_tlast" gui_info=""/>
+    <Object name="system_i/system_ila_0/U0/net_slot_2_axis_tlast" gui_info="Trigger Setup=0"/>
     <Object name="system_i/system_ila_0/U0/net_slot_2_axis_tready" gui_info=""/>
   </ObjectList>
   <probeset name="hw project" active="false">
@@ -862,7 +862,7 @@
         <net name="system_i/system_ila_0/U0/net_slot_0_axis_tid[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq4&apos;hX"/>
         <Option Id="COMPARE_VALUE.0" value="eq4&apos;hX"/>
@@ -995,10 +995,10 @@
         <net name="system_i/system_ila_0/U0/net_slot_0_axis_tvalid"/>
       </nets>
     </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
-        <Option Id="COMPARE_VALUE.0" value="neq32&apos;h0000_0000"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
         <Option Id="DISPLAY_AS_ENUM" value="1"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="HEX"/>
@@ -1009,7 +1009,7 @@
         <Option Id="NAME.CUSTOM" value="slot_1 : Adder2_0_OUTPUT_STREAM : TDATA"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
-        <Option Id="TRIGGER_COMPARE_VALUE" value="neq32&apos;h0000_0000"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
         <Option Id="WAVEFORM_STYLE" value="Digital"/>
       </probeOptions>
       <nets>
@@ -1252,7 +1252,7 @@
         <net name="system_i/system_ila_0/U0/net_slot_1_axis_tvalid"/>
       </nets>
     </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
@@ -1304,7 +1304,7 @@
         <net name="system_i/system_ila_0/U0/net_slot_2_axis_tdata[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq6&apos;hXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq6&apos;hXX"/>
@@ -1330,7 +1330,7 @@
         <net name="system_i/system_ila_0/U0/net_slot_2_axis_tdest[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq5&apos;hXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq5&apos;hXX"/>
@@ -1355,7 +1355,7 @@
         <net name="system_i/system_ila_0/U0/net_slot_2_axis_tid[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq4&apos;hX"/>
         <Option Id="COMPARE_VALUE.0" value="eq4&apos;hX"/>
@@ -1382,7 +1382,7 @@
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
-        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bB"/>
         <Option Id="DISPLAY_AS_ENUM" value="1"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="HEX"/>
@@ -1393,7 +1393,7 @@
         <Option Id="NAME.CUSTOM" value="slot_2 : StreamGenerator_0_OUTPUT_STREAM : TLAST"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
-        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bB"/>
         <Option Id="WAVEFORM_STYLE" value="Digital"/>
       </probeOptions>
       <nets>
@@ -1421,7 +1421,7 @@
         <net name="system_i/system_ila_0/U0/net_slot_2_axis_tready"/>
       </nets>
     </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq4&apos;hX"/>
         <Option Id="COMPARE_VALUE.0" value="eq4&apos;hX"/>
@@ -1445,7 +1445,7 @@
         <net name="system_i/system_ila_0/U0/net_slot_2_axis_tstrb[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq2&apos;hX"/>
         <Option Id="COMPARE_VALUE.0" value="eq2&apos;hX"/>

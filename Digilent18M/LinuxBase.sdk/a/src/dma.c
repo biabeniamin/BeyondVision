@@ -173,6 +173,7 @@ void Reset(int dmaAddress)
 }
 void ResetAdder(int dmaAddress)
 {
+
 	WriteAddress(dmaAddress,1);
 }
 
@@ -184,6 +185,8 @@ void Add(int *in,
 		int adderAddress;
 		int dmaAddress;
 		int generatorAddress;
+
+		int size =0x40 * 0x40;
 
 		print("dmi init\n");
 
@@ -200,14 +203,17 @@ void Add(int *in,
 		 printf("starging sending!\n");
 
 		 Xil_DCacheFlushRange((UINTPTR)in, 32*4 );
-		 Xil_DCacheFlushRange((UINTPTR)out, 32 * 4);
-		 Xil_DCacheInvalidateRange(in, 32*4);
-		 Xil_DCacheInvalidateRange(out, 32*4);
+		 Xil_DCacheFlushRange((UINTPTR)out, size);
+		 		 Xil_DCacheInvalidateRange(in, 32*4);
+		 		 Xil_DCacheInvalidateRange(out, size);
+		 		Xil_DCacheFlushRange((UINTPTR)out + 0x32*0x20, size);
+		 				 Xil_DCacheInvalidateRange(in, 32*4);
+		 				 Xil_DCacheInvalidateRange(out + 0x32*0x20, size);
 
 
 
 		 xil_printf("\rSet receiving\r\n");
-		 status = XAxiDma_SimpleTransfer2(dmaAddress,  out, 500 * 4, XAXIDMA_DEVICE_TO_DMA);
+		 status = XAxiDma_SimpleTransfer2(dmaAddress,  out, size, XAXIDMA_DEVICE_TO_DMA);
 		 Dump(dmaAddress);
 		 if (status != XST_SUCCESS)
 		 {
@@ -219,7 +225,7 @@ void Add(int *in,
 
 
 
-		 status = XAxiDma_SimpleTransfer2(dmaAddress, in, length * 4 , XAXIDMA_DMA_TO_DEVICE);
+		 //status = XAxiDma_SimpleTransfer2(dmaAddress, in, length * 4 , XAXIDMA_DMA_TO_DEVICE);
 		 printf("sending done! \n");
 
 		 if (status != XST_SUCCESS)
@@ -245,17 +251,19 @@ void Add(int *in,
 		 xil_printf("\rReceive ressults done %x\r\n", adderGetReturn(adderAddress));
 
 
-		 Xil_DCacheInvalidateRange(out, 32*4);
-		Xil_DCacheFlushRange((unsigned int)out,length*4);
+		 Xil_DCacheInvalidateRange(out, size);
+		 Xil_DCacheInvalidateRange(out + 0x32*0x20, size);
+		 Xil_DCacheFlushRange((unsigned int)out,size);
+		 Xil_DCacheFlushRange((unsigned int)out + 0x32*0x20,size);
 
 
 		 xil_printf("\Wait input \r\n");
 		 while (isDmaBusy(dmaAddress, XAXIDMA_DEVICE_TO_DMA))
 		 {
-			 sleep(3);
+			 sleep(300);
 			 Dump(dmaAddress);
 			 Dump(out);
-			 Dump(out + 0xF);
+			 Dump(out + 0x24);
 		 }
 
 		 xil_printf("\rwait input done \r\n");
