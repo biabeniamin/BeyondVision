@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Sat Dec 22 21:26:04 2018">
+<application name="pa" timeStamp="Sat Dec 22 23:49:13 2018">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="1687cceb14d44f509c303fc24fc47a9e" type="ProjectID"/>
 <property name="ProjectIteration" value="46" type="ProjectIteration"/>
@@ -66,13 +66,13 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="AddIlaProbesPopup_OK" value="4" type="GuiHandlerData"/>
 <property name="AddRepositoryInfoDialog_OK" value="1" type="GuiHandlerData"/>
 <property name="AddressTreeTablePanel_ADDRESS_TREE_TABLE" value="14" type="GuiHandlerData"/>
-<property name="BaseDialog_CANCEL" value="53" type="GuiHandlerData"/>
+<property name="BaseDialog_CANCEL" value="54" type="GuiHandlerData"/>
 <property name="BaseDialog_OK" value="188" type="GuiHandlerData"/>
 <property name="BaseDialog_YES" value="2" type="GuiHandlerData"/>
 <property name="BaseReportTab_RERUN" value="5" type="GuiHandlerData"/>
 <property name="BoardTreePanel_BOARD_TREE_PANEL" value="4" type="GuiHandlerData"/>
 <property name="ClkConfigTreeTablePanel_CLK_CONFIG_TREE_TABLE" value="8" type="GuiHandlerData"/>
-<property name="CmdMsgDialog_OK" value="74" type="GuiHandlerData"/>
+<property name="CmdMsgDialog_OK" value="75" type="GuiHandlerData"/>
 <property name="CmdMsgDialog_OPEN_MESSAGES_VIEW" value="1" type="GuiHandlerData"/>
 <property name="CommandsInput_TYPE_TCL_COMMAND_HERE" value="2" type="GuiHandlerData"/>
 <property name="ConstraintsChooserPanel_CREATE_FILE" value="1" type="GuiHandlerData"/>
@@ -211,6 +211,11 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="WaveformView_ADD" value="6" type="GuiHandlerData"/>
 <property name="WaveformView_ADD_MARKER" value="1" type="GuiHandlerData"/>
 <property name="WaveformView_REMOVE_SELECTED" value="5" type="GuiHandlerData"/>
+</item>
+<item name="Other">
+<property name="GuiMode" value="17" type="GuiMode"/>
+<property name="BatchMode" value="0" type="BatchMode"/>
+<property name="TclMode" value="6" type="TclMode"/>
 </item>
 </section>
 </application>

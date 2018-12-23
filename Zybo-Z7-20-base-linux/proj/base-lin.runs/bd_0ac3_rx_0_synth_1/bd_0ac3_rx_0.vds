@@ -1,0 +1,1986 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sun Dec 23 15:23:09 2018
+# Process ID: 16936
+# Current directory: C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/bd_0ac3_rx_0_synth_1
+# Command line: vivado.exe -log bd_0ac3_rx_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_0ac3_rx_0.tcl
+# Log file: C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/bd_0ac3_rx_0_synth_1/bd_0ac3_rx_0.vds
+# Journal file: C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/bd_0ac3_rx_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+Sourcing tcl script 'C:/Users/biabe/AppData/Roaming/Xilinx/Vivado/Vivado_init.tcl'
+source bd_0ac3_rx_0.tcl -notrace
+Command: synth_design -top bd_0ac3_rx_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 18340 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 449.492 ; gain = 101.910
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'bd_0ac3_rx_0' [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/synth/bd_0ac3_rx_0.v:58]
+INFO: [Synth 8-638] synthesizing module 'mipi_csi2_rx_ctrl_v1_0_8_fifo0' [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/ip_2/synth/mipi_csi2_rx_ctrl_v1_0_8_fifo0.vhd:72]
+	Parameter C_COMMON_CLOCK bound to: 1 - type: integer 
+	Parameter C_SELECT_XPM bound to: 0 - type: integer 
+	Parameter C_COUNT_TYPE bound to: 0 - type: integer 
+	Parameter C_DATA_COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter C_DEFAULT_VALUE bound to: BlankString - type: string 
+	Parameter C_DIN_WIDTH bound to: 12 - type: integer 
+	Parameter C_DOUT_RST_VAL bound to: 0 - type: string 
+	Parameter C_DOUT_WIDTH bound to: 12 - type: integer 
+	Parameter C_ENABLE_RLOCS bound to: 0 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_FULL_FLAGS_RST_VAL bound to: 0 - type: integer 
+	Parameter C_HAS_ALMOST_EMPTY bound to: 0 - type: integer 
+	Parameter C_HAS_ALMOST_FULL bound to: 0 - type: integer 
+	Parameter C_HAS_BACKUP bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_INT_CLK bound to: 0 - type: integer 
+	Parameter C_HAS_MEMINIT_FILE bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_RD_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_RD_RST bound to: 0 - type: integer 
+	Parameter C_HAS_RST bound to: 1 - type: integer 
+	Parameter C_HAS_SRST bound to: 0 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_VALID bound to: 0 - type: integer 
+	Parameter C_HAS_WR_ACK bound to: 0 - type: integer 
+	Parameter C_HAS_WR_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_WR_RST bound to: 0 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE bound to: 0 - type: integer 
+	Parameter C_INIT_WR_PNTR_VAL bound to: 0 - type: integer 
+	Parameter C_MEMORY_TYPE bound to: 2 - type: integer 
+	Parameter C_MIF_FILE_NAME bound to: BlankString - type: string 
+	Parameter C_OPTIMIZATION_MODE bound to: 0 - type: integer 
+	Parameter C_OVERFLOW_LOW bound to: 0 - type: integer 
+	Parameter C_PRELOAD_LATENCY bound to: 0 - type: integer 
+	Parameter C_PRELOAD_REGS bound to: 1 - type: integer 
+	Parameter C_PRIM_FIFO_TYPE bound to: 512x36 - type: string 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL bound to: 4 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_NEGATE_VAL bound to: 5 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL bound to: 15 - type: integer 
+	Parameter C_PROG_FULL_THRESH_NEGATE_VAL bound to: 14 - type: integer 
+	Parameter C_PROG_FULL_TYPE bound to: 0 - type: integer 
+	Parameter C_RD_DATA_COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter C_RD_DEPTH bound to: 16 - type: integer 
+	Parameter C_RD_FREQ bound to: 1 - type: integer 
+	Parameter C_RD_PNTR_WIDTH bound to: 4 - type: integer 
+	Parameter C_UNDERFLOW_LOW bound to: 0 - type: integer 
+	Parameter C_USE_DOUT_RST bound to: 1 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_USE_EMBEDDED_REG bound to: 0 - type: integer 
+	Parameter C_USE_PIPELINE_REG bound to: 0 - type: integer 
+	Parameter C_POWER_SAVING_MODE bound to: 0 - type: integer 
+	Parameter C_USE_FIFO16_FLAGS bound to: 0 - type: integer 
+	Parameter C_USE_FWFT_DATA_COUNT bound to: 1 - type: integer 
+	Parameter C_VALID_LOW bound to: 0 - type: integer 
+	Parameter C_WR_ACK_LOW bound to: 0 - type: integer 
+	Parameter C_WR_DATA_COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter C_WR_DEPTH bound to: 16 - type: integer 
+	Parameter C_WR_FREQ bound to: 1 - type: integer 
+	Parameter C_WR_PNTR_WIDTH bound to: 4 - type: integer 
+	Parameter C_WR_RESPONSE_LATENCY bound to: 1 - type: integer 
+	Parameter C_MSGON_VAL bound to: 1 - type: integer 
+	Parameter C_ENABLE_RST_SYNC bound to: 1 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE bound to: 0 - type: integer 
+	Parameter C_SYNCHRONIZER_STAGE bound to: 2 - type: integer 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_HAS_AXI_WR_CHANNEL bound to: 1 - type: integer 
+	Parameter C_HAS_AXI_RD_CHANNEL bound to: 1 - type: integer 
+	Parameter C_HAS_SLAVE_CE bound to: 0 - type: integer 
+	Parameter C_HAS_MASTER_CE bound to: 0 - type: integer 
+	Parameter C_ADD_NGC_CONSTRAINT bound to: 0 - type: integer 
+	Parameter C_USE_COMMON_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_USE_COMMON_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_USE_DEFAULT_SETTINGS bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_AXI_LEN_WIDTH bound to: 8 - type: integer 
+	Parameter C_AXI_LOCK_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_AWUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_WUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_BUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_ARUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_RUSER bound to: 0 - type: integer 
+	Parameter C_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TDATA bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TID bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TDEST bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TUSER bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TREADY bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TSTRB bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TKEEP bound to: 0 - type: integer 
+	Parameter C_AXIS_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TUSER_WIDTH bound to: 4 - type: integer 
+	Parameter C_AXIS_TSTRB_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TKEEP_WIDTH bound to: 1 - type: integer 
+	Parameter C_WACH_TYPE bound to: 0 - type: integer 
+	Parameter C_WDCH_TYPE bound to: 0 - type: integer 
+	Parameter C_WRCH_TYPE bound to: 0 - type: integer 
+	Parameter C_RACH_TYPE bound to: 0 - type: integer 
+	Parameter C_RDCH_TYPE bound to: 0 - type: integer 
+	Parameter C_AXIS_TYPE bound to: 0 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_WACH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_WDCH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_WRCH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_RACH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_RDCH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_AXIS bound to: 1 - type: integer 
+	Parameter C_APPLICATION_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_PRIM_FIFO_TYPE_WACH bound to: 512x36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_WDCH bound to: 1kx36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_WRCH bound to: 512x36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_RACH bound to: 512x36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_RDCH bound to: 1kx36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_AXIS bound to: 1kx18 - type: string 
+	Parameter C_USE_ECC_WACH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_WDCH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_WRCH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_RACH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_RDCH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_AXIS bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_DIN_WIDTH_WACH bound to: 1 - type: integer 
+	Parameter C_DIN_WIDTH_WDCH bound to: 64 - type: integer 
+	Parameter C_DIN_WIDTH_WRCH bound to: 2 - type: integer 
+	Parameter C_DIN_WIDTH_RACH bound to: 32 - type: integer 
+	Parameter C_DIN_WIDTH_RDCH bound to: 64 - type: integer 
+	Parameter C_DIN_WIDTH_AXIS bound to: 1 - type: integer 
+	Parameter C_WR_DEPTH_WACH bound to: 16 - type: integer 
+	Parameter C_WR_DEPTH_WDCH bound to: 1024 - type: integer 
+	Parameter C_WR_DEPTH_WRCH bound to: 16 - type: integer 
+	Parameter C_WR_DEPTH_RACH bound to: 16 - type: integer 
+	Parameter C_WR_DEPTH_RDCH bound to: 1024 - type: integer 
+	Parameter C_WR_DEPTH_AXIS bound to: 1024 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WACH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WDCH bound to: 10 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WRCH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_RACH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_RDCH bound to: 10 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_AXIS bound to: 10 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_WACH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_WDCH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_WRCH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_RACH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_RDCH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_AXIS bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_WACH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_WDCH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_WRCH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_RACH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_RDCH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_AXIS bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_WACH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_WDCH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_WRCH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_RACH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_RDCH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_AXIS bound to: 1023 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_WACH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_WDCH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_WRCH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_RACH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_RDCH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_AXIS bound to: 1022 - type: integer 
+	Parameter C_REG_SLICE_MODE_WACH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_WDCH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_WRCH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_RACH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_RDCH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_AXIS bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'fifo_generator_v13_2_2' declared at 'c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ipshared/7aff/hdl/fifo_generator_v13_2_vhsyn_rfs.vhd:38483' bound to instance 'U0' of component 'fifo_generator_v13_2_2' [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/ip_2/synth/mipi_csi2_rx_ctrl_v1_0_8_fifo0.vhd:540]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_async_rst' [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1171]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1222]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst' (2#1) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1171]
+INFO: [Synth 8-256] done synthesizing module 'mipi_csi2_rx_ctrl_v1_0_8_fifo0' (20#1) [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/ip_2/synth/mipi_csi2_rx_ctrl_v1_0_8_fifo0.vhd:72]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_async_rst__parameterized0' [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1171]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst__parameterized0' (21#1) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1171]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single' [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:153]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:205]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single' (23#1) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:153]
+INFO: [Synth 8-638] synthesizing module 'mipi_csi2_rx_ctrl_v1_0_8_fifo1' [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/ip_0/synth/mipi_csi2_rx_ctrl_v1_0_8_fifo1.vhd:73]
+	Parameter C_COMMON_CLOCK bound to: 0 - type: integer 
+	Parameter C_SELECT_XPM bound to: 0 - type: integer 
+	Parameter C_COUNT_TYPE bound to: 0 - type: integer 
+	Parameter C_DATA_COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter C_DEFAULT_VALUE bound to: BlankString - type: string 
+	Parameter C_DIN_WIDTH bound to: 42 - type: integer 
+	Parameter C_DOUT_RST_VAL bound to: 0 - type: string 
+	Parameter C_DOUT_WIDTH bound to: 42 - type: integer 
+	Parameter C_ENABLE_RLOCS bound to: 0 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_FULL_FLAGS_RST_VAL bound to: 0 - type: integer 
+	Parameter C_HAS_ALMOST_EMPTY bound to: 0 - type: integer 
+	Parameter C_HAS_ALMOST_FULL bound to: 0 - type: integer 
+	Parameter C_HAS_BACKUP bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_INT_CLK bound to: 0 - type: integer 
+	Parameter C_HAS_MEMINIT_FILE bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_RD_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_RD_RST bound to: 0 - type: integer 
+	Parameter C_HAS_RST bound to: 1 - type: integer 
+	Parameter C_HAS_SRST bound to: 0 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_VALID bound to: 0 - type: integer 
+	Parameter C_HAS_WR_ACK bound to: 0 - type: integer 
+	Parameter C_HAS_WR_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_WR_RST bound to: 0 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE bound to: 2 - type: integer 
+	Parameter C_INIT_WR_PNTR_VAL bound to: 0 - type: integer 
+	Parameter C_MEMORY_TYPE bound to: 2 - type: integer 
+	Parameter C_MIF_FILE_NAME bound to: BlankString - type: string 
+	Parameter C_OPTIMIZATION_MODE bound to: 0 - type: integer 
+	Parameter C_OVERFLOW_LOW bound to: 0 - type: integer 
+	Parameter C_PRELOAD_LATENCY bound to: 1 - type: integer 
+	Parameter C_PRELOAD_REGS bound to: 0 - type: integer 
+	Parameter C_PRIM_FIFO_TYPE bound to: 512x72 - type: string 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL bound to: 2 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_NEGATE_VAL bound to: 3 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL bound to: 29 - type: integer 
+	Parameter C_PROG_FULL_THRESH_NEGATE_VAL bound to: 28 - type: integer 
+	Parameter C_PROG_FULL_TYPE bound to: 0 - type: integer 
+	Parameter C_RD_DATA_COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter C_RD_DEPTH bound to: 32 - type: integer 
+	Parameter C_RD_FREQ bound to: 1 - type: integer 
+	Parameter C_RD_PNTR_WIDTH bound to: 5 - type: integer 
+	Parameter C_UNDERFLOW_LOW bound to: 0 - type: integer 
+	Parameter C_USE_DOUT_RST bound to: 1 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_USE_EMBEDDED_REG bound to: 0 - type: integer 
+	Parameter C_USE_PIPELINE_REG bound to: 0 - type: integer 
+	Parameter C_POWER_SAVING_MODE bound to: 0 - type: integer 
+	Parameter C_USE_FIFO16_FLAGS bound to: 0 - type: integer 
+	Parameter C_USE_FWFT_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_VALID_LOW bound to: 0 - type: integer 
+	Parameter C_WR_ACK_LOW bound to: 0 - type: integer 
+	Parameter C_WR_DATA_COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter C_WR_DEPTH bound to: 32 - type: integer 
+	Parameter C_WR_FREQ bound to: 1 - type: integer 
+	Parameter C_WR_PNTR_WIDTH bound to: 5 - type: integer 
+	Parameter C_WR_RESPONSE_LATENCY bound to: 1 - type: integer 
+	Parameter C_MSGON_VAL bound to: 1 - type: integer 
+	Parameter C_ENABLE_RST_SYNC bound to: 1 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE bound to: 0 - type: integer 
+	Parameter C_SYNCHRONIZER_STAGE bound to: 2 - type: integer 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_HAS_AXI_WR_CHANNEL bound to: 1 - type: integer 
+	Parameter C_HAS_AXI_RD_CHANNEL bound to: 1 - type: integer 
+	Parameter C_HAS_SLAVE_CE bound to: 0 - type: integer 
+	Parameter C_HAS_MASTER_CE bound to: 0 - type: integer 
+	Parameter C_ADD_NGC_CONSTRAINT bound to: 0 - type: integer 
+	Parameter C_USE_COMMON_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_USE_COMMON_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_USE_DEFAULT_SETTINGS bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_AXI_LEN_WIDTH bound to: 8 - type: integer 
+	Parameter C_AXI_LOCK_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_AWUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_WUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_BUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_ARUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_RUSER bound to: 0 - type: integer 
+	Parameter C_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TDATA bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TID bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TDEST bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TUSER bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TREADY bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TSTRB bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TKEEP bound to: 0 - type: integer 
+	Parameter C_AXIS_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TUSER_WIDTH bound to: 4 - type: integer 
+	Parameter C_AXIS_TSTRB_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TKEEP_WIDTH bound to: 1 - type: integer 
+	Parameter C_WACH_TYPE bound to: 0 - type: integer 
+	Parameter C_WDCH_TYPE bound to: 0 - type: integer 
+	Parameter C_WRCH_TYPE bound to: 0 - type: integer 
+	Parameter C_RACH_TYPE bound to: 0 - type: integer 
+	Parameter C_RDCH_TYPE bound to: 0 - type: integer 
+	Parameter C_AXIS_TYPE bound to: 0 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_WACH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_WDCH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_WRCH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_RACH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_RDCH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_AXIS bound to: 1 - type: integer 
+	Parameter C_APPLICATION_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_PRIM_FIFO_TYPE_WACH bound to: 512x36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_WDCH bound to: 1kx36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_WRCH bound to: 512x36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_RACH bound to: 512x36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_RDCH bound to: 1kx36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_AXIS bound to: 1kx18 - type: string 
+	Parameter C_USE_ECC_WACH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_WDCH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_WRCH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_RACH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_RDCH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_AXIS bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_DIN_WIDTH_WACH bound to: 1 - type: integer 
+	Parameter C_DIN_WIDTH_WDCH bound to: 64 - type: integer 
+	Parameter C_DIN_WIDTH_WRCH bound to: 2 - type: integer 
+	Parameter C_DIN_WIDTH_RACH bound to: 32 - type: integer 
+	Parameter C_DIN_WIDTH_RDCH bound to: 64 - type: integer 
+	Parameter C_DIN_WIDTH_AXIS bound to: 1 - type: integer 
+	Parameter C_WR_DEPTH_WACH bound to: 16 - type: integer 
+	Parameter C_WR_DEPTH_WDCH bound to: 1024 - type: integer 
+	Parameter C_WR_DEPTH_WRCH bound to: 16 - type: integer 
+	Parameter C_WR_DEPTH_RACH bound to: 16 - type: integer 
+	Parameter C_WR_DEPTH_RDCH bound to: 1024 - type: integer 
+	Parameter C_WR_DEPTH_AXIS bound to: 1024 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WACH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WDCH bound to: 10 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WRCH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_RACH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_RDCH bound to: 10 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_AXIS bound to: 10 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_WACH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_WDCH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_WRCH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_RACH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_RDCH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_AXIS bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_WACH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_WDCH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_WRCH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_RACH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_RDCH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_AXIS bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_WACH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_WDCH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_WRCH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_RACH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_RDCH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_AXIS bound to: 1023 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_WACH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_WDCH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_WRCH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_RACH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_RDCH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_AXIS bound to: 1022 - type: integer 
+	Parameter C_REG_SLICE_MODE_WACH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_WDCH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_WRCH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_RACH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_RDCH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_AXIS bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'fifo_generator_v13_2_2' declared at 'c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ipshared/7aff/hdl/fifo_generator_v13_2_vhsyn_rfs.vhd:38483' bound to instance 'U0' of component 'fifo_generator_v13_2_2' [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/ip_0/synth/mipi_csi2_rx_ctrl_v1_0_8_fifo1.vhd:543]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single__parameterized0' [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:153]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single__parameterized0' (23#1) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:153]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray' [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:358]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray' (24#1) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+INFO: [Synth 8-256] done synthesizing module 'mipi_csi2_rx_ctrl_v1_0_8_fifo1' (28#1) [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/ip_0/synth/mipi_csi2_rx_ctrl_v1_0_8_fifo1.vhd:73]
+INFO: [Synth 8-6157] synthesizing module 'RAM64X1S' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:44616]
+INFO: [Synth 8-6155] done synthesizing module 'RAM64X1S' (30#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:44616]
+INFO: [Synth 8-6157] synthesizing module 'mipi_csi2_rx_ctrl_v1_0_8_fc13' [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/mipi_csi2_rx_ctrl_v1_0_8_fc13.v:47]
+INFO: [Synth 8-638] synthesizing module 'mipi_csi2_rx_ctrl_v1_0_8_fc_644096' [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/ip_1/synth/mipi_csi2_rx_ctrl_v1_0_8_fc_644096.vhd:75]
+	Parameter C_COMMON_CLOCK bound to: 1 - type: integer 
+	Parameter C_SELECT_XPM bound to: 0 - type: integer 
+	Parameter C_COUNT_TYPE bound to: 0 - type: integer 
+	Parameter C_DATA_COUNT_WIDTH bound to: 12 - type: integer 
+	Parameter C_DEFAULT_VALUE bound to: BlankString - type: string 
+	Parameter C_DIN_WIDTH bound to: 68 - type: integer 
+	Parameter C_DOUT_RST_VAL bound to: 0 - type: string 
+	Parameter C_DOUT_WIDTH bound to: 68 - type: integer 
+	Parameter C_ENABLE_RLOCS bound to: 0 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_FULL_FLAGS_RST_VAL bound to: 0 - type: integer 
+	Parameter C_HAS_ALMOST_EMPTY bound to: 0 - type: integer 
+	Parameter C_HAS_ALMOST_FULL bound to: 1 - type: integer 
+	Parameter C_HAS_BACKUP bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNT bound to: 1 - type: integer 
+	Parameter C_HAS_INT_CLK bound to: 0 - type: integer 
+	Parameter C_HAS_MEMINIT_FILE bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_RD_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_RD_RST bound to: 0 - type: integer 
+	Parameter C_HAS_RST bound to: 0 - type: integer 
+	Parameter C_HAS_SRST bound to: 1 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_VALID bound to: 0 - type: integer 
+	Parameter C_HAS_WR_ACK bound to: 0 - type: integer 
+	Parameter C_HAS_WR_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_WR_RST bound to: 0 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE bound to: 0 - type: integer 
+	Parameter C_INIT_WR_PNTR_VAL bound to: 0 - type: integer 
+	Parameter C_MEMORY_TYPE bound to: 1 - type: integer 
+	Parameter C_MIF_FILE_NAME bound to: BlankString - type: string 
+	Parameter C_OPTIMIZATION_MODE bound to: 0 - type: integer 
+	Parameter C_OVERFLOW_LOW bound to: 0 - type: integer 
+	Parameter C_PRELOAD_LATENCY bound to: 0 - type: integer 
+	Parameter C_PRELOAD_REGS bound to: 1 - type: integer 
+	Parameter C_PRIM_FIFO_TYPE bound to: 4kx9 - type: string 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL bound to: 4 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_NEGATE_VAL bound to: 5 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL bound to: 4093 - type: integer 
+	Parameter C_PROG_FULL_THRESH_NEGATE_VAL bound to: 4092 - type: integer 
+	Parameter C_PROG_FULL_TYPE bound to: 1 - type: integer 
+	Parameter C_RD_DATA_COUNT_WIDTH bound to: 13 - type: integer 
+	Parameter C_RD_DEPTH bound to: 4096 - type: integer 
+	Parameter C_RD_FREQ bound to: 1 - type: integer 
+	Parameter C_RD_PNTR_WIDTH bound to: 12 - type: integer 
+	Parameter C_UNDERFLOW_LOW bound to: 0 - type: integer 
+	Parameter C_USE_DOUT_RST bound to: 1 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_USE_EMBEDDED_REG bound to: 1 - type: integer 
+	Parameter C_USE_PIPELINE_REG bound to: 0 - type: integer 
+	Parameter C_POWER_SAVING_MODE bound to: 0 - type: integer 
+	Parameter C_USE_FIFO16_FLAGS bound to: 0 - type: integer 
+	Parameter C_USE_FWFT_DATA_COUNT bound to: 1 - type: integer 
+	Parameter C_VALID_LOW bound to: 0 - type: integer 
+	Parameter C_WR_ACK_LOW bound to: 0 - type: integer 
+	Parameter C_WR_DATA_COUNT_WIDTH bound to: 13 - type: integer 
+	Parameter C_WR_DEPTH bound to: 4096 - type: integer 
+	Parameter C_WR_FREQ bound to: 1 - type: integer 
+	Parameter C_WR_PNTR_WIDTH bound to: 12 - type: integer 
+	Parameter C_WR_RESPONSE_LATENCY bound to: 1 - type: integer 
+	Parameter C_MSGON_VAL bound to: 1 - type: integer 
+	Parameter C_ENABLE_RST_SYNC bound to: 1 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE bound to: 0 - type: integer 
+	Parameter C_SYNCHRONIZER_STAGE bound to: 2 - type: integer 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_HAS_AXI_WR_CHANNEL bound to: 1 - type: integer 
+	Parameter C_HAS_AXI_RD_CHANNEL bound to: 1 - type: integer 
+	Parameter C_HAS_SLAVE_CE bound to: 0 - type: integer 
+	Parameter C_HAS_MASTER_CE bound to: 0 - type: integer 
+	Parameter C_ADD_NGC_CONSTRAINT bound to: 0 - type: integer 
+	Parameter C_USE_COMMON_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_USE_COMMON_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_USE_DEFAULT_SETTINGS bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_AXI_LEN_WIDTH bound to: 8 - type: integer 
+	Parameter C_AXI_LOCK_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_AWUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_WUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_BUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_ARUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_RUSER bound to: 0 - type: integer 
+	Parameter C_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TDATA bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TID bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TDEST bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TUSER bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TREADY bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TSTRB bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TKEEP bound to: 0 - type: integer 
+	Parameter C_AXIS_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TUSER_WIDTH bound to: 4 - type: integer 
+	Parameter C_AXIS_TSTRB_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TKEEP_WIDTH bound to: 1 - type: integer 
+	Parameter C_WACH_TYPE bound to: 0 - type: integer 
+	Parameter C_WDCH_TYPE bound to: 0 - type: integer 
+	Parameter C_WRCH_TYPE bound to: 0 - type: integer 
+	Parameter C_RACH_TYPE bound to: 0 - type: integer 
+	Parameter C_RDCH_TYPE bound to: 0 - type: integer 
+	Parameter C_AXIS_TYPE bound to: 0 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_WACH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_WDCH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_WRCH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_RACH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_RDCH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_AXIS bound to: 1 - type: integer 
+	Parameter C_APPLICATION_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_PRIM_FIFO_TYPE_WACH bound to: 512x36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_WDCH bound to: 1kx36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_WRCH bound to: 512x36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_RACH bound to: 512x36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_RDCH bound to: 1kx36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_AXIS bound to: 1kx18 - type: string 
+	Parameter C_USE_ECC_WACH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_WDCH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_WRCH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_RACH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_RDCH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_AXIS bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_DIN_WIDTH_WACH bound to: 1 - type: integer 
+	Parameter C_DIN_WIDTH_WDCH bound to: 64 - type: integer 
+	Parameter C_DIN_WIDTH_WRCH bound to: 2 - type: integer 
+	Parameter C_DIN_WIDTH_RACH bound to: 32 - type: integer 
+	Parameter C_DIN_WIDTH_RDCH bound to: 64 - type: integer 
+	Parameter C_DIN_WIDTH_AXIS bound to: 1 - type: integer 
+	Parameter C_WR_DEPTH_WACH bound to: 16 - type: integer 
+	Parameter C_WR_DEPTH_WDCH bound to: 1024 - type: integer 
+	Parameter C_WR_DEPTH_WRCH bound to: 16 - type: integer 
+	Parameter C_WR_DEPTH_RACH bound to: 16 - type: integer 
+	Parameter C_WR_DEPTH_RDCH bound to: 1024 - type: integer 
+	Parameter C_WR_DEPTH_AXIS bound to: 1024 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WACH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WDCH bound to: 10 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WRCH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_RACH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_RDCH bound to: 10 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_AXIS bound to: 10 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_WACH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_WDCH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_WRCH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_RACH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_RDCH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_AXIS bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_WACH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_WDCH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_WRCH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_RACH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_RDCH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_AXIS bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_WACH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_WDCH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_WRCH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_RACH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_RDCH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_AXIS bound to: 1023 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_WACH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_WDCH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_WRCH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_RACH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_RDCH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_AXIS bound to: 1022 - type: integer 
+	Parameter C_REG_SLICE_MODE_WACH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_WDCH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_WRCH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_RACH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_RDCH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_AXIS bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'fifo_generator_v13_2_2' declared at 'c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ipshared/7aff/hdl/fifo_generator_v13_2_vhsyn_rfs.vhd:38483' bound to instance 'U0' of component 'fifo_generator_v13_2_2' [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/ip_1/synth/mipi_csi2_rx_ctrl_v1_0_8_fc_644096.vhd:544]
+INFO: [Synth 8-256] done synthesizing module 'mipi_csi2_rx_ctrl_v1_0_8_fc_644096' (45#1) [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/ip_1/synth/mipi_csi2_rx_ctrl_v1_0_8_fc_644096.vhd:75]
+WARNING: [Synth 8-350] instance 'lbuf' of module 'mipi_csi2_rx_ctrl_v1_0_8_fc_644096' requires 11 connections, but only 10 given [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/mipi_csi2_rx_ctrl_v1_0_8_fc13.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'mipi_csi2_rx_ctrl_v1_0_8_fc13' (46#1) [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/mipi_csi2_rx_ctrl_v1_0_8_fc13.v:47]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_handshake' [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:469]
+INFO: [Synth 8-5534] Detected attribute (* DIRECT_ENABLE = "yes" *) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:560]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_handshake' (51#1) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:469]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single' [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:958]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single' (52#1) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_handshake__parameterized0' [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:469]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_handshake__parameterized0' (52#1) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:469]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_pulse' [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:715]
+WARNING: [Synth 8-6014] Unused sequential element dest_pulse_ff_reg was removed.  [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:860]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_pulse' (53#1) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:715]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single__parameterized0' [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single__parameterized0' (54#1) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single__parameterized1' [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single__parameterized1' (54#1) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single__parameterized1' [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:153]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single__parameterized1' (54#1) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:153]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_handshake__parameterized1' [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:469]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_handshake__parameterized1' (54#1) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:469]
+INFO: [Synth 8-638] synthesizing module 'mipi_csi2_rx_ctrl_v1_0_8_fifo2' [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/ip_3/synth/mipi_csi2_rx_ctrl_v1_0_8_fifo2.vhd:73]
+	Parameter C_COMMON_CLOCK bound to: 0 - type: integer 
+	Parameter C_SELECT_XPM bound to: 0 - type: integer 
+	Parameter C_COUNT_TYPE bound to: 0 - type: integer 
+	Parameter C_DATA_COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter C_DEFAULT_VALUE bound to: BlankString - type: string 
+	Parameter C_DIN_WIDTH bound to: 24 - type: integer 
+	Parameter C_DOUT_RST_VAL bound to: 0 - type: string 
+	Parameter C_DOUT_WIDTH bound to: 24 - type: integer 
+	Parameter C_ENABLE_RLOCS bound to: 0 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_FULL_FLAGS_RST_VAL bound to: 0 - type: integer 
+	Parameter C_HAS_ALMOST_EMPTY bound to: 0 - type: integer 
+	Parameter C_HAS_ALMOST_FULL bound to: 0 - type: integer 
+	Parameter C_HAS_BACKUP bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_INT_CLK bound to: 0 - type: integer 
+	Parameter C_HAS_MEMINIT_FILE bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_RD_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_RD_RST bound to: 0 - type: integer 
+	Parameter C_HAS_RST bound to: 1 - type: integer 
+	Parameter C_HAS_SRST bound to: 0 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_VALID bound to: 0 - type: integer 
+	Parameter C_HAS_WR_ACK bound to: 0 - type: integer 
+	Parameter C_HAS_WR_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_WR_RST bound to: 0 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE bound to: 2 - type: integer 
+	Parameter C_INIT_WR_PNTR_VAL bound to: 0 - type: integer 
+	Parameter C_MEMORY_TYPE bound to: 2 - type: integer 
+	Parameter C_MIF_FILE_NAME bound to: BlankString - type: string 
+	Parameter C_OPTIMIZATION_MODE bound to: 0 - type: integer 
+	Parameter C_OVERFLOW_LOW bound to: 0 - type: integer 
+	Parameter C_PRELOAD_LATENCY bound to: 1 - type: integer 
+	Parameter C_PRELOAD_REGS bound to: 0 - type: integer 
+	Parameter C_PRIM_FIFO_TYPE bound to: 512x36 - type: string 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL bound to: 2 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_NEGATE_VAL bound to: 3 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL bound to: 29 - type: integer 
+	Parameter C_PROG_FULL_THRESH_NEGATE_VAL bound to: 28 - type: integer 
+	Parameter C_PROG_FULL_TYPE bound to: 0 - type: integer 
+	Parameter C_RD_DATA_COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter C_RD_DEPTH bound to: 32 - type: integer 
+	Parameter C_RD_FREQ bound to: 1 - type: integer 
+	Parameter C_RD_PNTR_WIDTH bound to: 5 - type: integer 
+	Parameter C_UNDERFLOW_LOW bound to: 0 - type: integer 
+	Parameter C_USE_DOUT_RST bound to: 1 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_USE_EMBEDDED_REG bound to: 0 - type: integer 
+	Parameter C_USE_PIPELINE_REG bound to: 0 - type: integer 
+	Parameter C_POWER_SAVING_MODE bound to: 0 - type: integer 
+	Parameter C_USE_FIFO16_FLAGS bound to: 0 - type: integer 
+	Parameter C_USE_FWFT_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_VALID_LOW bound to: 0 - type: integer 
+	Parameter C_WR_ACK_LOW bound to: 0 - type: integer 
+	Parameter C_WR_DATA_COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter C_WR_DEPTH bound to: 32 - type: integer 
+	Parameter C_WR_FREQ bound to: 1 - type: integer 
+	Parameter C_WR_PNTR_WIDTH bound to: 5 - type: integer 
+	Parameter C_WR_RESPONSE_LATENCY bound to: 1 - type: integer 
+	Parameter C_MSGON_VAL bound to: 1 - type: integer 
+	Parameter C_ENABLE_RST_SYNC bound to: 1 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE bound to: 0 - type: integer 
+	Parameter C_SYNCHRONIZER_STAGE bound to: 2 - type: integer 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_HAS_AXI_WR_CHANNEL bound to: 1 - type: integer 
+	Parameter C_HAS_AXI_RD_CHANNEL bound to: 1 - type: integer 
+	Parameter C_HAS_SLAVE_CE bound to: 0 - type: integer 
+	Parameter C_HAS_MASTER_CE bound to: 0 - type: integer 
+	Parameter C_ADD_NGC_CONSTRAINT bound to: 0 - type: integer 
+	Parameter C_USE_COMMON_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_USE_COMMON_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_USE_DEFAULT_SETTINGS bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_AXI_LEN_WIDTH bound to: 8 - type: integer 
+	Parameter C_AXI_LOCK_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_AWUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_WUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_BUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_ARUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_RUSER bound to: 0 - type: integer 
+	Parameter C_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TDATA bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TID bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TDEST bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TUSER bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TREADY bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TSTRB bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TKEEP bound to: 0 - type: integer 
+	Parameter C_AXIS_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TUSER_WIDTH bound to: 4 - type: integer 
+	Parameter C_AXIS_TSTRB_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TKEEP_WIDTH bound to: 1 - type: integer 
+	Parameter C_WACH_TYPE bound to: 0 - type: integer 
+	Parameter C_WDCH_TYPE bound to: 0 - type: integer 
+	Parameter C_WRCH_TYPE bound to: 0 - type: integer 
+	Parameter C_RACH_TYPE bound to: 0 - type: integer 
+	Parameter C_RDCH_TYPE bound to: 0 - type: integer 
+	Parameter C_AXIS_TYPE bound to: 0 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_WACH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_WDCH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_WRCH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_RACH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_RDCH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_AXIS bound to: 1 - type: integer 
+	Parameter C_APPLICATION_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_PRIM_FIFO_TYPE_WACH bound to: 512x36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_WDCH bound to: 1kx36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_WRCH bound to: 512x36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_RACH bound to: 512x36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_RDCH bound to: 1kx36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_AXIS bound to: 1kx18 - type: string 
+	Parameter C_USE_ECC_WACH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_WDCH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_WRCH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_RACH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_RDCH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_AXIS bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_DIN_WIDTH_WACH bound to: 1 - type: integer 
+	Parameter C_DIN_WIDTH_WDCH bound to: 64 - type: integer 
+	Parameter C_DIN_WIDTH_WRCH bound to: 2 - type: integer 
+	Parameter C_DIN_WIDTH_RACH bound to: 32 - type: integer 
+	Parameter C_DIN_WIDTH_RDCH bound to: 64 - type: integer 
+	Parameter C_DIN_WIDTH_AXIS bound to: 1 - type: integer 
+	Parameter C_WR_DEPTH_WACH bound to: 16 - type: integer 
+	Parameter C_WR_DEPTH_WDCH bound to: 1024 - type: integer 
+	Parameter C_WR_DEPTH_WRCH bound to: 16 - type: integer 
+	Parameter C_WR_DEPTH_RACH bound to: 16 - type: integer 
+	Parameter C_WR_DEPTH_RDCH bound to: 1024 - type: integer 
+	Parameter C_WR_DEPTH_AXIS bound to: 1024 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WACH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WDCH bound to: 10 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WRCH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_RACH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_RDCH bound to: 10 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_AXIS bound to: 10 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_WACH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_WDCH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_WRCH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_RACH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_RDCH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_AXIS bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_WACH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_WDCH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_WRCH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_RACH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_RDCH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_AXIS bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_WACH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_WDCH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_WRCH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_RACH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_RDCH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_AXIS bound to: 1023 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_WACH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_WDCH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_WRCH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_RACH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_RDCH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_AXIS bound to: 1022 - type: integer 
+	Parameter C_REG_SLICE_MODE_WACH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_WDCH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_WRCH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_RACH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_RDCH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_AXIS bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'fifo_generator_v13_2_2' declared at 'c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ipshared/7aff/hdl/fifo_generator_v13_2_vhsyn_rfs.vhd:38483' bound to instance 'U0' of component 'fifo_generator_v13_2_2' [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/ip_3/synth/mipi_csi2_rx_ctrl_v1_0_8_fifo2.vhd:543]
+INFO: [Synth 8-256] done synthesizing module 'mipi_csi2_rx_ctrl_v1_0_8_fifo2' (55#1) [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/ip_3/synth/mipi_csi2_rx_ctrl_v1_0_8_fifo2.vhd:73]
+WARNING: [Synth 8-689] width (7) of port connection 's_axi_awaddr' does not match port width (32) of module 'mipi_csi2_rx_ctrl_v1_0_8_top' [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/synth/bd_0ac3_rx_0.v:278]
+WARNING: [Synth 8-689] width (7) of port connection 's_axi_araddr' does not match port width (32) of module 'mipi_csi2_rx_ctrl_v1_0_8_top' [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/synth/bd_0ac3_rx_0.v:288]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0ac3_rx_0' (59#1) [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/synth/bd_0ac3_rx_0.v:58]
+WARNING: [Synth 8-3331] design xpm_cdc_single has unconnected port src_clk
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_RST
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port SRST
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port SAFETY_CKT_WR_RST
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_PNTR_PLUS3[4]
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_PNTR_PLUS3[3]
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_PNTR_PLUS3[2]
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_PNTR_PLUS3[1]
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_PNTR_PLUS3[0]
+WARNING: [Synth 8-3331] design wr_bin_cntr__parameterized0 has unconnected port SRST
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port WR_EN_INTO_LOGIC
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port WR_RST_INTO_LOGIC
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port RD_EN
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port SRST_FULL_FF
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port WR_RST_BUSY
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port EMPTY
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port RAM_RD_EN
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port ALMOST_EMPTY
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH[4]
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH[3]
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH[2]
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH[1]
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH[0]
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_ASSERT[4]
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_ASSERT[3]
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_ASSERT[2]
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_ASSERT[1]
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_ASSERT[0]
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_NEGATE[4]
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_NEGATE[3]
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_NEGATE[2]
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_NEGATE[1]
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_NEGATE[0]
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port SRST
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port SAFETY_CKT_RD_RST
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port RD_PNTR_PLUS2[4]
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port RD_PNTR_PLUS2[3]
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port RD_PNTR_PLUS2[2]
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port RD_PNTR_PLUS2[1]
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port RD_PNTR_PLUS2[0]
+WARNING: [Synth 8-3331] design rd_bin_cntr__parameterized0 has unconnected port SRST
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port RD_EN_INTO_LOGIC
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port RD_RST_INTO_LOGIC
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port RD_RST_BUSY
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port RAM_WR_EN
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port RST_FULL_FF
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port ALMOST_FULL_FB
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port FULL
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port WR_PNTR_PLUS1_RD[4]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port WR_PNTR_PLUS1_RD[3]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port WR_PNTR_PLUS1_RD[2]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port WR_PNTR_PLUS1_RD[1]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port WR_PNTR_PLUS1_RD[0]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port PROG_EMPTY_THRESH[4]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port PROG_EMPTY_THRESH[3]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port PROG_EMPTY_THRESH[2]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port PROG_EMPTY_THRESH[1]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port PROG_EMPTY_THRESH[0]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port PROG_EMPTY_THRESH_ASSERT[4]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port PROG_EMPTY_THRESH_ASSERT[3]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port PROG_EMPTY_THRESH_ASSERT[2]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port PROG_EMPTY_THRESH_ASSERT[1]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port PROG_EMPTY_THRESH_ASSERT[0]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port PROG_EMPTY_THRESH_NEGATE[4]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port PROG_EMPTY_THRESH_NEGATE[3]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port PROG_EMPTY_THRESH_NEGATE[2]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port PROG_EMPTY_THRESH_NEGATE[1]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port PROG_EMPTY_THRESH_NEGATE[0]
+WARNING: [Synth 8-3331] design clk_x_pntrs has unconnected port WR_RST
+WARNING: [Synth 8-3331] design clk_x_pntrs has unconnected port RD_RST
+WARNING: [Synth 8-3331] design dmem__parameterized1 has unconnected port SRST
+WARNING: [Synth 8-3331] design memory__parameterized2 has unconnected port RAM_REGOUT_EN
+WARNING: [Synth 8-3331] design memory__parameterized2 has unconnected port FAB_REGOUT_EN
+WARNING: [Synth 8-3331] design memory__parameterized2 has unconnected port SFT_RST
+WARNING: [Synth 8-3331] design memory__parameterized2 has unconnected port SRST
+WARNING: [Synth 8-3331] design memory__parameterized2 has unconnected port SAFETY_CKT_RD_RST
+WARNING: [Synth 8-3331] design memory__parameterized2 has unconnected port SLEEP
+WARNING: [Synth 8-3331] design memory__parameterized2 has unconnected port INJECTDBITERR
+WARNING: [Synth 8-3331] design memory__parameterized2 has unconnected port INJECTSBITERR
+WARNING: [Synth 8-3331] design output_blk__parameterized2 has unconnected port ALMOST_FULL_I
+WARNING: [Synth 8-3331] design output_blk__parameterized2 has unconnected port PROG_FULL_I
+WARNING: [Synth 8-3331] design output_blk__parameterized2 has unconnected port ALMOST_EMPTY_I
+WARNING: [Synth 8-3331] design output_blk__parameterized2 has unconnected port PROG_EMPTY_I
+WARNING: [Synth 8-3331] design output_blk__parameterized2 has unconnected port WR_ACK_I
+WARNING: [Synth 8-3331] design output_blk__parameterized2 has unconnected port VALID_I
+WARNING: [Synth 8-3331] design output_blk__parameterized2 has unconnected port OVERFLOW_I
+WARNING: [Synth 8-3331] design output_blk__parameterized2 has unconnected port UNDERFLOW_I
+WARNING: [Synth 8-3331] design output_blk__parameterized2 has unconnected port DATA_COUNT_I[5]
+WARNING: [Synth 8-3331] design output_blk__parameterized2 has unconnected port DATA_COUNT_I[4]
+WARNING: [Synth 8-3331] design output_blk__parameterized2 has unconnected port DATA_COUNT_I[3]
+WARNING: [Synth 8-3331] design output_blk__parameterized2 has unconnected port DATA_COUNT_I[2]
+WARNING: [Synth 8-3331] design output_blk__parameterized2 has unconnected port DATA_COUNT_I[1]
+WARNING: [Synth 8-3331] design output_blk__parameterized2 has unconnected port DATA_COUNT_I[0]
+WARNING: [Synth 8-3331] design output_blk__parameterized2 has unconnected port WR_DATA_COUNT_I[5]
+WARNING: [Synth 8-3331] design output_blk__parameterized2 has unconnected port WR_DATA_COUNT_I[4]
+WARNING: [Synth 8-3331] design output_blk__parameterized2 has unconnected port WR_DATA_COUNT_I[3]
+WARNING: [Synth 8-3331] design output_blk__parameterized2 has unconnected port WR_DATA_COUNT_I[2]
+WARNING: [Synth 8-3331] design output_blk__parameterized2 has unconnected port WR_DATA_COUNT_I[1]
+WARNING: [Synth 8-3331] design output_blk__parameterized2 has unconnected port WR_DATA_COUNT_I[0]
+WARNING: [Synth 8-3331] design output_blk__parameterized2 has unconnected port RD_DATA_COUNT_I[5]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:01:33 ; elapsed = 00:01:39 . Memory (MB): peak = 756.355 ; gain = 408.773
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:33 ; elapsed = 00:01:40 . Memory (MB): peak = 756.355 ; gain = 408.773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:33 ; elapsed = 00:01:40 . Memory (MB): peak = 756.355 ; gain = 408.773
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 39 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/bd_0ac3_rx_0_fixed_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/bd_0ac3_rx_0_fixed_ooc.xdc] for cell 'inst'
+Parsing XDC File [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/bd_0ac3_rx_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/bd_0ac3_rx_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/ip_0/mipi_csi2_rx_ctrl_v1_0_8_fifo1.xdc] for cell 'inst/gen_pkt_fifo/pkt_fifo/U0'
+Finished Parsing XDC File [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/ip_0/mipi_csi2_rx_ctrl_v1_0_8_fifo1.xdc] for cell 'inst/gen_pkt_fifo/pkt_fifo/U0'
+Parsing XDC File [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/ip_1/mipi_csi2_rx_ctrl_v1_0_8_fc_644096.xdc] for cell 'inst/line_buffer/line_buf/lbuf/U0'
+Finished Parsing XDC File [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/ip_1/mipi_csi2_rx_ctrl_v1_0_8_fc_644096.xdc] for cell 'inst/line_buffer/line_buf/lbuf/U0'
+Parsing XDC File [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/ip_2/mipi_csi2_rx_ctrl_v1_0_8_fifo0.xdc] for cell 'inst/LANE_1.ppi_fifo0/CSI_OPT3_OFF.ppi_fifo/U0'
+Finished Parsing XDC File [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/ip_2/mipi_csi2_rx_ctrl_v1_0_8_fifo0.xdc] for cell 'inst/LANE_1.ppi_fifo0/CSI_OPT3_OFF.ppi_fifo/U0'
+Parsing XDC File [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/ip_2/mipi_csi2_rx_ctrl_v1_0_8_fifo0.xdc] for cell 'inst/LANE_2.ppi_fifo1/CSI_OPT3_OFF.ppi_fifo/U0'
+Finished Parsing XDC File [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/ip_2/mipi_csi2_rx_ctrl_v1_0_8_fifo0.xdc] for cell 'inst/LANE_2.ppi_fifo1/CSI_OPT3_OFF.ppi_fifo/U0'
+Parsing XDC File [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/ip_3/mipi_csi2_rx_ctrl_v1_0_8_fifo2.xdc] for cell 'inst/reg_inf/gen_spkt_fifo/generic_pkt/U0'
+Finished Parsing XDC File [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/ip_3/mipi_csi2_rx_ctrl_v1_0_8_fifo2.xdc] for cell 'inst/reg_inf/gen_spkt_fifo/generic_pkt/U0'
+Parsing XDC File [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/bd_0ac3_rx_0.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/bd_0ac3_rx_0.xdc] for cell 'inst'
+Parsing XDC File [C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/bd_0ac3_rx_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/bd_0ac3_rx_0_synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/bd_0ac3_rx_0_synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/bd_0ac3_rx_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/bd_0ac3_rx_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+WARNING: [Constraints 18-5210] No constraint will be written out.
+Parsing XDC File [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/ip_0/mipi_csi2_rx_ctrl_v1_0_8_fifo1_clocks.xdc] for cell 'inst/gen_pkt_fifo/pkt_fifo/U0'
+Finished Parsing XDC File [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/ip_0/mipi_csi2_rx_ctrl_v1_0_8_fifo1_clocks.xdc] for cell 'inst/gen_pkt_fifo/pkt_fifo/U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/ip_0/mipi_csi2_rx_ctrl_v1_0_8_fifo1_clocks.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/bd_0ac3_rx_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/bd_0ac3_rx_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/ip_3/mipi_csi2_rx_ctrl_v1_0_8_fifo2_clocks.xdc] for cell 'inst/reg_inf/gen_spkt_fifo/generic_pkt/U0'
+Finished Parsing XDC File [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/ip_3/mipi_csi2_rx_ctrl_v1_0_8_fifo2_clocks.xdc] for cell 'inst/reg_inf/gen_spkt_fifo/generic_pkt/U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/ip_3/mipi_csi2_rx_ctrl_v1_0_8_fifo2_clocks.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/bd_0ac3_rx_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/bd_0ac3_rx_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl] for cell 'inst/isr_cdc/xpm_array_single_05'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl] for cell 'inst/isr_cdc/xpm_array_single_05'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl] for cell 'inst/reg_inf/xpm_array_single_01'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl] for cell 'inst/reg_inf/xpm_array_single_01'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl] for cell 'inst/reg_inf/xpm_array_single_02'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl] for cell 'inst/reg_inf/xpm_array_single_02'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl] for cell 'inst/reg_inf/xpm_array_single_03'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl] for cell 'inst/reg_inf/xpm_array_single_03'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl] for cell 'inst/reg_inf/xpm_array_single_04'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl] for cell 'inst/reg_inf/xpm_array_single_04'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/bd_0ac3_rx_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/bd_0ac3_rx_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'inst/LANE_1.ppi_fifo0/CSI_OPT3_OFF.ppi_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'inst/LANE_1.ppi_fifo0/CSI_OPT3_OFF.ppi_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'inst/LANE_2.ppi_fifo1/CSI_OPT3_OFF.ppi_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'inst/LANE_2.ppi_fifo1/CSI_OPT3_OFF.ppi_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'inst/gen_pkt_fifo/pkt_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'inst/gen_pkt_fifo/pkt_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'inst/gen_pkt_fifo/pkt_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'inst/gen_pkt_fifo/pkt_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'inst/reg_inf/gen_spkt_fifo/generic_pkt/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'inst/reg_inf/gen_spkt_fifo/generic_pkt/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'inst/reg_inf/gen_spkt_fifo/generic_pkt/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'inst/reg_inf/gen_spkt_fifo/generic_pkt/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'inst/reg_inf/gen_spkt_fifo/xpm_arst_03'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'inst/reg_inf/gen_spkt_fifo/xpm_arst_03'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'inst/xpm_arst_01'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'inst/xpm_arst_01'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'inst/xpm_arst_04'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'inst/xpm_arst_04'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'inst/xpm_arst_05'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'inst/xpm_arst_05'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/bd_0ac3_rx_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/bd_0ac3_rx_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/gen_pkt_fifo/pkt_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/gen_pkt_fifo/pkt_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/gen_pkt_fifo/pkt_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/gen_pkt_fifo/pkt_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/reg_inf/gen_spkt_fifo/generic_pkt/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/reg_inf/gen_spkt_fifo/generic_pkt/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/reg_inf/gen_spkt_fifo/generic_pkt/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/reg_inf/gen_spkt_fifo/generic_pkt/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/bd_0ac3_rx_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/bd_0ac3_rx_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[0].hsc2r_bus_cdc'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[0].hsc2r_bus_cdc'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[10].hsc2r_bus_cdc'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[10].hsc2r_bus_cdc'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[11].hsc2r_bus_cdc'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[11].hsc2r_bus_cdc'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[12].hsc2r_bus_cdc'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[12].hsc2r_bus_cdc'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[13].hsc2r_bus_cdc'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[13].hsc2r_bus_cdc'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[14].hsc2r_bus_cdc'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[14].hsc2r_bus_cdc'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[15].hsc2r_bus_cdc'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[15].hsc2r_bus_cdc'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[16].hsc2r_bus_cdc'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[16].hsc2r_bus_cdc'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[17].hsc2r_bus_cdc'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[17].hsc2r_bus_cdc'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[18].hsc2r_bus_cdc'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[18].hsc2r_bus_cdc'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[19].hsc2r_bus_cdc'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[19].hsc2r_bus_cdc'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[1].hsc2r_bus_cdc'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[1].hsc2r_bus_cdc'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[20].hsc2r_bus_cdc'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[20].hsc2r_bus_cdc'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[2].hsc2r_bus_cdc'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[2].hsc2r_bus_cdc'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[3].hsc2r_bus_cdc'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[3].hsc2r_bus_cdc'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[4].hsc2r_bus_cdc'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[4].hsc2r_bus_cdc'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[5].hsc2r_bus_cdc'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[5].hsc2r_bus_cdc'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[6].hsc2r_bus_cdc'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[6].hsc2r_bus_cdc'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[7].hsc2r_bus_cdc'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[7].hsc2r_bus_cdc'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[8].hsc2r_bus_cdc'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[8].hsc2r_bus_cdc'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[9].hsc2r_bus_cdc'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[9].hsc2r_bus_cdc'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/ecc_cdc'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/isr_cdc/ecc_cdc'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/reg_inf/img_info_cdc'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/reg_inf/img_info_cdc'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/bd_0ac3_rx_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/bd_0ac3_rx_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[0].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[0].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[0].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[0].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[10].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[10].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[10].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[10].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[11].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[11].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[11].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[11].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[12].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[12].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[12].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[12].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[13].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[13].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[13].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[13].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[14].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[14].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[14].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[14].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[15].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[15].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[15].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[15].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[16].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[16].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[16].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[16].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[17].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[17].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[17].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[17].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[18].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[18].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[18].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[18].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[19].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[19].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[19].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[19].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[1].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[1].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[1].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[1].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[20].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[20].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[20].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[20].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[2].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[2].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[2].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[2].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[3].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[3].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[3].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[3].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[4].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[4].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[4].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[4].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[5].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[5].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[5].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[5].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[6].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[6].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[6].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[6].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[7].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[7].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[7].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[7].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[8].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[8].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[8].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[8].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[9].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[9].hsc2r_bus_cdc/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[9].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/HSC2R_CDC[9].hsc2r_bus_cdc/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/PPI_CL_ASYNC[0].xpm_single_cl_sb'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/PPI_CL_ASYNC[0].xpm_single_cl_sb'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/PPI_CL_ASYNC[1].xpm_single_cl_sb'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/PPI_CL_ASYNC[1].xpm_single_cl_sb'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/PPI_DL_ASYNC[0].xpm_single_dl_sb'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/PPI_DL_ASYNC[0].xpm_single_dl_sb'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/PPI_DL_ASYNC[10].xpm_single_dl_sb'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/PPI_DL_ASYNC[10].xpm_single_dl_sb'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/PPI_DL_ASYNC[11].xpm_single_dl_sb'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/PPI_DL_ASYNC[11].xpm_single_dl_sb'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/PPI_DL_ASYNC[12].xpm_single_dl_sb'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/PPI_DL_ASYNC[12].xpm_single_dl_sb'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/PPI_DL_ASYNC[13].xpm_single_dl_sb'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/PPI_DL_ASYNC[13].xpm_single_dl_sb'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/PPI_DL_ASYNC[14].xpm_single_dl_sb'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/PPI_DL_ASYNC[14].xpm_single_dl_sb'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/PPI_DL_ASYNC[15].xpm_single_dl_sb'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/PPI_DL_ASYNC[15].xpm_single_dl_sb'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/PPI_DL_ASYNC[1].xpm_single_dl_sb'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/PPI_DL_ASYNC[1].xpm_single_dl_sb'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/PPI_DL_ASYNC[2].xpm_single_dl_sb'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/PPI_DL_ASYNC[2].xpm_single_dl_sb'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/PPI_DL_ASYNC[3].xpm_single_dl_sb'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/PPI_DL_ASYNC[3].xpm_single_dl_sb'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/PPI_DL_ASYNC[4].xpm_single_dl_sb'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/PPI_DL_ASYNC[4].xpm_single_dl_sb'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/PPI_DL_ASYNC[5].xpm_single_dl_sb'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/PPI_DL_ASYNC[5].xpm_single_dl_sb'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/PPI_DL_ASYNC[6].xpm_single_dl_sb'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/PPI_DL_ASYNC[6].xpm_single_dl_sb'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/PPI_DL_ASYNC[7].xpm_single_dl_sb'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/PPI_DL_ASYNC[7].xpm_single_dl_sb'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/PPI_DL_ASYNC[8].xpm_single_dl_sb'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/PPI_DL_ASYNC[8].xpm_single_dl_sb'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/PPI_DL_ASYNC[9].xpm_single_dl_sb'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/PPI_DL_ASYNC[9].xpm_single_dl_sb'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/ecc_cdc/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/ecc_cdc/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/ecc_cdc/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/ecc_cdc/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/xpm_pulse_02/xpm_cdc_single_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/isr_cdc/xpm_pulse_02/xpm_cdc_single_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/reg_inf/LP_CNT_C2R[0].xpm_pulse_01/xpm_cdc_single_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/reg_inf/LP_CNT_C2R[0].xpm_pulse_01/xpm_cdc_single_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/reg_inf/LP_CNT_C2R[1].xpm_pulse_01/xpm_cdc_single_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/reg_inf/LP_CNT_C2R[1].xpm_pulse_01/xpm_cdc_single_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/reg_inf/LP_CNT_C2R[2].xpm_pulse_01/xpm_cdc_single_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/reg_inf/LP_CNT_C2R[2].xpm_pulse_01/xpm_cdc_single_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/reg_inf/LP_CNT_C2R[3].xpm_pulse_01/xpm_cdc_single_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/reg_inf/LP_CNT_C2R[3].xpm_pulse_01/xpm_cdc_single_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/reg_inf/img_info_cdc/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/reg_inf/img_info_cdc/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/reg_inf/img_info_cdc/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/reg_inf/img_info_cdc/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/reg_inf/xpm_single_01'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/reg_inf/xpm_single_01'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/reg_inf/xpm_single_07'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/reg_inf/xpm_single_07'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/reg_inf/xpm_single_08'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/reg_inf/xpm_single_08'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/reg_inf/xpm_single_17'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/reg_inf/xpm_single_17'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/reg_inf/xpm_single_18'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/reg_inf/xpm_single_18'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/reg_inf/xpm_single_19'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/reg_inf/xpm_single_19'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/reg_inf/xpm_single_20'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/reg_inf/xpm_single_20'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/xpm_single_fifo_rst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/xpm_single_fifo_rst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/xpm_single_frst_c2p'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/xpm_single_frst_c2p'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/xpm_single_frst_p2c'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/xpm_single_frst_p2c'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_pkt_fifo/pkt_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_pkt_fifo/pkt_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_pkt_fifo/pkt_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_pkt_fifo/pkt_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/reg_inf/gen_spkt_fifo/generic_pkt/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/reg_inf/gen_spkt_fifo/generic_pkt/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/reg_inf/gen_spkt_fifo/generic_pkt/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/reg_inf/gen_spkt_fifo/generic_pkt/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/reg_inf/xpm_single_02'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/reg_inf/xpm_single_02'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/reg_inf/xpm_single_05'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/reg_inf/xpm_single_05'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/bd_0ac3_rx_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/bd_0ac3_rx_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  RAM64X1S => RAM64X1S (RAMS64E): 1 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.068 . Memory (MB): peak = 941.711 ; gain = 0.020
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:44 ; elapsed = 00:01:52 . Memory (MB): peak = 941.711 ; gain = 594.129
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:44 ; elapsed = 00:01:52 . Memory (MB): peak = 941.711 ; gain = 594.129
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst/gen_pkt_fifo/pkt_fifo. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/line_buffer/line_buf/lbuf. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/\LANE_1.ppi_fifo0 /\CSI_OPT3_OFF.ppi_fifo . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/\LANE_2.ppi_fifo1 /\CSI_OPT3_OFF.ppi_fifo . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/reg_inf/gen_spkt_fifo/generic_pkt. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/gen_pkt_fifo/pkt_fifo/U0. (constraint file  C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/bd_0ac3_rx_0_synth_1/dont_touch.xdc, line 17).
+Applied set_property DONT_TOUCH = true for inst/line_buffer/line_buf/lbuf/U0. (constraint file  C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/bd_0ac3_rx_0_synth_1/dont_touch.xdc, line 23).
+Applied set_property DONT_TOUCH = true for inst/\LANE_1.ppi_fifo0 /\CSI_OPT3_OFF.ppi_fifo /U0. (constraint file  C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/bd_0ac3_rx_0_synth_1/dont_touch.xdc, line 26).
+Applied set_property DONT_TOUCH = true for inst/\LANE_2.ppi_fifo1 /\CSI_OPT3_OFF.ppi_fifo /U0. (constraint file  C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/bd_0ac3_rx_0_synth_1/dont_touch.xdc, line 26).
+Applied set_property DONT_TOUCH = true for inst/reg_inf/gen_spkt_fifo/generic_pkt/U0. (constraint file  C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/bd_0ac3_rx_0_synth_1/dont_touch.xdc, line 29).
+Applied set_property DONT_TOUCH = true for inst. (constraint file  C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/bd_0ac3_rx_0_synth_1/dont_touch.xdc, line 36).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/xpm_array_single_05. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/reg_inf/xpm_array_single_01. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/reg_inf/xpm_array_single_02. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/reg_inf/xpm_array_single_03. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/reg_inf/xpm_array_single_04. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/gen_pkt_fifo/pkt_fifo/U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/reg_inf/gen_spkt_fifo/generic_pkt/U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/\LANE_1.ppi_fifo0 /\CSI_OPT3_OFF.ppi_fifo /U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/\LANE_2.ppi_fifo1 /\CSI_OPT3_OFF.ppi_fifo /U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/gen_pkt_fifo/pkt_fifo/U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/reg_inf/gen_spkt_fifo/generic_pkt/U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/xpm_arst_01. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/reg_inf/gen_spkt_fifo/xpm_arst_03. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/xpm_arst_04. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/xpm_arst_05. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/gen_pkt_fifo/pkt_fifo/U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /\gntv_or_sync_fifo.gcx.clkx /rd_pntr_cdc_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/reg_inf/gen_spkt_fifo/generic_pkt/U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /\gntv_or_sync_fifo.gcx.clkx /rd_pntr_cdc_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/gen_pkt_fifo/pkt_fifo/U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /\gntv_or_sync_fifo.gcx.clkx /wr_pntr_cdc_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/reg_inf/gen_spkt_fifo/generic_pkt/U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /\gntv_or_sync_fifo.gcx.clkx /wr_pntr_cdc_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[0].hsc2r_bus_cdc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[10].hsc2r_bus_cdc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[11].hsc2r_bus_cdc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[12].hsc2r_bus_cdc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[13].hsc2r_bus_cdc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[14].hsc2r_bus_cdc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[15].hsc2r_bus_cdc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[16].hsc2r_bus_cdc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[17].hsc2r_bus_cdc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[18].hsc2r_bus_cdc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[19].hsc2r_bus_cdc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[1].hsc2r_bus_cdc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[20].hsc2r_bus_cdc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[2].hsc2r_bus_cdc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[3].hsc2r_bus_cdc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[4].hsc2r_bus_cdc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[5].hsc2r_bus_cdc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[6].hsc2r_bus_cdc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[7].hsc2r_bus_cdc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[8].hsc2r_bus_cdc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[9].hsc2r_bus_cdc . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/ecc_cdc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/reg_inf/img_info_cdc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\PPI_CL_ASYNC[0].xpm_single_cl_sb . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\PPI_CL_ASYNC[1].xpm_single_cl_sb . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\PPI_DL_ASYNC[0].xpm_single_dl_sb . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\PPI_DL_ASYNC[10].xpm_single_dl_sb . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\PPI_DL_ASYNC[11].xpm_single_dl_sb . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\PPI_DL_ASYNC[12].xpm_single_dl_sb . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\PPI_DL_ASYNC[13].xpm_single_dl_sb . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\PPI_DL_ASYNC[14].xpm_single_dl_sb . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\PPI_DL_ASYNC[15].xpm_single_dl_sb . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\PPI_DL_ASYNC[1].xpm_single_dl_sb . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\PPI_DL_ASYNC[2].xpm_single_dl_sb . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\PPI_DL_ASYNC[3].xpm_single_dl_sb . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\PPI_DL_ASYNC[4].xpm_single_dl_sb . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\PPI_DL_ASYNC[5].xpm_single_dl_sb . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\PPI_DL_ASYNC[6].xpm_single_dl_sb . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\PPI_DL_ASYNC[7].xpm_single_dl_sb . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\PPI_DL_ASYNC[8].xpm_single_dl_sb . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\PPI_DL_ASYNC[9].xpm_single_dl_sb . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/ecc_cdc/xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[0].hsc2r_bus_cdc /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[1].hsc2r_bus_cdc /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[2].hsc2r_bus_cdc /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[3].hsc2r_bus_cdc /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[4].hsc2r_bus_cdc /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[5].hsc2r_bus_cdc /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[6].hsc2r_bus_cdc /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[7].hsc2r_bus_cdc /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[8].hsc2r_bus_cdc /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[9].hsc2r_bus_cdc /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[10].hsc2r_bus_cdc /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[11].hsc2r_bus_cdc /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[12].hsc2r_bus_cdc /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[13].hsc2r_bus_cdc /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[14].hsc2r_bus_cdc /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[15].hsc2r_bus_cdc /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[16].hsc2r_bus_cdc /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[17].hsc2r_bus_cdc /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[18].hsc2r_bus_cdc /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[19].hsc2r_bus_cdc /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[20].hsc2r_bus_cdc /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/reg_inf/img_info_cdc/xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/xpm_pulse_02/xpm_cdc_single_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/reg_inf/\LP_CNT_C2R[0].xpm_pulse_01 /xpm_cdc_single_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/reg_inf/\LP_CNT_C2R[1].xpm_pulse_01 /xpm_cdc_single_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/reg_inf/\LP_CNT_C2R[2].xpm_pulse_01 /xpm_cdc_single_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/reg_inf/\LP_CNT_C2R[3].xpm_pulse_01 /xpm_cdc_single_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/ecc_cdc/xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[0].hsc2r_bus_cdc /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[1].hsc2r_bus_cdc /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[2].hsc2r_bus_cdc /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[3].hsc2r_bus_cdc /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[4].hsc2r_bus_cdc /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[5].hsc2r_bus_cdc /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[6].hsc2r_bus_cdc /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[7].hsc2r_bus_cdc /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[8].hsc2r_bus_cdc /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[9].hsc2r_bus_cdc /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[10].hsc2r_bus_cdc /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[11].hsc2r_bus_cdc /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[12].hsc2r_bus_cdc /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[13].hsc2r_bus_cdc /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[14].hsc2r_bus_cdc /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[15].hsc2r_bus_cdc /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[16].hsc2r_bus_cdc /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[17].hsc2r_bus_cdc /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[18].hsc2r_bus_cdc /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[19].hsc2r_bus_cdc /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/isr_cdc/\HSC2R_CDC[20].hsc2r_bus_cdc /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/reg_inf/img_info_cdc/xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/reg_inf/xpm_single_01. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/reg_inf/xpm_single_07. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/reg_inf/xpm_single_08. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/reg_inf/xpm_single_17. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/reg_inf/xpm_single_18. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/reg_inf/xpm_single_19. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/reg_inf/xpm_single_20. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/xpm_single_fifo_rst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/xpm_single_frst_c2p. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/xpm_single_frst_p2c. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/gen_pkt_fifo/pkt_fifo/U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/reg_inf/gen_spkt_fifo/generic_pkt/U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/gen_pkt_fifo/pkt_fifo/U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/reg_inf/gen_spkt_fifo/generic_pkt/U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/reg_inf/xpm_single_02. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/reg_inf/xpm_single_05. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:45 ; elapsed = 00:01:53 . Memory (MB): peak = 941.711 ; gain = 594.129
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "leaving_empty_fwft" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "buf0" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "buf0" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'cur_state_reg' in module 'mipi_csi2_rx_ctrl_v1_0_8_control'
+INFO: [Synth 8-5546] ROM "di_eni_not_supported" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "nxt_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nxt_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nxt_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nxt_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "di_eni_not_supported" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "nxt_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nxt_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nxt_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nxt_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nxt_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nxt_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nxt_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nxt_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nxt_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nxt_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "mask" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "code_notfound" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "crc_p_strb" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "leaving_empty_fwft" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "gie" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ier" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "core_config" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "prot_config" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE3 |                              000 |                              000
+                  iSTATE |                              100 |                              001
+                 iSTATE1 |                              010 |                              010
+                 iSTATE0 |                              011 |                              100
+                 iSTATE2 |                              001 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'cur_state_reg' using encoding 'sequential' in module 'mipi_csi2_rx_ctrl_v1_0_8_control'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:48 ; elapsed = 00:01:56 . Memory (MB): peak = 941.711 ; gain = 594.129
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "mask" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3886] merging instance 'mipi_csi2_rx_ctrl_v1_0_8_ppi_inf:/errsoths_r_reg' (FD) to 'mipi_csi2_rx_ctrl_v1_0_8_ppi_inf:/ppi_fifo_wdata_reg[9]'
+INFO: [Synth 8-3886] merging instance 'mipi_csi2_rx_ctrl_v1_0_8_ppi_inf:/errsotsynchs_r_reg' (FD) to 'mipi_csi2_rx_ctrl_v1_0_8_ppi_inf:/ppi_fifo_wdata_reg[8]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/lane_merger/\lanes_updated_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/lane_merger/\lanes_updated_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/phecc/vc_err_reg)
+INFO: [Synth 8-3886] merging instance 'inst/crc/pkt_data_d1_reg[8]' (FDR) to 'inst/crc/c_data_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/crc/pkt_data_d1_reg[0]' (FDR) to 'inst/crc/c_data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/crc/pkt_data_d1_reg[9]' (FDR) to 'inst/crc/c_data_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/crc/pkt_data_d1_reg[1]' (FDR) to 'inst/crc/c_data_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/crc/pkt_data_d1_reg[10]' (FDR) to 'inst/crc/c_data_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/crc/pkt_data_d1_reg[2]' (FDR) to 'inst/crc/c_data_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/crc/pkt_data_d1_reg[11]' (FDR) to 'inst/crc/c_data_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/crc/pkt_data_d1_reg[3]' (FDR) to 'inst/crc/c_data_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/crc/pkt_data_d1_reg[12]' (FDR) to 'inst/crc/c_data_reg[12]'
+INFO: [Synth 8-3886] merging instance 'inst/crc/pkt_data_d1_reg[4]' (FDR) to 'inst/crc/c_data_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/crc/pkt_data_d1_reg[13]' (FDR) to 'inst/crc/c_data_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/crc/pkt_data_d1_reg[5]' (FDR) to 'inst/crc/c_data_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/crc/pkt_data_d1_reg[14]' (FDR) to 'inst/crc/c_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'inst/crc/pkt_data_d1_reg[6]' (FDR) to 'inst/crc/c_data_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/crc/pkt_data_d1_reg[15]' (FDR) to 'inst/crc/c_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/crc/pkt_data_d1_reg[7]' (FDR) to 'inst/crc/c_data_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/data/i_6/\LINE_BUF_WR_64.lbuf_wr_byte_cnt_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/data/i_6/\LINE_BUF_WR_64.lbuf_wr_byte_cnt_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/data/i_6/\LINE_BUF_WR_64.lbuf_wr_byte_cnt_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/stream/i_0/\bytes_sent_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/stream/i_0/\bytes_sent_reg[1] )
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/LP_CNT_C2R[0].lp_count_vld_reg[0]' (FD) to 'inst/reg_inf/reset_released_reg'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/stream/i_0/\bytes_sent_reg[2] )
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/LX_INFO_GEN_0[2].lx_info_reg[2][0]' (FD) to 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[0]' (FD) to 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/LX_INFO_GEN[1].lx_info_reg[1][0]' (FDR) to 'inst/reg_inf/LX_INFO_GEN[1].lx_info_reg[1][1]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/LX_INFO_GEN[0].lx_info_reg[0][0]' (FDR) to 'inst/reg_inf/LX_INFO_GEN[1].lx_info_reg[1][1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\gie_reg[1] )
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/LX_INFO_GEN_0[2].lx_info_reg[2][1]' (FD) to 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[1]' (FD) to 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/LX_INFO_GEN[1].lx_info_reg[1][1]' (FDR) to 'inst/reg_inf/LX_INFO_GEN[0].lx_info_reg[0][1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\LX_INFO_GEN[0].lx_info_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\gie_reg[2] )
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/LX_INFO_GEN_0[2].lx_info_reg[2][2]' (FD) to 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[2]' (FD) to 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\prot_config_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\core_config_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\gie_reg[3] )
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/LX_INFO_GEN_0[2].lx_info_reg[2][3]' (FD) to 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[3]' (FD) to 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[4]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\core_config_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\gie_reg[4] )
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/LX_INFO_GEN_0[2].lx_info_reg[2][4]' (FD) to 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[4]' (FD) to 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[5]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\core_config_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\gie_reg[5] )
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/LX_INFO_GEN_0[2].lx_info_reg[2][5]' (FD) to 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[5]' (FD) to 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[6]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\prot_config_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\core_config_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\gie_reg[6] )
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[6]' (FD) to 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\prot_config_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\core_config_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\gie_reg[7] )
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[7]' (FD) to 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[8]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\prot_config_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\core_config_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\gie_reg[8] )
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[8]' (FD) to 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[9]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\prot_config_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\core_config_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\gie_reg[9] )
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[9]' (FD) to 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[10]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\prot_config_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\core_config_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\gie_reg[10] )
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[10]' (FD) to 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[11]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\prot_config_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\core_config_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\gie_reg[11] )
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[11]' (FD) to 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[12]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\prot_config_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\core_config_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\gie_reg[12] )
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[12]' (FD) to 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[13]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\prot_config_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\core_config_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\gie_reg[13] )
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[13]' (FD) to 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[14]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\prot_config_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\core_config_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\gie_reg[14] )
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[14]' (FD) to 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\prot_config_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\core_config_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\gie_reg[15] )
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[15]' (FD) to 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[16]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\prot_config_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\core_config_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\gie_reg[16] )
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[16]' (FD) to 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[17]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\prot_config_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\core_config_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\gie_reg[17] )
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[17]' (FD) to 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[18]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\prot_config_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\core_config_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\gie_reg[18] )
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[18]' (FD) to 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[19]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\prot_config_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\core_config_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\gie_reg[19] )
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[19]' (FD) to 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[20]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\prot_config_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\core_config_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\gie_reg[20] )
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[20]' (FD) to 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[21]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\prot_config_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\core_config_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\gie_reg[21] )
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[21]' (FD) to 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[22]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\prot_config_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\core_config_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\gie_reg[22] )
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[22]' (FD) to 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[23]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\prot_config_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\core_config_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\ier_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\gie_reg[23] )
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[23]' (FD) to 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[24]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\prot_config_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\core_config_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\ier_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\gie_reg[24] )
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[24]' (FD) to 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[25]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\prot_config_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\core_config_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\ier_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\gie_reg[25] )
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[25]' (FD) to 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[26]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\prot_config_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\core_config_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\ier_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\gie_reg[26] )
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[26]' (FD) to 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[27]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\prot_config_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\core_config_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\ier_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/isr_cdc/\HSP2R_CDCOFF[0].hsp2r_vld_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\gie_reg[27] )
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[27]' (FD) to 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[28]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\prot_config_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\core_config_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\ier_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\gie_reg[28] )
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[28]' (FD) to 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[29]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\prot_config_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\core_config_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\ier_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\gie_reg[29] )
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[29]' (FD) to 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[30]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/reg_inf/\prot_config_reg[29] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[30]' (FD) to 'inst/reg_inf/DBG_OFF.dbg_fcnt_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/stream/TUSER_WIDTH_GTE32.m_axis_tuser_reg[2]' (FDRE) to 'inst/stream/TUSER_WIDTH_GTE32.m_axis_tuser_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/stream/TUSER_WIDTH_GTE32.m_axis_tuser_reg[3]' (FDRE) to 'inst/stream/TUSER_WIDTH_GTE32.m_axis_tuser_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/stream/TUSER_WIDTH_GTE32.m_axis_tuser_reg[4]' (FDRE) to 'inst/stream/TUSER_WIDTH_GTE32.m_axis_tuser_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/stream/TUSER_WIDTH_GTE32.m_axis_tuser_reg[5]' (FDRE) to 'inst/stream/TUSER_WIDTH_GTE32.m_axis_tuser_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/stream/TUSER_WIDTH_GTE32.m_axis_tuser_reg[6]' (FDRE) to 'inst/stream/TUSER_WIDTH_GTE32.m_axis_tuser_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/stream/TUSER_WIDTH_GTE32.m_axis_tuser_reg[7]' (FDRE) to 'inst/stream/TUSER_WIDTH_GTE32.m_axis_tuser_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/stream/TUSER_WIDTH_GTE32.m_axis_tuser_reg[8]' (FDRE) to 'inst/stream/TUSER_WIDTH_GTE32.m_axis_tuser_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/stream/TUSER_WIDTH_GTE32.m_axis_tuser_reg[9]' (FDRE) to 'inst/stream/TUSER_WIDTH_GTE32.m_axis_tuser_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/stream/TUSER_WIDTH_GTE32.m_axis_tuser_reg[10]' (FDRE) to 'inst/stream/TUSER_WIDTH_GTE32.m_axis_tuser_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/stream/TUSER_WIDTH_GTE32.m_axis_tuser_reg[11]' (FDRE) to 'inst/stream/TUSER_WIDTH_GTE32.m_axis_tuser_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/stream/TUSER_WIDTH_GTE32.m_axis_tuser_reg[12]' (FDRE) to 'inst/stream/TUSER_WIDTH_GTE32.m_axis_tuser_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/stream/TUSER_WIDTH_GTE32.m_axis_tuser_reg[13]' (FDRE) to 'inst/stream/TUSER_WIDTH_GTE32.m_axis_tuser_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/stream/TUSER_WIDTH_GTE32.m_axis_tuser_reg[14]' (FDRE) to 'inst/stream/TUSER_WIDTH_GTE32.m_axis_tuser_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/stream/TUSER_WIDTH_GTE96.m_axis_tuser_reg[70]' (FDR) to 'inst/stream/TUSER_WIDTH_GTE96.m_axis_tuser_reg[71]'
+INFO: [Synth 8-3332] Sequential element (lanes_updated_reg[1]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_lane_merger.
+INFO: [Synth 8-3332] Sequential element (lanes_updated_reg[0]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_lane_merger.
+INFO: [Synth 8-3332] Sequential element (l2_empty_reg) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_lane_merger.
+INFO: [Synth 8-3332] Sequential element (l3_empty_reg) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_lane_merger.
+INFO: [Synth 8-3332] Sequential element (pkt_1st_last_reg) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_lane_merger.
+INFO: [Synth 8-3332] Sequential element (buf2_reg[9]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_lane_merger.
+INFO: [Synth 8-3332] Sequential element (buf2_reg[8]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_lane_merger.
+INFO: [Synth 8-3332] Sequential element (buf2_reg[7]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_lane_merger.
+INFO: [Synth 8-3332] Sequential element (buf2_reg[6]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_lane_merger.
+INFO: [Synth 8-3332] Sequential element (buf2_reg[5]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_lane_merger.
+INFO: [Synth 8-3332] Sequential element (buf2_reg[4]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_lane_merger.
+INFO: [Synth 8-3332] Sequential element (buf2_reg[3]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_lane_merger.
+INFO: [Synth 8-3332] Sequential element (buf2_reg[2]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_lane_merger.
+INFO: [Synth 8-3332] Sequential element (buf2_reg[1]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_lane_merger.
+INFO: [Synth 8-3332] Sequential element (buf2_reg[0]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_lane_merger.
+INFO: [Synth 8-3332] Sequential element (reg_ecc_status_i_reg[0]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_control.
+INFO: [Synth 8-3332] Sequential element (reg_ecc_status_reg[0]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_control.
+INFO: [Synth 8-3332] Sequential element (phecc_status_reg[0]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_phecc.
+INFO: [Synth 8-3332] Sequential element (byt_cnt_lte4_reg) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_phecc.
+INFO: [Synth 8-3332] Sequential element (vc_err_reg) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_phecc.
+INFO: [Synth 8-3332] Sequential element (TUSER_WIDTH_GTE96.m_axis_tuser_reg[71]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_stream.
+INFO: [Synth 8-3332] Sequential element (TUSER_WIDTH_GTE32.m_axis_tuser_reg[15]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_stream.
+INFO: [Synth 8-3332] Sequential element (tuser_dtype_reg[5]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_stream.
+INFO: [Synth 8-3332] Sequential element (tuser_dtype_reg[4]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_stream.
+INFO: [Synth 8-3332] Sequential element (tuser_dtype_reg[3]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_stream.
+INFO: [Synth 8-3332] Sequential element (tuser_dtype_reg[2]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_stream.
+INFO: [Synth 8-3332] Sequential element (tuser_dtype_reg[1]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_stream.
+INFO: [Synth 8-3332] Sequential element (tuser_dtype_reg[0]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_stream.
+INFO: [Synth 8-3332] Sequential element (tuser_fsync_reg) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_stream.
+INFO: [Synth 8-3332] Sequential element (data_wip_d1_reg) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_crc.
+INFO: [Synth 8-3332] Sequential element (data_wip_d2_reg) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_crc.
+INFO: [Synth 8-3332] Sequential element (isr_i_reg[30]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_isr_cdc.
+INFO: [Synth 8-3332] Sequential element (isr_i_reg[29]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_isr_cdc.
+INFO: [Synth 8-3332] Sequential element (isr_i_reg[28]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_isr_cdc.
+INFO: [Synth 8-3332] Sequential element (isr_i_reg[27]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_isr_cdc.
+INFO: [Synth 8-3332] Sequential element (isr_i_reg[26]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_isr_cdc.
+INFO: [Synth 8-3332] Sequential element (isr_i_reg[25]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_isr_cdc.
+INFO: [Synth 8-3332] Sequential element (isr_i_reg[24]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_isr_cdc.
+INFO: [Synth 8-3332] Sequential element (isr_i_reg[23]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_isr_cdc.
+INFO: [Synth 8-3332] Sequential element (wr_addr_reg[1]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (wr_addr_reg[0]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (core_config_reg[31]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (core_config_reg[30]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (core_config_reg[29]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (core_config_reg[28]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (core_config_reg[27]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (core_config_reg[26]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (core_config_reg[25]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (core_config_reg[24]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (core_config_reg[23]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (core_config_reg[22]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (core_config_reg[21]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (core_config_reg[20]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (core_config_reg[19]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (core_config_reg[18]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (core_config_reg[17]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (core_config_reg[16]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (core_config_reg[15]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (core_config_reg[14]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (core_config_reg[13]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (core_config_reg[12]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (core_config_reg[11]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (core_config_reg[10]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (core_config_reg[9]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (core_config_reg[8]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (core_config_reg[7]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (core_config_reg[6]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (core_config_reg[5]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (core_config_reg[4]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (core_config_reg[3]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (core_config_reg[2]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (gie_reg[31]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (gie_reg[30]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (gie_reg[29]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (gie_reg[28]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (gie_reg[27]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (gie_reg[26]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (gie_reg[25]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (gie_reg[24]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (gie_reg[23]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (gie_reg[22]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (gie_reg[21]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (gie_reg[20]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (gie_reg[19]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (gie_reg[18]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (gie_reg[17]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (gie_reg[16]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (gie_reg[15]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (gie_reg[14]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (gie_reg[13]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (gie_reg[12]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (gie_reg[11]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (gie_reg[10]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (gie_reg[9]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (gie_reg[8]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (gie_reg[7]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (gie_reg[6]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (gie_reg[5]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (gie_reg[4]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Synth 8-3332] Sequential element (gie_reg[3]) is unused and will be removed from module mipi_csi2_rx_ctrl_v1_0_8_reg_inf.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:55 ; elapsed = 00:02:04 . Memory (MB): peak = 941.711 ; gain = 594.129
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'inst/reg_inf/gen_spkt_fifo/xpm_arst_03/src_arst' to pin 'inst/reg_inf/i_9/gen_spkt_fifo/rstn_i/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'inst/xpm_arst_05/src_arst' to pin 'inst/rstn_i1_inferred/i_0/O'
+INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:03 ; elapsed = 00:02:12 . Memory (MB): peak = 941.711 ; gain = 594.129
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'inst/rstn_i1_inferred/i_0' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'inst/rstn_i1_inferred/i_0' with timing assertions on output pin 'O'
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:04 ; elapsed = 00:02:14 . Memory (MB): peak = 941.711 ; gain = 594.129
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'inst/i_3416' with timing assertions on output pin 'O'
+INFO: [Synth 8-3886] merging instance 'inst/phecc/phecc_start_d1_reg' (FDR) to 'inst/data/phecc_start_d1_reg'
+INFO: [Synth 8-3886] merging instance 'inst/crc/pkt_valid_d1_reg' (FDR) to 'inst/data/pkt_valid_d1_reg'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'inst/i_3416' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'inst/i_3416' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'inst/i_3416' with timing assertions on output pin 'O'
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:06 ; elapsed = 00:02:16 . Memory (MB): peak = 954.297 ; gain = 606.715
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6064] Net \inst_fifo_gen/gconvfifo.rf/grf.rf/p_17_out  is driving 40 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:07 ; elapsed = 00:02:17 . Memory (MB): peak = 954.297 ; gain = 606.715
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:07 ; elapsed = 00:02:17 . Memory (MB): peak = 954.297 ; gain = 606.715
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:07 ; elapsed = 00:02:17 . Memory (MB): peak = 954.297 ; gain = 606.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:07 ; elapsed = 00:02:17 . Memory (MB): peak = 954.297 ; gain = 606.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:07 ; elapsed = 00:02:17 . Memory (MB): peak = 954.297 ; gain = 606.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:07 ; elapsed = 00:02:17 . Memory (MB): peak = 954.297 ; gain = 606.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |    70|
+|2     |LUT1     |    41|
+|3     |LUT2     |   268|
+|4     |LUT3     |   288|
+|5     |LUT4     |   307|
+|6     |LUT5     |   211|
+|7     |LUT6     |   474|
+|8     |MUXCY    |    30|
+|9     |MUXF7    |     1|
+|10    |RAM32M   |    15|
+|11    |RAM64X1S |     1|
+|12    |RAMB36E1 |     8|
+|13    |SRL16E   |     1|
+|14    |FDCE     |   243|
+|15    |FDPE     |    79|
+|16    |FDRE     |  2143|
+|17    |FDSE     |    28|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:07 ; elapsed = 00:02:17 . Memory (MB): peak = 954.297 ; gain = 606.715
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2411 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:02:08 . Memory (MB): peak = 954.297 ; gain = 421.359
+Synthesis Optimization Complete : Time (s): cpu = 00:02:07 ; elapsed = 00:02:18 . Memory (MB): peak = 954.297 ; gain = 606.715
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 125 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 26 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 10 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 15 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 1 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+388 Infos, 105 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:10 ; elapsed = 00:02:21 . Memory (MB): peak = 954.297 ; gain = 606.715
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/bd_0ac3_rx_0_synth_1/bd_0ac3_rx_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_2/bd_0ac3_rx_0.xci
+INFO: [Coretcl 2-1174] Renamed 251 cell refs.
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/bd_0ac3_rx_0_synth_1/bd_0ac3_rx_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file bd_0ac3_rx_0_utilization_synth.rpt -pb bd_0ac3_rx_0_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 954.297 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Dec 23 15:25:46 2018...
