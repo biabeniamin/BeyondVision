@@ -1,2 +1,2 @@
 create a demultiplexer in hls for axi stream
-use dma to capture video content from hdmi
+use dma to capture video content from hdmi 
