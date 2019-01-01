@@ -160,12 +160,39 @@ static struct platform_driver memAlloc2_driver = {
 	.probe		= memAlloc2_probe,
 	.remove		= memAlloc2_remove,
 };
-
+unsigned long long *address, *address2;
 static int __init memAlloc2_init(void)
 {
 	printk("<1>Hello module world.\n");
 	printk("<1>Module parameters were (0x%08x) and \"%s\"\n", myint,
 	       mystr);
+
+	printk("start allocating \n");
+	void* addr = kmalloc(1080*1920*10, GFP_DMA);
+	printk("memory allocated at %x\n", addr);
+	addr = kmalloc(1080*1920*10, GFP_DMA);
+	printk("memory allocated at %x\n", addr);
+
+	address = kmalloc(1024*768*3, GFP_KERNEL | GFP_DMA);
+	address2 = kmalloc(1024*768*3, GFP_KERNEL | GFP_DMA);
+	unsigned long i  =0;
+	for(i = 0;i<1024*768;i++)
+	{
+		//printk("%lx %lx",address+i*4,*(unsigned long*)((unsigned long)address+i*4));
+		*(char*)((unsigned long)address+i) = i%255 ;
+		*(char*)((unsigned long)address2+i) = i%255;
+		//if(virt_to_phys())
+	}
+	printk("<1>Address %lx\n", address);
+	printk("phys addresws %lx \n", virt_to_phys(address));
+	printk("phys addresws 2 %lx \n", virt_to_phys(address2));
+	printk("ADDRESS1 %ld \n", virt_to_phys(address));
+	printk("ADDRESS2 %ld \n", virt_to_phys(address2));
+	printk("phys addresws %lx \n", virt_to_phys((unsigned long)address + 768*1024));
+	printk("phys addresws %lx \n", phys_to_virt(0xf000000));
+	printk("phys addresws %lx \n", virt_to_phys(printk));
+	printk("phys addresws %lx \n", virt_to_phys(printk));
+	//printk("is available %llx \n", check_region(0xf000000, 100));
 
 	return platform_driver_register(&memAlloc2_driver);
 }
