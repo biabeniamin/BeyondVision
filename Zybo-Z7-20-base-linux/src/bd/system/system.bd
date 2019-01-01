@@ -1303,7 +1303,7 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>axi_vdma_1</spirit:instanceName>
+        <spirit:instanceName>axi_vdma_out</spirit:instanceName>
         <spirit:componentRef spirit:library="ip" spirit:name="axi_vdma" spirit:vendor="xilinx.com" spirit:version="6.3"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">system_axi_vdma_1_0</spirit:configurableElementValue>
@@ -1515,13 +1515,13 @@
       </spirit:interconnection>
       <spirit:interconnection>
         <spirit:name>axi_vdma_1_M_AXIS_MM2S</spirit:name>
-        <spirit:activeInterface spirit:busRef="M_AXIS_MM2S" spirit:componentRef="axi_vdma_1"/>
+        <spirit:activeInterface spirit:busRef="M_AXIS_MM2S" spirit:componentRef="axi_vdma_out"/>
         <spirit:activeInterface spirit:busRef="S_AXIS" spirit:componentRef="axis_subset_converter_out"/>
       </spirit:interconnection>
       <spirit:interconnection>
         <spirit:name>axi_vdma_1_M_AXI_MM2S</spirit:name>
         <spirit:activeInterface spirit:busRef="S00_AXI" spirit:componentRef="axi_mem_intercon_HP0"/>
-        <spirit:activeInterface spirit:busRef="M_AXI_MM2S" spirit:componentRef="axi_vdma_1"/>
+        <spirit:activeInterface spirit:busRef="M_AXI_MM2S" spirit:componentRef="axi_vdma_out"/>
       </spirit:interconnection>
       <spirit:interconnection>
         <spirit:name>axis_subset_converter_in_M_AXIS</spirit:name>
@@ -1560,7 +1560,7 @@
       </spirit:interconnection>
       <spirit:interconnection>
         <spirit:name>ps7_0_axi_periph_GP0_M05_AXI</spirit:name>
-        <spirit:activeInterface spirit:busRef="S_AXI_LITE" spirit:componentRef="axi_vdma_1"/>
+        <spirit:activeInterface spirit:busRef="S_AXI_LITE" spirit:componentRef="axi_vdma_out"/>
         <spirit:activeInterface spirit:busRef="M05_AXI" spirit:componentRef="ps7_0_axi_periph_GP0"/>
       </spirit:interconnection>
       <spirit:interconnection>
@@ -1735,7 +1735,7 @@
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>axi_vdma_1_mm2s_introut</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="axi_vdma_1" spirit:portRef="mm2s_introut"/>
+        <spirit:internalPortReference spirit:componentRef="axi_vdma_out" spirit:portRef="mm2s_introut"/>
         <spirit:internalPortReference spirit:componentRef="xlconcat_0" spirit:portRef="In0"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
@@ -1794,7 +1794,7 @@
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="S00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="M00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_vdma_0" spirit:portRef="s_axi_lite_aclk"/>
-        <spirit:internalPortReference spirit:componentRef="axi_vdma_1" spirit:portRef="s_axi_lite_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="axi_vdma_out" spirit:portRef="s_axi_lite_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axis_subset_converter_0" spirit:portRef="aclk"/>
         <spirit:internalPortReference spirit:componentRef="mipi_csi2_rx_subsystem_0" spirit:portRef="lite_aclk"/>
         <spirit:internalPortReference spirit:componentRef="mipi_csi2_rx_subsystem_0" spirit:portRef="video_aclk"/>
@@ -1828,8 +1828,8 @@
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon_HP0" spirit:portRef="M00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_vdma_0" spirit:portRef="m_axi_s2mm_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_vdma_0" spirit:portRef="s_axis_s2mm_aclk"/>
-        <spirit:internalPortReference spirit:componentRef="axi_vdma_1" spirit:portRef="m_axi_mm2s_aclk"/>
-        <spirit:internalPortReference spirit:componentRef="axi_vdma_1" spirit:portRef="m_axis_mm2s_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="axi_vdma_out" spirit:portRef="m_axi_mm2s_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="axi_vdma_out" spirit:portRef="m_axis_mm2s_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axis_subset_converter_in" spirit:portRef="aclk"/>
         <spirit:internalPortReference spirit:componentRef="axis_subset_converter_out" spirit:portRef="aclk"/>
         <spirit:internalPortReference spirit:componentRef="v_axi4s_vid_out_0" spirit:portRef="aclk"/>
@@ -1873,7 +1873,7 @@
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="S00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="M00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_vdma_0" spirit:portRef="axi_resetn"/>
-        <spirit:internalPortReference spirit:componentRef="axi_vdma_1" spirit:portRef="axi_resetn"/>
+        <spirit:internalPortReference spirit:componentRef="axi_vdma_out" spirit:portRef="axi_resetn"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph_GP0" spirit:portRef="S00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph_GP0" spirit:portRef="M00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph_GP0" spirit:portRef="M01_ARESETN"/>
@@ -7671,7 +7671,7 @@
           </spirit:segment>
           <spirit:segment>
             <spirit:name>SEG_axi_vdma_1_Reg</spirit:name>
-            <spirit:displayName>/axi_vdma_1/S_AXI_LITE/Reg</spirit:displayName>
+            <spirit:displayName>/axi_vdma_out/S_AXI_LITE/Reg</spirit:displayName>
             <spirit:addressOffset>0x43010000</spirit:addressOffset>
             <spirit:range>64K</spirit:range>
           </spirit:segment>
@@ -7752,7 +7752,7 @@
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
     <spirit:vendor>xilinx.com</spirit:vendor>
-    <spirit:library>Addressing/axi_vdma_1</spirit:library>
+    <spirit:library>Addressing/axi_vdma_out</spirit:library>
     <spirit:name>axi_vdma</spirit:name>
     <spirit:version>6.3</spirit:version>
     <spirit:busInterfaces>

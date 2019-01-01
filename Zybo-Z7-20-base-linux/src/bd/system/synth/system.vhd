@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Tue Jan  1 20:22:46 2019
+--Date        : Tue Jan  1 21:15:27 2019
 --Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
 --Command     : generate_target system.bd
 --Design      : system
@@ -8365,7 +8365,7 @@ architecture STRUCTURE of system is
   signal xlconstant_1_dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_axi_iic_0_gpo_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_axi_vdma_0_s2mm_frame_ptr_out_UNCONNECTED : STD_LOGIC_VECTOR ( 5 downto 0 );
-  signal NLW_axi_vdma_1_mm2s_frame_ptr_out_UNCONNECTED : STD_LOGIC_VECTOR ( 5 downto 0 );
+  signal NLW_axi_vdma_out_mm2s_frame_ptr_out_UNCONNECTED : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal NLW_axis_subset_converter_out_m_axis_tkeep_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal NLW_mipi_csi2_rx_subsystem_0_dlyctrl_rdy_out_UNCONNECTED : STD_LOGIC;
   signal NLW_mipi_csi2_rx_subsystem_0_rxbyteclkhs_UNCONNECTED : STD_LOGIC;
@@ -9067,7 +9067,7 @@ axi_vdma_0: component system_axi_vdma_0_0
       s_axis_s2mm_tuser(0) => axis_subset_converter_in_M_AXIS_TUSER(0),
       s_axis_s2mm_tvalid => axis_subset_converter_in_M_AXIS_TVALID
     );
-axi_vdma_1: component system_axi_vdma_1_0
+axi_vdma_out: component system_axi_vdma_1_0
      port map (
       axi_resetn => rst_ps7_0_100M_peripheral_aresetn(0),
       m_axi_mm2s_aclk => processing_system7_0_FCLK_CLK1(0),
@@ -9092,7 +9092,7 @@ axi_vdma_1: component system_axi_vdma_1_0
       m_axis_mm2s_tuser(0) => axi_vdma_1_M_AXIS_MM2S_TUSER(0),
       m_axis_mm2s_tvalid => axi_vdma_1_M_AXIS_MM2S_TVALID,
       mm2s_frame_ptr_in(5 downto 0) => B"000000",
-      mm2s_frame_ptr_out(5 downto 0) => NLW_axi_vdma_1_mm2s_frame_ptr_out_UNCONNECTED(5 downto 0),
+      mm2s_frame_ptr_out(5 downto 0) => NLW_axi_vdma_out_mm2s_frame_ptr_out_UNCONNECTED(5 downto 0),
       mm2s_introut => axi_vdma_1_mm2s_introut,
       s_axi_lite_aclk => processing_system7_0_FCLK_CLK0,
       s_axi_lite_araddr(8 downto 0) => ps7_0_axi_periph_GP0_M05_AXI_ARADDR(8 downto 0),
