@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sun Dec 23 15:25:48 2018
-# Process ID: 9628
+# Start of session at: Tue Jan  1 19:57:12 2019
+# Process ID: 22164
 # Current directory: C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/system_mipi_csi2_rx_subsystem_0_1_synth_1
 # Command line: vivado.exe -log system_mipi_csi2_rx_subsystem_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_mipi_csi2_rx_subsystem_0_1.tcl
 # Log file: C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/system_mipi_csi2_rx_subsystem_0_1_synth_1/system_mipi_csi2_rx_subsystem_0_1.vds
@@ -16,27 +16,27 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 13692 
+INFO: Helper process launched with PID 14732 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 465.625 ; gain = 111.328
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 464.480 ; gain = 110.895
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'system_mipi_csi2_rx_subsystem_0_1' [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/synth/system_mipi_csi2_rx_subsystem_0_1.vhd:103]
 INFO: [Synth 8-3491] module 'bd_0ac3' declared at 'c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/synth/bd_0ac3.vhd:11' bound to instance 'U0' of component 'bd_0ac3' [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/synth/system_mipi_csi2_rx_subsystem_0_1.vhd:215]
 INFO: [Synth 8-638] synthesizing module 'bd_0ac3' [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/synth/bd_0ac3.vhd:62]
-INFO: [Synth 8-3491] module 'bd_0ac3_phy_0' declared at 'C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/system_mipi_csi2_rx_subsystem_0_1_synth_1/.Xil/Vivado-9628-DESKTOP-871TSOM/realtime/bd_0ac3_phy_0_stub.vhdl:5' bound to instance 'phy' of component 'bd_0ac3_phy_0' [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/synth/bd_0ac3.vhd:525]
-INFO: [Synth 8-638] synthesizing module 'bd_0ac3_phy_0' [C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/system_mipi_csi2_rx_subsystem_0_1_synth_1/.Xil/Vivado-9628-DESKTOP-871TSOM/realtime/bd_0ac3_phy_0_stub.vhdl:87]
-INFO: [Synth 8-3491] module 'bd_0ac3_r_sync_0' declared at 'C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/system_mipi_csi2_rx_subsystem_0_1_synth_1/.Xil/Vivado-9628-DESKTOP-871TSOM/realtime/bd_0ac3_r_sync_0_stub.vhdl:5' bound to instance 'r_sync' of component 'bd_0ac3_r_sync_0' [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/synth/bd_0ac3.vhd:604]
-INFO: [Synth 8-638] synthesizing module 'bd_0ac3_r_sync_0' [C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/system_mipi_csi2_rx_subsystem_0_1_synth_1/.Xil/Vivado-9628-DESKTOP-871TSOM/realtime/bd_0ac3_r_sync_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'bd_0ac3_rx_0' declared at 'C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/system_mipi_csi2_rx_subsystem_0_1_synth_1/.Xil/Vivado-9628-DESKTOP-871TSOM/realtime/bd_0ac3_rx_0_stub.vhdl:5' bound to instance 'rx' of component 'bd_0ac3_rx_0' [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/synth/bd_0ac3.vhd:617]
-INFO: [Synth 8-638] synthesizing module 'bd_0ac3_rx_0' [C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/system_mipi_csi2_rx_subsystem_0_1_synth_1/.Xil/Vivado-9628-DESKTOP-871TSOM/realtime/bd_0ac3_rx_0_stub.vhdl:73]
-INFO: [Synth 8-3491] module 'bd_0ac3_vfb_0_0' declared at 'C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/system_mipi_csi2_rx_subsystem_0_1_synth_1/.Xil/Vivado-9628-DESKTOP-871TSOM/realtime/bd_0ac3_vfb_0_0_stub.vhdl:5' bound to instance 'vfb_0' of component 'bd_0ac3_vfb_0_0' [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/synth/bd_0ac3.vhd:682]
-INFO: [Synth 8-638] synthesizing module 'bd_0ac3_vfb_0_0' [C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/system_mipi_csi2_rx_subsystem_0_1_synth_1/.Xil/Vivado-9628-DESKTOP-871TSOM/realtime/bd_0ac3_vfb_0_0_stub.vhdl:33]
-INFO: [Synth 8-3491] module 'bd_0ac3_xbar_0' declared at 'C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/system_mipi_csi2_rx_subsystem_0_1_synth_1/.Xil/Vivado-9628-DESKTOP-871TSOM/realtime/bd_0ac3_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'bd_0ac3_xbar_0' [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/synth/bd_0ac3.vhd:707]
-INFO: [Synth 8-638] synthesizing module 'bd_0ac3_xbar_0' [C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/system_mipi_csi2_rx_subsystem_0_1_synth_1/.Xil/Vivado-9628-DESKTOP-871TSOM/realtime/bd_0ac3_xbar_0_stub.vhdl:51]
+INFO: [Synth 8-3491] module 'bd_0ac3_phy_0' declared at 'C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/system_mipi_csi2_rx_subsystem_0_1_synth_1/.Xil/Vivado-22164-DESKTOP-871TSOM/realtime/bd_0ac3_phy_0_stub.vhdl:5' bound to instance 'phy' of component 'bd_0ac3_phy_0' [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/synth/bd_0ac3.vhd:525]
+INFO: [Synth 8-638] synthesizing module 'bd_0ac3_phy_0' [C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/system_mipi_csi2_rx_subsystem_0_1_synth_1/.Xil/Vivado-22164-DESKTOP-871TSOM/realtime/bd_0ac3_phy_0_stub.vhdl:87]
+INFO: [Synth 8-3491] module 'bd_0ac3_r_sync_0' declared at 'C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/system_mipi_csi2_rx_subsystem_0_1_synth_1/.Xil/Vivado-22164-DESKTOP-871TSOM/realtime/bd_0ac3_r_sync_0_stub.vhdl:5' bound to instance 'r_sync' of component 'bd_0ac3_r_sync_0' [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/synth/bd_0ac3.vhd:604]
+INFO: [Synth 8-638] synthesizing module 'bd_0ac3_r_sync_0' [C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/system_mipi_csi2_rx_subsystem_0_1_synth_1/.Xil/Vivado-22164-DESKTOP-871TSOM/realtime/bd_0ac3_r_sync_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'bd_0ac3_rx_0' declared at 'C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/system_mipi_csi2_rx_subsystem_0_1_synth_1/.Xil/Vivado-22164-DESKTOP-871TSOM/realtime/bd_0ac3_rx_0_stub.vhdl:5' bound to instance 'rx' of component 'bd_0ac3_rx_0' [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/synth/bd_0ac3.vhd:617]
+INFO: [Synth 8-638] synthesizing module 'bd_0ac3_rx_0' [C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/system_mipi_csi2_rx_subsystem_0_1_synth_1/.Xil/Vivado-22164-DESKTOP-871TSOM/realtime/bd_0ac3_rx_0_stub.vhdl:73]
+INFO: [Synth 8-3491] module 'bd_0ac3_vfb_0_0' declared at 'C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/system_mipi_csi2_rx_subsystem_0_1_synth_1/.Xil/Vivado-22164-DESKTOP-871TSOM/realtime/bd_0ac3_vfb_0_0_stub.vhdl:5' bound to instance 'vfb_0' of component 'bd_0ac3_vfb_0_0' [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/synth/bd_0ac3.vhd:682]
+INFO: [Synth 8-638] synthesizing module 'bd_0ac3_vfb_0_0' [C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/system_mipi_csi2_rx_subsystem_0_1_synth_1/.Xil/Vivado-22164-DESKTOP-871TSOM/realtime/bd_0ac3_vfb_0_0_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'bd_0ac3_xbar_0' declared at 'C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/system_mipi_csi2_rx_subsystem_0_1_synth_1/.Xil/Vivado-22164-DESKTOP-871TSOM/realtime/bd_0ac3_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'bd_0ac3_xbar_0' [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/synth/bd_0ac3.vhd:707]
+INFO: [Synth 8-638] synthesizing module 'bd_0ac3_xbar_0' [C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/system_mipi_csi2_rx_subsystem_0_1_synth_1/.Xil/Vivado-22164-DESKTOP-871TSOM/realtime/bd_0ac3_xbar_0_stub.vhdl:51]
 INFO: [Synth 8-256] done synthesizing module 'bd_0ac3' (1#1) [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/synth/bd_0ac3.vhd:62]
 INFO: [Synth 8-256] done synthesizing module 'system_mipi_csi2_rx_subsystem_0_1' (2#1) [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/synth/system_mipi_csi2_rx_subsystem_0_1.vhd:103]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 521.195 ; gain = 166.898
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 520.887 ; gain = 167.301
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -49,10 +49,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 521.195 ; gain = 166.898
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 520.887 ; gain = 167.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 521.195 ; gain = 166.898
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 520.887 ; gain = 167.301
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -78,16 +78,16 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 814.363 ; gain = 1.137
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 813.793 ; gain = 1.512
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 814.363 ; gain = 460.066
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 813.793 ; gain = 460.207
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 814.363 ; gain = 460.066
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 813.793 ; gain = 460.207
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -111,10 +111,10 @@ Applied set_property DONT_TOUCH = true for U0/rx. (constraint file  auto generat
 Applied set_property DONT_TOUCH = true for U0/phy. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for U0/vfb_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 814.363 ; gain = 460.066
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 813.793 ; gain = 460.207
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 814.363 ; gain = 460.066
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 813.793 ; gain = 460.207
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -150,7 +150,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 814.363 ; gain = 460.066
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 813.793 ; gain = 460.207
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -164,13 +164,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'U0/phy/rxbyteclkhs' to pin 'U0/phy/bbstub_rxbyteclkhs/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 849.574 ; gain = 495.277
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 849.758 ; gain = 496.172
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 849.648 ; gain = 495.352
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 849.758 ; gain = 496.172
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -182,7 +182,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 850.008 ; gain = 495.711
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 850.113 ; gain = 496.527
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -206,7 +206,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 850.945 ; gain = 496.648
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 850.863 ; gain = 497.277
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -219,7 +219,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 850.945 ; gain = 496.648
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 850.863 ; gain = 497.277
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -231,25 +231,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 850.945 ; gain = 496.648
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 850.863 ; gain = 497.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 850.945 ; gain = 496.648
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 850.863 ; gain = 497.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 850.945 ; gain = 496.648
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 850.863 ; gain = 497.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 850.945 ; gain = 496.648
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 850.863 ; gain = 497.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -285,11 +285,11 @@ Report Instance Areas:
 |2     |  U0     |bd_0ac3 |   576|
 +------+---------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 850.945 ; gain = 496.648
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 850.863 ; gain = 497.277
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 850.945 ; gain = 203.480
-Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 850.945 ; gain = 496.648
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 850.863 ; gain = 204.371
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 850.863 ; gain = 497.277
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -299,7 +299,7 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 26 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 877.090 ; gain = 525.250
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 880.059 ; gain = 526.590
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/system_mipi_csi2_rx_subsystem_0_1_synth_1/system_mipi_csi2_rx_subsystem_0_1.dcp' has been generated.
 INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/system_mipi_csi2_rx_subsystem_0_1.xci
@@ -307,5 +307,5 @@ INFO: [Coretcl 2-1174] Renamed 6 cell refs.
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/system_mipi_csi2_rx_subsystem_0_1_synth_1/system_mipi_csi2_rx_subsystem_0_1.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file system_mipi_csi2_rx_subsystem_0_1_utilization_synth.rpt -pb system_mipi_csi2_rx_subsystem_0_1_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 877.418 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun Dec 23 15:26:19 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 880.457 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Jan  1 19:57:42 2019...

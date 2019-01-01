@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Sun Dec 23 15:25:49 2018
+// Date        : Tue Jan  1 20:04:06 2019
 // Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_dvi2rgb_1_0/system_dvi2rgb_1_0_sim_netlist.v
@@ -20,7 +20,7 @@ module system_dvi2rgb_1_0
     TMDS_Data_p,
     TMDS_Data_n,
     RefClk,
-    aRst_n,
+    aRst,
     vid_pData,
     vid_pVDE,
     vid_pHSync,
@@ -33,13 +33,13 @@ module system_dvi2rgb_1_0
     SCL_I,
     SCL_O,
     SCL_T,
-    pRst_n);
+    pRst);
   (* x_interface_info = "digilentinc.com:interface:tmds:1.0 TMDS CLK_P, xilinx.com:signal:clock:1.0 TMDS_Clk_p CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME TMDS, BOARD.ASSOCIATED_PARAM TMDS_BOARD_INTERFACE, XIL_INTERFACENAME TMDS_Clk_p, ASSOCIATED_RESET pRst, FREQ_HZ 100000000, PHASE 0.000" *) input TMDS_Clk_p;
   (* x_interface_info = "digilentinc.com:interface:tmds:1.0 TMDS CLK_N, xilinx.com:signal:clock:1.0 TMDS_Clk_n CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME TMDS_Clk_n, ASSOCIATED_RESET aRst_n, FREQ_HZ 100000000, PHASE 0.000" *) input TMDS_Clk_n;
   (* x_interface_info = "digilentinc.com:interface:tmds:1.0 TMDS DATA_P" *) input [2:0]TMDS_Data_p;
   (* x_interface_info = "digilentinc.com:interface:tmds:1.0 TMDS DATA_N" *) input [2:0]TMDS_Data_n;
   (* x_interface_info = "xilinx.com:signal:clock:1.0 RefClk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME RefClk, FREQ_HZ 200000000, PHASE 0.000, CLK_DOMAIN system_processing_system7_0_0_FCLK_CLK2" *) input RefClk;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 AsyncRst_n RST" *) (* x_interface_parameter = "XIL_INTERFACENAME AsyncRst_n, POLARITY ACTIVE_LOW" *) input aRst_n;
+  input aRst;
   (* x_interface_info = "xilinx.com:interface:vid_io:1.0 RGB DATA" *) output [23:0]vid_pData;
   (* x_interface_info = "xilinx.com:interface:vid_io:1.0 RGB ACTIVE_VIDEO" *) output vid_pVDE;
   (* x_interface_info = "xilinx.com:interface:vid_io:1.0 RGB HSYNC" *) output vid_pHSync;
@@ -52,7 +52,7 @@ module system_dvi2rgb_1_0
   (* x_interface_info = "xilinx.com:interface:iic:1.0 DDC SCL_I" *) input SCL_I;
   (* x_interface_info = "xilinx.com:interface:iic:1.0 DDC SCL_O" *) output SCL_O;
   (* x_interface_info = "xilinx.com:interface:iic:1.0 DDC SCL_T" *) output SCL_T;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 SyncRst_n RST" *) (* x_interface_parameter = "XIL_INTERFACENAME SyncRst_n, POLARITY ACTIVE_LOW" *) input pRst_n;
+  input pRst;
 
   wire PixelClk;
   wire RefClk;
@@ -67,8 +67,8 @@ module system_dvi2rgb_1_0
   (* DIFF_TERM = 0 *) (* IBUF_LOW_PWR *) (* IOSTANDARD = "TMDS_33" *) wire [2:0]TMDS_Data_n;
   (* DIFF_TERM = 0 *) (* IBUF_LOW_PWR *) (* IOSTANDARD = "TMDS_33" *) wire [2:0]TMDS_Data_p;
   wire aPixelClkLckd;
-  wire aRst_n;
-  wire pRst_n;
+  wire aRst;
+  wire pRst;
   wire [23:0]vid_pData;
   wire vid_pHSync;
   wire vid_pVDE;
@@ -82,7 +82,7 @@ module system_dvi2rgb_1_0
   (* kEmulateDDC = "TRUE" *) 
   (* kIDLY_TapValuePs = "78" *) 
   (* kIDLY_TapWidth = "5" *) 
-  (* kRstActiveHigh = "FALSE" *) 
+  (* kRstActiveHigh = "TRUE" *) 
   system_dvi2rgb_1_0_dvi2rgb U0
        (.PixelClk(PixelClk),
         .RefClk(RefClk),
@@ -98,10 +98,10 @@ module system_dvi2rgb_1_0
         .TMDS_Data_n(TMDS_Data_n),
         .TMDS_Data_p(TMDS_Data_p),
         .aPixelClkLckd(aPixelClkLckd),
-        .aRst(1'b0),
-        .aRst_n(aRst_n),
-        .pRst(1'b0),
-        .pRst_n(pRst_n),
+        .aRst(aRst),
+        .aRst_n(1'b1),
+        .pRst(pRst),
+        .pRst_n(1'b1),
         .vid_pData(vid_pData),
         .vid_pHSync(vid_pHSync),
         .vid_pVDE(vid_pVDE),
@@ -11252,7 +11252,7 @@ endmodule
 
 (* ORIG_REF_NAME = "dvi2rgb" *) (* kAddBUFG = "TRUE" *) (* kClkRange = "2" *) 
 (* kDebug = "TRUE" *) (* kEdidFileName = "dgl_720p_cea.data" *) (* kEmulateDDC = "TRUE" *) 
-(* kIDLY_TapValuePs = "78" *) (* kIDLY_TapWidth = "5" *) (* kRstActiveHigh = "FALSE" *) 
+(* kIDLY_TapValuePs = "78" *) (* kIDLY_TapWidth = "5" *) (* kRstActiveHigh = "TRUE" *) 
 module system_dvi2rgb_1_0_dvi2rgb
    (TMDS_Clk_p,
     TMDS_Clk_n,
@@ -11313,8 +11313,7 @@ module system_dvi2rgb_1_0_dvi2rgb
   wire TMDS_Clk_p;
   wire [2:0]TMDS_Data_n;
   wire [2:0]TMDS_Data_p;
-  wire aRst_int;
-  wire aRst_n;
+  wire aRst;
   (* MARK_DEBUG *) wire dbg_Clocking_aLocked;
   wire [2:0]dbg_pAlignErr;
   wire [2:0]dbg_pBitslip;
@@ -11331,8 +11330,7 @@ module system_dvi2rgb_1_0_dvi2rgb
   wire pRdy_0;
   wire pRdy_1;
   wire pRdy_2;
-  wire pRst_int;
-  wire pRst_n;
+  wire pRst;
   (* MARK_DEBUG *) wire pTrigOut;
   wire pTrigOutAck;
   wire pVld_0;
@@ -11378,7 +11376,7 @@ module system_dvi2rgb_1_0_dvi2rgb
         .pMeVld(pVld_0),
         .pOtherChRdy({pRdy_1,pRdy_2}),
         .pOtherChVld({pVld_1,pVld_2}),
-        .pRst(pRst_int),
+        .pRst(pRst),
         .pVde(p_5_out),
         .sDataIn_n(TMDS_Data_n[0]),
         .sDataIn_p(TMDS_Data_p[0]));
@@ -11402,7 +11400,7 @@ module system_dvi2rgb_1_0_dvi2rgb
         .pMeVld(pVld_1),
         .pOtherChRdy({pRdy_2,pRdy_0}),
         .pOtherChVld({pVld_2,pVld_0}),
-        .pRst(pRst_int),
+        .pRst(pRst),
         .pVde(\NLW_DataDecoders[1].DecoderX_pVde_UNCONNECTED ),
         .sDataIn_n(TMDS_Data_n[1]),
         .sDataIn_p(TMDS_Data_p[1]));
@@ -11426,15 +11424,10 @@ module system_dvi2rgb_1_0_dvi2rgb
         .pMeVld(pVld_2),
         .pOtherChRdy({pRdy_0,pRdy_1}),
         .pOtherChVld({pVld_0,pVld_1}),
-        .pRst(pRst_int),
+        .pRst(pRst),
         .pVde(\NLW_DataDecoders[2].DecoderX_pVde_UNCONNECTED ),
         .sDataIn_n(TMDS_Data_n[2]),
         .sDataIn_p(TMDS_Data_p[2]));
-  LUT1 #(
-    .INIT(2'h1)) 
-    \DataDecoders[2].DecoderX_i_1 
-       (.I0(pRst_n),
-        .O(pRst_int));
   GND GND
        (.G(\<const0> ));
   system_dvi2rgb_1_0_ResyncToBUFG \GenerateBUFG.ResyncToBUFG_X 
@@ -11513,17 +11506,12 @@ module system_dvi2rgb_1_0_dvi2rgb
         .TMDS_Clk_n(TMDS_Clk_n),
         .TMDS_Clk_p(TMDS_Clk_p),
         .aLocked(dbg_Clocking_aLocked),
-        .aRst(aRst_int),
+        .aRst(aRst),
         .dbg_rBUFR_Rst(dbg_rBUFR_Rst),
         .dbg_rDlyRst(dbg_rDlyRst),
         .dbg_rMMCM_Locked(dbg_rMMCM_Locked),
         .dbg_rMMCM_Reset(dbg_rMMCM_Reset),
         .dbg_rRdyRst(dbg_rRdyRst));
-  LUT1 #(
-    .INIT(2'h1)) 
-    TMDS_ClockingX_i_1
-       (.I0(aRst_n),
-        .O(aRst_int));
   VCC VCC
        (.P(\<const1> ));
 endmodule

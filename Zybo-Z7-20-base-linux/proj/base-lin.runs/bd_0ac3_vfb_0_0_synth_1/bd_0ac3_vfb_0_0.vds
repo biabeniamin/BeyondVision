@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sun Dec 23 15:24:27 2018
-# Process ID: 17664
+# Start of session at: Tue Jan  1 19:55:07 2019
+# Process ID: 14560
 # Current directory: C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/bd_0ac3_vfb_0_0_synth_1
 # Command line: vivado.exe -log bd_0ac3_vfb_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_0ac3_vfb_0_0.tcl
 # Log file: C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/bd_0ac3_vfb_0_0_synth_1/bd_0ac3_vfb_0_0.vds
@@ -16,9 +16,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 22300 
+INFO: Helper process launched with PID 14348 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 446.422 ; gain = 99.238
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 445.305 ; gain = 98.039
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'bd_0ac3_vfb_0_0' [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_4/bd_0ac3_vfb_0_0.v:53]
 	Parameter AXIS_TDATA_WIDTH bound to: 64 - type: integer 
@@ -507,7 +507,7 @@ WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has u
 WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TSTRB[0]
 WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TDEST[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 502.488 ; gain = 155.305
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 501.820 ; gain = 154.555
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -520,10 +520,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 502.488 ; gain = 155.305
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 501.820 ; gain = 154.555
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 502.488 ; gain = 155.305
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 501.820 ; gain = 154.555
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -539,16 +539,16 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 869.695 ; gain = 1.656
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 868.059 ; gain = 1.129
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 869.695 ; gain = 522.512
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 868.059 ; gain = 520.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 869.695 ; gain = 522.512
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 868.059 ; gain = 520.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -556,11 +556,11 @@ Start Applying 'set_property' XDC Constraints
 Applied set_property DONT_TOUCH = true for inst/axis_dconverter/axis_conv_inst. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for inst. (constraint file  C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/bd_0ac3_vfb_0_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 869.695 ; gain = 522.512
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 868.059 ; gain = 520.793
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-4490] FSM extraction disabled for register 'state_reg' through user attribute
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 869.695 ; gain = 522.512
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 868.059 ; gain = 520.793
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -839,7 +839,7 @@ INFO: [Synth 8-3332] Sequential element (reorder/buf_data_reg[0][85]) is unused 
 INFO: [Synth 8-3332] Sequential element (reorder/buf_data_reg[0][84]) is unused and will be removed from module bd_0ac3_vfb_0_0_core.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 869.695 ; gain = 522.512
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 868.059 ; gain = 520.793
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -851,13 +851,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 869.695 ; gain = 522.512
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:36 . Memory (MB): peak = 868.059 ; gain = 520.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 905.586 ; gain = 558.402
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 902.512 ; gain = 555.246
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -869,7 +869,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 905.586 ; gain = 558.402
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 902.512 ; gain = 555.246
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -893,7 +893,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 905.586 ; gain = 558.402
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 902.512 ; gain = 555.246
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -906,7 +906,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 905.586 ; gain = 558.402
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 902.512 ; gain = 555.246
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -918,25 +918,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 905.586 ; gain = 558.402
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 902.512 ; gain = 555.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 905.586 ; gain = 558.402
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 902.512 ; gain = 555.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 905.586 ; gain = 558.402
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 902.512 ; gain = 555.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 905.586 ; gain = 558.402
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 902.512 ; gain = 555.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -976,11 +976,11 @@ Report Instance Areas:
 |8     |    reorder                                            |vfb_v1_0_11_reorder                                 |   495|
 +------+-------------------------------------------------------+----------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 905.586 ; gain = 558.402
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 902.512 ; gain = 555.246
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 905.586 ; gain = 191.195
-Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 905.586 ; gain = 558.402
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 902.512 ; gain = 189.008
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 902.512 ; gain = 555.246
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -990,7 +990,7 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 176 Infos, 89 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 905.586 ; gain = 569.871
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:43 . Memory (MB): peak = 902.512 ; gain = 566.711
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/bd_0ac3_vfb_0_0_synth_1/bd_0ac3_vfb_0_0.dcp' has been generated.
 INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_4/bd_0ac3_vfb_0_0.xci
@@ -998,5 +998,5 @@ INFO: [Coretcl 2-1174] Renamed 7 cell refs.
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/bd_0ac3_vfb_0_0_synth_1/bd_0ac3_vfb_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file bd_0ac3_vfb_0_0_utilization_synth.rpt -pb bd_0ac3_vfb_0_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 905.586 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun Dec 23 15:25:14 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.079 . Memory (MB): peak = 902.512 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Jan  1 19:56:02 2019...

@@ -590,11 +590,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Dec 23 13:18:44 UTC 2018</spirit:value>
+            <spirit:value>Tue Jan 01 17:46:16 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:7beed6ec</spirit:value>
+            <spirit:value>8:4bd39a51</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -610,11 +610,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Dec 23 13:18:44 UTC 2018</spirit:value>
+            <spirit:value>Tue Jan 01 17:51:56 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:7beed6ec</spirit:value>
+            <spirit:value>8:4bd39a51</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -629,11 +629,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Dec 23 13:18:44 UTC 2018</spirit:value>
+            <spirit:value>Tue Jan 01 17:46:16 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:fc673936</spirit:value>
+            <spirit:value>8:7f6153e0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -649,11 +649,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Dec 23 13:18:44 UTC 2018</spirit:value>
+            <spirit:value>Tue Jan 01 17:51:56 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:fc673936</spirit:value>
+            <spirit:value>8:7f6153e0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -667,11 +667,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Dec 23 13:25:51 UTC 2018</spirit:value>
+            <spirit:value>Tue Jan 01 18:04:07 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:7beed6ec</spirit:value>
+            <spirit:value>8:4bd39a51</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -768,7 +768,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.aRst" xilinx:dependency="$kRstActiveHigh">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.aRst" xilinx:dependency="$kRstActiveHigh">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -791,7 +791,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.aRst_n" xilinx:dependency="()not ($kRstActiveHigh)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.aRst_n" xilinx:dependency="()not ($kRstActiveHigh)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -994,7 +994,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pRst" xilinx:dependency="$kRstActiveHigh">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pRst" xilinx:dependency="$kRstActiveHigh">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -1017,7 +1017,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pRst_n" xilinx:dependency="()not ($kRstActiveHigh)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pRst_n" xilinx:dependency="()not ($kRstActiveHigh)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -1032,7 +1032,7 @@
       <spirit:modelParameter spirit:dataType="boolean">
         <spirit:name>kRstActiveHigh</spirit:name>
         <spirit:displayName>Resets active high</spirit:displayName>
-        <spirit:value spirit:format="bool" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.kRstActiveHigh">false</spirit:value>
+        <spirit:value spirit:format="bool" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.kRstActiveHigh">true</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>kClkRange</spirit:name>
@@ -1349,7 +1349,7 @@
     <spirit:parameter>
       <spirit:name>kRstActiveHigh</spirit:name>
       <spirit:displayName>Resets active high</spirit:displayName>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.kRstActiveHigh" spirit:order="1300">false</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.kRstActiveHigh" spirit:order="1300">true</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>kClkRange</spirit:name>
@@ -1375,11 +1375,11 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>TMDS_BOARD_INTERFACE</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.TMDS_BOARD_INTERFACE">hdmi_in</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.TMDS_BOARD_INTERFACE"/>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>IIC_BOARD_INTERFACE</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.IIC_BOARD_INTERFACE">hdmi_in_ddc</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.IIC_BOARD_INTERFACE"/>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>kDebug</spirit:name>
@@ -1401,12 +1401,6 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.PIXELCLK.CLK_DOMAIN" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.REFCLK.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.REFCLK.FREQ_HZ" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.IIC_BOARD_INTERFACE" xilinx:valueSource="user"/>
-        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.TMDS_BOARD_INTERFACE" xilinx:valueSource="user"/>
-        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.kAddBUFG" xilinx:valueSource="user"/>
-        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.kClkRange" xilinx:valueSource="user"/>
-        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.kEdidFileName" xilinx:valueSource="user"/>
-        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.kRstActiveHigh" xilinx:valueSource="user"/>
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>

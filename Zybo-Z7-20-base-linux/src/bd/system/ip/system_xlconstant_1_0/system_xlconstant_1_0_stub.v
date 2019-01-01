@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Sun Dec 23 15:22:06 2018
+// Date        : Tue Jan  1 19:55:02 2019
 // Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub -rename_top system_xlconstant_1_0 -prefix
 //               system_xlconstant_1_0_ system_xlconstant_0_0_stub.v

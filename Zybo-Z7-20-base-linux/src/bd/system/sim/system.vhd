@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Sun Dec 23 15:18:39 2018
+--Date        : Tue Jan  1 19:51:55 2019
 --Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
 --Command     : generate_target system.bd
 --Design      : system
@@ -6600,10 +6600,6 @@ entity system is
     eth_rst_b_tri_i : in STD_LOGIC_VECTOR ( 0 to 0 );
     eth_rst_b_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 );
     eth_rst_b_tri_t : out STD_LOGIC_VECTOR ( 0 to 0 );
-    hdmi_in_clk_n : in STD_LOGIC;
-    hdmi_in_clk_p : in STD_LOGIC;
-    hdmi_in_data_n : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    hdmi_in_data_p : in STD_LOGIC_VECTOR ( 2 downto 0 );
     hdmi_in_ddc_scl_i : in STD_LOGIC;
     hdmi_in_ddc_scl_o : out STD_LOGIC;
     hdmi_in_ddc_scl_t : out STD_LOGIC;
@@ -6611,10 +6607,6 @@ entity system is
     hdmi_in_ddc_sda_o : out STD_LOGIC;
     hdmi_in_ddc_sda_t : out STD_LOGIC;
     hdmi_in_hpd : out STD_LOGIC_VECTOR ( 0 to 0 );
-    hdmi_out_clk_n : out STD_LOGIC;
-    hdmi_out_clk_p : out STD_LOGIC;
-    hdmi_out_data_n : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    hdmi_out_data_p : out STD_LOGIC_VECTOR ( 2 downto 0 );
     hdmi_out_ddc_scl_i : in STD_LOGIC;
     hdmi_out_ddc_scl_o : out STD_LOGIC;
     hdmi_out_ddc_scl_t : out STD_LOGIC;
@@ -7500,7 +7492,7 @@ architecture STRUCTURE of system is
     TMDS_Data_p : in STD_LOGIC_VECTOR ( 2 downto 0 );
     TMDS_Data_n : in STD_LOGIC_VECTOR ( 2 downto 0 );
     RefClk : in STD_LOGIC;
-    aRst_n : in STD_LOGIC;
+    aRst : in STD_LOGIC;
     vid_pData : out STD_LOGIC_VECTOR ( 23 downto 0 );
     vid_pVDE : out STD_LOGIC;
     vid_pHSync : out STD_LOGIC;
@@ -7513,7 +7505,7 @@ architecture STRUCTURE of system is
     SCL_I : in STD_LOGIC;
     SCL_O : out STD_LOGIC;
     SCL_T : out STD_LOGIC;
-    pRst_n : in STD_LOGIC
+    pRst : in STD_LOGIC
   );
   end component system_dvi2rgb_1_0;
   component system_mipi_csi2_rx_subsystem_0_1 is
@@ -7939,10 +7931,6 @@ architecture STRUCTURE of system is
   signal dvi2rgb_1_RGB_HSYNC : STD_LOGIC;
   signal dvi2rgb_1_RGB_VSYNC : STD_LOGIC;
   signal dvi2rgb_1_aPixelClkLckd : STD_LOGIC;
-  signal hdmi_in_1_CLK_N : STD_LOGIC;
-  signal hdmi_in_1_CLK_P : STD_LOGIC;
-  signal hdmi_in_1_DATA_N : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal hdmi_in_1_DATA_P : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal mipi_csi2_rx_subsystem_0_csirxss_csi_irq : STD_LOGIC;
   signal mipi_csi2_rx_subsystem_0_video_out_TDATA : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal mipi_csi2_rx_subsystem_0_video_out_TDEST : STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -8294,10 +8282,6 @@ architecture STRUCTURE of system is
   signal ps7_0_axi_periph_M03_AXI_WREADY : STD_LOGIC;
   signal ps7_0_axi_periph_M03_AXI_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal ps7_0_axi_periph_M03_AXI_WVALID : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal rgb2dvi_1_TMDS_CLK_N : STD_LOGIC;
-  signal rgb2dvi_1_TMDS_CLK_P : STD_LOGIC;
-  signal rgb2dvi_1_TMDS_DATA_N : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal rgb2dvi_1_TMDS_DATA_P : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal rst_ps7_0_100M_interconnect_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal rst_ps7_0_100M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal rst_ps7_0_133M_interconnect_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -8389,6 +8373,10 @@ architecture STRUCTURE of system is
   signal NLW_processing_system7_0_S_AXI_HP1_WACOUNT_UNCONNECTED : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal NLW_processing_system7_0_S_AXI_HP1_WCOUNT_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal NLW_processing_system7_0_USB0_PORT_INDCTL_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal NLW_rgb2dvi_1_TMDS_Clk_n_UNCONNECTED : STD_LOGIC;
+  signal NLW_rgb2dvi_1_TMDS_Clk_p_UNCONNECTED : STD_LOGIC;
+  signal NLW_rgb2dvi_1_TMDS_Data_n_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal NLW_rgb2dvi_1_TMDS_Data_p_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal NLW_rst_ps7_0_100M_mb_reset_UNCONNECTED : STD_LOGIC;
   signal NLW_rst_ps7_0_100M_bus_struct_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_ps7_0_100M_peripheral_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -8460,16 +8448,12 @@ architecture STRUCTURE of system is
   attribute X_INTERFACE_INFO of dphy_clk_hs_p : signal is "xilinx.com:interface:mipi_phy:1.0 dphy CLK_HS_P";
   attribute X_INTERFACE_INFO of dphy_clk_lp_n : signal is "xilinx.com:interface:mipi_phy:1.0 dphy CLK_LP_N";
   attribute X_INTERFACE_INFO of dphy_clk_lp_p : signal is "xilinx.com:interface:mipi_phy:1.0 dphy CLK_LP_P";
-  attribute X_INTERFACE_INFO of hdmi_in_clk_n : signal is "digilentinc.com:interface:tmds:1.0 hdmi_in CLK_N";
-  attribute X_INTERFACE_INFO of hdmi_in_clk_p : signal is "digilentinc.com:interface:tmds:1.0 hdmi_in CLK_P";
   attribute X_INTERFACE_INFO of hdmi_in_ddc_scl_i : signal is "xilinx.com:interface:iic:1.0 hdmi_in_ddc SCL_I";
   attribute X_INTERFACE_INFO of hdmi_in_ddc_scl_o : signal is "xilinx.com:interface:iic:1.0 hdmi_in_ddc SCL_O";
   attribute X_INTERFACE_INFO of hdmi_in_ddc_scl_t : signal is "xilinx.com:interface:iic:1.0 hdmi_in_ddc SCL_T";
   attribute X_INTERFACE_INFO of hdmi_in_ddc_sda_i : signal is "xilinx.com:interface:iic:1.0 hdmi_in_ddc SDA_I";
   attribute X_INTERFACE_INFO of hdmi_in_ddc_sda_o : signal is "xilinx.com:interface:iic:1.0 hdmi_in_ddc SDA_O";
   attribute X_INTERFACE_INFO of hdmi_in_ddc_sda_t : signal is "xilinx.com:interface:iic:1.0 hdmi_in_ddc SDA_T";
-  attribute X_INTERFACE_INFO of hdmi_out_clk_n : signal is "digilentinc.com:interface:tmds:1.0 hdmi_out CLK_N";
-  attribute X_INTERFACE_INFO of hdmi_out_clk_p : signal is "digilentinc.com:interface:tmds:1.0 hdmi_out CLK_P";
   attribute X_INTERFACE_INFO of hdmi_out_ddc_scl_i : signal is "xilinx.com:interface:iic:1.0 hdmi_out_ddc SCL_I";
   attribute X_INTERFACE_INFO of hdmi_out_ddc_scl_o : signal is "xilinx.com:interface:iic:1.0 hdmi_out_ddc SCL_O";
   attribute X_INTERFACE_INFO of hdmi_out_ddc_scl_t : signal is "xilinx.com:interface:iic:1.0 hdmi_out_ddc SCL_T";
@@ -8494,10 +8478,6 @@ architecture STRUCTURE of system is
   attribute X_INTERFACE_INFO of eth_rst_b_tri_i : signal is "xilinx.com:interface:gpio:1.0 eth_rst_b TRI_I";
   attribute X_INTERFACE_INFO of eth_rst_b_tri_o : signal is "xilinx.com:interface:gpio:1.0 eth_rst_b TRI_O";
   attribute X_INTERFACE_INFO of eth_rst_b_tri_t : signal is "xilinx.com:interface:gpio:1.0 eth_rst_b TRI_T";
-  attribute X_INTERFACE_INFO of hdmi_in_data_n : signal is "digilentinc.com:interface:tmds:1.0 hdmi_in DATA_N";
-  attribute X_INTERFACE_INFO of hdmi_in_data_p : signal is "digilentinc.com:interface:tmds:1.0 hdmi_in DATA_P";
-  attribute X_INTERFACE_INFO of hdmi_out_data_n : signal is "digilentinc.com:interface:tmds:1.0 hdmi_out DATA_N";
-  attribute X_INTERFACE_INFO of hdmi_out_data_p : signal is "digilentinc.com:interface:tmds:1.0 hdmi_out DATA_P";
   attribute X_INTERFACE_INFO of leds_4bits_tri_i : signal is "xilinx.com:interface:gpio:1.0 leds_4bits TRI_I";
   attribute X_INTERFACE_INFO of leds_4bits_tri_o : signal is "xilinx.com:interface:gpio:1.0 leds_4bits TRI_O";
   attribute X_INTERFACE_INFO of leds_4bits_tri_t : signal is "xilinx.com:interface:gpio:1.0 leds_4bits TRI_T";
@@ -8547,19 +8527,11 @@ begin
   dvi2rgb_1_DDC_SDA_I <= hdmi_in_ddc_sda_i;
   eth_rst_b_tri_o(0) <= axi_gpio_eth_GPIO_TRI_O(0);
   eth_rst_b_tri_t(0) <= axi_gpio_eth_GPIO_TRI_T(0);
-  hdmi_in_1_CLK_N <= hdmi_in_clk_n;
-  hdmi_in_1_CLK_P <= hdmi_in_clk_p;
-  hdmi_in_1_DATA_N(2 downto 0) <= hdmi_in_data_n(2 downto 0);
-  hdmi_in_1_DATA_P(2 downto 0) <= hdmi_in_data_p(2 downto 0);
   hdmi_in_ddc_scl_o <= dvi2rgb_1_DDC_SCL_O;
   hdmi_in_ddc_scl_t <= dvi2rgb_1_DDC_SCL_T;
   hdmi_in_ddc_sda_o <= dvi2rgb_1_DDC_SDA_O;
   hdmi_in_ddc_sda_t <= dvi2rgb_1_DDC_SDA_T;
   hdmi_in_hpd(0) <= axi_gpio_0_gpio_io_o(0);
-  hdmi_out_clk_n <= rgb2dvi_1_TMDS_CLK_N;
-  hdmi_out_clk_p <= rgb2dvi_1_TMDS_CLK_P;
-  hdmi_out_data_n(2 downto 0) <= rgb2dvi_1_TMDS_DATA_N(2 downto 0);
-  hdmi_out_data_p(2 downto 0) <= rgb2dvi_1_TMDS_DATA_P(2 downto 0);
   hdmi_out_ddc_scl_o <= processing_system7_0_IIC_0_SCL_O;
   hdmi_out_ddc_scl_t <= processing_system7_0_IIC_0_SCL_T;
   hdmi_out_ddc_sda_o <= processing_system7_0_IIC_0_SDA_O;
@@ -9177,13 +9149,13 @@ dvi2rgb_1: component system_dvi2rgb_1_0
       SDA_I => dvi2rgb_1_DDC_SDA_I,
       SDA_O => dvi2rgb_1_DDC_SDA_O,
       SDA_T => dvi2rgb_1_DDC_SDA_T,
-      TMDS_Clk_n => hdmi_in_1_CLK_N,
-      TMDS_Clk_p => hdmi_in_1_CLK_P,
-      TMDS_Data_n(2 downto 0) => hdmi_in_1_DATA_N(2 downto 0),
-      TMDS_Data_p(2 downto 0) => hdmi_in_1_DATA_P(2 downto 0),
+      TMDS_Clk_n => '0',
+      TMDS_Clk_p => '0',
+      TMDS_Data_n(2 downto 0) => B"000",
+      TMDS_Data_p(2 downto 0) => B"000",
       aPixelClkLckd => dvi2rgb_1_aPixelClkLckd,
-      aRst_n => rst_ps7_0_100M_peripheral_aresetn(0),
-      pRst_n => '1',
+      aRst => '0',
+      pRst => '0',
       vid_pData(23 downto 0) => dvi2rgb_1_RGB_DATA(23 downto 0),
       vid_pHSync => dvi2rgb_1_RGB_HSYNC,
       vid_pVDE => dvi2rgb_1_RGB_ACTIVE_VIDEO,
@@ -9808,10 +9780,10 @@ rgb2dvi_1: component system_rgb2dvi_1_0
      port map (
       PixelClk => axi_dynclk_0_PXL_CLK_O,
       SerialClk => axi_dynclk_0_PXL_CLK_5X_O,
-      TMDS_Clk_n => rgb2dvi_1_TMDS_CLK_N,
-      TMDS_Clk_p => rgb2dvi_1_TMDS_CLK_P,
-      TMDS_Data_n(2 downto 0) => rgb2dvi_1_TMDS_DATA_N(2 downto 0),
-      TMDS_Data_p(2 downto 0) => rgb2dvi_1_TMDS_DATA_P(2 downto 0),
+      TMDS_Clk_n => NLW_rgb2dvi_1_TMDS_Clk_n_UNCONNECTED,
+      TMDS_Clk_p => NLW_rgb2dvi_1_TMDS_Clk_p_UNCONNECTED,
+      TMDS_Data_n(2 downto 0) => NLW_rgb2dvi_1_TMDS_Data_n_UNCONNECTED(2 downto 0),
+      TMDS_Data_p(2 downto 0) => NLW_rgb2dvi_1_TMDS_Data_p_UNCONNECTED(2 downto 0),
       aRst_n => axi_dynclk_0_LOCKED_O,
       vid_pData(23 downto 0) => v_axi4s_vid_out_0_vid_io_out_DATA(23 downto 0),
       vid_pHSync => v_axi4s_vid_out_0_vid_io_out_HSYNC,

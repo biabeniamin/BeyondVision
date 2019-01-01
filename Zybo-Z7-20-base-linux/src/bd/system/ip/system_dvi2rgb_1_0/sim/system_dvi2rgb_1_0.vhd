@@ -1,4 +1,4 @@
--- (c) Copyright 1995-2018 Xilinx, Inc. All rights reserved.
+-- (c) Copyright 1995-2019 Xilinx, Inc. All rights reserved.
 -- 
 -- This file contains confidential and proprietary information
 -- of Xilinx, Inc. and is protected under U.S. and
@@ -60,7 +60,7 @@ ENTITY system_dvi2rgb_1_0 IS
     TMDS_Data_p : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
     TMDS_Data_n : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
     RefClk : IN STD_LOGIC;
-    aRst_n : IN STD_LOGIC;
+    aRst : IN STD_LOGIC;
     vid_pData : OUT STD_LOGIC_VECTOR(23 DOWNTO 0);
     vid_pVDE : OUT STD_LOGIC;
     vid_pHSync : OUT STD_LOGIC;
@@ -73,7 +73,7 @@ ENTITY system_dvi2rgb_1_0 IS
     SCL_I : IN STD_LOGIC;
     SCL_O : OUT STD_LOGIC;
     SCL_T : OUT STD_LOGIC;
-    pRst_n : IN STD_LOGIC
+    pRst : IN STD_LOGIC
   );
 END system_dvi2rgb_1_0;
 
@@ -118,8 +118,6 @@ ARCHITECTURE system_dvi2rgb_1_0_arch OF system_dvi2rgb_1_0 IS
   END COMPONENT dvi2rgb;
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
-  ATTRIBUTE X_INTERFACE_PARAMETER OF pRst_n: SIGNAL IS "XIL_INTERFACENAME SyncRst_n, POLARITY ACTIVE_LOW";
-  ATTRIBUTE X_INTERFACE_INFO OF pRst_n: SIGNAL IS "xilinx.com:signal:reset:1.0 SyncRst_n RST";
   ATTRIBUTE X_INTERFACE_INFO OF SCL_T: SIGNAL IS "xilinx.com:interface:iic:1.0 DDC SCL_T";
   ATTRIBUTE X_INTERFACE_INFO OF SCL_O: SIGNAL IS "xilinx.com:interface:iic:1.0 DDC SCL_O";
   ATTRIBUTE X_INTERFACE_INFO OF SCL_I: SIGNAL IS "xilinx.com:interface:iic:1.0 DDC SCL_I";
@@ -133,8 +131,6 @@ ARCHITECTURE system_dvi2rgb_1_0_arch OF system_dvi2rgb_1_0 IS
   ATTRIBUTE X_INTERFACE_INFO OF vid_pHSync: SIGNAL IS "xilinx.com:interface:vid_io:1.0 RGB HSYNC";
   ATTRIBUTE X_INTERFACE_INFO OF vid_pVDE: SIGNAL IS "xilinx.com:interface:vid_io:1.0 RGB ACTIVE_VIDEO";
   ATTRIBUTE X_INTERFACE_INFO OF vid_pData: SIGNAL IS "xilinx.com:interface:vid_io:1.0 RGB DATA";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF aRst_n: SIGNAL IS "XIL_INTERFACENAME AsyncRst_n, POLARITY ACTIVE_LOW";
-  ATTRIBUTE X_INTERFACE_INFO OF aRst_n: SIGNAL IS "xilinx.com:signal:reset:1.0 AsyncRst_n RST";
   ATTRIBUTE X_INTERFACE_PARAMETER OF RefClk: SIGNAL IS "XIL_INTERFACENAME RefClk, FREQ_HZ 200000000, PHASE 0.000, CLK_DOMAIN system_processing_system7_0_0_FCLK_CLK2";
   ATTRIBUTE X_INTERFACE_INFO OF RefClk: SIGNAL IS "xilinx.com:signal:clock:1.0 RefClk CLK";
   ATTRIBUTE X_INTERFACE_INFO OF TMDS_Data_n: SIGNAL IS "digilentinc.com:interface:tmds:1.0 TMDS DATA_N";
@@ -147,7 +143,7 @@ BEGIN
   U0 : dvi2rgb
     GENERIC MAP (
       kEmulateDDC => true,
-      kRstActiveHigh => false,
+      kRstActiveHigh => true,
       kClkRange => 2,
       kIDLY_TapValuePs => 78,
       kIDLY_TapWidth => 5,
@@ -161,8 +157,8 @@ BEGIN
       TMDS_Data_p => TMDS_Data_p,
       TMDS_Data_n => TMDS_Data_n,
       RefClk => RefClk,
-      aRst => '0',
-      aRst_n => aRst_n,
+      aRst => aRst,
+      aRst_n => '1',
       vid_pData => vid_pData,
       vid_pVDE => vid_pVDE,
       vid_pHSync => vid_pHSync,
@@ -175,7 +171,7 @@ BEGIN
       SCL_I => SCL_I,
       SCL_O => SCL_O,
       SCL_T => SCL_T,
-      pRst => '0',
-      pRst_n => pRst_n
+      pRst => pRst,
+      pRst_n => '1'
     );
 END system_dvi2rgb_1_0_arch;

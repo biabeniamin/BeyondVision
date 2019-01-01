@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Sun Dec 23 15:25:49 2018
+// Date        : Tue Jan  1 20:04:06 2019
 // Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               C:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_dvi2rgb_1_0/system_dvi2rgb_1_0_stub.v
@@ -15,15 +15,15 @@
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* x_core_info = "dvi2rgb,Vivado 2018.2" *)
 module system_dvi2rgb_1_0(TMDS_Clk_p, TMDS_Clk_n, TMDS_Data_p, 
-  TMDS_Data_n, RefClk, aRst_n, vid_pData, vid_pVDE, vid_pHSync, vid_pVSync, PixelClk, 
-  aPixelClkLckd, SDA_I, SDA_O, SDA_T, SCL_I, SCL_O, SCL_T, pRst_n)
-/* synthesis syn_black_box black_box_pad_pin="TMDS_Clk_p,TMDS_Clk_n,TMDS_Data_p[2:0],TMDS_Data_n[2:0],RefClk,aRst_n,vid_pData[23:0],vid_pVDE,vid_pHSync,vid_pVSync,PixelClk,aPixelClkLckd,SDA_I,SDA_O,SDA_T,SCL_I,SCL_O,SCL_T,pRst_n" */;
+  TMDS_Data_n, RefClk, aRst, vid_pData, vid_pVDE, vid_pHSync, vid_pVSync, PixelClk, aPixelClkLckd, 
+  SDA_I, SDA_O, SDA_T, SCL_I, SCL_O, SCL_T, pRst)
+/* synthesis syn_black_box black_box_pad_pin="TMDS_Clk_p,TMDS_Clk_n,TMDS_Data_p[2:0],TMDS_Data_n[2:0],RefClk,aRst,vid_pData[23:0],vid_pVDE,vid_pHSync,vid_pVSync,PixelClk,aPixelClkLckd,SDA_I,SDA_O,SDA_T,SCL_I,SCL_O,SCL_T,pRst" */;
   input TMDS_Clk_p;
   input TMDS_Clk_n;
   input [2:0]TMDS_Data_p;
   input [2:0]TMDS_Data_n;
   input RefClk;
-  input aRst_n;
+  input aRst;
   output [23:0]vid_pData;
   output vid_pVDE;
   output vid_pHSync;
@@ -36,5 +36,5 @@ module system_dvi2rgb_1_0(TMDS_Clk_p, TMDS_Clk_n, TMDS_Data_p,
   input SCL_I;
   output SCL_O;
   output SCL_T;
-  input pRst_n;
+  input pRst;
 endmodule

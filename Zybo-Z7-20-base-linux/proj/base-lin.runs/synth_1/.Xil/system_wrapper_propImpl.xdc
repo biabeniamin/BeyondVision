@@ -123,3 +123,5 @@ set_property src_info {type:XDC file:1 line:206 export:INPUT save:INPUT read:REA
 set_false_path -from [get_clocks clk_out1_system_clk_wiz_0_0] -to [get_clocks clk_fpga_0]
 set_property src_info {type:XDC file:1 line:207 export:INPUT save:INPUT read:READ} [current_design]
 set_false_path -from [get_clocks clk_fpga_0] -to [get_clocks clk_out1_system_clk_wiz_0_0]
+set_property src_info {type:XDC file:1 line:209 export:INPUT save:INPUT read:READ} [current_design]
+create_clock -period 8.4 [get_ports { hdmi_in_clk_p }];

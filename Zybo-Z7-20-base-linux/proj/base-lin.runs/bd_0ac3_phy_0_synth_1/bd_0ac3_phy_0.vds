@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sun Dec 23 15:24:00 2018
-# Process ID: 21860
+# Start of session at: Tue Jan  1 19:54:19 2019
+# Process ID: 11188
 # Current directory: C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/bd_0ac3_phy_0_synth_1
 # Command line: vivado.exe -log bd_0ac3_phy_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_0ac3_phy_0.tcl
 # Log file: C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/bd_0ac3_phy_0_synth_1/bd_0ac3_phy_0.vds
@@ -16,7 +16,7 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 6160 
+INFO: Helper process launched with PID 7828 
 WARNING: [Synth 8-2507] parameter declaration becomes local in mipi_dphy_v4_1_1_rx_ppm_fifo with formal parameter declaration list [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ipshared/27d0/hdl/mipi_dphy_v4_1_vl_rfs.v:3267]
 WARNING: [Synth 8-2507] parameter declaration becomes local in mipi_dphy_v4_1_1_tx_rst_logic with formal parameter declaration list [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ipshared/27d0/hdl/mipi_dphy_v4_1_vl_rfs.v:8490]
 WARNING: [Synth 8-2507] parameter declaration becomes local in mipi_dphy_v4_1_1_rx_rst_logic with formal parameter declaration list [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ipshared/27d0/hdl/mipi_dphy_v4_1_vl_rfs.v:9004]
@@ -29,7 +29,7 @@ WARNING: [Synth 8-2507] parameter declaration becomes local in mipi_dphy_v4_1_1_
 WARNING: [Synth 8-2507] parameter declaration becomes local in mipi_dphy_v4_1_1_rx_fab_top with formal parameter declaration list [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ipshared/27d0/hdl/mipi_dphy_v4_1_vl_rfs.v:20806]
 WARNING: [Synth 8-2507] parameter declaration becomes local in mipi_dphy_v4_1_1_rx_fab_top with formal parameter declaration list [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ipshared/27d0/hdl/mipi_dphy_v4_1_vl_rfs.v:20840]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 462.270 ; gain = 113.973
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 462.652 ; gain = 114.387
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'bd_0ac3_phy_0' [c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_3/bd_0ac3_phy_0.v:91]
 	Parameter C_DPHY_MODE bound to: SLAVE - type: string 
@@ -253,7 +253,7 @@ WARNING: [Synth 8-3331] design mipi_dphy_v4_1_1_csi_rx_data_lane_sm has unconnec
 WARNING: [Synth 8-3331] design mipi_dphy_v4_1_1_csi_rx_data_lane_sm has unconnected port wakeup_reg[4]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 522.016 ; gain = 173.719
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 521.973 ; gain = 173.707
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -269,10 +269,10 @@ INFO: [Synth 8-3295] tying undriven pin slave_rx.dphy_rx_fab_top:rx_cl_fifo_empt
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 522.016 ; gain = 173.719
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 521.973 ; gain = 173.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 522.016 ; gain = 173.719
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 521.973 ; gain = 173.707
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -295,23 +295,23 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Timing 38-2] Deriving generated clocks
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.164 . Memory (MB): peak = 889.371 ; gain = 2.215
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.169 . Memory (MB): peak = 888.965 ; gain = 2.457
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 889.371 ; gain = 541.074
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 888.965 ; gain = 540.699
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 889.371 ; gain = 541.074
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 888.965 ; gain = 540.699
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for inst. (constraint file  C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/bd_0ac3_phy_0_synth_1/dont_touch.xdc, line 6).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 889.371 ; gain = 541.074
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 888.965 ; gain = 540.699
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'rst_blk_state_reg' in module 'mipi_dphy_v4_1_1_rx_rst_logic_7series'
 INFO: [Synth 8-5544] ROM "system_rst" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
@@ -444,7 +444,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'dl_rx_state_reg' using enc
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'gen_hs_high_rates_spec_v1_1.dl_state_reg' using encoding 'sequential' in module 'mipi_dphy_v4_1_1_rx_data_lane'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 889.371 ; gain = 541.074
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 888.965 ; gain = 540.699
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -855,7 +855,7 @@ INFO: [Synth 8-3332] Sequential element (gen_rx_data_lane[1].rx_data_lane_inst/g
 INFO: [Synth 8-3332] Sequential element (gen_rx_data_lane[1].rx_data_lane_inst/gen_csi_rx_data_lane_sm.csi_rx_data_lane_sm/dl_rxdataesc_reg[2]) is unused and will be removed from module mipi_dphy_v4_1_1_rx_fab_top.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 889.371 ; gain = 541.074
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 888.965 ; gain = 540.699
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -867,13 +867,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 889.371 ; gain = 541.074
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:00:48 . Memory (MB): peak = 888.965 ; gain = 540.699
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:46 . Memory (MB): peak = 896.297 ; gain = 548.000
+Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:49 . Memory (MB): peak = 895.387 ; gain = 547.121
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -885,7 +885,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:00:48 . Memory (MB): peak = 939.512 ; gain = 591.215
+Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:51 . Memory (MB): peak = 937.586 ; gain = 589.320
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -909,7 +909,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:43 ; elapsed = 00:00:49 . Memory (MB): peak = 939.512 ; gain = 591.215
+Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:00:53 . Memory (MB): peak = 937.586 ; gain = 589.320
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -922,7 +922,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:43 ; elapsed = 00:00:49 . Memory (MB): peak = 939.512 ; gain = 591.215
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:00:53 . Memory (MB): peak = 937.586 ; gain = 589.320
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -934,25 +934,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 939.512 ; gain = 591.215
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:46 ; elapsed = 00:00:54 . Memory (MB): peak = 937.586 ; gain = 589.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 939.512 ; gain = 591.215
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:46 ; elapsed = 00:00:54 . Memory (MB): peak = 937.586 ; gain = 589.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:00:50 . Memory (MB): peak = 939.512 ; gain = 591.215
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:46 ; elapsed = 00:00:54 . Memory (MB): peak = 937.586 ; gain = 589.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:00:50 . Memory (MB): peak = 939.512 ; gain = 591.215
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:46 ; elapsed = 00:00:54 . Memory (MB): peak = 937.586 ; gain = 589.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1057,11 +1057,11 @@ Report Instance Areas:
 |65    |      \slave_rx.bd_0ac3_phy_0_rx_ioi_i                      |mipi_dphy_v4_1_1_rx_ioi_7series                  |    15|
 +------+------------------------------------------------------------+-------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:00:50 . Memory (MB): peak = 939.512 ; gain = 591.215
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:46 ; elapsed = 00:00:54 . Memory (MB): peak = 937.586 ; gain = 589.320
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 540 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:38 . Memory (MB): peak = 939.512 ; gain = 223.859
-Synthesis Optimization Complete : Time (s): cpu = 00:00:44 ; elapsed = 00:00:50 . Memory (MB): peak = 939.512 ; gain = 591.215
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:42 . Memory (MB): peak = 937.586 ; gain = 222.328
+Synthesis Optimization Complete : Time (s): cpu = 00:00:47 ; elapsed = 00:00:54 . Memory (MB): peak = 937.586 ; gain = 589.320
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 32 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -1073,7 +1073,7 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 270 Infos, 123 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:47 ; elapsed = 00:00:53 . Memory (MB): peak = 939.512 ; gain = 597.152
+synth_design: Time (s): cpu = 00:00:50 ; elapsed = 00:00:58 . Memory (MB): peak = 937.586 ; gain = 594.691
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/bd_0ac3_phy_0_synth_1/bd_0ac3_phy_0.dcp' has been generated.
 INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_3/bd_0ac3_phy_0.xci
@@ -1081,5 +1081,5 @@ INFO: [Coretcl 2-1174] Renamed 64 cell refs.
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/bd_0ac3_phy_0_synth_1/bd_0ac3_phy_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file bd_0ac3_phy_0_utilization_synth.rpt -pb bd_0ac3_phy_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.067 . Memory (MB): peak = 939.512 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun Dec 23 15:25:08 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.108 . Memory (MB): peak = 937.586 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Jan  1 19:55:33 2019...
