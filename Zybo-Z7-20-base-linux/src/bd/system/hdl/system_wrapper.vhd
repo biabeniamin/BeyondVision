@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Tue Jan  1 19:51:56 2019
+--Date        : Tue Jan  1 20:22:47 2019
 --Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
 --Command     : generate_target system_wrapper.bd
 --Design      : system_wrapper
@@ -66,9 +66,17 @@ entity system_wrapper is
     dphy_data_lp_n : in STD_LOGIC_VECTOR ( 1 downto 0 );
     dphy_data_lp_p : in STD_LOGIC_VECTOR ( 1 downto 0 );
     eth_rst_b_tri_io : inout STD_LOGIC_VECTOR ( 0 to 0 );
+    hdmi_in_clk_n : in STD_LOGIC;
+    hdmi_in_clk_p : in STD_LOGIC;
+    hdmi_in_data_n : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    hdmi_in_data_p : in STD_LOGIC_VECTOR ( 2 downto 0 );
     hdmi_in_ddc_scl_io : inout STD_LOGIC;
     hdmi_in_ddc_sda_io : inout STD_LOGIC;
     hdmi_in_hpd : out STD_LOGIC_VECTOR ( 0 to 0 );
+    hdmi_out_clk_n : out STD_LOGIC;
+    hdmi_out_clk_p : out STD_LOGIC;
+    hdmi_out_data_n : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    hdmi_out_data_p : out STD_LOGIC_VECTOR ( 2 downto 0 );
     hdmi_out_ddc_scl_io : inout STD_LOGIC;
     hdmi_out_ddc_sda_io : inout STD_LOGIC;
     leds_4bits_tri_io : inout STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -162,7 +170,15 @@ architecture STRUCTURE of system_wrapper is
     ac_mclk : out STD_LOGIC;
     sys_clock : in STD_LOGIC;
     ac_muten : out STD_LOGIC_VECTOR ( 0 to 0 );
-    cam_gpio : out STD_LOGIC_VECTOR ( 0 to 0 )
+    cam_gpio : out STD_LOGIC_VECTOR ( 0 to 0 );
+    hdmi_in_clk_p : in STD_LOGIC;
+    hdmi_in_clk_n : in STD_LOGIC;
+    hdmi_in_data_p : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    hdmi_in_data_n : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    hdmi_out_clk_p : out STD_LOGIC;
+    hdmi_out_clk_n : out STD_LOGIC;
+    hdmi_out_data_p : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    hdmi_out_data_n : out STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   end component system;
   component IOBUF is
@@ -374,6 +390,10 @@ system_i: component system
       eth_rst_b_tri_i(0) => eth_rst_b_tri_i_0(0),
       eth_rst_b_tri_o(0) => eth_rst_b_tri_o_0(0),
       eth_rst_b_tri_t(0) => eth_rst_b_tri_t_0(0),
+      hdmi_in_clk_n => hdmi_in_clk_n,
+      hdmi_in_clk_p => hdmi_in_clk_p,
+      hdmi_in_data_n(2 downto 0) => hdmi_in_data_n(2 downto 0),
+      hdmi_in_data_p(2 downto 0) => hdmi_in_data_p(2 downto 0),
       hdmi_in_ddc_scl_i => hdmi_in_ddc_scl_i,
       hdmi_in_ddc_scl_o => hdmi_in_ddc_scl_o,
       hdmi_in_ddc_scl_t => hdmi_in_ddc_scl_t,
@@ -381,6 +401,10 @@ system_i: component system
       hdmi_in_ddc_sda_o => hdmi_in_ddc_sda_o,
       hdmi_in_ddc_sda_t => hdmi_in_ddc_sda_t,
       hdmi_in_hpd(0) => hdmi_in_hpd(0),
+      hdmi_out_clk_n => hdmi_out_clk_n,
+      hdmi_out_clk_p => hdmi_out_clk_p,
+      hdmi_out_data_n(2 downto 0) => hdmi_out_data_n(2 downto 0),
+      hdmi_out_data_p(2 downto 0) => hdmi_out_data_p(2 downto 0),
       hdmi_out_ddc_scl_i => hdmi_out_ddc_scl_i,
       hdmi_out_ddc_scl_o => hdmi_out_ddc_scl_o,
       hdmi_out_ddc_scl_t => hdmi_out_ddc_scl_t,

@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
 // Date        : Tue Jan  1 19:57:04 2019
 // Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_xbar_0/system_xbar_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top system_xbar_0 -prefix
+//               system_xbar_0_ system_xbar_0_stub.v
 // Design      : system_xbar_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1

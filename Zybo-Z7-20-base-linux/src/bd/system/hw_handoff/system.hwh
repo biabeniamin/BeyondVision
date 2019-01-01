@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jan  1 19:52:45 2019" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jan  1 20:22:49 2019" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-20:part0:1.0" DEVICE="7z020" NAME="system" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -130,6 +130,14 @@
         <CONNECTION INSTANCE="PS_GPIO_2" PORT="Dout"/>
       </CONNECTIONS>
     </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="hdmi_in_clk_p" SIGIS="clk"/>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="hdmi_in_clk_n" SIGIS="clk"/>
+    <PORT DIR="I" LEFT="2" NAME="hdmi_in_data_p" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="2" NAME="hdmi_in_data_n" RIGHT="0" SIGIS="undef"/>
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="hdmi_out_clk_p" SIGIS="clk"/>
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="hdmi_out_clk_n" SIGIS="clk"/>
+    <PORT DIR="O" LEFT="2" NAME="hdmi_out_data_p" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" LEFT="2" NAME="hdmi_out_data_n" RIGHT="0" SIGIS="undef"/>
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES>
@@ -281,6 +289,22 @@
         <PORTMAP LOGICAL="TRI_I" PHYSICAL="eth_rst_b_tri_i"/>
         <PORTMAP LOGICAL="TRI_O" PHYSICAL="eth_rst_b_tri_o"/>
         <PORTMAP LOGICAL="TRI_T" PHYSICAL="eth_rst_b_tri_t"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
+    <BUSINTERFACE BUSNAME="External_Interface_hdmi_in" NAME="hdmi_in" TYPE="TARGET">
+      <PORTMAPS>
+        <PORTMAP LOGICAL="CLK_P" PHYSICAL="hdmi_in_clk_p"/>
+        <PORTMAP LOGICAL="CLK_N" PHYSICAL="hdmi_in_clk_n"/>
+        <PORTMAP LOGICAL="DATA_P" PHYSICAL="hdmi_in_data_p"/>
+        <PORTMAP LOGICAL="DATA_N" PHYSICAL="hdmi_in_data_n"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
+    <BUSINTERFACE BUSNAME="rgb2dvi_1_TMDS" NAME="hdmi_out" TYPE="INITIATOR">
+      <PORTMAPS>
+        <PORTMAP LOGICAL="CLK_P" PHYSICAL="hdmi_out_clk_p"/>
+        <PORTMAP LOGICAL="CLK_N" PHYSICAL="hdmi_out_clk_n"/>
+        <PORTMAP LOGICAL="DATA_P" PHYSICAL="hdmi_out_data_p"/>
+        <PORTMAP LOGICAL="DATA_N" PHYSICAL="hdmi_out_data_n"/>
       </PORTMAPS>
     </BUSINTERFACE>
   </EXTERNALINTERFACES>
@@ -10549,7 +10573,7 @@
         <PORT DIR="I" NAME="pRst" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="TMDS" TYPE="TARGET" VLNV="digilentinc.com:interface:tmds:1.0">
+        <BUSINTERFACE BUSNAME="External_Interface_hdmi_in" NAME="TMDS" TYPE="TARGET" VLNV="digilentinc.com:interface:tmds:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="CLK_P" PHYSICAL="TMDS_Clk_p"/>
             <PORTMAP LOGICAL="CLK_N" PHYSICAL="TMDS_Clk_n"/>
@@ -16253,7 +16277,7 @@
         </PORT>
       </PORTS>
       <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="TMDS" TYPE="INITIATOR" VLNV="digilentinc.com:interface:tmds:1.0">
+        <BUSINTERFACE BUSNAME="rgb2dvi_1_TMDS" NAME="TMDS" TYPE="INITIATOR" VLNV="digilentinc.com:interface:tmds:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="CLK_P" PHYSICAL="TMDS_Clk_p"/>
             <PORTMAP LOGICAL="CLK_N" PHYSICAL="TMDS_Clk_n"/>
