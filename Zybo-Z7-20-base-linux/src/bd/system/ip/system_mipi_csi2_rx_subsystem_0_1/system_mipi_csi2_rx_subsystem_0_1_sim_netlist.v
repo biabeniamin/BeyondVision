@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Tue Jan  1 19:57:42 2019
+// Date        : Tue Jan  1 19:57:41 2019
 // Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               C:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/system_mipi_csi2_rx_subsystem_0_1_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top system_mipi_csi2_rx_subsystem_0_1 -prefix
+//               system_mipi_csi2_rx_subsystem_0_1_ system_mipi_csi2_rx_subsystem_0_1_sim_netlist.v
 // Design      : system_mipi_csi2_rx_subsystem_0_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,184 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "system_mipi_csi2_rx_subsystem_0_1,bd_0ac3,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "bd_0ac3,Vivado 2018.2" *) 
-(* NotValidForBitStream *)
-module system_mipi_csi2_rx_subsystem_0_1
-   (lite_aclk,
-    lite_aresetn,
-    dphy_clk_200M,
-    dlyctrl_rdy_out,
-    rxbyteclkhs,
-    system_rst_out,
-    csirxss_csi_irq,
-    video_aclk,
-    video_aresetn,
-    csirxss_s_axi_awaddr,
-    csirxss_s_axi_awprot,
-    csirxss_s_axi_awvalid,
-    csirxss_s_axi_awready,
-    csirxss_s_axi_wdata,
-    csirxss_s_axi_wstrb,
-    csirxss_s_axi_wvalid,
-    csirxss_s_axi_wready,
-    csirxss_s_axi_bresp,
-    csirxss_s_axi_bvalid,
-    csirxss_s_axi_bready,
-    csirxss_s_axi_araddr,
-    csirxss_s_axi_arprot,
-    csirxss_s_axi_arvalid,
-    csirxss_s_axi_arready,
-    csirxss_s_axi_rdata,
-    csirxss_s_axi_rresp,
-    csirxss_s_axi_rvalid,
-    csirxss_s_axi_rready,
-    video_out_tdata,
-    video_out_tdest,
-    video_out_tlast,
-    video_out_tready,
-    video_out_tuser,
-    video_out_tvalid,
-    mipi_phy_if_clk_hs_n,
-    mipi_phy_if_clk_hs_p,
-    mipi_phy_if_clk_lp_n,
-    mipi_phy_if_clk_lp_p,
-    mipi_phy_if_data_hs_n,
-    mipi_phy_if_data_hs_p,
-    mipi_phy_if_data_lp_n,
-    mipi_phy_if_data_lp_p);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.lite_aclk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.lite_aclk, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN system_processing_system7_0_0_FCLK_CLK0, ASSOCIATED_BUSIF csirxss_s_axi, ASSOCIATED_RESET lite_aresetn" *) input lite_aclk;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 RST.lite_aresetn RST" *) (* x_interface_parameter = "XIL_INTERFACENAME RST.lite_aresetn, POLARITY ACTIVE_LOW, TYPE INTERCONNECT" *) input lite_aresetn;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.dphy_clk_200M CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.dphy_clk_200M, FREQ_HZ 200000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1" *) input dphy_clk_200M;
-  output dlyctrl_rdy_out;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.rxbyteclkhs CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.rxbyteclkhs, FREQ_HZ 100000000.0, PHASE 0, CLK_DOMAIN bd_0ac3_phy_0_rxbyteclkhs" *) output rxbyteclkhs;
-  output system_rst_out;
-  (* x_interface_info = "xilinx.com:signal:interrupt:1.0 INTR.csirxss_csi_irq INTERRUPT" *) (* x_interface_parameter = "XIL_INTERFACENAME INTR.csirxss_csi_irq, SENSITIVITY LEVEL_HIGH, PortWidth 1" *) output csirxss_csi_irq;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.video_aclk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.video_aclk, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN system_processing_system7_0_0_FCLK_CLK0, ASSOCIATED_BUSIF video_out, ASSOCIATED_RESET video_aresetn" *) input video_aclk;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 RST.video_aresetn RST" *) (* x_interface_parameter = "XIL_INTERFACENAME RST.video_aresetn, POLARITY ACTIVE_LOW" *) input video_aresetn;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 csirxss_s_axi AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME csirxss_s_axi, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 17, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN system_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input [16:0]csirxss_s_axi_awaddr;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 csirxss_s_axi AWPROT" *) input [2:0]csirxss_s_axi_awprot;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 csirxss_s_axi AWVALID" *) input [0:0]csirxss_s_axi_awvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 csirxss_s_axi AWREADY" *) output [0:0]csirxss_s_axi_awready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 csirxss_s_axi WDATA" *) input [31:0]csirxss_s_axi_wdata;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 csirxss_s_axi WSTRB" *) input [3:0]csirxss_s_axi_wstrb;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 csirxss_s_axi WVALID" *) input [0:0]csirxss_s_axi_wvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 csirxss_s_axi WREADY" *) output [0:0]csirxss_s_axi_wready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 csirxss_s_axi BRESP" *) output [1:0]csirxss_s_axi_bresp;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 csirxss_s_axi BVALID" *) output [0:0]csirxss_s_axi_bvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 csirxss_s_axi BREADY" *) input [0:0]csirxss_s_axi_bready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 csirxss_s_axi ARADDR" *) input [16:0]csirxss_s_axi_araddr;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 csirxss_s_axi ARPROT" *) input [2:0]csirxss_s_axi_arprot;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 csirxss_s_axi ARVALID" *) input [0:0]csirxss_s_axi_arvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 csirxss_s_axi ARREADY" *) output [0:0]csirxss_s_axi_arready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 csirxss_s_axi RDATA" *) output [31:0]csirxss_s_axi_rdata;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 csirxss_s_axi RRESP" *) output [1:0]csirxss_s_axi_rresp;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 csirxss_s_axi RVALID" *) output [0:0]csirxss_s_axi_rvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 csirxss_s_axi RREADY" *) input [0:0]csirxss_s_axi_rready;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 video_out TDATA" *) (* x_interface_parameter = "XIL_INTERFACENAME video_out, TDATA_NUM_BYTES 2, TDEST_WIDTH 8, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN system_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef" *) output [15:0]video_out_tdata;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 video_out TDEST" *) output [7:0]video_out_tdest;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 video_out TLAST" *) output video_out_tlast;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 video_out TREADY" *) input video_out_tready;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 video_out TUSER" *) output [0:0]video_out_tuser;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 video_out TVALID" *) output video_out_tvalid;
-  (* x_interface_info = "xilinx.com:interface:mipi_phy:1.0 mipi_phy_if CLK_HS_N" *) input mipi_phy_if_clk_hs_n;
-  (* x_interface_info = "xilinx.com:interface:mipi_phy:1.0 mipi_phy_if CLK_HS_P" *) input mipi_phy_if_clk_hs_p;
-  (* x_interface_info = "xilinx.com:interface:mipi_phy:1.0 mipi_phy_if CLK_LP_N" *) input mipi_phy_if_clk_lp_n;
-  (* x_interface_info = "xilinx.com:interface:mipi_phy:1.0 mipi_phy_if CLK_LP_P" *) input mipi_phy_if_clk_lp_p;
-  (* x_interface_info = "xilinx.com:interface:mipi_phy:1.0 mipi_phy_if DATA_HS_N" *) input [1:0]mipi_phy_if_data_hs_n;
-  (* x_interface_info = "xilinx.com:interface:mipi_phy:1.0 mipi_phy_if DATA_HS_P" *) input [1:0]mipi_phy_if_data_hs_p;
-  (* x_interface_info = "xilinx.com:interface:mipi_phy:1.0 mipi_phy_if DATA_LP_N" *) input [1:0]mipi_phy_if_data_lp_n;
-  (* x_interface_info = "xilinx.com:interface:mipi_phy:1.0 mipi_phy_if DATA_LP_P" *) input [1:0]mipi_phy_if_data_lp_p;
-
-  wire csirxss_csi_irq;
-  wire [16:0]csirxss_s_axi_araddr;
-  wire [2:0]csirxss_s_axi_arprot;
-  wire [0:0]csirxss_s_axi_arready;
-  wire [0:0]csirxss_s_axi_arvalid;
-  wire [16:0]csirxss_s_axi_awaddr;
-  wire [2:0]csirxss_s_axi_awprot;
-  wire [0:0]csirxss_s_axi_awready;
-  wire [0:0]csirxss_s_axi_awvalid;
-  wire [0:0]csirxss_s_axi_bready;
-  wire [1:0]csirxss_s_axi_bresp;
-  wire [0:0]csirxss_s_axi_bvalid;
-  wire [31:0]csirxss_s_axi_rdata;
-  wire [0:0]csirxss_s_axi_rready;
-  wire [1:0]csirxss_s_axi_rresp;
-  wire [0:0]csirxss_s_axi_rvalid;
-  wire [31:0]csirxss_s_axi_wdata;
-  wire [0:0]csirxss_s_axi_wready;
-  wire [3:0]csirxss_s_axi_wstrb;
-  wire [0:0]csirxss_s_axi_wvalid;
-  wire dlyctrl_rdy_out;
-  wire dphy_clk_200M;
-  wire lite_aclk;
-  wire lite_aresetn;
-  wire mipi_phy_if_clk_hs_n;
-  wire mipi_phy_if_clk_hs_p;
-  wire mipi_phy_if_clk_lp_n;
-  wire mipi_phy_if_clk_lp_p;
-  wire [1:0]mipi_phy_if_data_hs_n;
-  wire [1:0]mipi_phy_if_data_hs_p;
-  wire [1:0]mipi_phy_if_data_lp_n;
-  wire [1:0]mipi_phy_if_data_lp_p;
-  wire rxbyteclkhs;
-  wire system_rst_out;
-  wire video_aclk;
-  wire video_aresetn;
-  wire [15:0]video_out_tdata;
-  wire [7:0]video_out_tdest;
-  wire video_out_tlast;
-  wire video_out_tready;
-  wire [0:0]video_out_tuser;
-  wire video_out_tvalid;
-
-  (* hw_handoff = "system_mipi_csi2_rx_subsystem_0_1.hwdef" *) 
-  system_mipi_csi2_rx_subsystem_0_1_bd_0ac3 U0
-       (.csirxss_csi_irq(csirxss_csi_irq),
-        .csirxss_s_axi_araddr(csirxss_s_axi_araddr),
-        .csirxss_s_axi_arprot(csirxss_s_axi_arprot),
-        .csirxss_s_axi_arready(csirxss_s_axi_arready),
-        .csirxss_s_axi_arvalid(csirxss_s_axi_arvalid),
-        .csirxss_s_axi_awaddr(csirxss_s_axi_awaddr),
-        .csirxss_s_axi_awprot(csirxss_s_axi_awprot),
-        .csirxss_s_axi_awready(csirxss_s_axi_awready),
-        .csirxss_s_axi_awvalid(csirxss_s_axi_awvalid),
-        .csirxss_s_axi_bready(csirxss_s_axi_bready),
-        .csirxss_s_axi_bresp(csirxss_s_axi_bresp),
-        .csirxss_s_axi_bvalid(csirxss_s_axi_bvalid),
-        .csirxss_s_axi_rdata(csirxss_s_axi_rdata),
-        .csirxss_s_axi_rready(csirxss_s_axi_rready),
-        .csirxss_s_axi_rresp(csirxss_s_axi_rresp),
-        .csirxss_s_axi_rvalid(csirxss_s_axi_rvalid),
-        .csirxss_s_axi_wdata(csirxss_s_axi_wdata),
-        .csirxss_s_axi_wready(csirxss_s_axi_wready),
-        .csirxss_s_axi_wstrb(csirxss_s_axi_wstrb),
-        .csirxss_s_axi_wvalid(csirxss_s_axi_wvalid),
-        .dlyctrl_rdy_out(dlyctrl_rdy_out),
-        .dphy_clk_200M(dphy_clk_200M),
-        .lite_aclk(lite_aclk),
-        .lite_aresetn(lite_aresetn),
-        .mipi_phy_if_clk_hs_n(mipi_phy_if_clk_hs_n),
-        .mipi_phy_if_clk_hs_p(mipi_phy_if_clk_hs_p),
-        .mipi_phy_if_clk_lp_n(mipi_phy_if_clk_lp_n),
-        .mipi_phy_if_clk_lp_p(mipi_phy_if_clk_lp_p),
-        .mipi_phy_if_data_hs_n(mipi_phy_if_data_hs_n),
-        .mipi_phy_if_data_hs_p(mipi_phy_if_data_hs_p),
-        .mipi_phy_if_data_lp_n(mipi_phy_if_data_lp_n),
-        .mipi_phy_if_data_lp_p(mipi_phy_if_data_lp_p),
-        .rxbyteclkhs(rxbyteclkhs),
-        .system_rst_out(system_rst_out),
-        .video_aclk(video_aclk),
-        .video_aresetn(video_aresetn),
-        .video_out_tdata(video_out_tdata),
-        .video_out_tdest(video_out_tdest),
-        .video_out_tlast(video_out_tlast),
-        .video_out_tready(video_out_tready),
-        .video_out_tuser(video_out_tuser),
-        .video_out_tvalid(video_out_tvalid));
-endmodule
-
-(* ORIG_REF_NAME = "bd_0ac3" *) (* hw_handoff = "system_mipi_csi2_rx_subsystem_0_1.hwdef" *) 
+(* hw_handoff = "system_mipi_csi2_rx_subsystem_0_1.hwdef" *) 
 module system_mipi_csi2_rx_subsystem_0_1_bd_0ac3
    (csirxss_csi_irq,
     csirxss_s_axi_araddr,
@@ -642,7 +465,6 @@ module system_mipi_csi2_rx_subsystem_0_1_bd_0ac3
         .s_axi_wvalid(csirxss_s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "bd_0ac3_phy_0" *) 
 module system_mipi_csi2_rx_subsystem_0_1_bd_0ac3_phy_0
    (core_clk,
     core_rst,
@@ -800,7 +622,6 @@ module system_mipi_csi2_rx_subsystem_0_1_bd_0ac3_phy_0
 
 endmodule
 
-(* ORIG_REF_NAME = "bd_0ac3_r_sync_0" *) 
 module system_mipi_csi2_rx_subsystem_0_1_bd_0ac3_r_sync_0
    (slowest_sync_clk,
     ext_reset_in,
@@ -826,7 +647,6 @@ module system_mipi_csi2_rx_subsystem_0_1_bd_0ac3_r_sync_0
 
 endmodule
 
-(* ORIG_REF_NAME = "bd_0ac3_rx_0" *) 
 module system_mipi_csi2_rx_subsystem_0_1_bd_0ac3_rx_0
    (s_axi_aclk,
     s_axi_aresetn,
@@ -956,7 +776,6 @@ module system_mipi_csi2_rx_subsystem_0_1_bd_0ac3_rx_0
 
 endmodule
 
-(* ORIG_REF_NAME = "bd_0ac3_vfb_0_0" *) 
 module system_mipi_csi2_rx_subsystem_0_1_bd_0ac3_vfb_0_0
    (s_axis_aclk,
     s_axis_aresetn,
@@ -1006,7 +825,6 @@ module system_mipi_csi2_rx_subsystem_0_1_bd_0ac3_vfb_0_0
 
 endmodule
 
-(* ORIG_REF_NAME = "bd_0ac3_xbar_0" *) 
 module system_mipi_csi2_rx_subsystem_0_1_bd_0ac3_xbar_0
    (aclk,
     aresetn,
@@ -1090,6 +908,183 @@ module system_mipi_csi2_rx_subsystem_0_1_bd_0ac3_xbar_0
   output [1:0]m_axi_rready;
 
 
+endmodule
+
+(* CHECK_LICENSE_TYPE = "system_mipi_csi2_rx_subsystem_0_1,bd_0ac3,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "bd_0ac3,Vivado 2018.2" *) 
+(* NotValidForBitStream *)
+module system_mipi_csi2_rx_subsystem_0_1
+   (lite_aclk,
+    lite_aresetn,
+    dphy_clk_200M,
+    dlyctrl_rdy_out,
+    rxbyteclkhs,
+    system_rst_out,
+    csirxss_csi_irq,
+    video_aclk,
+    video_aresetn,
+    csirxss_s_axi_awaddr,
+    csirxss_s_axi_awprot,
+    csirxss_s_axi_awvalid,
+    csirxss_s_axi_awready,
+    csirxss_s_axi_wdata,
+    csirxss_s_axi_wstrb,
+    csirxss_s_axi_wvalid,
+    csirxss_s_axi_wready,
+    csirxss_s_axi_bresp,
+    csirxss_s_axi_bvalid,
+    csirxss_s_axi_bready,
+    csirxss_s_axi_araddr,
+    csirxss_s_axi_arprot,
+    csirxss_s_axi_arvalid,
+    csirxss_s_axi_arready,
+    csirxss_s_axi_rdata,
+    csirxss_s_axi_rresp,
+    csirxss_s_axi_rvalid,
+    csirxss_s_axi_rready,
+    video_out_tdata,
+    video_out_tdest,
+    video_out_tlast,
+    video_out_tready,
+    video_out_tuser,
+    video_out_tvalid,
+    mipi_phy_if_clk_hs_n,
+    mipi_phy_if_clk_hs_p,
+    mipi_phy_if_clk_lp_n,
+    mipi_phy_if_clk_lp_p,
+    mipi_phy_if_data_hs_n,
+    mipi_phy_if_data_hs_p,
+    mipi_phy_if_data_lp_n,
+    mipi_phy_if_data_lp_p);
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.lite_aclk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.lite_aclk, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN system_processing_system7_0_0_FCLK_CLK0, ASSOCIATED_BUSIF csirxss_s_axi, ASSOCIATED_RESET lite_aresetn" *) input lite_aclk;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 RST.lite_aresetn RST" *) (* x_interface_parameter = "XIL_INTERFACENAME RST.lite_aresetn, POLARITY ACTIVE_LOW, TYPE INTERCONNECT" *) input lite_aresetn;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.dphy_clk_200M CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.dphy_clk_200M, FREQ_HZ 200000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1" *) input dphy_clk_200M;
+  output dlyctrl_rdy_out;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.rxbyteclkhs CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.rxbyteclkhs, FREQ_HZ 100000000.0, PHASE 0, CLK_DOMAIN bd_0ac3_phy_0_rxbyteclkhs" *) output rxbyteclkhs;
+  output system_rst_out;
+  (* x_interface_info = "xilinx.com:signal:interrupt:1.0 INTR.csirxss_csi_irq INTERRUPT" *) (* x_interface_parameter = "XIL_INTERFACENAME INTR.csirxss_csi_irq, SENSITIVITY LEVEL_HIGH, PortWidth 1" *) output csirxss_csi_irq;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.video_aclk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.video_aclk, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN system_processing_system7_0_0_FCLK_CLK0, ASSOCIATED_BUSIF video_out, ASSOCIATED_RESET video_aresetn" *) input video_aclk;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 RST.video_aresetn RST" *) (* x_interface_parameter = "XIL_INTERFACENAME RST.video_aresetn, POLARITY ACTIVE_LOW" *) input video_aresetn;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 csirxss_s_axi AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME csirxss_s_axi, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 17, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN system_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input [16:0]csirxss_s_axi_awaddr;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 csirxss_s_axi AWPROT" *) input [2:0]csirxss_s_axi_awprot;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 csirxss_s_axi AWVALID" *) input [0:0]csirxss_s_axi_awvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 csirxss_s_axi AWREADY" *) output [0:0]csirxss_s_axi_awready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 csirxss_s_axi WDATA" *) input [31:0]csirxss_s_axi_wdata;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 csirxss_s_axi WSTRB" *) input [3:0]csirxss_s_axi_wstrb;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 csirxss_s_axi WVALID" *) input [0:0]csirxss_s_axi_wvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 csirxss_s_axi WREADY" *) output [0:0]csirxss_s_axi_wready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 csirxss_s_axi BRESP" *) output [1:0]csirxss_s_axi_bresp;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 csirxss_s_axi BVALID" *) output [0:0]csirxss_s_axi_bvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 csirxss_s_axi BREADY" *) input [0:0]csirxss_s_axi_bready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 csirxss_s_axi ARADDR" *) input [16:0]csirxss_s_axi_araddr;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 csirxss_s_axi ARPROT" *) input [2:0]csirxss_s_axi_arprot;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 csirxss_s_axi ARVALID" *) input [0:0]csirxss_s_axi_arvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 csirxss_s_axi ARREADY" *) output [0:0]csirxss_s_axi_arready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 csirxss_s_axi RDATA" *) output [31:0]csirxss_s_axi_rdata;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 csirxss_s_axi RRESP" *) output [1:0]csirxss_s_axi_rresp;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 csirxss_s_axi RVALID" *) output [0:0]csirxss_s_axi_rvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 csirxss_s_axi RREADY" *) input [0:0]csirxss_s_axi_rready;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 video_out TDATA" *) (* x_interface_parameter = "XIL_INTERFACENAME video_out, TDATA_NUM_BYTES 2, TDEST_WIDTH 8, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN system_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef" *) output [15:0]video_out_tdata;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 video_out TDEST" *) output [7:0]video_out_tdest;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 video_out TLAST" *) output video_out_tlast;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 video_out TREADY" *) input video_out_tready;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 video_out TUSER" *) output [0:0]video_out_tuser;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 video_out TVALID" *) output video_out_tvalid;
+  (* x_interface_info = "xilinx.com:interface:mipi_phy:1.0 mipi_phy_if CLK_HS_N" *) input mipi_phy_if_clk_hs_n;
+  (* x_interface_info = "xilinx.com:interface:mipi_phy:1.0 mipi_phy_if CLK_HS_P" *) input mipi_phy_if_clk_hs_p;
+  (* x_interface_info = "xilinx.com:interface:mipi_phy:1.0 mipi_phy_if CLK_LP_N" *) input mipi_phy_if_clk_lp_n;
+  (* x_interface_info = "xilinx.com:interface:mipi_phy:1.0 mipi_phy_if CLK_LP_P" *) input mipi_phy_if_clk_lp_p;
+  (* x_interface_info = "xilinx.com:interface:mipi_phy:1.0 mipi_phy_if DATA_HS_N" *) input [1:0]mipi_phy_if_data_hs_n;
+  (* x_interface_info = "xilinx.com:interface:mipi_phy:1.0 mipi_phy_if DATA_HS_P" *) input [1:0]mipi_phy_if_data_hs_p;
+  (* x_interface_info = "xilinx.com:interface:mipi_phy:1.0 mipi_phy_if DATA_LP_N" *) input [1:0]mipi_phy_if_data_lp_n;
+  (* x_interface_info = "xilinx.com:interface:mipi_phy:1.0 mipi_phy_if DATA_LP_P" *) input [1:0]mipi_phy_if_data_lp_p;
+
+  wire csirxss_csi_irq;
+  wire [16:0]csirxss_s_axi_araddr;
+  wire [2:0]csirxss_s_axi_arprot;
+  wire [0:0]csirxss_s_axi_arready;
+  wire [0:0]csirxss_s_axi_arvalid;
+  wire [16:0]csirxss_s_axi_awaddr;
+  wire [2:0]csirxss_s_axi_awprot;
+  wire [0:0]csirxss_s_axi_awready;
+  wire [0:0]csirxss_s_axi_awvalid;
+  wire [0:0]csirxss_s_axi_bready;
+  wire [1:0]csirxss_s_axi_bresp;
+  wire [0:0]csirxss_s_axi_bvalid;
+  wire [31:0]csirxss_s_axi_rdata;
+  wire [0:0]csirxss_s_axi_rready;
+  wire [1:0]csirxss_s_axi_rresp;
+  wire [0:0]csirxss_s_axi_rvalid;
+  wire [31:0]csirxss_s_axi_wdata;
+  wire [0:0]csirxss_s_axi_wready;
+  wire [3:0]csirxss_s_axi_wstrb;
+  wire [0:0]csirxss_s_axi_wvalid;
+  wire dlyctrl_rdy_out;
+  wire dphy_clk_200M;
+  wire lite_aclk;
+  wire lite_aresetn;
+  wire mipi_phy_if_clk_hs_n;
+  wire mipi_phy_if_clk_hs_p;
+  wire mipi_phy_if_clk_lp_n;
+  wire mipi_phy_if_clk_lp_p;
+  wire [1:0]mipi_phy_if_data_hs_n;
+  wire [1:0]mipi_phy_if_data_hs_p;
+  wire [1:0]mipi_phy_if_data_lp_n;
+  wire [1:0]mipi_phy_if_data_lp_p;
+  wire rxbyteclkhs;
+  wire system_rst_out;
+  wire video_aclk;
+  wire video_aresetn;
+  wire [15:0]video_out_tdata;
+  wire [7:0]video_out_tdest;
+  wire video_out_tlast;
+  wire video_out_tready;
+  wire [0:0]video_out_tuser;
+  wire video_out_tvalid;
+
+  (* hw_handoff = "system_mipi_csi2_rx_subsystem_0_1.hwdef" *) 
+  system_mipi_csi2_rx_subsystem_0_1_bd_0ac3 U0
+       (.csirxss_csi_irq(csirxss_csi_irq),
+        .csirxss_s_axi_araddr(csirxss_s_axi_araddr),
+        .csirxss_s_axi_arprot(csirxss_s_axi_arprot),
+        .csirxss_s_axi_arready(csirxss_s_axi_arready),
+        .csirxss_s_axi_arvalid(csirxss_s_axi_arvalid),
+        .csirxss_s_axi_awaddr(csirxss_s_axi_awaddr),
+        .csirxss_s_axi_awprot(csirxss_s_axi_awprot),
+        .csirxss_s_axi_awready(csirxss_s_axi_awready),
+        .csirxss_s_axi_awvalid(csirxss_s_axi_awvalid),
+        .csirxss_s_axi_bready(csirxss_s_axi_bready),
+        .csirxss_s_axi_bresp(csirxss_s_axi_bresp),
+        .csirxss_s_axi_bvalid(csirxss_s_axi_bvalid),
+        .csirxss_s_axi_rdata(csirxss_s_axi_rdata),
+        .csirxss_s_axi_rready(csirxss_s_axi_rready),
+        .csirxss_s_axi_rresp(csirxss_s_axi_rresp),
+        .csirxss_s_axi_rvalid(csirxss_s_axi_rvalid),
+        .csirxss_s_axi_wdata(csirxss_s_axi_wdata),
+        .csirxss_s_axi_wready(csirxss_s_axi_wready),
+        .csirxss_s_axi_wstrb(csirxss_s_axi_wstrb),
+        .csirxss_s_axi_wvalid(csirxss_s_axi_wvalid),
+        .dlyctrl_rdy_out(dlyctrl_rdy_out),
+        .dphy_clk_200M(dphy_clk_200M),
+        .lite_aclk(lite_aclk),
+        .lite_aresetn(lite_aresetn),
+        .mipi_phy_if_clk_hs_n(mipi_phy_if_clk_hs_n),
+        .mipi_phy_if_clk_hs_p(mipi_phy_if_clk_hs_p),
+        .mipi_phy_if_clk_lp_n(mipi_phy_if_clk_lp_n),
+        .mipi_phy_if_clk_lp_p(mipi_phy_if_clk_lp_p),
+        .mipi_phy_if_data_hs_n(mipi_phy_if_data_hs_n),
+        .mipi_phy_if_data_hs_p(mipi_phy_if_data_hs_p),
+        .mipi_phy_if_data_lp_n(mipi_phy_if_data_lp_n),
+        .mipi_phy_if_data_lp_p(mipi_phy_if_data_lp_p),
+        .rxbyteclkhs(rxbyteclkhs),
+        .system_rst_out(system_rst_out),
+        .video_aclk(video_aclk),
+        .video_aresetn(video_aresetn),
+        .video_out_tdata(video_out_tdata),
+        .video_out_tdest(video_out_tdest),
+        .video_out_tlast(video_out_tlast),
+        .video_out_tready(video_out_tready),
+        .video_out_tuser(video_out_tuser),
+        .video_out_tvalid(video_out_tvalid));
 endmodule
 `ifndef GLBL
 `define GLBL
