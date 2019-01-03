@@ -1,4 +1,0 @@
-NumberHits:2
-Timestamp: Thu Dec 20 11:55:13 UTC 2018
-VLNV: xilinx.com:ip:axi_vdma:6.3
-SynthRuntime: 325
