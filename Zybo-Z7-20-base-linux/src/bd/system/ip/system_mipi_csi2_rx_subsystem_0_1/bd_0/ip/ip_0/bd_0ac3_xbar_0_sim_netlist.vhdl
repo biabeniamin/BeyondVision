@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
 -- Date        : Tue Jan  1 19:56:16 2019
 -- Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_mipi_csi2_rx_subsystem_0_1/bd_0/ip/ip_0/bd_0ac3_xbar_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top bd_0ac3_xbar_0 -prefix
+--               bd_0ac3_xbar_0_ bd_0ac3_xbar_0_sim_netlist.vhdl
 -- Design      : bd_0ac3_xbar_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -56,8 +56,6 @@ entity bd_0ac3_xbar_0_axi_crossbar_v2_1_18_addr_arbiter_sasd is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 16 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 16 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_0ac3_xbar_0_axi_crossbar_v2_1_18_addr_arbiter_sasd : entity is "axi_crossbar_v2_1_18_addr_arbiter_sasd";
 end bd_0ac3_xbar_0_axi_crossbar_v2_1_18_addr_arbiter_sasd;
 
 architecture STRUCTURE of bd_0ac3_xbar_0_axi_crossbar_v2_1_18_addr_arbiter_sasd is
@@ -1009,8 +1007,6 @@ entity bd_0ac3_xbar_0_axi_crossbar_v2_1_18_splitter is
     aresetn_d : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_0ac3_xbar_0_axi_crossbar_v2_1_18_splitter : entity is "axi_crossbar_v2_1_18_splitter";
 end bd_0ac3_xbar_0_axi_crossbar_v2_1_18_splitter;
 
 architecture STRUCTURE of bd_0ac3_xbar_0_axi_crossbar_v2_1_18_splitter is
@@ -1173,8 +1169,6 @@ entity bd_0ac3_xbar_0_axi_register_slice_v2_1_17_axic_register_slice is
     Q : in STD_LOGIC_VECTOR ( 1 downto 0 );
     SR : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_0ac3_xbar_0_axi_register_slice_v2_1_17_axic_register_slice : entity is "axi_register_slice_v2_1_17_axic_register_slice";
 end bd_0ac3_xbar_0_axi_register_slice_v2_1_17_axic_register_slice;
 
 architecture STRUCTURE of bd_0ac3_xbar_0_axi_register_slice_v2_1_17_axic_register_slice is
@@ -2338,8 +2332,6 @@ entity bd_0ac3_xbar_0_axi_crossbar_v2_1_18_crossbar_sasd is
     m_axi_rdata : in STD_LOGIC_VECTOR ( 63 downto 0 );
     m_axi_bresp : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_0ac3_xbar_0_axi_crossbar_v2_1_18_crossbar_sasd : entity is "axi_crossbar_v2_1_18_crossbar_sasd";
 end bd_0ac3_xbar_0_axi_crossbar_v2_1_18_crossbar_sasd;
 
 architecture STRUCTURE of bd_0ac3_xbar_0_axi_crossbar_v2_1_18_crossbar_sasd is
@@ -2663,8 +2655,6 @@ entity bd_0ac3_xbar_0_axi_crossbar_v2_1_18_axi_crossbar is
   attribute C_S_AXI_WRITE_ACCEPTANCE of bd_0ac3_xbar_0_axi_crossbar_v2_1_18_axi_crossbar : entity is 1;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of bd_0ac3_xbar_0_axi_crossbar_v2_1_18_axi_crossbar : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_0ac3_xbar_0_axi_crossbar_v2_1_18_axi_crossbar : entity is "axi_crossbar_v2_1_18_axi_crossbar";
   attribute P_ADDR_DECODE : integer;
   attribute P_ADDR_DECODE of bd_0ac3_xbar_0_axi_crossbar_v2_1_18_axi_crossbar : entity is 1;
   attribute P_AXI3 : integer;

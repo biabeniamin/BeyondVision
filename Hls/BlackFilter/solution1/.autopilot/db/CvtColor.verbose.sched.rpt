@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'CvtColor'
 ================================================================
-* Date:           Wed Jan 23 20:31:29 2019
+* Date:           Wed Jan 23 22:17:22 2019
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        BlackFilter
@@ -163,7 +163,7 @@ The critical path consists of the following:
  <State 4>: 7.27ns
 The critical path consists of the following:
 	fifo read on port 'p_src_data_stream_V' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:624->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:656->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1951) [32]  (3.63 ns)
-	fifo write on port 'p_dst_data_stream_1_V' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:648->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:662->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1953) [37]  (3.63 ns)
+	fifo write on port 'p_dst_data_stream_2_V' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:648->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:662->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1953) [38]  (3.63 ns)
 
  <State 5>: 0ns
 The critical path consists of the following:

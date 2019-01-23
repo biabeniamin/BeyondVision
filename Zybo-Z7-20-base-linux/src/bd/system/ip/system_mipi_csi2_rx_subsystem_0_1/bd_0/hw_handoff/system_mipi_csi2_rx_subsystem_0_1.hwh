@@ -1,63 +1,17 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jan  1 21:15:28 2019" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jan 23 22:21:15 2019" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-20:part0:1.0" DEVICE="7z020" NAME="bd_0ac3" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
-    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="lite_aclk" SIGIS="clk" SIGNAME="External_Ports_lite_aclk">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xbar" PORT="aclk"/>
-        <CONNECTION INSTANCE="rx" PORT="s_axi_aclk"/>
-        <CONNECTION INSTANCE="phy" PORT="s_axi_aclk"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="lite_aresetn" SIGIS="rst" SIGNAME="External_Ports_lite_aresetn">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xbar" PORT="aresetn"/>
-        <CONNECTION INSTANCE="rx" PORT="s_axi_aresetn"/>
-        <CONNECTION INSTANCE="phy" PORT="s_axi_aresetn"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT CLKFREQUENCY="200000000" DIR="I" NAME="dphy_clk_200M" SIGIS="clk" SIGNAME="External_Ports_dphy_clk_200M">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="r_sync" PORT="slowest_sync_clk"/>
-        <CONNECTION INSTANCE="phy" PORT="core_clk"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="dlyctrl_rdy_out" SIGIS="undef" SIGNAME="phy_dlyctrl_rdy_out">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="phy" PORT="dlyctrl_rdy_out"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT CLKFREQUENCY="100000000.0" DIR="O" NAME="rxbyteclkhs" SIGIS="clk" SIGNAME="phy_rxbyteclkhs">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="phy" PORT="rxbyteclkhs"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="system_rst_out" SIGIS="undef" SIGNAME="phy_system_rst_out">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="phy" PORT="system_rst_out"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="csirxss_csi_irq" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="rx_interrupt">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="rx" PORT="interrupt"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="video_aclk" SIGIS="clk" SIGNAME="External_Ports_video_aclk">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="rx" PORT="m_axis_aclk"/>
-        <CONNECTION INSTANCE="vfb_0" PORT="s_axis_aclk"/>
-        <CONNECTION INSTANCE="vfb_0" PORT="vfb_clk"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="video_aresetn" SIGIS="rst" SIGNAME="External_Ports_video_aresetn">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="r_sync" PORT="ext_reset_in"/>
-        <CONNECTION INSTANCE="rx" PORT="m_axis_aresetn"/>
-        <CONNECTION INSTANCE="vfb_0" PORT="s_axis_aresetn"/>
-      </CONNECTIONS>
-    </PORT>
+    <PORT DIR="I" NAME="mipi_phy_if_clk_hs_n" SIGIS="undef"/>
+    <PORT DIR="I" NAME="mipi_phy_if_clk_hs_p" SIGIS="undef"/>
+    <PORT DIR="I" NAME="mipi_phy_if_clk_lp_n" SIGIS="undef"/>
+    <PORT DIR="I" NAME="mipi_phy_if_clk_lp_p" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="1" NAME="mipi_phy_if_data_hs_n" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="1" NAME="mipi_phy_if_data_hs_p" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="1" NAME="mipi_phy_if_data_lp_n" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="1" NAME="mipi_phy_if_data_lp_p" RIGHT="0" SIGIS="undef"/>
     <PORT DIR="I" LEFT="16" NAME="csirxss_s_axi_awaddr" RIGHT="0" SIGIS="undef"/>
     <PORT DIR="I" LEFT="2" NAME="csirxss_s_axi_awprot" RIGHT="0" SIGIS="undef"/>
     <PORT DIR="I" LEFT="0" NAME="csirxss_s_axi_awvalid" RIGHT="0" SIGIS="undef"/>
@@ -83,14 +37,60 @@
     <PORT DIR="I" NAME="video_out_tready" SIGIS="undef"/>
     <PORT DIR="O" LEFT="0" NAME="video_out_tuser" RIGHT="0" SIGIS="undef"/>
     <PORT DIR="O" NAME="video_out_tvalid" SIGIS="undef"/>
-    <PORT DIR="I" NAME="mipi_phy_if_clk_hs_n" SIGIS="undef"/>
-    <PORT DIR="I" NAME="mipi_phy_if_clk_hs_p" SIGIS="undef"/>
-    <PORT DIR="I" NAME="mipi_phy_if_clk_lp_n" SIGIS="undef"/>
-    <PORT DIR="I" NAME="mipi_phy_if_clk_lp_p" SIGIS="undef"/>
-    <PORT DIR="I" LEFT="1" NAME="mipi_phy_if_data_hs_n" RIGHT="0" SIGIS="undef"/>
-    <PORT DIR="I" LEFT="1" NAME="mipi_phy_if_data_hs_p" RIGHT="0" SIGIS="undef"/>
-    <PORT DIR="I" LEFT="1" NAME="mipi_phy_if_data_lp_n" RIGHT="0" SIGIS="undef"/>
-    <PORT DIR="I" LEFT="1" NAME="mipi_phy_if_data_lp_p" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" NAME="csirxss_csi_irq" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="rx_interrupt">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="rx" PORT="interrupt"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000.0" DIR="O" NAME="rxbyteclkhs" SIGIS="clk" SIGNAME="phy_rxbyteclkhs">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="phy" PORT="rxbyteclkhs"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="200000000" DIR="I" NAME="dphy_clk_200M" SIGIS="clk" SIGNAME="External_Ports_dphy_clk_200M">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="r_sync" PORT="slowest_sync_clk"/>
+        <CONNECTION INSTANCE="phy" PORT="core_clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="video_aresetn" SIGIS="rst" SIGNAME="External_Ports_video_aresetn">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="r_sync" PORT="ext_reset_in"/>
+        <CONNECTION INSTANCE="rx" PORT="m_axis_aresetn"/>
+        <CONNECTION INSTANCE="vfb_0" PORT="s_axis_aresetn"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="lite_aclk" SIGIS="clk" SIGNAME="External_Ports_lite_aclk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xbar" PORT="aclk"/>
+        <CONNECTION INSTANCE="rx" PORT="s_axi_aclk"/>
+        <CONNECTION INSTANCE="phy" PORT="s_axi_aclk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="lite_aresetn" SIGIS="rst" SIGNAME="External_Ports_lite_aresetn">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xbar" PORT="aresetn"/>
+        <CONNECTION INSTANCE="rx" PORT="s_axi_aresetn"/>
+        <CONNECTION INSTANCE="phy" PORT="s_axi_aresetn"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="video_aclk" SIGIS="clk" SIGNAME="External_Ports_video_aclk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="rx" PORT="m_axis_aclk"/>
+        <CONNECTION INSTANCE="vfb_0" PORT="s_axis_aclk"/>
+        <CONNECTION INSTANCE="vfb_0" PORT="vfb_clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="dlyctrl_rdy_out" SIGIS="undef" SIGNAME="phy_dlyctrl_rdy_out">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="phy" PORT="dlyctrl_rdy_out"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="system_rst_out" SIGIS="undef" SIGNAME="phy_system_rst_out">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="phy" PORT="system_rst_out"/>
+      </CONNECTIONS>
+    </PORT>
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES>
@@ -303,9 +303,9 @@
         </PORT>
         <PORT CLKFREQUENCY="100000000.0" DIR="O" NAME="rxbyteclkhs" SIGIS="clk" SIGNAME="phy_rxbyteclkhs">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rxbyteclkhs"/>
             <CONNECTION INSTANCE="rx" PORT="dl0_rxbyteclkhs"/>
             <CONNECTION INSTANCE="rx" PORT="dl1_rxbyteclkhs"/>
-            <CONNECTION INSTANCE="External_Ports" PORT="rxbyteclkhs"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="system_rst_out" SIGIS="undef" SIGNAME="phy_system_rst_out">

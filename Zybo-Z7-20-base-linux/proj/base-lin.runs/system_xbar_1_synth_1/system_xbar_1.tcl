@@ -34,11 +34,12 @@ set_property board_part_repo_paths C:/Xilinx/board_files [current_project]
 set_property board_part digilentinc.com:zybo-z7-20:part0:1.0 [current_project]
 set_property ip_repo_paths {
   c:/Digilent19/Zybo-Z7-20-base-linux/repo
+  c:/Digilent19/Hls
   c:/Digilent19/vivado-library-master
 } [current_project]
 set_property ip_output_repo c:/Digilent19/Zybo-Z7-20-base-linux/repo/cache [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_ip -quiet c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_xbar_1/system_xbar_1.xci
+read_ip -quiet C:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_xbar_1/system_xbar_1.xci
 set_property used_in_implementation false [get_files -all c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_xbar_1/system_xbar_1_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -94,32 +95,32 @@ write_checkpoint -force -noxdef system_xbar_1.dcp
 create_report "system_xbar_1_synth_1_synth_report_utilization_0" "report_utilization -file system_xbar_1_utilization_synth.rpt -pb system_xbar_1_utilization_synth.pb"
 
 if { [catch {
-  file copy -force C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/system_xbar_1_synth_1/system_xbar_1.dcp c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_xbar_1/system_xbar_1.dcp
+  file copy -force C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/system_xbar_1_synth_1/system_xbar_1.dcp C:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_xbar_1/system_xbar_1.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_xbar_1/system_xbar_1_stub.v
+  write_verilog -force -mode synth_stub C:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_xbar_1/system_xbar_1_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_xbar_1/system_xbar_1_stub.vhdl
+  write_vhdl -force -mode synth_stub C:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_xbar_1/system_xbar_1_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_xbar_1/system_xbar_1_sim_netlist.v
+  write_verilog -force -mode funcsim C:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_xbar_1/system_xbar_1_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_xbar_1/system_xbar_1_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim C:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_xbar_1/system_xbar_1_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -129,32 +130,32 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/system_xbar_1_synth_1/system_xbar_1.dcp c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_xbar_1/system_xbar_1.dcp
+  file copy -force C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/system_xbar_1_synth_1/system_xbar_1.dcp C:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_xbar_1/system_xbar_1.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/system_xbar_1_synth_1/system_xbar_1_stub.v c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_xbar_1/system_xbar_1_stub.v
+  file rename -force C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/system_xbar_1_synth_1/system_xbar_1_stub.v C:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_xbar_1/system_xbar_1_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/system_xbar_1_synth_1/system_xbar_1_stub.vhdl c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_xbar_1/system_xbar_1_stub.vhdl
+  file rename -force C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/system_xbar_1_synth_1/system_xbar_1_stub.vhdl C:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_xbar_1/system_xbar_1_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/system_xbar_1_synth_1/system_xbar_1_sim_netlist.v c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_xbar_1/system_xbar_1_sim_netlist.v
+  file rename -force C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/system_xbar_1_synth_1/system_xbar_1_sim_netlist.v C:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_xbar_1/system_xbar_1_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/system_xbar_1_synth_1/system_xbar_1_sim_netlist.vhdl c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_xbar_1/system_xbar_1_sim_netlist.vhdl
+  file rename -force C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.runs/system_xbar_1_synth_1/system_xbar_1_sim_netlist.vhdl C:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_xbar_1/system_xbar_1_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -163,13 +164,13 @@ if { [catch {
 
 if {[file isdir C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.ip_user_files/ip/system_xbar_1]} {
   catch { 
-    file copy -force c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_xbar_1/system_xbar_1_stub.v C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.ip_user_files/ip/system_xbar_1
+    file copy -force C:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_xbar_1/system_xbar_1_stub.v C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.ip_user_files/ip/system_xbar_1
   }
 }
 
 if {[file isdir C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.ip_user_files/ip/system_xbar_1]} {
   catch { 
-    file copy -force c:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_xbar_1/system_xbar_1_stub.vhdl C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.ip_user_files/ip/system_xbar_1
+    file copy -force C:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_xbar_1/system_xbar_1_stub.vhdl C:/Digilent19/Zybo-Z7-20-base-linux/proj/base-lin.ip_user_files/ip/system_xbar_1
   }
 }
 file delete __synthesis_is_running__

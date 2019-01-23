@@ -1897,8 +1897,8 @@ resolve_type immediate dependency {} format string minimum {} maximum {}} value 
       </xilinx:taxonomies>
       <xilinx:displayName>Black</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>1901232155</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2019-01-23T19:55:33Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>1901232218</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2019-01-23T20:18:57Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.2</xilinx:xilinxVersion>
