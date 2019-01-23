@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="main.cpp" path="C:\Digilent19\Hls\BlackFilter\main.cpp"/>
+    <originFiles name="main.h" path="C:\Digilent19\Hls\BlackFilter\main.h"/>
+  </source>
+  <testbench>
+    <originFiles name="test.cpp" path="C:\Digilent19\Hls\BlackFilter\test.cpp"/>
+    <originFiles name="test.bmp" path="C:\Users\biabe\Downloads\test.bmp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

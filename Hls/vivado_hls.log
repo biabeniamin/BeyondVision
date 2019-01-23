@@ -1,0 +1,81 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'biabe' on host 'desktop-871tsom' (Windows NT_amd64 version 6.2) on Wed Jan 23 20:13:52 +0200 2019
+INFO: [HLS 200-10] In directory 'C:/Digilent19/Hls'
+INFO: [HLS 200-10] Opening project 'C:/Digilent19/Hls/BlackFilter'.
+INFO: [HLS 200-10] Opening solution 'C:/Digilent19/Hls/BlackFilter/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../test.cpp in debug mode
+csim.mk:77: recipe for target 'obj/test.o' failed
+In file included from C:/Xilinx/Vivado/2018.2/include/floating_point_v7_0_bitacc_cmodel.h:143:0,
+                 from C:/Xilinx/Vivado/2018.2/include/hls_fpo.h:166,
+                 from C:/Xilinx/Vivado/2018.2/include/hls_half.h:58,
+                 from C:/Xilinx/Vivado/2018.2/include/ap_int_sim.h:73,
+                 from C:/Xilinx/Vivado/2018.2/include/ap_int.h:65,
+                 from C:/Xilinx/Vivado/2018.2/include/ap_axi_sdata.h:86,
+                 from C:/Xilinx/Vivado/2018.2/include/hls/hls_axi_io.h:39,
+                 from C:/Xilinx/Vivado/2018.2/include/hls_video.h:48,
+                 from ../../../main.h:1,
+                 from ../../../test.cpp:2:
+C:/Xilinx/Vivado/2018.2/include/gmp.h:62:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from C:/Xilinx/Vivado/2018.2/include/hls_fpo.h:166:0,
+                 from C:/Xilinx/Vivado/2018.2/include/hls_half.h:58,
+                 from C:/Xilinx/Vivado/2018.2/include/ap_int_sim.h:73,
+                 from C:/Xilinx/Vivado/2018.2/include/ap_int.h:65,
+                 from C:/Xilinx/Vivado/2018.2/include/ap_axi_sdata.h:86,
+                 from C:/Xilinx/Vivado/2018.2/include/hls/hls_axi_io.h:39,
+                 from C:/Xilinx/Vivado/2018.2/include/hls_video.h:48,
+                 from ../../../main.h:1,
+                 from ../../../test.cpp:2:
+C:/Xilinx/Vivado/2018.2/include/floating_point_v7_0_bitacc_cmodel.h:135:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+../../../test.cpp: In function 'int main(int, char**)':
+../../../test.cpp:6:1: error: 'IplImage' was not declared in this scope
+ IplImage* src;
+ ^~~~~~~~
+../../../test.cpp:6:11: error: 'src' was not declared in this scope
+ IplImage* src;
+           ^~~
+../../../test.cpp:7:11: error: 'dst' was not declared in this scope
+ IplImage* dst;
+           ^~~
+../../../test.cpp:9:29: error: 'cvLoadImage' was not declared in this scope
+ src = cvLoadImage("test.bmp");
+                             ^
+../../../test.cpp:10:34: error: 'cvGetSize' was not declared in this scope
+ dst = cvCreateImage(cvGetSize(src), src->depth, src->nChannels);
+                                  ^
+../../../test.cpp:10:63: error: 'cvCreateImage' was not declared in this scope
+ dst = cvCreateImage(cvGetSize(src), src->depth, src->nChannels);
+                                                               ^
+../../../test.cpp:11:31: error: 'IplImage2AXIvideo' was not declared in this scope
+ IplImage2AXIvideo(src, src_axi);
+                               ^
+../../../test.cpp:13:31: error: 'AXIvideo2IplImage' was not declared in this scope
+ AXIvideo2IplImage(dst_axi, dst);
+                               ^
+../../../test.cpp:14:26: error: 'cvSaveImage' was not declared in this scope
+ cvSaveImage("op.bmp", dst);
+                          ^
+../../../test.cpp:15:20: error: 'cvReleaseImage' was not declared in this scope
+ cvReleaseImage(&src);
+                    ^
+make: *** [obj/test.o] Error 1
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+4
+    while executing
+"source C:/Digilent19/Hls/BlackFilter/solution1/csim.tcl"
+    invoked from within
+"hls::main C:/Digilent19/Hls/BlackFilter/solution1/csim.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$args"
+    (procedure "hls_proc" line 5)
+    invoked from within
+"hls_proc $argv"
