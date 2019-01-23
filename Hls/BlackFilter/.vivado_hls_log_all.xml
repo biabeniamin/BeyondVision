@@ -2,20 +2,40 @@
 <vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
   <errorLogs>
     <logs>
-      <csimLog>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="BlackFilter" solutionName="solution1" date="2019-01-23T20:13:56.036+0200"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="BlackFilter" solutionName="solution1" date="2019-01-23T20:11:18.972+0200"/>
-        <logs message="@E Simulation failed: Function 'main' returns nonzero value '3'." projectName="BlackFilter" solutionName="solution1" date="2019-01-23T20:11:18.966+0200"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="BlackFilter" solutionName="solution1" date="2019-01-23T20:10:11.330+0200"/>
-        <logs message="@E Simulation failed: Function 'main' returns nonzero value '3'." projectName="BlackFilter" solutionName="solution1" date="2019-01-23T20:10:11.323+0200"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="BlackFilter" solutionName="solution1" date="2019-01-23T20:09:31.438+0200"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="BlackFilter" solutionName="solution1" date="2019-01-23T20:09:03.760+0200"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="BlackFilter" solutionName="solution1" date="2019-01-23T20:08:28.628+0200"/>
-      </csimLog>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
     </logs>
   </errorLogs>
   <warningLogs>
     <logs>
+      <synLog>
+        <logs message="WARNING: [HLS 200-433] Loop - loop_wait_for_start has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="BlackFilter" solutionName="solution1" date="2019-01-23T20:17:26.184+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - loop_wait_for_start has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="BlackFilter" solutionName="solution1" date="2019-01-23T20:17:26.078+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] The critical path consists of the following:&#xD;&#xA;&#x9;'mul' operation ('r.V', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1473->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1514->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1952) (3.36 ns)&#xD;&#xA;&#x9;'add' operation ('__Val2__', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1477->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1514->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1952) (3.02 ns)&#xD;&#xA;&#x9;'add' operation ('r.V', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1477->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1514->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1952) (3.02 ns)" projectName="BlackFilter" solutionName="solution1" date="2019-01-23T20:17:24.946+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (9.4ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns)." projectName="BlackFilter" solutionName="solution1" date="2019-01-23T20:17:24.938+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - loop_wait_for_start has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="BlackFilter" solutionName="solution1" date="2019-01-23T20:17:24.754+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - loop_wait_for_start has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="BlackFilter" solutionName="solution1" date="2019-01-23T20:17:24.614+0200" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'CvtColor.1' to 'CvtColor_1'." projectName="BlackFilter" solutionName="solution1" date="2019-01-23T20:17:24.172+0200" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'Block__proc' to 'Block_proc'." projectName="BlackFilter" solutionName="solution1" date="2019-01-23T20:17:24.157+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::AXIvideo2Mat&lt;24, 2000, 2000, 4096>' to 'AXIvideo2Mat' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:49:9)" projectName="BlackFilter" solutionName="solution1" date="2019-01-23T20:17:24.138+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::CvtColor&lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000>' to 'CvtColor.1' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:409:39)" projectName="BlackFilter" solutionName="solution1" date="2019-01-23T20:17:23.683+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::CvtColor&lt;HLS_GRAY2RGB, 0, 4096, 2000, 2000>' to 'CvtColor' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:617:42)" projectName="BlackFilter" solutionName="solution1" date="2019-01-23T20:17:23.676+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::Mat2AXIvideo&lt;24, 2000, 2000, 4096>' to 'Mat2AXIvideo' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:78:50)" projectName="BlackFilter" solutionName="solution1" date="2019-01-23T20:17:23.670+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 2000 for loop 'loop_height' in function 'hls::CvtColor&lt;HLS_GRAY2RGB, 0, 4096, 2000, 2000>'." projectName="BlackFilter" solutionName="solution1" date="2019-01-23T20:17:22.847+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 2000 for loop 'loop_width' in function 'hls::CvtColor&lt;HLS_GRAY2RGB, 0, 4096, 2000, 2000>'." projectName="BlackFilter" solutionName="solution1" date="2019-01-23T20:17:22.773+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 2000 for loop 'loop_height' in function 'hls::Mat2AXIvideo&lt;24, 2000, 2000, 4096>'." projectName="BlackFilter" solutionName="solution1" date="2019-01-23T20:17:22.766+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 2000 for loop 'loop_width' in function 'hls::Mat2AXIvideo&lt;24, 2000, 2000, 4096>'." projectName="BlackFilter" solutionName="solution1" date="2019-01-23T20:17:22.760+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'img_0.data_stream.V' (BlackFilter/main.cpp:6)." projectName="BlackFilter" solutionName="solution1" date="2019-01-23T20:17:22.361+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'img_1.data_stream.V' (BlackFilter/main.cpp:7)." projectName="BlackFilter" solutionName="solution1" date="2019-01-23T20:17:22.251+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'img_2.data_stream.V' (BlackFilter/main.cpp:8)." projectName="BlackFilter" solutionName="solution1" date="2019-01-23T20:17:22.243+0200" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_axi_io.h:78: variable-indexed range selection may cause suboptimal QoR." projectName="BlackFilter" solutionName="solution1" date="2019-01-23T20:17:22.052+0200" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
       <csimLog/>
     </logs>
   </warningLogs>
