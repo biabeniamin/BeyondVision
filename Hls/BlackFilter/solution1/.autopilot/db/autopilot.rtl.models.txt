@@ -15,6 +15,7 @@ fifo_w8_d2_A
 start_for_CvtColoeOg
 start_for_CvtColofYi
 start_for_Mat2AXIg8j
+black_CONTROL_BUS_s_axi
 Block_proc
 AXIvideo2Mat
 CvtColor_1

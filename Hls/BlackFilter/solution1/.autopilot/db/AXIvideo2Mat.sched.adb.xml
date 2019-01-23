@@ -437,7 +437,7 @@ entry:21  br label %._crit_edge1.i
 
 <Node id="38" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-._crit_edge1.i:0  call void (...)* @_ssdm_op_SpecLoopName([20 x i8]* @p_str23) nounwind
+._crit_edge1.i:0  call void (...)* @_ssdm_op_SpecLoopName([20 x i8]* @p_str25) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -452,7 +452,7 @@ entry:21  br label %._crit_edge1.i
 
 <Node id="39" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-._crit_edge1.i:1  %tmp_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([20 x i8]* @p_str23)
+._crit_edge1.i:1  %tmp_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([20 x i8]* @p_str25)
 
 ]]></Node>
 <StgValue><ssdm name="tmp_i"/></StgValue>
@@ -557,7 +557,7 @@ entry:21  br label %._crit_edge1.i
 
 <Node id="46" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-._crit_edge1.i:8  %empty_49 = call i32 (...)* @_ssdm_op_SpecRegionEnd([20 x i8]* @p_str23, i32 %tmp_i)
+._crit_edge1.i:8  %empty_49 = call i32 (...)* @_ssdm_op_SpecRegionEnd([20 x i8]* @p_str25, i32 %tmp_i)
 
 ]]></Node>
 <StgValue><ssdm name="empty_49"/></StgValue>
@@ -744,7 +744,7 @@ entry:21  br label %._crit_edge1.i
 
 <Node id="61" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-:0  call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str8) nounwind
+:0  call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str10) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -760,7 +760,7 @@ entry:21  br label %._crit_edge1.i
 
 <Node id="62" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-:1  %tmp_12_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str8)
+:1  %tmp_12_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str10)
 
 ]]></Node>
 <StgValue><ssdm name="tmp_12_i"/></StgValue>
@@ -999,7 +999,7 @@ entry:21  br label %._crit_edge1.i
 
 <Node id="75" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-:1  call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str9) nounwind
+:1  call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str11) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1015,7 +1015,7 @@ entry:21  br label %._crit_edge1.i
 
 <Node id="76" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-:2  %tmp_13_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([11 x i8]* @p_str9)
+:2  %tmp_13_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([11 x i8]* @p_str11)
 
 ]]></Node>
 <StgValue><ssdm name="tmp_13_i"/></StgValue>
@@ -1211,7 +1211,7 @@ entry:21  br label %._crit_edge1.i
 
 <Node id="91" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-._crit_edge2.i:5  %tmp_15_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str17)
+._crit_edge2.i:5  %tmp_15_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str19)
 
 ]]></Node>
 <StgValue><ssdm name="tmp_15_i"/></StgValue>
@@ -1291,7 +1291,7 @@ entry:21  br label %._crit_edge1.i
 
 <Node id="96" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-._crit_edge2.i:10  %empty_51 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str17, i32 %tmp_15_i)
+._crit_edge2.i:10  %empty_51 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str19, i32 %tmp_15_i)
 
 ]]></Node>
 <StgValue><ssdm name="empty_51"/></StgValue>
@@ -1307,7 +1307,7 @@ entry:21  br label %._crit_edge1.i
 
 <Node id="97" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-._crit_edge2.i:11  %empty_52 = call i32 (...)* @_ssdm_op_SpecRegionEnd([11 x i8]* @p_str9, i32 %tmp_13_i)
+._crit_edge2.i:11  %empty_52 = call i32 (...)* @_ssdm_op_SpecRegionEnd([11 x i8]* @p_str11, i32 %tmp_13_i)
 
 ]]></Node>
 <StgValue><ssdm name="empty_52"/></StgValue>
@@ -1439,7 +1439,7 @@ entry:21  br label %._crit_edge1.i
 
 <Node id="108" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-:0  call void (...)* @_ssdm_op_SpecLoopName([18 x i8]* @p_str24) nounwind
+:0  call void (...)* @_ssdm_op_SpecLoopName([18 x i8]* @p_str26) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1455,7 +1455,7 @@ entry:21  br label %._crit_edge1.i
 
 <Node id="109" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-:1  %tmp_14_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([18 x i8]* @p_str24)
+:1  %tmp_14_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([18 x i8]* @p_str26)
 
 ]]></Node>
 <StgValue><ssdm name="tmp_14_i"/></StgValue>
@@ -1551,7 +1551,7 @@ entry:21  br label %._crit_edge1.i
 
 <Node id="115" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-:7  %empty_54 = call i32 (...)* @_ssdm_op_SpecRegionEnd([18 x i8]* @p_str24, i32 %tmp_14_i)
+:7  %empty_54 = call i32 (...)* @_ssdm_op_SpecRegionEnd([18 x i8]* @p_str26, i32 %tmp_14_i)
 
 ]]></Node>
 <StgValue><ssdm name="empty_54"/></StgValue>
@@ -1585,7 +1585,7 @@ entry:21  br label %._crit_edge1.i
 
 <Node id="118" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-:0  %empty_55 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str8, i32 %tmp_12_i)
+:0  %empty_55 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str10, i32 %tmp_12_i)
 
 ]]></Node>
 <StgValue><ssdm name="empty_55"/></StgValue>

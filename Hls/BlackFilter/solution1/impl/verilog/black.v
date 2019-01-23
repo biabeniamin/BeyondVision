@@ -7,9 +7,29 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="black,hls_ip_2018_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=9.400000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=0,HLS_SYN_DSP=3,HLS_SYN_FF=806,HLS_SYN_LUT=1607,HLS_VERSION=2018_2}" *)
+(* CORE_GENERATION_INFO="black,hls_ip_2018_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=9.400000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=0,HLS_SYN_DSP=3,HLS_SYN_FF=842,HLS_SYN_LUT=1647,HLS_VERSION=2018_2}" *)
 
 module black (
+        s_axi_CONTROL_BUS_AWVALID,
+        s_axi_CONTROL_BUS_AWREADY,
+        s_axi_CONTROL_BUS_AWADDR,
+        s_axi_CONTROL_BUS_WVALID,
+        s_axi_CONTROL_BUS_WREADY,
+        s_axi_CONTROL_BUS_WDATA,
+        s_axi_CONTROL_BUS_WSTRB,
+        s_axi_CONTROL_BUS_ARVALID,
+        s_axi_CONTROL_BUS_ARREADY,
+        s_axi_CONTROL_BUS_ARADDR,
+        s_axi_CONTROL_BUS_RVALID,
+        s_axi_CONTROL_BUS_RREADY,
+        s_axi_CONTROL_BUS_RDATA,
+        s_axi_CONTROL_BUS_RRESP,
+        s_axi_CONTROL_BUS_BVALID,
+        s_axi_CONTROL_BUS_BREADY,
+        s_axi_CONTROL_BUS_BRESP,
+        ap_clk,
+        ap_rst_n,
+        interrupt,
         INPUT_STREAM_TDATA,
         INPUT_STREAM_TKEEP,
         INPUT_STREAM_TSTRB,
@@ -24,19 +44,40 @@ module black (
         OUTPUT_STREAM_TLAST,
         OUTPUT_STREAM_TID,
         OUTPUT_STREAM_TDEST,
-        ap_clk,
-        ap_rst_n,
-        ap_start,
         INPUT_STREAM_TVALID,
         INPUT_STREAM_TREADY,
         OUTPUT_STREAM_TVALID,
-        OUTPUT_STREAM_TREADY,
-        ap_done,
-        ap_ready,
-        ap_idle
+        OUTPUT_STREAM_TREADY
 );
 
+parameter    C_S_AXI_CONTROL_BUS_DATA_WIDTH = 32;
+parameter    C_S_AXI_CONTROL_BUS_ADDR_WIDTH = 4;
+parameter    C_S_AXI_DATA_WIDTH = 32;
+parameter    C_S_AXI_ADDR_WIDTH = 32;
 
+parameter C_S_AXI_CONTROL_BUS_WSTRB_WIDTH = (32 / 8);
+parameter C_S_AXI_WSTRB_WIDTH = (32 / 8);
+
+input   s_axi_CONTROL_BUS_AWVALID;
+output   s_axi_CONTROL_BUS_AWREADY;
+input  [C_S_AXI_CONTROL_BUS_ADDR_WIDTH - 1:0] s_axi_CONTROL_BUS_AWADDR;
+input   s_axi_CONTROL_BUS_WVALID;
+output   s_axi_CONTROL_BUS_WREADY;
+input  [C_S_AXI_CONTROL_BUS_DATA_WIDTH - 1:0] s_axi_CONTROL_BUS_WDATA;
+input  [C_S_AXI_CONTROL_BUS_WSTRB_WIDTH - 1:0] s_axi_CONTROL_BUS_WSTRB;
+input   s_axi_CONTROL_BUS_ARVALID;
+output   s_axi_CONTROL_BUS_ARREADY;
+input  [C_S_AXI_CONTROL_BUS_ADDR_WIDTH - 1:0] s_axi_CONTROL_BUS_ARADDR;
+output   s_axi_CONTROL_BUS_RVALID;
+input   s_axi_CONTROL_BUS_RREADY;
+output  [C_S_AXI_CONTROL_BUS_DATA_WIDTH - 1:0] s_axi_CONTROL_BUS_RDATA;
+output  [1:0] s_axi_CONTROL_BUS_RRESP;
+output   s_axi_CONTROL_BUS_BVALID;
+input   s_axi_CONTROL_BUS_BREADY;
+output  [1:0] s_axi_CONTROL_BUS_BRESP;
+input   ap_clk;
+input   ap_rst_n;
+output   interrupt;
 input  [23:0] INPUT_STREAM_TDATA;
 input  [2:0] INPUT_STREAM_TKEEP;
 input  [2:0] INPUT_STREAM_TSTRB;
@@ -51,18 +92,16 @@ output  [0:0] OUTPUT_STREAM_TUSER;
 output  [0:0] OUTPUT_STREAM_TLAST;
 output  [0:0] OUTPUT_STREAM_TID;
 output  [0:0] OUTPUT_STREAM_TDEST;
-input   ap_clk;
-input   ap_rst_n;
-input   ap_start;
 input   INPUT_STREAM_TVALID;
 output   INPUT_STREAM_TREADY;
 output   OUTPUT_STREAM_TVALID;
 input   OUTPUT_STREAM_TREADY;
-output   ap_done;
-output   ap_ready;
-output   ap_idle;
 
  reg    ap_rst_n_inv;
+wire    ap_start;
+wire    ap_ready;
+wire    ap_done;
+wire    ap_idle;
 wire    Block_proc_U0_ap_start;
 wire    Block_proc_U0_ap_done;
 wire    Block_proc_U0_ap_continue;
@@ -188,6 +227,37 @@ wire   [0:0] start_for_Mat2AXIvideo_U0_dout;
 wire    start_for_Mat2AXIvideo_U0_empty_n;
 wire    Mat2AXIvideo_U0_start_full_n;
 wire    Mat2AXIvideo_U0_start_write;
+
+black_CONTROL_BUS_s_axi #(
+    .C_S_AXI_ADDR_WIDTH( C_S_AXI_CONTROL_BUS_ADDR_WIDTH ),
+    .C_S_AXI_DATA_WIDTH( C_S_AXI_CONTROL_BUS_DATA_WIDTH ))
+black_CONTROL_BUS_s_axi_U(
+    .AWVALID(s_axi_CONTROL_BUS_AWVALID),
+    .AWREADY(s_axi_CONTROL_BUS_AWREADY),
+    .AWADDR(s_axi_CONTROL_BUS_AWADDR),
+    .WVALID(s_axi_CONTROL_BUS_WVALID),
+    .WREADY(s_axi_CONTROL_BUS_WREADY),
+    .WDATA(s_axi_CONTROL_BUS_WDATA),
+    .WSTRB(s_axi_CONTROL_BUS_WSTRB),
+    .ARVALID(s_axi_CONTROL_BUS_ARVALID),
+    .ARREADY(s_axi_CONTROL_BUS_ARREADY),
+    .ARADDR(s_axi_CONTROL_BUS_ARADDR),
+    .RVALID(s_axi_CONTROL_BUS_RVALID),
+    .RREADY(s_axi_CONTROL_BUS_RREADY),
+    .RDATA(s_axi_CONTROL_BUS_RDATA),
+    .RRESP(s_axi_CONTROL_BUS_RRESP),
+    .BVALID(s_axi_CONTROL_BUS_BVALID),
+    .BREADY(s_axi_CONTROL_BUS_BREADY),
+    .BRESP(s_axi_CONTROL_BUS_BRESP),
+    .ACLK(ap_clk),
+    .ARESET(ap_rst_n_inv),
+    .ACLK_EN(1'b1),
+    .ap_start(ap_start),
+    .interrupt(interrupt),
+    .ap_ready(ap_ready),
+    .ap_done(ap_done),
+    .ap_idle(ap_idle)
+);
 
 Block_proc Block_proc_U0(
     .ap_clk(ap_clk),

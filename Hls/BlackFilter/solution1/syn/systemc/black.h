@@ -21,11 +21,34 @@
 #include "start_for_CvtColoeOg.h"
 #include "start_for_CvtColofYi.h"
 #include "start_for_Mat2AXIg8j.h"
+#include "black_CONTROL_BUS_s_axi.h"
 
 namespace ap_rtl {
 
+template<unsigned int C_S_AXI_CONTROL_BUS_ADDR_WIDTH = 4,
+         unsigned int C_S_AXI_CONTROL_BUS_DATA_WIDTH = 32>
 struct black : public sc_module {
-    // Port declarations 24
+    // Port declarations 38
+    sc_in< sc_logic > s_axi_CONTROL_BUS_AWVALID;
+    sc_out< sc_logic > s_axi_CONTROL_BUS_AWREADY;
+    sc_in< sc_uint<C_S_AXI_CONTROL_BUS_ADDR_WIDTH> > s_axi_CONTROL_BUS_AWADDR;
+    sc_in< sc_logic > s_axi_CONTROL_BUS_WVALID;
+    sc_out< sc_logic > s_axi_CONTROL_BUS_WREADY;
+    sc_in< sc_uint<C_S_AXI_CONTROL_BUS_DATA_WIDTH> > s_axi_CONTROL_BUS_WDATA;
+    sc_in< sc_uint<C_S_AXI_CONTROL_BUS_DATA_WIDTH/8> > s_axi_CONTROL_BUS_WSTRB;
+    sc_in< sc_logic > s_axi_CONTROL_BUS_ARVALID;
+    sc_out< sc_logic > s_axi_CONTROL_BUS_ARREADY;
+    sc_in< sc_uint<C_S_AXI_CONTROL_BUS_ADDR_WIDTH> > s_axi_CONTROL_BUS_ARADDR;
+    sc_out< sc_logic > s_axi_CONTROL_BUS_RVALID;
+    sc_in< sc_logic > s_axi_CONTROL_BUS_RREADY;
+    sc_out< sc_uint<C_S_AXI_CONTROL_BUS_DATA_WIDTH> > s_axi_CONTROL_BUS_RDATA;
+    sc_out< sc_lv<2> > s_axi_CONTROL_BUS_RRESP;
+    sc_out< sc_logic > s_axi_CONTROL_BUS_BVALID;
+    sc_in< sc_logic > s_axi_CONTROL_BUS_BREADY;
+    sc_out< sc_lv<2> > s_axi_CONTROL_BUS_BRESP;
+    sc_in_clk ap_clk;
+    sc_in< sc_logic > ap_rst_n;
+    sc_out< sc_logic > interrupt;
     sc_in< sc_lv<24> > INPUT_STREAM_TDATA;
     sc_in< sc_lv<3> > INPUT_STREAM_TKEEP;
     sc_in< sc_lv<3> > INPUT_STREAM_TSTRB;
@@ -40,16 +63,10 @@ struct black : public sc_module {
     sc_out< sc_lv<1> > OUTPUT_STREAM_TLAST;
     sc_out< sc_lv<1> > OUTPUT_STREAM_TID;
     sc_out< sc_lv<1> > OUTPUT_STREAM_TDEST;
-    sc_in_clk ap_clk;
-    sc_in< sc_logic > ap_rst_n;
-    sc_in< sc_logic > ap_start;
     sc_in< sc_logic > INPUT_STREAM_TVALID;
     sc_out< sc_logic > INPUT_STREAM_TREADY;
     sc_out< sc_logic > OUTPUT_STREAM_TVALID;
     sc_in< sc_logic > OUTPUT_STREAM_TREADY;
-    sc_out< sc_logic > ap_done;
-    sc_out< sc_logic > ap_ready;
-    sc_out< sc_logic > ap_idle;
     sc_signal< sc_logic > ap_var_for_const0;
 
 
@@ -63,6 +80,7 @@ struct black : public sc_module {
 
     ofstream mHdltvinHandle;
     ofstream mHdltvoutHandle;
+    black_CONTROL_BUS_s_axi<C_S_AXI_CONTROL_BUS_ADDR_WIDTH,C_S_AXI_CONTROL_BUS_DATA_WIDTH>* black_CONTROL_BUS_s_axi_U;
     Block_proc* Block_proc_U0;
     AXIvideo2Mat* AXIvideo2Mat_U0;
     CvtColor_1* CvtColor_1_U0;
@@ -83,6 +101,10 @@ struct black : public sc_module {
     start_for_CvtColofYi* start_for_CvtColofYi_U;
     start_for_Mat2AXIg8j* start_for_Mat2AXIg8j_U;
     sc_signal< sc_logic > ap_rst_n_inv;
+    sc_signal< sc_logic > ap_start;
+    sc_signal< sc_logic > ap_ready;
+    sc_signal< sc_logic > ap_done;
+    sc_signal< sc_logic > ap_idle;
     sc_signal< sc_logic > Block_proc_U0_ap_start;
     sc_signal< sc_logic > Block_proc_U0_ap_done;
     sc_signal< sc_logic > Block_proc_U0_ap_continue;
@@ -208,10 +230,13 @@ struct black : public sc_module {
     sc_signal< sc_logic > start_for_Mat2AXIvideo_U0_empty_n;
     sc_signal< sc_logic > Mat2AXIvideo_U0_start_full_n;
     sc_signal< sc_logic > Mat2AXIvideo_U0_start_write;
+    static const int C_S_AXI_DATA_WIDTH;
+    static const int C_S_AXI_WSTRB_WIDTH;
+    static const int C_S_AXI_ADDR_WIDTH;
+    static const sc_logic ap_const_logic_1;
     static const sc_lv<24> ap_const_lv24_0;
     static const sc_lv<3> ap_const_lv3_0;
     static const sc_lv<1> ap_const_lv1_0;
-    static const sc_logic ap_const_logic_1;
     static const sc_logic ap_const_logic_0;
     // Thread declarations
     void thread_ap_var_for_const0();

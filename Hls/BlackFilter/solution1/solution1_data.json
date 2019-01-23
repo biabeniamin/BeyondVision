@@ -38,6 +38,7 @@
     "CSource": ["..\/main.cpp"],
     "Vhdl": [
       "impl\/vhdl\/AXIvideo2Mat.vhd",
+      "impl\/vhdl\/black_CONTROL_BUS_s_axi.vhd",
       "impl\/vhdl\/black_mac_muladd_cud.vhd",
       "impl\/vhdl\/black_mac_muladd_dEe.vhd",
       "impl\/vhdl\/black_mul_mul_8nsbkb.vhd",
@@ -54,6 +55,7 @@
     ],
     "Verilog": [
       "impl\/verilog\/AXIvideo2Mat.v",
+      "impl\/verilog\/black_CONTROL_BUS_s_axi.v",
       "impl\/verilog\/black_mac_muladd_cud.v",
       "impl\/verilog\/black_mac_muladd_dEe.v",
       "impl\/verilog\/black_mul_mul_8nsbkb.v",
@@ -67,6 +69,16 @@
       "impl\/verilog\/start_for_CvtColofYi.v",
       "impl\/verilog\/start_for_Mat2AXIg8j.v",
       "impl\/verilog\/black.v"
+    ],
+    "SwDriver": [
+      "impl\/misc\/drivers\/black_v1_0\/data\/black.mdd",
+      "impl\/misc\/drivers\/black_v1_0\/data\/black.tcl",
+      "impl\/misc\/drivers\/black_v1_0\/src\/Makefile",
+      "impl\/misc\/drivers\/black_v1_0\/src\/xblack.c",
+      "impl\/misc\/drivers\/black_v1_0\/src\/xblack.h",
+      "impl\/misc\/drivers\/black_v1_0\/src\/xblack_hw.h",
+      "impl\/misc\/drivers\/black_v1_0\/src\/xblack_linux.c",
+      "impl\/misc\/drivers\/black_v1_0\/src\/xblack_sinit.c"
     ],
     "Misc": ["impl\/misc\/logo.png"]
   },
@@ -173,26 +185,316 @@
     "ap_clk": {
       "type": "clock",
       "ctype": {"CLK": {"Type": "bool"}},
-      "buses": "INPUT_STREAM OUTPUT_STREAM",
+      "buses": "s_axi_CONTROL_BUS INPUT_STREAM OUTPUT_STREAM",
       "reset": "ap_rst_n"
-    },
-    "ap_ctrl": {
-      "type": "ap_ctrl",
-      "ctrl_ports": "ap_start ap_done ap_ready ap_idle",
-      "ctype": {
-        "start": {"Type": "bool"},
-        "done": {"Type": "bool"},
-        "ready": {"Type": "bool"},
-        "idle": {"Type": "bool"}
-      }
     },
     "ap_rst_n": {
       "type": "reset",
       "polarity": "ACTIVE_LOW",
       "ctype": {"RST": {"Type": "bool"}}
+    },
+    "interrupt": {
+      "type": "interrupt",
+      "ctype": {"INTERRUPT": {"Type": "bool"}}
+    },
+    "s_axi_CONTROL_BUS": {
+      "type": "axi4lite",
+      "is_adaptor": "true",
+      "mode": "slave",
+      "port_prefix": "s_axi_CONTROL_BUS",
+      "param_prefix": "C_S_AXI_CONTROL_BUS",
+      "addr_bits": "4",
+      "registers": [
+        {
+          "offset": "0x00",
+          "name": "CTRL",
+          "access": "RW",
+          "reset_value": "0x0",
+          "description": "Control signals",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "AP_START",
+              "access": "RW",
+              "reset_value": "0",
+              "description": "Control signal Register for 'ap_start'."
+            },
+            {
+              "offset": "1",
+              "width": "1",
+              "name": "AP_DONE",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal Register for 'ap_done'."
+            },
+            {
+              "offset": "2",
+              "width": "1",
+              "name": "AP_IDLE",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal Register for 'ap_idle'."
+            },
+            {
+              "offset": "3",
+              "width": "1",
+              "name": "AP_READY",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal Register for 'ap_ready'."
+            },
+            {
+              "offset": "4",
+              "width": "3",
+              "name": "RESERVED_1",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            },
+            {
+              "offset": "7",
+              "width": "1",
+              "name": "AUTO_RESTART",
+              "access": "RW",
+              "reset_value": "0",
+              "description": "Control signal Register for 'auto_restart'."
+            },
+            {
+              "offset": "8",
+              "width": "24",
+              "name": "RESERVED_2",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x04",
+          "name": "GIER",
+          "access": "RW",
+          "reset_value": "0x0",
+          "description": "Global Interrupt Enable Register",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "Enable",
+              "access": "RW",
+              "reset_value": "0",
+              "description": "Master enable for the device interrupt output to the system interrupt controller: 0 = Disabled, 1 = Enabled"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x08",
+          "name": "IP_IER",
+          "access": "RW",
+          "reset_value": "0x0",
+          "description": "IP Interrupt Enable Register",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "CHAN0_INT_EN",
+              "access": "RW",
+              "reset_value": "0",
+              "description": "Enable Channel 0 (ap_done) Interrupt.  0 = Disabled, 1 = Enabled."
+            },
+            {
+              "offset": "1",
+              "width": "1",
+              "name": "CHAN1_INT_EN",
+              "access": "RW",
+              "reset_value": "0",
+              "description": "Enable Channel 1 (ap_ready) Interrupt.  0 = Disabled, 1 = Enabled."
+            },
+            {
+              "offset": "2",
+              "width": "30",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x0c",
+          "name": "IP_ISR",
+          "access": "RW",
+          "reset_value": "0x0",
+          "description": "IP Interrupt Status Register",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "CHAN0_INT_ST",
+              "access": "RTOW",
+              "reset_value": "0",
+              "description": "Channel 0 (ap_done) Interrupt Status. 0 = No Channel 0 input interrupt, 1 = Channel 0 input interrup"
+            },
+            {
+              "offset": "1",
+              "width": "1",
+              "name": "CHAN1_INT_ST",
+              "access": "RTOW",
+              "reset_value": "0",
+              "description": "Channel 1 (ap_ready) Interrupt Status. 0 = No Channel 1 input interrupt, 1 = Channel 1 input interrup"
+            },
+            {
+              "offset": "2",
+              "width": "30",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        }
+      ],
+      "memories": "",
+      "ctype": {
+        "AWVALID": {"Type": "bool"},
+        "AWREADY": {"Type": "bool"},
+        "WVALID": {"Type": "bool"},
+        "WREADY": {"Type": "bool"},
+        "BVALID": {"Type": "bool"},
+        "BREADY": {"Type": "bool"},
+        "BRESP": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "ARVALID": {"Type": "bool"},
+        "ARREADY": {"Type": "bool"},
+        "RVALID": {"Type": "bool"},
+        "RREADY": {"Type": "bool"},
+        "RRESP": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "AWADDR": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "WDATA": {
+          "Type": "null",
+          "Width": "32"
+        },
+        "WSTRB": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "ARADDR": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "RDATA": {
+          "Type": "null",
+          "Width": "32"
+        }
+      },
+      "data_width": "32",
+      "port_width": {
+        "ARADDR": "4",
+        "AWADDR": "4",
+        "RDATA": "32",
+        "WDATA": "32",
+        "WSTRB": "4"
+      }
     }
   },
   "RtlPorts": {
+    "s_axi_CONTROL_BUS_AWVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_CONTROL_BUS_AWREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_CONTROL_BUS_AWADDR": {
+      "dir": "in",
+      "width": "4"
+    },
+    "s_axi_CONTROL_BUS_WVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_CONTROL_BUS_WREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_CONTROL_BUS_WDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "s_axi_CONTROL_BUS_WSTRB": {
+      "dir": "in",
+      "width": "4"
+    },
+    "s_axi_CONTROL_BUS_ARVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_CONTROL_BUS_ARREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_CONTROL_BUS_ARADDR": {
+      "dir": "in",
+      "width": "4"
+    },
+    "s_axi_CONTROL_BUS_RVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_CONTROL_BUS_RREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_CONTROL_BUS_RDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "s_axi_CONTROL_BUS_RRESP": {
+      "dir": "out",
+      "width": "2"
+    },
+    "s_axi_CONTROL_BUS_BVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_CONTROL_BUS_BREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_CONTROL_BUS_BRESP": {
+      "dir": "out",
+      "width": "2"
+    },
+    "ap_clk": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_rst_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "interrupt": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
     "INPUT_STREAM_TDATA": {
       "dir": "in",
       "width": "24"
@@ -272,33 +574,14 @@
     "OUTPUT_STREAM_TREADY": {
       "dir": "in",
       "width": "1"
-    },
-    "ap_clk": {
-      "dir": "in",
-      "width": "1"
-    },
-    "ap_rst_n": {
-      "dir": "in",
-      "width": "1"
-    },
-    "ap_start": {
-      "dir": "in",
-      "width": "1"
-    },
-    "ap_done": {
-      "dir": "out",
-      "width": "1"
-    },
-    "ap_ready": {
-      "dir": "out",
-      "width": "1"
-    },
-    "ap_idle": {
-      "dir": "out",
-      "width": "1"
     }
   },
   "CPorts": {
+    "ap_ctrl": {
+      "interfaceRef": "s_axi_CONTROL_BUS",
+      "dir": "in",
+      "offset": "0"
+    },
     "INPUT_STREAM_V_data_V": {
       "interfaceRef": "INPUT_STREAM",
       "dir": "in"
@@ -361,10 +644,6 @@
       "interfaceRef": "OUTPUT_STREAM",
       "dir": "out",
       "firstOutLatency": "3"
-    },
-    "ap_ctrl": {
-      "interfaceRef": "ap_ctrl",
-      "dir": "out"
     }
   },
   "ModuleInfo": {
@@ -608,8 +887,8 @@
         "Area": {
           "BRAM_18K": "0",
           "DSP48E": "3",
-          "FF": "806",
-          "LUT": "1607"
+          "FF": "842",
+          "LUT": "1647"
         }
       }
     }
@@ -621,7 +900,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2019-01-23 20:17:28 +0200",
+    "Time": "2019-01-23 20:31:32 +0200",
     "ToolName": "vivado_hls",
     "ToolVersion": "2018.2"
   }

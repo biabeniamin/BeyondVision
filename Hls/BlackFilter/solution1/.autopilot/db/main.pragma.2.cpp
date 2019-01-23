@@ -43133,6 +43133,7 @@ void black(AXI_STREAM& INPUT_STREAM, AXI_STREAM& OUTPUT_STREAM)
 {
 _ssdm_op_SpecInterface(&INPUT_STREAM, "axis", 1, 1, "both", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
 _ssdm_op_SpecInterface(&OUTPUT_STREAM, "axis", 1, 1, "both", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
+_ssdm_op_SpecInterface(0, "s_axilite", 0, 0, "", 0, 0, "CONTROL_BUS", "", "", 0, 0, 0, 0, "", "");
 RGB_IMAGE img_0(2000, 2000);
 GRAY_IMAGE img_1(2000, 2000);
 RGB_IMAGE img_2(2000, 2000);

@@ -248,7 +248,7 @@
 
 <Node id="25" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-:0  call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str8) nounwind
+:0  call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str10) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -264,7 +264,7 @@
 
 <Node id="26" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-:1  %tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str8)
+:1  %tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str10)
 
 ]]></Node>
 <StgValue><ssdm name="tmp"/></StgValue>
@@ -425,7 +425,7 @@ operator>>.exit:0  %tmp_user_V_load = load i1* %tmp_user_V
 
 <Node id="40" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-operator>>.exit:5  %tmp_3 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str13)
+operator>>.exit:5  %tmp_3 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str15)
 
 ]]></Node>
 <StgValue><ssdm name="tmp_3"/></StgValue>
@@ -505,7 +505,7 @@ operator>>.exit:9  %tmp_5 = call i8 @_ssdm_op_Read.ap_fifo.volatile.i8P(i8* %img
 
 <Node id="45" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-operator>>.exit:10  %empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str13, i32 %tmp_3)
+operator>>.exit:10  %empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str15, i32 %tmp_3)
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -572,7 +572,7 @@ operator>>.exit:14  store i1 false, i1* %tmp_user_V
 
 <Node id="36" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-operator>>.exit:1  call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str9) nounwind
+operator>>.exit:1  call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str11) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -588,7 +588,7 @@ operator>>.exit:1  call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str9) n
 
 <Node id="37" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-operator>>.exit:2  %tmp_2 = call i32 (...)* @_ssdm_op_SpecRegionBegin([11 x i8]* @p_str9)
+operator>>.exit:2  %tmp_2 = call i32 (...)* @_ssdm_op_SpecRegionBegin([11 x i8]* @p_str11)
 
 ]]></Node>
 <StgValue><ssdm name="tmp_2"/></StgValue>
@@ -636,7 +636,7 @@ operator>>.exit:12  call void @_ssdm_op_Write.axis.volatile.i24P.i3P.i3P.i1P.i1P
 
 <Node id="48" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-operator>>.exit:13  %empty_40 = call i32 (...)* @_ssdm_op_SpecRegionEnd([11 x i8]* @p_str9, i32 %tmp_2)
+operator>>.exit:13  %empty_40 = call i32 (...)* @_ssdm_op_SpecRegionEnd([11 x i8]* @p_str11, i32 %tmp_2)
 
 ]]></Node>
 <StgValue><ssdm name="empty_40"/></StgValue>
@@ -670,7 +670,7 @@ operator>>.exit:15  br label %2
 
 <Node id="52" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-:0  %empty_41 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str8, i32 %tmp)
+:0  %empty_41 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str10, i32 %tmp)
 
 ]]></Node>
 <StgValue><ssdm name="empty_41"/></StgValue>
