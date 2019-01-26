@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Sat Jan 26 13:55:15 2019
+--Date        : Sat Jan 26 14:48:57 2019
 --Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
 --Command     : generate_target hdmi.bd
 --Design      : hdmi
@@ -5979,7 +5979,7 @@ entity hdmi is
     usb_uart_txd : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of hdmi : entity is "hdmi,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=hdmi,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=54,numReposBlks=37,numNonXlnxBlks=3,numHierBlks=17,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,synth_mode=Global}";
+  attribute CORE_GENERATION_INFO of hdmi : entity is "hdmi,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=hdmi,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=55,numReposBlks=38,numNonXlnxBlks=3,numHierBlks=17,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,synth_mode=Global}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of hdmi : entity is "hdmi.hwdef";
 end hdmi;
@@ -6624,6 +6624,22 @@ architecture STRUCTURE of hdmi is
     dout : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component hdmi_xlconstant_0_0;
+  component hdmi_axis_subset_converter_0_0 is
+  port (
+    aclk : in STD_LOGIC;
+    aresetn : in STD_LOGIC;
+    s_axis_tvalid : in STD_LOGIC;
+    s_axis_tready : out STD_LOGIC;
+    s_axis_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    s_axis_tlast : in STD_LOGIC;
+    s_axis_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axis_tvalid : out STD_LOGIC;
+    m_axis_tready : in STD_LOGIC;
+    m_axis_tdata : out STD_LOGIC_VECTOR ( 23 downto 0 );
+    m_axis_tlast : out STD_LOGIC;
+    m_axis_tuser : out STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component hdmi_axis_subset_converter_0_0;
   signal SYS_Rst_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal TMDS_IN_1_CLK_N : STD_LOGIC;
   signal TMDS_IN_1_CLK_P : STD_LOGIC;
@@ -6705,6 +6721,11 @@ architecture STRUCTURE of hdmi is
   signal axi_vdma_0_M_AXI_S2MM_WVALID : STD_LOGIC;
   signal axi_vdma_0_mm2s_introut : STD_LOGIC;
   signal axi_vdma_0_s2mm_introut : STD_LOGIC;
+  signal axis_subset_converter_0_M_AXIS_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
+  signal axis_subset_converter_0_M_AXIS_TLAST : STD_LOGIC;
+  signal axis_subset_converter_0_M_AXIS_TREADY : STD_LOGIC;
+  signal axis_subset_converter_0_M_AXIS_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal axis_subset_converter_0_M_AXIS_TVALID : STD_LOGIC;
   signal dvi2rgb_0_DDC_SCL_I : STD_LOGIC;
   signal dvi2rgb_0_DDC_SCL_O : STD_LOGIC;
   signal dvi2rgb_0_DDC_SCL_T : STD_LOGIC;
@@ -7423,12 +7444,27 @@ axi_vdma_0: component hdmi_axi_vdma_0_0
       s_axi_lite_wready => microblaze_0_axi_periph_M01_AXI_WREADY,
       s_axi_lite_wvalid => microblaze_0_axi_periph_M01_AXI_WVALID(0),
       s_axis_s2mm_aclk => mig_7series_0_ui_addn_clk_0,
-      s_axis_s2mm_tdata(23 downto 0) => v_vid_in_axi4s_0_video_out_TDATA(23 downto 0),
+      s_axis_s2mm_tdata(23 downto 0) => axis_subset_converter_0_M_AXIS_TDATA(23 downto 0),
       s_axis_s2mm_tkeep(2 downto 0) => B"111",
-      s_axis_s2mm_tlast => v_vid_in_axi4s_0_video_out_TLAST,
-      s_axis_s2mm_tready => v_vid_in_axi4s_0_video_out_TREADY,
-      s_axis_s2mm_tuser(0) => v_vid_in_axi4s_0_video_out_TUSER,
-      s_axis_s2mm_tvalid => v_vid_in_axi4s_0_video_out_TVALID
+      s_axis_s2mm_tlast => axis_subset_converter_0_M_AXIS_TLAST,
+      s_axis_s2mm_tready => axis_subset_converter_0_M_AXIS_TREADY,
+      s_axis_s2mm_tuser(0) => axis_subset_converter_0_M_AXIS_TUSER(0),
+      s_axis_s2mm_tvalid => axis_subset_converter_0_M_AXIS_TVALID
+    );
+axis_subset_converter_0: component hdmi_axis_subset_converter_0_0
+     port map (
+      aclk => mig_7series_0_ui_addn_clk_0,
+      aresetn => '0',
+      m_axis_tdata(23 downto 0) => axis_subset_converter_0_M_AXIS_TDATA(23 downto 0),
+      m_axis_tlast => axis_subset_converter_0_M_AXIS_TLAST,
+      m_axis_tready => axis_subset_converter_0_M_AXIS_TREADY,
+      m_axis_tuser(0) => axis_subset_converter_0_M_AXIS_TUSER(0),
+      m_axis_tvalid => axis_subset_converter_0_M_AXIS_TVALID,
+      s_axis_tdata(23 downto 0) => v_vid_in_axi4s_0_video_out_TDATA(23 downto 0),
+      s_axis_tlast => v_vid_in_axi4s_0_video_out_TLAST,
+      s_axis_tready => v_vid_in_axi4s_0_video_out_TREADY,
+      s_axis_tuser(0) => v_vid_in_axi4s_0_video_out_TUSER,
+      s_axis_tvalid => v_vid_in_axi4s_0_video_out_TVALID
     );
 dvi2rgb_0: component hdmi_dvi2rgb_0_0
      port map (

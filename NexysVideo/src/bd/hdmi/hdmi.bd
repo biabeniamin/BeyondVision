@@ -297,6 +297,7 @@
           <spirit:configurableElementValue spirit:referenceId="C_DCACHE_DATA_WIDTH">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="C_USE_BRANCH_TARGET_CACHE">0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
+        <bd:hdl_attributes/>
       </spirit:componentInstance>
       <spirit:componentInstance>
         <spirit:instanceName>microblaze_0_axi_intc</spirit:instanceName>
@@ -412,7 +413,7 @@
           <spirit:configurableElementValue spirit:referenceId="S_HAS_TLAST">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="M_HAS_TKEEP">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="M_HAS_TLAST">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="TDATA_REMAP">tdata[15:8],tdata[7:0],tdata[23:16]</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="TDATA_REMAP">tdata[7:0],tdata[15:8],tdata[23:16]</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="TUSER_REMAP">tuser[0:0]</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="TLAST_REMAP">tlast[0]</spirit:configurableElementValue>
         </spirit:configurableElementValues>
@@ -618,6 +619,7 @@
         <spirit:internalPortReference spirit:componentRef="mig_7series_0" spirit:portRef="ui_addn_clk_0"/>
         <spirit:internalPortReference spirit:componentRef="axi_vdma_0" spirit:portRef="s_axis_s2mm_aclk"/>
         <spirit:internalPortReference spirit:componentRef="v_vid_in_axi4s_0" spirit:portRef="aclk"/>
+        <spirit:internalPortReference spirit:componentRef="axis_subset_converter_0" spirit:portRef="aclk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>mig_7series_0_ui_addn_clk_2</spirit:name>
@@ -4815,6 +4817,7 @@
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">hdmi_dlmb_bram_if_cntlr_0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="C_ECC">0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
+        <bd:hdl_attributes/>
       </spirit:componentInstance>
       <spirit:componentInstance>
         <spirit:instanceName>ilmb_bram_if_cntlr</spirit:instanceName>
