@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Sat Jan 26 19:35:45 2019
+--Date        : Sat Jan 26 20:01:47 2019
 --Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
 --Command     : generate_target hdmi.bd
 --Design      : hdmi
@@ -6670,6 +6670,7 @@ entity hdmi is
     TMDS_OUT_clk_p : out STD_LOGIC;
     TMDS_OUT_data_n : out STD_LOGIC_VECTOR ( 2 downto 0 );
     TMDS_OUT_data_p : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    dip_switches_8bits_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 );
     hdmi_hpd : out STD_LOGIC_VECTOR ( 0 to 0 );
     hdmi_rx_txen : out STD_LOGIC_VECTOR ( 0 to 0 );
     reset : in STD_LOGIC;
@@ -6678,7 +6679,7 @@ entity hdmi is
     usb_uart_txd : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of hdmi : entity is "hdmi,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=hdmi,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=64,numReposBlks=44,numNonXlnxBlks=3,numHierBlks=20,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_clkrst_cnt=7,synth_mode=Global}";
+  attribute CORE_GENERATION_INFO of hdmi : entity is "hdmi,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=hdmi,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=64,numReposBlks=44,numNonXlnxBlks=3,numHierBlks=20,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_board_cnt=1,da_clkrst_cnt=7,synth_mode=Global}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of hdmi : entity is "hdmi.hwdef";
 end hdmi;
@@ -7491,6 +7492,7 @@ architecture STRUCTURE of hdmi is
   signal axi_dynclk_0_PXL_CLK_5X_O : STD_LOGIC;
   signal axi_dynclk_0_PXL_CLK_O : STD_LOGIC;
   signal axi_gpio_0_gpio2_io_o : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal axi_gpio_2_GPIO_TRI_I : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal axi_gpio_video_gpio_io_o : STD_LOGIC_VECTOR ( 0 to 0 );
   signal axi_gpio_video_ip2intc_irpt : STD_LOGIC;
   signal axi_mem_intercon_M00_AXI_ARADDR : STD_LOGIC_VECTOR ( 28 downto 0 );
@@ -8031,6 +8033,7 @@ architecture STRUCTURE of hdmi is
   attribute X_INTERFACE_INFO of TMDS_IN_data_p : signal is "digilentinc.com:interface:tmds:1.0 TMDS_IN DATA_P";
   attribute X_INTERFACE_INFO of TMDS_OUT_data_n : signal is "digilentinc.com:interface:tmds:1.0 TMDS_OUT DATA_N";
   attribute X_INTERFACE_INFO of TMDS_OUT_data_p : signal is "digilentinc.com:interface:tmds:1.0 TMDS_OUT DATA_P";
+  attribute X_INTERFACE_INFO of dip_switches_8bits_tri_i : signal is "xilinx.com:interface:gpio:1.0 dip_switches_8bits TRI_I";
 begin
   DDC_scl_o <= dvi2rgb_0_DDC_SCL_O;
   DDC_scl_t <= dvi2rgb_0_DDC_SCL_T;
@@ -8055,6 +8058,7 @@ begin
   TMDS_OUT_clk_p <= rgb2dvi_0_TMDS_CLK_P;
   TMDS_OUT_data_n(2 downto 0) <= rgb2dvi_0_TMDS_DATA_N(2 downto 0);
   TMDS_OUT_data_p(2 downto 0) <= rgb2dvi_0_TMDS_DATA_P(2 downto 0);
+  axi_gpio_2_GPIO_TRI_I(7 downto 0) <= dip_switches_8bits_tri_i(7 downto 0);
   axi_uartlite_0_UART_RxD <= usb_uart_rxd;
   dvi2rgb_0_DDC_SCL_I <= DDC_scl_i;
   dvi2rgb_0_DDC_SDA_I <= DDC_sda_i;
@@ -8169,7 +8173,7 @@ axi_gpio_1: component hdmi_axi_gpio_1_0
     );
 axi_gpio_2: component hdmi_axi_gpio_2_0
      port map (
-      gpio_io_i(7 downto 0) => B"00000000",
+      gpio_io_i(7 downto 0) => axi_gpio_2_GPIO_TRI_I(7 downto 0),
       s_axi_aclk => mig_7series_0_ui_clk,
       s_axi_araddr(8 downto 0) => microblaze_0_axi_periph_M10_AXI_ARADDR(8 downto 0),
       s_axi_aresetn => rst_mig_7series_0_100M_peripheral_aresetn(0),

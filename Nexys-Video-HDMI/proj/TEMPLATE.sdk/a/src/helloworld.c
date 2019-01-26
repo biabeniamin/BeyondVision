@@ -191,7 +191,7 @@ void DemoInitialize()
 
 	return;
 }
-
+int last=0;
 void DemoRun()
 {
 	int nextFrame = 0;
@@ -212,11 +212,30 @@ void DemoRun()
 		/* Wait for data on UART */
 		while (XUartLite_IsReceiveEmpty(UART_BASEADDR) && !fRefresh)
 		{
-			xil_printf("%x", XGpio_DiscreteRead(&switchIn, 1));
-			sleep(3);
-			/*int status = DisplayStop(&dispCtrl);
-						DisplaySetMode(&dispCtrl, &VMODE_1280x1024);
-						DisplayStart(&dispCtrl);
+			int status;
+			int aux = XGpio_DiscreteRead(&switchIn, 1);
+
+			if(last != aux) {
+
+				status = DisplayStop(&dispCtrl);
+
+				switch(aux) {
+				case 0:
+					DisplaySetMode(&dispCtrl, &VMODE_640x480);
+					break;
+				default:
+				case 1:
+					DisplaySetMode(&dispCtrl, &VMODE_1280x1024);
+					break;
+
+				}
+
+				DisplayStart(&dispCtrl);
+				last = aux;
+			}
+			//xil_printf("%x \r\n", aux);
+			sleep(1);
+			/*
 
 						sleep(5);*/
 		}
