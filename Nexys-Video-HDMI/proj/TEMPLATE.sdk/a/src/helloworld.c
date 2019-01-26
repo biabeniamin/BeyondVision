@@ -208,7 +208,19 @@ void DemoRun()
 
 		/* Wait for data on UART */
 		while (XUartLite_IsReceiveEmpty(UART_BASEADDR) && !fRefresh)
-		{}
+		{
+			sleep(5);
+			int status = DisplayStop(&dispCtrl);
+						DisplaySetMode(&dispCtrl, &VMODE_1280x1024);
+						DisplayStart(&dispCtrl);
+
+						sleep(5);
+
+						status = DisplayStop(&dispCtrl);
+												DisplaySetMode(&dispCtrl, &VMODE_640x480);
+												DisplayStart(&dispCtrl);
+												sleep(5);
+		}
 
 		/* Store the first character in the UART receive FIFO and echo it */
 		if (!XUartLite_IsReceiveEmpty(UART_BASEADDR))
