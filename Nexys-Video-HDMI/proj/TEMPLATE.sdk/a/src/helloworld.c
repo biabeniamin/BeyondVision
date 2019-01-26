@@ -69,6 +69,7 @@ char fRefresh; //flag used to trigger a refresh of the Menu on video detect
 
 XGpio hpd_in;
 XGpio hpd_in2;
+XGpio switchIn;
 /*
  * Framebuffers for video data
  */
@@ -94,6 +95,8 @@ int main(void)
 
 	XGpio_Initialize(&hpd_in, XPAR_AXI_GPIO_0_DEVICE_ID);
 	XGpio_Initialize(&hpd_in2, XPAR_AXI_GPIO_1_DEVICE_ID);
+
+	XGpio_Initialize(&switchIn, XPAR_AXI_GPIO_2_DEVICE_ID);
 	XGpio_DiscreteWrite(&hpd_in2,1,0x1);
 	XGpio_DiscreteWrite(&hpd_in,2,0x0);
 	XGpio_DiscreteWrite(&hpd_in,1,0x1);
@@ -209,17 +212,13 @@ void DemoRun()
 		/* Wait for data on UART */
 		while (XUartLite_IsReceiveEmpty(UART_BASEADDR) && !fRefresh)
 		{
-			sleep(5);
-			int status = DisplayStop(&dispCtrl);
+			xil_printf("%x", XGpio_DiscreteRead(&switchIn, 1));
+			sleep(3);
+			/*int status = DisplayStop(&dispCtrl);
 						DisplaySetMode(&dispCtrl, &VMODE_1280x1024);
 						DisplayStart(&dispCtrl);
 
-						sleep(5);
-
-						status = DisplayStop(&dispCtrl);
-												DisplaySetMode(&dispCtrl, &VMODE_640x480);
-												DisplayStart(&dispCtrl);
-												sleep(5);
+						sleep(5);*/
 		}
 
 		/* Store the first character in the UART receive FIFO and echo it */
