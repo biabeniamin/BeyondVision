@@ -49,7 +49,7 @@
 //   ____  ____
 //  /   /\/   /
 // /___/  \  /    Vendor             : Xilinx
-// \   \   \/     Version            : 4.0
+// \   \   \/     Version            : 4.1
 //  \   \         Application        : MIG
 //  /   /         Filename           : example_top.v
 // /___/   /\     Date Last Modified : $Date: 2011/06/02 08:35:03 $
@@ -542,7 +542,7 @@ function integer clogb2 (input integer size);
      aresetn <= ~rst;
    end
 
-   mig_7series_v4_0_axi4_tg #(
+   mig_7series_v4_1_axi4_tg #(
 
      .C_AXI_ID_WIDTH                   (C_S_AXI_ID_WIDTH),
      .C_AXI_ADDR_WIDTH                 (C_S_AXI_ADDR_WIDTH),

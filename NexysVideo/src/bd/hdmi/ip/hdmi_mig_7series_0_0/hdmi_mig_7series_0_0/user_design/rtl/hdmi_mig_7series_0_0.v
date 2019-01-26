@@ -49,7 +49,7 @@
 //   ____  ____
 //  /   /\/   /
 // /___/  \  /    Vendor             : Xilinx
-// \   \   \/     Version            : 4.0
+// \   \   \/     Version            : 4.1
 //  \   \         Application        : MIG
 //  /   /         Filename           : hdmi_mig_7series_0_0.v
 // /___/   /\     Date Last Modified : $Date: 2011/06/02 08:35:03 $

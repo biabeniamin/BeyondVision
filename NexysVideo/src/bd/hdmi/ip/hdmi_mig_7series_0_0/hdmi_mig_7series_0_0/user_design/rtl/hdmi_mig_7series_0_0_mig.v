@@ -49,7 +49,7 @@
 //   ____  ____
 //  /   /\/   /
 // /___/  \  /    Vendor             : Xilinx
-// \   \   \/     Version            : 4.0
+// \   \   \/     Version            : 4.1
 //  \   \         Application        : MIG
 //  /   /         Filename           : hdmi_mig_7series_0_0_mig.v
 // /___/   /\     Date Last Modified : $Date: 2011/06/02 08:35:03 $
@@ -807,6 +807,7 @@ module hdmi_mig_7series_0_0_mig #
   wire                              mmcm_clk;
   wire                              clk_ref_p;
   wire                              clk_ref_n;
+  wire [11:0]                       device_temp_s;
   wire [11:0]                       device_temp_i;
 
   // Debug port signals
@@ -898,6 +899,7 @@ module hdmi_mig_7series_0_0_mig #
   assign sys_clk_n = 1'b0;
   assign clk_ref_p = 1'b0;
   assign clk_ref_n = 1'b0;
+  assign device_temp = device_temp_s;
       
 
   generate
@@ -907,7 +909,7 @@ module hdmi_mig_7series_0_0_mig #
       assign clk_ref_in = clk_ref_i;
   endgenerate
 
-  mig_7series_v4_0_iodelay_ctrl #
+  mig_7series_v4_1_iodelay_ctrl #
     (
      .TCQ                       (TCQ),
      .IODELAY_GRP0              (IODELAY_GRP0),
@@ -932,7 +934,7 @@ module hdmi_mig_7series_0_0_mig #
        .clk_ref_i        (clk_ref_in),
        .sys_rst          (sys_rst)
        );
-  mig_7series_v4_0_clk_ibuf #
+  mig_7series_v4_1_clk_ibuf #
     (
      .SYSCLK_TYPE      (SYSCLK_TYPE),
      .DIFF_TERM_SYSCLK (DIFF_TERM_SYSCLK)
@@ -949,7 +951,7 @@ module hdmi_mig_7series_0_0_mig #
   generate
     if (TEMP_MON_EN == "ON") begin: temp_mon_enabled
 
-      mig_7series_v4_0_tempmon #
+      mig_7series_v4_1_tempmon #
         (
          .TCQ              (TCQ),
          .TEMP_MON_CONTROL (TEMP_MON_CONTROL),
@@ -962,16 +964,16 @@ module hdmi_mig_7series_0_0_mig #
            .xadc_clk       (clk_ref[0]),
            .rst            (rst),
            .device_temp_i  (device_temp_i),
-           .device_temp    (device_temp)
+           .device_temp    (device_temp_s)
           );
     end else begin: temp_mon_disabled
 
-      assign device_temp = 'b0;
+      assign device_temp_s = 'b0;
 
     end
   endgenerate
          
-  mig_7series_v4_0_infrastructure #
+  mig_7series_v4_1_infrastructure #
     (
      .TCQ                 (TCQ),
      .nCK_PER_CLK         (nCK_PER_CLK),
@@ -1035,7 +1037,7 @@ module hdmi_mig_7series_0_0_mig #
        );
       
 
-  mig_7series_v4_0_memc_ui_top_axi #
+  mig_7series_v4_1_memc_ui_top_axi #
     (
      .TCQ                              (TCQ),
      .ADDR_CMD_MODE                    (ADDR_CMD_MODE),
@@ -1231,7 +1233,7 @@ module hdmi_mig_7series_0_0_mig #
        .app_ecc_multiple_err_o           (),
        .app_ecc_single_err               (),
 
-       .device_temp                      (device_temp),
+       .device_temp                      (device_temp_s),
 
        // skip calibration ports
        `ifdef SKIP_CALIB
