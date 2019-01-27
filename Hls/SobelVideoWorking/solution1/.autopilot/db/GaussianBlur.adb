@@ -79,7 +79,7 @@
               <fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>2650</lineNumber>
-              <contextFuncName>GaussianBlur&amp;lt;3, 3, hls::BORDER_DEFAULT, 0, 0, 1080, 1920&amp;gt;</contextFuncName>
+              <contextFuncName>GaussianBlur&amp;lt;3, 3, hls::BORDER_DEFAULT, 0, 0, 720, 1280&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -91,14 +91,14 @@
                     <item class_id="12" tracking_level="0" version="0">
                       <first class_id="13" tracking_level="0" version="0">
                         <first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</first>
-                        <second>GaussianBlur&amp;lt;3, 3, 0, 0, 1080, 1920&amp;gt;</second>
+                        <second>GaussianBlur&amp;lt;3, 3, 0, 0, 720, 1280&amp;gt;</second>
                       </first>
                       <second>2660</second>
                     </item>
                     <item>
                       <first>
                         <first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</first>
-                        <second>GaussianBlur&amp;lt;3, 3, hls::BORDER_DEFAULT, 0, 0, 1080, 1920&amp;gt;</second>
+                        <second>GaussianBlur&amp;lt;3, 3, hls::BORDER_DEFAULT, 0, 0, 720, 1280&amp;gt;</second>
                       </first>
                       <second>2650</second>
                     </item>
@@ -133,7 +133,7 @@
               <fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>2661</lineNumber>
-              <contextFuncName>GaussianBlur&amp;lt;3, 3, 0, 0, 1080, 1920&amp;gt;</contextFuncName>
+              <contextFuncName>GaussianBlur&amp;lt;3, 3, 0, 0, 720, 1280&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -145,7 +145,7 @@
                     <item>
                       <first>
                         <first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</first>
-                        <second>GaussianBlur&amp;lt;3, 3, 0, 0, 1080, 1920&amp;gt;</second>
+                        <second>GaussianBlur&amp;lt;3, 3, 0, 0, 720, 1280&amp;gt;</second>
                       </first>
                       <second>2661</second>
                     </item>
@@ -270,8 +270,8 @@
         <mDepth>-1</mDepth>
         <mMinTripCount>-1</mMinTripCount>
         <mMaxTripCount>-1</mMaxTripCount>
-        <mMinLatency>2087180</mMinLatency>
-        <mMaxLatency>2087180</mMaxLatency>
+        <mMinLatency>930660</mMinLatency>
+        <mMaxLatency>930660</mMaxLatency>
         <mIsDfPipe>0</mIsDfPipe>
         <mDfPipe class_id="-1"/>
       </item>
@@ -359,11 +359,11 @@
             </item>
             <item>
               <first>FF</first>
-              <second>514</second>
+              <second>511</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>1025</second>
+              <second>1016</second>
             </item>
           </second>
         </item>

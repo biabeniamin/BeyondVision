@@ -16,8 +16,8 @@ const sc_logic Block_proc::ap_const_logic_1 = sc_dt::Log_1;
 const sc_logic Block_proc::ap_const_logic_0 = sc_dt::Log_0;
 const sc_lv<1> Block_proc::ap_ST_fsm_state1 = "1";
 const sc_lv<32> Block_proc::ap_const_lv32_0 = "00000000000000000000000000000000";
-const sc_lv<12> Block_proc::ap_const_lv12_438 = "10000111000";
-const sc_lv<12> Block_proc::ap_const_lv12_780 = "11110000000";
+const sc_lv<11> Block_proc::ap_const_lv11_2D0 = "1011010000";
+const sc_lv<12> Block_proc::ap_const_lv12_500 = "10100000000";
 const bool Block_proc::ap_const_boolean_1 = true;
 
 Block_proc::Block_proc(sc_module_name name) : sc_module(name), mVcdFile(0) {
@@ -202,7 +202,7 @@ void Block_proc::thread_img_0_cols_V_out_blk_n() {
 }
 
 void Block_proc::thread_img_0_cols_V_out_din() {
-    img_0_cols_V_out_din = ap_const_lv12_780;
+    img_0_cols_V_out_din = ap_const_lv12_500;
 }
 
 void Block_proc::thread_img_0_cols_V_out_write() {
@@ -223,7 +223,7 @@ void Block_proc::thread_img_0_rows_V_out_blk_n() {
 }
 
 void Block_proc::thread_img_0_rows_V_out_din() {
-    img_0_rows_V_out_din = ap_const_lv12_438;
+    img_0_rows_V_out_din = ap_const_lv11_2D0;
 }
 
 void Block_proc::thread_img_0_rows_V_out_write() {

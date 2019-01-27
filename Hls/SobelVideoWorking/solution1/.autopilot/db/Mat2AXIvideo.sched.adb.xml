@@ -170,9 +170,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="19" bw="11" op_0_bw="11" op_1_bw="0">
+<Node id="19" bw="10" op_0_bw="10" op_1_bw="0">
 <![CDATA[
-:0  %t_V = phi i11 [ 0, %._crit_edge ], [ %i_V, %3 ]
+:0  %t_V = phi i10 [ 0, %._crit_edge ], [ %i_V, %3 ]
 
 ]]></Node>
 <StgValue><ssdm name="t_V"/></StgValue>
@@ -185,9 +185,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="20" bw="1" op_0_bw="11" op_1_bw="11">
+<Node id="20" bw="1" op_0_bw="10" op_1_bw="10">
 <![CDATA[
-:1  %exitcond2 = icmp eq i11 %t_V, -968
+:1  %exitcond2 = icmp eq i10 %t_V, -304
 
 ]]></Node>
 <StgValue><ssdm name="exitcond2"/></StgValue>
@@ -202,7 +202,7 @@
 
 <Node id="21" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-:2  call void (...)* @_ssdm_op_SpecLoopTripCount(i64 1080, i64 1080, i64 1080)
+:2  call void (...)* @_ssdm_op_SpecLoopTripCount(i64 720, i64 720, i64 720)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -215,9 +215,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="22" bw="11" op_0_bw="11" op_1_bw="11">
+<Node id="22" bw="10" op_0_bw="10" op_1_bw="10">
 <![CDATA[
-:3  %i_V = add i11 %t_V, 1
+:3  %i_V = add i10 %t_V, 1
 
 ]]></Node>
 <StgValue><ssdm name="i_V"/></StgValue>
@@ -329,7 +329,7 @@
 
 <Node id="30" bw="1" op_0_bw="11" op_1_bw="11">
 <![CDATA[
-:1  %exitcond = icmp eq i11 %t_V_1, -128
+:1  %exitcond = icmp eq i11 %t_V_1, -768
 
 ]]></Node>
 <StgValue><ssdm name="exitcond"/></StgValue>
@@ -344,7 +344,7 @@
 
 <Node id="31" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-:2  call void (...)* @_ssdm_op_SpecLoopTripCount(i64 1920, i64 1920, i64 1920)
+:2  call void (...)* @_ssdm_op_SpecLoopTripCount(i64 1280, i64 1280, i64 1280)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -390,7 +390,7 @@
 
 <Node id="39" bw="1" op_0_bw="11" op_1_bw="11">
 <![CDATA[
-operator>>.exit:4  %axi_last_V = icmp eq i11 %t_V_1, -129
+operator>>.exit:4  %axi_last_V = icmp eq i11 %t_V_1, -769
 
 ]]></Node>
 <StgValue><ssdm name="axi_last_V"/></StgValue>
@@ -636,10 +636,10 @@ operator>>.exit:12  call void @_ssdm_op_Write.axis.volatile.i24P.i3P.i3P.i1P.i1P
 
 <Node id="48" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-operator>>.exit:13  %empty_81 = call i32 (...)* @_ssdm_op_SpecRegionEnd([11 x i8]* @p_str9, i32 %tmp_9)
+operator>>.exit:13  %empty_88 = call i32 (...)* @_ssdm_op_SpecRegionEnd([11 x i8]* @p_str9, i32 %tmp_9)
 
 ]]></Node>
-<StgValue><ssdm name="empty_81"/></StgValue>
+<StgValue><ssdm name="empty_88"/></StgValue>
 </operation>
 
 <operation id="44" st_id="5" stage="1" lat="1">
@@ -670,10 +670,10 @@ operator>>.exit:15  br label %2
 
 <Node id="52" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-:0  %empty_82 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str8, i32 %tmp)
+:0  %empty_89 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str8, i32 %tmp)
 
 ]]></Node>
-<StgValue><ssdm name="empty_82"/></StgValue>
+<StgValue><ssdm name="empty_89"/></StgValue>
 </operation>
 
 <operation id="46" st_id="6" stage="1" lat="1">

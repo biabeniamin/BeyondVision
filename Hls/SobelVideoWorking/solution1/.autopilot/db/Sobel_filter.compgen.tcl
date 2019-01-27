@@ -2,14 +2,14 @@
 
 # FIFO definition:
 set ID 100
-set FifoName fifo_w12_d2_A
+set FifoName fifo_w11_d2_A
 set InstName img_0_rows_V_c_U
 set CoreName ap_simcore_fifo
 set NumOfStage 2
 set RegisteredInput 0
 set DualClock 0
 set Depth 2
-set DataWd 12
+set DataWd 11
 set AddrWd 1
 set FullThresh 0
 set impl_style auto
@@ -332,14 +332,14 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_FIFO, check your pl
 
 # FIFO definition:
 set ID 105
-set FifoName fifo_w12_d2_A
+set FifoName fifo_w11_d2_A
 set InstName img_0_rows_V_c20_U
 set CoreName ap_simcore_fifo
 set NumOfStage 2
 set RegisteredInput 0
 set DualClock 0
 set Depth 2
-set DataWd 12
+set DataWd 11
 set AddrWd 1
 set FullThresh 0
 set impl_style auto

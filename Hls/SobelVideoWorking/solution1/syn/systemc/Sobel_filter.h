@@ -21,6 +21,7 @@
 #include "AddWeighted.h"
 #include "CvtColor.h"
 #include "Mat2AXIvideo.h"
+#include "fifo_w11_d2_A.h"
 #include "fifo_w12_d2_A.h"
 #include "fifo_w8_d2_A.h"
 #include "start_for_CvtColoudo.h"
@@ -83,12 +84,12 @@ struct Sobel_filter : public sc_module {
     AddWeighted* AddWeighted_U0;
     CvtColor* CvtColor_U0;
     Mat2AXIvideo* Mat2AXIvideo_U0;
-    fifo_w12_d2_A* img_0_rows_V_c_U;
+    fifo_w11_d2_A* img_0_rows_V_c_U;
     fifo_w12_d2_A* img_0_cols_V_c_U;
     fifo_w8_d2_A* img_0_data_stream_0_U;
     fifo_w8_d2_A* img_0_data_stream_1_U;
     fifo_w8_d2_A* img_0_data_stream_2_U;
-    fifo_w12_d2_A* img_0_rows_V_c20_U;
+    fifo_w11_d2_A* img_0_rows_V_c20_U;
     fifo_w12_d2_A* img_0_cols_V_c21_U;
     fifo_w8_d2_A* img_1_data_stream_0_U;
     fifo_w8_d2_A* img_2_data_stream_0_U;
@@ -114,7 +115,7 @@ struct Sobel_filter : public sc_module {
     sc_signal< sc_logic > Block_proc_U0_ap_continue;
     sc_signal< sc_logic > Block_proc_U0_ap_idle;
     sc_signal< sc_logic > Block_proc_U0_ap_ready;
-    sc_signal< sc_lv<12> > Block_proc_U0_img_0_rows_V_out_din;
+    sc_signal< sc_lv<11> > Block_proc_U0_img_0_rows_V_out_din;
     sc_signal< sc_logic > Block_proc_U0_img_0_rows_V_out_write;
     sc_signal< sc_lv<12> > Block_proc_U0_img_0_cols_V_out_din;
     sc_signal< sc_logic > Block_proc_U0_img_0_cols_V_out_write;
@@ -134,7 +135,7 @@ struct Sobel_filter : public sc_module {
     sc_signal< sc_logic > AXIvideo2Mat_U0_img_data_stream_1_V_write;
     sc_signal< sc_lv<8> > AXIvideo2Mat_U0_img_data_stream_2_V_din;
     sc_signal< sc_logic > AXIvideo2Mat_U0_img_data_stream_2_V_write;
-    sc_signal< sc_lv<12> > AXIvideo2Mat_U0_img_rows_V_out_din;
+    sc_signal< sc_lv<11> > AXIvideo2Mat_U0_img_rows_V_out_din;
     sc_signal< sc_logic > AXIvideo2Mat_U0_img_rows_V_out_write;
     sc_signal< sc_lv<12> > AXIvideo2Mat_U0_img_cols_V_out_din;
     sc_signal< sc_logic > AXIvideo2Mat_U0_img_cols_V_out_write;
@@ -236,7 +237,7 @@ struct Sobel_filter : public sc_module {
     sc_signal< sc_lv<1> > Mat2AXIvideo_U0_OUTPUT_STREAM_TDEST;
     sc_signal< sc_logic > ap_sync_continue;
     sc_signal< sc_logic > img_0_rows_V_c_full_n;
-    sc_signal< sc_lv<12> > img_0_rows_V_c_dout;
+    sc_signal< sc_lv<11> > img_0_rows_V_c_dout;
     sc_signal< sc_logic > img_0_rows_V_c_empty_n;
     sc_signal< sc_logic > img_0_cols_V_c_full_n;
     sc_signal< sc_lv<12> > img_0_cols_V_c_dout;
@@ -251,7 +252,7 @@ struct Sobel_filter : public sc_module {
     sc_signal< sc_lv<8> > img_0_data_stream_2_dout;
     sc_signal< sc_logic > img_0_data_stream_2_empty_n;
     sc_signal< sc_logic > img_0_rows_V_c20_full_n;
-    sc_signal< sc_lv<12> > img_0_rows_V_c20_dout;
+    sc_signal< sc_lv<11> > img_0_rows_V_c20_dout;
     sc_signal< sc_logic > img_0_rows_V_c20_empty_n;
     sc_signal< sc_logic > img_0_cols_V_c21_full_n;
     sc_signal< sc_lv<12> > img_0_cols_V_c21_dout;

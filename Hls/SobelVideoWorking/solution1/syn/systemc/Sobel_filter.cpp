@@ -240,7 +240,7 @@ Sobel_filter::Sobel_filter(sc_module_name name) : sc_module(name), mVcdFile(0) {
     Mat2AXIvideo_U0->OUTPUT_STREAM_TLAST(Mat2AXIvideo_U0_OUTPUT_STREAM_TLAST);
     Mat2AXIvideo_U0->OUTPUT_STREAM_TID(Mat2AXIvideo_U0_OUTPUT_STREAM_TID);
     Mat2AXIvideo_U0->OUTPUT_STREAM_TDEST(Mat2AXIvideo_U0_OUTPUT_STREAM_TDEST);
-    img_0_rows_V_c_U = new fifo_w12_d2_A("img_0_rows_V_c_U");
+    img_0_rows_V_c_U = new fifo_w11_d2_A("img_0_rows_V_c_U");
     img_0_rows_V_c_U->clk(ap_clk);
     img_0_rows_V_c_U->reset(ap_rst_n_inv);
     img_0_rows_V_c_U->if_read_ce(ap_var_for_const0);
@@ -295,7 +295,7 @@ Sobel_filter::Sobel_filter(sc_module_name name) : sc_module(name), mVcdFile(0) {
     img_0_data_stream_2_U->if_dout(img_0_data_stream_2_dout);
     img_0_data_stream_2_U->if_empty_n(img_0_data_stream_2_empty_n);
     img_0_data_stream_2_U->if_read(CvtColor_1_U0_p_src_data_stream_2_V_read);
-    img_0_rows_V_c20_U = new fifo_w12_d2_A("img_0_rows_V_c20_U");
+    img_0_rows_V_c20_U = new fifo_w11_d2_A("img_0_rows_V_c20_U");
     img_0_rows_V_c20_U->clk(ap_clk);
     img_0_rows_V_c20_U->reset(ap_rst_n_inv);
     img_0_rows_V_c20_U->if_read_ce(ap_var_for_const0);

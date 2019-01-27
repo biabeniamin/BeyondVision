@@ -42,7 +42,7 @@
               <rtlName/>
               <coreName>FIFO</coreName>
             </Obj>
-            <bitwidth>12</bitwidth>
+            <bitwidth>11</bitwidth>
           </Value>
           <direction>1</direction>
           <if_type>3</if_type>
@@ -210,9 +210,9 @@
           <oprand_edges>
             <count>3</count>
             <item_version>0</item_version>
-            <item>14</item>
             <item>15</item>
-            <item>17</item>
+            <item>16</item>
+            <item>18</item>
           </oprand_edges>
           <opcode>write</opcode>
           <m_Display>0</m_Display>
@@ -272,16 +272,16 @@
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>12</bitwidth>
+            <bitwidth>11</bitwidth>
           </Value>
           <const_type>0</const_type>
-          <content>1080</content>
+          <content>720</content>
         </item>
         <item class_id_reference="16" object_id="_7">
           <Value>
             <Obj>
               <type>2</type>
-              <id>16</id>
+              <id>17</id>
               <name>empty</name>
               <fileName/>
               <fileDirectory/>
@@ -298,7 +298,7 @@
             <bitwidth>12</bitwidth>
           </Value>
           <const_type>0</const_type>
-          <content>1920</content>
+          <content>1280</content>
         </item>
       </consts>
       <blocks class_id="17" tracking_level="0" version="0">
@@ -348,16 +348,16 @@
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_11">
-          <id>15</id>
+          <id>16</id>
           <edge_type>1</edge_type>
           <source_obj>2</source_obj>
           <sink_obj>6</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_12">
-          <id>17</id>
+          <id>18</id>
           <edge_type>1</edge_type>
-          <source_obj>16</source_obj>
+          <source_obj>17</source_obj>
           <sink_obj>6</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -651,7 +651,7 @@
       <count>2</count>
       <item_version>0</item_version>
       <item class_id="44" tracking_level="0" version="0">
-        <first>44</first>
+        <first>46</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -659,7 +659,7 @@
         </second>
       </item>
       <item>
-        <first>52</first>
+        <first>54</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -679,7 +679,7 @@
       <count>2</count>
       <item_version>0</item_version>
       <item class_id="47" tracking_level="0" version="0">
-        <first>StgValue_4_write_fu_44</first>
+        <first>StgValue_4_write_fu_46</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -687,7 +687,7 @@
         </second>
       </item>
       <item>
-        <first>StgValue_5_write_fu_52</first>
+        <first>StgValue_5_write_fu_54</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

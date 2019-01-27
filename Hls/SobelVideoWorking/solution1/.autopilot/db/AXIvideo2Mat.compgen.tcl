@@ -151,7 +151,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_img_rows_V \
     op interface \
-    ports { img_rows_V_dout { I 12 vector } img_rows_V_empty_n { I 1 bit } img_rows_V_read { O 1 bit } } \
+    ports { img_rows_V_dout { I 11 vector } img_rows_V_empty_n { I 1 bit } img_rows_V_read { O 1 bit } } \
 } "
 }
 
@@ -226,7 +226,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_img_rows_V_out \
     op interface \
-    ports { img_rows_V_out_din { O 12 vector } img_rows_V_out_full_n { I 1 bit } img_rows_V_out_write { O 1 bit } } \
+    ports { img_rows_V_out_din { O 11 vector } img_rows_V_out_full_n { I 1 bit } img_rows_V_out_write { O 1 bit } } \
 } "
 }
 

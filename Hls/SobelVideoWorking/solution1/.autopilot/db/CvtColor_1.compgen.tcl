@@ -258,7 +258,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_p_src_rows_V \
     op interface \
-    ports { p_src_rows_V_dout { I 12 vector } p_src_rows_V_empty_n { I 1 bit } p_src_rows_V_read { O 1 bit } } \
+    ports { p_src_rows_V_dout { I 11 vector } p_src_rows_V_empty_n { I 1 bit } p_src_rows_V_read { O 1 bit } } \
 } "
 }
 

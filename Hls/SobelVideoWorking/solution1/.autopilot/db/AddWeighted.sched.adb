@@ -107,7 +107,7 @@
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>354</lineNumber>
-						<contextFuncName>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</contextFuncName>
+						<contextFuncName>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -119,14 +119,14 @@
 									<item class_id="12" tracking_level="0" version="0">
 										<first class_id="13" tracking_level="0" version="0">
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>354</second>
 									</item>
@@ -168,7 +168,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>11</bitwidth>
+					<bitwidth>10</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>4</count>
@@ -193,7 +193,7 @@
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>354</lineNumber>
-						<contextFuncName>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</contextFuncName>
+						<contextFuncName>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -205,14 +205,14 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>354</second>
 									</item>
@@ -235,7 +235,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>1.81</m_delay>
+				<m_delay>1.70</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_7">
 				<Value>
@@ -246,7 +246,7 @@
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>354</lineNumber>
-						<contextFuncName>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</contextFuncName>
+						<contextFuncName>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -258,14 +258,14 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>354</second>
 									</item>
@@ -276,7 +276,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>11</bitwidth>
+					<bitwidth>10</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -299,7 +299,7 @@
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>354</lineNumber>
-						<contextFuncName>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</contextFuncName>
+						<contextFuncName>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -311,14 +311,14 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>354</second>
 									</item>
@@ -353,7 +353,7 @@
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>355</lineNumber>
-						<contextFuncName>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</contextFuncName>
+						<contextFuncName>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -365,14 +365,14 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>355</second>
 									</item>
@@ -419,10 +419,10 @@
 				<oprand_edges>
 					<count>4</count>
 					<item_version>0</item_version>
-					<item>192</item>
 					<item>193</item>
 					<item>194</item>
 					<item>195</item>
+					<item>196</item>
 				</oprand_edges>
 				<opcode>phi</opcode>
 				<m_Display>0</m_Display>
@@ -439,7 +439,7 @@
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>355</lineNumber>
-						<contextFuncName>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</contextFuncName>
+						<contextFuncName>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -451,14 +451,14 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>355</second>
 									</item>
@@ -474,8 +474,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>196</item>
-					<item>198</item>
+					<item>197</item>
+					<item>199</item>
 				</oprand_edges>
 				<opcode>icmp</opcode>
 				<m_Display>0</m_Display>
@@ -492,7 +492,7 @@
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>355</lineNumber>
-						<contextFuncName>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</contextFuncName>
+						<contextFuncName>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -504,14 +504,14 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>355</second>
 									</item>
@@ -527,8 +527,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>199</item>
 					<item>200</item>
+					<item>202</item>
 				</oprand_edges>
 				<opcode>add</opcode>
 				<m_Display>0</m_Display>
@@ -545,7 +545,7 @@
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>355</lineNumber>
-						<contextFuncName>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</contextFuncName>
+						<contextFuncName>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -557,14 +557,14 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>355</second>
 									</item>
@@ -580,9 +580,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>201</item>
-					<item>202</item>
 					<item>203</item>
+					<item>204</item>
+					<item>205</item>
 				</oprand_edges>
 				<opcode>br</opcode>
 				<m_Display>0</m_Display>
@@ -595,7 +595,7 @@
 					<Obj>
 						<type>0</type>
 						<id>30</id>
-						<name>tmp_106</name>
+						<name>tmp_102</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>624</lineNumber>
@@ -611,83 +611,16 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>358</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h</first>
-											<second>operator&amp;gt;&amp;gt;</second>
-										</first>
-										<second>656</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h</first>
-											<second>read</second>
-										</first>
-										<second>624</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName>tmp</originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>8</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>205</item>
-					<item>206</item>
-				</oprand_edges>
-				<opcode>read</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>3.90</m_delay>
-			</item>
-			<item class_id_reference="9" object_id="_15">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>34</id>
-						<name>tmp_107</name>
-						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h</fileName>
-						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
-						<lineNumber>624</lineNumber>
-						<contextFuncName>read</contextFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>C:\Digilent19\Hls</first>
-								<second>
-									<count>4</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
-										</first>
-										<second>853</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
-										</first>
-										<second>359</second>
 									</item>
 									<item>
 										<first>
@@ -724,12 +657,79 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_delay>3.90</m_delay>
 			</item>
+			<item class_id_reference="9" object_id="_15">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>34</id>
+						<name>tmp_103</name>
+						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h</fileName>
+						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
+						<lineNumber>624</lineNumber>
+						<contextFuncName>read</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>C:\Digilent19\Hls</first>
+								<second>
+									<count>4</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
+										</first>
+										<second>853</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
+										</first>
+										<second>359</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h</first>
+											<second>operator&amp;gt;&amp;gt;</second>
+										</first>
+										<second>656</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h</first>
+											<second>read</second>
+										</first>
+										<second>624</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName>tmp</originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>8</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>209</item>
+					<item>210</item>
+				</oprand_edges>
+				<opcode>read</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_delay>3.90</m_delay>
+			</item>
 			<item class_id_reference="9" object_id="_16">
 				<Value>
 					<Obj>
 						<type>0</type>
 						<id>37</id>
-						<name>tmp_i_98</name>
+						<name>tmp_i_105</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>276</lineNumber>
@@ -745,7 +745,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -759,7 +759,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -775,7 +775,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>209</item>
+					<item>211</item>
 				</oprand_edges>
 				<opcode>zext</opcode>
 				<m_Display>0</m_Display>
@@ -804,7 +804,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -818,7 +818,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -834,7 +834,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>210</item>
+					<item>212</item>
 				</oprand_edges>
 				<opcode>sitodp</opcode>
 				<m_Display>0</m_Display>
@@ -863,7 +863,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -877,7 +877,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -893,8 +893,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>211</item>
 					<item>213</item>
+					<item>215</item>
 				</oprand_edges>
 				<opcode>dmul</opcode>
 				<m_Display>0</m_Display>
@@ -923,7 +923,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -937,7 +937,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -953,7 +953,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>214</item>
+					<item>216</item>
 				</oprand_edges>
 				<opcode>zext</opcode>
 				<m_Display>0</m_Display>
@@ -982,7 +982,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -996,7 +996,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -1012,7 +1012,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>215</item>
+					<item>217</item>
 				</oprand_edges>
 				<opcode>sitodp</opcode>
 				<m_Display>0</m_Display>
@@ -1041,7 +1041,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -1055,7 +1055,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -1071,8 +1071,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>216</item>
-					<item>217</item>
+					<item>218</item>
+					<item>219</item>
 				</oprand_edges>
 				<opcode>dmul</opcode>
 				<m_Display>0</m_Display>
@@ -1101,7 +1101,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -1115,7 +1115,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -1131,8 +1131,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>218</item>
-					<item>219</item>
+					<item>220</item>
+					<item>221</item>
 				</oprand_edges>
 				<opcode>dadd</opcode>
 				<m_Display>0</m_Display>
@@ -1161,7 +1161,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -1175,7 +1175,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -1191,8 +1191,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>220</item>
 					<item>222</item>
+					<item>224</item>
 				</oprand_edges>
 				<opcode>dadd</opcode>
 				<m_Display>0</m_Display>
@@ -1221,7 +1221,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -1235,7 +1235,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -1300,7 +1300,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>223</item>
+					<item>225</item>
 				</oprand_edges>
 				<opcode>bitcast</opcode>
 				<m_Display>0</m_Display>
@@ -1329,7 +1329,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -1343,7 +1343,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -1408,10 +1408,10 @@
 				<oprand_edges>
 					<count>4</count>
 					<item_version>0</item_version>
-					<item>225</item>
-					<item>226</item>
+					<item>227</item>
 					<item>228</item>
 					<item>230</item>
+					<item>232</item>
 				</oprand_edges>
 				<opcode>partselect</opcode>
 				<m_Display>0</m_Display>
@@ -1440,7 +1440,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -1454,7 +1454,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -1519,7 +1519,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>231</item>
+					<item>233</item>
 				</oprand_edges>
 				<opcode>trunc</opcode>
 				<m_Display>0</m_Display>
@@ -1548,7 +1548,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -1562,7 +1562,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -1620,8 +1620,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>232</item>
 					<item>234</item>
+					<item>236</item>
 				</oprand_edges>
 				<opcode>icmp</opcode>
 				<m_Display>0</m_Display>
@@ -1634,7 +1634,7 @@
 					<Obj>
 						<type>0</type>
 						<id>49</id>
-						<name>tmp_i_i_i_i_99</name>
+						<name>tmp_i_i_i_i_106</name>
 						<fileName>r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_isnan.h</fileName>
 						<fileDirectory>r:\builds\2018.2\continuous\2018_06_14_2258646\src\products</fileDirectory>
 						<lineNumber>17</lineNumber>
@@ -1650,7 +1650,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -1664,7 +1664,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -1722,8 +1722,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>235</item>
 					<item>237</item>
+					<item>239</item>
 				</oprand_edges>
 				<opcode>icmp</opcode>
 				<m_Display>0</m_Display>
@@ -1752,7 +1752,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -1766,7 +1766,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -1796,8 +1796,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>238</item>
-					<item>239</item>
+					<item>240</item>
+					<item>241</item>
 				</oprand_edges>
 				<opcode>and</opcode>
 				<m_Display>0</m_Display>
@@ -1826,7 +1826,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -1840,7 +1840,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -1870,7 +1870,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>240</item>
+					<item>242</item>
 				</oprand_edges>
 				<opcode>trunc</opcode>
 				<m_Display>0</m_Display>
@@ -1899,7 +1899,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -1913,7 +1913,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -1943,9 +1943,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>242</item>
-					<item>243</item>
+					<item>244</item>
 					<item>245</item>
+					<item>247</item>
 				</oprand_edges>
 				<opcode>bitselect</opcode>
 				<m_Display>0</m_Display>
@@ -1974,7 +1974,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -1988,7 +1988,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -2018,7 +2018,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>246</item>
+					<item>248</item>
 				</oprand_edges>
 				<opcode>zext</opcode>
 				<m_Display>0</m_Display>
@@ -2047,7 +2047,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -2061,7 +2061,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -2091,9 +2091,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>248</item>
 					<item>250</item>
-					<item>251</item>
+					<item>252</item>
+					<item>253</item>
 				</oprand_edges>
 				<opcode>bitconcatenate</opcode>
 				<m_Display>0</m_Display>
@@ -2122,7 +2122,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -2136,7 +2136,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -2166,7 +2166,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>252</item>
+					<item>254</item>
 				</oprand_edges>
 				<opcode>zext</opcode>
 				<m_Display>0</m_Display>
@@ -2195,7 +2195,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -2209,7 +2209,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -2239,8 +2239,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>254</item>
-					<item>255</item>
+					<item>256</item>
+					<item>257</item>
 				</oprand_edges>
 				<opcode>sub</opcode>
 				<m_Display>0</m_Display>
@@ -2269,7 +2269,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -2283,7 +2283,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -2313,9 +2313,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>256</item>
-					<item>257</item>
 					<item>258</item>
+					<item>259</item>
+					<item>260</item>
 				</oprand_edges>
 				<opcode>select</opcode>
 				<m_Display>0</m_Display>
@@ -2344,7 +2344,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -2358,7 +2358,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -2388,8 +2388,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>259</item>
 					<item>261</item>
+					<item>263</item>
 				</oprand_edges>
 				<opcode>icmp</opcode>
 				<m_Display>0</m_Display>
@@ -2418,7 +2418,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -2432,7 +2432,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -2462,8 +2462,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>263</item>
-					<item>264</item>
+					<item>265</item>
+					<item>266</item>
 				</oprand_edges>
 				<opcode>sub</opcode>
 				<m_Display>0</m_Display>
@@ -2492,7 +2492,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -2506,7 +2506,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -2536,8 +2536,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>265</item>
 					<item>267</item>
+					<item>269</item>
 				</oprand_edges>
 				<opcode>icmp</opcode>
 				<m_Display>0</m_Display>
@@ -2566,7 +2566,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -2580,7 +2580,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -2610,8 +2610,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>268</item>
-					<item>269</item>
+					<item>270</item>
+					<item>271</item>
 				</oprand_edges>
 				<opcode>sub</opcode>
 				<m_Display>0</m_Display>
@@ -2640,7 +2640,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -2654,7 +2654,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -2684,9 +2684,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>270</item>
-					<item>271</item>
 					<item>272</item>
+					<item>273</item>
+					<item>274</item>
 				</oprand_edges>
 				<opcode>select</opcode>
 				<m_Display>0</m_Display>
@@ -2699,7 +2699,7 @@
 					<Obj>
 						<type>0</type>
 						<id>63</id>
-						<name>tmp_95</name>
+						<name>tmp_91</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -2715,7 +2715,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -2729,7 +2729,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -2759,7 +2759,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>273</item>
+					<item>275</item>
 				</oprand_edges>
 				<opcode>trunc</opcode>
 				<m_Display>0</m_Display>
@@ -2788,7 +2788,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -2802,7 +2802,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -2832,7 +2832,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>274</item>
+					<item>276</item>
 				</oprand_edges>
 				<opcode>sext</opcode>
 				<m_Display>0</m_Display>
@@ -2861,7 +2861,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -2875,7 +2875,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -2905,8 +2905,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>275</item>
 					<item>277</item>
+					<item>279</item>
 				</oprand_edges>
 				<opcode>icmp</opcode>
 				<m_Display>0</m_Display>
@@ -2919,7 +2919,7 @@
 					<Obj>
 						<type>0</type>
 						<id>66</id>
-						<name>tmp_96</name>
+						<name>tmp_92</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -2935,7 +2935,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -2949,7 +2949,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -2979,7 +2979,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>278</item>
+					<item>280</item>
 				</oprand_edges>
 				<opcode>trunc</opcode>
 				<m_Display>0</m_Display>
@@ -3008,7 +3008,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -3022,7 +3022,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -3052,8 +3052,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>279</item>
 					<item>281</item>
+					<item>283</item>
 				</oprand_edges>
 				<opcode>icmp</opcode>
 				<m_Display>0</m_Display>
@@ -3066,7 +3066,7 @@
 					<Obj>
 						<type>0</type>
 						<id>68</id>
-						<name>tmp_97</name>
+						<name>tmp_93</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -3082,7 +3082,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -3096,7 +3096,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -3126,10 +3126,10 @@
 				<oprand_edges>
 					<count>4</count>
 					<item_version>0</item_version>
-					<item>283</item>
-					<item>284</item>
+					<item>285</item>
 					<item>286</item>
 					<item>288</item>
+					<item>290</item>
 				</oprand_edges>
 				<opcode>partselect</opcode>
 				<m_Display>0</m_Display>
@@ -3158,7 +3158,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -3172,7 +3172,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -3202,8 +3202,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>289</item>
 					<item>291</item>
+					<item>293</item>
 				</oprand_edges>
 				<opcode>icmp</opcode>
 				<m_Display>0</m_Display>
@@ -3232,7 +3232,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -3246,7 +3246,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -3276,7 +3276,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>292</item>
+					<item>294</item>
 				</oprand_edges>
 				<opcode>zext</opcode>
 				<m_Display>0</m_Display>
@@ -3305,7 +3305,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -3319,7 +3319,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -3349,8 +3349,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>293</item>
-					<item>294</item>
+					<item>295</item>
+					<item>296</item>
 				</oprand_edges>
 				<opcode>ashr</opcode>
 				<m_Display>0</m_Display>
@@ -3363,7 +3363,7 @@
 					<Obj>
 						<type>0</type>
 						<id>72</id>
-						<name>tmp_98</name>
+						<name>tmp_94</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -3379,7 +3379,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -3393,7 +3393,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -3423,7 +3423,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>295</item>
+					<item>297</item>
 				</oprand_edges>
 				<opcode>trunc</opcode>
 				<m_Display>0</m_Display>
@@ -3452,7 +3452,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -3466,7 +3466,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -3496,9 +3496,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>296</item>
 					<item>298</item>
 					<item>300</item>
+					<item>302</item>
 				</oprand_edges>
 				<opcode>select</opcode>
 				<m_Display>0</m_Display>
@@ -3527,7 +3527,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -3541,7 +3541,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -3571,8 +3571,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>301</item>
-					<item>302</item>
+					<item>303</item>
+					<item>304</item>
 				</oprand_edges>
 				<opcode>shl</opcode>
 				<m_Display>0</m_Display>
@@ -3601,7 +3601,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -3615,7 +3615,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -3645,9 +3645,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>303</item>
-					<item>304</item>
 					<item>305</item>
+					<item>306</item>
+					<item>307</item>
 				</oprand_edges>
 				<opcode>select</opcode>
 				<m_Display>0</m_Display>
@@ -3676,7 +3676,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -3690,7 +3690,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -3720,8 +3720,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>306</item>
-					<item>307</item>
+					<item>308</item>
+					<item>309</item>
 				</oprand_edges>
 				<opcode>icmp</opcode>
 				<m_Display>0</m_Display>
@@ -3750,7 +3750,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -3764,7 +3764,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -3794,8 +3794,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>309</item>
-					<item>310</item>
+					<item>311</item>
+					<item>312</item>
 				</oprand_edges>
 				<opcode>add</opcode>
 				<m_Display>0</m_Display>
@@ -3824,7 +3824,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -3838,7 +3838,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -3868,7 +3868,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>311</item>
+					<item>313</item>
 				</oprand_edges>
 				<opcode>zext</opcode>
 				<m_Display>0</m_Display>
@@ -3881,7 +3881,7 @@
 					<Obj>
 						<type>0</type>
 						<id>79</id>
-						<name>tmp_99</name>
+						<name>tmp_95</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -3897,7 +3897,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -3911,7 +3911,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -3941,9 +3941,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>313</item>
-					<item>314</item>
 					<item>315</item>
+					<item>316</item>
+					<item>317</item>
 				</oprand_edges>
 				<opcode>bitselect</opcode>
 				<m_Display>0</m_Display>
@@ -3972,7 +3972,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -3986,7 +3986,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -4016,9 +4016,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>316</item>
-					<item>317</item>
 					<item>318</item>
+					<item>319</item>
+					<item>320</item>
 				</oprand_edges>
 				<opcode>select</opcode>
 				<m_Display>0</m_Display>
@@ -4031,7 +4031,7 @@
 					<Obj>
 						<type>0</type>
 						<id>81</id>
-						<name>tmp_100</name>
+						<name>tmp_96</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -4047,7 +4047,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -4061,7 +4061,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -4091,9 +4091,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>320</item>
-					<item>321</item>
+					<item>322</item>
 					<item>323</item>
+					<item>325</item>
 				</oprand_edges>
 				<opcode>bitselect</opcode>
 				<m_Display>0</m_Display>
@@ -4122,7 +4122,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -4136,7 +4136,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -4166,7 +4166,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>324</item>
+					<item>326</item>
 				</oprand_edges>
 				<opcode>zext</opcode>
 				<m_Display>0</m_Display>
@@ -4195,7 +4195,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -4209,7 +4209,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -4239,8 +4239,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>325</item>
-					<item>326</item>
+					<item>327</item>
+					<item>328</item>
 				</oprand_edges>
 				<opcode>add</opcode>
 				<m_Display>0</m_Display>
@@ -4253,7 +4253,7 @@
 					<Obj>
 						<type>0</type>
 						<id>84</id>
-						<name>tmp_101</name>
+						<name>tmp_97</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -4269,7 +4269,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -4283,7 +4283,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -4313,9 +4313,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>327</item>
-					<item>328</item>
 					<item>329</item>
+					<item>330</item>
+					<item>331</item>
 				</oprand_edges>
 				<opcode>bitselect</opcode>
 				<m_Display>0</m_Display>
@@ -4344,7 +4344,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -4358,7 +4358,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -4388,8 +4388,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>330</item>
-					<item>331</item>
+					<item>332</item>
+					<item>333</item>
 				</oprand_edges>
 				<opcode>xor</opcode>
 				<m_Display>0</m_Display>
@@ -4418,7 +4418,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -4432,7 +4432,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -4462,9 +4462,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>332</item>
-					<item>333</item>
 					<item>334</item>
+					<item>335</item>
+					<item>336</item>
 				</oprand_edges>
 				<opcode>select</opcode>
 				<m_Display>0</m_Display>
@@ -4493,7 +4493,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -4507,81 +4507,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
-										</first>
-										<second>361</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
-											<second>operator()</second>
-										</first>
-										<second>429</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
-											<second>sr_cast&amp;lt;unsigned char, double&amp;gt;</second>
-										</first>
-										<second>500</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>1</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>335</item>
-					<item>336</item>
-				</oprand_edges>
-				<opcode>xor</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>0.00</m_delay>
-			</item>
-			<item class_id_reference="9" object_id="_67">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>88</id>
-						<name>sel_tmp2_i</name>
-						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
-						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
-						<lineNumber>429</lineNumber>
-						<contextFuncName>operator()</contextFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>C:\Digilent19\Hls</first>
-								<second>
-									<count>5</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
-										</first>
-										<second>853</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>apply&amp;lt;unsigned char, unsigned char, unsigned char, double&amp;gt;</second>
-										</first>
-										<second>282</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -4614,18 +4540,18 @@
 					<item>337</item>
 					<item>338</item>
 				</oprand_edges>
-				<opcode>and</opcode>
+				<opcode>xor</opcode>
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>0.97</m_delay>
+				<m_delay>0.00</m_delay>
 			</item>
-			<item class_id_reference="9" object_id="_68">
+			<item class_id_reference="9" object_id="_67">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>89</id>
-						<name>sel_tmp3_i</name>
+						<id>88</id>
+						<name>sel_tmp2_i</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -4641,7 +4567,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -4655,7 +4581,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -4694,12 +4620,12 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_delay>0.97</m_delay>
 			</item>
-			<item class_id_reference="9" object_id="_69">
+			<item class_id_reference="9" object_id="_68">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>90</id>
-						<name>sel_tmp4_i</name>
+						<id>89</id>
+						<name>sel_tmp3_i</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -4715,7 +4641,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -4729,82 +4655,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
-										</first>
-										<second>361</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
-											<second>operator()</second>
-										</first>
-										<second>429</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
-											<second>sr_cast&amp;lt;unsigned char, double&amp;gt;</second>
-										</first>
-										<second>500</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>8</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>341</item>
-					<item>342</item>
-					<item>343</item>
-				</oprand_edges>
-				<opcode>select</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>1.04</m_delay>
-			</item>
-			<item class_id_reference="9" object_id="_70">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>91</id>
-						<name>sel_tmp7_i</name>
-						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
-						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
-						<lineNumber>429</lineNumber>
-						<contextFuncName>operator()</contextFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>C:\Digilent19\Hls</first>
-								<second>
-									<count>5</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
-										</first>
-										<second>853</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>apply&amp;lt;unsigned char, unsigned char, unsigned char, double&amp;gt;</second>
-										</first>
-										<second>282</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -4834,21 +4685,21 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>344</item>
-					<item>345</item>
+					<item>341</item>
+					<item>342</item>
 				</oprand_edges>
-				<opcode>xor</opcode>
+				<opcode>and</opcode>
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>0.00</m_delay>
+				<m_delay>0.97</m_delay>
 			</item>
-			<item class_id_reference="9" object_id="_71">
+			<item class_id_reference="9" object_id="_69">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>92</id>
-						<name>sel_tmp8_i</name>
+						<id>90</id>
+						<name>sel_tmp4_i</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -4864,7 +4715,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -4878,7 +4729,82 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
+										</first>
+										<second>361</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
+											<second>operator()</second>
+										</first>
+										<second>429</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
+											<second>sr_cast&amp;lt;unsigned char, double&amp;gt;</second>
+										</first>
+										<second>500</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>8</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>343</item>
+					<item>344</item>
+					<item>345</item>
+				</oprand_edges>
+				<opcode>select</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_delay>1.04</m_delay>
+			</item>
+			<item class_id_reference="9" object_id="_70">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>91</id>
+						<name>sel_tmp7_i</name>
+						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
+						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
+						<lineNumber>429</lineNumber>
+						<contextFuncName>operator()</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>C:\Digilent19\Hls</first>
+								<second>
+									<count>5</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
+										</first>
+										<second>853</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>apply&amp;lt;unsigned char, unsigned char, unsigned char, double&amp;gt;</second>
+										</first>
+										<second>282</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -4911,18 +4837,18 @@
 					<item>346</item>
 					<item>347</item>
 				</oprand_edges>
-				<opcode>and</opcode>
+				<opcode>xor</opcode>
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_delay>0.00</m_delay>
 			</item>
-			<item class_id_reference="9" object_id="_72">
+			<item class_id_reference="9" object_id="_71">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>93</id>
-						<name>sel_tmp9_i</name>
+						<id>92</id>
+						<name>sel_tmp8_i</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -4938,7 +4864,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -4952,82 +4878,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
-										</first>
-										<second>361</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
-											<second>operator()</second>
-										</first>
-										<second>429</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
-											<second>sr_cast&amp;lt;unsigned char, double&amp;gt;</second>
-										</first>
-										<second>500</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>8</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>348</item>
-					<item>349</item>
-					<item>350</item>
-				</oprand_edges>
-				<opcode>select</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>1.04</m_delay>
-			</item>
-			<item class_id_reference="9" object_id="_73">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>94</id>
-						<name>sel_tmp12_demorgan_i</name>
-						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
-						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
-						<lineNumber>429</lineNumber>
-						<contextFuncName>operator()</contextFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>C:\Digilent19\Hls</first>
-								<second>
-									<count>5</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
-										</first>
-										<second>853</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>apply&amp;lt;unsigned char, unsigned char, unsigned char, double&amp;gt;</second>
-										</first>
-										<second>282</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -5057,21 +4908,21 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>351</item>
-					<item>352</item>
+					<item>348</item>
+					<item>349</item>
 				</oprand_edges>
-				<opcode>or</opcode>
+				<opcode>and</opcode>
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>0.97</m_delay>
+				<m_delay>0.00</m_delay>
 			</item>
-			<item class_id_reference="9" object_id="_74">
+			<item class_id_reference="9" object_id="_72">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>95</id>
-						<name>sel_tmp12_i</name>
+						<id>93</id>
+						<name>sel_tmp9_i</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -5087,7 +4938,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -5101,7 +4952,82 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
+										</first>
+										<second>361</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
+											<second>operator()</second>
+										</first>
+										<second>429</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
+											<second>sr_cast&amp;lt;unsigned char, double&amp;gt;</second>
+										</first>
+										<second>500</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>8</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>350</item>
+					<item>351</item>
+					<item>352</item>
+				</oprand_edges>
+				<opcode>select</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_delay>1.04</m_delay>
+			</item>
+			<item class_id_reference="9" object_id="_73">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>94</id>
+						<name>sel_tmp12_demorgan_i</name>
+						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
+						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
+						<lineNumber>429</lineNumber>
+						<contextFuncName>operator()</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>C:\Digilent19\Hls</first>
+								<second>
+									<count>5</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
+										</first>
+										<second>853</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>apply&amp;lt;unsigned char, unsigned char, unsigned char, double&amp;gt;</second>
+										</first>
+										<second>282</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -5134,18 +5060,18 @@
 					<item>353</item>
 					<item>354</item>
 				</oprand_edges>
-				<opcode>xor</opcode>
+				<opcode>or</opcode>
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>0.00</m_delay>
+				<m_delay>0.97</m_delay>
 			</item>
-			<item class_id_reference="9" object_id="_75">
+			<item class_id_reference="9" object_id="_74">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>96</id>
-						<name>sel_tmp13_i</name>
+						<id>95</id>
+						<name>sel_tmp12_i</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -5161,7 +5087,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -5175,7 +5101,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -5208,18 +5134,18 @@
 					<item>355</item>
 					<item>356</item>
 				</oprand_edges>
-				<opcode>and</opcode>
+				<opcode>xor</opcode>
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_delay>0.00</m_delay>
 			</item>
-			<item class_id_reference="9" object_id="_76">
+			<item class_id_reference="9" object_id="_75">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>97</id>
-						<name>p_Val2_14</name>
+						<id>96</id>
+						<name>sel_tmp13_i</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -5235,7 +5161,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -5249,82 +5175,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
-										</first>
-										<second>361</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
-											<second>operator()</second>
-										</first>
-										<second>429</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
-											<second>sr_cast&amp;lt;unsigned char, double&amp;gt;</second>
-										</first>
-										<second>500</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName>__Val2__</originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>8</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>357</item>
-					<item>358</item>
-					<item>359</item>
-				</oprand_edges>
-				<opcode>select</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>2.96</m_delay>
-			</item>
-			<item class_id_reference="9" object_id="_77">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>98</id>
-						<name>tmp_8_not_i</name>
-						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
-						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
-						<lineNumber>429</lineNumber>
-						<contextFuncName>operator()</contextFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>C:\Digilent19\Hls</first>
-								<second>
-									<count>5</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
-										</first>
-										<second>853</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>apply&amp;lt;unsigned char, unsigned char, unsigned char, double&amp;gt;</second>
-										</first>
-										<second>282</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -5354,21 +5205,21 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>360</item>
-					<item>361</item>
+					<item>357</item>
+					<item>358</item>
 				</oprand_edges>
-				<opcode>xor</opcode>
+				<opcode>and</opcode>
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_delay>0.00</m_delay>
 			</item>
-			<item class_id_reference="9" object_id="_78">
+			<item class_id_reference="9" object_id="_76">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>99</id>
-						<name>not_sel_tmp28_i</name>
+						<id>97</id>
+						<name>p_Val2_14</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -5384,7 +5235,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -5398,7 +5249,82 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
+										</first>
+										<second>361</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
+											<second>operator()</second>
+										</first>
+										<second>429</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
+											<second>sr_cast&amp;lt;unsigned char, double&amp;gt;</second>
+										</first>
+										<second>500</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName>__Val2__</originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>8</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>359</item>
+					<item>360</item>
+					<item>361</item>
+				</oprand_edges>
+				<opcode>select</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_delay>2.96</m_delay>
+			</item>
+			<item class_id_reference="9" object_id="_77">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>98</id>
+						<name>tmp_8_not_i</name>
+						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
+						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
+						<lineNumber>429</lineNumber>
+						<contextFuncName>operator()</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>C:\Digilent19\Hls</first>
+								<second>
+									<count>5</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
+										</first>
+										<second>853</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>apply&amp;lt;unsigned char, unsigned char, unsigned char, double&amp;gt;</second>
+										</first>
+										<second>282</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -5431,18 +5357,18 @@
 					<item>362</item>
 					<item>363</item>
 				</oprand_edges>
-				<opcode>or</opcode>
+				<opcode>xor</opcode>
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_delay>0.00</m_delay>
 			</item>
-			<item class_id_reference="9" object_id="_79">
+			<item class_id_reference="9" object_id="_78">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>100</id>
-						<name>tmp5</name>
+						<id>99</id>
+						<name>not_sel_tmp28_i</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -5458,7 +5384,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -5472,7 +5398,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -5505,18 +5431,18 @@
 					<item>364</item>
 					<item>365</item>
 				</oprand_edges>
-				<opcode>and</opcode>
+				<opcode>or</opcode>
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_delay>0.00</m_delay>
 			</item>
-			<item class_id_reference="9" object_id="_80">
+			<item class_id_reference="9" object_id="_79">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>101</id>
-						<name>carry_1_i_i</name>
+						<id>100</id>
+						<name>tmp5</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -5532,7 +5458,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -5546,7 +5472,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -5583,6 +5509,80 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
+				<m_delay>0.00</m_delay>
+			</item>
+			<item class_id_reference="9" object_id="_80">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>101</id>
+						<name>carry_1_i_i</name>
+						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
+						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
+						<lineNumber>429</lineNumber>
+						<contextFuncName>operator()</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>C:\Digilent19\Hls</first>
+								<second>
+									<count>5</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
+										</first>
+										<second>853</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>apply&amp;lt;unsigned char, unsigned char, unsigned char, double&amp;gt;</second>
+										</first>
+										<second>282</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
+										</first>
+										<second>361</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
+											<second>operator()</second>
+										</first>
+										<second>429</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
+											<second>sr_cast&amp;lt;unsigned char, double&amp;gt;</second>
+										</first>
+										<second>500</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>1</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>368</item>
+					<item>369</item>
+				</oprand_edges>
+				<opcode>and</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
 				<m_delay>0.97</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_81">
@@ -5606,7 +5606,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -5620,7 +5620,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -5650,8 +5650,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>369</item>
-					<item>370</item>
+					<item>371</item>
+					<item>372</item>
 				</oprand_edges>
 				<opcode>add</opcode>
 				<m_Display>0</m_Display>
@@ -5680,7 +5680,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -5694,7 +5694,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -5724,7 +5724,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>371</item>
+					<item>373</item>
 				</oprand_edges>
 				<opcode>sext</opcode>
 				<m_Display>0</m_Display>
@@ -5753,7 +5753,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -5767,7 +5767,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -5797,8 +5797,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>373</item>
-					<item>374</item>
+					<item>375</item>
+					<item>376</item>
 				</oprand_edges>
 				<opcode>add</opcode>
 				<m_Display>0</m_Display>
@@ -5827,7 +5827,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -5841,7 +5841,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -5871,7 +5871,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>375</item>
+					<item>377</item>
 				</oprand_edges>
 				<opcode>sext</opcode>
 				<m_Display>0</m_Display>
@@ -5900,7 +5900,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -5914,7 +5914,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -5944,9 +5944,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>376</item>
-					<item>377</item>
 					<item>378</item>
+					<item>379</item>
+					<item>380</item>
 				</oprand_edges>
 				<opcode>bitselect</opcode>
 				<m_Display>0</m_Display>
@@ -5975,7 +5975,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -5989,7 +5989,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -6019,8 +6019,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>379</item>
-					<item>380</item>
+					<item>381</item>
+					<item>382</item>
 				</oprand_edges>
 				<opcode>icmp</opcode>
 				<m_Display>0</m_Display>
@@ -6033,7 +6033,7 @@
 					<Obj>
 						<type>0</type>
 						<id>108</id>
-						<name>tmp_103</name>
+						<name>tmp_99</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -6049,7 +6049,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -6063,7 +6063,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -6093,9 +6093,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>382</item>
-					<item>383</item>
 					<item>384</item>
+					<item>385</item>
+					<item>386</item>
 				</oprand_edges>
 				<opcode>bitselect</opcode>
 				<m_Display>0</m_Display>
@@ -6124,7 +6124,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -6138,7 +6138,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -6168,8 +6168,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>385</item>
-					<item>386</item>
+					<item>387</item>
+					<item>388</item>
 				</oprand_edges>
 				<opcode>xor</opcode>
 				<m_Display>0</m_Display>
@@ -6198,7 +6198,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -6212,7 +6212,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -6242,7 +6242,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>387</item>
+					<item>389</item>
 				</oprand_edges>
 				<opcode>zext</opcode>
 				<m_Display>0</m_Display>
@@ -6271,7 +6271,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -6285,7 +6285,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -6315,8 +6315,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>388</item>
-					<item>389</item>
+					<item>390</item>
+					<item>391</item>
 				</oprand_edges>
 				<opcode>ashr</opcode>
 				<m_Display>0</m_Display>
@@ -6345,7 +6345,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -6359,7 +6359,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -6389,7 +6389,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>390</item>
+					<item>392</item>
 				</oprand_edges>
 				<opcode>trunc</opcode>
 				<m_Display>0</m_Display>
@@ -6418,7 +6418,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -6432,7 +6432,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -6462,8 +6462,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>391</item>
-					<item>392</item>
+					<item>393</item>
+					<item>394</item>
 				</oprand_edges>
 				<opcode>and</opcode>
 				<m_Display>0</m_Display>
@@ -6492,7 +6492,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -6506,7 +6506,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -6536,8 +6536,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>393</item>
-					<item>394</item>
+					<item>395</item>
+					<item>396</item>
 				</oprand_edges>
 				<opcode>and</opcode>
 				<m_Display>0</m_Display>
@@ -6550,7 +6550,7 @@
 					<Obj>
 						<type>0</type>
 						<id>115</id>
-						<name>tmp_105</name>
+						<name>tmp_101</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -6566,7 +6566,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -6580,7 +6580,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -6610,9 +6610,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>395</item>
-					<item>396</item>
 					<item>397</item>
+					<item>398</item>
+					<item>399</item>
 				</oprand_edges>
 				<opcode>bitselect</opcode>
 				<m_Display>0</m_Display>
@@ -6641,7 +6641,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -6655,81 +6655,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
-										</first>
-										<second>361</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
-											<second>operator()</second>
-										</first>
-										<second>429</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
-											<second>sr_cast&amp;lt;unsigned char, double&amp;gt;</second>
-										</first>
-										<second>500</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>1</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>398</item>
-					<item>399</item>
-				</oprand_edges>
-				<opcode>xor</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>0.97</m_delay>
-			</item>
-			<item class_id_reference="9" object_id="_96">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>117</id>
-						<name>tmp_23_i</name>
-						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
-						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
-						<lineNumber>429</lineNumber>
-						<contextFuncName>operator()</contextFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>C:\Digilent19\Hls</first>
-								<second>
-									<count>5</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
-										</first>
-										<second>853</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>apply&amp;lt;unsigned char, unsigned char, unsigned char, double&amp;gt;</second>
-										</first>
-										<second>282</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -6762,18 +6688,18 @@
 					<item>400</item>
 					<item>401</item>
 				</oprand_edges>
-				<opcode>icmp</opcode>
+				<opcode>xor</opcode>
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>1.92</m_delay>
+				<m_delay>0.97</m_delay>
 			</item>
-			<item class_id_reference="9" object_id="_97">
+			<item class_id_reference="9" object_id="_96">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>118</id>
-						<name>or_cond115_i_i</name>
+						<id>117</id>
+						<name>tmp_23_i</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -6789,7 +6715,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -6803,7 +6729,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -6836,6 +6762,80 @@
 					<item>402</item>
 					<item>403</item>
 				</oprand_edges>
+				<opcode>icmp</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_delay>1.92</m_delay>
+			</item>
+			<item class_id_reference="9" object_id="_97">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>118</id>
+						<name>or_cond115_i_i</name>
+						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
+						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
+						<lineNumber>429</lineNumber>
+						<contextFuncName>operator()</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>C:\Digilent19\Hls</first>
+								<second>
+									<count>5</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
+										</first>
+										<second>853</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>apply&amp;lt;unsigned char, unsigned char, unsigned char, double&amp;gt;</second>
+										</first>
+										<second>282</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
+										</first>
+										<second>361</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
+											<second>operator()</second>
+										</first>
+										<second>429</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
+											<second>sr_cast&amp;lt;unsigned char, double&amp;gt;</second>
+										</first>
+										<second>500</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>1</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>404</item>
+					<item>405</item>
+				</oprand_edges>
 				<opcode>and</opcode>
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
@@ -6863,7 +6863,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -6877,7 +6877,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -6907,7 +6907,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>404</item>
+					<item>406</item>
 				</oprand_edges>
 				<opcode>zext</opcode>
 				<m_Display>0</m_Display>
@@ -6936,7 +6936,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -6950,7 +6950,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -6980,8 +6980,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>405</item>
-					<item>406</item>
+					<item>407</item>
+					<item>408</item>
 				</oprand_edges>
 				<opcode>lshr</opcode>
 				<m_Display>0</m_Display>
@@ -7010,7 +7010,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -7024,7 +7024,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -7054,8 +7054,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>408</item>
-					<item>409</item>
+					<item>410</item>
+					<item>411</item>
 				</oprand_edges>
 				<opcode>lshr</opcode>
 				<m_Display>0</m_Display>
@@ -7084,7 +7084,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -7098,7 +7098,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -7128,8 +7128,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>410</item>
-					<item>411</item>
+					<item>412</item>
+					<item>413</item>
 				</oprand_edges>
 				<opcode>icmp</opcode>
 				<m_Display>0</m_Display>
@@ -7158,7 +7158,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -7172,7 +7172,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -7202,9 +7202,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>412</item>
-					<item>413</item>
 					<item>414</item>
+					<item>415</item>
+					<item>416</item>
 				</oprand_edges>
 				<opcode>select</opcode>
 				<m_Display>0</m_Display>
@@ -7233,7 +7233,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -7247,7 +7247,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -7277,8 +7277,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>415</item>
-					<item>416</item>
+					<item>417</item>
+					<item>418</item>
 				</oprand_edges>
 				<opcode>and</opcode>
 				<m_Display>0</m_Display>
@@ -7307,7 +7307,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -7321,7 +7321,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -7351,8 +7351,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>417</item>
-					<item>418</item>
+					<item>419</item>
+					<item>420</item>
 				</oprand_edges>
 				<opcode>and</opcode>
 				<m_Display>0</m_Display>
@@ -7381,7 +7381,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -7395,7 +7395,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -7425,8 +7425,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>419</item>
-					<item>420</item>
+					<item>421</item>
+					<item>422</item>
 				</oprand_edges>
 				<opcode>icmp</opcode>
 				<m_Display>0</m_Display>
@@ -7455,7 +7455,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -7469,7 +7469,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -7499,8 +7499,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>421</item>
-					<item>422</item>
+					<item>423</item>
+					<item>424</item>
 				</oprand_edges>
 				<opcode>xor</opcode>
 				<m_Display>0</m_Display>
@@ -7529,7 +7529,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -7543,81 +7543,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
-										</first>
-										<second>361</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
-											<second>operator()</second>
-										</first>
-										<second>429</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
-											<second>sr_cast&amp;lt;unsigned char, double&amp;gt;</second>
-										</first>
-										<second>500</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>1</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>423</item>
-					<item>424</item>
-				</oprand_edges>
-				<opcode>and</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>0.00</m_delay>
-			</item>
-			<item class_id_reference="9" object_id="_108">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>129</id>
-						<name>tmp_27_i</name>
-						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
-						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
-						<lineNumber>429</lineNumber>
-						<contextFuncName>operator()</contextFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>C:\Digilent19\Hls</first>
-								<second>
-									<count>5</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
-										</first>
-										<second>853</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>apply&amp;lt;unsigned char, unsigned char, unsigned char, double&amp;gt;</second>
-										</first>
-										<second>282</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -7650,18 +7576,18 @@
 					<item>425</item>
 					<item>426</item>
 				</oprand_edges>
-				<opcode>icmp</opcode>
+				<opcode>and</opcode>
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>1.92</m_delay>
+				<m_delay>0.00</m_delay>
 			</item>
-			<item class_id_reference="9" object_id="_109">
+			<item class_id_reference="9" object_id="_108">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>130</id>
-						<name>Range1_all_zeros_1</name>
+						<id>129</id>
+						<name>tmp_27_i</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -7677,7 +7603,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -7691,81 +7617,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
-										</first>
-										<second>361</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
-											<second>operator()</second>
-										</first>
-										<second>429</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
-											<second>sr_cast&amp;lt;unsigned char, double&amp;gt;</second>
-										</first>
-										<second>500</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName>Range1_all_zeros</originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>1</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>427</item>
-					<item>428</item>
-				</oprand_edges>
-				<opcode>icmp</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>2.78</m_delay>
-			</item>
-			<item class_id_reference="9" object_id="_110">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>131</id>
-						<name>p_119_i_i</name>
-						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
-						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
-						<lineNumber>429</lineNumber>
-						<contextFuncName>operator()</contextFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>C:\Digilent19\Hls</first>
-								<second>
-									<count>5</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
-										</first>
-										<second>853</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>apply&amp;lt;unsigned char, unsigned char, unsigned char, double&amp;gt;</second>
-										</first>
-										<second>282</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -7795,21 +7647,21 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>429</item>
-					<item>430</item>
+					<item>427</item>
+					<item>428</item>
 				</oprand_edges>
-				<opcode>or</opcode>
+				<opcode>icmp</opcode>
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>0.00</m_delay>
+				<m_delay>1.92</m_delay>
 			</item>
-			<item class_id_reference="9" object_id="_111">
+			<item class_id_reference="9" object_id="_109">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>132</id>
-						<name>tmp_23_i_not</name>
+						<id>130</id>
+						<name>Range1_all_zeros_1</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -7825,7 +7677,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -7839,7 +7691,81 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
+										</first>
+										<second>361</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
+											<second>operator()</second>
+										</first>
+										<second>429</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
+											<second>sr_cast&amp;lt;unsigned char, double&amp;gt;</second>
+										</first>
+										<second>500</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName>Range1_all_zeros</originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>1</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>429</item>
+					<item>430</item>
+				</oprand_edges>
+				<opcode>icmp</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_delay>2.78</m_delay>
+			</item>
+			<item class_id_reference="9" object_id="_110">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>131</id>
+						<name>p_119_i_i</name>
+						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
+						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
+						<lineNumber>429</lineNumber>
+						<contextFuncName>operator()</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>C:\Digilent19\Hls</first>
+								<second>
+									<count>5</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
+										</first>
+										<second>853</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>apply&amp;lt;unsigned char, unsigned char, unsigned char, double&amp;gt;</second>
+										</first>
+										<second>282</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -7872,18 +7798,18 @@
 					<item>431</item>
 					<item>432</item>
 				</oprand_edges>
-				<opcode>xor</opcode>
+				<opcode>or</opcode>
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_delay>0.00</m_delay>
 			</item>
-			<item class_id_reference="9" object_id="_112">
+			<item class_id_reference="9" object_id="_111">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>133</id>
-						<name>sel_tmp33_i</name>
+						<id>132</id>
+						<name>tmp_23_i_not</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -7899,7 +7825,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -7913,7 +7839,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -7946,18 +7872,18 @@
 					<item>433</item>
 					<item>434</item>
 				</oprand_edges>
-				<opcode>or</opcode>
+				<opcode>xor</opcode>
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_delay>0.00</m_delay>
 			</item>
-			<item class_id_reference="9" object_id="_113">
+			<item class_id_reference="9" object_id="_112">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>134</id>
-						<name>sel_tmp34_i</name>
+						<id>133</id>
+						<name>sel_tmp33_i</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -7973,7 +7899,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -7987,7 +7913,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -8020,93 +7946,18 @@
 					<item>435</item>
 					<item>436</item>
 				</oprand_edges>
-				<opcode>and</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>0.97</m_delay>
-			</item>
-			<item class_id_reference="9" object_id="_114">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>135</id>
-						<name>sel_tmp35_i</name>
-						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
-						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
-						<lineNumber>429</lineNumber>
-						<contextFuncName>operator()</contextFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>C:\Digilent19\Hls</first>
-								<second>
-									<count>5</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
-										</first>
-										<second>853</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>apply&amp;lt;unsigned char, unsigned char, unsigned char, double&amp;gt;</second>
-										</first>
-										<second>282</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
-										</first>
-										<second>361</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
-											<second>operator()</second>
-										</first>
-										<second>429</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
-											<second>sr_cast&amp;lt;unsigned char, double&amp;gt;</second>
-										</first>
-										<second>500</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>1</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>437</item>
-					<item>438</item>
-					<item>439</item>
-				</oprand_edges>
-				<opcode>select</opcode>
+				<opcode>or</opcode>
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_delay>0.00</m_delay>
 			</item>
-			<item class_id_reference="9" object_id="_115">
+			<item class_id_reference="9" object_id="_113">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>136</id>
-						<name>Range1_all_ones_2_i_s</name>
+						<id>134</id>
+						<name>sel_tmp34_i</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -8122,7 +7973,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -8136,307 +7987,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
-										</first>
-										<second>361</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
-											<second>operator()</second>
-										</first>
-										<second>429</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
-											<second>sr_cast&amp;lt;unsigned char, double&amp;gt;</second>
-										</first>
-										<second>500</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>1</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>440</item>
-					<item>441</item>
-					<item>442</item>
-				</oprand_edges>
-				<opcode>select</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>0.99</m_delay>
-			</item>
-			<item class_id_reference="9" object_id="_116">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>137</id>
-						<name>sel_tmp39_i</name>
-						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
-						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
-						<lineNumber>429</lineNumber>
-						<contextFuncName>operator()</contextFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>C:\Digilent19\Hls</first>
-								<second>
-									<count>5</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
-										</first>
-										<second>853</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>apply&amp;lt;unsigned char, unsigned char, unsigned char, double&amp;gt;</second>
-										</first>
-										<second>282</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
-										</first>
-										<second>361</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
-											<second>operator()</second>
-										</first>
-										<second>429</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
-											<second>sr_cast&amp;lt;unsigned char, double&amp;gt;</second>
-										</first>
-										<second>500</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>1</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>443</item>
-					<item>444</item>
-					<item>445</item>
-				</oprand_edges>
-				<opcode>select</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>0.99</m_delay>
-			</item>
-			<item class_id_reference="9" object_id="_117">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>138</id>
-						<name>Range1_all_zeros_2_i</name>
-						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
-						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
-						<lineNumber>429</lineNumber>
-						<contextFuncName>operator()</contextFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>C:\Digilent19\Hls</first>
-								<second>
-									<count>5</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
-										</first>
-										<second>853</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>apply&amp;lt;unsigned char, unsigned char, unsigned char, double&amp;gt;</second>
-										</first>
-										<second>282</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
-										</first>
-										<second>361</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
-											<second>operator()</second>
-										</first>
-										<second>429</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
-											<second>sr_cast&amp;lt;unsigned char, double&amp;gt;</second>
-										</first>
-										<second>500</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>1</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>446</item>
-					<item>447</item>
-					<item>448</item>
-				</oprand_edges>
-				<opcode>select</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>0.00</m_delay>
-			</item>
-			<item class_id_reference="9" object_id="_118">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>139</id>
-						<name>deleted_zeros</name>
-						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
-						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
-						<lineNumber>429</lineNumber>
-						<contextFuncName>operator()</contextFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>C:\Digilent19\Hls</first>
-								<second>
-									<count>5</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
-										</first>
-										<second>853</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>apply&amp;lt;unsigned char, unsigned char, unsigned char, double&amp;gt;</second>
-										</first>
-										<second>282</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
-										</first>
-										<second>361</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
-											<second>operator()</second>
-										</first>
-										<second>429</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
-											<second>sr_cast&amp;lt;unsigned char, double&amp;gt;</second>
-										</first>
-										<second>500</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName>deleted_zeros</originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>1</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>449</item>
-					<item>450</item>
-					<item>451</item>
-				</oprand_edges>
-				<opcode>select</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>0.99</m_delay>
-			</item>
-			<item class_id_reference="9" object_id="_119">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>140</id>
-						<name>Range1_all_ones_2_i</name>
-						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
-						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
-						<lineNumber>429</lineNumber>
-						<contextFuncName>operator()</contextFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>C:\Digilent19\Hls</first>
-								<second>
-									<count>5</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
-										</first>
-										<second>853</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>apply&amp;lt;unsigned char, unsigned char, unsigned char, double&amp;gt;</second>
-										</first>
-										<second>282</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -8466,21 +8017,21 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>452</item>
-					<item>453</item>
+					<item>437</item>
+					<item>438</item>
 				</oprand_edges>
 				<opcode>and</opcode>
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>0.00</m_delay>
+				<m_delay>0.97</m_delay>
 			</item>
-			<item class_id_reference="9" object_id="_120">
+			<item class_id_reference="9" object_id="_114">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>141</id>
-						<name>tmp_28_i</name>
+						<id>135</id>
+						<name>sel_tmp35_i</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -8496,7 +8047,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -8510,7 +8061,382 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
+										</first>
+										<second>361</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
+											<second>operator()</second>
+										</first>
+										<second>429</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
+											<second>sr_cast&amp;lt;unsigned char, double&amp;gt;</second>
+										</first>
+										<second>500</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>1</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>439</item>
+					<item>440</item>
+					<item>441</item>
+				</oprand_edges>
+				<opcode>select</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_delay>0.00</m_delay>
+			</item>
+			<item class_id_reference="9" object_id="_115">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>136</id>
+						<name>Range1_all_ones_2_i_s</name>
+						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
+						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
+						<lineNumber>429</lineNumber>
+						<contextFuncName>operator()</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>C:\Digilent19\Hls</first>
+								<second>
+									<count>5</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
+										</first>
+										<second>853</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>apply&amp;lt;unsigned char, unsigned char, unsigned char, double&amp;gt;</second>
+										</first>
+										<second>282</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
+										</first>
+										<second>361</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
+											<second>operator()</second>
+										</first>
+										<second>429</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
+											<second>sr_cast&amp;lt;unsigned char, double&amp;gt;</second>
+										</first>
+										<second>500</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>1</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>442</item>
+					<item>443</item>
+					<item>444</item>
+				</oprand_edges>
+				<opcode>select</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_delay>0.99</m_delay>
+			</item>
+			<item class_id_reference="9" object_id="_116">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>137</id>
+						<name>sel_tmp39_i</name>
+						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
+						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
+						<lineNumber>429</lineNumber>
+						<contextFuncName>operator()</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>C:\Digilent19\Hls</first>
+								<second>
+									<count>5</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
+										</first>
+										<second>853</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>apply&amp;lt;unsigned char, unsigned char, unsigned char, double&amp;gt;</second>
+										</first>
+										<second>282</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
+										</first>
+										<second>361</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
+											<second>operator()</second>
+										</first>
+										<second>429</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
+											<second>sr_cast&amp;lt;unsigned char, double&amp;gt;</second>
+										</first>
+										<second>500</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>1</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>445</item>
+					<item>446</item>
+					<item>447</item>
+				</oprand_edges>
+				<opcode>select</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_delay>0.99</m_delay>
+			</item>
+			<item class_id_reference="9" object_id="_117">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>138</id>
+						<name>Range1_all_zeros_2_i</name>
+						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
+						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
+						<lineNumber>429</lineNumber>
+						<contextFuncName>operator()</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>C:\Digilent19\Hls</first>
+								<second>
+									<count>5</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
+										</first>
+										<second>853</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>apply&amp;lt;unsigned char, unsigned char, unsigned char, double&amp;gt;</second>
+										</first>
+										<second>282</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
+										</first>
+										<second>361</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
+											<second>operator()</second>
+										</first>
+										<second>429</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
+											<second>sr_cast&amp;lt;unsigned char, double&amp;gt;</second>
+										</first>
+										<second>500</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>1</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>448</item>
+					<item>449</item>
+					<item>450</item>
+				</oprand_edges>
+				<opcode>select</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_delay>0.00</m_delay>
+			</item>
+			<item class_id_reference="9" object_id="_118">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>139</id>
+						<name>deleted_zeros</name>
+						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
+						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
+						<lineNumber>429</lineNumber>
+						<contextFuncName>operator()</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>C:\Digilent19\Hls</first>
+								<second>
+									<count>5</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
+										</first>
+										<second>853</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>apply&amp;lt;unsigned char, unsigned char, unsigned char, double&amp;gt;</second>
+										</first>
+										<second>282</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
+										</first>
+										<second>361</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
+											<second>operator()</second>
+										</first>
+										<second>429</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
+											<second>sr_cast&amp;lt;unsigned char, double&amp;gt;</second>
+										</first>
+										<second>500</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName>deleted_zeros</originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>1</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>451</item>
+					<item>452</item>
+					<item>453</item>
+				</oprand_edges>
+				<opcode>select</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_delay>0.99</m_delay>
+			</item>
+			<item class_id_reference="9" object_id="_119">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>140</id>
+						<name>Range1_all_ones_2_i</name>
+						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
+						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
+						<lineNumber>429</lineNumber>
+						<contextFuncName>operator()</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>C:\Digilent19\Hls</first>
+								<second>
+									<count>5</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
+										</first>
+										<second>853</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>apply&amp;lt;unsigned char, unsigned char, unsigned char, double&amp;gt;</second>
+										</first>
+										<second>282</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -8543,18 +8469,18 @@
 					<item>454</item>
 					<item>455</item>
 				</oprand_edges>
-				<opcode>xor</opcode>
+				<opcode>and</opcode>
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_delay>0.00</m_delay>
 			</item>
-			<item class_id_reference="9" object_id="_121">
+			<item class_id_reference="9" object_id="_120">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>142</id>
-						<name>sel_tmp41_i</name>
+						<id>141</id>
+						<name>tmp_28_i</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -8570,7 +8496,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -8584,7 +8510,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -8621,14 +8547,14 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>0.97</m_delay>
+				<m_delay>0.00</m_delay>
 			</item>
-			<item class_id_reference="9" object_id="_122">
+			<item class_id_reference="9" object_id="_121">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>143</id>
-						<name>tmp7</name>
+						<id>142</id>
+						<name>sel_tmp41_i</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -8644,7 +8570,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -8658,7 +8584,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -8691,18 +8617,18 @@
 					<item>458</item>
 					<item>459</item>
 				</oprand_edges>
-				<opcode>and</opcode>
+				<opcode>xor</opcode>
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>0.00</m_delay>
+				<m_delay>0.97</m_delay>
 			</item>
-			<item class_id_reference="9" object_id="_123">
+			<item class_id_reference="9" object_id="_122">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>144</id>
-						<name>sel_tmp46_i</name>
+						<id>143</id>
+						<name>tmp7</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -8718,7 +8644,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -8732,7 +8658,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -8769,14 +8695,14 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>0.97</m_delay>
+				<m_delay>0.00</m_delay>
 			</item>
-			<item class_id_reference="9" object_id="_124">
+			<item class_id_reference="9" object_id="_123">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>145</id>
-						<name>sel_tmp47_i</name>
+						<id>144</id>
+						<name>sel_tmp46_i</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -8792,7 +8718,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -8806,7 +8732,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -8843,14 +8769,14 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>0.00</m_delay>
+				<m_delay>0.97</m_delay>
 			</item>
-			<item class_id_reference="9" object_id="_125">
+			<item class_id_reference="9" object_id="_124">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>146</id>
-						<name>underflow</name>
+						<id>145</id>
+						<name>sel_tmp47_i</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -8866,7 +8792,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -8880,82 +8806,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
-										</first>
-										<second>361</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
-											<second>operator()</second>
-										</first>
-										<second>429</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
-											<second>sr_cast&amp;lt;unsigned char, double&amp;gt;</second>
-										</first>
-										<second>500</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName>underflow</originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>1</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>464</item>
-					<item>465</item>
-					<item>466</item>
-				</oprand_edges>
-				<opcode>select</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>0.99</m_delay>
-			</item>
-			<item class_id_reference="9" object_id="_126">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>147</id>
-						<name>tmp8</name>
-						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
-						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
-						<lineNumber>429</lineNumber>
-						<contextFuncName>operator()</contextFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>C:\Digilent19\Hls</first>
-								<second>
-									<count>5</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
-										</first>
-										<second>853</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>apply&amp;lt;unsigned char, unsigned char, unsigned char, double&amp;gt;</second>
-										</first>
-										<second>282</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -8985,21 +8836,21 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>467</item>
-					<item>468</item>
+					<item>464</item>
+					<item>465</item>
 				</oprand_edges>
-				<opcode>or</opcode>
+				<opcode>and</opcode>
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_delay>0.00</m_delay>
 			</item>
-			<item class_id_reference="9" object_id="_127">
+			<item class_id_reference="9" object_id="_125">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>148</id>
-						<name>p_121_demorgan_i_i</name>
+						<id>146</id>
+						<name>underflow</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -9015,7 +8866,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -9029,7 +8880,82 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
+										</first>
+										<second>361</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
+											<second>operator()</second>
+										</first>
+										<second>429</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
+											<second>sr_cast&amp;lt;unsigned char, double&amp;gt;</second>
+										</first>
+										<second>500</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName>underflow</originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>1</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>466</item>
+					<item>467</item>
+					<item>468</item>
+				</oprand_edges>
+				<opcode>select</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_delay>0.99</m_delay>
+			</item>
+			<item class_id_reference="9" object_id="_126">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>147</id>
+						<name>tmp8</name>
+						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
+						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
+						<lineNumber>429</lineNumber>
+						<contextFuncName>operator()</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>C:\Digilent19\Hls</first>
+								<second>
+									<count>5</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
+										</first>
+										<second>853</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>apply&amp;lt;unsigned char, unsigned char, unsigned char, double&amp;gt;</second>
+										</first>
+										<second>282</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -9066,14 +8992,14 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>0.97</m_delay>
+				<m_delay>0.00</m_delay>
 			</item>
-			<item class_id_reference="9" object_id="_128">
+			<item class_id_reference="9" object_id="_127">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>149</id>
-						<name>underflow_not_i</name>
+						<id>148</id>
+						<name>p_121_demorgan_i_i</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -9089,7 +9015,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -9103,7 +9029,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -9136,18 +9062,18 @@
 					<item>471</item>
 					<item>472</item>
 				</oprand_edges>
-				<opcode>xor</opcode>
+				<opcode>or</opcode>
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_delay>0.97</m_delay>
 			</item>
-			<item class_id_reference="9" object_id="_129">
+			<item class_id_reference="9" object_id="_128">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>150</id>
-						<name>brmerge_i_i_not_i</name>
+						<id>149</id>
+						<name>underflow_not_i</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -9163,7 +9089,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -9177,7 +9103,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -9210,18 +9136,18 @@
 					<item>473</item>
 					<item>474</item>
 				</oprand_edges>
-				<opcode>and</opcode>
+				<opcode>xor</opcode>
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>0.00</m_delay>
+				<m_delay>0.97</m_delay>
 			</item>
-			<item class_id_reference="9" object_id="_130">
+			<item class_id_reference="9" object_id="_129">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>151</id>
-						<name>p_121_demorgan_i_not_s</name>
+						<id>150</id>
+						<name>brmerge_i_i_not_i</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -9237,7 +9163,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -9251,7 +9177,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -9284,18 +9210,18 @@
 					<item>475</item>
 					<item>476</item>
 				</oprand_edges>
-				<opcode>xor</opcode>
+				<opcode>and</opcode>
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_delay>0.00</m_delay>
 			</item>
-			<item class_id_reference="9" object_id="_131">
+			<item class_id_reference="9" object_id="_130">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>152</id>
-						<name>brmerge_i</name>
+						<id>151</id>
+						<name>p_121_demorgan_i_not_s</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -9311,7 +9237,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -9325,7 +9251,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -9358,6 +9284,80 @@
 					<item>477</item>
 					<item>478</item>
 				</oprand_edges>
+				<opcode>xor</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_delay>0.00</m_delay>
+			</item>
+			<item class_id_reference="9" object_id="_131">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>152</id>
+						<name>brmerge_i</name>
+						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
+						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
+						<lineNumber>429</lineNumber>
+						<contextFuncName>operator()</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>C:\Digilent19\Hls</first>
+								<second>
+									<count>5</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
+										</first>
+										<second>853</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>apply&amp;lt;unsigned char, unsigned char, unsigned char, double&amp;gt;</second>
+										</first>
+										<second>282</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
+										</first>
+										<second>361</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
+											<second>operator()</second>
+										</first>
+										<second>429</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
+											<second>sr_cast&amp;lt;unsigned char, double&amp;gt;</second>
+										</first>
+										<second>500</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>1</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>479</item>
+					<item>480</item>
+				</oprand_edges>
 				<opcode>or</opcode>
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
@@ -9385,7 +9385,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -9399,7 +9399,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -9429,9 +9429,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>479</item>
-					<item>480</item>
 					<item>481</item>
+					<item>482</item>
+					<item>483</item>
 				</oprand_edges>
 				<opcode>select</opcode>
 				<m_Display>0</m_Display>
@@ -9460,7 +9460,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -9474,81 +9474,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
-										</first>
-										<second>361</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
-											<second>operator()</second>
-										</first>
-										<second>428</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
-											<second>sr_cast&amp;lt;unsigned char, double&amp;gt;</second>
-										</first>
-										<second>500</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>1</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>482</item>
-					<item>483</item>
-				</oprand_edges>
-				<opcode>and</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>0.00</m_delay>
-			</item>
-			<item class_id_reference="9" object_id="_134">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>155</id>
-						<name>sel_tmp50_i</name>
-						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
-						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
-						<lineNumber>428</lineNumber>
-						<contextFuncName>operator()</contextFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>C:\Digilent19\Hls</first>
-								<second>
-									<count>5</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
-										</first>
-										<second>853</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>apply&amp;lt;unsigned char, unsigned char, unsigned char, double&amp;gt;</second>
-										</first>
-										<second>282</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -9581,6 +9507,80 @@
 					<item>484</item>
 					<item>485</item>
 				</oprand_edges>
+				<opcode>and</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_delay>0.00</m_delay>
+			</item>
+			<item class_id_reference="9" object_id="_134">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>155</id>
+						<name>sel_tmp50_i</name>
+						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
+						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
+						<lineNumber>428</lineNumber>
+						<contextFuncName>operator()</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>C:\Digilent19\Hls</first>
+								<second>
+									<count>5</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
+										</first>
+										<second>853</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>apply&amp;lt;unsigned char, unsigned char, unsigned char, double&amp;gt;</second>
+										</first>
+										<second>282</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
+										</first>
+										<second>361</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
+											<second>operator()</second>
+										</first>
+										<second>428</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
+											<second>sr_cast&amp;lt;unsigned char, double&amp;gt;</second>
+										</first>
+										<second>500</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>1</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>486</item>
+					<item>487</item>
+				</oprand_edges>
 				<opcode>xor</opcode>
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
@@ -9608,7 +9608,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -9622,81 +9622,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
-										</first>
-										<second>361</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
-											<second>operator()</second>
-										</first>
-										<second>429</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
-											<second>sr_cast&amp;lt;unsigned char, double&amp;gt;</second>
-										</first>
-										<second>500</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>1</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>486</item>
-					<item>487</item>
-				</oprand_edges>
-				<opcode>and</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>0.00</m_delay>
-			</item>
-			<item class_id_reference="9" object_id="_136">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>157</id>
-						<name>tmp_s</name>
-						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
-						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
-						<lineNumber>429</lineNumber>
-						<contextFuncName>operator()</contextFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>C:\Digilent19\Hls</first>
-								<second>
-									<count>5</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
-										</first>
-										<second>853</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>apply&amp;lt;unsigned char, unsigned char, unsigned char, double&amp;gt;</second>
-										</first>
-										<second>282</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -9729,18 +9655,18 @@
 					<item>488</item>
 					<item>489</item>
 				</oprand_edges>
-				<opcode>or</opcode>
+				<opcode>and</opcode>
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_delay>0.00</m_delay>
 			</item>
-			<item class_id_reference="9" object_id="_137">
+			<item class_id_reference="9" object_id="_136">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>158</id>
-						<name>tmp_45</name>
+						<id>157</id>
+						<name>tmp_s</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -9756,7 +9682,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -9770,7 +9696,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -9809,6 +9735,80 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_delay>0.00</m_delay>
 			</item>
+			<item class_id_reference="9" object_id="_137">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>158</id>
+						<name>tmp_40</name>
+						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
+						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
+						<lineNumber>429</lineNumber>
+						<contextFuncName>operator()</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>C:\Digilent19\Hls</first>
+								<second>
+									<count>5</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
+										</first>
+										<second>853</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>apply&amp;lt;unsigned char, unsigned char, unsigned char, double&amp;gt;</second>
+										</first>
+										<second>282</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
+										</first>
+										<second>361</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
+											<second>operator()</second>
+										</first>
+										<second>429</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
+											<second>sr_cast&amp;lt;unsigned char, double&amp;gt;</second>
+										</first>
+										<second>500</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>1</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>492</item>
+					<item>493</item>
+				</oprand_edges>
+				<opcode>or</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_delay>0.00</m_delay>
+			</item>
 			<item class_id_reference="9" object_id="_138">
 				<Value>
 					<Obj>
@@ -9830,7 +9830,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -9844,7 +9844,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -9874,9 +9874,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>492</item>
-					<item>493</item>
 					<item>494</item>
+					<item>495</item>
+					<item>496</item>
 				</oprand_edges>
 				<opcode>select</opcode>
 				<m_Display>0</m_Display>
@@ -9905,7 +9905,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -9919,81 +9919,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
-										</first>
-										<second>361</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
-											<second>operator()</second>
-										</first>
-										<second>428</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
-											<second>sr_cast&amp;lt;unsigned char, double&amp;gt;</second>
-										</first>
-										<second>500</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>1</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>495</item>
-					<item>496</item>
-				</oprand_edges>
-				<opcode>or</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>0.00</m_delay>
-			</item>
-			<item class_id_reference="9" object_id="_140">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>161</id>
-						<name>sel_tmp55_i</name>
-						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
-						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
-						<lineNumber>428</lineNumber>
-						<contextFuncName>operator()</contextFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>C:\Digilent19\Hls</first>
-								<second>
-									<count>5</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
-										</first>
-										<second>853</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>apply&amp;lt;unsigned char, unsigned char, unsigned char, double&amp;gt;</second>
-										</first>
-										<second>282</second>
-									</item>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -10026,6 +9952,80 @@
 					<item>497</item>
 					<item>498</item>
 				</oprand_edges>
+				<opcode>or</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_delay>0.00</m_delay>
+			</item>
+			<item class_id_reference="9" object_id="_140">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>161</id>
+						<name>sel_tmp55_i</name>
+						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
+						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
+						<lineNumber>428</lineNumber>
+						<contextFuncName>operator()</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>C:\Digilent19\Hls</first>
+								<second>
+									<count>5</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
+										</first>
+										<second>853</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>apply&amp;lt;unsigned char, unsigned char, unsigned char, double&amp;gt;</second>
+										</first>
+										<second>282</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
+										</first>
+										<second>361</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
+											<second>operator()</second>
+										</first>
+										<second>428</second>
+									</item>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</first>
+											<second>sr_cast&amp;lt;unsigned char, double&amp;gt;</second>
+										</first>
+										<second>500</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>1</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>499</item>
+					<item>500</item>
+				</oprand_edges>
 				<opcode>xor</opcode>
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
@@ -10053,7 +10053,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -10067,7 +10067,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -10097,8 +10097,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>499</item>
-					<item>500</item>
+					<item>501</item>
+					<item>502</item>
 				</oprand_edges>
 				<opcode>and</opcode>
 				<m_Display>0</m_Display>
@@ -10127,7 +10127,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
@@ -10141,7 +10141,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>361</second>
 									</item>
@@ -10171,9 +10171,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>501</item>
-					<item>502</item>
 					<item>503</item>
+					<item>504</item>
+					<item>505</item>
 				</oprand_edges>
 				<opcode>select</opcode>
 				<m_Display>0</m_Display>
@@ -10202,14 +10202,14 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>363</second>
 									</item>
@@ -10239,9 +10239,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>505</item>
-					<item>506</item>
 					<item>507</item>
+					<item>508</item>
+					<item>509</item>
 				</oprand_edges>
 				<opcode>write</opcode>
 				<m_Display>0</m_Display>
@@ -10258,7 +10258,7 @@
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>355</lineNumber>
-						<contextFuncName>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</contextFuncName>
+						<contextFuncName>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -10270,14 +10270,14 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>355</second>
 									</item>
@@ -10293,7 +10293,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>508</item>
+					<item>510</item>
 				</oprand_edges>
 				<opcode>br</opcode>
 				<m_Display>0</m_Display>
@@ -10310,7 +10310,7 @@
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>354</lineNumber>
-						<contextFuncName>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</contextFuncName>
+						<contextFuncName>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -10322,14 +10322,14 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>853</second>
 									</item>
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&amp;gt;</second>
+											<second>arithm_pro&amp;lt;hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&amp;gt;</second>
 										</first>
 										<second>354</second>
 									</item>
@@ -10345,7 +10345,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>509</item>
+					<item>511</item>
 				</oprand_edges>
 				<opcode>br</opcode>
 				<m_Display>0</m_Display>
@@ -10362,7 +10362,7 @@
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>854</lineNumber>
-						<contextFuncName>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</contextFuncName>
+						<contextFuncName>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -10374,7 +10374,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</first>
-											<second>AddWeighted&amp;lt;1080, 1920, 0, 0, 0, double&amp;gt;</second>
+											<second>AddWeighted&amp;lt;720, 1280, 0, 0, 0, double&amp;gt;</second>
 										</first>
 										<second>854</second>
 									</item>
@@ -10399,7 +10399,7 @@
 			</item>
 		</nodes>
 		<consts class_id="15" tracking_level="0" version="0">
-			<count>28</count>
+			<count>30</count>
 			<item_version>0</item_version>
 			<item class_id="16" tracking_level="1" version="0" object_id="_147">
 				<Value>
@@ -10419,7 +10419,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>11</bitwidth>
+					<bitwidth>10</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>0</content>
@@ -10442,10 +10442,10 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>11</bitwidth>
+					<bitwidth>10</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>1080</content>
+				<content>720</content>
 			</item>
 			<item class_id_reference="16" object_id="_149">
 				<Value>
@@ -10465,7 +10465,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>11</bitwidth>
+					<bitwidth>10</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>1</content>
@@ -10474,7 +10474,7 @@
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>197</id>
+						<id>192</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -10491,13 +10491,59 @@
 					<bitwidth>11</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>1920</content>
+				<content>0</content>
 			</item>
 			<item class_id_reference="16" object_id="_151">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>212</id>
+						<id>198</id>
+						<name>empty</name>
+						<fileName></fileName>
+						<fileDirectory></fileDirectory>
+						<lineNumber>0</lineNumber>
+						<contextFuncName></contextFuncName>
+						<inlineStackInfo>
+							<count>0</count>
+							<item_version>0</item_version>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>11</bitwidth>
+				</Value>
+				<const_type>0</const_type>
+				<content>1280</content>
+			</item>
+			<item class_id_reference="16" object_id="_152">
+				<Value>
+					<Obj>
+						<type>2</type>
+						<id>201</id>
+						<name>empty</name>
+						<fileName></fileName>
+						<fileDirectory></fileDirectory>
+						<lineNumber>0</lineNumber>
+						<contextFuncName></contextFuncName>
+						<inlineStackInfo>
+							<count>0</count>
+							<item_version>0</item_version>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>11</bitwidth>
+				</Value>
+				<const_type>0</const_type>
+				<content>1</content>
+			</item>
+			<item class_id_reference="16" object_id="_153">
+				<Value>
+					<Obj>
+						<type>2</type>
+						<id>214</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -10516,11 +10562,11 @@
 				<const_type>1</const_type>
 				<content>0.5</content>
 			</item>
-			<item class_id_reference="16" object_id="_152">
+			<item class_id_reference="16" object_id="_154">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>221</id>
+						<id>223</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -10539,30 +10585,7 @@
 				<const_type>1</const_type>
 				<content>0</content>
 			</item>
-			<item class_id_reference="16" object_id="_153">
-				<Value>
-					<Obj>
-						<type>2</type>
-						<id>227</id>
-						<name>empty</name>
-						<fileName></fileName>
-						<fileDirectory></fileDirectory>
-						<lineNumber>0</lineNumber>
-						<contextFuncName></contextFuncName>
-						<inlineStackInfo>
-							<count>0</count>
-							<item_version>0</item_version>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>32</bitwidth>
-				</Value>
-				<const_type>0</const_type>
-				<content>52</content>
-			</item>
-			<item class_id_reference="16" object_id="_154">
+			<item class_id_reference="16" object_id="_155">
 				<Value>
 					<Obj>
 						<type>2</type>
@@ -10583,13 +10606,36 @@
 					<bitwidth>32</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>62</content>
+				<content>52</content>
 			</item>
-			<item class_id_reference="16" object_id="_155">
+			<item class_id_reference="16" object_id="_156">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>233</id>
+						<id>231</id>
+						<name>empty</name>
+						<fileName></fileName>
+						<fileDirectory></fileDirectory>
+						<lineNumber>0</lineNumber>
+						<contextFuncName></contextFuncName>
+						<inlineStackInfo>
+							<count>0</count>
+							<item_version>0</item_version>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<const_type>0</const_type>
+				<content>62</content>
+			</item>
+			<item class_id_reference="16" object_id="_157">
+				<Value>
+					<Obj>
+						<type>2</type>
+						<id>235</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -10608,11 +10654,11 @@
 				<const_type>0</const_type>
 				<content>2047</content>
 			</item>
-			<item class_id_reference="16" object_id="_156">
+			<item class_id_reference="16" object_id="_158">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>236</id>
+						<id>238</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -10631,11 +10677,11 @@
 				<const_type>0</const_type>
 				<content>0</content>
 			</item>
-			<item class_id_reference="16" object_id="_157">
+			<item class_id_reference="16" object_id="_159">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>244</id>
+						<id>246</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -10654,11 +10700,11 @@
 				<const_type>0</const_type>
 				<content>63</content>
 			</item>
-			<item class_id_reference="16" object_id="_158">
+			<item class_id_reference="16" object_id="_160">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>249</id>
+						<id>251</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -10677,11 +10723,11 @@
 				<const_type>0</const_type>
 				<content>1</content>
 			</item>
-			<item class_id_reference="16" object_id="_159">
+			<item class_id_reference="16" object_id="_161">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>253</id>
+						<id>255</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -10700,11 +10746,11 @@
 				<const_type>0</const_type>
 				<content>0</content>
 			</item>
-			<item class_id_reference="16" object_id="_160">
+			<item class_id_reference="16" object_id="_162">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>260</id>
+						<id>262</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -10723,11 +10769,11 @@
 				<const_type>0</const_type>
 				<content>0</content>
 			</item>
-			<item class_id_reference="16" object_id="_161">
+			<item class_id_reference="16" object_id="_163">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>262</id>
+						<id>264</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -10746,11 +10792,11 @@
 				<const_type>0</const_type>
 				<content>1075</content>
 			</item>
-			<item class_id_reference="16" object_id="_162">
+			<item class_id_reference="16" object_id="_164">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>266</id>
+						<id>268</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -10769,11 +10815,11 @@
 				<const_type>0</const_type>
 				<content>0</content>
 			</item>
-			<item class_id_reference="16" object_id="_163">
+			<item class_id_reference="16" object_id="_165">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>276</id>
+						<id>278</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -10792,11 +10838,11 @@
 				<const_type>0</const_type>
 				<content>1075</content>
 			</item>
-			<item class_id_reference="16" object_id="_164">
+			<item class_id_reference="16" object_id="_166">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>280</id>
+						<id>282</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -10815,30 +10861,7 @@
 				<const_type>0</const_type>
 				<content>54</content>
 			</item>
-			<item class_id_reference="16" object_id="_165">
-				<Value>
-					<Obj>
-						<type>2</type>
-						<id>285</id>
-						<name>empty</name>
-						<fileName></fileName>
-						<fileDirectory></fileDirectory>
-						<lineNumber>0</lineNumber>
-						<contextFuncName></contextFuncName>
-						<inlineStackInfo>
-							<count>0</count>
-							<item_version>0</item_version>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>32</bitwidth>
-				</Value>
-				<const_type>0</const_type>
-				<content>3</content>
-			</item>
-			<item class_id_reference="16" object_id="_166">
+			<item class_id_reference="16" object_id="_167">
 				<Value>
 					<Obj>
 						<type>2</type>
@@ -10859,13 +10882,36 @@
 					<bitwidth>32</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>11</content>
+				<content>3</content>
 			</item>
-			<item class_id_reference="16" object_id="_167">
+			<item class_id_reference="16" object_id="_168">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>290</id>
+						<id>289</id>
+						<name>empty</name>
+						<fileName></fileName>
+						<fileDirectory></fileDirectory>
+						<lineNumber>0</lineNumber>
+						<contextFuncName></contextFuncName>
+						<inlineStackInfo>
+							<count>0</count>
+							<item_version>0</item_version>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<const_type>0</const_type>
+				<content>11</content>
+			</item>
+			<item class_id_reference="16" object_id="_169">
+				<Value>
+					<Obj>
+						<type>2</type>
+						<id>292</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -10884,30 +10930,7 @@
 				<const_type>0</const_type>
 				<content>0</content>
 			</item>
-			<item class_id_reference="16" object_id="_168">
-				<Value>
-					<Obj>
-						<type>2</type>
-						<id>297</id>
-						<name>empty</name>
-						<fileName></fileName>
-						<fileDirectory></fileDirectory>
-						<lineNumber>0</lineNumber>
-						<contextFuncName></contextFuncName>
-						<inlineStackInfo>
-							<count>0</count>
-							<item_version>0</item_version>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>8</bitwidth>
-				</Value>
-				<const_type>0</const_type>
-				<content>255</content>
-			</item>
-			<item class_id_reference="16" object_id="_169">
+			<item class_id_reference="16" object_id="_170">
 				<Value>
 					<Obj>
 						<type>2</type>
@@ -10928,13 +10951,36 @@
 					<bitwidth>8</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>0</content>
+				<content>255</content>
 			</item>
-			<item class_id_reference="16" object_id="_170">
+			<item class_id_reference="16" object_id="_171">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>308</id>
+						<id>301</id>
+						<name>empty</name>
+						<fileName></fileName>
+						<fileDirectory></fileDirectory>
+						<lineNumber>0</lineNumber>
+						<contextFuncName></contextFuncName>
+						<inlineStackInfo>
+							<count>0</count>
+							<item_version>0</item_version>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>8</bitwidth>
+				</Value>
+				<const_type>0</const_type>
+				<content>0</content>
+			</item>
+			<item class_id_reference="16" object_id="_172">
+				<Value>
+					<Obj>
+						<type>2</type>
+						<id>310</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -10953,11 +10999,11 @@
 				<const_type>0</const_type>
 				<content>4095</content>
 			</item>
-			<item class_id_reference="16" object_id="_171">
+			<item class_id_reference="16" object_id="_173">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>322</id>
+						<id>324</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -10976,11 +11022,11 @@
 				<const_type>0</const_type>
 				<content>7</content>
 			</item>
-			<item class_id_reference="16" object_id="_172">
+			<item class_id_reference="16" object_id="_174">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>368</id>
+						<id>370</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -10999,11 +11045,11 @@
 				<const_type>0</const_type>
 				<content>8</content>
 			</item>
-			<item class_id_reference="16" object_id="_173">
+			<item class_id_reference="16" object_id="_175">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>372</id>
+						<id>374</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -11022,11 +11068,11 @@
 				<const_type>0</const_type>
 				<content>9</content>
 			</item>
-			<item class_id_reference="16" object_id="_174">
+			<item class_id_reference="16" object_id="_176">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>407</id>
+						<id>409</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -11049,7 +11095,7 @@
 		<blocks class_id="17" tracking_level="0" version="0">
 			<count>7</count>
 			<item_version>0</item_version>
-			<item class_id="18" tracking_level="1" version="0" object_id="_175">
+			<item class_id="18" tracking_level="1" version="0" object_id="_177">
 				<Obj>
 					<type>3</type>
 					<id>8</id>
@@ -11072,7 +11118,7 @@
 					<item>7</item>
 				</node_objs>
 			</item>
-			<item class_id_reference="18" object_id="_176">
+			<item class_id_reference="18" object_id="_178">
 				<Obj>
 					<type>3</type>
 					<id>14</id>
@@ -11098,7 +11144,7 @@
 					<item>13</item>
 				</node_objs>
 			</item>
-			<item class_id_reference="18" object_id="_177">
+			<item class_id_reference="18" object_id="_179">
 				<Obj>
 					<type>3</type>
 					<id>18</id>
@@ -11121,7 +11167,7 @@
 					<item>17</item>
 				</node_objs>
 			</item>
-			<item class_id_reference="18" object_id="_178">
+			<item class_id_reference="18" object_id="_180">
 				<Obj>
 					<type>3</type>
 					<id>24</id>
@@ -11147,7 +11193,7 @@
 					<item>23</item>
 				</node_objs>
 			</item>
-			<item class_id_reference="18" object_id="_179">
+			<item class_id_reference="18" object_id="_181">
 				<Obj>
 					<type>3</type>
 					<id>170</id>
@@ -11300,7 +11346,7 @@
 					<item>169</item>
 				</node_objs>
 			</item>
-			<item class_id_reference="18" object_id="_180">
+			<item class_id_reference="18" object_id="_182">
 				<Obj>
 					<type>3</type>
 					<id>173</id>
@@ -11323,11 +11369,11 @@
 					<item>172</item>
 				</node_objs>
 			</item>
-			<item class_id_reference="18" object_id="_181">
+			<item class_id_reference="18" object_id="_183">
 				<Obj>
 					<type>3</type>
 					<id>175</id>
-					<name>arithm_pro&lt;kernel_addWeighted, 1080, 1920, 0, 0, 0, double, double, double&gt;.exit</name>
+					<name>arithm_pro&lt;kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double&gt;.exit</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -11350,2045 +11396,2045 @@
 		<edges class_id="19" tracking_level="0" version="0">
 			<count>292</count>
 			<item_version>0</item_version>
-			<item class_id="20" tracking_level="1" version="0" object_id="_182">
+			<item class_id="20" tracking_level="1" version="0" object_id="_184">
 				<id>176</id>
 				<edge_type>2</edge_type>
 				<source_obj>14</source_obj>
 				<sink_obj>7</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_183">
+			<item class_id_reference="20" object_id="_185">
 				<id>178</id>
 				<edge_type>1</edge_type>
 				<source_obj>177</source_obj>
 				<sink_obj>9</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_184">
+			<item class_id_reference="20" object_id="_186">
 				<id>179</id>
 				<edge_type>2</edge_type>
 				<source_obj>8</source_obj>
 				<sink_obj>9</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_185">
+			<item class_id_reference="20" object_id="_187">
 				<id>180</id>
 				<edge_type>1</edge_type>
 				<source_obj>12</source_obj>
 				<sink_obj>9</sink_obj>
 				<is_back_edge>1</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_186">
+			<item class_id_reference="20" object_id="_188">
 				<id>181</id>
 				<edge_type>2</edge_type>
 				<source_obj>173</source_obj>
 				<sink_obj>9</sink_obj>
 				<is_back_edge>1</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_187">
+			<item class_id_reference="20" object_id="_189">
 				<id>182</id>
 				<edge_type>1</edge_type>
 				<source_obj>9</source_obj>
 				<sink_obj>10</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_188">
+			<item class_id_reference="20" object_id="_190">
 				<id>184</id>
 				<edge_type>1</edge_type>
 				<source_obj>183</source_obj>
 				<sink_obj>10</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_189">
+			<item class_id_reference="20" object_id="_191">
 				<id>185</id>
 				<edge_type>1</edge_type>
 				<source_obj>9</source_obj>
 				<sink_obj>12</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_190">
+			<item class_id_reference="20" object_id="_192">
 				<id>187</id>
 				<edge_type>1</edge_type>
 				<source_obj>186</source_obj>
 				<sink_obj>12</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_191">
+			<item class_id_reference="20" object_id="_193">
 				<id>188</id>
 				<edge_type>1</edge_type>
 				<source_obj>10</source_obj>
 				<sink_obj>13</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_192">
+			<item class_id_reference="20" object_id="_194">
 				<id>189</id>
 				<edge_type>2</edge_type>
 				<source_obj>18</source_obj>
 				<sink_obj>13</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_193">
+			<item class_id_reference="20" object_id="_195">
 				<id>190</id>
 				<edge_type>2</edge_type>
 				<source_obj>175</source_obj>
 				<sink_obj>13</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_194">
+			<item class_id_reference="20" object_id="_196">
 				<id>191</id>
 				<edge_type>2</edge_type>
 				<source_obj>24</source_obj>
 				<sink_obj>17</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_195">
-				<id>192</id>
+			<item class_id_reference="20" object_id="_197">
+				<id>193</id>
 				<edge_type>1</edge_type>
-				<source_obj>177</source_obj>
+				<source_obj>192</source_obj>
 				<sink_obj>19</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_196">
-				<id>193</id>
+			<item class_id_reference="20" object_id="_198">
+				<id>194</id>
 				<edge_type>2</edge_type>
 				<source_obj>18</source_obj>
 				<sink_obj>19</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_197">
-				<id>194</id>
+			<item class_id_reference="20" object_id="_199">
+				<id>195</id>
 				<edge_type>1</edge_type>
 				<source_obj>22</source_obj>
 				<sink_obj>19</sink_obj>
 				<is_back_edge>1</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_198">
-				<id>195</id>
+			<item class_id_reference="20" object_id="_200">
+				<id>196</id>
 				<edge_type>2</edge_type>
 				<source_obj>170</source_obj>
 				<sink_obj>19</sink_obj>
 				<is_back_edge>1</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_199">
-				<id>196</id>
-				<edge_type>1</edge_type>
-				<source_obj>19</source_obj>
-				<sink_obj>20</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_200">
-				<id>198</id>
-				<edge_type>1</edge_type>
-				<source_obj>197</source_obj>
-				<sink_obj>20</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
 			<item class_id_reference="20" object_id="_201">
-				<id>199</id>
+				<id>197</id>
 				<edge_type>1</edge_type>
 				<source_obj>19</source_obj>
-				<sink_obj>22</sink_obj>
+				<sink_obj>20</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_202">
-				<id>200</id>
+				<id>199</id>
 				<edge_type>1</edge_type>
-				<source_obj>186</source_obj>
-				<sink_obj>22</sink_obj>
+				<source_obj>198</source_obj>
+				<sink_obj>20</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_203">
-				<id>201</id>
+				<id>200</id>
+				<edge_type>1</edge_type>
+				<source_obj>19</source_obj>
+				<sink_obj>22</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_204">
+				<id>202</id>
+				<edge_type>1</edge_type>
+				<source_obj>201</source_obj>
+				<sink_obj>22</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_205">
+				<id>203</id>
 				<edge_type>1</edge_type>
 				<source_obj>20</source_obj>
 				<sink_obj>23</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_204">
-				<id>202</id>
+			<item class_id_reference="20" object_id="_206">
+				<id>204</id>
 				<edge_type>2</edge_type>
 				<source_obj>170</source_obj>
 				<sink_obj>23</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_205">
-				<id>203</id>
+			<item class_id_reference="20" object_id="_207">
+				<id>205</id>
 				<edge_type>2</edge_type>
 				<source_obj>173</source_obj>
 				<sink_obj>23</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_206">
-				<id>206</id>
+			<item class_id_reference="20" object_id="_208">
+				<id>208</id>
 				<edge_type>1</edge_type>
 				<source_obj>1</source_obj>
 				<sink_obj>30</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_207">
-				<id>208</id>
+			<item class_id_reference="20" object_id="_209">
+				<id>210</id>
 				<edge_type>1</edge_type>
 				<source_obj>2</source_obj>
 				<sink_obj>34</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_208">
-				<id>209</id>
+			<item class_id_reference="20" object_id="_210">
+				<id>211</id>
 				<edge_type>1</edge_type>
 				<source_obj>30</source_obj>
 				<sink_obj>37</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_209">
-				<id>210</id>
+			<item class_id_reference="20" object_id="_211">
+				<id>212</id>
 				<edge_type>1</edge_type>
 				<source_obj>37</source_obj>
 				<sink_obj>38</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_210">
-				<id>211</id>
+			<item class_id_reference="20" object_id="_212">
+				<id>213</id>
 				<edge_type>1</edge_type>
 				<source_obj>38</source_obj>
 				<sink_obj>39</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_211">
-				<id>213</id>
-				<edge_type>1</edge_type>
-				<source_obj>212</source_obj>
-				<sink_obj>39</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_212">
-				<id>214</id>
-				<edge_type>1</edge_type>
-				<source_obj>34</source_obj>
-				<sink_obj>40</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
 			<item class_id_reference="20" object_id="_213">
 				<id>215</id>
 				<edge_type>1</edge_type>
-				<source_obj>40</source_obj>
-				<sink_obj>41</sink_obj>
+				<source_obj>214</source_obj>
+				<sink_obj>39</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_214">
 				<id>216</id>
 				<edge_type>1</edge_type>
-				<source_obj>41</source_obj>
-				<sink_obj>42</sink_obj>
+				<source_obj>34</source_obj>
+				<sink_obj>40</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_215">
 				<id>217</id>
 				<edge_type>1</edge_type>
-				<source_obj>212</source_obj>
-				<sink_obj>42</sink_obj>
+				<source_obj>40</source_obj>
+				<sink_obj>41</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_216">
 				<id>218</id>
 				<edge_type>1</edge_type>
-				<source_obj>39</source_obj>
-				<sink_obj>43</sink_obj>
+				<source_obj>41</source_obj>
+				<sink_obj>42</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_217">
 				<id>219</id>
 				<edge_type>1</edge_type>
-				<source_obj>42</source_obj>
-				<sink_obj>43</sink_obj>
+				<source_obj>214</source_obj>
+				<sink_obj>42</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_218">
 				<id>220</id>
 				<edge_type>1</edge_type>
+				<source_obj>39</source_obj>
+				<sink_obj>43</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_219">
+				<id>221</id>
+				<edge_type>1</edge_type>
+				<source_obj>42</source_obj>
+				<sink_obj>43</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_220">
+				<id>222</id>
+				<edge_type>1</edge_type>
 				<source_obj>43</source_obj>
 				<sink_obj>44</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_219">
-				<id>222</id>
+			<item class_id_reference="20" object_id="_221">
+				<id>224</id>
 				<edge_type>1</edge_type>
-				<source_obj>221</source_obj>
+				<source_obj>223</source_obj>
 				<sink_obj>44</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_220">
-				<id>223</id>
+			<item class_id_reference="20" object_id="_222">
+				<id>225</id>
 				<edge_type>1</edge_type>
 				<source_obj>44</source_obj>
 				<sink_obj>45</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_221">
-				<id>226</id>
+			<item class_id_reference="20" object_id="_223">
+				<id>228</id>
 				<edge_type>1</edge_type>
 				<source_obj>45</source_obj>
 				<sink_obj>46</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_222">
-				<id>228</id>
-				<edge_type>1</edge_type>
-				<source_obj>227</source_obj>
-				<sink_obj>46</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_223">
+			<item class_id_reference="20" object_id="_224">
 				<id>230</id>
 				<edge_type>1</edge_type>
 				<source_obj>229</source_obj>
 				<sink_obj>46</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_224">
-				<id>231</id>
+			<item class_id_reference="20" object_id="_225">
+				<id>232</id>
+				<edge_type>1</edge_type>
+				<source_obj>231</source_obj>
+				<sink_obj>46</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_226">
+				<id>233</id>
 				<edge_type>1</edge_type>
 				<source_obj>45</source_obj>
 				<sink_obj>47</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_225">
-				<id>232</id>
+			<item class_id_reference="20" object_id="_227">
+				<id>234</id>
 				<edge_type>1</edge_type>
 				<source_obj>46</source_obj>
 				<sink_obj>48</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_226">
-				<id>234</id>
+			<item class_id_reference="20" object_id="_228">
+				<id>236</id>
 				<edge_type>1</edge_type>
-				<source_obj>233</source_obj>
+				<source_obj>235</source_obj>
 				<sink_obj>48</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_227">
-				<id>235</id>
+			<item class_id_reference="20" object_id="_229">
+				<id>237</id>
 				<edge_type>1</edge_type>
 				<source_obj>47</source_obj>
 				<sink_obj>49</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_228">
-				<id>237</id>
-				<edge_type>1</edge_type>
-				<source_obj>236</source_obj>
-				<sink_obj>49</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_229">
-				<id>238</id>
-				<edge_type>1</edge_type>
-				<source_obj>48</source_obj>
-				<sink_obj>50</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_230">
 				<id>239</id>
 				<edge_type>1</edge_type>
-				<source_obj>49</source_obj>
-				<sink_obj>50</sink_obj>
+				<source_obj>238</source_obj>
+				<sink_obj>49</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_231">
 				<id>240</id>
 				<edge_type>1</edge_type>
+				<source_obj>48</source_obj>
+				<sink_obj>50</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_232">
+				<id>241</id>
+				<edge_type>1</edge_type>
+				<source_obj>49</source_obj>
+				<sink_obj>50</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_233">
+				<id>242</id>
+				<edge_type>1</edge_type>
 				<source_obj>45</source_obj>
 				<sink_obj>51</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_232">
-				<id>243</id>
+			<item class_id_reference="20" object_id="_234">
+				<id>245</id>
 				<edge_type>1</edge_type>
 				<source_obj>45</source_obj>
 				<sink_obj>52</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_233">
-				<id>245</id>
+			<item class_id_reference="20" object_id="_235">
+				<id>247</id>
 				<edge_type>1</edge_type>
-				<source_obj>244</source_obj>
+				<source_obj>246</source_obj>
 				<sink_obj>52</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_234">
-				<id>246</id>
+			<item class_id_reference="20" object_id="_236">
+				<id>248</id>
 				<edge_type>1</edge_type>
 				<source_obj>46</source_obj>
 				<sink_obj>53</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_235">
-				<id>250</id>
+			<item class_id_reference="20" object_id="_237">
+				<id>252</id>
 				<edge_type>1</edge_type>
-				<source_obj>249</source_obj>
+				<source_obj>251</source_obj>
 				<sink_obj>54</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_236">
-				<id>251</id>
+			<item class_id_reference="20" object_id="_238">
+				<id>253</id>
 				<edge_type>1</edge_type>
 				<source_obj>47</source_obj>
 				<sink_obj>54</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_237">
-				<id>252</id>
+			<item class_id_reference="20" object_id="_239">
+				<id>254</id>
 				<edge_type>1</edge_type>
 				<source_obj>54</source_obj>
 				<sink_obj>55</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_238">
-				<id>254</id>
-				<edge_type>1</edge_type>
-				<source_obj>253</source_obj>
-				<sink_obj>56</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_239">
-				<id>255</id>
-				<edge_type>1</edge_type>
-				<source_obj>55</source_obj>
-				<sink_obj>56</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
 			<item class_id_reference="20" object_id="_240">
 				<id>256</id>
 				<edge_type>1</edge_type>
-				<source_obj>52</source_obj>
-				<sink_obj>57</sink_obj>
+				<source_obj>255</source_obj>
+				<sink_obj>56</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_241">
 				<id>257</id>
 				<edge_type>1</edge_type>
-				<source_obj>56</source_obj>
-				<sink_obj>57</sink_obj>
+				<source_obj>55</source_obj>
+				<sink_obj>56</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_242">
 				<id>258</id>
 				<edge_type>1</edge_type>
-				<source_obj>55</source_obj>
+				<source_obj>52</source_obj>
 				<sink_obj>57</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_243">
 				<id>259</id>
 				<edge_type>1</edge_type>
+				<source_obj>56</source_obj>
+				<sink_obj>57</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_244">
+				<id>260</id>
+				<edge_type>1</edge_type>
+				<source_obj>55</source_obj>
+				<sink_obj>57</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_245">
+				<id>261</id>
+				<edge_type>1</edge_type>
 				<source_obj>51</source_obj>
 				<sink_obj>58</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_244">
-				<id>261</id>
-				<edge_type>1</edge_type>
-				<source_obj>260</source_obj>
-				<sink_obj>58</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_245">
+			<item class_id_reference="20" object_id="_246">
 				<id>263</id>
 				<edge_type>1</edge_type>
 				<source_obj>262</source_obj>
-				<sink_obj>59</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_246">
-				<id>264</id>
-				<edge_type>1</edge_type>
-				<source_obj>53</source_obj>
-				<sink_obj>59</sink_obj>
+				<sink_obj>58</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_247">
 				<id>265</id>
 				<edge_type>1</edge_type>
-				<source_obj>59</source_obj>
-				<sink_obj>60</sink_obj>
+				<source_obj>264</source_obj>
+				<sink_obj>59</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_248">
-				<id>267</id>
+				<id>266</id>
 				<edge_type>1</edge_type>
-				<source_obj>266</source_obj>
-				<sink_obj>60</sink_obj>
+				<source_obj>53</source_obj>
+				<sink_obj>59</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_249">
-				<id>268</id>
+				<id>267</id>
 				<edge_type>1</edge_type>
-				<source_obj>266</source_obj>
-				<sink_obj>61</sink_obj>
+				<source_obj>59</source_obj>
+				<sink_obj>60</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_250">
 				<id>269</id>
 				<edge_type>1</edge_type>
-				<source_obj>59</source_obj>
-				<sink_obj>61</sink_obj>
+				<source_obj>268</source_obj>
+				<sink_obj>60</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_251">
 				<id>270</id>
 				<edge_type>1</edge_type>
-				<source_obj>60</source_obj>
-				<sink_obj>62</sink_obj>
+				<source_obj>268</source_obj>
+				<sink_obj>61</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_252">
 				<id>271</id>
 				<edge_type>1</edge_type>
 				<source_obj>59</source_obj>
-				<sink_obj>62</sink_obj>
+				<sink_obj>61</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_253">
 				<id>272</id>
 				<edge_type>1</edge_type>
-				<source_obj>61</source_obj>
+				<source_obj>60</source_obj>
 				<sink_obj>62</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_254">
 				<id>273</id>
 				<edge_type>1</edge_type>
-				<source_obj>62</source_obj>
-				<sink_obj>63</sink_obj>
+				<source_obj>59</source_obj>
+				<sink_obj>62</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_255">
 				<id>274</id>
 				<edge_type>1</edge_type>
-				<source_obj>62</source_obj>
-				<sink_obj>64</sink_obj>
+				<source_obj>61</source_obj>
+				<sink_obj>62</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_256">
 				<id>275</id>
 				<edge_type>1</edge_type>
-				<source_obj>46</source_obj>
-				<sink_obj>65</sink_obj>
+				<source_obj>62</source_obj>
+				<sink_obj>63</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_257">
-				<id>277</id>
+				<id>276</id>
 				<edge_type>1</edge_type>
-				<source_obj>276</source_obj>
-				<sink_obj>65</sink_obj>
+				<source_obj>62</source_obj>
+				<sink_obj>64</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_258">
-				<id>278</id>
+				<id>277</id>
 				<edge_type>1</edge_type>
-				<source_obj>57</source_obj>
-				<sink_obj>66</sink_obj>
+				<source_obj>46</source_obj>
+				<sink_obj>65</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_259">
 				<id>279</id>
 				<edge_type>1</edge_type>
-				<source_obj>62</source_obj>
-				<sink_obj>67</sink_obj>
+				<source_obj>278</source_obj>
+				<sink_obj>65</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_260">
-				<id>281</id>
+				<id>280</id>
 				<edge_type>1</edge_type>
-				<source_obj>280</source_obj>
-				<sink_obj>67</sink_obj>
+				<source_obj>57</source_obj>
+				<sink_obj>66</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_261">
-				<id>284</id>
+				<id>281</id>
+				<edge_type>1</edge_type>
+				<source_obj>62</source_obj>
+				<sink_obj>67</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_262">
+				<id>283</id>
+				<edge_type>1</edge_type>
+				<source_obj>282</source_obj>
+				<sink_obj>67</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_263">
+				<id>286</id>
 				<edge_type>1</edge_type>
 				<source_obj>62</source_obj>
 				<sink_obj>68</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_262">
-				<id>286</id>
-				<edge_type>1</edge_type>
-				<source_obj>285</source_obj>
-				<sink_obj>68</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_263">
+			<item class_id_reference="20" object_id="_264">
 				<id>288</id>
 				<edge_type>1</edge_type>
 				<source_obj>287</source_obj>
 				<sink_obj>68</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_264">
-				<id>289</id>
+			<item class_id_reference="20" object_id="_265">
+				<id>290</id>
+				<edge_type>1</edge_type>
+				<source_obj>289</source_obj>
+				<sink_obj>68</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_266">
+				<id>291</id>
 				<edge_type>1</edge_type>
 				<source_obj>68</source_obj>
 				<sink_obj>69</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_265">
-				<id>291</id>
-				<edge_type>1</edge_type>
-				<source_obj>290</source_obj>
-				<sink_obj>69</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_266">
-				<id>292</id>
-				<edge_type>1</edge_type>
-				<source_obj>64</source_obj>
-				<sink_obj>70</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
 			<item class_id_reference="20" object_id="_267">
 				<id>293</id>
 				<edge_type>1</edge_type>
-				<source_obj>57</source_obj>
-				<sink_obj>71</sink_obj>
+				<source_obj>292</source_obj>
+				<sink_obj>69</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_268">
 				<id>294</id>
 				<edge_type>1</edge_type>
-				<source_obj>70</source_obj>
-				<sink_obj>71</sink_obj>
+				<source_obj>64</source_obj>
+				<sink_obj>70</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_269">
 				<id>295</id>
 				<edge_type>1</edge_type>
-				<source_obj>71</source_obj>
-				<sink_obj>72</sink_obj>
+				<source_obj>57</source_obj>
+				<sink_obj>71</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_270">
 				<id>296</id>
 				<edge_type>1</edge_type>
+				<source_obj>70</source_obj>
+				<sink_obj>71</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_271">
+				<id>297</id>
+				<edge_type>1</edge_type>
+				<source_obj>71</source_obj>
+				<sink_obj>72</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_272">
+				<id>298</id>
+				<edge_type>1</edge_type>
 				<source_obj>52</source_obj>
 				<sink_obj>73</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_271">
-				<id>298</id>
-				<edge_type>1</edge_type>
-				<source_obj>297</source_obj>
-				<sink_obj>73</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_272">
+			<item class_id_reference="20" object_id="_273">
 				<id>300</id>
 				<edge_type>1</edge_type>
 				<source_obj>299</source_obj>
 				<sink_obj>73</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_273">
-				<id>301</id>
-				<edge_type>1</edge_type>
-				<source_obj>66</source_obj>
-				<sink_obj>74</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
 			<item class_id_reference="20" object_id="_274">
 				<id>302</id>
 				<edge_type>1</edge_type>
-				<source_obj>63</source_obj>
-				<sink_obj>74</sink_obj>
+				<source_obj>301</source_obj>
+				<sink_obj>73</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_275">
 				<id>303</id>
 				<edge_type>1</edge_type>
-				<source_obj>67</source_obj>
-				<sink_obj>75</sink_obj>
+				<source_obj>66</source_obj>
+				<sink_obj>74</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_276">
 				<id>304</id>
 				<edge_type>1</edge_type>
-				<source_obj>72</source_obj>
-				<sink_obj>75</sink_obj>
+				<source_obj>63</source_obj>
+				<sink_obj>74</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_277">
 				<id>305</id>
 				<edge_type>1</edge_type>
-				<source_obj>73</source_obj>
+				<source_obj>67</source_obj>
 				<sink_obj>75</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_278">
 				<id>306</id>
 				<edge_type>1</edge_type>
-				<source_obj>59</source_obj>
-				<sink_obj>76</sink_obj>
+				<source_obj>72</source_obj>
+				<sink_obj>75</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_279">
 				<id>307</id>
 				<edge_type>1</edge_type>
-				<source_obj>280</source_obj>
-				<sink_obj>76</sink_obj>
+				<source_obj>73</source_obj>
+				<sink_obj>75</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_280">
-				<id>309</id>
+				<id>308</id>
 				<edge_type>1</edge_type>
-				<source_obj>308</source_obj>
-				<sink_obj>77</sink_obj>
+				<source_obj>59</source_obj>
+				<sink_obj>76</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_281">
-				<id>310</id>
+				<id>309</id>
 				<edge_type>1</edge_type>
-				<source_obj>59</source_obj>
-				<sink_obj>77</sink_obj>
+				<source_obj>282</source_obj>
+				<sink_obj>76</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_282">
 				<id>311</id>
 				<edge_type>1</edge_type>
-				<source_obj>77</source_obj>
-				<sink_obj>78</sink_obj>
+				<source_obj>310</source_obj>
+				<sink_obj>77</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_283">
-				<id>314</id>
+				<id>312</id>
 				<edge_type>1</edge_type>
-				<source_obj>57</source_obj>
-				<sink_obj>79</sink_obj>
+				<source_obj>59</source_obj>
+				<sink_obj>77</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_284">
-				<id>315</id>
+				<id>313</id>
 				<edge_type>1</edge_type>
-				<source_obj>78</source_obj>
-				<sink_obj>79</sink_obj>
+				<source_obj>77</source_obj>
+				<sink_obj>78</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_285">
 				<id>316</id>
 				<edge_type>1</edge_type>
-				<source_obj>76</source_obj>
-				<sink_obj>80</sink_obj>
+				<source_obj>57</source_obj>
+				<sink_obj>79</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_286">
 				<id>317</id>
 				<edge_type>1</edge_type>
-				<source_obj>52</source_obj>
-				<sink_obj>80</sink_obj>
+				<source_obj>78</source_obj>
+				<sink_obj>79</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_287">
 				<id>318</id>
 				<edge_type>1</edge_type>
-				<source_obj>79</source_obj>
+				<source_obj>76</source_obj>
 				<sink_obj>80</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_288">
-				<id>321</id>
+				<id>319</id>
 				<edge_type>1</edge_type>
-				<source_obj>75</source_obj>
-				<sink_obj>81</sink_obj>
+				<source_obj>52</source_obj>
+				<sink_obj>80</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_289">
-				<id>323</id>
+				<id>320</id>
 				<edge_type>1</edge_type>
-				<source_obj>322</source_obj>
-				<sink_obj>81</sink_obj>
+				<source_obj>79</source_obj>
+				<sink_obj>80</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_290">
-				<id>324</id>
+				<id>323</id>
 				<edge_type>1</edge_type>
-				<source_obj>80</source_obj>
-				<sink_obj>82</sink_obj>
+				<source_obj>75</source_obj>
+				<sink_obj>81</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_291">
 				<id>325</id>
 				<edge_type>1</edge_type>
-				<source_obj>82</source_obj>
-				<sink_obj>83</sink_obj>
+				<source_obj>324</source_obj>
+				<sink_obj>81</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_292">
 				<id>326</id>
 				<edge_type>1</edge_type>
-				<source_obj>75</source_obj>
-				<sink_obj>83</sink_obj>
+				<source_obj>80</source_obj>
+				<sink_obj>82</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_293">
-				<id>328</id>
+				<id>327</id>
 				<edge_type>1</edge_type>
-				<source_obj>83</source_obj>
-				<sink_obj>84</sink_obj>
+				<source_obj>82</source_obj>
+				<sink_obj>83</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_294">
-				<id>329</id>
+				<id>328</id>
 				<edge_type>1</edge_type>
-				<source_obj>322</source_obj>
-				<sink_obj>84</sink_obj>
+				<source_obj>75</source_obj>
+				<sink_obj>83</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_295">
 				<id>330</id>
 				<edge_type>1</edge_type>
-				<source_obj>84</source_obj>
-				<sink_obj>85</sink_obj>
+				<source_obj>83</source_obj>
+				<sink_obj>84</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_296">
 				<id>331</id>
 				<edge_type>1</edge_type>
-				<source_obj>249</source_obj>
-				<sink_obj>85</sink_obj>
+				<source_obj>324</source_obj>
+				<sink_obj>84</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_297">
 				<id>332</id>
 				<edge_type>1</edge_type>
-				<source_obj>65</source_obj>
-				<sink_obj>86</sink_obj>
+				<source_obj>84</source_obj>
+				<sink_obj>85</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_298">
 				<id>333</id>
 				<edge_type>1</edge_type>
-				<source_obj>66</source_obj>
-				<sink_obj>86</sink_obj>
+				<source_obj>251</source_obj>
+				<sink_obj>85</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_299">
 				<id>334</id>
 				<edge_type>1</edge_type>
-				<source_obj>299</source_obj>
+				<source_obj>65</source_obj>
 				<sink_obj>86</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_300">
 				<id>335</id>
 				<edge_type>1</edge_type>
-				<source_obj>65</source_obj>
-				<sink_obj>87</sink_obj>
+				<source_obj>66</source_obj>
+				<sink_obj>86</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_301">
 				<id>336</id>
 				<edge_type>1</edge_type>
-				<source_obj>249</source_obj>
-				<sink_obj>87</sink_obj>
+				<source_obj>301</source_obj>
+				<sink_obj>86</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_302">
 				<id>337</id>
 				<edge_type>1</edge_type>
-				<source_obj>60</source_obj>
-				<sink_obj>88</sink_obj>
+				<source_obj>65</source_obj>
+				<sink_obj>87</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_303">
 				<id>338</id>
 				<edge_type>1</edge_type>
-				<source_obj>87</source_obj>
-				<sink_obj>88</sink_obj>
+				<source_obj>251</source_obj>
+				<sink_obj>87</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_304">
 				<id>339</id>
 				<edge_type>1</edge_type>
-				<source_obj>88</source_obj>
-				<sink_obj>89</sink_obj>
+				<source_obj>60</source_obj>
+				<sink_obj>88</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_305">
 				<id>340</id>
 				<edge_type>1</edge_type>
-				<source_obj>81</source_obj>
-				<sink_obj>89</sink_obj>
+				<source_obj>87</source_obj>
+				<sink_obj>88</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_306">
 				<id>341</id>
 				<edge_type>1</edge_type>
-				<source_obj>89</source_obj>
-				<sink_obj>90</sink_obj>
+				<source_obj>88</source_obj>
+				<sink_obj>89</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_307">
 				<id>342</id>
 				<edge_type>1</edge_type>
-				<source_obj>83</source_obj>
-				<sink_obj>90</sink_obj>
+				<source_obj>81</source_obj>
+				<sink_obj>89</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_308">
 				<id>343</id>
 				<edge_type>1</edge_type>
-				<source_obj>86</source_obj>
+				<source_obj>89</source_obj>
 				<sink_obj>90</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_309">
 				<id>344</id>
 				<edge_type>1</edge_type>
-				<source_obj>81</source_obj>
-				<sink_obj>91</sink_obj>
+				<source_obj>83</source_obj>
+				<sink_obj>90</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_310">
 				<id>345</id>
 				<edge_type>1</edge_type>
-				<source_obj>249</source_obj>
-				<sink_obj>91</sink_obj>
+				<source_obj>86</source_obj>
+				<sink_obj>90</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_311">
 				<id>346</id>
 				<edge_type>1</edge_type>
-				<source_obj>88</source_obj>
-				<sink_obj>92</sink_obj>
+				<source_obj>81</source_obj>
+				<sink_obj>91</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_312">
 				<id>347</id>
 				<edge_type>1</edge_type>
-				<source_obj>91</source_obj>
-				<sink_obj>92</sink_obj>
+				<source_obj>251</source_obj>
+				<sink_obj>91</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_313">
 				<id>348</id>
 				<edge_type>1</edge_type>
-				<source_obj>92</source_obj>
-				<sink_obj>93</sink_obj>
+				<source_obj>88</source_obj>
+				<sink_obj>92</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_314">
 				<id>349</id>
 				<edge_type>1</edge_type>
-				<source_obj>83</source_obj>
-				<sink_obj>93</sink_obj>
+				<source_obj>91</source_obj>
+				<sink_obj>92</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_315">
 				<id>350</id>
 				<edge_type>1</edge_type>
-				<source_obj>90</source_obj>
+				<source_obj>92</source_obj>
 				<sink_obj>93</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_316">
 				<id>351</id>
 				<edge_type>1</edge_type>
-				<source_obj>65</source_obj>
-				<sink_obj>94</sink_obj>
+				<source_obj>83</source_obj>
+				<sink_obj>93</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_317">
 				<id>352</id>
 				<edge_type>1</edge_type>
-				<source_obj>60</source_obj>
-				<sink_obj>94</sink_obj>
+				<source_obj>90</source_obj>
+				<sink_obj>93</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_318">
 				<id>353</id>
 				<edge_type>1</edge_type>
-				<source_obj>94</source_obj>
-				<sink_obj>95</sink_obj>
+				<source_obj>65</source_obj>
+				<sink_obj>94</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_319">
 				<id>354</id>
 				<edge_type>1</edge_type>
-				<source_obj>249</source_obj>
-				<sink_obj>95</sink_obj>
+				<source_obj>60</source_obj>
+				<sink_obj>94</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_320">
 				<id>355</id>
 				<edge_type>1</edge_type>
-				<source_obj>69</source_obj>
-				<sink_obj>96</sink_obj>
+				<source_obj>94</source_obj>
+				<sink_obj>95</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_321">
 				<id>356</id>
 				<edge_type>1</edge_type>
-				<source_obj>95</source_obj>
-				<sink_obj>96</sink_obj>
+				<source_obj>251</source_obj>
+				<sink_obj>95</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_322">
 				<id>357</id>
 				<edge_type>1</edge_type>
-				<source_obj>96</source_obj>
-				<sink_obj>97</sink_obj>
+				<source_obj>69</source_obj>
+				<sink_obj>96</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_323">
 				<id>358</id>
 				<edge_type>1</edge_type>
-				<source_obj>74</source_obj>
-				<sink_obj>97</sink_obj>
+				<source_obj>95</source_obj>
+				<sink_obj>96</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_324">
 				<id>359</id>
 				<edge_type>1</edge_type>
-				<source_obj>93</source_obj>
+				<source_obj>96</source_obj>
 				<sink_obj>97</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_325">
 				<id>360</id>
 				<edge_type>1</edge_type>
-				<source_obj>69</source_obj>
-				<sink_obj>98</sink_obj>
+				<source_obj>74</source_obj>
+				<sink_obj>97</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_326">
 				<id>361</id>
 				<edge_type>1</edge_type>
-				<source_obj>249</source_obj>
-				<sink_obj>98</sink_obj>
+				<source_obj>93</source_obj>
+				<sink_obj>97</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_327">
 				<id>362</id>
 				<edge_type>1</edge_type>
-				<source_obj>94</source_obj>
-				<sink_obj>99</sink_obj>
+				<source_obj>69</source_obj>
+				<sink_obj>98</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_328">
 				<id>363</id>
 				<edge_type>1</edge_type>
-				<source_obj>98</source_obj>
-				<sink_obj>99</sink_obj>
+				<source_obj>251</source_obj>
+				<sink_obj>98</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_329">
 				<id>364</id>
 				<edge_type>1</edge_type>
-				<source_obj>99</source_obj>
-				<sink_obj>100</sink_obj>
+				<source_obj>94</source_obj>
+				<sink_obj>99</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_330">
 				<id>365</id>
 				<edge_type>1</edge_type>
-				<source_obj>85</source_obj>
-				<sink_obj>100</sink_obj>
+				<source_obj>98</source_obj>
+				<sink_obj>99</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_331">
 				<id>366</id>
 				<edge_type>1</edge_type>
-				<source_obj>100</source_obj>
-				<sink_obj>101</sink_obj>
+				<source_obj>99</source_obj>
+				<sink_obj>100</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_332">
 				<id>367</id>
 				<edge_type>1</edge_type>
-				<source_obj>89</source_obj>
-				<sink_obj>101</sink_obj>
+				<source_obj>85</source_obj>
+				<sink_obj>100</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_333">
-				<id>369</id>
+				<id>368</id>
 				<edge_type>1</edge_type>
-				<source_obj>368</source_obj>
-				<sink_obj>102</sink_obj>
+				<source_obj>100</source_obj>
+				<sink_obj>101</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_334">
-				<id>370</id>
+				<id>369</id>
 				<edge_type>1</edge_type>
-				<source_obj>59</source_obj>
-				<sink_obj>102</sink_obj>
+				<source_obj>89</source_obj>
+				<sink_obj>101</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_335">
 				<id>371</id>
 				<edge_type>1</edge_type>
-				<source_obj>102</source_obj>
-				<sink_obj>103</sink_obj>
+				<source_obj>370</source_obj>
+				<sink_obj>102</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_336">
-				<id>373</id>
+				<id>372</id>
 				<edge_type>1</edge_type>
-				<source_obj>372</source_obj>
-				<sink_obj>104</sink_obj>
+				<source_obj>59</source_obj>
+				<sink_obj>102</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_337">
-				<id>374</id>
+				<id>373</id>
 				<edge_type>1</edge_type>
-				<source_obj>59</source_obj>
-				<sink_obj>104</sink_obj>
+				<source_obj>102</source_obj>
+				<sink_obj>103</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_338">
 				<id>375</id>
 				<edge_type>1</edge_type>
-				<source_obj>104</source_obj>
-				<sink_obj>105</sink_obj>
+				<source_obj>374</source_obj>
+				<sink_obj>104</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_339">
-				<id>377</id>
+				<id>376</id>
 				<edge_type>1</edge_type>
-				<source_obj>97</source_obj>
-				<sink_obj>106</sink_obj>
+				<source_obj>59</source_obj>
+				<sink_obj>104</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_340">
-				<id>378</id>
+				<id>377</id>
 				<edge_type>1</edge_type>
-				<source_obj>322</source_obj>
-				<sink_obj>106</sink_obj>
+				<source_obj>104</source_obj>
+				<sink_obj>105</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_341">
 				<id>379</id>
 				<edge_type>1</edge_type>
-				<source_obj>102</source_obj>
-				<sink_obj>107</sink_obj>
+				<source_obj>97</source_obj>
+				<sink_obj>106</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_342">
 				<id>380</id>
 				<edge_type>1</edge_type>
-				<source_obj>280</source_obj>
-				<sink_obj>107</sink_obj>
+				<source_obj>324</source_obj>
+				<sink_obj>106</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_343">
-				<id>383</id>
+				<id>381</id>
 				<edge_type>1</edge_type>
 				<source_obj>102</source_obj>
-				<sink_obj>108</sink_obj>
+				<sink_obj>107</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_344">
-				<id>384</id>
+				<id>382</id>
 				<edge_type>1</edge_type>
-				<source_obj>287</source_obj>
-				<sink_obj>108</sink_obj>
+				<source_obj>282</source_obj>
+				<sink_obj>107</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_345">
 				<id>385</id>
 				<edge_type>1</edge_type>
-				<source_obj>108</source_obj>
-				<sink_obj>109</sink_obj>
+				<source_obj>102</source_obj>
+				<sink_obj>108</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_346">
 				<id>386</id>
 				<edge_type>1</edge_type>
-				<source_obj>249</source_obj>
-				<sink_obj>109</sink_obj>
+				<source_obj>289</source_obj>
+				<sink_obj>108</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_347">
 				<id>387</id>
 				<edge_type>1</edge_type>
-				<source_obj>103</source_obj>
-				<sink_obj>110</sink_obj>
+				<source_obj>108</source_obj>
+				<sink_obj>109</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_348">
 				<id>388</id>
 				<edge_type>1</edge_type>
-				<source_obj>57</source_obj>
-				<sink_obj>111</sink_obj>
+				<source_obj>251</source_obj>
+				<sink_obj>109</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_349">
 				<id>389</id>
 				<edge_type>1</edge_type>
-				<source_obj>110</source_obj>
-				<sink_obj>111</sink_obj>
+				<source_obj>103</source_obj>
+				<sink_obj>110</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_350">
 				<id>390</id>
 				<edge_type>1</edge_type>
-				<source_obj>111</source_obj>
-				<sink_obj>112</sink_obj>
+				<source_obj>57</source_obj>
+				<sink_obj>111</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_351">
 				<id>391</id>
 				<edge_type>1</edge_type>
-				<source_obj>112</source_obj>
-				<sink_obj>113</sink_obj>
+				<source_obj>110</source_obj>
+				<sink_obj>111</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_352">
 				<id>392</id>
 				<edge_type>1</edge_type>
-				<source_obj>109</source_obj>
-				<sink_obj>113</sink_obj>
+				<source_obj>111</source_obj>
+				<sink_obj>112</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_353">
 				<id>393</id>
 				<edge_type>1</edge_type>
-				<source_obj>113</source_obj>
-				<sink_obj>114</sink_obj>
+				<source_obj>112</source_obj>
+				<sink_obj>113</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_354">
 				<id>394</id>
 				<edge_type>1</edge_type>
-				<source_obj>107</source_obj>
-				<sink_obj>114</sink_obj>
+				<source_obj>109</source_obj>
+				<sink_obj>113</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_355">
-				<id>396</id>
+				<id>395</id>
 				<edge_type>1</edge_type>
-				<source_obj>104</source_obj>
-				<sink_obj>115</sink_obj>
+				<source_obj>113</source_obj>
+				<sink_obj>114</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_356">
-				<id>397</id>
+				<id>396</id>
 				<edge_type>1</edge_type>
-				<source_obj>287</source_obj>
-				<sink_obj>115</sink_obj>
+				<source_obj>107</source_obj>
+				<sink_obj>114</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_357">
 				<id>398</id>
 				<edge_type>1</edge_type>
-				<source_obj>115</source_obj>
-				<sink_obj>116</sink_obj>
+				<source_obj>104</source_obj>
+				<sink_obj>115</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_358">
 				<id>399</id>
 				<edge_type>1</edge_type>
-				<source_obj>249</source_obj>
-				<sink_obj>116</sink_obj>
+				<source_obj>289</source_obj>
+				<sink_obj>115</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_359">
 				<id>400</id>
 				<edge_type>1</edge_type>
-				<source_obj>104</source_obj>
-				<sink_obj>117</sink_obj>
+				<source_obj>115</source_obj>
+				<sink_obj>116</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_360">
 				<id>401</id>
 				<edge_type>1</edge_type>
-				<source_obj>280</source_obj>
-				<sink_obj>117</sink_obj>
+				<source_obj>251</source_obj>
+				<sink_obj>116</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_361">
 				<id>402</id>
 				<edge_type>1</edge_type>
-				<source_obj>117</source_obj>
-				<sink_obj>118</sink_obj>
+				<source_obj>104</source_obj>
+				<sink_obj>117</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_362">
 				<id>403</id>
 				<edge_type>1</edge_type>
-				<source_obj>116</source_obj>
-				<sink_obj>118</sink_obj>
+				<source_obj>282</source_obj>
+				<sink_obj>117</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_363">
 				<id>404</id>
 				<edge_type>1</edge_type>
-				<source_obj>105</source_obj>
-				<sink_obj>119</sink_obj>
+				<source_obj>117</source_obj>
+				<sink_obj>118</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_364">
 				<id>405</id>
 				<edge_type>1</edge_type>
-				<source_obj>57</source_obj>
-				<sink_obj>120</sink_obj>
+				<source_obj>116</source_obj>
+				<sink_obj>118</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_365">
 				<id>406</id>
 				<edge_type>1</edge_type>
-				<source_obj>119</source_obj>
-				<sink_obj>120</sink_obj>
+				<source_obj>105</source_obj>
+				<sink_obj>119</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_366">
-				<id>408</id>
+				<id>407</id>
 				<edge_type>1</edge_type>
-				<source_obj>407</source_obj>
-				<sink_obj>121</sink_obj>
+				<source_obj>57</source_obj>
+				<sink_obj>120</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_367">
-				<id>409</id>
+				<id>408</id>
 				<edge_type>1</edge_type>
 				<source_obj>119</source_obj>
-				<sink_obj>121</sink_obj>
+				<sink_obj>120</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_368">
 				<id>410</id>
 				<edge_type>1</edge_type>
-				<source_obj>120</source_obj>
-				<sink_obj>122</sink_obj>
+				<source_obj>409</source_obj>
+				<sink_obj>121</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_369">
 				<id>411</id>
 				<edge_type>1</edge_type>
-				<source_obj>121</source_obj>
-				<sink_obj>122</sink_obj>
+				<source_obj>119</source_obj>
+				<sink_obj>121</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_370">
 				<id>412</id>
 				<edge_type>1</edge_type>
-				<source_obj>118</source_obj>
-				<sink_obj>123</sink_obj>
+				<source_obj>120</source_obj>
+				<sink_obj>122</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_371">
 				<id>413</id>
 				<edge_type>1</edge_type>
-				<source_obj>122</source_obj>
-				<sink_obj>123</sink_obj>
+				<source_obj>121</source_obj>
+				<sink_obj>122</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_372">
 				<id>414</id>
 				<edge_type>1</edge_type>
-				<source_obj>116</source_obj>
+				<source_obj>118</source_obj>
 				<sink_obj>123</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_373">
 				<id>415</id>
 				<edge_type>1</edge_type>
-				<source_obj>117</source_obj>
-				<sink_obj>124</sink_obj>
+				<source_obj>122</source_obj>
+				<sink_obj>123</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_374">
 				<id>416</id>
 				<edge_type>1</edge_type>
-				<source_obj>109</source_obj>
-				<sink_obj>124</sink_obj>
+				<source_obj>116</source_obj>
+				<sink_obj>123</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_375">
 				<id>417</id>
 				<edge_type>1</edge_type>
-				<source_obj>123</source_obj>
-				<sink_obj>125</sink_obj>
+				<source_obj>117</source_obj>
+				<sink_obj>124</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_376">
 				<id>418</id>
 				<edge_type>1</edge_type>
-				<source_obj>114</source_obj>
-				<sink_obj>125</sink_obj>
+				<source_obj>109</source_obj>
+				<sink_obj>124</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_377">
 				<id>419</id>
 				<edge_type>1</edge_type>
-				<source_obj>120</source_obj>
-				<sink_obj>126</sink_obj>
+				<source_obj>123</source_obj>
+				<sink_obj>125</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_378">
 				<id>420</id>
 				<edge_type>1</edge_type>
-				<source_obj>253</source_obj>
-				<sink_obj>126</sink_obj>
+				<source_obj>114</source_obj>
+				<sink_obj>125</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_379">
 				<id>421</id>
 				<edge_type>1</edge_type>
-				<source_obj>114</source_obj>
-				<sink_obj>127</sink_obj>
+				<source_obj>120</source_obj>
+				<sink_obj>126</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_380">
 				<id>422</id>
 				<edge_type>1</edge_type>
-				<source_obj>249</source_obj>
-				<sink_obj>127</sink_obj>
+				<source_obj>255</source_obj>
+				<sink_obj>126</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_381">
 				<id>423</id>
 				<edge_type>1</edge_type>
-				<source_obj>126</source_obj>
-				<sink_obj>128</sink_obj>
+				<source_obj>114</source_obj>
+				<sink_obj>127</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_382">
 				<id>424</id>
 				<edge_type>1</edge_type>
-				<source_obj>127</source_obj>
-				<sink_obj>128</sink_obj>
+				<source_obj>251</source_obj>
+				<sink_obj>127</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_383">
 				<id>425</id>
 				<edge_type>1</edge_type>
-				<source_obj>104</source_obj>
-				<sink_obj>129</sink_obj>
+				<source_obj>126</source_obj>
+				<sink_obj>128</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_384">
 				<id>426</id>
 				<edge_type>1</edge_type>
-				<source_obj>280</source_obj>
-				<sink_obj>129</sink_obj>
+				<source_obj>127</source_obj>
+				<sink_obj>128</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_385">
 				<id>427</id>
 				<edge_type>1</edge_type>
-				<source_obj>57</source_obj>
-				<sink_obj>130</sink_obj>
+				<source_obj>104</source_obj>
+				<sink_obj>129</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_386">
 				<id>428</id>
 				<edge_type>1</edge_type>
-				<source_obj>253</source_obj>
-				<sink_obj>130</sink_obj>
+				<source_obj>282</source_obj>
+				<sink_obj>129</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_387">
 				<id>429</id>
 				<edge_type>1</edge_type>
-				<source_obj>130</source_obj>
-				<sink_obj>131</sink_obj>
+				<source_obj>57</source_obj>
+				<sink_obj>130</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_388">
 				<id>430</id>
 				<edge_type>1</edge_type>
-				<source_obj>109</source_obj>
-				<sink_obj>131</sink_obj>
+				<source_obj>255</source_obj>
+				<sink_obj>130</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_389">
 				<id>431</id>
 				<edge_type>1</edge_type>
-				<source_obj>117</source_obj>
-				<sink_obj>132</sink_obj>
+				<source_obj>130</source_obj>
+				<sink_obj>131</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_390">
 				<id>432</id>
 				<edge_type>1</edge_type>
-				<source_obj>249</source_obj>
-				<sink_obj>132</sink_obj>
+				<source_obj>109</source_obj>
+				<sink_obj>131</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_391">
 				<id>433</id>
 				<edge_type>1</edge_type>
-				<source_obj>108</source_obj>
-				<sink_obj>133</sink_obj>
+				<source_obj>117</source_obj>
+				<sink_obj>132</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_392">
 				<id>434</id>
 				<edge_type>1</edge_type>
-				<source_obj>132</source_obj>
-				<sink_obj>133</sink_obj>
+				<source_obj>251</source_obj>
+				<sink_obj>132</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_393">
 				<id>435</id>
 				<edge_type>1</edge_type>
-				<source_obj>129</source_obj>
-				<sink_obj>134</sink_obj>
+				<source_obj>108</source_obj>
+				<sink_obj>133</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_394">
 				<id>436</id>
 				<edge_type>1</edge_type>
-				<source_obj>133</source_obj>
-				<sink_obj>134</sink_obj>
+				<source_obj>132</source_obj>
+				<sink_obj>133</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_395">
 				<id>437</id>
 				<edge_type>1</edge_type>
-				<source_obj>134</source_obj>
-				<sink_obj>135</sink_obj>
+				<source_obj>129</source_obj>
+				<sink_obj>134</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_396">
 				<id>438</id>
 				<edge_type>1</edge_type>
-				<source_obj>114</source_obj>
-				<sink_obj>135</sink_obj>
+				<source_obj>133</source_obj>
+				<sink_obj>134</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_397">
 				<id>439</id>
 				<edge_type>1</edge_type>
-				<source_obj>109</source_obj>
+				<source_obj>134</source_obj>
 				<sink_obj>135</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_398">
 				<id>440</id>
 				<edge_type>1</edge_type>
-				<source_obj>124</source_obj>
-				<sink_obj>136</sink_obj>
+				<source_obj>114</source_obj>
+				<sink_obj>135</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_399">
 				<id>441</id>
 				<edge_type>1</edge_type>
-				<source_obj>125</source_obj>
-				<sink_obj>136</sink_obj>
+				<source_obj>109</source_obj>
+				<sink_obj>135</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_400">
 				<id>442</id>
 				<edge_type>1</edge_type>
-				<source_obj>135</source_obj>
+				<source_obj>124</source_obj>
 				<sink_obj>136</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_401">
 				<id>443</id>
 				<edge_type>1</edge_type>
-				<source_obj>134</source_obj>
-				<sink_obj>137</sink_obj>
+				<source_obj>125</source_obj>
+				<sink_obj>136</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_402">
 				<id>444</id>
 				<edge_type>1</edge_type>
-				<source_obj>127</source_obj>
-				<sink_obj>137</sink_obj>
+				<source_obj>135</source_obj>
+				<sink_obj>136</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_403">
 				<id>445</id>
 				<edge_type>1</edge_type>
-				<source_obj>131</source_obj>
+				<source_obj>134</source_obj>
 				<sink_obj>137</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_404">
 				<id>446</id>
 				<edge_type>1</edge_type>
-				<source_obj>124</source_obj>
-				<sink_obj>138</sink_obj>
+				<source_obj>127</source_obj>
+				<sink_obj>137</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_405">
 				<id>447</id>
 				<edge_type>1</edge_type>
-				<source_obj>128</source_obj>
-				<sink_obj>138</sink_obj>
+				<source_obj>131</source_obj>
+				<sink_obj>137</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_406">
 				<id>448</id>
 				<edge_type>1</edge_type>
-				<source_obj>137</source_obj>
+				<source_obj>124</source_obj>
 				<sink_obj>138</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_407">
 				<id>449</id>
 				<edge_type>1</edge_type>
-				<source_obj>101</source_obj>
-				<sink_obj>139</sink_obj>
+				<source_obj>128</source_obj>
+				<sink_obj>138</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_408">
 				<id>450</id>
 				<edge_type>1</edge_type>
-				<source_obj>136</source_obj>
-				<sink_obj>139</sink_obj>
+				<source_obj>137</source_obj>
+				<sink_obj>138</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_409">
 				<id>451</id>
 				<edge_type>1</edge_type>
-				<source_obj>138</source_obj>
+				<source_obj>101</source_obj>
 				<sink_obj>139</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_410">
 				<id>452</id>
 				<edge_type>1</edge_type>
-				<source_obj>101</source_obj>
-				<sink_obj>140</sink_obj>
+				<source_obj>136</source_obj>
+				<sink_obj>139</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_411">
 				<id>453</id>
 				<edge_type>1</edge_type>
-				<source_obj>136</source_obj>
-				<sink_obj>140</sink_obj>
+				<source_obj>138</source_obj>
+				<sink_obj>139</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_412">
 				<id>454</id>
 				<edge_type>1</edge_type>
-				<source_obj>140</source_obj>
-				<sink_obj>141</sink_obj>
+				<source_obj>101</source_obj>
+				<sink_obj>140</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_413">
 				<id>455</id>
 				<edge_type>1</edge_type>
-				<source_obj>249</source_obj>
-				<sink_obj>141</sink_obj>
+				<source_obj>136</source_obj>
+				<sink_obj>140</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_414">
 				<id>456</id>
 				<edge_type>1</edge_type>
-				<source_obj>107</source_obj>
-				<sink_obj>142</sink_obj>
+				<source_obj>140</source_obj>
+				<sink_obj>141</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_415">
 				<id>457</id>
 				<edge_type>1</edge_type>
-				<source_obj>249</source_obj>
-				<sink_obj>142</sink_obj>
+				<source_obj>251</source_obj>
+				<sink_obj>141</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_416">
 				<id>458</id>
 				<edge_type>1</edge_type>
-				<source_obj>106</source_obj>
-				<sink_obj>143</sink_obj>
+				<source_obj>107</source_obj>
+				<sink_obj>142</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_417">
 				<id>459</id>
 				<edge_type>1</edge_type>
-				<source_obj>142</source_obj>
-				<sink_obj>143</sink_obj>
+				<source_obj>251</source_obj>
+				<sink_obj>142</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_418">
 				<id>460</id>
 				<edge_type>1</edge_type>
-				<source_obj>143</source_obj>
-				<sink_obj>144</sink_obj>
+				<source_obj>106</source_obj>
+				<sink_obj>143</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_419">
 				<id>461</id>
 				<edge_type>1</edge_type>
-				<source_obj>52</source_obj>
-				<sink_obj>144</sink_obj>
+				<source_obj>142</source_obj>
+				<sink_obj>143</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_420">
 				<id>462</id>
 				<edge_type>1</edge_type>
-				<source_obj>107</source_obj>
-				<sink_obj>145</sink_obj>
+				<source_obj>143</source_obj>
+				<sink_obj>144</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_421">
 				<id>463</id>
 				<edge_type>1</edge_type>
 				<source_obj>52</source_obj>
-				<sink_obj>145</sink_obj>
+				<sink_obj>144</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_422">
 				<id>464</id>
 				<edge_type>1</edge_type>
-				<source_obj>145</source_obj>
-				<sink_obj>146</sink_obj>
+				<source_obj>107</source_obj>
+				<sink_obj>145</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_423">
 				<id>465</id>
 				<edge_type>1</edge_type>
-				<source_obj>141</source_obj>
-				<sink_obj>146</sink_obj>
+				<source_obj>52</source_obj>
+				<sink_obj>145</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_424">
 				<id>466</id>
 				<edge_type>1</edge_type>
-				<source_obj>144</source_obj>
+				<source_obj>145</source_obj>
 				<sink_obj>146</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_425">
 				<id>467</id>
 				<edge_type>1</edge_type>
-				<source_obj>52</source_obj>
-				<sink_obj>147</sink_obj>
+				<source_obj>141</source_obj>
+				<sink_obj>146</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_426">
 				<id>468</id>
 				<edge_type>1</edge_type>
-				<source_obj>142</source_obj>
-				<sink_obj>147</sink_obj>
+				<source_obj>144</source_obj>
+				<sink_obj>146</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_427">
 				<id>469</id>
 				<edge_type>1</edge_type>
-				<source_obj>147</source_obj>
-				<sink_obj>148</sink_obj>
+				<source_obj>52</source_obj>
+				<sink_obj>147</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_428">
 				<id>470</id>
 				<edge_type>1</edge_type>
-				<source_obj>139</source_obj>
-				<sink_obj>148</sink_obj>
+				<source_obj>142</source_obj>
+				<sink_obj>147</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_429">
 				<id>471</id>
 				<edge_type>1</edge_type>
-				<source_obj>146</source_obj>
-				<sink_obj>149</sink_obj>
+				<source_obj>147</source_obj>
+				<sink_obj>148</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_430">
 				<id>472</id>
 				<edge_type>1</edge_type>
-				<source_obj>249</source_obj>
-				<sink_obj>149</sink_obj>
+				<source_obj>139</source_obj>
+				<sink_obj>148</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_431">
 				<id>473</id>
 				<edge_type>1</edge_type>
-				<source_obj>148</source_obj>
-				<sink_obj>150</sink_obj>
+				<source_obj>146</source_obj>
+				<sink_obj>149</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_432">
 				<id>474</id>
 				<edge_type>1</edge_type>
-				<source_obj>149</source_obj>
-				<sink_obj>150</sink_obj>
+				<source_obj>251</source_obj>
+				<sink_obj>149</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_433">
 				<id>475</id>
 				<edge_type>1</edge_type>
 				<source_obj>148</source_obj>
-				<sink_obj>151</sink_obj>
+				<sink_obj>150</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_434">
 				<id>476</id>
 				<edge_type>1</edge_type>
-				<source_obj>249</source_obj>
-				<sink_obj>151</sink_obj>
+				<source_obj>149</source_obj>
+				<sink_obj>150</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_435">
 				<id>477</id>
 				<edge_type>1</edge_type>
-				<source_obj>149</source_obj>
-				<sink_obj>152</sink_obj>
+				<source_obj>148</source_obj>
+				<sink_obj>151</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_436">
 				<id>478</id>
 				<edge_type>1</edge_type>
-				<source_obj>151</source_obj>
-				<sink_obj>152</sink_obj>
+				<source_obj>251</source_obj>
+				<sink_obj>151</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_437">
 				<id>479</id>
 				<edge_type>1</edge_type>
-				<source_obj>150</source_obj>
-				<sink_obj>153</sink_obj>
+				<source_obj>149</source_obj>
+				<sink_obj>152</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_438">
 				<id>480</id>
 				<edge_type>1</edge_type>
-				<source_obj>97</source_obj>
-				<sink_obj>153</sink_obj>
+				<source_obj>151</source_obj>
+				<sink_obj>152</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_439">
 				<id>481</id>
 				<edge_type>1</edge_type>
-				<source_obj>297</source_obj>
+				<source_obj>150</source_obj>
 				<sink_obj>153</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_440">
 				<id>482</id>
 				<edge_type>1</edge_type>
-				<source_obj>48</source_obj>
-				<sink_obj>154</sink_obj>
+				<source_obj>97</source_obj>
+				<sink_obj>153</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_441">
 				<id>483</id>
 				<edge_type>1</edge_type>
-				<source_obj>49</source_obj>
-				<sink_obj>154</sink_obj>
+				<source_obj>299</source_obj>
+				<sink_obj>153</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_442">
 				<id>484</id>
 				<edge_type>1</edge_type>
-				<source_obj>154</source_obj>
-				<sink_obj>155</sink_obj>
+				<source_obj>48</source_obj>
+				<sink_obj>154</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_443">
 				<id>485</id>
 				<edge_type>1</edge_type>
-				<source_obj>249</source_obj>
-				<sink_obj>155</sink_obj>
+				<source_obj>49</source_obj>
+				<sink_obj>154</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_444">
 				<id>486</id>
 				<edge_type>1</edge_type>
-				<source_obj>58</source_obj>
-				<sink_obj>156</sink_obj>
+				<source_obj>154</source_obj>
+				<sink_obj>155</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_445">
 				<id>487</id>
 				<edge_type>1</edge_type>
-				<source_obj>155</source_obj>
-				<sink_obj>156</sink_obj>
+				<source_obj>251</source_obj>
+				<sink_obj>155</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_446">
 				<id>488</id>
 				<edge_type>1</edge_type>
-				<source_obj>156</source_obj>
-				<sink_obj>157</sink_obj>
+				<source_obj>58</source_obj>
+				<sink_obj>156</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_447">
 				<id>489</id>
 				<edge_type>1</edge_type>
-				<source_obj>50</source_obj>
-				<sink_obj>157</sink_obj>
+				<source_obj>155</source_obj>
+				<sink_obj>156</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_448">
 				<id>490</id>
 				<edge_type>1</edge_type>
-				<source_obj>157</source_obj>
-				<sink_obj>158</sink_obj>
+				<source_obj>156</source_obj>
+				<sink_obj>157</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_449">
 				<id>491</id>
 				<edge_type>1</edge_type>
-				<source_obj>146</source_obj>
-				<sink_obj>158</sink_obj>
+				<source_obj>50</source_obj>
+				<sink_obj>157</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_450">
 				<id>492</id>
 				<edge_type>1</edge_type>
-				<source_obj>158</source_obj>
-				<sink_obj>159</sink_obj>
+				<source_obj>157</source_obj>
+				<sink_obj>158</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_451">
 				<id>493</id>
 				<edge_type>1</edge_type>
-				<source_obj>299</source_obj>
-				<sink_obj>159</sink_obj>
+				<source_obj>146</source_obj>
+				<sink_obj>158</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_452">
 				<id>494</id>
 				<edge_type>1</edge_type>
-				<source_obj>97</source_obj>
+				<source_obj>158</source_obj>
 				<sink_obj>159</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_453">
 				<id>495</id>
 				<edge_type>1</edge_type>
-				<source_obj>50</source_obj>
-				<sink_obj>160</sink_obj>
+				<source_obj>301</source_obj>
+				<sink_obj>159</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_454">
 				<id>496</id>
 				<edge_type>1</edge_type>
-				<source_obj>58</source_obj>
-				<sink_obj>160</sink_obj>
+				<source_obj>97</source_obj>
+				<sink_obj>159</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_455">
 				<id>497</id>
 				<edge_type>1</edge_type>
-				<source_obj>160</source_obj>
-				<sink_obj>161</sink_obj>
+				<source_obj>50</source_obj>
+				<sink_obj>160</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_456">
 				<id>498</id>
 				<edge_type>1</edge_type>
-				<source_obj>249</source_obj>
-				<sink_obj>161</sink_obj>
+				<source_obj>58</source_obj>
+				<sink_obj>160</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_457">
 				<id>499</id>
 				<edge_type>1</edge_type>
-				<source_obj>152</source_obj>
-				<sink_obj>162</sink_obj>
+				<source_obj>160</source_obj>
+				<sink_obj>161</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_458">
 				<id>500</id>
 				<edge_type>1</edge_type>
-				<source_obj>161</source_obj>
-				<sink_obj>162</sink_obj>
+				<source_obj>251</source_obj>
+				<sink_obj>161</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_459">
 				<id>501</id>
 				<edge_type>1</edge_type>
-				<source_obj>162</source_obj>
-				<sink_obj>163</sink_obj>
+				<source_obj>152</source_obj>
+				<sink_obj>162</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_460">
 				<id>502</id>
 				<edge_type>1</edge_type>
-				<source_obj>153</source_obj>
-				<sink_obj>163</sink_obj>
+				<source_obj>161</source_obj>
+				<sink_obj>162</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_461">
 				<id>503</id>
 				<edge_type>1</edge_type>
-				<source_obj>159</source_obj>
+				<source_obj>162</source_obj>
 				<sink_obj>163</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_462">
-				<id>506</id>
+				<id>504</id>
+				<edge_type>1</edge_type>
+				<source_obj>153</source_obj>
+				<sink_obj>163</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_463">
+				<id>505</id>
+				<edge_type>1</edge_type>
+				<source_obj>159</source_obj>
+				<sink_obj>163</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_464">
+				<id>508</id>
 				<edge_type>1</edge_type>
 				<source_obj>3</source_obj>
 				<sink_obj>166</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_463">
-				<id>507</id>
+			<item class_id_reference="20" object_id="_465">
+				<id>509</id>
 				<edge_type>1</edge_type>
 				<source_obj>163</source_obj>
 				<sink_obj>166</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_464">
-				<id>508</id>
+			<item class_id_reference="20" object_id="_466">
+				<id>510</id>
 				<edge_type>2</edge_type>
 				<source_obj>24</source_obj>
 				<sink_obj>169</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_465">
-				<id>509</id>
+			<item class_id_reference="20" object_id="_467">
+				<id>511</id>
 				<edge_type>2</edge_type>
 				<source_obj>14</source_obj>
 				<sink_obj>172</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_466">
-				<id>653</id>
+			<item class_id_reference="20" object_id="_468">
+				<id>655</id>
 				<edge_type>2</edge_type>
 				<source_obj>8</source_obj>
 				<sink_obj>14</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_467">
-				<id>654</id>
+			<item class_id_reference="20" object_id="_469">
+				<id>656</id>
 				<edge_type>2</edge_type>
 				<source_obj>14</source_obj>
 				<sink_obj>175</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_468">
-				<id>655</id>
+			<item class_id_reference="20" object_id="_470">
+				<id>657</id>
 				<edge_type>2</edge_type>
 				<source_obj>14</source_obj>
 				<sink_obj>18</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_469">
-				<id>656</id>
+			<item class_id_reference="20" object_id="_471">
+				<id>658</id>
 				<edge_type>2</edge_type>
 				<source_obj>18</source_obj>
 				<sink_obj>24</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_470">
-				<id>657</id>
+			<item class_id_reference="20" object_id="_472">
+				<id>659</id>
 				<edge_type>2</edge_type>
 				<source_obj>24</source_obj>
 				<sink_obj>173</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_471">
-				<id>658</id>
+			<item class_id_reference="20" object_id="_473">
+				<id>660</id>
 				<edge_type>2</edge_type>
 				<source_obj>24</source_obj>
 				<sink_obj>170</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_472">
-				<id>659</id>
+			<item class_id_reference="20" object_id="_474">
+				<id>661</id>
 				<edge_type>2</edge_type>
 				<source_obj>170</source_obj>
 				<sink_obj>24</sink_obj>
 				<is_back_edge>1</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_473">
-				<id>660</id>
+			<item class_id_reference="20" object_id="_475">
+				<id>662</id>
 				<edge_type>2</edge_type>
 				<source_obj>173</source_obj>
 				<sink_obj>14</sink_obj>
@@ -13399,7 +13445,7 @@
 	<cdfg_regions class_id="21" tracking_level="0" version="0">
 		<count>7</count>
 		<item_version>0</item_version>
-		<item class_id="22" tracking_level="1" version="0" object_id="_474">
+		<item class_id="22" tracking_level="1" version="0" object_id="_476">
 			<mId>1</mId>
 			<mTag>AddWeighted</mTag>
 			<mType>0</mType>
@@ -13418,12 +13464,12 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>2107081</mMinLatency>
-			<mMaxLatency>2107081</mMaxLatency>
+			<mMinLatency>943921</mMinLatency>
+			<mMaxLatency>943921</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
-		<item class_id_reference="22" object_id="_475">
+		<item class_id_reference="22" object_id="_477">
 			<mId>2</mId>
 			<mTag>Entry</mTag>
 			<mType>0</mType>
@@ -13445,7 +13491,7 @@
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
-		<item class_id_reference="22" object_id="_476">
+		<item class_id_reference="22" object_id="_478">
 			<mId>3</mId>
 			<mTag>loop_height</mTag>
 			<mType>1</mType>
@@ -13462,14 +13508,14 @@
 			</basic_blocks>
 			<mII>-1</mII>
 			<mDepth>-1</mDepth>
-			<mMinTripCount>1080</mMinTripCount>
-			<mMaxTripCount>1080</mMaxTripCount>
-			<mMinLatency>2107080</mMinLatency>
-			<mMaxLatency>2107080</mMaxLatency>
+			<mMinTripCount>720</mMinTripCount>
+			<mMaxTripCount>720</mMaxTripCount>
+			<mMinLatency>943920</mMinLatency>
+			<mMaxLatency>943920</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
-		<item class_id_reference="22" object_id="_477">
+		<item class_id_reference="22" object_id="_479">
 			<mId>4</mId>
 			<mTag>Region 1</mTag>
 			<mType>0</mType>
@@ -13492,7 +13538,7 @@
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
-		<item class_id_reference="22" object_id="_478">
+		<item class_id_reference="22" object_id="_480">
 			<mId>5</mId>
 			<mTag>loop_width</mTag>
 			<mType>1</mType>
@@ -13508,14 +13554,14 @@
 			</basic_blocks>
 			<mII>1</mII>
 			<mDepth>30</mDepth>
-			<mMinTripCount>1920</mMinTripCount>
-			<mMaxTripCount>1920</mMaxTripCount>
-			<mMinLatency>1948</mMinLatency>
-			<mMaxLatency>1948</mMaxLatency>
+			<mMinTripCount>1280</mMinTripCount>
+			<mMaxTripCount>1280</mMaxTripCount>
+			<mMinLatency>1308</mMinLatency>
+			<mMaxLatency>1308</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
-		<item class_id_reference="22" object_id="_479">
+		<item class_id_reference="22" object_id="_481">
 			<mId>6</mId>
 			<mTag>Region 2</mTag>
 			<mType>0</mType>
@@ -13537,7 +13583,7 @@
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
-		<item class_id_reference="22" object_id="_480">
+		<item class_id_reference="22" object_id="_482">
 			<mId>7</mId>
 			<mTag>Return</mTag>
 			<mType>0</mType>
@@ -14623,7 +14669,7 @@
 	<regions class_id="32" tracking_level="0" version="0">
 		<count>2</count>
 		<item_version>0</item_version>
-		<item class_id="33" tracking_level="1" version="0" object_id="_481">
+		<item class_id="33" tracking_level="1" version="0" object_id="_483">
 			<region_name>loop_width</region_name>
 			<basic_blocks>
 				<count>2</count>
@@ -14640,7 +14686,7 @@
 			<interval>1</interval>
 			<pipe_depth>30</pipe_depth>
 		</item>
-		<item class_id_reference="33" object_id="_482">
+		<item class_id_reference="33" object_id="_484">
 			<region_name>hls_label_4</region_name>
 			<basic_blocks>
 				<count>1</count>

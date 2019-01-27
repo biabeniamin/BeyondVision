@@ -15,7 +15,7 @@ entity Filter2D_1_k_buf_eOg_ram is
             MEM_TYPE    : string := "block"; 
             DWIDTH     : integer := 8; 
             AWIDTH     : integer := 11; 
-            MEM_SIZE    : integer := 1920
+            MEM_SIZE    : integer := 1280
     ); 
     port (
           addr0     : in std_logic_vector(AWIDTH-1 downto 0); 
@@ -87,7 +87,7 @@ use IEEE.std_logic_1164.all;
 entity Filter2D_1_k_buf_eOg is
     generic (
         DataWidth : INTEGER := 8;
-        AddressRange : INTEGER := 1920;
+        AddressRange : INTEGER := 1280;
         AddressWidth : INTEGER := 11);
     port (
         reset : IN STD_LOGIC;

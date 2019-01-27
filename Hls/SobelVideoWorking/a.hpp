@@ -1,8 +1,8 @@
 #include  "hls_video.h"
 #include <ap_fixed.h>
 
-#define MAX_WIDTH  1920
-#define MAX_HEIGHT 1080
+#define MAX_WIDTH  1280
+#define MAX_HEIGHT 720
 
 
 typedef hls::stream<ap_axiu<24,1,1,1> >           AXI_STREAM;

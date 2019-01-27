@@ -135,7 +135,7 @@
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>1947</lineNumber>
-						<contextFuncName>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 1080, 1920&amp;gt;</contextFuncName>
+						<contextFuncName>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 720, 1280&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -147,7 +147,7 @@
 									<item class_id="12" tracking_level="0" version="0">
 										<first class_id="13" tracking_level="0" version="0">
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</first>
-											<second>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 1080, 1920&amp;gt;</second>
+											<second>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 720, 1280&amp;gt;</second>
 										</first>
 										<second>1947</second>
 									</item>
@@ -189,7 +189,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>11</bitwidth>
+					<bitwidth>10</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>4</count>
@@ -214,7 +214,7 @@
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>1947</lineNumber>
-						<contextFuncName>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 1080, 1920&amp;gt;</contextFuncName>
+						<contextFuncName>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 720, 1280&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -226,7 +226,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</first>
-											<second>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 1080, 1920&amp;gt;</second>
+											<second>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 720, 1280&amp;gt;</second>
 										</first>
 										<second>1947</second>
 									</item>
@@ -249,7 +249,7 @@
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>1.81</m_delay>
+				<m_delay>1.70</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_8">
 				<Value>
@@ -260,7 +260,7 @@
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>1947</lineNumber>
-						<contextFuncName>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 1080, 1920&amp;gt;</contextFuncName>
+						<contextFuncName>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 720, 1280&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -272,7 +272,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</first>
-											<second>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 1080, 1920&amp;gt;</second>
+											<second>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 720, 1280&amp;gt;</second>
 										</first>
 										<second>1947</second>
 									</item>
@@ -283,7 +283,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>11</bitwidth>
+					<bitwidth>10</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -306,7 +306,7 @@
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>1947</lineNumber>
-						<contextFuncName>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 1080, 1920&amp;gt;</contextFuncName>
+						<contextFuncName>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 720, 1280&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -318,7 +318,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</first>
-											<second>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 1080, 1920&amp;gt;</second>
+											<second>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 720, 1280&amp;gt;</second>
 										</first>
 										<second>1947</second>
 									</item>
@@ -353,7 +353,7 @@
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>1948</lineNumber>
-						<contextFuncName>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 1080, 1920&amp;gt;</contextFuncName>
+						<contextFuncName>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 720, 1280&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -365,7 +365,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</first>
-											<second>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 1080, 1920&amp;gt;</second>
+											<second>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 720, 1280&amp;gt;</second>
 										</first>
 										<second>1948</second>
 									</item>
@@ -412,10 +412,10 @@
 				<oprand_edges>
 					<count>4</count>
 					<item_version>0</item_version>
-					<item>64</item>
 					<item>65</item>
 					<item>66</item>
 					<item>67</item>
+					<item>68</item>
 				</oprand_edges>
 				<opcode>phi</opcode>
 				<m_Display>0</m_Display>
@@ -432,7 +432,7 @@
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>1948</lineNumber>
-						<contextFuncName>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 1080, 1920&amp;gt;</contextFuncName>
+						<contextFuncName>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 720, 1280&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -444,7 +444,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</first>
-											<second>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 1080, 1920&amp;gt;</second>
+											<second>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 720, 1280&amp;gt;</second>
 										</first>
 										<second>1948</second>
 									</item>
@@ -460,8 +460,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>68</item>
-					<item>70</item>
+					<item>69</item>
+					<item>71</item>
 				</oprand_edges>
 				<opcode>icmp</opcode>
 				<m_Display>0</m_Display>
@@ -478,7 +478,7 @@
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>1948</lineNumber>
-						<contextFuncName>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 1080, 1920&amp;gt;</contextFuncName>
+						<contextFuncName>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 720, 1280&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -490,7 +490,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</first>
-											<second>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 1080, 1920&amp;gt;</second>
+											<second>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 720, 1280&amp;gt;</second>
 										</first>
 										<second>1948</second>
 									</item>
@@ -506,8 +506,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>71</item>
 					<item>72</item>
+					<item>74</item>
 				</oprand_edges>
 				<opcode>add</opcode>
 				<m_Display>0</m_Display>
@@ -524,7 +524,7 @@
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>1948</lineNumber>
-						<contextFuncName>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 1080, 1920&amp;gt;</contextFuncName>
+						<contextFuncName>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 720, 1280&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -536,7 +536,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</first>
-											<second>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 1080, 1920&amp;gt;</second>
+											<second>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 720, 1280&amp;gt;</second>
 										</first>
 										<second>1948</second>
 									</item>
@@ -552,9 +552,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>73</item>
-					<item>74</item>
 					<item>75</item>
+					<item>76</item>
+					<item>77</item>
 				</oprand_edges>
 				<opcode>br</opcode>
 				<m_Display>0</m_Display>
@@ -567,7 +567,7 @@
 					<Obj>
 						<type>0</type>
 						<id>32</id>
-						<name>tmp_92</name>
+						<name>tmp_88</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>624</lineNumber>
@@ -597,7 +597,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</first>
-											<second>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 1080, 1920&amp;gt;</second>
+											<second>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 720, 1280&amp;gt;</second>
 										</first>
 										<second>1951</second>
 									</item>
@@ -613,8 +613,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>77</item>
-					<item>78</item>
+					<item>79</item>
+					<item>80</item>
 				</oprand_edges>
 				<opcode>read</opcode>
 				<m_Display>0</m_Display>
@@ -657,7 +657,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</first>
-											<second>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 1080, 1920&amp;gt;</second>
+											<second>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 720, 1280&amp;gt;</second>
 										</first>
 										<second>1953</second>
 									</item>
@@ -673,9 +673,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>80</item>
-					<item>81</item>
 					<item>82</item>
+					<item>83</item>
+					<item>84</item>
 				</oprand_edges>
 				<opcode>write</opcode>
 				<m_Display>0</m_Display>
@@ -718,7 +718,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</first>
-											<second>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 1080, 1920&amp;gt;</second>
+											<second>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 720, 1280&amp;gt;</second>
 										</first>
 										<second>1953</second>
 									</item>
@@ -734,9 +734,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>83</item>
-					<item>84</item>
 					<item>85</item>
+					<item>86</item>
+					<item>87</item>
 				</oprand_edges>
 				<opcode>write</opcode>
 				<m_Display>0</m_Display>
@@ -779,7 +779,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</first>
-											<second>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 1080, 1920&amp;gt;</second>
+											<second>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 720, 1280&amp;gt;</second>
 										</first>
 										<second>1953</second>
 									</item>
@@ -795,9 +795,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>86</item>
-					<item>87</item>
 					<item>88</item>
+					<item>89</item>
+					<item>90</item>
 				</oprand_edges>
 				<opcode>write</opcode>
 				<m_Display>0</m_Display>
@@ -814,7 +814,7 @@
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>1948</lineNumber>
-						<contextFuncName>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 1080, 1920&amp;gt;</contextFuncName>
+						<contextFuncName>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 720, 1280&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -826,7 +826,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</first>
-											<second>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 1080, 1920&amp;gt;</second>
+											<second>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 720, 1280&amp;gt;</second>
 										</first>
 										<second>1948</second>
 									</item>
@@ -842,7 +842,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>89</item>
+					<item>91</item>
 				</oprand_edges>
 				<opcode>br</opcode>
 				<m_Display>0</m_Display>
@@ -859,7 +859,7 @@
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>1947</lineNumber>
-						<contextFuncName>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 1080, 1920&amp;gt;</contextFuncName>
+						<contextFuncName>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 720, 1280&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -871,7 +871,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</first>
-											<second>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 1080, 1920&amp;gt;</second>
+											<second>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 720, 1280&amp;gt;</second>
 										</first>
 										<second>1947</second>
 									</item>
@@ -887,7 +887,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>90</item>
+					<item>92</item>
 				</oprand_edges>
 				<opcode>br</opcode>
 				<m_Display>0</m_Display>
@@ -904,7 +904,7 @@
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>1956</lineNumber>
-						<contextFuncName>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 1080, 1920&amp;gt;</contextFuncName>
+						<contextFuncName>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 720, 1280&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -916,7 +916,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</first>
-											<second>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 1080, 1920&amp;gt;</second>
+											<second>CvtColor&amp;lt;HLS_GRAY2RGB, 0, 4096, 720, 1280&amp;gt;</second>
 										</first>
 										<second>1956</second>
 									</item>
@@ -941,7 +941,7 @@
 			</item>
 		</nodes>
 		<consts class_id="15" tracking_level="0" version="0">
-			<count>4</count>
+			<count>6</count>
 			<item_version>0</item_version>
 			<item class_id="16" tracking_level="1" version="0" object_id="_22">
 				<Value>
@@ -961,7 +961,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>11</bitwidth>
+					<bitwidth>10</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>0</content>
@@ -984,10 +984,10 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>11</bitwidth>
+					<bitwidth>10</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>1080</content>
+				<content>720</content>
 			</item>
 			<item class_id_reference="16" object_id="_24">
 				<Value>
@@ -1007,7 +1007,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>11</bitwidth>
+					<bitwidth>10</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>1</content>
@@ -1016,7 +1016,7 @@
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>69</id>
+						<id>64</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -1033,13 +1033,59 @@
 					<bitwidth>11</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>1920</content>
+				<content>0</content>
+			</item>
+			<item class_id_reference="16" object_id="_26">
+				<Value>
+					<Obj>
+						<type>2</type>
+						<id>70</id>
+						<name>empty</name>
+						<fileName></fileName>
+						<fileDirectory></fileDirectory>
+						<lineNumber>0</lineNumber>
+						<contextFuncName></contextFuncName>
+						<inlineStackInfo>
+							<count>0</count>
+							<item_version>0</item_version>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>11</bitwidth>
+				</Value>
+				<const_type>0</const_type>
+				<content>1280</content>
+			</item>
+			<item class_id_reference="16" object_id="_27">
+				<Value>
+					<Obj>
+						<type>2</type>
+						<id>73</id>
+						<name>empty</name>
+						<fileName></fileName>
+						<fileDirectory></fileDirectory>
+						<lineNumber>0</lineNumber>
+						<contextFuncName></contextFuncName>
+						<inlineStackInfo>
+							<count>0</count>
+							<item_version>0</item_version>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>11</bitwidth>
+				</Value>
+				<const_type>0</const_type>
+				<content>1</content>
 			</item>
 		</consts>
 		<blocks class_id="17" tracking_level="0" version="0">
 			<count>7</count>
 			<item_version>0</item_version>
-			<item class_id="18" tracking_level="1" version="0" object_id="_26">
+			<item class_id="18" tracking_level="1" version="0" object_id="_28">
 				<Obj>
 					<type>3</type>
 					<id>10</id>
@@ -1062,7 +1108,7 @@
 					<item>9</item>
 				</node_objs>
 			</item>
-			<item class_id_reference="18" object_id="_27">
+			<item class_id_reference="18" object_id="_29">
 				<Obj>
 					<type>3</type>
 					<id>16</id>
@@ -1088,7 +1134,7 @@
 					<item>15</item>
 				</node_objs>
 			</item>
-			<item class_id_reference="18" object_id="_28">
+			<item class_id_reference="18" object_id="_30">
 				<Obj>
 					<type>3</type>
 					<id>20</id>
@@ -1111,7 +1157,7 @@
 					<item>19</item>
 				</node_objs>
 			</item>
-			<item class_id_reference="18" object_id="_29">
+			<item class_id_reference="18" object_id="_31">
 				<Obj>
 					<type>3</type>
 					<id>26</id>
@@ -1137,7 +1183,7 @@
 					<item>25</item>
 				</node_objs>
 			</item>
-			<item class_id_reference="18" object_id="_30">
+			<item class_id_reference="18" object_id="_32">
 				<Obj>
 					<type>3</type>
 					<id>42</id>
@@ -1164,7 +1210,7 @@
 					<item>41</item>
 				</node_objs>
 			</item>
-			<item class_id_reference="18" object_id="_31">
+			<item class_id_reference="18" object_id="_33">
 				<Obj>
 					<type>3</type>
 					<id>45</id>
@@ -1187,7 +1233,7 @@
 					<item>44</item>
 				</node_objs>
 			</item>
-			<item class_id_reference="18" object_id="_32">
+			<item class_id_reference="18" object_id="_34">
 				<Obj>
 					<type>3</type>
 					<id>47</id>
@@ -1214,288 +1260,288 @@
 		<edges class_id="19" tracking_level="0" version="0">
 			<count>41</count>
 			<item_version>0</item_version>
-			<item class_id="20" tracking_level="1" version="0" object_id="_33">
+			<item class_id="20" tracking_level="1" version="0" object_id="_35">
 				<id>48</id>
 				<edge_type>2</edge_type>
 				<source_obj>16</source_obj>
 				<sink_obj>9</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_34">
+			<item class_id_reference="20" object_id="_36">
 				<id>50</id>
 				<edge_type>1</edge_type>
 				<source_obj>49</source_obj>
 				<sink_obj>11</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_35">
+			<item class_id_reference="20" object_id="_37">
 				<id>51</id>
 				<edge_type>2</edge_type>
 				<source_obj>10</source_obj>
 				<sink_obj>11</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_36">
+			<item class_id_reference="20" object_id="_38">
 				<id>52</id>
 				<edge_type>1</edge_type>
 				<source_obj>14</source_obj>
 				<sink_obj>11</sink_obj>
 				<is_back_edge>1</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_37">
+			<item class_id_reference="20" object_id="_39">
 				<id>53</id>
 				<edge_type>2</edge_type>
 				<source_obj>45</source_obj>
 				<sink_obj>11</sink_obj>
 				<is_back_edge>1</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_38">
+			<item class_id_reference="20" object_id="_40">
 				<id>54</id>
 				<edge_type>1</edge_type>
 				<source_obj>11</source_obj>
 				<sink_obj>13</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_39">
+			<item class_id_reference="20" object_id="_41">
 				<id>56</id>
 				<edge_type>1</edge_type>
 				<source_obj>55</source_obj>
 				<sink_obj>13</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_40">
+			<item class_id_reference="20" object_id="_42">
 				<id>57</id>
 				<edge_type>1</edge_type>
 				<source_obj>11</source_obj>
 				<sink_obj>14</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_41">
+			<item class_id_reference="20" object_id="_43">
 				<id>59</id>
 				<edge_type>1</edge_type>
 				<source_obj>58</source_obj>
 				<sink_obj>14</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_42">
+			<item class_id_reference="20" object_id="_44">
 				<id>60</id>
 				<edge_type>1</edge_type>
 				<source_obj>13</source_obj>
 				<sink_obj>15</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_43">
+			<item class_id_reference="20" object_id="_45">
 				<id>61</id>
 				<edge_type>2</edge_type>
 				<source_obj>20</source_obj>
 				<sink_obj>15</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_44">
+			<item class_id_reference="20" object_id="_46">
 				<id>62</id>
 				<edge_type>2</edge_type>
 				<source_obj>47</source_obj>
 				<sink_obj>15</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_45">
+			<item class_id_reference="20" object_id="_47">
 				<id>63</id>
 				<edge_type>2</edge_type>
 				<source_obj>26</source_obj>
 				<sink_obj>19</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_46">
-				<id>64</id>
+			<item class_id_reference="20" object_id="_48">
+				<id>65</id>
 				<edge_type>1</edge_type>
-				<source_obj>49</source_obj>
+				<source_obj>64</source_obj>
 				<sink_obj>21</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_47">
-				<id>65</id>
+			<item class_id_reference="20" object_id="_49">
+				<id>66</id>
 				<edge_type>2</edge_type>
 				<source_obj>20</source_obj>
 				<sink_obj>21</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_48">
-				<id>66</id>
+			<item class_id_reference="20" object_id="_50">
+				<id>67</id>
 				<edge_type>1</edge_type>
 				<source_obj>24</source_obj>
 				<sink_obj>21</sink_obj>
 				<is_back_edge>1</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_49">
-				<id>67</id>
+			<item class_id_reference="20" object_id="_51">
+				<id>68</id>
 				<edge_type>2</edge_type>
 				<source_obj>42</source_obj>
 				<sink_obj>21</sink_obj>
 				<is_back_edge>1</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_50">
-				<id>68</id>
-				<edge_type>1</edge_type>
-				<source_obj>21</source_obj>
-				<sink_obj>23</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_51">
-				<id>70</id>
-				<edge_type>1</edge_type>
-				<source_obj>69</source_obj>
-				<sink_obj>23</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
 			<item class_id_reference="20" object_id="_52">
-				<id>71</id>
+				<id>69</id>
 				<edge_type>1</edge_type>
 				<source_obj>21</source_obj>
-				<sink_obj>24</sink_obj>
+				<sink_obj>23</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_53">
-				<id>72</id>
+				<id>71</id>
 				<edge_type>1</edge_type>
-				<source_obj>58</source_obj>
-				<sink_obj>24</sink_obj>
+				<source_obj>70</source_obj>
+				<sink_obj>23</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_54">
-				<id>73</id>
+				<id>72</id>
+				<edge_type>1</edge_type>
+				<source_obj>21</source_obj>
+				<sink_obj>24</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_55">
+				<id>74</id>
+				<edge_type>1</edge_type>
+				<source_obj>73</source_obj>
+				<sink_obj>24</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_56">
+				<id>75</id>
 				<edge_type>1</edge_type>
 				<source_obj>23</source_obj>
 				<sink_obj>25</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_55">
-				<id>74</id>
+			<item class_id_reference="20" object_id="_57">
+				<id>76</id>
 				<edge_type>2</edge_type>
 				<source_obj>42</source_obj>
 				<sink_obj>25</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_56">
-				<id>75</id>
+			<item class_id_reference="20" object_id="_58">
+				<id>77</id>
 				<edge_type>2</edge_type>
 				<source_obj>45</source_obj>
 				<sink_obj>25</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_57">
-				<id>78</id>
+			<item class_id_reference="20" object_id="_59">
+				<id>80</id>
 				<edge_type>1</edge_type>
 				<source_obj>1</source_obj>
 				<sink_obj>32</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_58">
-				<id>81</id>
+			<item class_id_reference="20" object_id="_60">
+				<id>83</id>
 				<edge_type>1</edge_type>
 				<source_obj>2</source_obj>
 				<sink_obj>36</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_59">
-				<id>82</id>
+			<item class_id_reference="20" object_id="_61">
+				<id>84</id>
 				<edge_type>1</edge_type>
 				<source_obj>32</source_obj>
 				<sink_obj>36</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_60">
-				<id>84</id>
+			<item class_id_reference="20" object_id="_62">
+				<id>86</id>
 				<edge_type>1</edge_type>
 				<source_obj>3</source_obj>
 				<sink_obj>37</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_61">
-				<id>85</id>
+			<item class_id_reference="20" object_id="_63">
+				<id>87</id>
 				<edge_type>1</edge_type>
 				<source_obj>32</source_obj>
 				<sink_obj>37</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_62">
-				<id>87</id>
+			<item class_id_reference="20" object_id="_64">
+				<id>89</id>
 				<edge_type>1</edge_type>
 				<source_obj>4</source_obj>
 				<sink_obj>38</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_63">
-				<id>88</id>
+			<item class_id_reference="20" object_id="_65">
+				<id>90</id>
 				<edge_type>1</edge_type>
 				<source_obj>32</source_obj>
 				<sink_obj>38</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_64">
-				<id>89</id>
+			<item class_id_reference="20" object_id="_66">
+				<id>91</id>
 				<edge_type>2</edge_type>
 				<source_obj>26</source_obj>
 				<sink_obj>41</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_65">
-				<id>90</id>
+			<item class_id_reference="20" object_id="_67">
+				<id>92</id>
 				<edge_type>2</edge_type>
 				<source_obj>16</source_obj>
 				<sink_obj>44</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_66">
-				<id>247</id>
+			<item class_id_reference="20" object_id="_68">
+				<id>249</id>
 				<edge_type>2</edge_type>
 				<source_obj>10</source_obj>
 				<sink_obj>16</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_67">
-				<id>248</id>
+			<item class_id_reference="20" object_id="_69">
+				<id>250</id>
 				<edge_type>2</edge_type>
 				<source_obj>16</source_obj>
 				<sink_obj>47</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_68">
-				<id>249</id>
+			<item class_id_reference="20" object_id="_70">
+				<id>251</id>
 				<edge_type>2</edge_type>
 				<source_obj>16</source_obj>
 				<sink_obj>20</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_69">
-				<id>250</id>
+			<item class_id_reference="20" object_id="_71">
+				<id>252</id>
 				<edge_type>2</edge_type>
 				<source_obj>20</source_obj>
 				<sink_obj>26</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_70">
-				<id>251</id>
+			<item class_id_reference="20" object_id="_72">
+				<id>253</id>
 				<edge_type>2</edge_type>
 				<source_obj>26</source_obj>
 				<sink_obj>45</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_71">
-				<id>252</id>
+			<item class_id_reference="20" object_id="_73">
+				<id>254</id>
 				<edge_type>2</edge_type>
 				<source_obj>26</source_obj>
 				<sink_obj>42</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_72">
-				<id>253</id>
+			<item class_id_reference="20" object_id="_74">
+				<id>255</id>
 				<edge_type>2</edge_type>
 				<source_obj>42</source_obj>
 				<sink_obj>26</sink_obj>
 				<is_back_edge>1</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_73">
-				<id>254</id>
+			<item class_id_reference="20" object_id="_75">
+				<id>256</id>
 				<edge_type>2</edge_type>
 				<source_obj>45</source_obj>
 				<sink_obj>16</sink_obj>
@@ -1506,7 +1552,7 @@
 	<cdfg_regions class_id="21" tracking_level="0" version="0">
 		<count>7</count>
 		<item_version>0</item_version>
-		<item class_id="22" tracking_level="1" version="0" object_id="_74">
+		<item class_id="22" tracking_level="1" version="0" object_id="_76">
 			<mId>1</mId>
 			<mTag>CvtColor</mTag>
 			<mType>0</mType>
@@ -1525,12 +1571,12 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>2076841</mMinLatency>
-			<mMaxLatency>2076841</mMaxLatency>
+			<mMinLatency>923761</mMinLatency>
+			<mMaxLatency>923761</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
-		<item class_id_reference="22" object_id="_75">
+		<item class_id_reference="22" object_id="_77">
 			<mId>2</mId>
 			<mTag>Entry</mTag>
 			<mType>0</mType>
@@ -1552,7 +1598,7 @@
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
-		<item class_id_reference="22" object_id="_76">
+		<item class_id_reference="22" object_id="_78">
 			<mId>3</mId>
 			<mTag>loop_height</mTag>
 			<mType>1</mType>
@@ -1569,14 +1615,14 @@
 			</basic_blocks>
 			<mII>-1</mII>
 			<mDepth>-1</mDepth>
-			<mMinTripCount>1080</mMinTripCount>
-			<mMaxTripCount>1080</mMaxTripCount>
-			<mMinLatency>2076840</mMinLatency>
-			<mMaxLatency>2076840</mMaxLatency>
+			<mMinTripCount>720</mMinTripCount>
+			<mMaxTripCount>720</mMaxTripCount>
+			<mMinLatency>923760</mMinLatency>
+			<mMaxLatency>923760</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
-		<item class_id_reference="22" object_id="_77">
+		<item class_id_reference="22" object_id="_79">
 			<mId>4</mId>
 			<mTag>Region 1</mTag>
 			<mType>0</mType>
@@ -1599,7 +1645,7 @@
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
-		<item class_id_reference="22" object_id="_78">
+		<item class_id_reference="22" object_id="_80">
 			<mId>5</mId>
 			<mTag>loop_width</mTag>
 			<mType>1</mType>
@@ -1615,14 +1661,14 @@
 			</basic_blocks>
 			<mII>1</mII>
 			<mDepth>2</mDepth>
-			<mMinTripCount>1920</mMinTripCount>
-			<mMaxTripCount>1920</mMaxTripCount>
-			<mMinLatency>1920</mMinLatency>
-			<mMaxLatency>1920</mMaxLatency>
+			<mMinTripCount>1280</mMinTripCount>
+			<mMaxTripCount>1280</mMaxTripCount>
+			<mMinLatency>1280</mMinLatency>
+			<mMaxLatency>1280</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
-		<item class_id_reference="22" object_id="_79">
+		<item class_id_reference="22" object_id="_81">
 			<mId>6</mId>
 			<mTag>Region 2</mTag>
 			<mType>0</mType>
@@ -1644,7 +1690,7 @@
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
-		<item class_id_reference="22" object_id="_80">
+		<item class_id_reference="22" object_id="_82">
 			<mId>7</mId>
 			<mTag>Return</mTag>
 			<mType>0</mType>
@@ -1848,7 +1894,7 @@
 	<regions class_id="32" tracking_level="0" version="0">
 		<count>2</count>
 		<item_version>0</item_version>
-		<item class_id="33" tracking_level="1" version="0" object_id="_81">
+		<item class_id="33" tracking_level="1" version="0" object_id="_83">
 			<region_name>loop_width</region_name>
 			<basic_blocks>
 				<count>2</count>
@@ -1865,7 +1911,7 @@
 			<interval>1</interval>
 			<pipe_depth>2</pipe_depth>
 		</item>
-		<item class_id_reference="33" object_id="_82">
+		<item class_id_reference="33" object_id="_84">
 			<region_name>hls_label_0</region_name>
 			<basic_blocks>
 				<count>1</count>

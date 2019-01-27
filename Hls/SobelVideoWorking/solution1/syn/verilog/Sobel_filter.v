@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="Sobel_filter,hls_ip_2018_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7a200tsbg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=11.000000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=9,HLS_SYN_DSP=39,HLS_SYN_FF=5854,HLS_SYN_LUT=9917,HLS_VERSION=2018_2}" *)
+(* CORE_GENERATION_INFO="Sobel_filter,hls_ip_2018_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7a200tsbg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=11.000000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=9,HLS_SYN_DSP=39,HLS_SYN_FF=5834,HLS_SYN_LUT=9883,HLS_VERSION=2018_2}" *)
 
 module Sobel_filter (
         INPUT_STREAM_TDATA,
@@ -68,7 +68,7 @@ wire    Block_proc_U0_ap_done;
 wire    Block_proc_U0_ap_continue;
 wire    Block_proc_U0_ap_idle;
 wire    Block_proc_U0_ap_ready;
-wire   [11:0] Block_proc_U0_img_0_rows_V_out_din;
+wire   [10:0] Block_proc_U0_img_0_rows_V_out_din;
 wire    Block_proc_U0_img_0_rows_V_out_write;
 wire   [11:0] Block_proc_U0_img_0_cols_V_out_din;
 wire    Block_proc_U0_img_0_cols_V_out_write;
@@ -88,7 +88,7 @@ wire   [7:0] AXIvideo2Mat_U0_img_data_stream_1_V_din;
 wire    AXIvideo2Mat_U0_img_data_stream_1_V_write;
 wire   [7:0] AXIvideo2Mat_U0_img_data_stream_2_V_din;
 wire    AXIvideo2Mat_U0_img_data_stream_2_V_write;
-wire   [11:0] AXIvideo2Mat_U0_img_rows_V_out_din;
+wire   [10:0] AXIvideo2Mat_U0_img_rows_V_out_din;
 wire    AXIvideo2Mat_U0_img_rows_V_out_write;
 wire   [11:0] AXIvideo2Mat_U0_img_cols_V_out_din;
 wire    AXIvideo2Mat_U0_img_cols_V_out_write;
@@ -190,7 +190,7 @@ wire   [0:0] Mat2AXIvideo_U0_OUTPUT_STREAM_TID;
 wire   [0:0] Mat2AXIvideo_U0_OUTPUT_STREAM_TDEST;
 wire    ap_sync_continue;
 wire    img_0_rows_V_c_full_n;
-wire   [11:0] img_0_rows_V_c_dout;
+wire   [10:0] img_0_rows_V_c_dout;
 wire    img_0_rows_V_c_empty_n;
 wire    img_0_cols_V_c_full_n;
 wire   [11:0] img_0_cols_V_c_dout;
@@ -205,7 +205,7 @@ wire    img_0_data_stream_2_full_n;
 wire   [7:0] img_0_data_stream_2_dout;
 wire    img_0_data_stream_2_empty_n;
 wire    img_0_rows_V_c20_full_n;
-wire   [11:0] img_0_rows_V_c20_dout;
+wire   [10:0] img_0_rows_V_c20_dout;
 wire    img_0_rows_V_c20_empty_n;
 wire    img_0_cols_V_c21_full_n;
 wire   [11:0] img_0_cols_V_c21_dout;
@@ -522,7 +522,7 @@ Mat2AXIvideo Mat2AXIvideo_U0(
     .OUTPUT_STREAM_TDEST(Mat2AXIvideo_U0_OUTPUT_STREAM_TDEST)
 );
 
-fifo_w12_d2_A img_0_rows_V_c_U(
+fifo_w11_d2_A img_0_rows_V_c_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
@@ -587,7 +587,7 @@ fifo_w8_d2_A img_0_data_stream_2_U(
     .if_read(CvtColor_1_U0_p_src_data_stream_2_V_read)
 );
 
-fifo_w12_d2_A img_0_rows_V_c20_U(
+fifo_w11_d2_A img_0_rows_V_c20_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),

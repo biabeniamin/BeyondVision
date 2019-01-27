@@ -43128,8 +43128,8 @@ _ssdm_op_SpecDataflowPipeline(-1, "");
 
 
 typedef hls::stream<ap_axiu<24,1,1,1> > AXI_STREAM;
-typedef hls::Mat<1080, 1920, (((0) & ((1 << 11) - 1)) + (((3)-1) << 11))> RGB_IMAGE;
-typedef hls::Mat<1080, 1920, (((0) & ((1 << 11) - 1)) + (((1)-1) << 11))> GRAY_IMAGE;
+typedef hls::Mat<720, 1280, (((0) & ((1 << 11) - 1)) + (((3)-1) << 11))> RGB_IMAGE;
+typedef hls::Mat<720, 1280, (((0) & ((1 << 11) - 1)) + (((1)-1) << 11))> GRAY_IMAGE;
 
 
 void Sobel_filter(AXI_STREAM& INPUT_STREAM, AXI_STREAM& OUTPUT_STREAM);
@@ -43141,15 +43141,15 @@ void Sobel_filter(AXI_STREAM& INPUT_STREAM, AXI_STREAM& OUTPUT_STREAM)
 _ssdm_op_SpecInterface(&INPUT_STREAM, "axis", 1, 1, "both", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
 _ssdm_op_SpecInterface(&OUTPUT_STREAM, "axis", 1, 1, "both", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
 
-RGB_IMAGE img_0(1080, 1920);
-GRAY_IMAGE img_1(1080, 1920);
-GRAY_IMAGE img_2(1080, 1920);
-GRAY_IMAGE img_2a(1080, 1920);
-GRAY_IMAGE img_2b(1080, 1920);
-GRAY_IMAGE img_3(1080, 1920);
-GRAY_IMAGE img_4(1080, 1920);
-GRAY_IMAGE img_5(1080, 1920);
-RGB_IMAGE img_6(1080, 1920);
+RGB_IMAGE img_0(720, 1280);
+GRAY_IMAGE img_1(720, 1280);
+GRAY_IMAGE img_2(720, 1280);
+GRAY_IMAGE img_2a(720, 1280);
+GRAY_IMAGE img_2b(720, 1280);
+GRAY_IMAGE img_3(720, 1280);
+GRAY_IMAGE img_4(720, 1280);
+GRAY_IMAGE img_5(720, 1280);
+RGB_IMAGE img_6(720, 1280);
 ;
 
 _ssdm_op_SpecDataflowPipeline(-1, "");

@@ -18,7 +18,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_img_0_rows_V_out \
     op interface \
-    ports { img_0_rows_V_out_din { O 12 vector } img_0_rows_V_out_full_n { I 1 bit } img_0_rows_V_out_write { O 1 bit } } \
+    ports { img_0_rows_V_out_din { O 11 vector } img_0_rows_V_out_full_n { I 1 bit } img_0_rows_V_out_write { O 1 bit } } \
 } "
 }
 

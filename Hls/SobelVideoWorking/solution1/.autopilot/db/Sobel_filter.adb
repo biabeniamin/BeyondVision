@@ -455,7 +455,7 @@
               <rtlName>img_0_rows_V_c20_U</rtlName>
               <coreName>FIFO</coreName>
             </Obj>
-            <bitwidth>12</bitwidth>
+            <bitwidth>11</bitwidth>
           </Value>
           <oprand_edges>
             <count>1</count>
@@ -517,7 +517,7 @@
               <rtlName>img_0_rows_V_c_U</rtlName>
               <coreName>FIFO</coreName>
             </Obj>
-            <bitwidth>12</bitwidth>
+            <bitwidth>11</bitwidth>
           </Value>
           <oprand_edges>
             <count>1</count>
@@ -2649,8 +2649,8 @@
         <mDepth>-1</mDepth>
         <mMinTripCount>-1</mMinTripCount>
         <mMaxTripCount>-1</mMaxTripCount>
-        <mMinLatency>2107098</mMinLatency>
-        <mMaxLatency>2107098</mMaxLatency>
+        <mMinLatency>943938</mMinLatency>
+        <mMaxLatency>943938</mMaxLatency>
         <mIsDfPipe>1</mIsDfPipe>
         <mDfPipe class_id="23" tracking_level="1" version="0" object_id="_149">
           <port_list class_id="24" tracking_level="0" version="0">
@@ -3184,7 +3184,7 @@
               <ssdmobj_id>18</ssdmobj_id>
               <ctype>0</ctype>
               <depth>2</depth>
-              <bitwidth>12</bitwidth>
+              <bitwidth>11</bitwidth>
               <source class_id_reference="28" object_id="_267">
                 <port class_id_reference="29" object_id="_268">
                   <name>in</name>
@@ -3304,7 +3304,7 @@
               <ssdmobj_id>16</ssdmobj_id>
               <ctype>0</ctype>
               <depth>2</depth>
-              <bitwidth>12</bitwidth>
+              <bitwidth>11</bitwidth>
               <source class_id_reference="28" object_id="_292">
                 <port class_id_reference="29" object_id="_293">
                   <name>in</name>
@@ -4464,11 +4464,11 @@
             </item>
             <item>
               <first>FF</first>
-              <second>3476</second>
+              <second>3474</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>4598</second>
+              <second>4597</second>
             </item>
           </second>
         </item>
@@ -4502,11 +4502,11 @@
             </item>
             <item>
               <first>FF</first>
-              <second>241</second>
+              <second>238</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>268</second>
+              <second>267</second>
             </item>
           </second>
         </item>
@@ -4517,11 +4517,11 @@
             <item_version>0</item_version>
             <item>
               <first>FF</first>
-              <second>42</second>
+              <second>40</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>186</second>
+              <second>185</second>
             </item>
           </second>
         </item>
@@ -4532,11 +4532,11 @@
             <item_version>0</item_version>
             <item>
               <first>FF</first>
-              <second>42</second>
+              <second>40</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>177</second>
+              <second>176</second>
             </item>
           </second>
         </item>
@@ -4555,11 +4555,11 @@
             </item>
             <item>
               <first>FF</first>
-              <second>519</second>
+              <second>516</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>1078</second>
+              <second>1069</second>
             </item>
           </second>
         </item>
@@ -4570,11 +4570,11 @@
             <item_version>0</item_version>
             <item>
               <first>FF</first>
-              <second>121</second>
+              <second>119</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>369</second>
+              <second>368</second>
             </item>
           </second>
         </item>
@@ -4593,11 +4593,11 @@
             </item>
             <item>
               <first>FF</first>
-              <second>490</second>
+              <second>487</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>1165</second>
+              <second>1156</second>
             </item>
           </second>
         </item>
@@ -4616,11 +4616,11 @@
             </item>
             <item>
               <first>FF</first>
-              <second>491</second>
+              <second>488</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>1174</second>
+              <second>1165</second>
             </item>
           </second>
         </item>
@@ -4900,11 +4900,11 @@
             </item>
             <item>
               <first>(1Bits)</first>
-              <second>12</second>
+              <second>11</second>
             </item>
             <item>
               <first>(2Size:D*B)</first>
-              <second>24</second>
+              <second>22</second>
             </item>
             <item>
               <first>BRAM</first>
@@ -4916,7 +4916,7 @@
             </item>
             <item>
               <first>LUT</first>
-              <second>22</second>
+              <second>21</second>
             </item>
           </second>
         </item>
@@ -4931,11 +4931,11 @@
             </item>
             <item>
               <first>(1Bits)</first>
-              <second>12</second>
+              <second>11</second>
             </item>
             <item>
               <first>(2Size:D*B)</first>
-              <second>24</second>
+              <second>22</second>
             </item>
             <item>
               <first>BRAM</first>
@@ -4947,7 +4947,7 @@
             </item>
             <item>
               <first>LUT</first>
-              <second>22</second>
+              <second>21</second>
             </item>
           </second>
         </item>
@@ -5500,7 +5500,7 @@
           <second>
             <count>1</count>
             <item_version>0</item_version>
-            <item>302</item>
+            <item>303</item>
           </second>
         </item>
         <item>
@@ -5508,7 +5508,7 @@
           <second>
             <count>1</count>
             <item_version>0</item_version>
-            <item>251</item>
+            <item>252</item>
           </second>
         </item>
         <item>
@@ -5516,7 +5516,7 @@
           <second>
             <count>1</count>
             <item_version>0</item_version>
-            <item>262</item>
+            <item>263</item>
           </second>
         </item>
         <item>
@@ -5524,7 +5524,7 @@
           <second>
             <count>1</count>
             <item_version>0</item_version>
-            <item>272</item>
+            <item>273</item>
           </second>
         </item>
         <item>
@@ -5532,7 +5532,7 @@
           <second>
             <count>1</count>
             <item_version>0</item_version>
-            <item>282</item>
+            <item>283</item>
           </second>
         </item>
         <item>
@@ -5540,7 +5540,7 @@
           <second>
             <count>1</count>
             <item_version>0</item_version>
-            <item>292</item>
+            <item>293</item>
           </second>
         </item>
         <item>
@@ -5556,7 +5556,7 @@
           <second>
             <count>1</count>
             <item_version>0</item_version>
-            <item>312</item>
+            <item>313</item>
           </second>
         </item>
         <item>
@@ -5564,7 +5564,7 @@
           <second>
             <count>1</count>
             <item_version>0</item_version>
-            <item>322</item>
+            <item>323</item>
           </second>
         </item>
         <item>
@@ -5572,7 +5572,7 @@
           <second>
             <count>1</count>
             <item_version>0</item_version>
-            <item>332</item>
+            <item>333</item>
           </second>
         </item>
         <item>
@@ -5580,7 +5580,7 @@
           <second>
             <count>1</count>
             <item_version>0</item_version>
-            <item>342</item>
+            <item>343</item>
           </second>
         </item>
         <item>
@@ -5588,7 +5588,7 @@
           <second>
             <count>1</count>
             <item_version>0</item_version>
-            <item>352</item>
+            <item>353</item>
           </second>
         </item>
         <item>
@@ -5596,7 +5596,7 @@
           <second>
             <count>1</count>
             <item_version>0</item_version>
-            <item>362</item>
+            <item>363</item>
           </second>
         </item>
         <item>
@@ -5604,7 +5604,7 @@
           <second>
             <count>1</count>
             <item_version>0</item_version>
-            <item>372</item>
+            <item>373</item>
           </second>
         </item>
         <item>
@@ -5612,7 +5612,7 @@
           <second>
             <count>1</count>
             <item_version>0</item_version>
-            <item>382</item>
+            <item>383</item>
           </second>
         </item>
         <item>
@@ -5620,7 +5620,7 @@
           <second>
             <count>1</count>
             <item_version>0</item_version>
-            <item>392</item>
+            <item>393</item>
           </second>
         </item>
         <item>
@@ -5628,7 +5628,7 @@
           <second>
             <count>1</count>
             <item_version>0</item_version>
-            <item>402</item>
+            <item>403</item>
           </second>
         </item>
       </dp_fifo_map>

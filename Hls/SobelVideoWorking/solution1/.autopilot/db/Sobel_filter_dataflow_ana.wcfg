@@ -144,8 +144,8 @@
                   <obj_property name="ObjectShortName">img_rows_V_blk_n</obj_property>
                </wvobject>
                <wvobject type="logic" fp_name="/apatb_Sobel_filter_top/AESL_inst_Sobel_filter/AXIvideo2Mat_U0/img_rows_V_dout">
-                  <obj_property name="ElementShortName">img_rows_V_dout[11:0]</obj_property>
-                  <obj_property name="ObjectShortName">img_rows_V_dout[11:0]</obj_property>
+                  <obj_property name="ElementShortName">img_rows_V_dout[10:0]</obj_property>
+                  <obj_property name="ObjectShortName">img_rows_V_dout[10:0]</obj_property>
                </wvobject>
                <wvobject type="logic" fp_name="/apatb_Sobel_filter_top/AESL_inst_Sobel_filter/AXIvideo2Mat_U0/img_rows_V_empty_n">
                   <obj_property name="ElementShortName">img_rows_V_empty_n</obj_property>
@@ -306,8 +306,8 @@
                   <obj_property name="ObjectShortName">p_src_rows_V_blk_n</obj_property>
                </wvobject>
                <wvobject type="logic" fp_name="/apatb_Sobel_filter_top/AESL_inst_Sobel_filter/CvtColor_1_U0/p_src_rows_V_dout">
-                  <obj_property name="ElementShortName">p_src_rows_V_dout[11:0]</obj_property>
-                  <obj_property name="ObjectShortName">p_src_rows_V_dout[11:0]</obj_property>
+                  <obj_property name="ElementShortName">p_src_rows_V_dout[10:0]</obj_property>
+                  <obj_property name="ObjectShortName">p_src_rows_V_dout[10:0]</obj_property>
                </wvobject>
                <wvobject type="logic" fp_name="/apatb_Sobel_filter_top/AESL_inst_Sobel_filter/CvtColor_1_U0/p_src_rows_V_empty_n">
                   <obj_property name="ElementShortName">p_src_rows_V_empty_n</obj_property>

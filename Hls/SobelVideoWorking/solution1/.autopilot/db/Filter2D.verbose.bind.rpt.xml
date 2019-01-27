@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'Filter2D'" level="0">
-<item name = "Date">Sun Jan 27 11:33:45 2019
+<item name = "Date">Sun Jan 27 12:10:04 2019
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">SobelVideoWorking</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">2087179, 2087179, 2087179, 2087179, none</column>
+<column name="">930659, 930659, 930659, 930659, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,8 +35,8 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- loop_height">2087178, 2087178, 1929, -, -, 1082, no</column>
-<column name=" + loop_width">1926, 1926, 6, 1, 1, 1922, yes</column>
+<column name="- loop_height">930658, 930658, 1289, -, -, 722, no</column>
+<column name=" + loop_width">1286, 1286, 6, 1, 1, 1282, yes</column>
 </table>
 </item>
 </section>

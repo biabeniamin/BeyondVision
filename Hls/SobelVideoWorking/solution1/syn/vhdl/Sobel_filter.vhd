@@ -41,7 +41,7 @@ end;
 architecture behav of Sobel_filter is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "Sobel_filter,hls_ip_2018_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7a200tsbg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=11.000000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=9,HLS_SYN_DSP=39,HLS_SYN_FF=5854,HLS_SYN_LUT=9917,HLS_VERSION=2018_2}";
+    "Sobel_filter,hls_ip_2018_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7a200tsbg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=11.000000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=9,HLS_SYN_DSP=39,HLS_SYN_FF=5834,HLS_SYN_LUT=9883,HLS_VERSION=2018_2}";
     constant ap_const_lv24_0 : STD_LOGIC_VECTOR (23 downto 0) := "000000000000000000000000";
     constant ap_const_lv3_0 : STD_LOGIC_VECTOR (2 downto 0) := "000";
     constant ap_const_lv1_0 : STD_LOGIC_VECTOR (0 downto 0) := "0";
@@ -54,7 +54,7 @@ architecture behav of Sobel_filter is
     signal Block_proc_U0_ap_continue : STD_LOGIC;
     signal Block_proc_U0_ap_idle : STD_LOGIC;
     signal Block_proc_U0_ap_ready : STD_LOGIC;
-    signal Block_proc_U0_img_0_rows_V_out_din : STD_LOGIC_VECTOR (11 downto 0);
+    signal Block_proc_U0_img_0_rows_V_out_din : STD_LOGIC_VECTOR (10 downto 0);
     signal Block_proc_U0_img_0_rows_V_out_write : STD_LOGIC;
     signal Block_proc_U0_img_0_cols_V_out_din : STD_LOGIC_VECTOR (11 downto 0);
     signal Block_proc_U0_img_0_cols_V_out_write : STD_LOGIC;
@@ -74,7 +74,7 @@ architecture behav of Sobel_filter is
     signal AXIvideo2Mat_U0_img_data_stream_1_V_write : STD_LOGIC;
     signal AXIvideo2Mat_U0_img_data_stream_2_V_din : STD_LOGIC_VECTOR (7 downto 0);
     signal AXIvideo2Mat_U0_img_data_stream_2_V_write : STD_LOGIC;
-    signal AXIvideo2Mat_U0_img_rows_V_out_din : STD_LOGIC_VECTOR (11 downto 0);
+    signal AXIvideo2Mat_U0_img_rows_V_out_din : STD_LOGIC_VECTOR (10 downto 0);
     signal AXIvideo2Mat_U0_img_rows_V_out_write : STD_LOGIC;
     signal AXIvideo2Mat_U0_img_cols_V_out_din : STD_LOGIC_VECTOR (11 downto 0);
     signal AXIvideo2Mat_U0_img_cols_V_out_write : STD_LOGIC;
@@ -176,7 +176,7 @@ architecture behav of Sobel_filter is
     signal Mat2AXIvideo_U0_OUTPUT_STREAM_TDEST : STD_LOGIC_VECTOR (0 downto 0);
     signal ap_sync_continue : STD_LOGIC;
     signal img_0_rows_V_c_full_n : STD_LOGIC;
-    signal img_0_rows_V_c_dout : STD_LOGIC_VECTOR (11 downto 0);
+    signal img_0_rows_V_c_dout : STD_LOGIC_VECTOR (10 downto 0);
     signal img_0_rows_V_c_empty_n : STD_LOGIC;
     signal img_0_cols_V_c_full_n : STD_LOGIC;
     signal img_0_cols_V_c_dout : STD_LOGIC_VECTOR (11 downto 0);
@@ -191,7 +191,7 @@ architecture behav of Sobel_filter is
     signal img_0_data_stream_2_dout : STD_LOGIC_VECTOR (7 downto 0);
     signal img_0_data_stream_2_empty_n : STD_LOGIC;
     signal img_0_rows_V_c20_full_n : STD_LOGIC;
-    signal img_0_rows_V_c20_dout : STD_LOGIC_VECTOR (11 downto 0);
+    signal img_0_rows_V_c20_dout : STD_LOGIC_VECTOR (10 downto 0);
     signal img_0_rows_V_c20_empty_n : STD_LOGIC;
     signal img_0_cols_V_c21_full_n : STD_LOGIC;
     signal img_0_cols_V_c21_dout : STD_LOGIC_VECTOR (11 downto 0);
@@ -276,7 +276,7 @@ architecture behav of Sobel_filter is
         ap_continue : IN STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
-        img_0_rows_V_out_din : OUT STD_LOGIC_VECTOR (11 downto 0);
+        img_0_rows_V_out_din : OUT STD_LOGIC_VECTOR (10 downto 0);
         img_0_rows_V_out_full_n : IN STD_LOGIC;
         img_0_rows_V_out_write : OUT STD_LOGIC;
         img_0_cols_V_out_din : OUT STD_LOGIC_VECTOR (11 downto 0);
@@ -306,7 +306,7 @@ architecture behav of Sobel_filter is
         INPUT_STREAM_TLAST : IN STD_LOGIC_VECTOR (0 downto 0);
         INPUT_STREAM_TID : IN STD_LOGIC_VECTOR (0 downto 0);
         INPUT_STREAM_TDEST : IN STD_LOGIC_VECTOR (0 downto 0);
-        img_rows_V_dout : IN STD_LOGIC_VECTOR (11 downto 0);
+        img_rows_V_dout : IN STD_LOGIC_VECTOR (10 downto 0);
         img_rows_V_empty_n : IN STD_LOGIC;
         img_rows_V_read : OUT STD_LOGIC;
         img_cols_V_dout : IN STD_LOGIC_VECTOR (11 downto 0);
@@ -321,7 +321,7 @@ architecture behav of Sobel_filter is
         img_data_stream_2_V_din : OUT STD_LOGIC_VECTOR (7 downto 0);
         img_data_stream_2_V_full_n : IN STD_LOGIC;
         img_data_stream_2_V_write : OUT STD_LOGIC;
-        img_rows_V_out_din : OUT STD_LOGIC_VECTOR (11 downto 0);
+        img_rows_V_out_din : OUT STD_LOGIC_VECTOR (10 downto 0);
         img_rows_V_out_full_n : IN STD_LOGIC;
         img_rows_V_out_write : OUT STD_LOGIC;
         img_cols_V_out_din : OUT STD_LOGIC_VECTOR (11 downto 0);
@@ -342,7 +342,7 @@ architecture behav of Sobel_filter is
         ap_ready : OUT STD_LOGIC;
         start_out : OUT STD_LOGIC;
         start_write : OUT STD_LOGIC;
-        p_src_rows_V_dout : IN STD_LOGIC_VECTOR (11 downto 0);
+        p_src_rows_V_dout : IN STD_LOGIC_VECTOR (10 downto 0);
         p_src_rows_V_empty_n : IN STD_LOGIC;
         p_src_rows_V_read : OUT STD_LOGIC;
         p_src_cols_V_dout : IN STD_LOGIC_VECTOR (11 downto 0);
@@ -525,6 +525,21 @@ architecture behav of Sobel_filter is
         OUTPUT_STREAM_TLAST : OUT STD_LOGIC_VECTOR (0 downto 0);
         OUTPUT_STREAM_TID : OUT STD_LOGIC_VECTOR (0 downto 0);
         OUTPUT_STREAM_TDEST : OUT STD_LOGIC_VECTOR (0 downto 0) );
+    end component;
+
+
+    component fifo_w11_d2_A IS
+    port (
+        clk : IN STD_LOGIC;
+        reset : IN STD_LOGIC;
+        if_read_ce : IN STD_LOGIC;
+        if_write_ce : IN STD_LOGIC;
+        if_din : IN STD_LOGIC_VECTOR (10 downto 0);
+        if_full_n : OUT STD_LOGIC;
+        if_write : IN STD_LOGIC;
+        if_dout : OUT STD_LOGIC_VECTOR (10 downto 0);
+        if_empty_n : OUT STD_LOGIC;
+        if_read : IN STD_LOGIC );
     end component;
 
 
@@ -921,7 +936,7 @@ begin
         OUTPUT_STREAM_TID => Mat2AXIvideo_U0_OUTPUT_STREAM_TID,
         OUTPUT_STREAM_TDEST => Mat2AXIvideo_U0_OUTPUT_STREAM_TDEST);
 
-    img_0_rows_V_c_U : component fifo_w12_d2_A
+    img_0_rows_V_c_U : component fifo_w11_d2_A
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
@@ -986,7 +1001,7 @@ begin
         if_empty_n => img_0_data_stream_2_empty_n,
         if_read => CvtColor_1_U0_p_src_data_stream_2_V_read);
 
-    img_0_rows_V_c20_U : component fifo_w12_d2_A
+    img_0_rows_V_c20_U : component fifo_w11_d2_A
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,

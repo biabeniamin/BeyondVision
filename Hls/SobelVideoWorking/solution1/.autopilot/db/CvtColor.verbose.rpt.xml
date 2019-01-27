@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'CvtColor'" level="0">
-<item name = "Date">Sun Jan 27 11:33:53 2019
+<item name = "Date">Sun Jan 27 12:10:12 2019
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">SobelVideoWorking</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">2076841, 2076841, 2076841, 2076841, none</column>
+<column name="">923761, 923761, 923761, 923761, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,8 +35,8 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- loop_height">2076840, 2076840, 1923, -, -, 1080, no</column>
-<column name=" + loop_width">1920, 1920, 2, 1, 1, 1920, yes</column>
+<column name="- loop_height">923760, 923760, 1283, -, -, 720, no</column>
+<column name=" + loop_width">1280, 1280, 2, 1, 1, 1280, yes</column>
 </table>
 </item>
 </section>
@@ -49,12 +49,12 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="DSP">-, -, -, -</column>
-<column name="Expression">-, -, 0, 72</column>
+<column name="Expression">-, -, 0, 71</column>
 <column name="FIFO">-, -, -, -</column>
 <column name="Instance">-, -, -, -</column>
 <column name="Memory">-, -, -, -</column>
 <column name="Multiplexer">-, -, -, 114</column>
-<column name="Register">-, -, 42, -</column>
+<column name="Register">-, -, 40, -</column>
 <specialColumn name="Available">730, 740, 269200, 129000</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, ~0</specialColumn>
 </table>
@@ -79,11 +79,11 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="i_1_fu_166_p2">+, 0, 0, 18, 11, 1</column>
-<column name="j_1_fu_178_p2">+, 0, 0, 18, 11, 1</column>
+<column name="i_1_fu_170_p2">+, 0, 0, 17, 10, 1</column>
+<column name="j_1_fu_182_p2">+, 0, 0, 18, 11, 1</column>
 <column name="ap_block_pp0_stage0_01001">and, 0, 0, 2, 1, 1</column>
-<column name="exitcond1_fu_160_p2">icmp, 0, 0, 13, 11, 11</column>
-<column name="exitcond_fu_172_p2">icmp, 0, 0, 13, 11, 9</column>
+<column name="exitcond1_fu_164_p2">icmp, 0, 0, 13, 10, 10</column>
+<column name="exitcond_fu_176_p2">icmp, 0, 0, 13, 11, 11</column>
 <column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state4_pp0_stage0_iter1">or, 0, 0, 2, 1, 1</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
@@ -95,8 +95,8 @@
 <column name="ap_NS_fsm">27, 5, 1, 5</column>
 <column name="ap_done">9, 2, 1, 2</column>
 <column name="ap_enable_reg_pp0_iter1">15, 3, 1, 3</column>
-<column name="i_reg_138">9, 2, 11, 22</column>
-<column name="j_reg_149">9, 2, 11, 22</column>
+<column name="i_reg_142">9, 2, 10, 20</column>
+<column name="j_reg_153">9, 2, 11, 22</column>
 <column name="p_dst_data_stream_0_V_blk_n">9, 2, 1, 2</column>
 <column name="p_dst_data_stream_1_V_blk_n">9, 2, 1, 2</column>
 <column name="p_dst_data_stream_2_V_blk_n">9, 2, 1, 2</column>
@@ -110,10 +110,10 @@
 <column name="ap_done_reg">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter0">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
-<column name="exitcond_reg_193">1, 0, 1, 0</column>
-<column name="i_1_reg_188">11, 0, 11, 0</column>
-<column name="i_reg_138">11, 0, 11, 0</column>
-<column name="j_reg_149">11, 0, 11, 0</column>
+<column name="exitcond_reg_197">1, 0, 1, 0</column>
+<column name="i_1_reg_192">10, 0, 10, 0</column>
+<column name="i_reg_142">10, 0, 10, 0</column>
+<column name="j_reg_153">11, 0, 11, 0</column>
 <column name="start_once_reg">1, 0, 1, 0</column>
 </table>
 </item>

@@ -32,7 +32,7 @@ output   ap_done;
 input   ap_continue;
 output   ap_idle;
 output   ap_ready;
-output  [11:0] img_0_rows_V_out_din;
+output  [10:0] img_0_rows_V_out_din;
 input   img_0_rows_V_out_full_n;
 output   img_0_rows_V_out_write;
 output  [11:0] img_0_cols_V_out_din;
@@ -152,8 +152,8 @@ always @ (*) begin
     ap_block_state1 = ((ap_start == 1'b0) | (img_0_cols_V_out_full_n == 1'b0) | (img_0_rows_V_out_full_n == 1'b0) | (ap_done_reg == 1'b1));
 end
 
-assign img_0_cols_V_out_din = 12'd1920;
+assign img_0_cols_V_out_din = 12'd1280;
 
-assign img_0_rows_V_out_din = 12'd1080;
+assign img_0_rows_V_out_din = 11'd720;
 
 endmodule //Block_proc

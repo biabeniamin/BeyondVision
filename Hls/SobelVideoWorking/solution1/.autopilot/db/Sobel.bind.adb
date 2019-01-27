@@ -79,7 +79,7 @@
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>2591</lineNumber>
-						<contextFuncName>Sobel&amp;lt;1, 0, 3, hls::BORDER_DEFAULT, 0, 0, 1080, 1920, 1080, 1920&amp;gt;</contextFuncName>
+						<contextFuncName>Sobel&amp;lt;1, 0, 3, hls::BORDER_DEFAULT, 0, 0, 720, 1280, 720, 1280&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -91,14 +91,14 @@
 									<item class_id="12" tracking_level="0" version="0">
 										<first class_id="13" tracking_level="0" version="0">
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</first>
-											<second>Sobel&amp;lt;1, 0, 3, 0, 0, 1080, 1920, 1080, 1920&amp;gt;</second>
+											<second>Sobel&amp;lt;1, 0, 3, 0, 0, 720, 1280, 720, 1280&amp;gt;</second>
 										</first>
 										<second>2599</second>
 									</item>
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</first>
-											<second>Sobel&amp;lt;1, 0, 3, hls::BORDER_DEFAULT, 0, 0, 1080, 1920, 1080, 1920&amp;gt;</second>
+											<second>Sobel&amp;lt;1, 0, 3, hls::BORDER_DEFAULT, 0, 0, 720, 1280, 720, 1280&amp;gt;</second>
 										</first>
 										<second>2591</second>
 									</item>
@@ -139,7 +139,7 @@
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>2600</lineNumber>
-						<contextFuncName>Sobel&amp;lt;1, 0, 3, 0, 0, 1080, 1920, 1080, 1920&amp;gt;</contextFuncName>
+						<contextFuncName>Sobel&amp;lt;1, 0, 3, 0, 0, 720, 1280, 720, 1280&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -151,7 +151,7 @@
 									<item>
 										<first>
 											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</first>
-											<second>Sobel&amp;lt;1, 0, 3, 0, 0, 1080, 1920, 1080, 1920&amp;gt;</second>
+											<second>Sobel&amp;lt;1, 0, 3, 0, 0, 720, 1280, 720, 1280&amp;gt;</second>
 										</first>
 										<second>2600</second>
 									</item>
@@ -456,8 +456,8 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>2087180</mMinLatency>
-			<mMaxLatency>2087180</mMaxLatency>
+			<mMinLatency>930660</mMinLatency>
+			<mMaxLatency>930660</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>

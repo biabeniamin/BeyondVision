@@ -18,7 +18,7 @@ port (
     ap_continue : IN STD_LOGIC;
     ap_idle : OUT STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
-    img_0_rows_V_out_din : OUT STD_LOGIC_VECTOR (11 downto 0);
+    img_0_rows_V_out_din : OUT STD_LOGIC_VECTOR (10 downto 0);
     img_0_rows_V_out_full_n : IN STD_LOGIC;
     img_0_rows_V_out_write : OUT STD_LOGIC;
     img_0_cols_V_out_din : OUT STD_LOGIC_VECTOR (11 downto 0);
@@ -32,8 +32,8 @@ architecture behav of Block_proc is
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_ST_fsm_state1 : STD_LOGIC_VECTOR (0 downto 0) := "1";
     constant ap_const_lv32_0 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
-    constant ap_const_lv12_438 : STD_LOGIC_VECTOR (11 downto 0) := "010000111000";
-    constant ap_const_lv12_780 : STD_LOGIC_VECTOR (11 downto 0) := "011110000000";
+    constant ap_const_lv11_2D0 : STD_LOGIC_VECTOR (10 downto 0) := "01011010000";
+    constant ap_const_lv12_500 : STD_LOGIC_VECTOR (11 downto 0) := "010100000000";
     constant ap_const_boolean_1 : BOOLEAN := true;
 
     signal ap_done_reg : STD_LOGIC := '0';
@@ -137,7 +137,7 @@ begin
         end if; 
     end process;
 
-    img_0_cols_V_out_din <= ap_const_lv12_780;
+    img_0_cols_V_out_din <= ap_const_lv12_500;
 
     img_0_cols_V_out_write_assign_proc : process(ap_start, ap_done_reg, ap_CS_fsm_state1, img_0_rows_V_out_full_n, img_0_cols_V_out_full_n)
     begin
@@ -158,7 +158,7 @@ begin
         end if; 
     end process;
 
-    img_0_rows_V_out_din <= ap_const_lv12_438;
+    img_0_rows_V_out_din <= ap_const_lv11_2D0;
 
     img_0_rows_V_out_write_assign_proc : process(ap_start, ap_done_reg, ap_CS_fsm_state1, img_0_rows_V_out_full_n, img_0_cols_V_out_full_n)
     begin

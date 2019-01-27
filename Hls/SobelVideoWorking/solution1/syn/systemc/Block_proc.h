@@ -23,7 +23,7 @@ struct Block_proc : public sc_module {
     sc_in< sc_logic > ap_continue;
     sc_out< sc_logic > ap_idle;
     sc_out< sc_logic > ap_ready;
-    sc_out< sc_lv<12> > img_0_rows_V_out_din;
+    sc_out< sc_lv<11> > img_0_rows_V_out_din;
     sc_in< sc_logic > img_0_rows_V_out_full_n;
     sc_out< sc_logic > img_0_rows_V_out_write;
     sc_out< sc_lv<12> > img_0_cols_V_out_din;
@@ -50,8 +50,8 @@ struct Block_proc : public sc_module {
     static const sc_logic ap_const_logic_0;
     static const sc_lv<1> ap_ST_fsm_state1;
     static const sc_lv<32> ap_const_lv32_0;
-    static const sc_lv<12> ap_const_lv12_438;
-    static const sc_lv<12> ap_const_lv12_780;
+    static const sc_lv<11> ap_const_lv11_2D0;
+    static const sc_lv<12> ap_const_lv12_500;
     static const bool ap_const_boolean_1;
     // Thread declarations
     void thread_ap_clk_no_reset_();

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'GaussianBlur'" level="0">
-<item name = "Date">Sun Jan 27 11:33:51 2019
+<item name = "Date">Sun Jan 27 12:10:10 2019
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">SobelVideoWorking</item>
@@ -24,14 +24,14 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">2087180, 2087180, 2087180, 2087180, none</column>
+<column name="">930660, 930660, 930660, 930660, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_Filter2D_1_fu_40">Filter2D_1, 2087179, 2087179, 2087179, 2087179, none</column>
+<column name="grp_Filter2D_1_fu_40">Filter2D_1, 930659, 930659, 930659, 930659, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -50,7 +50,7 @@
 <column name="DSP">-, -, -, -</column>
 <column name="Expression">-, -, 0, 2</column>
 <column name="FIFO">-, -, -, -</column>
-<column name="Instance">3, 4, 514, 1025</column>
+<column name="Instance">3, 4, 511, 1016</column>
 <column name="Memory">-, -, -, -</column>
 <column name="Multiplexer">-, -, -, 51</column>
 <column name="Register">-, -, 5, -</column>
@@ -62,7 +62,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
-<column name="grp_Filter2D_1_fu_40">Filter2D_1, 3, 4, 514, 1025</column>
+<column name="grp_Filter2D_1_fu_40">Filter2D_1, 3, 4, 511, 1016</column>
 </table>
 </item>
 <item name = "DSP48"><table name="" hasTotal="0">

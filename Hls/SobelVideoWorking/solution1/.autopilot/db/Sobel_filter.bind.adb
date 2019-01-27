@@ -455,7 +455,7 @@
 						<rtlName></rtlName>
 						<coreName>FIFO</coreName>
 					</Obj>
-					<bitwidth>12</bitwidth>
+					<bitwidth>11</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -517,7 +517,7 @@
 						<rtlName></rtlName>
 						<coreName>FIFO</coreName>
 					</Obj>
-					<bitwidth>12</bitwidth>
+					<bitwidth>11</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -2649,8 +2649,8 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>2107098</mMinLatency>
-			<mMaxLatency>2107098</mMaxLatency>
+			<mMinLatency>943938</mMinLatency>
+			<mMaxLatency>943938</mMaxLatency>
 			<mIsDfPipe>1</mIsDfPipe>
 			<mDfPipe class_id="23" tracking_level="1" version="0" object_id="_149">
 				<port_list class_id="24" tracking_level="0" version="0">
@@ -3184,7 +3184,7 @@
 						<ssdmobj_id>18</ssdmobj_id>
 						<ctype>0</ctype>
 						<depth>2</depth>
-						<bitwidth>12</bitwidth>
+						<bitwidth>11</bitwidth>
 						<source class_id_reference="28" object_id="_267">
 							<port class_id_reference="29" object_id="_268">
 								<name>in</name>
@@ -3304,7 +3304,7 @@
 						<ssdmobj_id>16</ssdmobj_id>
 						<ctype>0</ctype>
 						<depth>2</depth>
-						<bitwidth>12</bitwidth>
+						<bitwidth>11</bitwidth>
 						<source class_id_reference="28" object_id="_292">
 							<port class_id_reference="29" object_id="_293">
 								<name>in</name>

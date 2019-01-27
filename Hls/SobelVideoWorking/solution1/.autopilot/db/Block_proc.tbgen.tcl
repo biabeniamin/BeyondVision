@@ -12,11 +12,11 @@ set isEnableWaveformDebug 1
 set C_modelName {Block__proc}
 set C_modelType { void 0 }
 set C_modelArgList {
-	{ img_0_rows_V_out int 12 regular {fifo 1}  }
+	{ img_0_rows_V_out int 11 regular {fifo 1}  }
 	{ img_0_cols_V_out int 12 regular {fifo 1}  }
 }
 set C_modelArgMapList {[ 
-	{ "Name" : "img_0_rows_V_out", "interface" : "fifo", "bitwidth" : 12, "direction" : "WRITEONLY"} , 
+	{ "Name" : "img_0_rows_V_out", "interface" : "fifo", "bitwidth" : 11, "direction" : "WRITEONLY"} , 
  	{ "Name" : "img_0_cols_V_out", "interface" : "fifo", "bitwidth" : 12, "direction" : "WRITEONLY"} ]}
 # RTL Port declarations: 
 set portNum 13
@@ -28,7 +28,7 @@ set portList {
 	{ ap_continue sc_in sc_logic 1 continue -1 } 
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
-	{ img_0_rows_V_out_din sc_out sc_lv 12 signal 0 } 
+	{ img_0_rows_V_out_din sc_out sc_lv 11 signal 0 } 
 	{ img_0_rows_V_out_full_n sc_in sc_logic 1 signal 0 } 
 	{ img_0_rows_V_out_write sc_out sc_logic 1 signal 0 } 
 	{ img_0_cols_V_out_din sc_out sc_lv 12 signal 1 } 
@@ -43,7 +43,7 @@ set NewPortList {[
  	{ "name": "ap_continue", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "continue", "bundle":{"name": "ap_continue", "role": "default" }} , 
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
- 	{ "name": "img_0_rows_V_out_din", "direction": "out", "datatype": "sc_lv", "bitwidth":12, "type": "signal", "bundle":{"name": "img_0_rows_V_out", "role": "din" }} , 
+ 	{ "name": "img_0_rows_V_out_din", "direction": "out", "datatype": "sc_lv", "bitwidth":11, "type": "signal", "bundle":{"name": "img_0_rows_V_out", "role": "din" }} , 
  	{ "name": "img_0_rows_V_out_full_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "img_0_rows_V_out", "role": "full_n" }} , 
  	{ "name": "img_0_rows_V_out_write", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "img_0_rows_V_out", "role": "write" }} , 
  	{ "name": "img_0_cols_V_out_din", "direction": "out", "datatype": "sc_lv", "bitwidth":12, "type": "signal", "bundle":{"name": "img_0_cols_V_out", "role": "din" }} , 
@@ -89,6 +89,6 @@ set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	img_0_rows_V_out { ap_fifo {  { img_0_rows_V_out_din fifo_data 1 12 }  { img_0_rows_V_out_full_n fifo_status 0 1 }  { img_0_rows_V_out_write fifo_update 1 1 } } }
+	img_0_rows_V_out { ap_fifo {  { img_0_rows_V_out_din fifo_data 1 11 }  { img_0_rows_V_out_full_n fifo_status 0 1 }  { img_0_rows_V_out_write fifo_update 1 1 } } }
 	img_0_cols_V_out { ap_fifo {  { img_0_cols_V_out_din fifo_data 1 12 }  { img_0_cols_V_out_full_n fifo_status 0 1 }  { img_0_cols_V_out_write fifo_update 1 1 } } }
 }
