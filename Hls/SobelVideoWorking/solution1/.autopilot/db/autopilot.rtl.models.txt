@@ -12,6 +12,8 @@ Sobel_filter_mac_qcK
 Sobel_filter_daddrcU
 Sobel_filter_dmulsc4
 Sobel_filter_sitotde
+fifo_w11_d2_A
+fifo_w12_d2_A
 fifo_w8_d2_A
 fifo_w8_d2_A
 fifo_w8_d2_A
@@ -27,10 +29,15 @@ fifo_w8_d2_A
 fifo_w8_d2_A
 fifo_w8_d2_A
 fifo_w8_d2_A
-start_for_Mat2AXIudo
-start_for_Mat2AXIvdy
-AXIvideo2Mat487
-Mat2AXIvideo514
+start_for_CvtColoudo
+start_for_Gaussiavdy
+start_for_DuplicawdI
+start_for_Sobel_U0
+start_for_Sobel_1xdS
+start_for_AddWeigyd2
+start_for_CvtColozec
+start_for_Mat2AXIAem
+Block_proc
 AXIvideo2Mat
 CvtColor_1
 Filter2D_1
@@ -42,5 +49,4 @@ Sobel_1
 AddWeighted
 CvtColor
 Mat2AXIvideo
-Block_proc304
 Sobel_filter

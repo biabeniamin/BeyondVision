@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'Filter2D'
 ================================================================
-* Date:           Thu Jan 31 20:48:28 2019
+* Date:           Thu Jan 31 21:48:23 2019
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        SobelVideoWorking
@@ -74,12 +74,12 @@
     +--------------------------+----------------------+---------+-------+---+----+
     |         Instance         |        Module        | BRAM_18K| DSP48E| FF| LUT|
     +--------------------------+----------------------+---------+-------+---+----+
-    |Sobel_filter_mux_hbi_U68  |Sobel_filter_mux_hbi  |        0|      0|  0|  15|
-    |Sobel_filter_mux_hbi_U69  |Sobel_filter_mux_hbi  |        0|      0|  0|  15|
-    |Sobel_filter_mux_hbi_U70  |Sobel_filter_mux_hbi  |        0|      0|  0|  15|
-    |Sobel_filter_mux_hbi_U71  |Sobel_filter_mux_hbi  |        0|      0|  0|  15|
-    |Sobel_filter_mux_hbi_U72  |Sobel_filter_mux_hbi  |        0|      0|  0|  15|
-    |Sobel_filter_mux_hbi_U73  |Sobel_filter_mux_hbi  |        0|      0|  0|  15|
+    |Sobel_filter_mux_hbi_U52  |Sobel_filter_mux_hbi  |        0|      0|  0|  15|
+    |Sobel_filter_mux_hbi_U53  |Sobel_filter_mux_hbi  |        0|      0|  0|  15|
+    |Sobel_filter_mux_hbi_U54  |Sobel_filter_mux_hbi  |        0|      0|  0|  15|
+    |Sobel_filter_mux_hbi_U55  |Sobel_filter_mux_hbi  |        0|      0|  0|  15|
+    |Sobel_filter_mux_hbi_U56  |Sobel_filter_mux_hbi  |        0|      0|  0|  15|
+    |Sobel_filter_mux_hbi_U57  |Sobel_filter_mux_hbi  |        0|      0|  0|  15|
     +--------------------------+----------------------+---------+-------+---+----+
     |Total                     |                      |        0|      0|  0|  90|
     +--------------------------+----------------------+---------+-------+---+----+
@@ -88,8 +88,8 @@
     +--------------------------+----------------------+--------------+
     |         Instance         |        Module        |  Expression  |
     +--------------------------+----------------------+--------------+
-    |Sobel_filter_mac_pcA_U74  |Sobel_filter_mac_pcA  | i0 + i1 * i2 |
-    |Sobel_filter_mac_qcK_U75  |Sobel_filter_mac_qcK  | i0 * i1 + i2 |
+    |Sobel_filter_mac_pcA_U58  |Sobel_filter_mac_pcA  | i0 + i1 * i2 |
+    |Sobel_filter_mac_qcK_U59  |Sobel_filter_mac_qcK  | i0 * i1 + i2 |
     +--------------------------+----------------------+--------------+
 
     * Memory: 
@@ -129,7 +129,7 @@
     |tmp7_fu_1191_p2                   |     +    |      0|  0|   8|           8|           8|
     |tmp8_fu_1141_p2                   |     +    |      0|  0|  15|           8|           8|
     |tmp_31_fu_622_p2                  |     +    |      0|  0|  10|           1|           2|
-    |tmp_37_fu_1084_p2                 |     +    |      0|  0|   8|           8|           8|
+    |tmp_38_fu_1084_p2                 |     +    |      0|  0|   8|           8|           8|
     |tmp_39_cast_fu_440_p2             |     +    |      0|  0|  10|           2|           2|
     |tmp_7_fu_434_p2                   |     +    |      0|  0|  18|           2|          11|
     |p_assign_1_fu_732_p2              |     -    |      0|  0|  19|           1|          12|
@@ -137,7 +137,7 @@
     |p_assign_7_fu_480_p2              |     -    |      0|  0|  18|           1|          11|
     |p_assign_8_fu_504_p2              |     -    |      0|  0|  12|           3|           2|
     |r_V_8_fu_1004_p2                  |     -    |      0|  0|  16|           1|           9|
-    |tmp_63_fu_590_p2                  |     -    |      0|  0|  12|           3|           2|
+    |tmp_62_fu_590_p2                  |     -    |      0|  0|  12|           3|           2|
     |ap_block_state8_pp0_stage0_iter5  |    and   |      0|  0|   2|           1|           1|
     |ap_condition_359                  |    and   |      0|  0|   2|           1|           1|
     |ap_condition_365                  |    and   |      0|  0|   2|           1|           1|
@@ -165,7 +165,7 @@
     |ap_block_state5_pp0_stage0_iter2  |    or    |      0|  0|   2|           1|           1|
     |brmerge_fu_804_p2                 |    or    |      0|  0|   2|           1|           1|
     |sel_tmp7_fu_780_p2                |    or    |      0|  0|   2|           1|           1|
-    |tmp_i_i_77_fu_1236_p2             |    or    |      0|  0|   2|           1|           1|
+    |tmp_i_i_91_fu_1236_p2             |    or    |      0|  0|   2|           1|           1|
     |col_buf_0_val_0_0_fu_859_p3       |  select  |      0|  0|   8|           1|           8|
     |col_buf_0_val_1_0_fu_878_p3       |  select  |      0|  0|   8|           1|           8|
     |col_buf_0_val_2_0_fu_897_p3       |  select  |      0|  0|   8|           1|           8|
@@ -180,8 +180,8 @@
     |src_kernel_win_0_va_25_fu_987_p3  |  select  |      0|  0|   8|           1|           8|
     |tmp_29_fu_608_p3                  |  select  |      0|  0|   2|           1|           2|
     |tmp_33_fu_646_p3                  |  select  |      0|  0|   2|           1|           2|
-    |tmp_35_fu_600_p3                  |  select  |      0|  0|   2|           1|           2|
-    |tmp_36_fu_638_p3                  |  select  |      0|  0|   2|           1|           2|
+    |tmp_36_fu_600_p3                  |  select  |      0|  0|   2|           1|           2|
+    |tmp_37_fu_638_p3                  |  select  |      0|  0|   2|           1|           2|
     |x_fu_792_p3                       |  select  |      0|  0|  13|           1|          13|
     |y_1_fu_570_p3                     |  select  |      0|  0|   2|           1|           2|
     |ap_enable_pp0                     |    xor   |      0|  0|   2|           1|           2|
@@ -194,7 +194,7 @@
     |tmp_18_not_fu_774_p2              |    xor   |      0|  0|   2|           1|           2|
     |tmp_27_fu_584_p2                  |    xor   |      0|  0|   3|           2|           3|
     |tmp_375_0_not_fu_390_p2           |    xor   |      0|  0|   2|           1|           2|
-    |tmp_65_fu_628_p2                  |    xor   |      0|  0|   2|           2|           2|
+    |tmp_64_fu_628_p2                  |    xor   |      0|  0|   2|           2|           2|
     |tmp_i_i_fu_1210_p2                |    xor   |      0|  0|   2|           1|           2|
     +----------------------------------+----------+-------+---+----+------------+------------+
     |Total                             |          |      0|  0| 847|         345|         474|
@@ -211,7 +211,7 @@
     |k_buf_0_val_5_d1           |  15|          3|    8|         24|
     |p_dst_data_stream_V_blk_n  |   9|          2|    1|          2|
     |p_src_data_stream_V_blk_n  |   9|          2|    1|          2|
-    |t_V_3_reg_333              |   9|          2|   11|         22|
+    |t_V_2_reg_333              |   9|          2|   11|         22|
     |t_V_reg_322                |   9|          2|   10|         20|
     +---------------------------+----+-----------+-----+-----------+
     |Total                      | 111|         23|   42|        103|
@@ -267,7 +267,7 @@
     |src_kernel_win_0_va_24_reg_1483     |   8|   0|    8|          0|
     |src_kernel_win_0_va_25_reg_1489     |   8|   0|    8|          0|
     |src_kernel_win_0_va_fu_160          |   8|   0|    8|          0|
-    |t_V_3_reg_333                       |  11|   0|   11|          0|
+    |t_V_2_reg_333                       |  11|   0|   11|          0|
     |t_V_reg_322                         |  10|   0|   10|          0|
     |tmp4_reg_1514                       |  11|   0|   11|          0|
     |tmp6_reg_1519                       |   8|   0|    8|          0|
@@ -276,9 +276,9 @@
     |tmp_375_0_not_reg_1384              |   1|   0|    1|          0|
     |tmp_3_reg_1402                      |   1|   0|    1|          0|
     |tmp_419_1_reg_1398                  |   1|   0|    1|          0|
-    |tmp_70_reg_1442                     |   2|   0|    2|          0|
-    |tmp_70_reg_1442_pp0_iter1_reg       |   2|   0|    2|          0|
-    |tmp_76_reg_1509                     |   8|   0|    8|          0|
+    |tmp_69_reg_1442                     |   2|   0|    2|          0|
+    |tmp_69_reg_1442_pp0_iter1_reg       |   2|   0|    2|          0|
+    |tmp_75_reg_1509                     |   8|   0|    8|          0|
     |tmp_s_reg_1380                      |   1|   0|    1|          0|
     |x_reg_1437                          |  13|   0|   13|          0|
     |exitcond388_i_reg_1424              |  64|  32|    1|          0|

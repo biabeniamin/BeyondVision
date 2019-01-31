@@ -19,12 +19,7 @@ RGB_IMAGE  img_6(MAX_HEIGHT, MAX_WIDTH);
 
 
 
-if(0 == enable)
-{
-#pragma HLS dataflow
-	hls::AXIvideo2Mat(INPUT_STREAM, img_0);
-	hls::Mat2AXIvideo(img_0, OUTPUT_STREAM);
-} else {
+
 #pragma HLS dataflow
 	hls::AXIvideo2Mat(INPUT_STREAM, img_0);
 	hls::CvtColor<HLS_BGR2GRAY>(img_0, img_1);
@@ -35,7 +30,7 @@ if(0 == enable)
 	hls::AddWeighted(img_4,0.5,img_3,0.5,0.0,img_5);
 	hls::CvtColor<HLS_GRAY2RGB>(img_5, img_6);
 	hls::Mat2AXIvideo(img_6, OUTPUT_STREAM);
-}
+
 /*
 if(0 == enable)
 {

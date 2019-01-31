@@ -11,10 +11,13 @@ module GaussianBlur (
         ap_clk,
         ap_rst,
         ap_start,
+        start_full_n,
         ap_done,
         ap_continue,
         ap_idle,
         ap_ready,
+        start_out,
+        start_write,
         p_src_data_stream_V_dout,
         p_src_data_stream_V_empty_n,
         p_src_data_stream_V_read,
@@ -29,10 +32,13 @@ parameter    ap_ST_fsm_state2 = 2'd2;
 input   ap_clk;
 input   ap_rst;
 input   ap_start;
+input   start_full_n;
 output   ap_done;
 input   ap_continue;
 output   ap_idle;
 output   ap_ready;
+output   start_out;
+output   start_write;
 input  [7:0] p_src_data_stream_V_dout;
 input   p_src_data_stream_V_empty_n;
 output   p_src_data_stream_V_read;
@@ -42,13 +48,16 @@ output   p_dst_data_stream_V_write;
 
 reg ap_done;
 reg ap_idle;
-reg ap_ready;
+reg start_write;
 reg p_src_data_stream_V_read;
 reg p_dst_data_stream_V_write;
 
+reg    real_start;
+reg    start_once_reg;
 reg    ap_done_reg;
 (* fsm_encoding = "none" *) reg   [1:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
+reg    internal_ap_ready;
 wire    grp_Filter2D_1_fu_40_ap_start;
 wire    grp_Filter2D_1_fu_40_ap_done;
 wire    grp_Filter2D_1_fu_40_ap_idle;
@@ -64,6 +73,7 @@ reg    ap_block_state1;
 
 // power-on initialization
 initial begin
+#0 start_once_reg = 1'b0;
 #0 ap_done_reg = 1'b0;
 #0 ap_CS_fsm = 2'd1;
 #0 grp_Filter2D_1_fu_40_ap_start_reg = 1'b0;
@@ -108,10 +118,22 @@ always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
         grp_Filter2D_1_fu_40_ap_start_reg <= 1'b0;
     end else begin
-        if ((~((ap_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
+        if ((~((real_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
             grp_Filter2D_1_fu_40_ap_start_reg <= 1'b1;
         end else if ((grp_Filter2D_1_fu_40_ap_ready == 1'b1)) begin
             grp_Filter2D_1_fu_40_ap_start_reg <= 1'b0;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst == 1'b1) begin
+        start_once_reg <= 1'b0;
+    end else begin
+        if (((internal_ap_ready == 1'b0) & (real_start == 1'b1))) begin
+            start_once_reg <= 1'b1;
+        end else if ((internal_ap_ready == 1'b1)) begin
+            start_once_reg <= 1'b0;
         end
     end
 end
@@ -125,7 +147,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_start == 1'b0) & (1'b1 == ap_CS_fsm_state1))) begin
+    if (((real_start == 1'b0) & (1'b1 == ap_CS_fsm_state1))) begin
         ap_idle = 1'b1;
     end else begin
         ap_idle = 1'b0;
@@ -134,9 +156,9 @@ end
 
 always @ (*) begin
     if (((grp_Filter2D_1_fu_40_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
-        ap_ready = 1'b1;
+        internal_ap_ready = 1'b1;
     end else begin
-        ap_ready = 1'b0;
+        internal_ap_ready = 1'b0;
     end
 end
 
@@ -157,9 +179,25 @@ always @ (*) begin
 end
 
 always @ (*) begin
+    if (((start_full_n == 1'b0) & (start_once_reg == 1'b0))) begin
+        real_start = 1'b0;
+    end else begin
+        real_start = ap_start;
+    end
+end
+
+always @ (*) begin
+    if (((start_once_reg == 1'b0) & (real_start == 1'b1))) begin
+        start_write = 1'b1;
+    end else begin
+        start_write = 1'b0;
+    end
+end
+
+always @ (*) begin
     case (ap_CS_fsm)
         ap_ST_fsm_state1 : begin
-            if ((~((ap_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
+            if ((~((real_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
                 ap_NS_fsm = ap_ST_fsm_state2;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state1;
@@ -183,15 +221,19 @@ assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 assign ap_CS_fsm_state2 = ap_CS_fsm[32'd1];
 
 always @ (*) begin
-    ap_block_state1 = ((ap_start == 1'b0) | (ap_done_reg == 1'b1));
+    ap_block_state1 = ((real_start == 1'b0) | (ap_done_reg == 1'b1));
 end
 
 always @ (*) begin
-    ap_block_state1_ignore_call2 = ((ap_start == 1'b0) | (ap_done_reg == 1'b1));
+    ap_block_state1_ignore_call2 = ((real_start == 1'b0) | (ap_done_reg == 1'b1));
 end
+
+assign ap_ready = internal_ap_ready;
 
 assign grp_Filter2D_1_fu_40_ap_start = grp_Filter2D_1_fu_40_ap_start_reg;
 
 assign p_dst_data_stream_V_din = grp_Filter2D_1_fu_40_p_dst_data_stream_V_din;
+
+assign start_out = real_start;
 
 endmodule //GaussianBlur

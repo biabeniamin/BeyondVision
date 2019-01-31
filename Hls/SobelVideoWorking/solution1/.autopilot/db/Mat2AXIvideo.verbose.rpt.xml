@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'Mat2AXIvideo'" level="0">
-<item name = "Date">Thu Jan 31 20:48:30 2019
+<item name = "Date">Thu Jan 31 21:48:26 2019
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">SobelVideoWorking</item>
@@ -124,7 +124,7 @@
 <column name="img_data_stream_0_V_blk_n">9, 2, 1, 2</column>
 <column name="img_data_stream_1_V_blk_n">9, 2, 1, 2</column>
 <column name="img_data_stream_2_V_blk_n">9, 2, 1, 2</column>
-<column name="t_V_2_reg_188">9, 2, 11, 22</column>
+<column name="t_V_1_reg_188">9, 2, 11, 22</column>
 <column name="t_V_reg_177">9, 2, 10, 20</column>
 </table>
 </item>
@@ -162,7 +162,7 @@
 <column name="exitcond_reg_270">1, 0, 1, 0</column>
 <column name="exitcond_reg_270_pp0_iter1_reg">1, 0, 1, 0</column>
 <column name="i_V_reg_265">10, 0, 10, 0</column>
-<column name="t_V_2_reg_188">11, 0, 11, 0</column>
+<column name="t_V_1_reg_188">11, 0, 11, 0</column>
 <column name="t_V_reg_177">10, 0, 10, 0</column>
 <column name="tmp_user_V_fu_126">1, 0, 1, 0</column>
 </table>

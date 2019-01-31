@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'AddWeighted'" level="0">
-<item name = "Date">Thu Jan 31 20:48:29 2019
+<item name = "Date">Thu Jan 31 21:48:25 2019
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">SobelVideoWorking</item>
@@ -63,12 +63,12 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
-<column name="Sobel_filter_daddrcU_U90">Sobel_filter_daddrcU, 0, 3, 509, 817</column>
-<column name="Sobel_filter_daddrcU_U91">Sobel_filter_daddrcU, 0, 3, 509, 817</column>
-<column name="Sobel_filter_dmulsc4_U92">Sobel_filter_dmulsc4, 0, 11, 317, 204</column>
-<column name="Sobel_filter_dmulsc4_U93">Sobel_filter_dmulsc4, 0, 11, 317, 204</column>
-<column name="Sobel_filter_sitotde_U94">Sobel_filter_sitotde, 0, 0, 412, 452</column>
-<column name="Sobel_filter_sitotde_U95">Sobel_filter_sitotde, 0, 0, 412, 452</column>
+<column name="Sobel_filter_daddrcU_U74">Sobel_filter_daddrcU, 0, 3, 509, 817</column>
+<column name="Sobel_filter_daddrcU_U75">Sobel_filter_daddrcU, 0, 3, 509, 817</column>
+<column name="Sobel_filter_dmulsc4_U76">Sobel_filter_dmulsc4, 0, 11, 317, 204</column>
+<column name="Sobel_filter_dmulsc4_U77">Sobel_filter_dmulsc4, 0, 11, 317, 204</column>
+<column name="Sobel_filter_sitotde_U78">Sobel_filter_sitotde, 0, 0, 412, 452</column>
+<column name="Sobel_filter_sitotde_U79">Sobel_filter_sitotde, 0, 0, 412, 452</column>
 </table>
 </item>
 <item name = "DSP48"><table name="" hasTotal="0">
@@ -199,7 +199,7 @@
 <column name="real_start">9, 2, 1, 2</column>
 <column name="src1_data_stream_V_blk_n">9, 2, 1, 2</column>
 <column name="src2_data_stream_V_blk_n">9, 2, 1, 2</column>
-<column name="t_V_5_reg_190">9, 2, 11, 22</column>
+<column name="t_V_4_reg_190">9, 2, 11, 22</column>
 <column name="t_V_reg_179">9, 2, 10, 20</column>
 </table>
 </item>
@@ -261,12 +261,11 @@
 <column name="sum_reg_1003">64, 0, 64, 0</column>
 <column name="t1_reg_988">64, 0, 64, 0</column>
 <column name="t2_reg_993">64, 0, 64, 0</column>
-<column name="t_V_5_reg_190">11, 0, 11, 0</column>
+<column name="t_V_4_reg_190">11, 0, 11, 0</column>
 <column name="t_V_reg_179">10, 0, 10, 0</column>
-<column name="tmp_101_reg_1086">1, 0, 1, 0</column>
-<column name="tmp_106_reg_1125">1, 0, 1, 0</column>
-<column name="tmp_107_reg_958">8, 0, 8, 0</column>
-<column name="tmp_108_reg_963">8, 0, 8, 0</column>
+<column name="tmp_101_reg_1125">1, 0, 1, 0</column>
+<column name="tmp_102_reg_958">8, 0, 8, 0</column>
+<column name="tmp_103_reg_963">8, 0, 8, 0</column>
 <column name="tmp_18_i_reg_1105">1, 0, 1, 0</column>
 <column name="tmp_23_i_reg_1130">1, 0, 1, 0</column>
 <column name="tmp_24_i_reg_1136">32, 0, 54, 22</column>
@@ -275,7 +274,8 @@
 <column name="tmp_43_i_reg_978">64, 0, 64, 0</column>
 <column name="tmp_45_i_reg_983">64, 0, 64, 0</column>
 <column name="tmp_46_i_reg_998">64, 0, 64, 0</column>
-<column name="tmp_97_reg_1080">8, 0, 8, 0</column>
+<column name="tmp_92_reg_1080">8, 0, 8, 0</column>
+<column name="tmp_96_reg_1086">1, 0, 1, 0</column>
 <column name="tmp_9_i_reg_1040">1, 0, 1, 0</column>
 <column name="tmp_i2_reg_1054">1, 0, 1, 0</column>
 <column name="tmp_i2_reg_1054_pp0_iter27_reg">1, 0, 1, 0</column>

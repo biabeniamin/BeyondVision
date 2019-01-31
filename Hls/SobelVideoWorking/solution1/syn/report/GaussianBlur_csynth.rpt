@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'GaussianBlur'
 ================================================================
-* Date:           Thu Jan 31 20:48:27 2019
+* Date:           Thu Jan 31 21:48:23 2019
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        SobelVideoWorking
@@ -58,10 +58,10 @@
 |FIFO             |        -|      -|       -|       -|
 |Instance         |        3|      4|     511|    1016|
 |Memory           |        -|      -|       -|       -|
-|Multiplexer      |        -|      -|       -|      42|
-|Register         |        -|      -|       4|       -|
+|Multiplexer      |        -|      -|       -|      51|
+|Register         |        -|      -|       5|       -|
 +-----------------+---------+-------+--------+--------+
-|Total            |        3|      4|     515|    1060|
+|Total            |        3|      4|     516|    1069|
 +-----------------+---------+-------+--------+--------+
 |Available        |      730|    740|  269200|  129000|
 +-----------------+---------+-------+--------+--------+
@@ -104,8 +104,9 @@
     |ap_done                    |   9|          2|    1|          2|
     |p_dst_data_stream_V_write  |   9|          2|    1|          2|
     |p_src_data_stream_V_read   |   9|          2|    1|          2|
+    |real_start                 |   9|          2|    1|          2|
     +---------------------------+----+-----------+-----+-----------+
-    |Total                      |  42|          9|    4|          9|
+    |Total                      |  51|         11|    5|         11|
     +---------------------------+----+-----------+-----+-----------+
 
     * Register: 
@@ -115,8 +116,9 @@
     |ap_CS_fsm                          |  2|   0|    2|          0|
     |ap_done_reg                        |  1|   0|    1|          0|
     |grp_Filter2D_1_fu_40_ap_start_reg  |  1|   0|    1|          0|
+    |start_once_reg                     |  1|   0|    1|          0|
     +-----------------------------------+---+----+-----+-----------+
-    |Total                              |  4|   0|    4|          0|
+    |Total                              |  5|   0|    5|          0|
     +-----------------------------------+---+----+-----+-----------+
 
 
@@ -131,10 +133,13 @@
 |ap_clk                       |  in |    1| ap_ctrl_hs |     GaussianBlur    | return value |
 |ap_rst                       |  in |    1| ap_ctrl_hs |     GaussianBlur    | return value |
 |ap_start                     |  in |    1| ap_ctrl_hs |     GaussianBlur    | return value |
+|start_full_n                 |  in |    1| ap_ctrl_hs |     GaussianBlur    | return value |
 |ap_done                      | out |    1| ap_ctrl_hs |     GaussianBlur    | return value |
 |ap_continue                  |  in |    1| ap_ctrl_hs |     GaussianBlur    | return value |
 |ap_idle                      | out |    1| ap_ctrl_hs |     GaussianBlur    | return value |
 |ap_ready                     | out |    1| ap_ctrl_hs |     GaussianBlur    | return value |
+|start_out                    | out |    1| ap_ctrl_hs |     GaussianBlur    | return value |
+|start_write                  | out |    1| ap_ctrl_hs |     GaussianBlur    | return value |
 |p_src_data_stream_V_dout     |  in |    8|   ap_fifo  | p_src_data_stream_V |    pointer   |
 |p_src_data_stream_V_empty_n  |  in |    1|   ap_fifo  | p_src_data_stream_V |    pointer   |
 |p_src_data_stream_V_read     | out |    1|   ap_fifo  | p_src_data_stream_V |    pointer   |
