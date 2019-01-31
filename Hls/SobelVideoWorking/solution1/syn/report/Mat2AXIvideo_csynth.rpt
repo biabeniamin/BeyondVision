@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'Mat2AXIvideo'
 ================================================================
-* Date:           Thu Jan 31 19:55:21 2019
+* Date:           Thu Jan 31 20:24:13 2019
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        SobelVideoWorking
@@ -59,10 +59,10 @@
 |FIFO             |        -|      -|       -|       -|
 |Instance         |        -|      -|       -|       -|
 |Memory           |        -|      -|       -|       -|
-|Multiplexer      |        -|      -|       -|     258|
-|Register         |        -|      -|     281|       -|
+|Multiplexer      |        -|      -|       -|     267|
+|Register         |        -|      -|     282|       -|
 +-----------------+---------+-------+--------+--------+
-|Total            |        0|      0|     281|     487|
+|Total            |        0|      0|     282|     496|
 +-----------------+---------+-------+--------+--------+
 |Available        |      730|    740|  269200|  129000|
 +-----------------+---------+-------+--------+--------+
@@ -102,8 +102,8 @@
     |AXI_video_strm_V_last_V_1_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
     |AXI_video_strm_V_user_V_1_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
     |axi_last_V_fu_282_p2                      |   icmp   |      0|  0|  21|          33|          33|
-    |exitcond1_i_fu_256_p2                     |   icmp   |      0|  0|  18|          32|          32|
-    |exitcond_i_fu_267_p2                      |   icmp   |      0|  0|  18|          32|          32|
+    |exitcond2_fu_256_p2                       |   icmp   |      0|  0|  18|          32|          32|
+    |exitcond_fu_267_p2                        |   icmp   |      0|  0|  18|          32|          32|
     |ap_block_pp0_stage0_11001                 |    or    |      0|  0|   2|           1|           1|
     |ap_block_state1                           |    or    |      0|  0|   2|           1|           1|
     |ap_block_state2                           |    or    |      0|  0|   2|           1|           1|
@@ -138,10 +138,11 @@
     |img_data_stream_1_V_blk_n           |   9|          2|    1|          2|
     |img_data_stream_2_V_blk_n           |   9|          2|    1|          2|
     |img_rows_V_blk_n                    |   9|          2|    1|          2|
+    |real_start                          |   9|          2|    1|          2|
     |t_V_1_reg_222                       |   9|          2|   32|         64|
     |t_V_reg_211                         |   9|          2|   32|         64|
     +------------------------------------+----+-----------+-----+-----------+
-    |Total                               | 258|         54|  114|        245|
+    |Total                               | 267|         56|  115|        247|
     +------------------------------------+----+-----------+-----+-----------+
 
     * Register: 
@@ -178,16 +179,17 @@
     |ap_enable_reg_pp0_iter2              |   1|   0|    1|          0|
     |axi_last_V_reg_347                   |   1|   0|    1|          0|
     |cols_V_reg_319                       |  32|   0|   32|          0|
-    |exitcond_i_reg_338                   |   1|   0|    1|          0|
-    |exitcond_i_reg_338_pp0_iter1_reg     |   1|   0|    1|          0|
+    |exitcond_reg_338                     |   1|   0|    1|          0|
+    |exitcond_reg_338_pp0_iter1_reg       |   1|   0|    1|          0|
     |i_V_reg_333                          |  32|   0|   32|          0|
     |r_V_reg_324                          |  33|   0|   33|          0|
     |rows_V_reg_314                       |  32|   0|   32|          0|
+    |start_once_reg                       |   1|   0|    1|          0|
     |t_V_1_reg_222                        |  32|   0|   32|          0|
     |t_V_reg_211                          |  32|   0|   32|          0|
     |tmp_user_V_fu_148                    |   1|   0|    1|          0|
     +-------------------------------------+----+----+-----+-----------+
-    |Total                                | 281|   0|  281|          0|
+    |Total                                | 282|   0|  282|          0|
     +-------------------------------------+----+----+-----+-----------+
 
 
@@ -202,10 +204,13 @@
 |ap_clk                       |  in |    1| ap_ctrl_hs |       Mat2AXIvideo      | return value |
 |ap_rst                       |  in |    1| ap_ctrl_hs |       Mat2AXIvideo      | return value |
 |ap_start                     |  in |    1| ap_ctrl_hs |       Mat2AXIvideo      | return value |
+|start_full_n                 |  in |    1| ap_ctrl_hs |       Mat2AXIvideo      | return value |
 |ap_done                      | out |    1| ap_ctrl_hs |       Mat2AXIvideo      | return value |
 |ap_continue                  |  in |    1| ap_ctrl_hs |       Mat2AXIvideo      | return value |
 |ap_idle                      | out |    1| ap_ctrl_hs |       Mat2AXIvideo      | return value |
 |ap_ready                     | out |    1| ap_ctrl_hs |       Mat2AXIvideo      | return value |
+|start_out                    | out |    1| ap_ctrl_hs |       Mat2AXIvideo      | return value |
+|start_write                  | out |    1| ap_ctrl_hs |       Mat2AXIvideo      | return value |
 |img_rows_V_dout              |  in |   11|   ap_fifo  |        img_rows_V       |    pointer   |
 |img_rows_V_empty_n           |  in |    1|   ap_fifo  |        img_rows_V       |    pointer   |
 |img_rows_V_read              | out |    1|   ap_fifo  |        img_rows_V       |    pointer   |

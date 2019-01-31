@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'AXIvideo2Mat'" level="0">
-<item name = "Date">Thu Jan 31 19:55:21 2019
+<item name = "Date">Thu Jan 31 20:24:12 2019
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">SobelVideoWorking</item>
@@ -55,8 +55,8 @@
 <column name="FIFO">-, -, -, -</column>
 <column name="Instance">-, -, -, -</column>
 <column name="Memory">-, -, -, -</column>
-<column name="Multiplexer">-, -, -, 377</column>
-<column name="Register">-, -, 345, -</column>
+<column name="Multiplexer">-, -, -, 368</column>
+<column name="Register">-, -, 344, -</column>
 <specialColumn name="Available">730, 740, 269200, 129000</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, ~0</specialColumn>
 </table>
@@ -92,12 +92,12 @@
 <column name="ap_block_pp1_stage0_01001">and, 0, 0, 2, 1, 1</column>
 <column name="ap_block_pp2_stage0_11001">and, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state9_pp2_stage0_iter1">and, 0, 0, 2, 1, 1</column>
-<column name="ap_condition_529">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_515">and, 0, 0, 2, 1, 1</column>
 <column name="ap_predicate_op73_read_state6">and, 0, 0, 2, 1, 1</column>
 <column name="AXI_video_strm_V_data_V_0_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
 <column name="AXI_video_strm_V_last_V_0_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
 <column name="AXI_video_strm_V_user_V_0_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
-<column name="exitcond2_i_fu_416_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="exitcond4_i_fu_416_p2">icmp, 0, 0, 18, 32, 32</column>
 <column name="exitcond_i_fu_427_p2">icmp, 0, 0, 18, 32, 32</column>
 <column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state6_pp1_stage0_iter1">or, 0, 0, 2, 1, 1</column>
@@ -139,8 +139,7 @@
 <column name="img_data_stream_2_V_blk_n">9, 2, 1, 2</column>
 <column name="img_rows_V_blk_n">9, 2, 1, 2</column>
 <column name="img_rows_V_out_blk_n">9, 2, 1, 2</column>
-<column name="real_start">9, 2, 1, 2</column>
-<column name="t_V_2_reg_284">9, 2, 32, 64</column>
+<column name="t_V_5_reg_284">9, 2, 32, 64</column>
 <column name="t_V_reg_273">9, 2, 32, 64</column>
 </table>
 </item>
@@ -182,8 +181,7 @@
 <column name="i_V_reg_513">32, 0, 32, 0</column>
 <column name="rows_V_reg_479">32, 0, 32, 0</column>
 <column name="sof_1_i_fu_182">1, 0, 1, 0</column>
-<column name="start_once_reg">1, 0, 1, 0</column>
-<column name="t_V_2_reg_284">32, 0, 32, 0</column>
+<column name="t_V_5_reg_284">32, 0, 32, 0</column>
 <column name="t_V_reg_273">32, 0, 32, 0</column>
 <column name="tmp_data_V_reg_489">24, 0, 24, 0</column>
 <column name="tmp_last_V_reg_497">1, 0, 1, 0</column>
@@ -199,13 +197,10 @@
 <column name="ap_clk">in, 1, ap_ctrl_hs, AXIvideo2Mat, return value</column>
 <column name="ap_rst">in, 1, ap_ctrl_hs, AXIvideo2Mat, return value</column>
 <column name="ap_start">in, 1, ap_ctrl_hs, AXIvideo2Mat, return value</column>
-<column name="start_full_n">in, 1, ap_ctrl_hs, AXIvideo2Mat, return value</column>
 <column name="ap_done">out, 1, ap_ctrl_hs, AXIvideo2Mat, return value</column>
 <column name="ap_continue">in, 1, ap_ctrl_hs, AXIvideo2Mat, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, AXIvideo2Mat, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, AXIvideo2Mat, return value</column>
-<column name="start_out">out, 1, ap_ctrl_hs, AXIvideo2Mat, return value</column>
-<column name="start_write">out, 1, ap_ctrl_hs, AXIvideo2Mat, return value</column>
 <column name="INPUT_STREAM_TDATA">in, 24, axis, AXI_video_strm_V_data_V, pointer</column>
 <column name="INPUT_STREAM_TVALID">in, 1, axis, AXI_video_strm_V_dest_V, pointer</column>
 <column name="INPUT_STREAM_TREADY">out, 1, axis, AXI_video_strm_V_dest_V, pointer</column>

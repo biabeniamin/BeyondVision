@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'Sobel_filter'" level="0">
-<item name = "Date">Thu Jan 31 19:55:21 2019
+<item name = "Date">Thu Jan 31 20:24:12 2019
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">SobelVideoWorking</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 7.816, 1.25</column>
+<column name="ap_clk">10.00, 11.000, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,16 +24,16 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">5, 926644, 4, 926644, dataflow</column>
+<column name="">943938, 943938, 943922, 943922, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_AXIvideo2Mat_fu_208">AXIvideo2Mat, 3, 926643, 3, 926643, none</column>
-<column name="grp_Mat2AXIvideo_fu_233">Mat2AXIvideo, 1, 924481, 1, 924481, none</column>
-<column name="StgValue_14_Block_proc_fu_256">Block_proc, 0, 0, 0, 0, none</column>
+<column name="grp_Block_proc304305_fu_278">Block_proc304305, 943934, 943934, 943922, 943922, dataflow</column>
+<column name="grp_AXIvideo2Mat_fu_304">AXIvideo2Mat, 3, 926643, 3, 926643, none</column>
+<column name="StgValue_18_Block_proc467_fu_329">Block_proc467, 0, 0, 0, 0, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
