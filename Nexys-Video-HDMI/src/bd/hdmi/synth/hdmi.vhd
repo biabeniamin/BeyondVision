@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Thu Jan 31 20:51:48 2019
+--Date        : Thu Jan 31 21:15:51 2019
 --Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
 --Command     : generate_target hdmi.bd
 --Design      : hdmi
@@ -6680,7 +6680,7 @@ entity hdmi is
     usb_uart_txd : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of hdmi : entity is "hdmi,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=hdmi,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=64,numReposBlks=44,numNonXlnxBlks=3,numHierBlks=20,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_board_cnt=1,da_clkrst_cnt=7,synth_mode=Global}";
+  attribute CORE_GENERATION_INFO of hdmi : entity is "hdmi,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=hdmi,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=65,numReposBlks=45,numNonXlnxBlks=3,numHierBlks=20,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_board_cnt=1,da_clkrst_cnt=7,synth_mode=Global}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of hdmi : entity is "hdmi.hwdef";
 end hdmi;
@@ -7478,6 +7478,11 @@ architecture STRUCTURE of hdmi is
     ap_idle : out STD_LOGIC
   );
   end component hdmi_Sobel_filter_0_0;
+  component hdmi_xlconstant_1_0 is
+  port (
+    dout : out STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component hdmi_xlconstant_1_0;
   signal Net : STD_LOGIC_VECTOR ( 0 to 0 );
   signal SYS_Rst_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal Sobel_filter_0_OUTPUT_STREAM_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
@@ -7591,7 +7596,6 @@ architecture STRUCTURE of hdmi is
   signal dvi2rgb_0_RGB_HSYNC : STD_LOGIC;
   signal dvi2rgb_0_RGB_VSYNC : STD_LOGIC;
   signal dvi2rgb_0_aPixelClkLckd : STD_LOGIC;
-  signal enable_V_0_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal microblaze_0_M_AXI_DC_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal microblaze_0_M_AXI_DC_ARBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal microblaze_0_M_AXI_DC_ARCACHE : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -7929,6 +7933,7 @@ architecture STRUCTURE of hdmi is
   signal v_vid_in_axi4s_0_vtiming_out_HSYNC : STD_LOGIC;
   signal v_vid_in_axi4s_0_vtiming_out_VSYNC : STD_LOGIC;
   signal xlconstant_0_dout : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal xlconstant_1_dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_Sobel_filter_0_ap_done_UNCONNECTED : STD_LOGIC;
   signal NLW_Sobel_filter_0_ap_idle_UNCONNECTED : STD_LOGIC;
   signal NLW_Sobel_filter_0_ap_ready_UNCONNECTED : STD_LOGIC;
@@ -8066,7 +8071,6 @@ begin
   axi_uartlite_0_UART_RxD <= usb_uart_rxd;
   dvi2rgb_0_DDC_SCL_I <= DDC_scl_i;
   dvi2rgb_0_DDC_SDA_I <= DDC_sda_i;
-  enable_V_0_1(0) <= enable(0);
   hdmi_hpd(0) <= axi_gpio_video_gpio_io_o(0);
   hdmi_rx_txen(0) <= xlconstant_0_dout(0);
   reset_1 <= reset;
@@ -8098,7 +8102,7 @@ Sobel_filter_0: component hdmi_Sobel_filter_0_0
       ap_ready => NLW_Sobel_filter_0_ap_ready_UNCONNECTED,
       ap_rst_n => Net(0),
       ap_start => axi_gpio_0_gpio2_io_o(0),
-      enable_V(0) => enable_V_0_1(0)
+      enable_V(0) => xlconstant_1_dout(0)
     );
 axi_dynclk_0: component hdmi_axi_dynclk_0_0
      port map (
@@ -9254,5 +9258,9 @@ v_vid_in_axi4s_0: component hdmi_v_vid_in_axi4s_0_0
 xlconstant_0: component hdmi_xlconstant_0_0
      port map (
       dout(0) => xlconstant_0_dout(0)
+    );
+xlconstant_1: component hdmi_xlconstant_1_0
+     port map (
+      dout(0) => xlconstant_1_dout(0)
     );
 end STRUCTURE;
