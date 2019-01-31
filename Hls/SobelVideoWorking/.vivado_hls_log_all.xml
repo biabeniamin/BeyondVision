@@ -69,7 +69,11 @@
       </synLog>
       <simLog/>
       <mgLog/>
-      <packageLog/>
+      <packageLog>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'Sobel_filter_ap_sitodp_4_no_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="SobelVideoWorking" solutionName="solution1" date="2019-01-31T19:16:06.841+0200" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'Sobel_filter_ap_dmul_4_max_dsp_64' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="SobelVideoWorking" solutionName="solution1" date="2019-01-31T19:16:05.253+0200" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'Sobel_filter_ap_dadd_4_full_dsp_64' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="SobelVideoWorking" solutionName="solution1" date="2019-01-31T19:16:02.950+0200" type="Warning"/>
+      </packageLog>
       <csimLog/>
     </logs>
   </warningLogs>
