@@ -1092,7 +1092,7 @@
             <Obj>
               <type>0</type>
               <id>56</id>
-              <name>exitcond4_i</name>
+              <name>exitcond2_i</name>
               <fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>71</lineNumber>
@@ -1116,7 +1116,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>exitcond4_i_fu_416_p2</rtlName>
+              <rtlName>exitcond2_i_fu_416_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -1358,7 +1358,7 @@
             <Obj>
               <type>0</type>
               <id>67</id>
-              <name>t_V_5</name>
+              <name>t_V_2</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -1718,7 +1718,7 @@
             <Obj>
               <type>0</type>
               <id>81</id>
-              <name>empty_113</name>
+              <name>empty_31</name>
               <fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>81</lineNumber>
@@ -2012,7 +2012,7 @@
             <Obj>
               <type>0</type>
               <id>89</id>
-              <name>tmp_40</name>
+              <name>tmp_2</name>
               <fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_axi_io.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>49</lineNumber>
@@ -2067,7 +2067,7 @@
             <Obj>
               <type>0</type>
               <id>90</id>
-              <name>tmp_108</name>
+              <name>tmp_3</name>
               <fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_axi_io.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>49</lineNumber>
@@ -2578,7 +2578,7 @@
             <Obj>
               <type>0</type>
               <id>112</id>
-              <name>empty_116</name>
+              <name>empty_34</name>
               <fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>100</lineNumber>
@@ -5906,7 +5906,7 @@
           </second>
         </item>
         <item>
-          <first>ap_condition_515 ( and ) </first>
+          <first>ap_condition_529 ( and ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -6021,7 +6021,7 @@
           </second>
         </item>
         <item>
-          <first>exitcond4_i_fu_416_p2 ( icmp ) </first>
+          <first>exitcond2_i_fu_416_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -6122,7 +6122,7 @@
         <item_version>0</item_version>
       </dp_memory_resource>
       <dp_multiplexer_resource>
-        <count>33</count>
+        <count>34</count>
         <item_version>0</item_version>
         <item>
           <first>AXI_video_strm_V_data_V_0_data_out</first>
@@ -6838,7 +6838,30 @@
           </second>
         </item>
         <item>
-          <first>t_V_5_reg_284</first>
+          <first>real_start</first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0Size)</first>
+              <second>2</second>
+            </item>
+            <item>
+              <first>(1Bits)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(2Count)</first>
+              <second>2</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>9</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>t_V_2_reg_284</first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -6885,7 +6908,7 @@
         </item>
       </dp_multiplexer_resource>
       <dp_register_resource>
-        <count>40</count>
+        <count>41</count>
         <item_version>0</item_version>
         <item>
           <first>AXI_video_strm_V_data_V_0_payload_A</first>
@@ -7572,7 +7595,26 @@
           </second>
         </item>
         <item>
-          <first>t_V_5_reg_284</first>
+          <first>start_once_reg</first>
+          <second>
+            <count>3</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(Bits)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(Consts)</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>1</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>t_V_2_reg_284</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -7668,7 +7710,7 @@
           </second>
         </item>
         <item>
-          <first>exitcond4_i_fu_416_p2 ( icmp ) </first>
+          <first>exitcond2_i_fu_416_p2 ( icmp ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -8253,7 +8295,7 @@
         <pipe_depth>2</pipe_depth>
       </item>
       <item class_id_reference="50" object_id="_387">
-        <region_name>hls_label_2</region_name>
+        <region_name>hls_label_0</region_name>
         <basic_blocks>
           <count>1</count>
           <item_version>0</item_version>
@@ -8692,7 +8734,7 @@
         </second>
       </item>
       <item>
-        <first>exitcond4_i_fu_416</first>
+        <first>exitcond2_i_fu_416</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -8768,7 +8810,7 @@
         </second>
       </item>
       <item>
-        <first>t_V_5_phi_fu_288</first>
+        <first>t_V_2_phi_fu_288</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -8784,19 +8826,19 @@
         </second>
       </item>
       <item>
-        <first>tmp_108_fu_468</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>90</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_40_fu_457</first>
+        <first>tmp_2_fu_457</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
           <item>89</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_3_fu_468</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>90</item>
         </second>
       </item>
       <item>
@@ -9212,7 +9254,7 @@
         </second>
       </item>
       <item>
-        <first>exitcond4_i_reg_509</first>
+        <first>exitcond2_i_reg_509</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -9268,7 +9310,7 @@
         </second>
       </item>
       <item>
-        <first>t_V_5_reg_284</first>
+        <first>t_V_2_reg_284</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -9500,7 +9542,7 @@
         </second>
       </item>
       <item>
-        <first>t_V_5_reg_284</first>
+        <first>t_V_2_reg_284</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

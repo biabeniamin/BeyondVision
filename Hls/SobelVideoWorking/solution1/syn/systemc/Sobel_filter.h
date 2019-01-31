@@ -11,16 +11,13 @@
 #include "systemc.h"
 #include "AESL_pkg.h"
 
-#include "Block_proc467.h"
+#include "Block_proc.h"
 #include "AXIvideo2Mat.h"
-#include "Block_proc304305.h"
+#include "Mat2AXIvideo.h"
 #include "fifo_w11_d2_A.h"
 #include "fifo_w12_d2_A.h"
-#include "fifo_w11_d3_A.h"
-#include "fifo_w12_d3_A.h"
-#include "fifo_w1_d3_A.h"
-#include "fifo_w8_d2_A_x.h"
-#include "start_for_Block_pzec.h"
+#include "fifo_w8_d2_A.h"
+#include "start_for_Mat2AXIbkb.h"
 
 namespace ap_rtl {
 
@@ -43,12 +40,12 @@ struct Sobel_filter : public sc_module {
     sc_in< sc_lv<1> > enable_V;
     sc_in_clk ap_clk;
     sc_in< sc_logic > ap_rst_n;
+    sc_in< sc_logic > ap_start;
     sc_in< sc_logic > INPUT_STREAM_TVALID;
     sc_out< sc_logic > INPUT_STREAM_TREADY;
     sc_out< sc_logic > OUTPUT_STREAM_TVALID;
     sc_in< sc_logic > OUTPUT_STREAM_TREADY;
     sc_out< sc_logic > ap_done;
-    sc_in< sc_logic > ap_start;
     sc_out< sc_logic > ap_ready;
     sc_out< sc_logic > ap_idle;
     sc_signal< sc_logic > ap_var_for_const0;
@@ -64,43 +61,34 @@ struct Sobel_filter : public sc_module {
 
     ofstream mHdltvinHandle;
     ofstream mHdltvoutHandle;
-    Block_proc467* Block_proc467_U0;
+    Block_proc* Block_proc_U0;
     AXIvideo2Mat* AXIvideo2Mat_U0;
-    Block_proc304305* Block_proc304305_U0;
+    Mat2AXIvideo* Mat2AXIvideo_U0;
     fifo_w11_d2_A* img_0_rows_V_c_U;
     fifo_w12_d2_A* img_0_cols_V_c_U;
-    fifo_w11_d3_A* img_6_rows_V_c_U;
-    fifo_w12_d3_A* img_6_cols_V_c_U;
-    fifo_w1_d3_A* enable_V_c_U;
-    fifo_w8_d2_A_x* img_0_data_stream_0_U;
-    fifo_w8_d2_A_x* img_0_data_stream_1_U;
-    fifo_w8_d2_A_x* img_0_data_stream_2_U;
-    fifo_w11_d2_A* img_0_rows_V_c25_U;
-    fifo_w12_d2_A* img_0_cols_V_c26_U;
-    start_for_Block_pzec* start_for_Block_pzec_U;
+    fifo_w8_d2_A* img_0_data_stream_0_U;
+    fifo_w8_d2_A* img_0_data_stream_1_U;
+    fifo_w8_d2_A* img_0_data_stream_2_U;
+    fifo_w11_d2_A* img_0_rows_V_c4_U;
+    fifo_w12_d2_A* img_0_cols_V_c5_U;
+    start_for_Mat2AXIbkb* start_for_Mat2AXIbkb_U;
     sc_signal< sc_logic > ap_rst_n_inv;
-    sc_signal< sc_logic > Block_proc467_U0_ap_start;
-    sc_signal< sc_logic > Block_proc467_U0_ap_done;
-    sc_signal< sc_logic > Block_proc467_U0_ap_continue;
-    sc_signal< sc_logic > Block_proc467_U0_ap_idle;
-    sc_signal< sc_logic > Block_proc467_U0_ap_ready;
-    sc_signal< sc_logic > Block_proc467_U0_start_out;
-    sc_signal< sc_logic > Block_proc467_U0_start_write;
-    sc_signal< sc_lv<11> > Block_proc467_U0_img_0_rows_V_out_din;
-    sc_signal< sc_logic > Block_proc467_U0_img_0_rows_V_out_write;
-    sc_signal< sc_lv<12> > Block_proc467_U0_img_0_cols_V_out_din;
-    sc_signal< sc_logic > Block_proc467_U0_img_0_cols_V_out_write;
-    sc_signal< sc_lv<11> > Block_proc467_U0_img_6_rows_V_out_din;
-    sc_signal< sc_logic > Block_proc467_U0_img_6_rows_V_out_write;
-    sc_signal< sc_lv<12> > Block_proc467_U0_img_6_cols_V_out_din;
-    sc_signal< sc_logic > Block_proc467_U0_img_6_cols_V_out_write;
-    sc_signal< sc_lv<1> > Block_proc467_U0_enable_V_out_din;
-    sc_signal< sc_logic > Block_proc467_U0_enable_V_out_write;
+    sc_signal< sc_logic > Block_proc_U0_ap_start;
+    sc_signal< sc_logic > Block_proc_U0_ap_done;
+    sc_signal< sc_logic > Block_proc_U0_ap_continue;
+    sc_signal< sc_logic > Block_proc_U0_ap_idle;
+    sc_signal< sc_logic > Block_proc_U0_ap_ready;
+    sc_signal< sc_lv<11> > Block_proc_U0_img_0_rows_V_out_din;
+    sc_signal< sc_logic > Block_proc_U0_img_0_rows_V_out_write;
+    sc_signal< sc_lv<12> > Block_proc_U0_img_0_cols_V_out_din;
+    sc_signal< sc_logic > Block_proc_U0_img_0_cols_V_out_write;
     sc_signal< sc_logic > AXIvideo2Mat_U0_ap_start;
     sc_signal< sc_logic > AXIvideo2Mat_U0_ap_done;
     sc_signal< sc_logic > AXIvideo2Mat_U0_ap_continue;
     sc_signal< sc_logic > AXIvideo2Mat_U0_ap_idle;
     sc_signal< sc_logic > AXIvideo2Mat_U0_ap_ready;
+    sc_signal< sc_logic > AXIvideo2Mat_U0_start_out;
+    sc_signal< sc_logic > AXIvideo2Mat_U0_start_write;
     sc_signal< sc_logic > AXIvideo2Mat_U0_INPUT_STREAM_TREADY;
     sc_signal< sc_logic > AXIvideo2Mat_U0_img_rows_V_read;
     sc_signal< sc_logic > AXIvideo2Mat_U0_img_cols_V_read;
@@ -114,27 +102,24 @@ struct Sobel_filter : public sc_module {
     sc_signal< sc_logic > AXIvideo2Mat_U0_img_rows_V_out_write;
     sc_signal< sc_lv<12> > AXIvideo2Mat_U0_img_cols_V_out_din;
     sc_signal< sc_logic > AXIvideo2Mat_U0_img_cols_V_out_write;
-    sc_signal< sc_logic > Block_proc304305_U0_enable_V_read;
-    sc_signal< sc_logic > Block_proc304305_U0_img_0_rows_V_read;
-    sc_signal< sc_logic > Block_proc304305_U0_img_0_cols_V_read;
-    sc_signal< sc_logic > Block_proc304305_U0_img_0_data_stream_0_V_read;
-    sc_signal< sc_logic > Block_proc304305_U0_img_0_data_stream_1_V_read;
-    sc_signal< sc_logic > Block_proc304305_U0_img_0_data_stream_2_V_read;
-    sc_signal< sc_lv<24> > Block_proc304305_U0_OUTPUT_STREAM_TDATA;
-    sc_signal< sc_lv<3> > Block_proc304305_U0_OUTPUT_STREAM_TKEEP;
-    sc_signal< sc_lv<3> > Block_proc304305_U0_OUTPUT_STREAM_TSTRB;
-    sc_signal< sc_lv<1> > Block_proc304305_U0_OUTPUT_STREAM_TUSER;
-    sc_signal< sc_lv<1> > Block_proc304305_U0_OUTPUT_STREAM_TLAST;
-    sc_signal< sc_lv<1> > Block_proc304305_U0_OUTPUT_STREAM_TID;
-    sc_signal< sc_lv<1> > Block_proc304305_U0_OUTPUT_STREAM_TDEST;
-    sc_signal< sc_logic > Block_proc304305_U0_img_6_rows_V_read;
-    sc_signal< sc_logic > Block_proc304305_U0_img_6_cols_V_read;
-    sc_signal< sc_logic > Block_proc304305_U0_OUTPUT_STREAM_TVALID;
-    sc_signal< sc_logic > Block_proc304305_U0_ap_done;
-    sc_signal< sc_logic > Block_proc304305_U0_ap_start;
-    sc_signal< sc_logic > Block_proc304305_U0_ap_ready;
-    sc_signal< sc_logic > Block_proc304305_U0_ap_idle;
-    sc_signal< sc_logic > Block_proc304305_U0_ap_continue;
+    sc_signal< sc_logic > Mat2AXIvideo_U0_ap_start;
+    sc_signal< sc_logic > Mat2AXIvideo_U0_ap_done;
+    sc_signal< sc_logic > Mat2AXIvideo_U0_ap_continue;
+    sc_signal< sc_logic > Mat2AXIvideo_U0_ap_idle;
+    sc_signal< sc_logic > Mat2AXIvideo_U0_ap_ready;
+    sc_signal< sc_logic > Mat2AXIvideo_U0_img_rows_V_read;
+    sc_signal< sc_logic > Mat2AXIvideo_U0_img_cols_V_read;
+    sc_signal< sc_logic > Mat2AXIvideo_U0_img_data_stream_0_V_read;
+    sc_signal< sc_logic > Mat2AXIvideo_U0_img_data_stream_1_V_read;
+    sc_signal< sc_logic > Mat2AXIvideo_U0_img_data_stream_2_V_read;
+    sc_signal< sc_lv<24> > Mat2AXIvideo_U0_OUTPUT_STREAM_TDATA;
+    sc_signal< sc_logic > Mat2AXIvideo_U0_OUTPUT_STREAM_TVALID;
+    sc_signal< sc_lv<3> > Mat2AXIvideo_U0_OUTPUT_STREAM_TKEEP;
+    sc_signal< sc_lv<3> > Mat2AXIvideo_U0_OUTPUT_STREAM_TSTRB;
+    sc_signal< sc_lv<1> > Mat2AXIvideo_U0_OUTPUT_STREAM_TUSER;
+    sc_signal< sc_lv<1> > Mat2AXIvideo_U0_OUTPUT_STREAM_TLAST;
+    sc_signal< sc_lv<1> > Mat2AXIvideo_U0_OUTPUT_STREAM_TID;
+    sc_signal< sc_lv<1> > Mat2AXIvideo_U0_OUTPUT_STREAM_TDEST;
     sc_signal< sc_logic > ap_sync_continue;
     sc_signal< sc_logic > img_0_rows_V_c_full_n;
     sc_signal< sc_lv<11> > img_0_rows_V_c_dout;
@@ -142,15 +127,6 @@ struct Sobel_filter : public sc_module {
     sc_signal< sc_logic > img_0_cols_V_c_full_n;
     sc_signal< sc_lv<12> > img_0_cols_V_c_dout;
     sc_signal< sc_logic > img_0_cols_V_c_empty_n;
-    sc_signal< sc_logic > img_6_rows_V_c_full_n;
-    sc_signal< sc_lv<11> > img_6_rows_V_c_dout;
-    sc_signal< sc_logic > img_6_rows_V_c_empty_n;
-    sc_signal< sc_logic > img_6_cols_V_c_full_n;
-    sc_signal< sc_lv<12> > img_6_cols_V_c_dout;
-    sc_signal< sc_logic > img_6_cols_V_c_empty_n;
-    sc_signal< sc_logic > enable_V_c_full_n;
-    sc_signal< sc_lv<1> > enable_V_c_dout;
-    sc_signal< sc_logic > enable_V_c_empty_n;
     sc_signal< sc_logic > img_0_data_stream_0_full_n;
     sc_signal< sc_lv<8> > img_0_data_stream_0_dout;
     sc_signal< sc_logic > img_0_data_stream_0_empty_n;
@@ -160,50 +136,40 @@ struct Sobel_filter : public sc_module {
     sc_signal< sc_logic > img_0_data_stream_2_full_n;
     sc_signal< sc_lv<8> > img_0_data_stream_2_dout;
     sc_signal< sc_logic > img_0_data_stream_2_empty_n;
-    sc_signal< sc_logic > img_0_rows_V_c25_full_n;
-    sc_signal< sc_lv<11> > img_0_rows_V_c25_dout;
-    sc_signal< sc_logic > img_0_rows_V_c25_empty_n;
-    sc_signal< sc_logic > img_0_cols_V_c26_full_n;
-    sc_signal< sc_lv<12> > img_0_cols_V_c26_dout;
-    sc_signal< sc_logic > img_0_cols_V_c26_empty_n;
+    sc_signal< sc_logic > img_0_rows_V_c4_full_n;
+    sc_signal< sc_lv<11> > img_0_rows_V_c4_dout;
+    sc_signal< sc_logic > img_0_rows_V_c4_empty_n;
+    sc_signal< sc_logic > img_0_cols_V_c5_full_n;
+    sc_signal< sc_lv<12> > img_0_cols_V_c5_dout;
+    sc_signal< sc_logic > img_0_cols_V_c5_empty_n;
     sc_signal< sc_logic > ap_sync_done;
     sc_signal< sc_logic > ap_sync_ready;
-    sc_signal< sc_logic > ap_sync_reg_AXIvideo2Mat_U0_ap_ready;
-    sc_signal< sc_logic > ap_sync_AXIvideo2Mat_U0_ap_ready;
-    sc_signal< sc_lv<2> > AXIvideo2Mat_U0_ap_ready_count;
-    sc_signal< sc_logic > ap_sync_reg_Block_proc467_U0_ap_ready;
-    sc_signal< sc_logic > ap_sync_Block_proc467_U0_ap_ready;
-    sc_signal< sc_lv<2> > Block_proc467_U0_ap_ready_count;
-    sc_signal< sc_lv<1> > start_for_Block_proc304305_U0_din;
-    sc_signal< sc_logic > start_for_Block_proc304305_U0_full_n;
-    sc_signal< sc_lv<1> > start_for_Block_proc304305_U0_dout;
-    sc_signal< sc_logic > start_for_Block_proc304305_U0_empty_n;
-    sc_signal< sc_logic > AXIvideo2Mat_U0_start_full_n;
-    sc_signal< sc_logic > AXIvideo2Mat_U0_start_write;
-    sc_signal< sc_logic > Block_proc304305_U0_start_full_n;
-    sc_signal< sc_logic > Block_proc304305_U0_start_write;
+    sc_signal< sc_logic > Block_proc_U0_start_full_n;
+    sc_signal< sc_logic > Block_proc_U0_start_write;
+    sc_signal< sc_lv<1> > start_for_Mat2AXIvideo_U0_din;
+    sc_signal< sc_logic > start_for_Mat2AXIvideo_U0_full_n;
+    sc_signal< sc_lv<1> > start_for_Mat2AXIvideo_U0_dout;
+    sc_signal< sc_logic > start_for_Mat2AXIvideo_U0_empty_n;
+    sc_signal< sc_logic > Mat2AXIvideo_U0_start_full_n;
+    sc_signal< sc_logic > Mat2AXIvideo_U0_start_write;
     static const sc_lv<24> ap_const_lv24_0;
     static const sc_lv<3> ap_const_lv3_0;
     static const sc_lv<1> ap_const_lv1_0;
     static const sc_logic ap_const_logic_1;
     static const sc_logic ap_const_logic_0;
-    static const sc_lv<2> ap_const_lv2_0;
-    static const sc_lv<2> ap_const_lv2_1;
-    static const bool ap_const_boolean_1;
     // Thread declarations
     void thread_ap_var_for_const0();
-    void thread_ap_clk_no_reset_();
     void thread_AXIvideo2Mat_U0_ap_continue();
     void thread_AXIvideo2Mat_U0_ap_start();
-    void thread_AXIvideo2Mat_U0_start_full_n();
-    void thread_AXIvideo2Mat_U0_start_write();
-    void thread_Block_proc304305_U0_ap_continue();
-    void thread_Block_proc304305_U0_ap_start();
-    void thread_Block_proc304305_U0_start_full_n();
-    void thread_Block_proc304305_U0_start_write();
-    void thread_Block_proc467_U0_ap_continue();
-    void thread_Block_proc467_U0_ap_start();
+    void thread_Block_proc_U0_ap_continue();
+    void thread_Block_proc_U0_ap_start();
+    void thread_Block_proc_U0_start_full_n();
+    void thread_Block_proc_U0_start_write();
     void thread_INPUT_STREAM_TREADY();
+    void thread_Mat2AXIvideo_U0_ap_continue();
+    void thread_Mat2AXIvideo_U0_ap_start();
+    void thread_Mat2AXIvideo_U0_start_full_n();
+    void thread_Mat2AXIvideo_U0_start_write();
     void thread_OUTPUT_STREAM_TDATA();
     void thread_OUTPUT_STREAM_TDEST();
     void thread_OUTPUT_STREAM_TID();
@@ -216,12 +182,10 @@ struct Sobel_filter : public sc_module {
     void thread_ap_idle();
     void thread_ap_ready();
     void thread_ap_rst_n_inv();
-    void thread_ap_sync_AXIvideo2Mat_U0_ap_ready();
-    void thread_ap_sync_Block_proc467_U0_ap_ready();
     void thread_ap_sync_continue();
     void thread_ap_sync_done();
     void thread_ap_sync_ready();
-    void thread_start_for_Block_proc304305_U0_din();
+    void thread_start_for_Mat2AXIvideo_U0_din();
     void thread_hdltv_gen();
 };
 

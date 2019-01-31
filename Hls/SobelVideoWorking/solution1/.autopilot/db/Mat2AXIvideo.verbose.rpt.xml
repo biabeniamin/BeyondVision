@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'Mat2AXIvideo'" level="0">
-<item name = "Date">Thu Jan 31 19:24:32 2019
+<item name = "Date">Thu Jan 31 19:55:21 2019
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">SobelVideoWorking</item>
@@ -53,8 +53,8 @@
 <column name="FIFO">-, -, -, -</column>
 <column name="Instance">-, -, -, -</column>
 <column name="Memory">-, -, -, -</column>
-<column name="Multiplexer">-, -, -, 267</column>
-<column name="Register">-, -, 282, -</column>
+<column name="Multiplexer">-, -, -, 258</column>
+<column name="Register">-, -, 281, -</column>
 <specialColumn name="Available">730, 740, 269200, 129000</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, ~0</specialColumn>
 </table>
@@ -95,8 +95,8 @@
 <column name="AXI_video_strm_V_last_V_1_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
 <column name="AXI_video_strm_V_user_V_1_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
 <column name="axi_last_V_fu_282_p2">icmp, 0, 0, 21, 33, 33</column>
-<column name="exitcond2_fu_256_p2">icmp, 0, 0, 18, 32, 32</column>
-<column name="exitcond_fu_267_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="exitcond1_i_fu_256_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="exitcond_i_fu_267_p2">icmp, 0, 0, 18, 32, 32</column>
 <column name="ap_block_pp0_stage0_11001">or, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state2">or, 0, 0, 2, 1, 1</column>
@@ -127,7 +127,6 @@
 <column name="img_data_stream_1_V_blk_n">9, 2, 1, 2</column>
 <column name="img_data_stream_2_V_blk_n">9, 2, 1, 2</column>
 <column name="img_rows_V_blk_n">9, 2, 1, 2</column>
-<column name="real_start">9, 2, 1, 2</column>
 <column name="t_V_1_reg_222">9, 2, 32, 64</column>
 <column name="t_V_reg_211">9, 2, 32, 64</column>
 </table>
@@ -164,12 +163,11 @@
 <column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
 <column name="axi_last_V_reg_347">1, 0, 1, 0</column>
 <column name="cols_V_reg_319">32, 0, 32, 0</column>
-<column name="exitcond_reg_338">1, 0, 1, 0</column>
-<column name="exitcond_reg_338_pp0_iter1_reg">1, 0, 1, 0</column>
+<column name="exitcond_i_reg_338">1, 0, 1, 0</column>
+<column name="exitcond_i_reg_338_pp0_iter1_reg">1, 0, 1, 0</column>
 <column name="i_V_reg_333">32, 0, 32, 0</column>
 <column name="r_V_reg_324">33, 0, 33, 0</column>
 <column name="rows_V_reg_314">32, 0, 32, 0</column>
-<column name="start_once_reg">1, 0, 1, 0</column>
 <column name="t_V_1_reg_222">32, 0, 32, 0</column>
 <column name="t_V_reg_211">32, 0, 32, 0</column>
 <column name="tmp_user_V_fu_148">1, 0, 1, 0</column>
@@ -185,13 +183,10 @@
 <column name="ap_clk">in, 1, ap_ctrl_hs, Mat2AXIvideo, return value</column>
 <column name="ap_rst">in, 1, ap_ctrl_hs, Mat2AXIvideo, return value</column>
 <column name="ap_start">in, 1, ap_ctrl_hs, Mat2AXIvideo, return value</column>
-<column name="start_full_n">in, 1, ap_ctrl_hs, Mat2AXIvideo, return value</column>
 <column name="ap_done">out, 1, ap_ctrl_hs, Mat2AXIvideo, return value</column>
 <column name="ap_continue">in, 1, ap_ctrl_hs, Mat2AXIvideo, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, Mat2AXIvideo, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, Mat2AXIvideo, return value</column>
-<column name="start_out">out, 1, ap_ctrl_hs, Mat2AXIvideo, return value</column>
-<column name="start_write">out, 1, ap_ctrl_hs, Mat2AXIvideo, return value</column>
 <column name="img_rows_V_dout">in, 11, ap_fifo, img_rows_V, pointer</column>
 <column name="img_rows_V_empty_n">in, 1, ap_fifo, img_rows_V, pointer</column>
 <column name="img_rows_V_read">out, 1, ap_fifo, img_rows_V, pointer</column>

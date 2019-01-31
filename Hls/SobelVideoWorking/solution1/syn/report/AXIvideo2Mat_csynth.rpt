@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'AXIvideo2Mat'
 ================================================================
-* Date:           Thu Jan 31 19:24:31 2019
+* Date:           Thu Jan 31 19:55:21 2019
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        SobelVideoWorking
@@ -61,10 +61,10 @@
 |FIFO             |        -|      -|       -|       -|
 |Instance         |        -|      -|       -|       -|
 |Memory           |        -|      -|       -|       -|
-|Multiplexer      |        -|      -|       -|     368|
-|Register         |        -|      -|     344|       -|
+|Multiplexer      |        -|      -|       -|     377|
+|Register         |        -|      -|     345|       -|
 +-----------------+---------+-------+--------+--------+
-|Total            |        0|      0|     344|     538|
+|Total            |        0|      0|     345|     547|
 +-----------------+---------+-------+--------+--------+
 |Available        |      730|    740|  269200|  129000|
 +-----------------+---------+-------+--------+--------+
@@ -99,12 +99,12 @@
     |ap_block_pp1_stage0_01001                 |    and   |      0|  0|   2|           1|           1|
     |ap_block_pp2_stage0_11001                 |    and   |      0|  0|   2|           1|           1|
     |ap_block_state9_pp2_stage0_iter1          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_515                          |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_529                          |    and   |      0|  0|   2|           1|           1|
     |ap_predicate_op73_read_state6             |    and   |      0|  0|   2|           1|           1|
     |AXI_video_strm_V_data_V_0_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
     |AXI_video_strm_V_last_V_0_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
     |AXI_video_strm_V_user_V_0_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
-    |exitcond4_i_fu_416_p2                     |   icmp   |      0|  0|  18|          32|          32|
+    |exitcond2_i_fu_416_p2                     |   icmp   |      0|  0|  18|          32|          32|
     |exitcond_i_fu_427_p2                      |   icmp   |      0|  0|  18|          32|          32|
     |ap_block_state1                           |    or    |      0|  0|   2|           1|           1|
     |ap_block_state6_pp1_stage0_iter1          |    or    |      0|  0|   2|           1|           1|
@@ -150,10 +150,11 @@
     |img_data_stream_2_V_blk_n                |   9|          2|    1|          2|
     |img_rows_V_blk_n                         |   9|          2|    1|          2|
     |img_rows_V_out_blk_n                     |   9|          2|    1|          2|
-    |t_V_5_reg_284                            |   9|          2|   32|         64|
+    |real_start                               |   9|          2|    1|          2|
+    |t_V_2_reg_284                            |   9|          2|   32|         64|
     |t_V_reg_273                              |   9|          2|   32|         64|
     +-----------------------------------------+----+-----------+-----+-----------+
-    |Total                                    | 368|         79|  214|        468|
+    |Total                                    | 377|         81|  215|        470|
     +-----------------------------------------+----+-----------+-----+-----------+
 
     * Register: 
@@ -196,12 +197,13 @@
     |i_V_reg_513                          |  32|   0|   32|          0|
     |rows_V_reg_479                       |  32|   0|   32|          0|
     |sof_1_i_fu_182                       |   1|   0|    1|          0|
-    |t_V_5_reg_284                        |  32|   0|   32|          0|
+    |start_once_reg                       |   1|   0|    1|          0|
+    |t_V_2_reg_284                        |  32|   0|   32|          0|
     |t_V_reg_273                          |  32|   0|   32|          0|
     |tmp_data_V_reg_489                   |  24|   0|   24|          0|
     |tmp_last_V_reg_497                   |   1|   0|    1|          0|
     +-------------------------------------+----+----+-----+-----------+
-    |Total                                | 344|   0|  344|          0|
+    |Total                                | 345|   0|  345|          0|
     +-------------------------------------+----+----+-----+-----------+
 
 
@@ -216,10 +218,13 @@
 |ap_clk                      |  in |    1| ap_ctrl_hs |       AXIvideo2Mat      | return value |
 |ap_rst                      |  in |    1| ap_ctrl_hs |       AXIvideo2Mat      | return value |
 |ap_start                    |  in |    1| ap_ctrl_hs |       AXIvideo2Mat      | return value |
+|start_full_n                |  in |    1| ap_ctrl_hs |       AXIvideo2Mat      | return value |
 |ap_done                     | out |    1| ap_ctrl_hs |       AXIvideo2Mat      | return value |
 |ap_continue                 |  in |    1| ap_ctrl_hs |       AXIvideo2Mat      | return value |
 |ap_idle                     | out |    1| ap_ctrl_hs |       AXIvideo2Mat      | return value |
 |ap_ready                    | out |    1| ap_ctrl_hs |       AXIvideo2Mat      | return value |
+|start_out                   | out |    1| ap_ctrl_hs |       AXIvideo2Mat      | return value |
+|start_write                 | out |    1| ap_ctrl_hs |       AXIvideo2Mat      | return value |
 |INPUT_STREAM_TDATA          |  in |   24|    axis    | AXI_video_strm_V_data_V |    pointer   |
 |INPUT_STREAM_TVALID         |  in |    1|    axis    | AXI_video_strm_V_dest_V |    pointer   |
 |INPUT_STREAM_TREADY         | out |    1|    axis    | AXI_video_strm_V_dest_V |    pointer   |

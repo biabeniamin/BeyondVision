@@ -7,19 +7,22 @@ void Sobel_filter(AXI_STREAM& INPUT_STREAM, AXI_STREAM& OUTPUT_STREAM, ap_uint<1
 #pragma HLS INTERFACE axis port=OUTPUT_STREAM
 
 RGB_IMAGE  img_0(MAX_HEIGHT, MAX_WIDTH);
-GRAY_IMAGE img_1(MAX_HEIGHT, MAX_WIDTH);
+/*GRAY_IMAGE img_1(MAX_HEIGHT, MAX_WIDTH);
 GRAY_IMAGE  img_2(MAX_HEIGHT, MAX_WIDTH);
 GRAY_IMAGE  img_2a(MAX_HEIGHT, MAX_WIDTH);
 GRAY_IMAGE  img_2b(MAX_HEIGHT, MAX_WIDTH);
 GRAY_IMAGE  img_3(MAX_HEIGHT, MAX_WIDTH);
 GRAY_IMAGE  img_4(MAX_HEIGHT, MAX_WIDTH);
 GRAY_IMAGE  img_5(MAX_HEIGHT, MAX_WIDTH);
-RGB_IMAGE  img_6(MAX_HEIGHT, MAX_WIDTH);
+RGB_IMAGE  img_6(MAX_HEIGHT, MAX_WIDTH);*/
 ;
 
+
+#pragma HLS dataflow
 hls::AXIvideo2Mat(INPUT_STREAM, img_0);
 
-
+hls::Mat2AXIvideo(img_0, OUTPUT_STREAM);
+/*
 if(0 == enable)
 {
 #pragma HLS dataflow
@@ -34,5 +37,5 @@ if(0 == enable)
 	hls::AddWeighted(img_4,0.5,img_3,0.5,0.0,img_5);
 	hls::CvtColor<HLS_GRAY2RGB>(img_5, img_6);
 	hls::Mat2AXIvideo(img_6, OUTPUT_STREAM);
-}
+}*/
 }

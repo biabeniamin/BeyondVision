@@ -15,14 +15,17 @@
 namespace ap_rtl {
 
 struct AXIvideo2Mat : public sc_module {
-    // Port declarations 37
+    // Port declarations 40
     sc_in_clk ap_clk;
     sc_in< sc_logic > ap_rst;
     sc_in< sc_logic > ap_start;
+    sc_in< sc_logic > start_full_n;
     sc_out< sc_logic > ap_done;
     sc_in< sc_logic > ap_continue;
     sc_out< sc_logic > ap_idle;
     sc_out< sc_logic > ap_ready;
+    sc_out< sc_logic > start_out;
+    sc_out< sc_logic > start_write;
     sc_in< sc_lv<24> > INPUT_STREAM_TDATA;
     sc_in< sc_logic > INPUT_STREAM_TVALID;
     sc_out< sc_logic > INPUT_STREAM_TREADY;
@@ -63,9 +66,12 @@ struct AXIvideo2Mat : public sc_module {
 
     sc_trace_file* mVcdFile;
 
+    sc_signal< sc_logic > real_start;
+    sc_signal< sc_logic > start_once_reg;
     sc_signal< sc_logic > ap_done_reg;
     sc_signal< sc_lv<8> > ap_CS_fsm;
     sc_signal< sc_logic > ap_CS_fsm_state1;
+    sc_signal< sc_logic > internal_ap_ready;
     sc_signal< sc_lv<24> > AXI_video_strm_V_data_V_0_data_out;
     sc_signal< sc_logic > AXI_video_strm_V_data_V_0_vld_in;
     sc_signal< sc_logic > AXI_video_strm_V_data_V_0_vld_out;
@@ -129,7 +135,7 @@ struct AXIvideo2Mat : public sc_module {
     sc_signal< sc_logic > img_data_stream_2_V_blk_n;
     sc_signal< sc_logic > img_rows_V_out_blk_n;
     sc_signal< sc_logic > img_cols_V_out_blk_n;
-    sc_signal< sc_lv<32> > t_V_5_reg_284;
+    sc_signal< sc_lv<32> > t_V_2_reg_284;
     sc_signal< sc_lv<1> > eol_i_reg_295;
     sc_signal< sc_lv<1> > eol_reg_307;
     sc_signal< sc_lv<24> > axi_data_V_1_i_reg_318;
@@ -142,7 +148,7 @@ struct AXIvideo2Mat : public sc_module {
     sc_signal< sc_lv<32> > cols_V_reg_484;
     sc_signal< sc_lv<24> > tmp_data_V_reg_489;
     sc_signal< sc_lv<1> > tmp_last_V_reg_497;
-    sc_signal< sc_lv<1> > exitcond4_i_fu_416_p2;
+    sc_signal< sc_lv<1> > exitcond2_i_fu_416_p2;
     sc_signal< sc_logic > ap_CS_fsm_state4;
     sc_signal< sc_lv<32> > i_V_fu_421_p2;
     sc_signal< sc_lv<32> > i_V_reg_513;
@@ -182,7 +188,7 @@ struct AXIvideo2Mat : public sc_module {
     sc_signal< sc_logic > ap_enable_pp1;
     sc_signal< sc_logic > ap_idle_pp2;
     sc_signal< sc_logic > ap_enable_pp2;
-    sc_signal< bool > ap_condition_515;
+    sc_signal< bool > ap_condition_529;
     static const sc_logic ap_const_logic_1;
     static const sc_logic ap_const_logic_0;
     static const sc_lv<8> ap_ST_fsm_state1;
@@ -193,8 +199,8 @@ struct AXIvideo2Mat : public sc_module {
     static const sc_lv<8> ap_ST_fsm_state7;
     static const sc_lv<8> ap_ST_fsm_pp2_stage0;
     static const sc_lv<8> ap_ST_fsm_state10;
-    static const sc_lv<32> ap_const_lv32_0;
     static const bool ap_const_boolean_1;
+    static const sc_lv<32> ap_const_lv32_0;
     static const sc_lv<1> ap_const_lv1_0;
     static const sc_lv<1> ap_const_lv1_1;
     static const sc_lv<2> ap_const_lv2_0;
@@ -266,7 +272,7 @@ struct AXIvideo2Mat : public sc_module {
     void thread_ap_block_state6_pp1_stage0_iter1();
     void thread_ap_block_state8_pp2_stage0_iter0();
     void thread_ap_block_state9_pp2_stage0_iter1();
-    void thread_ap_condition_515();
+    void thread_ap_condition_529();
     void thread_ap_done();
     void thread_ap_enable_pp1();
     void thread_ap_enable_pp2();
@@ -284,7 +290,7 @@ struct AXIvideo2Mat : public sc_module {
     void thread_brmerge_i_fu_441_p2();
     void thread_cols_V_fu_403_p0();
     void thread_cols_V_fu_403_p1();
-    void thread_exitcond4_i_fu_416_p2();
+    void thread_exitcond2_i_fu_416_p2();
     void thread_exitcond_i_fu_427_p2();
     void thread_i_V_fu_421_p2();
     void thread_img_cols_V_blk_n();
@@ -306,9 +312,13 @@ struct AXIvideo2Mat : public sc_module {
     void thread_img_rows_V_out_din();
     void thread_img_rows_V_out_write();
     void thread_img_rows_V_read();
+    void thread_internal_ap_ready();
     void thread_j_V_fu_432_p2();
+    void thread_real_start();
     void thread_rows_V_fu_399_p0();
     void thread_rows_V_fu_399_p1();
+    void thread_start_out();
+    void thread_start_write();
     void thread_tmp_user_V_fu_407_p1();
     void thread_ap_NS_fsm();
 };

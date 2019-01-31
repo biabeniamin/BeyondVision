@@ -15,17 +15,14 @@
 namespace ap_rtl {
 
 struct Mat2AXIvideo : public sc_module {
-    // Port declarations 34
+    // Port declarations 31
     sc_in_clk ap_clk;
     sc_in< sc_logic > ap_rst;
     sc_in< sc_logic > ap_start;
-    sc_in< sc_logic > start_full_n;
     sc_out< sc_logic > ap_done;
     sc_in< sc_logic > ap_continue;
     sc_out< sc_logic > ap_idle;
     sc_out< sc_logic > ap_ready;
-    sc_out< sc_logic > start_out;
-    sc_out< sc_logic > start_write;
     sc_in< sc_lv<11> > img_rows_V_dout;
     sc_in< sc_logic > img_rows_V_empty_n;
     sc_out< sc_logic > img_rows_V_read;
@@ -60,12 +57,9 @@ struct Mat2AXIvideo : public sc_module {
 
     sc_trace_file* mVcdFile;
 
-    sc_signal< sc_logic > real_start;
-    sc_signal< sc_logic > start_once_reg;
     sc_signal< sc_logic > ap_done_reg;
     sc_signal< sc_lv<4> > ap_CS_fsm;
     sc_signal< sc_logic > ap_CS_fsm_state1;
-    sc_signal< sc_logic > internal_ap_ready;
     sc_signal< sc_lv<24> > AXI_video_strm_V_data_V_1_data_out;
     sc_signal< sc_logic > AXI_video_strm_V_data_V_1_vld_in;
     sc_signal< sc_logic > AXI_video_strm_V_data_V_1_vld_out;
@@ -146,12 +140,12 @@ struct Mat2AXIvideo : public sc_module {
     sc_signal< sc_logic > ap_CS_fsm_pp0_stage0;
     sc_signal< sc_logic > ap_enable_reg_pp0_iter1;
     sc_signal< bool > ap_block_pp0_stage0;
-    sc_signal< sc_lv<1> > exitcond_reg_338;
+    sc_signal< sc_lv<1> > exitcond_i_reg_338;
     sc_signal< sc_logic > img_data_stream_1_V_blk_n;
     sc_signal< sc_logic > img_data_stream_2_V_blk_n;
     sc_signal< sc_logic > OUTPUT_STREAM_TDATA_blk_n;
     sc_signal< sc_logic > ap_enable_reg_pp0_iter2;
-    sc_signal< sc_lv<1> > exitcond_reg_338_pp0_iter1_reg;
+    sc_signal< sc_lv<1> > exitcond_i_reg_338_pp0_iter1_reg;
     sc_signal< sc_lv<32> > t_V_1_reg_222;
     sc_signal< sc_lv<32> > rows_V_fu_233_p1;
     sc_signal< sc_lv<32> > rows_V_reg_314;
@@ -160,12 +154,12 @@ struct Mat2AXIvideo : public sc_module {
     sc_signal< sc_lv<32> > cols_V_reg_319;
     sc_signal< sc_lv<33> > r_V_fu_245_p2;
     sc_signal< sc_lv<33> > r_V_reg_324;
-    sc_signal< sc_lv<1> > exitcond2_fu_256_p2;
+    sc_signal< sc_lv<1> > exitcond1_i_fu_256_p2;
     sc_signal< sc_logic > ap_CS_fsm_state2;
     sc_signal< bool > ap_block_state2;
     sc_signal< sc_lv<32> > i_V_fu_261_p2;
     sc_signal< sc_lv<32> > i_V_reg_333;
-    sc_signal< sc_lv<1> > exitcond_fu_267_p2;
+    sc_signal< sc_lv<1> > exitcond_i_fu_267_p2;
     sc_signal< bool > ap_block_state3_pp0_stage0_iter0;
     sc_signal< bool > ap_block_state4_pp0_stage0_iter1;
     sc_signal< bool > ap_block_state4_io;
@@ -183,8 +177,8 @@ struct Mat2AXIvideo : public sc_module {
     sc_signal< sc_logic > ap_CS_fsm_state6;
     sc_signal< sc_lv<1> > tmp_user_V_fu_148;
     sc_signal< bool > ap_block_pp0_stage0_01001;
-    sc_signal< sc_lv<33> > lhs_V_cast_fu_241_p1;
-    sc_signal< sc_lv<33> > tmp_cast_fu_278_p1;
+    sc_signal< sc_lv<33> > lhs_V_cast_i_fu_241_p1;
+    sc_signal< sc_lv<33> > tmp_6_cast_i_fu_278_p1;
     sc_signal< sc_lv<4> > ap_NS_fsm;
     sc_signal< sc_logic > ap_idle_pp0;
     sc_signal< sc_logic > ap_enable_pp0;
@@ -194,8 +188,8 @@ struct Mat2AXIvideo : public sc_module {
     static const sc_lv<4> ap_ST_fsm_state2;
     static const sc_lv<4> ap_ST_fsm_pp0_stage0;
     static const sc_lv<4> ap_ST_fsm_state6;
-    static const bool ap_const_boolean_1;
     static const sc_lv<32> ap_const_lv32_0;
+    static const bool ap_const_boolean_1;
     static const sc_lv<1> ap_const_lv1_0;
     static const sc_lv<1> ap_const_lv1_1;
     static const sc_lv<2> ap_const_lv2_0;
@@ -294,8 +288,8 @@ struct Mat2AXIvideo : public sc_module {
     void thread_ap_ready();
     void thread_axi_last_V_fu_282_p2();
     void thread_cols_V_fu_237_p1();
-    void thread_exitcond2_fu_256_p2();
-    void thread_exitcond_fu_267_p2();
+    void thread_exitcond1_i_fu_256_p2();
+    void thread_exitcond_i_fu_267_p2();
     void thread_i_V_fu_261_p2();
     void thread_img_cols_V_blk_n();
     void thread_img_cols_V_read();
@@ -307,15 +301,11 @@ struct Mat2AXIvideo : public sc_module {
     void thread_img_data_stream_2_V_read();
     void thread_img_rows_V_blk_n();
     void thread_img_rows_V_read();
-    void thread_internal_ap_ready();
     void thread_j_V_fu_272_p2();
-    void thread_lhs_V_cast_fu_241_p1();
+    void thread_lhs_V_cast_i_fu_241_p1();
     void thread_r_V_fu_245_p2();
-    void thread_real_start();
     void thread_rows_V_fu_233_p1();
-    void thread_start_out();
-    void thread_start_write();
-    void thread_tmp_cast_fu_278_p1();
+    void thread_tmp_6_cast_i_fu_278_p1();
     void thread_tmp_data_V_fu_291_p4();
     void thread_ap_NS_fsm();
 };
