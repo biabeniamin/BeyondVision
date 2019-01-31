@@ -15,7 +15,7 @@
   <xd:arg xd:name="OUTPUT_STREAM.last" xd:originalName="OUTPUT_STREAM" xd:direction="out" xd:interfaceRef="OUTPUT_STREAM" xd:busTypeRef="axis" xd:dataWidth="1"/>
   <xd:arg xd:name="OUTPUT_STREAM.id" xd:originalName="OUTPUT_STREAM" xd:direction="out" xd:interfaceRef="OUTPUT_STREAM" xd:busTypeRef="axis" xd:dataWidth="1"/>
   <xd:arg xd:name="OUTPUT_STREAM.dest" xd:originalName="OUTPUT_STREAM" xd:direction="out" xd:interfaceRef="OUTPUT_STREAM" xd:busTypeRef="axis" xd:dataWidth="1"/>
-  <xd:arg xd:name="enable" xd:originalName="enable" xd:direction="in" xd:interfaceRef="enable" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="8" xd:firstOut="3"/>
+  <xd:arg xd:name="enable" xd:originalName="enable" xd:direction="in" xd:interfaceRef="enable_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="1" xd:firstOut="3"/>
   <xd:latencyEstimates xd:best-case="943938" xd:worst-case="943938" xd:average-case="undef"/>
-  <xd:resourceEstimates xd:LUT="10749" xd:FF="6308" xd:BRAM="9" xd:DSP="39"/>
+  <xd:resourceEstimates xd:LUT="10745" xd:FF="6308" xd:BRAM="9" xd:DSP="39"/>
 </xd:acceleratorMap>

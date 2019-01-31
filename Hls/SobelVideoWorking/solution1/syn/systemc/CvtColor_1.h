@@ -54,9 +54,9 @@ struct CvtColor_1 : public sc_module {
 
     sc_trace_file* mVcdFile;
 
-    Sobel_filter_mul_bkb<1,1,8,22,29>* Sobel_filter_mul_bkb_U21;
-    Sobel_filter_mac_cud<1,1,8,20,29,29>* Sobel_filter_mac_cud_U22;
-    Sobel_filter_mac_dEe<1,1,8,23,29,30>* Sobel_filter_mac_dEe_U23;
+    Sobel_filter_mul_bkb<1,1,8,22,29>* Sobel_filter_mul_bkb_U33;
+    Sobel_filter_mac_cud<1,1,8,20,29,29>* Sobel_filter_mac_cud_U34;
+    Sobel_filter_mac_dEe<1,1,8,23,29,30>* Sobel_filter_mac_dEe_U35;
     sc_signal< sc_logic > ap_done_reg;
     sc_signal< sc_lv<4> > ap_CS_fsm;
     sc_signal< sc_logic > ap_CS_fsm_state1;

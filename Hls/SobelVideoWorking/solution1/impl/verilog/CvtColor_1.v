@@ -169,7 +169,7 @@ Sobel_filter_mul_bkb #(
     .din0_WIDTH( 8 ),
     .din1_WIDTH( 22 ),
     .dout_WIDTH( 29 ))
-Sobel_filter_mul_bkb_U21(
+Sobel_filter_mul_bkb_U33(
     .din0(r_V_4_i_fu_327_p0),
     .din1(r_V_4_i_fu_327_p1),
     .dout(r_V_4_i_fu_327_p2)
@@ -182,7 +182,7 @@ Sobel_filter_mac_cud #(
     .din1_WIDTH( 20 ),
     .din2_WIDTH( 29 ),
     .dout_WIDTH( 29 ))
-Sobel_filter_mac_cud_U22(
+Sobel_filter_mac_cud_U34(
     .din0(grp_fu_333_p0),
     .din1(grp_fu_333_p1),
     .din2(r_V_4_i_reg_394),
@@ -196,7 +196,7 @@ Sobel_filter_mac_dEe #(
     .din1_WIDTH( 23 ),
     .din2_WIDTH( 29 ),
     .dout_WIDTH( 30 ))
-Sobel_filter_mac_dEe_U23(
+Sobel_filter_mac_dEe_U35(
     .din0(grp_fu_341_p0),
     .din1(grp_fu_341_p1),
     .din2(grp_fu_341_p2),

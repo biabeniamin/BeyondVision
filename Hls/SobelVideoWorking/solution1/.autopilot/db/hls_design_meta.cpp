@@ -14,7 +14,7 @@ const Port_Property HLS_Design_Meta::port_props[]={
 	Port_Property("OUTPUT_STREAM_TLAST", 1, hls_out, 11, "axis", "out_data", 1),
 	Port_Property("OUTPUT_STREAM_TID", 1, hls_out, 12, "axis", "out_data", 1),
 	Port_Property("OUTPUT_STREAM_TDEST", 1, hls_out, 13, "axis", "out_data", 1),
-	Port_Property("enable", 8, hls_in, 14, "ap_none", "in_data", 1),
+	Port_Property("enable_V", 1, hls_in, 14, "ap_none", "in_data", 1),
 	Port_Property("ap_clk", 1, hls_in, -1, "", "", 1),
 	Port_Property("ap_rst_n", 1, hls_in, -1, "", "", 1),
 	Port_Property("INPUT_STREAM_TVALID", 1, hls_in, 6, "axis", "in_vld", 1),

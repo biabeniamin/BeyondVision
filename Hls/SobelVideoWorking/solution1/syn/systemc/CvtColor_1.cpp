@@ -40,20 +40,20 @@ const sc_lv<28> CvtColor_1::ap_const_lv28_74BC6 = "1110100101111000110";
 const sc_lv<30> CvtColor_1::ap_const_lv30_259168 = "1001011001000101101000";
 
 CvtColor_1::CvtColor_1(sc_module_name name) : sc_module(name), mVcdFile(0) {
-    Sobel_filter_mul_bkb_U21 = new Sobel_filter_mul_bkb<1,1,8,22,29>("Sobel_filter_mul_bkb_U21");
-    Sobel_filter_mul_bkb_U21->din0(r_V_4_i_fu_327_p0);
-    Sobel_filter_mul_bkb_U21->din1(r_V_4_i_fu_327_p1);
-    Sobel_filter_mul_bkb_U21->dout(r_V_4_i_fu_327_p2);
-    Sobel_filter_mac_cud_U22 = new Sobel_filter_mac_cud<1,1,8,20,29,29>("Sobel_filter_mac_cud_U22");
-    Sobel_filter_mac_cud_U22->din0(grp_fu_333_p0);
-    Sobel_filter_mac_cud_U22->din1(grp_fu_333_p1);
-    Sobel_filter_mac_cud_U22->din2(r_V_4_i_reg_394);
-    Sobel_filter_mac_cud_U22->dout(grp_fu_333_p3);
-    Sobel_filter_mac_dEe_U23 = new Sobel_filter_mac_dEe<1,1,8,23,29,30>("Sobel_filter_mac_dEe_U23");
-    Sobel_filter_mac_dEe_U23->din0(grp_fu_341_p0);
-    Sobel_filter_mac_dEe_U23->din1(grp_fu_341_p1);
-    Sobel_filter_mac_dEe_U23->din2(grp_fu_341_p2);
-    Sobel_filter_mac_dEe_U23->dout(grp_fu_341_p3);
+    Sobel_filter_mul_bkb_U33 = new Sobel_filter_mul_bkb<1,1,8,22,29>("Sobel_filter_mul_bkb_U33");
+    Sobel_filter_mul_bkb_U33->din0(r_V_4_i_fu_327_p0);
+    Sobel_filter_mul_bkb_U33->din1(r_V_4_i_fu_327_p1);
+    Sobel_filter_mul_bkb_U33->dout(r_V_4_i_fu_327_p2);
+    Sobel_filter_mac_cud_U34 = new Sobel_filter_mac_cud<1,1,8,20,29,29>("Sobel_filter_mac_cud_U34");
+    Sobel_filter_mac_cud_U34->din0(grp_fu_333_p0);
+    Sobel_filter_mac_cud_U34->din1(grp_fu_333_p1);
+    Sobel_filter_mac_cud_U34->din2(r_V_4_i_reg_394);
+    Sobel_filter_mac_cud_U34->dout(grp_fu_333_p3);
+    Sobel_filter_mac_dEe_U35 = new Sobel_filter_mac_dEe<1,1,8,23,29,30>("Sobel_filter_mac_dEe_U35");
+    Sobel_filter_mac_dEe_U35->din0(grp_fu_341_p0);
+    Sobel_filter_mac_dEe_U35->din1(grp_fu_341_p1);
+    Sobel_filter_mac_dEe_U35->din2(grp_fu_341_p2);
+    Sobel_filter_mac_dEe_U35->dout(grp_fu_341_p3);
 
     SC_METHOD(thread_ap_clk_no_reset_);
     dont_initialize();
@@ -469,9 +469,9 @@ CvtColor_1::~CvtColor_1() {
     if (mVcdFile) 
         sc_close_vcd_trace_file(mVcdFile);
 
-    delete Sobel_filter_mul_bkb_U21;
-    delete Sobel_filter_mac_cud_U22;
-    delete Sobel_filter_mac_dEe_U23;
+    delete Sobel_filter_mul_bkb_U33;
+    delete Sobel_filter_mac_cud_U34;
+    delete Sobel_filter_mac_dEe_U35;
 }
 
 void CvtColor_1::thread_ap_clk_no_reset_() {

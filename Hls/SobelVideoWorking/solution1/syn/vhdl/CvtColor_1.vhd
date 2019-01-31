@@ -197,7 +197,7 @@ architecture behav of CvtColor_1 is
 
 
 begin
-    Sobel_filter_mul_bkb_U21 : component Sobel_filter_mul_bkb
+    Sobel_filter_mul_bkb_U33 : component Sobel_filter_mul_bkb
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -209,7 +209,7 @@ begin
         din1 => r_V_4_i_fu_327_p1,
         dout => r_V_4_i_fu_327_p2);
 
-    Sobel_filter_mac_cud_U22 : component Sobel_filter_mac_cud
+    Sobel_filter_mac_cud_U34 : component Sobel_filter_mac_cud
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -223,7 +223,7 @@ begin
         din2 => r_V_4_i_reg_394,
         dout => grp_fu_333_p3);
 
-    Sobel_filter_mac_dEe_U23 : component Sobel_filter_mac_dEe
+    Sobel_filter_mac_dEe_U35 : component Sobel_filter_mac_dEe
     generic map (
         ID => 1,
         NUM_STAGE => 1,

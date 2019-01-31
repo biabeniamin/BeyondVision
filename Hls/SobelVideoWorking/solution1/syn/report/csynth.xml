@@ -35,7 +35,7 @@
 <BRAM_18K>9</BRAM_18K>
 <DSP48E>39</DSP48E>
 <FF>6308</FF>
-<LUT>10749</LUT>
+<LUT>10745</LUT>
 </Resources>
 <AvailableResources>
 <BRAM_18K>730</BRAM_18K>
@@ -263,14 +263,14 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>enable</name>
-<Object>enable</Object>
+<name>enable_V</name>
+<Object>enable_V</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>8</Bits>
+<Bits>1</Bits>
 <Attribute>data</Attribute>
 <CType>int</CType>
 </RtlPorts>

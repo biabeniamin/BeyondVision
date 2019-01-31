@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'Filter2D_1'
 ================================================================
-* Date:           Thu Jan 31 19:14:48 2019
+* Date:           Thu Jan 31 19:24:25 2019
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        SobelVideoWorking
@@ -115,8 +115,8 @@ ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%right_border_buf_0_2 = alloca i8" 
 ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%right_border_buf_0_3 = alloca i8"   --->   Operation 19 'alloca' 'right_border_buf_0_3' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%right_border_buf_0_4 = alloca i8"   --->   Operation 20 'alloca' 'right_border_buf_0_4' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%right_border_buf_0_5 = alloca i8"   --->   Operation 21 'alloca' 'right_border_buf_0_5' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 22 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %p_src_data_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str397, i32 0, i32 0, [1 x i8]* @p_str398, [1 x i8]* @p_str399, [1 x i8]* @p_str400, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str401, [1 x i8]* @p_str402)"   --->   Operation 22 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 23 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %p_dst_data_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str404, i32 0, i32 0, [1 x i8]* @p_str405, [1 x i8]* @p_str406, [1 x i8]* @p_str407, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str408, [1 x i8]* @p_str409)"   --->   Operation 23 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %p_src_data_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str398, i32 0, i32 0, [1 x i8]* @p_str399, [1 x i8]* @p_str400, [1 x i8]* @p_str401, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str402, [1 x i8]* @p_str403)"   --->   Operation 22 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %p_dst_data_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str405, i32 0, i32 0, [1 x i8]* @p_str406, [1 x i8]* @p_str407, [1 x i8]* @p_str408, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str409, [1 x i8]* @p_str410)"   --->   Operation 23 'specinterface' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%k_buf_0_val_3 = alloca [1280 x i8], align 1" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277]   --->   Operation 24 'alloca' 'k_buf_0_val_3' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1280> <RAM>
 ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%k_buf_0_val_4 = alloca [1280 x i8], align 1" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277]   --->   Operation 25 'alloca' 'k_buf_0_val_4' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1280> <RAM>
 ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%k_buf_0_val_5 = alloca [1280 x i8], align 1" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277]   --->   Operation 26 'alloca' 'k_buf_0_val_5' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1280> <RAM>
@@ -367,7 +367,7 @@ ST_8 : Operation 256 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.
 ST_8 : Operation 257 [1/1] (0.00ns)   --->   "br label %._crit_edge413.i" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:514->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277]   --->   Operation 257 'br' <Predicate = (or_cond_i)> <Delay = 0.00>
 
 State 9 <SV = 5> <Delay = 0.00>
-ST_9 : Operation 258 [1/1] (0.00ns)   --->   "%empty_83 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str9, i32 %tmp)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:517->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277]   --->   Operation 258 'specregionend' 'empty_83' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 258 [1/1] (0.00ns)   --->   "%empty_84 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str9, i32 %tmp)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:517->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277]   --->   Operation 258 'specregionend' 'empty_84' <Predicate = true> <Delay = 0.00>
 ST_9 : Operation 259 [1/1] (0.00ns)   --->   "br label %0" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:441->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277]   --->   Operation 259 'br' <Predicate = true> <Delay = 0.00>
 
 
@@ -401,8 +401,8 @@ The critical path consists of the following:
 
  <State 4>: 3.26ns
 The critical path consists of the following:
-	'getelementptr' operation ('k_buf_0_val_3_addr', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:835->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:843->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:458->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277) [118]  (0 ns)
-	'load' operation ('k_buf_0_val_3_load', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:458->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277) on array 'k_buf[0].val[3]', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277 [119]  (3.26 ns)
+	'getelementptr' operation ('k_buf_0_val_4_addr', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:835->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:843->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:458->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277) [123]  (0 ns)
+	'load' operation ('k_buf_0_val_4_load', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:458->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277) on array 'k_buf[0].val[4]', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277 [124]  (3.26 ns)
 
  <State 5>: 7.18ns
 The critical path consists of the following:

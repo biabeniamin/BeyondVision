@@ -10,7 +10,7 @@
 
 module Sobel_filter_sitotde
 #(parameter
-    ID         = 82,
+    ID         = 94,
     NUM_STAGE  = 6,
     din0_WIDTH = 32,
     dout_WIDTH = 64

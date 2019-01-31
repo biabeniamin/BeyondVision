@@ -1054,7 +1054,7 @@
                 </item>
               </inlineStackInfo>
               <originalName>r.V</originalName>
-              <rtlName>Sobel_filter_mac_cud_U22</rtlName>
+              <rtlName>Sobel_filter_mac_cud_U34</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>28</bitwidth>
@@ -1173,7 +1173,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>Sobel_filter_mac_dEe_U23</rtlName>
+              <rtlName>Sobel_filter_mac_dEe_U35</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>30</bitwidth>
@@ -1292,7 +1292,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>Sobel_filter_mul_bkb_U21</rtlName>
+              <rtlName>Sobel_filter_mul_bkb_U33</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>29</bitwidth>
@@ -1352,7 +1352,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>Sobel_filter_mac_cud_U22</rtlName>
+              <rtlName>Sobel_filter_mac_cud_U34</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>29</bitwidth>
@@ -1411,7 +1411,7 @@
                 </item>
               </inlineStackInfo>
               <originalName>__Val2__</originalName>
-              <rtlName>Sobel_filter_mac_cud_U22</rtlName>
+              <rtlName>Sobel_filter_mac_cud_U34</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>29</bitwidth>
@@ -1530,7 +1530,7 @@
                 </item>
               </inlineStackInfo>
               <originalName>r.V</originalName>
-              <rtlName>Sobel_filter_mac_dEe_U23</rtlName>
+              <rtlName>Sobel_filter_mac_dEe_U35</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>30</bitwidth>
@@ -1619,7 +1619,7 @@
           </oprand_edges>
           <opcode>partselect</opcode>
           <m_Display>0</m_Display>
-          <m_isOnCriticalPath>1</m_isOnCriticalPath>
+          <m_isOnCriticalPath>0</m_isOnCriticalPath>
           <m_isLCDNode>0</m_isLCDNode>
           <m_delay>0.00</m_delay>
         </item>
@@ -5199,7 +5199,7 @@
         <count>3</count>
         <item_version>0</item_version>
         <item>
-          <first>Sobel_filter_mac_cud_U22</first>
+          <first>Sobel_filter_mac_cud_U34</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -5210,7 +5210,7 @@
           </second>
         </item>
         <item>
-          <first>Sobel_filter_mac_dEe_U23</first>
+          <first>Sobel_filter_mac_dEe_U35</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -5221,7 +5221,7 @@
           </second>
         </item>
         <item>
-          <first>Sobel_filter_mul_bkb_U21</first>
+          <first>Sobel_filter_mul_bkb_U33</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>

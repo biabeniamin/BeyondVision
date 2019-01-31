@@ -1718,7 +1718,7 @@
             <Obj>
               <type>0</type>
               <id>81</id>
-              <name>empty_112</name>
+              <name>empty_113</name>
               <fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>81</lineNumber>
@@ -2578,7 +2578,7 @@
             <Obj>
               <type>0</type>
               <id>112</id>
-              <name>empty_115</name>
+              <name>empty_116</name>
               <fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>100</lineNumber>

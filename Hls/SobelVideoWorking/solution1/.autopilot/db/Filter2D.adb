@@ -6155,7 +6155,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>Sobel_filter_mux_hbi_U56</rtlName>
+              <rtlName>Sobel_filter_mux_hbi_U68</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -6385,7 +6385,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>Sobel_filter_mux_hbi_U57</rtlName>
+              <rtlName>Sobel_filter_mux_hbi_U69</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -6615,7 +6615,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>Sobel_filter_mux_hbi_U58</rtlName>
+              <rtlName>Sobel_filter_mux_hbi_U70</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -8148,7 +8148,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>Sobel_filter_mux_hbi_U59</rtlName>
+              <rtlName>Sobel_filter_mux_hbi_U71</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -8258,7 +8258,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>Sobel_filter_mux_hbi_U60</rtlName>
+              <rtlName>Sobel_filter_mux_hbi_U72</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -8368,7 +8368,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>Sobel_filter_mux_hbi_U61</rtlName>
+              <rtlName>Sobel_filter_mux_hbi_U73</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -9194,7 +9194,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>Sobel_filter_mac_pcA_U62</rtlName>
+              <rtlName>Sobel_filter_mac_pcA_U74</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -9261,7 +9261,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>Sobel_filter_mac_pcA_U62</rtlName>
+              <rtlName>Sobel_filter_mac_pcA_U74</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>11</bitwidth>
@@ -9327,7 +9327,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>Sobel_filter_mac_pcA_U62</rtlName>
+              <rtlName>Sobel_filter_mac_pcA_U74</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>11</bitwidth>
@@ -9460,7 +9460,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>Sobel_filter_mac_qcK_U63</rtlName>
+              <rtlName>Sobel_filter_mac_qcK_U75</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -9527,7 +9527,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>Sobel_filter_mac_qcK_U63</rtlName>
+              <rtlName>Sobel_filter_mac_qcK_U75</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>11</bitwidth>
@@ -9593,7 +9593,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>Sobel_filter_mac_qcK_U63</rtlName>
+              <rtlName>Sobel_filter_mac_qcK_U75</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>11</bitwidth>
@@ -11953,7 +11953,7 @@
             <Obj>
               <type>0</type>
               <id>246</id>
-              <name>tmp_i_i_84</name>
+              <name>tmp_i_i_85</name>
               <fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>409</lineNumber>
@@ -12005,7 +12005,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_i_i_84_fu_1236_p2</rtlName>
+              <rtlName>tmp_i_i_85_fu_1236_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -19137,7 +19137,7 @@
         <count>6</count>
         <item_version>0</item_version>
         <item class_id="38" tracking_level="0" version="0">
-          <first>Sobel_filter_mux_hbi_U56 (Sobel_filter_mux_hbi)</first>
+          <first>Sobel_filter_mux_hbi_U68 (Sobel_filter_mux_hbi)</first>
           <second class_id="39" tracking_level="0" version="0">
             <count>2</count>
             <item_version>0</item_version>
@@ -19152,7 +19152,7 @@
           </second>
         </item>
         <item>
-          <first>Sobel_filter_mux_hbi_U57 (Sobel_filter_mux_hbi)</first>
+          <first>Sobel_filter_mux_hbi_U69 (Sobel_filter_mux_hbi)</first>
           <second>
             <count>2</count>
             <item_version>0</item_version>
@@ -19167,7 +19167,7 @@
           </second>
         </item>
         <item>
-          <first>Sobel_filter_mux_hbi_U58 (Sobel_filter_mux_hbi)</first>
+          <first>Sobel_filter_mux_hbi_U70 (Sobel_filter_mux_hbi)</first>
           <second>
             <count>2</count>
             <item_version>0</item_version>
@@ -19182,7 +19182,7 @@
           </second>
         </item>
         <item>
-          <first>Sobel_filter_mux_hbi_U59 (Sobel_filter_mux_hbi)</first>
+          <first>Sobel_filter_mux_hbi_U71 (Sobel_filter_mux_hbi)</first>
           <second>
             <count>2</count>
             <item_version>0</item_version>
@@ -19197,7 +19197,7 @@
           </second>
         </item>
         <item>
-          <first>Sobel_filter_mux_hbi_U60 (Sobel_filter_mux_hbi)</first>
+          <first>Sobel_filter_mux_hbi_U72 (Sobel_filter_mux_hbi)</first>
           <second>
             <count>2</count>
             <item_version>0</item_version>
@@ -19212,7 +19212,7 @@
           </second>
         </item>
         <item>
-          <first>Sobel_filter_mux_hbi_U61 (Sobel_filter_mux_hbi)</first>
+          <first>Sobel_filter_mux_hbi_U73 (Sobel_filter_mux_hbi)</first>
           <second>
             <count>2</count>
             <item_version>0</item_version>
@@ -21174,7 +21174,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_i_i_84_fu_1236_p2 ( or ) </first>
+          <first>tmp_i_i_85_fu_1236_p2 ( or ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -22769,7 +22769,7 @@
         <count>8</count>
         <item_version>0</item_version>
         <item>
-          <first>Sobel_filter_mac_pcA_U62</first>
+          <first>Sobel_filter_mac_pcA_U74</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -22780,7 +22780,7 @@
           </second>
         </item>
         <item>
-          <first>Sobel_filter_mac_qcK_U63</first>
+          <first>Sobel_filter_mac_qcK_U75</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -22791,42 +22791,42 @@
           </second>
         </item>
         <item>
-          <first>Sobel_filter_mux_hbi_U56</first>
+          <first>Sobel_filter_mux_hbi_U68</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>Sobel_filter_mux_hbi_U57</first>
+          <first>Sobel_filter_mux_hbi_U69</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>Sobel_filter_mux_hbi_U58</first>
+          <first>Sobel_filter_mux_hbi_U70</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>Sobel_filter_mux_hbi_U59</first>
+          <first>Sobel_filter_mux_hbi_U71</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>Sobel_filter_mux_hbi_U60</first>
+          <first>Sobel_filter_mux_hbi_U72</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>Sobel_filter_mux_hbi_U61</first>
+          <first>Sobel_filter_mux_hbi_U73</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
@@ -22837,7 +22837,7 @@
         <count>6</count>
         <item_version>0</item_version>
         <item class_id="42" tracking_level="0" version="0">
-          <first>Sobel_filter_mux_hbi_U56 (Sobel_filter_mux_hbi)</first>
+          <first>Sobel_filter_mux_hbi_U68 (Sobel_filter_mux_hbi)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -22845,7 +22845,7 @@
           </second>
         </item>
         <item>
-          <first>Sobel_filter_mux_hbi_U57 (Sobel_filter_mux_hbi)</first>
+          <first>Sobel_filter_mux_hbi_U69 (Sobel_filter_mux_hbi)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -22853,7 +22853,7 @@
           </second>
         </item>
         <item>
-          <first>Sobel_filter_mux_hbi_U58 (Sobel_filter_mux_hbi)</first>
+          <first>Sobel_filter_mux_hbi_U70 (Sobel_filter_mux_hbi)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -22861,7 +22861,7 @@
           </second>
         </item>
         <item>
-          <first>Sobel_filter_mux_hbi_U59 (Sobel_filter_mux_hbi)</first>
+          <first>Sobel_filter_mux_hbi_U71 (Sobel_filter_mux_hbi)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -22869,7 +22869,7 @@
           </second>
         </item>
         <item>
-          <first>Sobel_filter_mux_hbi_U60 (Sobel_filter_mux_hbi)</first>
+          <first>Sobel_filter_mux_hbi_U72 (Sobel_filter_mux_hbi)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -22877,7 +22877,7 @@
           </second>
         </item>
         <item>
-          <first>Sobel_filter_mux_hbi_U61 (Sobel_filter_mux_hbi)</first>
+          <first>Sobel_filter_mux_hbi_U73 (Sobel_filter_mux_hbi)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -23473,7 +23473,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_i_i_84_fu_1236_p2 ( or ) </first>
+          <first>tmp_i_i_85_fu_1236_p2 ( or ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -28081,7 +28081,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_i_i_84_fu_1236</first>
+        <first>tmp_i_i_85_fu_1236</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

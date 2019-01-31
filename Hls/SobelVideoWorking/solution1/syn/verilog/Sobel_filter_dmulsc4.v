@@ -10,7 +10,7 @@
 
 module Sobel_filter_dmulsc4
 #(parameter
-    ID         = 80,
+    ID         = 92,
     NUM_STAGE  = 6,
     din0_WIDTH = 64,
     din1_WIDTH = 64,

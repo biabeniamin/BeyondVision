@@ -22,33 +22,33 @@ const sc_lv<2> Sobel_filter::ap_const_lv2_1 = "1";
 const bool Sobel_filter::ap_const_boolean_1 = true;
 
 Sobel_filter::Sobel_filter(sc_module_name name) : sc_module(name), mVcdFile(0) {
-    Block_proc466_U0 = new Block_proc466("Block_proc466_U0");
-    Block_proc466_U0->ap_clk(ap_clk);
-    Block_proc466_U0->ap_rst(ap_rst_n_inv);
-    Block_proc466_U0->ap_start(Block_proc466_U0_ap_start);
-    Block_proc466_U0->start_full_n(start_for_Block_proc303304_U0_full_n);
-    Block_proc466_U0->ap_done(Block_proc466_U0_ap_done);
-    Block_proc466_U0->ap_continue(Block_proc466_U0_ap_continue);
-    Block_proc466_U0->ap_idle(Block_proc466_U0_ap_idle);
-    Block_proc466_U0->ap_ready(Block_proc466_U0_ap_ready);
-    Block_proc466_U0->start_out(Block_proc466_U0_start_out);
-    Block_proc466_U0->start_write(Block_proc466_U0_start_write);
-    Block_proc466_U0->enable(enable);
-    Block_proc466_U0->img_0_rows_V_out_din(Block_proc466_U0_img_0_rows_V_out_din);
-    Block_proc466_U0->img_0_rows_V_out_full_n(img_0_rows_V_c_full_n);
-    Block_proc466_U0->img_0_rows_V_out_write(Block_proc466_U0_img_0_rows_V_out_write);
-    Block_proc466_U0->img_0_cols_V_out_din(Block_proc466_U0_img_0_cols_V_out_din);
-    Block_proc466_U0->img_0_cols_V_out_full_n(img_0_cols_V_c_full_n);
-    Block_proc466_U0->img_0_cols_V_out_write(Block_proc466_U0_img_0_cols_V_out_write);
-    Block_proc466_U0->img_6_rows_V_out_din(Block_proc466_U0_img_6_rows_V_out_din);
-    Block_proc466_U0->img_6_rows_V_out_full_n(img_6_rows_V_c_full_n);
-    Block_proc466_U0->img_6_rows_V_out_write(Block_proc466_U0_img_6_rows_V_out_write);
-    Block_proc466_U0->img_6_cols_V_out_din(Block_proc466_U0_img_6_cols_V_out_din);
-    Block_proc466_U0->img_6_cols_V_out_full_n(img_6_cols_V_c_full_n);
-    Block_proc466_U0->img_6_cols_V_out_write(Block_proc466_U0_img_6_cols_V_out_write);
-    Block_proc466_U0->enable_out_din(Block_proc466_U0_enable_out_din);
-    Block_proc466_U0->enable_out_full_n(enable_c_full_n);
-    Block_proc466_U0->enable_out_write(Block_proc466_U0_enable_out_write);
+    Block_proc467_U0 = new Block_proc467("Block_proc467_U0");
+    Block_proc467_U0->ap_clk(ap_clk);
+    Block_proc467_U0->ap_rst(ap_rst_n_inv);
+    Block_proc467_U0->ap_start(Block_proc467_U0_ap_start);
+    Block_proc467_U0->start_full_n(start_for_Block_proc304305_U0_full_n);
+    Block_proc467_U0->ap_done(Block_proc467_U0_ap_done);
+    Block_proc467_U0->ap_continue(Block_proc467_U0_ap_continue);
+    Block_proc467_U0->ap_idle(Block_proc467_U0_ap_idle);
+    Block_proc467_U0->ap_ready(Block_proc467_U0_ap_ready);
+    Block_proc467_U0->start_out(Block_proc467_U0_start_out);
+    Block_proc467_U0->start_write(Block_proc467_U0_start_write);
+    Block_proc467_U0->enable_V(enable_V);
+    Block_proc467_U0->img_0_rows_V_out_din(Block_proc467_U0_img_0_rows_V_out_din);
+    Block_proc467_U0->img_0_rows_V_out_full_n(img_0_rows_V_c_full_n);
+    Block_proc467_U0->img_0_rows_V_out_write(Block_proc467_U0_img_0_rows_V_out_write);
+    Block_proc467_U0->img_0_cols_V_out_din(Block_proc467_U0_img_0_cols_V_out_din);
+    Block_proc467_U0->img_0_cols_V_out_full_n(img_0_cols_V_c_full_n);
+    Block_proc467_U0->img_0_cols_V_out_write(Block_proc467_U0_img_0_cols_V_out_write);
+    Block_proc467_U0->img_6_rows_V_out_din(Block_proc467_U0_img_6_rows_V_out_din);
+    Block_proc467_U0->img_6_rows_V_out_full_n(img_6_rows_V_c_full_n);
+    Block_proc467_U0->img_6_rows_V_out_write(Block_proc467_U0_img_6_rows_V_out_write);
+    Block_proc467_U0->img_6_cols_V_out_din(Block_proc467_U0_img_6_cols_V_out_din);
+    Block_proc467_U0->img_6_cols_V_out_full_n(img_6_cols_V_c_full_n);
+    Block_proc467_U0->img_6_cols_V_out_write(Block_proc467_U0_img_6_cols_V_out_write);
+    Block_proc467_U0->enable_V_out_din(Block_proc467_U0_enable_V_out_din);
+    Block_proc467_U0->enable_V_out_full_n(enable_V_c_full_n);
+    Block_proc467_U0->enable_V_out_write(Block_proc467_U0_enable_V_out_write);
     AXIvideo2Mat_U0 = new AXIvideo2Mat("AXIvideo2Mat_U0");
     AXIvideo2Mat_U0->ap_clk(ap_clk);
     AXIvideo2Mat_U0->ap_rst(ap_rst_n_inv);
@@ -87,55 +87,55 @@ Sobel_filter::Sobel_filter(sc_module_name name) : sc_module(name), mVcdFile(0) {
     AXIvideo2Mat_U0->img_cols_V_out_din(AXIvideo2Mat_U0_img_cols_V_out_din);
     AXIvideo2Mat_U0->img_cols_V_out_full_n(img_0_cols_V_c26_full_n);
     AXIvideo2Mat_U0->img_cols_V_out_write(AXIvideo2Mat_U0_img_cols_V_out_write);
-    Block_proc303304_U0 = new Block_proc303304("Block_proc303304_U0");
-    Block_proc303304_U0->enable_dout(enable_c_dout);
-    Block_proc303304_U0->enable_empty_n(enable_c_empty_n);
-    Block_proc303304_U0->enable_read(Block_proc303304_U0_enable_read);
-    Block_proc303304_U0->img_0_rows_V_dout(img_0_rows_V_c25_dout);
-    Block_proc303304_U0->img_0_rows_V_empty_n(img_0_rows_V_c25_empty_n);
-    Block_proc303304_U0->img_0_rows_V_read(Block_proc303304_U0_img_0_rows_V_read);
-    Block_proc303304_U0->img_0_cols_V_dout(img_0_cols_V_c26_dout);
-    Block_proc303304_U0->img_0_cols_V_empty_n(img_0_cols_V_c26_empty_n);
-    Block_proc303304_U0->img_0_cols_V_read(Block_proc303304_U0_img_0_cols_V_read);
-    Block_proc303304_U0->img_0_data_stream_0_V_dout(img_0_data_stream_0_dout);
-    Block_proc303304_U0->img_0_data_stream_0_V_empty_n(img_0_data_stream_0_empty_n);
-    Block_proc303304_U0->img_0_data_stream_0_V_read(Block_proc303304_U0_img_0_data_stream_0_V_read);
-    Block_proc303304_U0->img_0_data_stream_1_V_dout(img_0_data_stream_1_dout);
-    Block_proc303304_U0->img_0_data_stream_1_V_empty_n(img_0_data_stream_1_empty_n);
-    Block_proc303304_U0->img_0_data_stream_1_V_read(Block_proc303304_U0_img_0_data_stream_1_V_read);
-    Block_proc303304_U0->img_0_data_stream_2_V_dout(img_0_data_stream_2_dout);
-    Block_proc303304_U0->img_0_data_stream_2_V_empty_n(img_0_data_stream_2_empty_n);
-    Block_proc303304_U0->img_0_data_stream_2_V_read(Block_proc303304_U0_img_0_data_stream_2_V_read);
-    Block_proc303304_U0->OUTPUT_STREAM_TDATA(Block_proc303304_U0_OUTPUT_STREAM_TDATA);
-    Block_proc303304_U0->OUTPUT_STREAM_TKEEP(Block_proc303304_U0_OUTPUT_STREAM_TKEEP);
-    Block_proc303304_U0->OUTPUT_STREAM_TSTRB(Block_proc303304_U0_OUTPUT_STREAM_TSTRB);
-    Block_proc303304_U0->OUTPUT_STREAM_TUSER(Block_proc303304_U0_OUTPUT_STREAM_TUSER);
-    Block_proc303304_U0->OUTPUT_STREAM_TLAST(Block_proc303304_U0_OUTPUT_STREAM_TLAST);
-    Block_proc303304_U0->OUTPUT_STREAM_TID(Block_proc303304_U0_OUTPUT_STREAM_TID);
-    Block_proc303304_U0->OUTPUT_STREAM_TDEST(Block_proc303304_U0_OUTPUT_STREAM_TDEST);
-    Block_proc303304_U0->img_6_rows_V_dout(img_6_rows_V_c_dout);
-    Block_proc303304_U0->img_6_rows_V_empty_n(img_6_rows_V_c_empty_n);
-    Block_proc303304_U0->img_6_rows_V_read(Block_proc303304_U0_img_6_rows_V_read);
-    Block_proc303304_U0->img_6_cols_V_dout(img_6_cols_V_c_dout);
-    Block_proc303304_U0->img_6_cols_V_empty_n(img_6_cols_V_c_empty_n);
-    Block_proc303304_U0->img_6_cols_V_read(Block_proc303304_U0_img_6_cols_V_read);
-    Block_proc303304_U0->ap_clk(ap_clk);
-    Block_proc303304_U0->ap_rst(ap_rst_n_inv);
-    Block_proc303304_U0->OUTPUT_STREAM_TVALID(Block_proc303304_U0_OUTPUT_STREAM_TVALID);
-    Block_proc303304_U0->OUTPUT_STREAM_TREADY(OUTPUT_STREAM_TREADY);
-    Block_proc303304_U0->ap_done(Block_proc303304_U0_ap_done);
-    Block_proc303304_U0->ap_start(Block_proc303304_U0_ap_start);
-    Block_proc303304_U0->ap_ready(Block_proc303304_U0_ap_ready);
-    Block_proc303304_U0->ap_idle(Block_proc303304_U0_ap_idle);
-    Block_proc303304_U0->ap_continue(Block_proc303304_U0_ap_continue);
+    Block_proc304305_U0 = new Block_proc304305("Block_proc304305_U0");
+    Block_proc304305_U0->enable_V_dout(enable_V_c_dout);
+    Block_proc304305_U0->enable_V_empty_n(enable_V_c_empty_n);
+    Block_proc304305_U0->enable_V_read(Block_proc304305_U0_enable_V_read);
+    Block_proc304305_U0->img_0_rows_V_dout(img_0_rows_V_c25_dout);
+    Block_proc304305_U0->img_0_rows_V_empty_n(img_0_rows_V_c25_empty_n);
+    Block_proc304305_U0->img_0_rows_V_read(Block_proc304305_U0_img_0_rows_V_read);
+    Block_proc304305_U0->img_0_cols_V_dout(img_0_cols_V_c26_dout);
+    Block_proc304305_U0->img_0_cols_V_empty_n(img_0_cols_V_c26_empty_n);
+    Block_proc304305_U0->img_0_cols_V_read(Block_proc304305_U0_img_0_cols_V_read);
+    Block_proc304305_U0->img_0_data_stream_0_V_dout(img_0_data_stream_0_dout);
+    Block_proc304305_U0->img_0_data_stream_0_V_empty_n(img_0_data_stream_0_empty_n);
+    Block_proc304305_U0->img_0_data_stream_0_V_read(Block_proc304305_U0_img_0_data_stream_0_V_read);
+    Block_proc304305_U0->img_0_data_stream_1_V_dout(img_0_data_stream_1_dout);
+    Block_proc304305_U0->img_0_data_stream_1_V_empty_n(img_0_data_stream_1_empty_n);
+    Block_proc304305_U0->img_0_data_stream_1_V_read(Block_proc304305_U0_img_0_data_stream_1_V_read);
+    Block_proc304305_U0->img_0_data_stream_2_V_dout(img_0_data_stream_2_dout);
+    Block_proc304305_U0->img_0_data_stream_2_V_empty_n(img_0_data_stream_2_empty_n);
+    Block_proc304305_U0->img_0_data_stream_2_V_read(Block_proc304305_U0_img_0_data_stream_2_V_read);
+    Block_proc304305_U0->OUTPUT_STREAM_TDATA(Block_proc304305_U0_OUTPUT_STREAM_TDATA);
+    Block_proc304305_U0->OUTPUT_STREAM_TKEEP(Block_proc304305_U0_OUTPUT_STREAM_TKEEP);
+    Block_proc304305_U0->OUTPUT_STREAM_TSTRB(Block_proc304305_U0_OUTPUT_STREAM_TSTRB);
+    Block_proc304305_U0->OUTPUT_STREAM_TUSER(Block_proc304305_U0_OUTPUT_STREAM_TUSER);
+    Block_proc304305_U0->OUTPUT_STREAM_TLAST(Block_proc304305_U0_OUTPUT_STREAM_TLAST);
+    Block_proc304305_U0->OUTPUT_STREAM_TID(Block_proc304305_U0_OUTPUT_STREAM_TID);
+    Block_proc304305_U0->OUTPUT_STREAM_TDEST(Block_proc304305_U0_OUTPUT_STREAM_TDEST);
+    Block_proc304305_U0->img_6_rows_V_dout(img_6_rows_V_c_dout);
+    Block_proc304305_U0->img_6_rows_V_empty_n(img_6_rows_V_c_empty_n);
+    Block_proc304305_U0->img_6_rows_V_read(Block_proc304305_U0_img_6_rows_V_read);
+    Block_proc304305_U0->img_6_cols_V_dout(img_6_cols_V_c_dout);
+    Block_proc304305_U0->img_6_cols_V_empty_n(img_6_cols_V_c_empty_n);
+    Block_proc304305_U0->img_6_cols_V_read(Block_proc304305_U0_img_6_cols_V_read);
+    Block_proc304305_U0->ap_clk(ap_clk);
+    Block_proc304305_U0->ap_rst(ap_rst_n_inv);
+    Block_proc304305_U0->OUTPUT_STREAM_TVALID(Block_proc304305_U0_OUTPUT_STREAM_TVALID);
+    Block_proc304305_U0->OUTPUT_STREAM_TREADY(OUTPUT_STREAM_TREADY);
+    Block_proc304305_U0->ap_done(Block_proc304305_U0_ap_done);
+    Block_proc304305_U0->ap_start(Block_proc304305_U0_ap_start);
+    Block_proc304305_U0->ap_ready(Block_proc304305_U0_ap_ready);
+    Block_proc304305_U0->ap_idle(Block_proc304305_U0_ap_idle);
+    Block_proc304305_U0->ap_continue(Block_proc304305_U0_ap_continue);
     img_0_rows_V_c_U = new fifo_w11_d2_A("img_0_rows_V_c_U");
     img_0_rows_V_c_U->clk(ap_clk);
     img_0_rows_V_c_U->reset(ap_rst_n_inv);
     img_0_rows_V_c_U->if_read_ce(ap_var_for_const0);
     img_0_rows_V_c_U->if_write_ce(ap_var_for_const0);
-    img_0_rows_V_c_U->if_din(Block_proc466_U0_img_0_rows_V_out_din);
+    img_0_rows_V_c_U->if_din(Block_proc467_U0_img_0_rows_V_out_din);
     img_0_rows_V_c_U->if_full_n(img_0_rows_V_c_full_n);
-    img_0_rows_V_c_U->if_write(Block_proc466_U0_img_0_rows_V_out_write);
+    img_0_rows_V_c_U->if_write(Block_proc467_U0_img_0_rows_V_out_write);
     img_0_rows_V_c_U->if_dout(img_0_rows_V_c_dout);
     img_0_rows_V_c_U->if_empty_n(img_0_rows_V_c_empty_n);
     img_0_rows_V_c_U->if_read(AXIvideo2Mat_U0_img_rows_V_read);
@@ -144,9 +144,9 @@ Sobel_filter::Sobel_filter(sc_module_name name) : sc_module(name), mVcdFile(0) {
     img_0_cols_V_c_U->reset(ap_rst_n_inv);
     img_0_cols_V_c_U->if_read_ce(ap_var_for_const0);
     img_0_cols_V_c_U->if_write_ce(ap_var_for_const0);
-    img_0_cols_V_c_U->if_din(Block_proc466_U0_img_0_cols_V_out_din);
+    img_0_cols_V_c_U->if_din(Block_proc467_U0_img_0_cols_V_out_din);
     img_0_cols_V_c_U->if_full_n(img_0_cols_V_c_full_n);
-    img_0_cols_V_c_U->if_write(Block_proc466_U0_img_0_cols_V_out_write);
+    img_0_cols_V_c_U->if_write(Block_proc467_U0_img_0_cols_V_out_write);
     img_0_cols_V_c_U->if_dout(img_0_cols_V_c_dout);
     img_0_cols_V_c_U->if_empty_n(img_0_cols_V_c_empty_n);
     img_0_cols_V_c_U->if_read(AXIvideo2Mat_U0_img_cols_V_read);
@@ -155,34 +155,34 @@ Sobel_filter::Sobel_filter(sc_module_name name) : sc_module(name), mVcdFile(0) {
     img_6_rows_V_c_U->reset(ap_rst_n_inv);
     img_6_rows_V_c_U->if_read_ce(ap_var_for_const0);
     img_6_rows_V_c_U->if_write_ce(ap_var_for_const0);
-    img_6_rows_V_c_U->if_din(Block_proc466_U0_img_6_rows_V_out_din);
+    img_6_rows_V_c_U->if_din(Block_proc467_U0_img_6_rows_V_out_din);
     img_6_rows_V_c_U->if_full_n(img_6_rows_V_c_full_n);
-    img_6_rows_V_c_U->if_write(Block_proc466_U0_img_6_rows_V_out_write);
+    img_6_rows_V_c_U->if_write(Block_proc467_U0_img_6_rows_V_out_write);
     img_6_rows_V_c_U->if_dout(img_6_rows_V_c_dout);
     img_6_rows_V_c_U->if_empty_n(img_6_rows_V_c_empty_n);
-    img_6_rows_V_c_U->if_read(Block_proc303304_U0_img_6_rows_V_read);
+    img_6_rows_V_c_U->if_read(Block_proc304305_U0_img_6_rows_V_read);
     img_6_cols_V_c_U = new fifo_w12_d3_A("img_6_cols_V_c_U");
     img_6_cols_V_c_U->clk(ap_clk);
     img_6_cols_V_c_U->reset(ap_rst_n_inv);
     img_6_cols_V_c_U->if_read_ce(ap_var_for_const0);
     img_6_cols_V_c_U->if_write_ce(ap_var_for_const0);
-    img_6_cols_V_c_U->if_din(Block_proc466_U0_img_6_cols_V_out_din);
+    img_6_cols_V_c_U->if_din(Block_proc467_U0_img_6_cols_V_out_din);
     img_6_cols_V_c_U->if_full_n(img_6_cols_V_c_full_n);
-    img_6_cols_V_c_U->if_write(Block_proc466_U0_img_6_cols_V_out_write);
+    img_6_cols_V_c_U->if_write(Block_proc467_U0_img_6_cols_V_out_write);
     img_6_cols_V_c_U->if_dout(img_6_cols_V_c_dout);
     img_6_cols_V_c_U->if_empty_n(img_6_cols_V_c_empty_n);
-    img_6_cols_V_c_U->if_read(Block_proc303304_U0_img_6_cols_V_read);
-    enable_c_U = new fifo_w8_d3_A("enable_c_U");
-    enable_c_U->clk(ap_clk);
-    enable_c_U->reset(ap_rst_n_inv);
-    enable_c_U->if_read_ce(ap_var_for_const0);
-    enable_c_U->if_write_ce(ap_var_for_const0);
-    enable_c_U->if_din(Block_proc466_U0_enable_out_din);
-    enable_c_U->if_full_n(enable_c_full_n);
-    enable_c_U->if_write(Block_proc466_U0_enable_out_write);
-    enable_c_U->if_dout(enable_c_dout);
-    enable_c_U->if_empty_n(enable_c_empty_n);
-    enable_c_U->if_read(Block_proc303304_U0_enable_read);
+    img_6_cols_V_c_U->if_read(Block_proc304305_U0_img_6_cols_V_read);
+    enable_V_c_U = new fifo_w1_d3_A("enable_V_c_U");
+    enable_V_c_U->clk(ap_clk);
+    enable_V_c_U->reset(ap_rst_n_inv);
+    enable_V_c_U->if_read_ce(ap_var_for_const0);
+    enable_V_c_U->if_write_ce(ap_var_for_const0);
+    enable_V_c_U->if_din(Block_proc467_U0_enable_V_out_din);
+    enable_V_c_U->if_full_n(enable_V_c_full_n);
+    enable_V_c_U->if_write(Block_proc467_U0_enable_V_out_write);
+    enable_V_c_U->if_dout(enable_V_c_dout);
+    enable_V_c_U->if_empty_n(enable_V_c_empty_n);
+    enable_V_c_U->if_read(Block_proc304305_U0_enable_V_read);
     img_0_data_stream_0_U = new fifo_w8_d2_A_x("img_0_data_stream_0_U");
     img_0_data_stream_0_U->clk(ap_clk);
     img_0_data_stream_0_U->reset(ap_rst_n_inv);
@@ -193,7 +193,7 @@ Sobel_filter::Sobel_filter(sc_module_name name) : sc_module(name), mVcdFile(0) {
     img_0_data_stream_0_U->if_write(AXIvideo2Mat_U0_img_data_stream_0_V_write);
     img_0_data_stream_0_U->if_dout(img_0_data_stream_0_dout);
     img_0_data_stream_0_U->if_empty_n(img_0_data_stream_0_empty_n);
-    img_0_data_stream_0_U->if_read(Block_proc303304_U0_img_0_data_stream_0_V_read);
+    img_0_data_stream_0_U->if_read(Block_proc304305_U0_img_0_data_stream_0_V_read);
     img_0_data_stream_1_U = new fifo_w8_d2_A_x("img_0_data_stream_1_U");
     img_0_data_stream_1_U->clk(ap_clk);
     img_0_data_stream_1_U->reset(ap_rst_n_inv);
@@ -204,7 +204,7 @@ Sobel_filter::Sobel_filter(sc_module_name name) : sc_module(name), mVcdFile(0) {
     img_0_data_stream_1_U->if_write(AXIvideo2Mat_U0_img_data_stream_1_V_write);
     img_0_data_stream_1_U->if_dout(img_0_data_stream_1_dout);
     img_0_data_stream_1_U->if_empty_n(img_0_data_stream_1_empty_n);
-    img_0_data_stream_1_U->if_read(Block_proc303304_U0_img_0_data_stream_1_V_read);
+    img_0_data_stream_1_U->if_read(Block_proc304305_U0_img_0_data_stream_1_V_read);
     img_0_data_stream_2_U = new fifo_w8_d2_A_x("img_0_data_stream_2_U");
     img_0_data_stream_2_U->clk(ap_clk);
     img_0_data_stream_2_U->reset(ap_rst_n_inv);
@@ -215,7 +215,7 @@ Sobel_filter::Sobel_filter(sc_module_name name) : sc_module(name), mVcdFile(0) {
     img_0_data_stream_2_U->if_write(AXIvideo2Mat_U0_img_data_stream_2_V_write);
     img_0_data_stream_2_U->if_dout(img_0_data_stream_2_dout);
     img_0_data_stream_2_U->if_empty_n(img_0_data_stream_2_empty_n);
-    img_0_data_stream_2_U->if_read(Block_proc303304_U0_img_0_data_stream_2_V_read);
+    img_0_data_stream_2_U->if_read(Block_proc304305_U0_img_0_data_stream_2_V_read);
     img_0_rows_V_c25_U = new fifo_w11_d2_A("img_0_rows_V_c25_U");
     img_0_rows_V_c25_U->clk(ap_clk);
     img_0_rows_V_c25_U->reset(ap_rst_n_inv);
@@ -226,7 +226,7 @@ Sobel_filter::Sobel_filter(sc_module_name name) : sc_module(name), mVcdFile(0) {
     img_0_rows_V_c25_U->if_write(AXIvideo2Mat_U0_img_rows_V_out_write);
     img_0_rows_V_c25_U->if_dout(img_0_rows_V_c25_dout);
     img_0_rows_V_c25_U->if_empty_n(img_0_rows_V_c25_empty_n);
-    img_0_rows_V_c25_U->if_read(Block_proc303304_U0_img_0_rows_V_read);
+    img_0_rows_V_c25_U->if_read(Block_proc304305_U0_img_0_rows_V_read);
     img_0_cols_V_c26_U = new fifo_w12_d2_A("img_0_cols_V_c26_U");
     img_0_cols_V_c26_U->clk(ap_clk);
     img_0_cols_V_c26_U->reset(ap_rst_n_inv);
@@ -237,18 +237,18 @@ Sobel_filter::Sobel_filter(sc_module_name name) : sc_module(name), mVcdFile(0) {
     img_0_cols_V_c26_U->if_write(AXIvideo2Mat_U0_img_cols_V_out_write);
     img_0_cols_V_c26_U->if_dout(img_0_cols_V_c26_dout);
     img_0_cols_V_c26_U->if_empty_n(img_0_cols_V_c26_empty_n);
-    img_0_cols_V_c26_U->if_read(Block_proc303304_U0_img_0_cols_V_read);
+    img_0_cols_V_c26_U->if_read(Block_proc304305_U0_img_0_cols_V_read);
     start_for_Block_pzec_U = new start_for_Block_pzec("start_for_Block_pzec_U");
     start_for_Block_pzec_U->clk(ap_clk);
     start_for_Block_pzec_U->reset(ap_rst_n_inv);
     start_for_Block_pzec_U->if_read_ce(ap_var_for_const0);
     start_for_Block_pzec_U->if_write_ce(ap_var_for_const0);
-    start_for_Block_pzec_U->if_din(start_for_Block_proc303304_U0_din);
-    start_for_Block_pzec_U->if_full_n(start_for_Block_proc303304_U0_full_n);
-    start_for_Block_pzec_U->if_write(Block_proc466_U0_start_write);
-    start_for_Block_pzec_U->if_dout(start_for_Block_proc303304_U0_dout);
-    start_for_Block_pzec_U->if_empty_n(start_for_Block_proc303304_U0_empty_n);
-    start_for_Block_pzec_U->if_read(Block_proc303304_U0_ap_ready);
+    start_for_Block_pzec_U->if_din(start_for_Block_proc304305_U0_din);
+    start_for_Block_pzec_U->if_full_n(start_for_Block_proc304305_U0_full_n);
+    start_for_Block_pzec_U->if_write(Block_proc467_U0_start_write);
+    start_for_Block_pzec_U->if_dout(start_for_Block_proc304305_U0_dout);
+    start_for_Block_pzec_U->if_empty_n(start_for_Block_proc304305_U0_empty_n);
+    start_for_Block_pzec_U->if_read(Block_proc304305_U0_ap_ready);
 
     SC_METHOD(thread_ap_clk_no_reset_);
     dont_initialize();
@@ -264,55 +264,55 @@ Sobel_filter::Sobel_filter(sc_module_name name) : sc_module(name), mVcdFile(0) {
 
     SC_METHOD(thread_AXIvideo2Mat_U0_start_write);
 
-    SC_METHOD(thread_Block_proc303304_U0_ap_continue);
+    SC_METHOD(thread_Block_proc304305_U0_ap_continue);
 
-    SC_METHOD(thread_Block_proc303304_U0_ap_start);
-    sensitive << ( start_for_Block_proc303304_U0_empty_n );
+    SC_METHOD(thread_Block_proc304305_U0_ap_start);
+    sensitive << ( start_for_Block_proc304305_U0_empty_n );
 
-    SC_METHOD(thread_Block_proc303304_U0_start_full_n);
+    SC_METHOD(thread_Block_proc304305_U0_start_full_n);
 
-    SC_METHOD(thread_Block_proc303304_U0_start_write);
+    SC_METHOD(thread_Block_proc304305_U0_start_write);
 
-    SC_METHOD(thread_Block_proc466_U0_ap_continue);
+    SC_METHOD(thread_Block_proc467_U0_ap_continue);
 
-    SC_METHOD(thread_Block_proc466_U0_ap_start);
+    SC_METHOD(thread_Block_proc467_U0_ap_start);
     sensitive << ( ap_start );
-    sensitive << ( ap_sync_reg_Block_proc466_U0_ap_ready );
+    sensitive << ( ap_sync_reg_Block_proc467_U0_ap_ready );
 
     SC_METHOD(thread_INPUT_STREAM_TREADY);
     sensitive << ( AXIvideo2Mat_U0_INPUT_STREAM_TREADY );
 
     SC_METHOD(thread_OUTPUT_STREAM_TDATA);
-    sensitive << ( Block_proc303304_U0_OUTPUT_STREAM_TDATA );
+    sensitive << ( Block_proc304305_U0_OUTPUT_STREAM_TDATA );
 
     SC_METHOD(thread_OUTPUT_STREAM_TDEST);
-    sensitive << ( Block_proc303304_U0_OUTPUT_STREAM_TDEST );
+    sensitive << ( Block_proc304305_U0_OUTPUT_STREAM_TDEST );
 
     SC_METHOD(thread_OUTPUT_STREAM_TID);
-    sensitive << ( Block_proc303304_U0_OUTPUT_STREAM_TID );
+    sensitive << ( Block_proc304305_U0_OUTPUT_STREAM_TID );
 
     SC_METHOD(thread_OUTPUT_STREAM_TKEEP);
-    sensitive << ( Block_proc303304_U0_OUTPUT_STREAM_TKEEP );
+    sensitive << ( Block_proc304305_U0_OUTPUT_STREAM_TKEEP );
 
     SC_METHOD(thread_OUTPUT_STREAM_TLAST);
-    sensitive << ( Block_proc303304_U0_OUTPUT_STREAM_TLAST );
+    sensitive << ( Block_proc304305_U0_OUTPUT_STREAM_TLAST );
 
     SC_METHOD(thread_OUTPUT_STREAM_TSTRB);
-    sensitive << ( Block_proc303304_U0_OUTPUT_STREAM_TSTRB );
+    sensitive << ( Block_proc304305_U0_OUTPUT_STREAM_TSTRB );
 
     SC_METHOD(thread_OUTPUT_STREAM_TUSER);
-    sensitive << ( Block_proc303304_U0_OUTPUT_STREAM_TUSER );
+    sensitive << ( Block_proc304305_U0_OUTPUT_STREAM_TUSER );
 
     SC_METHOD(thread_OUTPUT_STREAM_TVALID);
-    sensitive << ( Block_proc303304_U0_OUTPUT_STREAM_TVALID );
+    sensitive << ( Block_proc304305_U0_OUTPUT_STREAM_TVALID );
 
     SC_METHOD(thread_ap_done);
-    sensitive << ( Block_proc303304_U0_ap_done );
+    sensitive << ( Block_proc304305_U0_ap_done );
 
     SC_METHOD(thread_ap_idle);
-    sensitive << ( Block_proc466_U0_ap_idle );
+    sensitive << ( Block_proc467_U0_ap_idle );
     sensitive << ( AXIvideo2Mat_U0_ap_idle );
-    sensitive << ( Block_proc303304_U0_ap_idle );
+    sensitive << ( Block_proc304305_U0_ap_idle );
 
     SC_METHOD(thread_ap_ready);
     sensitive << ( ap_sync_ready );
@@ -324,20 +324,20 @@ Sobel_filter::Sobel_filter(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sensitive << ( AXIvideo2Mat_U0_ap_ready );
     sensitive << ( ap_sync_reg_AXIvideo2Mat_U0_ap_ready );
 
-    SC_METHOD(thread_ap_sync_Block_proc466_U0_ap_ready);
-    sensitive << ( Block_proc466_U0_ap_ready );
-    sensitive << ( ap_sync_reg_Block_proc466_U0_ap_ready );
+    SC_METHOD(thread_ap_sync_Block_proc467_U0_ap_ready);
+    sensitive << ( Block_proc467_U0_ap_ready );
+    sensitive << ( ap_sync_reg_Block_proc467_U0_ap_ready );
 
     SC_METHOD(thread_ap_sync_continue);
 
     SC_METHOD(thread_ap_sync_done);
-    sensitive << ( Block_proc303304_U0_ap_done );
+    sensitive << ( Block_proc304305_U0_ap_done );
 
     SC_METHOD(thread_ap_sync_ready);
     sensitive << ( ap_sync_AXIvideo2Mat_U0_ap_ready );
-    sensitive << ( ap_sync_Block_proc466_U0_ap_ready );
+    sensitive << ( ap_sync_Block_proc467_U0_ap_ready );
 
-    SC_METHOD(thread_start_for_Block_proc303304_U0_din);
+    SC_METHOD(thread_start_for_Block_proc304305_U0_din);
 
     SC_THREAD(thread_hdltv_gen);
     sensitive << ( ap_clk.pos() );
@@ -346,8 +346,8 @@ Sobel_filter::Sobel_filter(sc_module_name name) : sc_module(name), mVcdFile(0) {
 
     ap_sync_reg_AXIvideo2Mat_U0_ap_ready = SC_LOGIC_0;
     AXIvideo2Mat_U0_ap_ready_count = "00";
-    ap_sync_reg_Block_proc466_U0_ap_ready = SC_LOGIC_0;
-    Block_proc466_U0_ap_ready_count = "00";
+    ap_sync_reg_Block_proc467_U0_ap_ready = SC_LOGIC_0;
+    Block_proc467_U0_ap_ready_count = "00";
     static int apTFileNum = 0;
     stringstream apTFilenSS;
     apTFilenSS << "Sobel_filter_sc_trace_" << apTFileNum ++;
@@ -370,7 +370,7 @@ Sobel_filter::Sobel_filter(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, OUTPUT_STREAM_TLAST, "(port)OUTPUT_STREAM_TLAST");
     sc_trace(mVcdFile, OUTPUT_STREAM_TID, "(port)OUTPUT_STREAM_TID");
     sc_trace(mVcdFile, OUTPUT_STREAM_TDEST, "(port)OUTPUT_STREAM_TDEST");
-    sc_trace(mVcdFile, enable, "(port)enable");
+    sc_trace(mVcdFile, enable_V, "(port)enable_V");
     sc_trace(mVcdFile, ap_clk, "(port)ap_clk");
     sc_trace(mVcdFile, ap_rst_n, "(port)ap_rst_n");
     sc_trace(mVcdFile, INPUT_STREAM_TVALID, "(port)INPUT_STREAM_TVALID");
@@ -384,23 +384,23 @@ Sobel_filter::Sobel_filter(sc_module_name name) : sc_module(name), mVcdFile(0) {
 #endif
 #ifdef __HLS_TRACE_LEVEL_INT__
     sc_trace(mVcdFile, ap_rst_n_inv, "ap_rst_n_inv");
-    sc_trace(mVcdFile, Block_proc466_U0_ap_start, "Block_proc466_U0_ap_start");
-    sc_trace(mVcdFile, Block_proc466_U0_ap_done, "Block_proc466_U0_ap_done");
-    sc_trace(mVcdFile, Block_proc466_U0_ap_continue, "Block_proc466_U0_ap_continue");
-    sc_trace(mVcdFile, Block_proc466_U0_ap_idle, "Block_proc466_U0_ap_idle");
-    sc_trace(mVcdFile, Block_proc466_U0_ap_ready, "Block_proc466_U0_ap_ready");
-    sc_trace(mVcdFile, Block_proc466_U0_start_out, "Block_proc466_U0_start_out");
-    sc_trace(mVcdFile, Block_proc466_U0_start_write, "Block_proc466_U0_start_write");
-    sc_trace(mVcdFile, Block_proc466_U0_img_0_rows_V_out_din, "Block_proc466_U0_img_0_rows_V_out_din");
-    sc_trace(mVcdFile, Block_proc466_U0_img_0_rows_V_out_write, "Block_proc466_U0_img_0_rows_V_out_write");
-    sc_trace(mVcdFile, Block_proc466_U0_img_0_cols_V_out_din, "Block_proc466_U0_img_0_cols_V_out_din");
-    sc_trace(mVcdFile, Block_proc466_U0_img_0_cols_V_out_write, "Block_proc466_U0_img_0_cols_V_out_write");
-    sc_trace(mVcdFile, Block_proc466_U0_img_6_rows_V_out_din, "Block_proc466_U0_img_6_rows_V_out_din");
-    sc_trace(mVcdFile, Block_proc466_U0_img_6_rows_V_out_write, "Block_proc466_U0_img_6_rows_V_out_write");
-    sc_trace(mVcdFile, Block_proc466_U0_img_6_cols_V_out_din, "Block_proc466_U0_img_6_cols_V_out_din");
-    sc_trace(mVcdFile, Block_proc466_U0_img_6_cols_V_out_write, "Block_proc466_U0_img_6_cols_V_out_write");
-    sc_trace(mVcdFile, Block_proc466_U0_enable_out_din, "Block_proc466_U0_enable_out_din");
-    sc_trace(mVcdFile, Block_proc466_U0_enable_out_write, "Block_proc466_U0_enable_out_write");
+    sc_trace(mVcdFile, Block_proc467_U0_ap_start, "Block_proc467_U0_ap_start");
+    sc_trace(mVcdFile, Block_proc467_U0_ap_done, "Block_proc467_U0_ap_done");
+    sc_trace(mVcdFile, Block_proc467_U0_ap_continue, "Block_proc467_U0_ap_continue");
+    sc_trace(mVcdFile, Block_proc467_U0_ap_idle, "Block_proc467_U0_ap_idle");
+    sc_trace(mVcdFile, Block_proc467_U0_ap_ready, "Block_proc467_U0_ap_ready");
+    sc_trace(mVcdFile, Block_proc467_U0_start_out, "Block_proc467_U0_start_out");
+    sc_trace(mVcdFile, Block_proc467_U0_start_write, "Block_proc467_U0_start_write");
+    sc_trace(mVcdFile, Block_proc467_U0_img_0_rows_V_out_din, "Block_proc467_U0_img_0_rows_V_out_din");
+    sc_trace(mVcdFile, Block_proc467_U0_img_0_rows_V_out_write, "Block_proc467_U0_img_0_rows_V_out_write");
+    sc_trace(mVcdFile, Block_proc467_U0_img_0_cols_V_out_din, "Block_proc467_U0_img_0_cols_V_out_din");
+    sc_trace(mVcdFile, Block_proc467_U0_img_0_cols_V_out_write, "Block_proc467_U0_img_0_cols_V_out_write");
+    sc_trace(mVcdFile, Block_proc467_U0_img_6_rows_V_out_din, "Block_proc467_U0_img_6_rows_V_out_din");
+    sc_trace(mVcdFile, Block_proc467_U0_img_6_rows_V_out_write, "Block_proc467_U0_img_6_rows_V_out_write");
+    sc_trace(mVcdFile, Block_proc467_U0_img_6_cols_V_out_din, "Block_proc467_U0_img_6_cols_V_out_din");
+    sc_trace(mVcdFile, Block_proc467_U0_img_6_cols_V_out_write, "Block_proc467_U0_img_6_cols_V_out_write");
+    sc_trace(mVcdFile, Block_proc467_U0_enable_V_out_din, "Block_proc467_U0_enable_V_out_din");
+    sc_trace(mVcdFile, Block_proc467_U0_enable_V_out_write, "Block_proc467_U0_enable_V_out_write");
     sc_trace(mVcdFile, AXIvideo2Mat_U0_ap_start, "AXIvideo2Mat_U0_ap_start");
     sc_trace(mVcdFile, AXIvideo2Mat_U0_ap_done, "AXIvideo2Mat_U0_ap_done");
     sc_trace(mVcdFile, AXIvideo2Mat_U0_ap_continue, "AXIvideo2Mat_U0_ap_continue");
@@ -419,27 +419,27 @@ Sobel_filter::Sobel_filter(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, AXIvideo2Mat_U0_img_rows_V_out_write, "AXIvideo2Mat_U0_img_rows_V_out_write");
     sc_trace(mVcdFile, AXIvideo2Mat_U0_img_cols_V_out_din, "AXIvideo2Mat_U0_img_cols_V_out_din");
     sc_trace(mVcdFile, AXIvideo2Mat_U0_img_cols_V_out_write, "AXIvideo2Mat_U0_img_cols_V_out_write");
-    sc_trace(mVcdFile, Block_proc303304_U0_enable_read, "Block_proc303304_U0_enable_read");
-    sc_trace(mVcdFile, Block_proc303304_U0_img_0_rows_V_read, "Block_proc303304_U0_img_0_rows_V_read");
-    sc_trace(mVcdFile, Block_proc303304_U0_img_0_cols_V_read, "Block_proc303304_U0_img_0_cols_V_read");
-    sc_trace(mVcdFile, Block_proc303304_U0_img_0_data_stream_0_V_read, "Block_proc303304_U0_img_0_data_stream_0_V_read");
-    sc_trace(mVcdFile, Block_proc303304_U0_img_0_data_stream_1_V_read, "Block_proc303304_U0_img_0_data_stream_1_V_read");
-    sc_trace(mVcdFile, Block_proc303304_U0_img_0_data_stream_2_V_read, "Block_proc303304_U0_img_0_data_stream_2_V_read");
-    sc_trace(mVcdFile, Block_proc303304_U0_OUTPUT_STREAM_TDATA, "Block_proc303304_U0_OUTPUT_STREAM_TDATA");
-    sc_trace(mVcdFile, Block_proc303304_U0_OUTPUT_STREAM_TKEEP, "Block_proc303304_U0_OUTPUT_STREAM_TKEEP");
-    sc_trace(mVcdFile, Block_proc303304_U0_OUTPUT_STREAM_TSTRB, "Block_proc303304_U0_OUTPUT_STREAM_TSTRB");
-    sc_trace(mVcdFile, Block_proc303304_U0_OUTPUT_STREAM_TUSER, "Block_proc303304_U0_OUTPUT_STREAM_TUSER");
-    sc_trace(mVcdFile, Block_proc303304_U0_OUTPUT_STREAM_TLAST, "Block_proc303304_U0_OUTPUT_STREAM_TLAST");
-    sc_trace(mVcdFile, Block_proc303304_U0_OUTPUT_STREAM_TID, "Block_proc303304_U0_OUTPUT_STREAM_TID");
-    sc_trace(mVcdFile, Block_proc303304_U0_OUTPUT_STREAM_TDEST, "Block_proc303304_U0_OUTPUT_STREAM_TDEST");
-    sc_trace(mVcdFile, Block_proc303304_U0_img_6_rows_V_read, "Block_proc303304_U0_img_6_rows_V_read");
-    sc_trace(mVcdFile, Block_proc303304_U0_img_6_cols_V_read, "Block_proc303304_U0_img_6_cols_V_read");
-    sc_trace(mVcdFile, Block_proc303304_U0_OUTPUT_STREAM_TVALID, "Block_proc303304_U0_OUTPUT_STREAM_TVALID");
-    sc_trace(mVcdFile, Block_proc303304_U0_ap_done, "Block_proc303304_U0_ap_done");
-    sc_trace(mVcdFile, Block_proc303304_U0_ap_start, "Block_proc303304_U0_ap_start");
-    sc_trace(mVcdFile, Block_proc303304_U0_ap_ready, "Block_proc303304_U0_ap_ready");
-    sc_trace(mVcdFile, Block_proc303304_U0_ap_idle, "Block_proc303304_U0_ap_idle");
-    sc_trace(mVcdFile, Block_proc303304_U0_ap_continue, "Block_proc303304_U0_ap_continue");
+    sc_trace(mVcdFile, Block_proc304305_U0_enable_V_read, "Block_proc304305_U0_enable_V_read");
+    sc_trace(mVcdFile, Block_proc304305_U0_img_0_rows_V_read, "Block_proc304305_U0_img_0_rows_V_read");
+    sc_trace(mVcdFile, Block_proc304305_U0_img_0_cols_V_read, "Block_proc304305_U0_img_0_cols_V_read");
+    sc_trace(mVcdFile, Block_proc304305_U0_img_0_data_stream_0_V_read, "Block_proc304305_U0_img_0_data_stream_0_V_read");
+    sc_trace(mVcdFile, Block_proc304305_U0_img_0_data_stream_1_V_read, "Block_proc304305_U0_img_0_data_stream_1_V_read");
+    sc_trace(mVcdFile, Block_proc304305_U0_img_0_data_stream_2_V_read, "Block_proc304305_U0_img_0_data_stream_2_V_read");
+    sc_trace(mVcdFile, Block_proc304305_U0_OUTPUT_STREAM_TDATA, "Block_proc304305_U0_OUTPUT_STREAM_TDATA");
+    sc_trace(mVcdFile, Block_proc304305_U0_OUTPUT_STREAM_TKEEP, "Block_proc304305_U0_OUTPUT_STREAM_TKEEP");
+    sc_trace(mVcdFile, Block_proc304305_U0_OUTPUT_STREAM_TSTRB, "Block_proc304305_U0_OUTPUT_STREAM_TSTRB");
+    sc_trace(mVcdFile, Block_proc304305_U0_OUTPUT_STREAM_TUSER, "Block_proc304305_U0_OUTPUT_STREAM_TUSER");
+    sc_trace(mVcdFile, Block_proc304305_U0_OUTPUT_STREAM_TLAST, "Block_proc304305_U0_OUTPUT_STREAM_TLAST");
+    sc_trace(mVcdFile, Block_proc304305_U0_OUTPUT_STREAM_TID, "Block_proc304305_U0_OUTPUT_STREAM_TID");
+    sc_trace(mVcdFile, Block_proc304305_U0_OUTPUT_STREAM_TDEST, "Block_proc304305_U0_OUTPUT_STREAM_TDEST");
+    sc_trace(mVcdFile, Block_proc304305_U0_img_6_rows_V_read, "Block_proc304305_U0_img_6_rows_V_read");
+    sc_trace(mVcdFile, Block_proc304305_U0_img_6_cols_V_read, "Block_proc304305_U0_img_6_cols_V_read");
+    sc_trace(mVcdFile, Block_proc304305_U0_OUTPUT_STREAM_TVALID, "Block_proc304305_U0_OUTPUT_STREAM_TVALID");
+    sc_trace(mVcdFile, Block_proc304305_U0_ap_done, "Block_proc304305_U0_ap_done");
+    sc_trace(mVcdFile, Block_proc304305_U0_ap_start, "Block_proc304305_U0_ap_start");
+    sc_trace(mVcdFile, Block_proc304305_U0_ap_ready, "Block_proc304305_U0_ap_ready");
+    sc_trace(mVcdFile, Block_proc304305_U0_ap_idle, "Block_proc304305_U0_ap_idle");
+    sc_trace(mVcdFile, Block_proc304305_U0_ap_continue, "Block_proc304305_U0_ap_continue");
     sc_trace(mVcdFile, ap_sync_continue, "ap_sync_continue");
     sc_trace(mVcdFile, img_0_rows_V_c_full_n, "img_0_rows_V_c_full_n");
     sc_trace(mVcdFile, img_0_rows_V_c_dout, "img_0_rows_V_c_dout");
@@ -453,9 +453,9 @@ Sobel_filter::Sobel_filter(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, img_6_cols_V_c_full_n, "img_6_cols_V_c_full_n");
     sc_trace(mVcdFile, img_6_cols_V_c_dout, "img_6_cols_V_c_dout");
     sc_trace(mVcdFile, img_6_cols_V_c_empty_n, "img_6_cols_V_c_empty_n");
-    sc_trace(mVcdFile, enable_c_full_n, "enable_c_full_n");
-    sc_trace(mVcdFile, enable_c_dout, "enable_c_dout");
-    sc_trace(mVcdFile, enable_c_empty_n, "enable_c_empty_n");
+    sc_trace(mVcdFile, enable_V_c_full_n, "enable_V_c_full_n");
+    sc_trace(mVcdFile, enable_V_c_dout, "enable_V_c_dout");
+    sc_trace(mVcdFile, enable_V_c_empty_n, "enable_V_c_empty_n");
     sc_trace(mVcdFile, img_0_data_stream_0_full_n, "img_0_data_stream_0_full_n");
     sc_trace(mVcdFile, img_0_data_stream_0_dout, "img_0_data_stream_0_dout");
     sc_trace(mVcdFile, img_0_data_stream_0_empty_n, "img_0_data_stream_0_empty_n");
@@ -476,17 +476,17 @@ Sobel_filter::Sobel_filter(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, ap_sync_reg_AXIvideo2Mat_U0_ap_ready, "ap_sync_reg_AXIvideo2Mat_U0_ap_ready");
     sc_trace(mVcdFile, ap_sync_AXIvideo2Mat_U0_ap_ready, "ap_sync_AXIvideo2Mat_U0_ap_ready");
     sc_trace(mVcdFile, AXIvideo2Mat_U0_ap_ready_count, "AXIvideo2Mat_U0_ap_ready_count");
-    sc_trace(mVcdFile, ap_sync_reg_Block_proc466_U0_ap_ready, "ap_sync_reg_Block_proc466_U0_ap_ready");
-    sc_trace(mVcdFile, ap_sync_Block_proc466_U0_ap_ready, "ap_sync_Block_proc466_U0_ap_ready");
-    sc_trace(mVcdFile, Block_proc466_U0_ap_ready_count, "Block_proc466_U0_ap_ready_count");
-    sc_trace(mVcdFile, start_for_Block_proc303304_U0_din, "start_for_Block_proc303304_U0_din");
-    sc_trace(mVcdFile, start_for_Block_proc303304_U0_full_n, "start_for_Block_proc303304_U0_full_n");
-    sc_trace(mVcdFile, start_for_Block_proc303304_U0_dout, "start_for_Block_proc303304_U0_dout");
-    sc_trace(mVcdFile, start_for_Block_proc303304_U0_empty_n, "start_for_Block_proc303304_U0_empty_n");
+    sc_trace(mVcdFile, ap_sync_reg_Block_proc467_U0_ap_ready, "ap_sync_reg_Block_proc467_U0_ap_ready");
+    sc_trace(mVcdFile, ap_sync_Block_proc467_U0_ap_ready, "ap_sync_Block_proc467_U0_ap_ready");
+    sc_trace(mVcdFile, Block_proc467_U0_ap_ready_count, "Block_proc467_U0_ap_ready_count");
+    sc_trace(mVcdFile, start_for_Block_proc304305_U0_din, "start_for_Block_proc304305_U0_din");
+    sc_trace(mVcdFile, start_for_Block_proc304305_U0_full_n, "start_for_Block_proc304305_U0_full_n");
+    sc_trace(mVcdFile, start_for_Block_proc304305_U0_dout, "start_for_Block_proc304305_U0_dout");
+    sc_trace(mVcdFile, start_for_Block_proc304305_U0_empty_n, "start_for_Block_proc304305_U0_empty_n");
     sc_trace(mVcdFile, AXIvideo2Mat_U0_start_full_n, "AXIvideo2Mat_U0_start_full_n");
     sc_trace(mVcdFile, AXIvideo2Mat_U0_start_write, "AXIvideo2Mat_U0_start_write");
-    sc_trace(mVcdFile, Block_proc303304_U0_start_full_n, "Block_proc303304_U0_start_full_n");
-    sc_trace(mVcdFile, Block_proc303304_U0_start_write, "Block_proc303304_U0_start_write");
+    sc_trace(mVcdFile, Block_proc304305_U0_start_full_n, "Block_proc304305_U0_start_full_n");
+    sc_trace(mVcdFile, Block_proc304305_U0_start_write, "Block_proc304305_U0_start_write");
 #endif
 
     }
@@ -502,14 +502,14 @@ Sobel_filter::~Sobel_filter() {
     mHdltvoutHandle << "] " << endl;
     mHdltvinHandle.close();
     mHdltvoutHandle.close();
-    delete Block_proc466_U0;
+    delete Block_proc467_U0;
     delete AXIvideo2Mat_U0;
-    delete Block_proc303304_U0;
+    delete Block_proc304305_U0;
     delete img_0_rows_V_c_U;
     delete img_0_cols_V_c_U;
     delete img_6_rows_V_c_U;
     delete img_6_cols_V_c_U;
-    delete enable_c_U;
+    delete enable_V_c_U;
     delete img_0_data_stream_0_U;
     delete img_0_data_stream_1_U;
     delete img_0_data_stream_2_U;
@@ -531,11 +531,11 @@ void Sobel_filter::thread_ap_clk_no_reset_() {
         AXIvideo2Mat_U0_ap_ready_count = (!AXIvideo2Mat_U0_ap_ready_count.read().is_01() || !ap_const_lv2_1.is_01())? sc_lv<2>(): (sc_biguint<2>(AXIvideo2Mat_U0_ap_ready_count.read()) + sc_biguint<2>(ap_const_lv2_1));
     }
     if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_sync_ready.read()) && 
-         esl_seteq<1,1,1>(Block_proc466_U0_ap_ready.read(), ap_const_logic_0))) {
-        Block_proc466_U0_ap_ready_count = (!Block_proc466_U0_ap_ready_count.read().is_01() || !ap_const_lv2_1.is_01())? sc_lv<2>(): (sc_biguint<2>(Block_proc466_U0_ap_ready_count.read()) - sc_biguint<2>(ap_const_lv2_1));
+         esl_seteq<1,1,1>(Block_proc467_U0_ap_ready.read(), ap_const_logic_0))) {
+        Block_proc467_U0_ap_ready_count = (!Block_proc467_U0_ap_ready_count.read().is_01() || !ap_const_lv2_1.is_01())? sc_lv<2>(): (sc_biguint<2>(Block_proc467_U0_ap_ready_count.read()) - sc_biguint<2>(ap_const_lv2_1));
     } else if ((esl_seteq<1,1,1>(ap_sync_ready.read(), ap_const_logic_0) && 
-                esl_seteq<1,1,1>(Block_proc466_U0_ap_ready.read(), ap_const_logic_1))) {
-        Block_proc466_U0_ap_ready_count = (!Block_proc466_U0_ap_ready_count.read().is_01() || !ap_const_lv2_1.is_01())? sc_lv<2>(): (sc_biguint<2>(Block_proc466_U0_ap_ready_count.read()) + sc_biguint<2>(ap_const_lv2_1));
+                esl_seteq<1,1,1>(Block_proc467_U0_ap_ready.read(), ap_const_logic_1))) {
+        Block_proc467_U0_ap_ready_count = (!Block_proc467_U0_ap_ready_count.read().is_01() || !ap_const_lv2_1.is_01())? sc_lv<2>(): (sc_biguint<2>(Block_proc467_U0_ap_ready_count.read()) + sc_biguint<2>(ap_const_lv2_1));
     }
     if ( ap_rst_n_inv.read() == ap_const_logic_1) {
         ap_sync_reg_AXIvideo2Mat_U0_ap_ready = ap_const_logic_0;
@@ -548,13 +548,13 @@ void Sobel_filter::thread_ap_clk_no_reset_() {
         }
     }
     if ( ap_rst_n_inv.read() == ap_const_logic_1) {
-        ap_sync_reg_Block_proc466_U0_ap_ready = ap_const_logic_0;
+        ap_sync_reg_Block_proc467_U0_ap_ready = ap_const_logic_0;
     } else {
         if (esl_seteq<1,1,1>(ap_const_logic_1, (ap_start.read() & 
              ap_sync_ready.read()))) {
-            ap_sync_reg_Block_proc466_U0_ap_ready = ap_const_logic_0;
+            ap_sync_reg_Block_proc467_U0_ap_ready = ap_const_logic_0;
         } else {
-            ap_sync_reg_Block_proc466_U0_ap_ready = ap_sync_Block_proc466_U0_ap_ready.read();
+            ap_sync_reg_Block_proc467_U0_ap_ready = ap_sync_Block_proc467_U0_ap_ready.read();
         }
     }
 }
@@ -576,28 +576,28 @@ void Sobel_filter::thread_AXIvideo2Mat_U0_start_write() {
     AXIvideo2Mat_U0_start_write = ap_const_logic_0;
 }
 
-void Sobel_filter::thread_Block_proc303304_U0_ap_continue() {
-    Block_proc303304_U0_ap_continue = ap_const_logic_1;
+void Sobel_filter::thread_Block_proc304305_U0_ap_continue() {
+    Block_proc304305_U0_ap_continue = ap_const_logic_1;
 }
 
-void Sobel_filter::thread_Block_proc303304_U0_ap_start() {
-    Block_proc303304_U0_ap_start = start_for_Block_proc303304_U0_empty_n.read();
+void Sobel_filter::thread_Block_proc304305_U0_ap_start() {
+    Block_proc304305_U0_ap_start = start_for_Block_proc304305_U0_empty_n.read();
 }
 
-void Sobel_filter::thread_Block_proc303304_U0_start_full_n() {
-    Block_proc303304_U0_start_full_n = ap_const_logic_1;
+void Sobel_filter::thread_Block_proc304305_U0_start_full_n() {
+    Block_proc304305_U0_start_full_n = ap_const_logic_1;
 }
 
-void Sobel_filter::thread_Block_proc303304_U0_start_write() {
-    Block_proc303304_U0_start_write = ap_const_logic_0;
+void Sobel_filter::thread_Block_proc304305_U0_start_write() {
+    Block_proc304305_U0_start_write = ap_const_logic_0;
 }
 
-void Sobel_filter::thread_Block_proc466_U0_ap_continue() {
-    Block_proc466_U0_ap_continue = ap_const_logic_1;
+void Sobel_filter::thread_Block_proc467_U0_ap_continue() {
+    Block_proc467_U0_ap_continue = ap_const_logic_1;
 }
 
-void Sobel_filter::thread_Block_proc466_U0_ap_start() {
-    Block_proc466_U0_ap_start = (ap_start.read() & (ap_sync_reg_Block_proc466_U0_ap_ready.read() ^ 
+void Sobel_filter::thread_Block_proc467_U0_ap_start() {
+    Block_proc467_U0_ap_start = (ap_start.read() & (ap_sync_reg_Block_proc467_U0_ap_ready.read() ^ 
   ap_const_logic_1));
 }
 
@@ -606,43 +606,43 @@ void Sobel_filter::thread_INPUT_STREAM_TREADY() {
 }
 
 void Sobel_filter::thread_OUTPUT_STREAM_TDATA() {
-    OUTPUT_STREAM_TDATA = Block_proc303304_U0_OUTPUT_STREAM_TDATA.read();
+    OUTPUT_STREAM_TDATA = Block_proc304305_U0_OUTPUT_STREAM_TDATA.read();
 }
 
 void Sobel_filter::thread_OUTPUT_STREAM_TDEST() {
-    OUTPUT_STREAM_TDEST = Block_proc303304_U0_OUTPUT_STREAM_TDEST.read();
+    OUTPUT_STREAM_TDEST = Block_proc304305_U0_OUTPUT_STREAM_TDEST.read();
 }
 
 void Sobel_filter::thread_OUTPUT_STREAM_TID() {
-    OUTPUT_STREAM_TID = Block_proc303304_U0_OUTPUT_STREAM_TID.read();
+    OUTPUT_STREAM_TID = Block_proc304305_U0_OUTPUT_STREAM_TID.read();
 }
 
 void Sobel_filter::thread_OUTPUT_STREAM_TKEEP() {
-    OUTPUT_STREAM_TKEEP = Block_proc303304_U0_OUTPUT_STREAM_TKEEP.read();
+    OUTPUT_STREAM_TKEEP = Block_proc304305_U0_OUTPUT_STREAM_TKEEP.read();
 }
 
 void Sobel_filter::thread_OUTPUT_STREAM_TLAST() {
-    OUTPUT_STREAM_TLAST = Block_proc303304_U0_OUTPUT_STREAM_TLAST.read();
+    OUTPUT_STREAM_TLAST = Block_proc304305_U0_OUTPUT_STREAM_TLAST.read();
 }
 
 void Sobel_filter::thread_OUTPUT_STREAM_TSTRB() {
-    OUTPUT_STREAM_TSTRB = Block_proc303304_U0_OUTPUT_STREAM_TSTRB.read();
+    OUTPUT_STREAM_TSTRB = Block_proc304305_U0_OUTPUT_STREAM_TSTRB.read();
 }
 
 void Sobel_filter::thread_OUTPUT_STREAM_TUSER() {
-    OUTPUT_STREAM_TUSER = Block_proc303304_U0_OUTPUT_STREAM_TUSER.read();
+    OUTPUT_STREAM_TUSER = Block_proc304305_U0_OUTPUT_STREAM_TUSER.read();
 }
 
 void Sobel_filter::thread_OUTPUT_STREAM_TVALID() {
-    OUTPUT_STREAM_TVALID = Block_proc303304_U0_OUTPUT_STREAM_TVALID.read();
+    OUTPUT_STREAM_TVALID = Block_proc304305_U0_OUTPUT_STREAM_TVALID.read();
 }
 
 void Sobel_filter::thread_ap_done() {
-    ap_done = Block_proc303304_U0_ap_done.read();
+    ap_done = Block_proc304305_U0_ap_done.read();
 }
 
 void Sobel_filter::thread_ap_idle() {
-    ap_idle = (Block_proc466_U0_ap_idle.read() & AXIvideo2Mat_U0_ap_idle.read() & Block_proc303304_U0_ap_idle.read());
+    ap_idle = (Block_proc467_U0_ap_idle.read() & AXIvideo2Mat_U0_ap_idle.read() & Block_proc304305_U0_ap_idle.read());
 }
 
 void Sobel_filter::thread_ap_ready() {
@@ -657,8 +657,8 @@ void Sobel_filter::thread_ap_sync_AXIvideo2Mat_U0_ap_ready() {
     ap_sync_AXIvideo2Mat_U0_ap_ready = (AXIvideo2Mat_U0_ap_ready.read() | ap_sync_reg_AXIvideo2Mat_U0_ap_ready.read());
 }
 
-void Sobel_filter::thread_ap_sync_Block_proc466_U0_ap_ready() {
-    ap_sync_Block_proc466_U0_ap_ready = (Block_proc466_U0_ap_ready.read() | ap_sync_reg_Block_proc466_U0_ap_ready.read());
+void Sobel_filter::thread_ap_sync_Block_proc467_U0_ap_ready() {
+    ap_sync_Block_proc467_U0_ap_ready = (Block_proc467_U0_ap_ready.read() | ap_sync_reg_Block_proc467_U0_ap_ready.read());
 }
 
 void Sobel_filter::thread_ap_sync_continue() {
@@ -666,15 +666,15 @@ void Sobel_filter::thread_ap_sync_continue() {
 }
 
 void Sobel_filter::thread_ap_sync_done() {
-    ap_sync_done = Block_proc303304_U0_ap_done.read();
+    ap_sync_done = Block_proc304305_U0_ap_done.read();
 }
 
 void Sobel_filter::thread_ap_sync_ready() {
-    ap_sync_ready = (ap_sync_AXIvideo2Mat_U0_ap_ready.read() & ap_sync_Block_proc466_U0_ap_ready.read());
+    ap_sync_ready = (ap_sync_AXIvideo2Mat_U0_ap_ready.read() & ap_sync_Block_proc467_U0_ap_ready.read());
 }
 
-void Sobel_filter::thread_start_for_Block_proc303304_U0_din() {
-    start_for_Block_proc303304_U0_din =  (sc_lv<1>) (ap_const_logic_1);
+void Sobel_filter::thread_start_for_Block_proc304305_U0_din() {
+    start_for_Block_proc304305_U0_din =  (sc_lv<1>) (ap_const_logic_1);
 }
 
 void Sobel_filter::thread_hdltv_gen() {
@@ -703,7 +703,7 @@ void Sobel_filter::thread_hdltv_gen() {
         mHdltvoutHandle << " , " <<  " \"OUTPUT_STREAM_TLAST\" :  \"" << OUTPUT_STREAM_TLAST.read() << "\" ";
         mHdltvoutHandle << " , " <<  " \"OUTPUT_STREAM_TID\" :  \"" << OUTPUT_STREAM_TID.read() << "\" ";
         mHdltvoutHandle << " , " <<  " \"OUTPUT_STREAM_TDEST\" :  \"" << OUTPUT_STREAM_TDEST.read() << "\" ";
-        mHdltvinHandle << " , " <<  " \"enable\" :  \"" << enable.read() << "\" ";
+        mHdltvinHandle << " , " <<  " \"enable_V\" :  \"" << enable_V.read() << "\" ";
         mHdltvinHandle << " , " <<  " \"ap_rst_n\" :  \"" << ap_rst_n.read() << "\" ";
         mHdltvinHandle << " , " <<  " \"INPUT_STREAM_TVALID\" :  \"" << INPUT_STREAM_TVALID.read() << "\" ";
         mHdltvoutHandle << " , " <<  " \"INPUT_STREAM_TREADY\" :  \"" << INPUT_STREAM_TREADY.read() << "\" ";

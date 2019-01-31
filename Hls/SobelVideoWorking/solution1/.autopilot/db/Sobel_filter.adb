@@ -407,7 +407,7 @@
             <Obj>
               <type>1</type>
               <id>15</id>
-              <name>enable</name>
+              <name>enable_V</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -416,11 +416,11 @@
                 <count>0</count>
                 <item_version>0</item_version>
               </inlineStackInfo>
-              <originalName>enable</originalName>
+              <originalName/>
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>8</bitwidth>
+            <bitwidth>1</bitwidth>
           </Value>
           <direction>0</direction>
           <if_type>0</if_type>
@@ -439,7 +439,7 @@
             <Obj>
               <type>0</type>
               <id>16</id>
-              <name>enable_read</name>
+              <name>enable_V_read</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -448,11 +448,11 @@
                 <count>0</count>
                 <item_version>0</item_version>
               </inlineStackInfo>
-              <originalName>enable</originalName>
+              <originalName/>
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>8</bitwidth>
+            <bitwidth>1</bitwidth>
           </Value>
           <oprand_edges>
             <count>2</count>
@@ -533,7 +533,7 @@
             <Obj>
               <type>0</type>
               <id>19</id>
-              <name>enable_c</name>
+              <name>enable_V_c</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -543,10 +543,10 @@
                 <item_version>0</item_version>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>enable_c_U</rtlName>
+              <rtlName>enable_V_c_U</rtlName>
               <coreName>FIFO</coreName>
             </Obj>
-            <bitwidth>8</bitwidth>
+            <bitwidth>1</bitwidth>
           </Value>
           <oprand_edges>
             <count>1</count>
@@ -833,7 +833,7 @@
                 <item_version>0</item_version>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>Block_proc466_U0</rtlName>
+              <rtlName>Block_proc467_U0</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -931,7 +931,7 @@
                 <item_version>0</item_version>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>Block_proc303304_U0</rtlName>
+              <rtlName>Block_proc304305_U0</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -1040,7 +1040,7 @@
             <Obj>
               <type>2</type>
               <id>85</id>
-              <name>Block_proc466</name>
+              <name>Block_proc467</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -1056,7 +1056,7 @@
             <bitwidth>0</bitwidth>
           </Value>
           <const_type>6</const_type>
-          <content>&lt;constant:Block__proc466&gt;</content>
+          <content>&lt;constant:Block__proc467&gt;</content>
         </item>
         <item class_id_reference="16" object_id="_33">
           <Value>
@@ -1086,7 +1086,7 @@
             <Obj>
               <type>2</type>
               <id>109</id>
-              <name>Block_proc303304</name>
+              <name>Block_proc304305</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -1102,7 +1102,7 @@
             <bitwidth>0</bitwidth>
           </Value>
           <const_type>6</const_type>
-          <content>&lt;constant:Block__proc303304&gt;</content>
+          <content>&lt;constant:Block__proc304305&gt;</content>
         </item>
       </consts>
       <blocks class_id="17" tracking_level="0" version="0">
@@ -1555,20 +1555,20 @@
             <item_version>0</item_version>
             <item class_id="26" tracking_level="1" version="0" object_id="_91">
               <type>0</type>
-              <name>Block_proc466_U0</name>
+              <name>Block_proc467_U0</name>
               <ssdmobj_id>62</ssdmobj_id>
               <pins class_id="27" tracking_level="0" version="0">
                 <count>6</count>
                 <item_version>0</item_version>
                 <item class_id="28" tracking_level="1" version="0" object_id="_92">
                   <port class_id="29" tracking_level="1" version="0" object_id="_93">
-                    <name>enable</name>
+                    <name>enable_V</name>
                     <dir>3</dir>
                     <type>0</type>
                   </port>
                   <inst class_id="30" tracking_level="1" version="0" object_id="_94">
                     <type>0</type>
-                    <name>Block_proc466_U0</name>
+                    <name>Block_proc467_U0</name>
                     <ssdmobj_id>62</ssdmobj_id>
                   </inst>
                 </item>
@@ -1606,7 +1606,7 @@
                 </item>
                 <item class_id_reference="28" object_id="_103">
                   <port class_id_reference="29" object_id="_104">
-                    <name>enable_out</name>
+                    <name>enable_V_out</name>
                     <dir>0</dir>
                     <type>1</type>
                   </port>
@@ -1741,20 +1741,20 @@
             </item>
             <item class_id_reference="26" object_id="_135">
               <type>0</type>
-              <name>Block_proc303304_U0</name>
+              <name>Block_proc304305_U0</name>
               <ssdmobj_id>68</ssdmobj_id>
               <pins>
                 <count>15</count>
                 <item_version>0</item_version>
                 <item class_id_reference="28" object_id="_136">
                   <port class_id_reference="29" object_id="_137">
-                    <name>enable</name>
+                    <name>enable_V</name>
                     <dir>0</dir>
                     <type>0</type>
                   </port>
                   <inst class_id_reference="30" object_id="_138">
                     <type>0</type>
-                    <name>Block_proc303304_U0</name>
+                    <name>Block_proc304305_U0</name>
                     <ssdmobj_id>68</ssdmobj_id>
                   </inst>
                 </item>
@@ -1974,11 +1974,11 @@
             </item>
             <item class_id_reference="32" object_id="_187">
               <type>1</type>
-              <name>enable_c</name>
+              <name>enable_V_c</name>
               <ssdmobj_id>19</ssdmobj_id>
               <ctype>0</ctype>
               <depth>3</depth>
-              <bitwidth>8</bitwidth>
+              <bitwidth>1</bitwidth>
               <source class_id_reference="28" object_id="_188">
                 <port class_id_reference="29" object_id="_189">
                   <name>in</name>
@@ -2551,7 +2551,7 @@
           </second>
         </item>
         <item>
-          <first>Block_proc303304_U0 (Block_proc303304)</first>
+          <first>Block_proc304305_U0 (Block_proc304305)</first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -2574,7 +2574,7 @@
           </second>
         </item>
         <item>
-          <first>Block_proc466_U0 (Block_proc466)</first>
+          <first>Block_proc467_U0 (Block_proc467)</first>
           <second>
             <count>2</count>
             <item_version>0</item_version>
@@ -2669,7 +2669,7 @@
           </second>
         </item>
         <item>
-          <first>Block_proc466_U0_ap_ready_count ( + ) </first>
+          <first>Block_proc467_U0_ap_ready_count ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -2692,7 +2692,7 @@
           </second>
         </item>
         <item>
-          <first>Block_proc466_U0_ap_ready_count ( - ) </first>
+          <first>Block_proc467_U0_ap_ready_count ( - ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -2715,7 +2715,7 @@
           </second>
         </item>
         <item>
-          <first>Block_proc466_U0_ap_start ( and ) </first>
+          <first>Block_proc467_U0_ap_start ( and ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -2784,7 +2784,7 @@
           </second>
         </item>
         <item>
-          <first>ap_sync_Block_proc466_U0_ap_ready ( or ) </first>
+          <first>ap_sync_Block_proc467_U0_ap_ready ( or ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -2834,7 +2834,7 @@
         <count>10</count>
         <item_version>0</item_version>
         <item>
-          <first>enable_c_U</first>
+          <first>enable_V_c_U</first>
           <second>
             <count>6</count>
             <item_version>0</item_version>
@@ -2844,11 +2844,11 @@
             </item>
             <item>
               <first>(1Bits)</first>
-              <second>8</second>
+              <second>1</second>
             </item>
             <item>
               <first>(2Size:D*B)</first>
-              <second>24</second>
+              <second>3</second>
             </item>
             <item>
               <first>BRAM</first>
@@ -2860,7 +2860,7 @@
             </item>
             <item>
               <first>LUT</first>
-              <second>18</second>
+              <second>14</second>
             </item>
           </second>
         </item>
@@ -3175,7 +3175,7 @@
           </second>
         </item>
         <item>
-          <first>Block_proc466_U0_ap_ready_count</first>
+          <first>Block_proc467_U0_ap_ready_count</first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -3221,7 +3221,7 @@
           </second>
         </item>
         <item>
-          <first>ap_sync_reg_Block_proc466_U0_ap_ready</first>
+          <first>ap_sync_reg_Block_proc467_U0_ap_ready</first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -3267,7 +3267,7 @@
           </second>
         </item>
         <item>
-          <first>Block_proc466_U0_ap_ready_count</first>
+          <first>Block_proc467_U0_ap_ready_count</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -3305,7 +3305,7 @@
           </second>
         </item>
         <item>
-          <first>ap_sync_reg_Block_proc466_U0_ap_ready</first>
+          <first>ap_sync_reg_Block_proc467_U0_ap_ready</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -3335,14 +3335,14 @@
           </second>
         </item>
         <item>
-          <first>Block_proc303304_U0</first>
+          <first>Block_proc304305_U0</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>Block_proc466_U0</first>
+          <first>Block_proc467_U0</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
@@ -3368,7 +3368,7 @@
           </second>
         </item>
         <item>
-          <first>Block_proc303304_U0 (Block_proc303304)</first>
+          <first>Block_proc304305_U0 (Block_proc304305)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -3376,7 +3376,7 @@
           </second>
         </item>
         <item>
-          <first>Block_proc466_U0 (Block_proc466)</first>
+          <first>Block_proc467_U0 (Block_proc467)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -3392,7 +3392,7 @@
         <count>10</count>
         <item_version>0</item_version>
         <item>
-          <first>enable_c_U</first>
+          <first>enable_V_c_U</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -3793,7 +3793,7 @@
       <count>10</count>
       <item_version>0</item_version>
       <item class_id="63" tracking_level="0" version="0">
-        <first>enable_c_fu_240</first>
+        <first>enable_V_c_fu_240</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -3877,7 +3877,7 @@
       <count>3</count>
       <item_version>0</item_version>
       <item>
-        <first>StgValue_18_Block_proc466_fu_329</first>
+        <first>StgValue_18_Block_proc467_fu_329</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -3894,7 +3894,7 @@
         </second>
       </item>
       <item>
-        <first>grp_Block_proc303304_fu_278</first>
+        <first>grp_Block_proc304305_fu_278</first>
         <second>
           <count>2</count>
           <item_version>0</item_version>
@@ -3907,7 +3907,7 @@
       <count>1</count>
       <item_version>0</item_version>
       <item>
-        <first>enable_read_read_fu_272</first>
+        <first>enable_V_read_read_fu_272</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -4011,7 +4011,7 @@
       <count>10</count>
       <item_version>0</item_version>
       <item>
-        <first>enable_c_reg_352</first>
+        <first>enable_V_c_reg_352</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -4313,7 +4313,7 @@
         </second>
       </item>
       <item>
-        <first>enable</first>
+        <first>enable_V</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

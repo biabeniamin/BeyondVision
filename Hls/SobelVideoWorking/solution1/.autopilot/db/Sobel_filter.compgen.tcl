@@ -266,14 +266,14 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_FIFO, check your pl
 
 # FIFO definition:
 set ID 141
-set FifoName fifo_w8_d3_A
-set InstName enable_c_U
+set FifoName fifo_w1_d3_A
+set InstName enable_V_c_U
 set CoreName ap_simcore_fifo
 set NumOfStage 2
 set RegisteredInput 0
 set DualClock 0
 set Depth 3
-set DataWd 8
+set DataWd 1
 set AddrWd 2
 set FullThresh 0
 set impl_style auto
@@ -1003,14 +1003,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 162 \
-    name enable \
+    name enable_V \
     type other \
     dir I \
     reset_level 0 \
     sync_rst true \
-    corename dc_enable \
+    corename dc_enable_V \
     op interface \
-    ports { enable { I 8 vector } } \
+    ports { enable_V { I 1 vector } } \
 } "
 }
 

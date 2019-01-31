@@ -407,7 +407,7 @@
 					<Obj>
 						<type>1</type>
 						<id>15</id>
-						<name>enable</name>
+						<name>enable_V</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -416,11 +416,11 @@
 							<count>0</count>
 							<item_version>0</item_version>
 						</inlineStackInfo>
-						<originalName>enable</originalName>
+						<originalName></originalName>
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>8</bitwidth>
+					<bitwidth>1</bitwidth>
 				</Value>
 				<direction>0</direction>
 				<if_type>0</if_type>
@@ -439,7 +439,7 @@
 					<Obj>
 						<type>0</type>
 						<id>16</id>
-						<name>enable_read</name>
+						<name>enable_V_read</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -448,11 +448,11 @@
 							<count>0</count>
 							<item_version>0</item_version>
 						</inlineStackInfo>
-						<originalName>enable</originalName>
+						<originalName></originalName>
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>8</bitwidth>
+					<bitwidth>1</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -533,7 +533,7 @@
 					<Obj>
 						<type>0</type>
 						<id>19</id>
-						<name>enable_c</name>
+						<name>enable_V_c</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -546,7 +546,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>8</bitwidth>
+					<bitwidth>1</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -1040,7 +1040,7 @@
 					<Obj>
 						<type>2</type>
 						<id>85</id>
-						<name>Block_proc466</name>
+						<name>Block_proc467</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -1056,7 +1056,7 @@
 					<bitwidth>0</bitwidth>
 				</Value>
 				<const_type>6</const_type>
-				<content>&lt;constant:Block__proc466&gt;</content>
+				<content>&lt;constant:Block__proc467&gt;</content>
 			</item>
 			<item class_id_reference="16" object_id="_33">
 				<Value>
@@ -1086,7 +1086,7 @@
 					<Obj>
 						<type>2</type>
 						<id>109</id>
-						<name>Block_proc303304</name>
+						<name>Block_proc304305</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -1102,7 +1102,7 @@
 					<bitwidth>0</bitwidth>
 				</Value>
 				<const_type>6</const_type>
-				<content>&lt;constant:Block__proc303304&gt;</content>
+				<content>&lt;constant:Block__proc304305&gt;</content>
 			</item>
 		</consts>
 		<blocks class_id="17" tracking_level="0" version="0">
@@ -1555,20 +1555,20 @@
 					<item_version>0</item_version>
 					<item class_id="26" tracking_level="1" version="0" object_id="_91">
 						<type>0</type>
-						<name>Block_proc466_U0</name>
+						<name>Block_proc467_U0</name>
 						<ssdmobj_id>62</ssdmobj_id>
 						<pins class_id="27" tracking_level="0" version="0">
 							<count>6</count>
 							<item_version>0</item_version>
 							<item class_id="28" tracking_level="1" version="0" object_id="_92">
 								<port class_id="29" tracking_level="1" version="0" object_id="_93">
-									<name>enable</name>
+									<name>enable_V</name>
 									<dir>3</dir>
 									<type>0</type>
 								</port>
 								<inst class_id="30" tracking_level="1" version="0" object_id="_94">
 									<type>0</type>
-									<name>Block_proc466_U0</name>
+									<name>Block_proc467_U0</name>
 									<ssdmobj_id>62</ssdmobj_id>
 								</inst>
 							</item>
@@ -1606,7 +1606,7 @@
 							</item>
 							<item class_id_reference="28" object_id="_103">
 								<port class_id_reference="29" object_id="_104">
-									<name>enable_out</name>
+									<name>enable_V_out</name>
 									<dir>0</dir>
 									<type>1</type>
 								</port>
@@ -1741,20 +1741,20 @@
 					</item>
 					<item class_id_reference="26" object_id="_135">
 						<type>0</type>
-						<name>Block_proc303304_U0</name>
+						<name>Block_proc304305_U0</name>
 						<ssdmobj_id>68</ssdmobj_id>
 						<pins>
 							<count>15</count>
 							<item_version>0</item_version>
 							<item class_id_reference="28" object_id="_136">
 								<port class_id_reference="29" object_id="_137">
-									<name>enable</name>
+									<name>enable_V</name>
 									<dir>0</dir>
 									<type>0</type>
 								</port>
 								<inst class_id_reference="30" object_id="_138">
 									<type>0</type>
-									<name>Block_proc303304_U0</name>
+									<name>Block_proc304305_U0</name>
 									<ssdmobj_id>68</ssdmobj_id>
 								</inst>
 							</item>
@@ -1974,11 +1974,11 @@
 					</item>
 					<item class_id_reference="32" object_id="_187">
 						<type>1</type>
-						<name>enable_c</name>
+						<name>enable_V_c</name>
 						<ssdmobj_id>19</ssdmobj_id>
 						<ctype>0</ctype>
 						<depth>3</depth>
-						<bitwidth>8</bitwidth>
+						<bitwidth>1</bitwidth>
 						<source class_id_reference="28" object_id="_188">
 							<port class_id_reference="29" object_id="_189">
 								<name>in</name>

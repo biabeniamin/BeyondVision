@@ -1,6 +1,6 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 21
+set id 33
 set name Sobel_filter_mul_bkb
 set corename simcore_mul
 set op mul
@@ -76,7 +76,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 }
 
 
-set id 22
+set id 34
 set name Sobel_filter_mac_cud
 set corename simcore_mac
 set op mac
@@ -158,7 +158,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 }
 
 
-set id 23
+set id 35
 set name Sobel_filter_mac_dEe
 set corename simcore_mac
 set op mac
@@ -250,7 +250,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 27 \
+    id 39 \
     name p_src_rows_V \
     type fifo \
     dir I \
@@ -265,7 +265,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 28 \
+    id 40 \
     name p_src_cols_V \
     type fifo \
     dir I \
@@ -280,7 +280,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 29 \
+    id 41 \
     name p_src_data_stream_0_V \
     type fifo \
     dir I \
@@ -295,7 +295,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 30 \
+    id 42 \
     name p_src_data_stream_1_V \
     type fifo \
     dir I \
@@ -310,7 +310,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 31 \
+    id 43 \
     name p_src_data_stream_2_V \
     type fifo \
     dir I \
@@ -325,7 +325,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 32 \
+    id 44 \
     name p_dst_data_stream_V \
     type fifo \
     dir O \

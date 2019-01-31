@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="Sobel_filter,hls_ip_2018_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7a200tsbg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=11.000000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=9,HLS_SYN_DSP=39,HLS_SYN_FF=6308,HLS_SYN_LUT=10749,HLS_VERSION=2018_2}" *)
+(* CORE_GENERATION_INFO="Sobel_filter,hls_ip_2018_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=1,HLS_INPUT_PART=xc7a200tsbg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=11.000000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=9,HLS_SYN_DSP=39,HLS_SYN_FF=6308,HLS_SYN_LUT=10745,HLS_VERSION=2018_2}" *)
 
 module Sobel_filter (
         INPUT_STREAM_TDATA,
@@ -24,7 +24,7 @@ module Sobel_filter (
         OUTPUT_STREAM_TLAST,
         OUTPUT_STREAM_TID,
         OUTPUT_STREAM_TDEST,
-        enable,
+        enable_V,
         ap_clk,
         ap_rst_n,
         INPUT_STREAM_TVALID,
@@ -52,7 +52,7 @@ output  [0:0] OUTPUT_STREAM_TUSER;
 output  [0:0] OUTPUT_STREAM_TLAST;
 output  [0:0] OUTPUT_STREAM_TID;
 output  [0:0] OUTPUT_STREAM_TDEST;
-input  [7:0] enable;
+input  [0:0] enable_V;
 input   ap_clk;
 input   ap_rst_n;
 input   INPUT_STREAM_TVALID;
@@ -65,23 +65,23 @@ output   ap_ready;
 output   ap_idle;
 
  reg    ap_rst_n_inv;
-wire    Block_proc466_U0_ap_start;
-wire    Block_proc466_U0_ap_done;
-wire    Block_proc466_U0_ap_continue;
-wire    Block_proc466_U0_ap_idle;
-wire    Block_proc466_U0_ap_ready;
-wire    Block_proc466_U0_start_out;
-wire    Block_proc466_U0_start_write;
-wire   [10:0] Block_proc466_U0_img_0_rows_V_out_din;
-wire    Block_proc466_U0_img_0_rows_V_out_write;
-wire   [11:0] Block_proc466_U0_img_0_cols_V_out_din;
-wire    Block_proc466_U0_img_0_cols_V_out_write;
-wire   [10:0] Block_proc466_U0_img_6_rows_V_out_din;
-wire    Block_proc466_U0_img_6_rows_V_out_write;
-wire   [11:0] Block_proc466_U0_img_6_cols_V_out_din;
-wire    Block_proc466_U0_img_6_cols_V_out_write;
-wire   [7:0] Block_proc466_U0_enable_out_din;
-wire    Block_proc466_U0_enable_out_write;
+wire    Block_proc467_U0_ap_start;
+wire    Block_proc467_U0_ap_done;
+wire    Block_proc467_U0_ap_continue;
+wire    Block_proc467_U0_ap_idle;
+wire    Block_proc467_U0_ap_ready;
+wire    Block_proc467_U0_start_out;
+wire    Block_proc467_U0_start_write;
+wire   [10:0] Block_proc467_U0_img_0_rows_V_out_din;
+wire    Block_proc467_U0_img_0_rows_V_out_write;
+wire   [11:0] Block_proc467_U0_img_0_cols_V_out_din;
+wire    Block_proc467_U0_img_0_cols_V_out_write;
+wire   [10:0] Block_proc467_U0_img_6_rows_V_out_din;
+wire    Block_proc467_U0_img_6_rows_V_out_write;
+wire   [11:0] Block_proc467_U0_img_6_cols_V_out_din;
+wire    Block_proc467_U0_img_6_cols_V_out_write;
+wire   [0:0] Block_proc467_U0_enable_V_out_din;
+wire    Block_proc467_U0_enable_V_out_write;
 wire    AXIvideo2Mat_U0_ap_start;
 wire    AXIvideo2Mat_U0_ap_done;
 wire    AXIvideo2Mat_U0_ap_continue;
@@ -100,27 +100,27 @@ wire   [10:0] AXIvideo2Mat_U0_img_rows_V_out_din;
 wire    AXIvideo2Mat_U0_img_rows_V_out_write;
 wire   [11:0] AXIvideo2Mat_U0_img_cols_V_out_din;
 wire    AXIvideo2Mat_U0_img_cols_V_out_write;
-wire    Block_proc303304_U0_enable_read;
-wire    Block_proc303304_U0_img_0_rows_V_read;
-wire    Block_proc303304_U0_img_0_cols_V_read;
-wire    Block_proc303304_U0_img_0_data_stream_0_V_read;
-wire    Block_proc303304_U0_img_0_data_stream_1_V_read;
-wire    Block_proc303304_U0_img_0_data_stream_2_V_read;
-wire   [23:0] Block_proc303304_U0_OUTPUT_STREAM_TDATA;
-wire   [2:0] Block_proc303304_U0_OUTPUT_STREAM_TKEEP;
-wire   [2:0] Block_proc303304_U0_OUTPUT_STREAM_TSTRB;
-wire   [0:0] Block_proc303304_U0_OUTPUT_STREAM_TUSER;
-wire   [0:0] Block_proc303304_U0_OUTPUT_STREAM_TLAST;
-wire   [0:0] Block_proc303304_U0_OUTPUT_STREAM_TID;
-wire   [0:0] Block_proc303304_U0_OUTPUT_STREAM_TDEST;
-wire    Block_proc303304_U0_img_6_rows_V_read;
-wire    Block_proc303304_U0_img_6_cols_V_read;
-wire    Block_proc303304_U0_OUTPUT_STREAM_TVALID;
-wire    Block_proc303304_U0_ap_done;
-wire    Block_proc303304_U0_ap_start;
-wire    Block_proc303304_U0_ap_ready;
-wire    Block_proc303304_U0_ap_idle;
-wire    Block_proc303304_U0_ap_continue;
+wire    Block_proc304305_U0_enable_V_read;
+wire    Block_proc304305_U0_img_0_rows_V_read;
+wire    Block_proc304305_U0_img_0_cols_V_read;
+wire    Block_proc304305_U0_img_0_data_stream_0_V_read;
+wire    Block_proc304305_U0_img_0_data_stream_1_V_read;
+wire    Block_proc304305_U0_img_0_data_stream_2_V_read;
+wire   [23:0] Block_proc304305_U0_OUTPUT_STREAM_TDATA;
+wire   [2:0] Block_proc304305_U0_OUTPUT_STREAM_TKEEP;
+wire   [2:0] Block_proc304305_U0_OUTPUT_STREAM_TSTRB;
+wire   [0:0] Block_proc304305_U0_OUTPUT_STREAM_TUSER;
+wire   [0:0] Block_proc304305_U0_OUTPUT_STREAM_TLAST;
+wire   [0:0] Block_proc304305_U0_OUTPUT_STREAM_TID;
+wire   [0:0] Block_proc304305_U0_OUTPUT_STREAM_TDEST;
+wire    Block_proc304305_U0_img_6_rows_V_read;
+wire    Block_proc304305_U0_img_6_cols_V_read;
+wire    Block_proc304305_U0_OUTPUT_STREAM_TVALID;
+wire    Block_proc304305_U0_ap_done;
+wire    Block_proc304305_U0_ap_start;
+wire    Block_proc304305_U0_ap_ready;
+wire    Block_proc304305_U0_ap_idle;
+wire    Block_proc304305_U0_ap_continue;
 wire    ap_sync_continue;
 wire    img_0_rows_V_c_full_n;
 wire   [10:0] img_0_rows_V_c_dout;
@@ -134,9 +134,9 @@ wire    img_6_rows_V_c_empty_n;
 wire    img_6_cols_V_c_full_n;
 wire   [11:0] img_6_cols_V_c_dout;
 wire    img_6_cols_V_c_empty_n;
-wire    enable_c_full_n;
-wire   [7:0] enable_c_dout;
-wire    enable_c_empty_n;
+wire    enable_V_c_full_n;
+wire   [0:0] enable_V_c_dout;
+wire    enable_V_c_empty_n;
 wire    img_0_data_stream_0_full_n;
 wire   [7:0] img_0_data_stream_0_dout;
 wire    img_0_data_stream_0_empty_n;
@@ -157,53 +157,53 @@ wire    ap_sync_ready;
 reg    ap_sync_reg_AXIvideo2Mat_U0_ap_ready;
 wire    ap_sync_AXIvideo2Mat_U0_ap_ready;
 reg   [1:0] AXIvideo2Mat_U0_ap_ready_count;
-reg    ap_sync_reg_Block_proc466_U0_ap_ready;
-wire    ap_sync_Block_proc466_U0_ap_ready;
-reg   [1:0] Block_proc466_U0_ap_ready_count;
-wire   [0:0] start_for_Block_proc303304_U0_din;
-wire    start_for_Block_proc303304_U0_full_n;
-wire   [0:0] start_for_Block_proc303304_U0_dout;
-wire    start_for_Block_proc303304_U0_empty_n;
+reg    ap_sync_reg_Block_proc467_U0_ap_ready;
+wire    ap_sync_Block_proc467_U0_ap_ready;
+reg   [1:0] Block_proc467_U0_ap_ready_count;
+wire   [0:0] start_for_Block_proc304305_U0_din;
+wire    start_for_Block_proc304305_U0_full_n;
+wire   [0:0] start_for_Block_proc304305_U0_dout;
+wire    start_for_Block_proc304305_U0_empty_n;
 wire    AXIvideo2Mat_U0_start_full_n;
 wire    AXIvideo2Mat_U0_start_write;
-wire    Block_proc303304_U0_start_full_n;
-wire    Block_proc303304_U0_start_write;
+wire    Block_proc304305_U0_start_full_n;
+wire    Block_proc304305_U0_start_write;
 
 // power-on initialization
 initial begin
 #0 ap_sync_reg_AXIvideo2Mat_U0_ap_ready = 1'b0;
 #0 AXIvideo2Mat_U0_ap_ready_count = 2'd0;
-#0 ap_sync_reg_Block_proc466_U0_ap_ready = 1'b0;
-#0 Block_proc466_U0_ap_ready_count = 2'd0;
+#0 ap_sync_reg_Block_proc467_U0_ap_ready = 1'b0;
+#0 Block_proc467_U0_ap_ready_count = 2'd0;
 end
 
-Block_proc466 Block_proc466_U0(
+Block_proc467 Block_proc467_U0(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(Block_proc466_U0_ap_start),
-    .start_full_n(start_for_Block_proc303304_U0_full_n),
-    .ap_done(Block_proc466_U0_ap_done),
-    .ap_continue(Block_proc466_U0_ap_continue),
-    .ap_idle(Block_proc466_U0_ap_idle),
-    .ap_ready(Block_proc466_U0_ap_ready),
-    .start_out(Block_proc466_U0_start_out),
-    .start_write(Block_proc466_U0_start_write),
-    .enable(enable),
-    .img_0_rows_V_out_din(Block_proc466_U0_img_0_rows_V_out_din),
+    .ap_start(Block_proc467_U0_ap_start),
+    .start_full_n(start_for_Block_proc304305_U0_full_n),
+    .ap_done(Block_proc467_U0_ap_done),
+    .ap_continue(Block_proc467_U0_ap_continue),
+    .ap_idle(Block_proc467_U0_ap_idle),
+    .ap_ready(Block_proc467_U0_ap_ready),
+    .start_out(Block_proc467_U0_start_out),
+    .start_write(Block_proc467_U0_start_write),
+    .enable_V(enable_V),
+    .img_0_rows_V_out_din(Block_proc467_U0_img_0_rows_V_out_din),
     .img_0_rows_V_out_full_n(img_0_rows_V_c_full_n),
-    .img_0_rows_V_out_write(Block_proc466_U0_img_0_rows_V_out_write),
-    .img_0_cols_V_out_din(Block_proc466_U0_img_0_cols_V_out_din),
+    .img_0_rows_V_out_write(Block_proc467_U0_img_0_rows_V_out_write),
+    .img_0_cols_V_out_din(Block_proc467_U0_img_0_cols_V_out_din),
     .img_0_cols_V_out_full_n(img_0_cols_V_c_full_n),
-    .img_0_cols_V_out_write(Block_proc466_U0_img_0_cols_V_out_write),
-    .img_6_rows_V_out_din(Block_proc466_U0_img_6_rows_V_out_din),
+    .img_0_cols_V_out_write(Block_proc467_U0_img_0_cols_V_out_write),
+    .img_6_rows_V_out_din(Block_proc467_U0_img_6_rows_V_out_din),
     .img_6_rows_V_out_full_n(img_6_rows_V_c_full_n),
-    .img_6_rows_V_out_write(Block_proc466_U0_img_6_rows_V_out_write),
-    .img_6_cols_V_out_din(Block_proc466_U0_img_6_cols_V_out_din),
+    .img_6_rows_V_out_write(Block_proc467_U0_img_6_rows_V_out_write),
+    .img_6_cols_V_out_din(Block_proc467_U0_img_6_cols_V_out_din),
     .img_6_cols_V_out_full_n(img_6_cols_V_c_full_n),
-    .img_6_cols_V_out_write(Block_proc466_U0_img_6_cols_V_out_write),
-    .enable_out_din(Block_proc466_U0_enable_out_din),
-    .enable_out_full_n(enable_c_full_n),
-    .enable_out_write(Block_proc466_U0_enable_out_write)
+    .img_6_cols_V_out_write(Block_proc467_U0_img_6_cols_V_out_write),
+    .enable_V_out_din(Block_proc467_U0_enable_V_out_din),
+    .enable_V_out_full_n(enable_V_c_full_n),
+    .enable_V_out_write(Block_proc467_U0_enable_V_out_write)
 );
 
 AXIvideo2Mat AXIvideo2Mat_U0(
@@ -246,47 +246,47 @@ AXIvideo2Mat AXIvideo2Mat_U0(
     .img_cols_V_out_write(AXIvideo2Mat_U0_img_cols_V_out_write)
 );
 
-Block_proc303304 Block_proc303304_U0(
-    .enable_dout(enable_c_dout),
-    .enable_empty_n(enable_c_empty_n),
-    .enable_read(Block_proc303304_U0_enable_read),
+Block_proc304305 Block_proc304305_U0(
+    .enable_V_dout(enable_V_c_dout),
+    .enable_V_empty_n(enable_V_c_empty_n),
+    .enable_V_read(Block_proc304305_U0_enable_V_read),
     .img_0_rows_V_dout(img_0_rows_V_c25_dout),
     .img_0_rows_V_empty_n(img_0_rows_V_c25_empty_n),
-    .img_0_rows_V_read(Block_proc303304_U0_img_0_rows_V_read),
+    .img_0_rows_V_read(Block_proc304305_U0_img_0_rows_V_read),
     .img_0_cols_V_dout(img_0_cols_V_c26_dout),
     .img_0_cols_V_empty_n(img_0_cols_V_c26_empty_n),
-    .img_0_cols_V_read(Block_proc303304_U0_img_0_cols_V_read),
+    .img_0_cols_V_read(Block_proc304305_U0_img_0_cols_V_read),
     .img_0_data_stream_0_V_dout(img_0_data_stream_0_dout),
     .img_0_data_stream_0_V_empty_n(img_0_data_stream_0_empty_n),
-    .img_0_data_stream_0_V_read(Block_proc303304_U0_img_0_data_stream_0_V_read),
+    .img_0_data_stream_0_V_read(Block_proc304305_U0_img_0_data_stream_0_V_read),
     .img_0_data_stream_1_V_dout(img_0_data_stream_1_dout),
     .img_0_data_stream_1_V_empty_n(img_0_data_stream_1_empty_n),
-    .img_0_data_stream_1_V_read(Block_proc303304_U0_img_0_data_stream_1_V_read),
+    .img_0_data_stream_1_V_read(Block_proc304305_U0_img_0_data_stream_1_V_read),
     .img_0_data_stream_2_V_dout(img_0_data_stream_2_dout),
     .img_0_data_stream_2_V_empty_n(img_0_data_stream_2_empty_n),
-    .img_0_data_stream_2_V_read(Block_proc303304_U0_img_0_data_stream_2_V_read),
-    .OUTPUT_STREAM_TDATA(Block_proc303304_U0_OUTPUT_STREAM_TDATA),
-    .OUTPUT_STREAM_TKEEP(Block_proc303304_U0_OUTPUT_STREAM_TKEEP),
-    .OUTPUT_STREAM_TSTRB(Block_proc303304_U0_OUTPUT_STREAM_TSTRB),
-    .OUTPUT_STREAM_TUSER(Block_proc303304_U0_OUTPUT_STREAM_TUSER),
-    .OUTPUT_STREAM_TLAST(Block_proc303304_U0_OUTPUT_STREAM_TLAST),
-    .OUTPUT_STREAM_TID(Block_proc303304_U0_OUTPUT_STREAM_TID),
-    .OUTPUT_STREAM_TDEST(Block_proc303304_U0_OUTPUT_STREAM_TDEST),
+    .img_0_data_stream_2_V_read(Block_proc304305_U0_img_0_data_stream_2_V_read),
+    .OUTPUT_STREAM_TDATA(Block_proc304305_U0_OUTPUT_STREAM_TDATA),
+    .OUTPUT_STREAM_TKEEP(Block_proc304305_U0_OUTPUT_STREAM_TKEEP),
+    .OUTPUT_STREAM_TSTRB(Block_proc304305_U0_OUTPUT_STREAM_TSTRB),
+    .OUTPUT_STREAM_TUSER(Block_proc304305_U0_OUTPUT_STREAM_TUSER),
+    .OUTPUT_STREAM_TLAST(Block_proc304305_U0_OUTPUT_STREAM_TLAST),
+    .OUTPUT_STREAM_TID(Block_proc304305_U0_OUTPUT_STREAM_TID),
+    .OUTPUT_STREAM_TDEST(Block_proc304305_U0_OUTPUT_STREAM_TDEST),
     .img_6_rows_V_dout(img_6_rows_V_c_dout),
     .img_6_rows_V_empty_n(img_6_rows_V_c_empty_n),
-    .img_6_rows_V_read(Block_proc303304_U0_img_6_rows_V_read),
+    .img_6_rows_V_read(Block_proc304305_U0_img_6_rows_V_read),
     .img_6_cols_V_dout(img_6_cols_V_c_dout),
     .img_6_cols_V_empty_n(img_6_cols_V_c_empty_n),
-    .img_6_cols_V_read(Block_proc303304_U0_img_6_cols_V_read),
+    .img_6_cols_V_read(Block_proc304305_U0_img_6_cols_V_read),
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .OUTPUT_STREAM_TVALID(Block_proc303304_U0_OUTPUT_STREAM_TVALID),
+    .OUTPUT_STREAM_TVALID(Block_proc304305_U0_OUTPUT_STREAM_TVALID),
     .OUTPUT_STREAM_TREADY(OUTPUT_STREAM_TREADY),
-    .ap_done(Block_proc303304_U0_ap_done),
-    .ap_start(Block_proc303304_U0_ap_start),
-    .ap_ready(Block_proc303304_U0_ap_ready),
-    .ap_idle(Block_proc303304_U0_ap_idle),
-    .ap_continue(Block_proc303304_U0_ap_continue)
+    .ap_done(Block_proc304305_U0_ap_done),
+    .ap_start(Block_proc304305_U0_ap_start),
+    .ap_ready(Block_proc304305_U0_ap_ready),
+    .ap_idle(Block_proc304305_U0_ap_idle),
+    .ap_continue(Block_proc304305_U0_ap_continue)
 );
 
 fifo_w11_d2_A img_0_rows_V_c_U(
@@ -294,9 +294,9 @@ fifo_w11_d2_A img_0_rows_V_c_U(
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(Block_proc466_U0_img_0_rows_V_out_din),
+    .if_din(Block_proc467_U0_img_0_rows_V_out_din),
     .if_full_n(img_0_rows_V_c_full_n),
-    .if_write(Block_proc466_U0_img_0_rows_V_out_write),
+    .if_write(Block_proc467_U0_img_0_rows_V_out_write),
     .if_dout(img_0_rows_V_c_dout),
     .if_empty_n(img_0_rows_V_c_empty_n),
     .if_read(AXIvideo2Mat_U0_img_rows_V_read)
@@ -307,9 +307,9 @@ fifo_w12_d2_A img_0_cols_V_c_U(
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(Block_proc466_U0_img_0_cols_V_out_din),
+    .if_din(Block_proc467_U0_img_0_cols_V_out_din),
     .if_full_n(img_0_cols_V_c_full_n),
-    .if_write(Block_proc466_U0_img_0_cols_V_out_write),
+    .if_write(Block_proc467_U0_img_0_cols_V_out_write),
     .if_dout(img_0_cols_V_c_dout),
     .if_empty_n(img_0_cols_V_c_empty_n),
     .if_read(AXIvideo2Mat_U0_img_cols_V_read)
@@ -320,12 +320,12 @@ fifo_w11_d3_A img_6_rows_V_c_U(
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(Block_proc466_U0_img_6_rows_V_out_din),
+    .if_din(Block_proc467_U0_img_6_rows_V_out_din),
     .if_full_n(img_6_rows_V_c_full_n),
-    .if_write(Block_proc466_U0_img_6_rows_V_out_write),
+    .if_write(Block_proc467_U0_img_6_rows_V_out_write),
     .if_dout(img_6_rows_V_c_dout),
     .if_empty_n(img_6_rows_V_c_empty_n),
-    .if_read(Block_proc303304_U0_img_6_rows_V_read)
+    .if_read(Block_proc304305_U0_img_6_rows_V_read)
 );
 
 fifo_w12_d3_A img_6_cols_V_c_U(
@@ -333,25 +333,25 @@ fifo_w12_d3_A img_6_cols_V_c_U(
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(Block_proc466_U0_img_6_cols_V_out_din),
+    .if_din(Block_proc467_U0_img_6_cols_V_out_din),
     .if_full_n(img_6_cols_V_c_full_n),
-    .if_write(Block_proc466_U0_img_6_cols_V_out_write),
+    .if_write(Block_proc467_U0_img_6_cols_V_out_write),
     .if_dout(img_6_cols_V_c_dout),
     .if_empty_n(img_6_cols_V_c_empty_n),
-    .if_read(Block_proc303304_U0_img_6_cols_V_read)
+    .if_read(Block_proc304305_U0_img_6_cols_V_read)
 );
 
-fifo_w8_d3_A enable_c_U(
+fifo_w1_d3_A enable_V_c_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(Block_proc466_U0_enable_out_din),
-    .if_full_n(enable_c_full_n),
-    .if_write(Block_proc466_U0_enable_out_write),
-    .if_dout(enable_c_dout),
-    .if_empty_n(enable_c_empty_n),
-    .if_read(Block_proc303304_U0_enable_read)
+    .if_din(Block_proc467_U0_enable_V_out_din),
+    .if_full_n(enable_V_c_full_n),
+    .if_write(Block_proc467_U0_enable_V_out_write),
+    .if_dout(enable_V_c_dout),
+    .if_empty_n(enable_V_c_empty_n),
+    .if_read(Block_proc304305_U0_enable_V_read)
 );
 
 fifo_w8_d2_A_x img_0_data_stream_0_U(
@@ -364,7 +364,7 @@ fifo_w8_d2_A_x img_0_data_stream_0_U(
     .if_write(AXIvideo2Mat_U0_img_data_stream_0_V_write),
     .if_dout(img_0_data_stream_0_dout),
     .if_empty_n(img_0_data_stream_0_empty_n),
-    .if_read(Block_proc303304_U0_img_0_data_stream_0_V_read)
+    .if_read(Block_proc304305_U0_img_0_data_stream_0_V_read)
 );
 
 fifo_w8_d2_A_x img_0_data_stream_1_U(
@@ -377,7 +377,7 @@ fifo_w8_d2_A_x img_0_data_stream_1_U(
     .if_write(AXIvideo2Mat_U0_img_data_stream_1_V_write),
     .if_dout(img_0_data_stream_1_dout),
     .if_empty_n(img_0_data_stream_1_empty_n),
-    .if_read(Block_proc303304_U0_img_0_data_stream_1_V_read)
+    .if_read(Block_proc304305_U0_img_0_data_stream_1_V_read)
 );
 
 fifo_w8_d2_A_x img_0_data_stream_2_U(
@@ -390,7 +390,7 @@ fifo_w8_d2_A_x img_0_data_stream_2_U(
     .if_write(AXIvideo2Mat_U0_img_data_stream_2_V_write),
     .if_dout(img_0_data_stream_2_dout),
     .if_empty_n(img_0_data_stream_2_empty_n),
-    .if_read(Block_proc303304_U0_img_0_data_stream_2_V_read)
+    .if_read(Block_proc304305_U0_img_0_data_stream_2_V_read)
 );
 
 fifo_w11_d2_A img_0_rows_V_c25_U(
@@ -403,7 +403,7 @@ fifo_w11_d2_A img_0_rows_V_c25_U(
     .if_write(AXIvideo2Mat_U0_img_rows_V_out_write),
     .if_dout(img_0_rows_V_c25_dout),
     .if_empty_n(img_0_rows_V_c25_empty_n),
-    .if_read(Block_proc303304_U0_img_0_rows_V_read)
+    .if_read(Block_proc304305_U0_img_0_rows_V_read)
 );
 
 fifo_w12_d2_A img_0_cols_V_c26_U(
@@ -416,7 +416,7 @@ fifo_w12_d2_A img_0_cols_V_c26_U(
     .if_write(AXIvideo2Mat_U0_img_cols_V_out_write),
     .if_dout(img_0_cols_V_c26_dout),
     .if_empty_n(img_0_cols_V_c26_empty_n),
-    .if_read(Block_proc303304_U0_img_0_cols_V_read)
+    .if_read(Block_proc304305_U0_img_0_cols_V_read)
 );
 
 start_for_Block_pzec start_for_Block_pzec_U(
@@ -424,12 +424,12 @@ start_for_Block_pzec start_for_Block_pzec_U(
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(start_for_Block_proc303304_U0_din),
-    .if_full_n(start_for_Block_proc303304_U0_full_n),
-    .if_write(Block_proc466_U0_start_write),
-    .if_dout(start_for_Block_proc303304_U0_dout),
-    .if_empty_n(start_for_Block_proc303304_U0_empty_n),
-    .if_read(Block_proc303304_U0_ap_ready)
+    .if_din(start_for_Block_proc304305_U0_din),
+    .if_full_n(start_for_Block_proc304305_U0_full_n),
+    .if_write(Block_proc467_U0_start_write),
+    .if_dout(start_for_Block_proc304305_U0_dout),
+    .if_empty_n(start_for_Block_proc304305_U0_empty_n),
+    .if_read(Block_proc304305_U0_ap_ready)
 );
 
 always @ (posedge ap_clk) begin
@@ -446,12 +446,12 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        ap_sync_reg_Block_proc466_U0_ap_ready <= 1'b0;
+        ap_sync_reg_Block_proc467_U0_ap_ready <= 1'b0;
     end else begin
         if (((ap_sync_ready & ap_start) == 1'b1)) begin
-            ap_sync_reg_Block_proc466_U0_ap_ready <= 1'b0;
+            ap_sync_reg_Block_proc467_U0_ap_ready <= 1'b0;
         end else begin
-            ap_sync_reg_Block_proc466_U0_ap_ready <= ap_sync_Block_proc466_U0_ap_ready;
+            ap_sync_reg_Block_proc467_U0_ap_ready <= ap_sync_Block_proc467_U0_ap_ready;
         end
     end
 end
@@ -465,10 +465,10 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((ap_sync_ready == 1'b1) & (1'b0 == Block_proc466_U0_ap_ready))) begin
-        Block_proc466_U0_ap_ready_count <= (Block_proc466_U0_ap_ready_count - 2'd1);
-    end else if (((1'b1 == Block_proc466_U0_ap_ready) & (ap_sync_ready == 1'b0))) begin
-        Block_proc466_U0_ap_ready_count <= (Block_proc466_U0_ap_ready_count + 2'd1);
+    if (((ap_sync_ready == 1'b1) & (1'b0 == Block_proc467_U0_ap_ready))) begin
+        Block_proc467_U0_ap_ready_count <= (Block_proc467_U0_ap_ready_count - 2'd1);
+    end else if (((1'b1 == Block_proc467_U0_ap_ready) & (ap_sync_ready == 1'b0))) begin
+        Block_proc467_U0_ap_ready_count <= (Block_proc467_U0_ap_ready_count + 2'd1);
     end
 end
 
@@ -480,39 +480,39 @@ assign AXIvideo2Mat_U0_start_full_n = 1'b1;
 
 assign AXIvideo2Mat_U0_start_write = 1'b0;
 
-assign Block_proc303304_U0_ap_continue = 1'b1;
+assign Block_proc304305_U0_ap_continue = 1'b1;
 
-assign Block_proc303304_U0_ap_start = start_for_Block_proc303304_U0_empty_n;
+assign Block_proc304305_U0_ap_start = start_for_Block_proc304305_U0_empty_n;
 
-assign Block_proc303304_U0_start_full_n = 1'b1;
+assign Block_proc304305_U0_start_full_n = 1'b1;
 
-assign Block_proc303304_U0_start_write = 1'b0;
+assign Block_proc304305_U0_start_write = 1'b0;
 
-assign Block_proc466_U0_ap_continue = 1'b1;
+assign Block_proc467_U0_ap_continue = 1'b1;
 
-assign Block_proc466_U0_ap_start = ((ap_sync_reg_Block_proc466_U0_ap_ready ^ 1'b1) & ap_start);
+assign Block_proc467_U0_ap_start = ((ap_sync_reg_Block_proc467_U0_ap_ready ^ 1'b1) & ap_start);
 
 assign INPUT_STREAM_TREADY = AXIvideo2Mat_U0_INPUT_STREAM_TREADY;
 
-assign OUTPUT_STREAM_TDATA = Block_proc303304_U0_OUTPUT_STREAM_TDATA;
+assign OUTPUT_STREAM_TDATA = Block_proc304305_U0_OUTPUT_STREAM_TDATA;
 
-assign OUTPUT_STREAM_TDEST = Block_proc303304_U0_OUTPUT_STREAM_TDEST;
+assign OUTPUT_STREAM_TDEST = Block_proc304305_U0_OUTPUT_STREAM_TDEST;
 
-assign OUTPUT_STREAM_TID = Block_proc303304_U0_OUTPUT_STREAM_TID;
+assign OUTPUT_STREAM_TID = Block_proc304305_U0_OUTPUT_STREAM_TID;
 
-assign OUTPUT_STREAM_TKEEP = Block_proc303304_U0_OUTPUT_STREAM_TKEEP;
+assign OUTPUT_STREAM_TKEEP = Block_proc304305_U0_OUTPUT_STREAM_TKEEP;
 
-assign OUTPUT_STREAM_TLAST = Block_proc303304_U0_OUTPUT_STREAM_TLAST;
+assign OUTPUT_STREAM_TLAST = Block_proc304305_U0_OUTPUT_STREAM_TLAST;
 
-assign OUTPUT_STREAM_TSTRB = Block_proc303304_U0_OUTPUT_STREAM_TSTRB;
+assign OUTPUT_STREAM_TSTRB = Block_proc304305_U0_OUTPUT_STREAM_TSTRB;
 
-assign OUTPUT_STREAM_TUSER = Block_proc303304_U0_OUTPUT_STREAM_TUSER;
+assign OUTPUT_STREAM_TUSER = Block_proc304305_U0_OUTPUT_STREAM_TUSER;
 
-assign OUTPUT_STREAM_TVALID = Block_proc303304_U0_OUTPUT_STREAM_TVALID;
+assign OUTPUT_STREAM_TVALID = Block_proc304305_U0_OUTPUT_STREAM_TVALID;
 
-assign ap_done = Block_proc303304_U0_ap_done;
+assign ap_done = Block_proc304305_U0_ap_done;
 
-assign ap_idle = (Block_proc466_U0_ap_idle & Block_proc303304_U0_ap_idle & AXIvideo2Mat_U0_ap_idle);
+assign ap_idle = (Block_proc467_U0_ap_idle & Block_proc304305_U0_ap_idle & AXIvideo2Mat_U0_ap_idle);
 
 assign ap_ready = ap_sync_ready;
 
@@ -522,14 +522,14 @@ end
 
 assign ap_sync_AXIvideo2Mat_U0_ap_ready = (ap_sync_reg_AXIvideo2Mat_U0_ap_ready | AXIvideo2Mat_U0_ap_ready);
 
-assign ap_sync_Block_proc466_U0_ap_ready = (ap_sync_reg_Block_proc466_U0_ap_ready | Block_proc466_U0_ap_ready);
+assign ap_sync_Block_proc467_U0_ap_ready = (ap_sync_reg_Block_proc467_U0_ap_ready | Block_proc467_U0_ap_ready);
 
 assign ap_sync_continue = 1'b1;
 
-assign ap_sync_done = Block_proc303304_U0_ap_done;
+assign ap_sync_done = Block_proc304305_U0_ap_done;
 
-assign ap_sync_ready = (ap_sync_Block_proc466_U0_ap_ready & ap_sync_AXIvideo2Mat_U0_ap_ready);
+assign ap_sync_ready = (ap_sync_Block_proc467_U0_ap_ready & ap_sync_AXIvideo2Mat_U0_ap_ready);
 
-assign start_for_Block_proc303304_U0_din = 1'b1;
+assign start_for_Block_proc304305_U0_din = 1'b1;
 
 endmodule //Sobel_filter

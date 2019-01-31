@@ -1,6 +1,6 @@
 #include "a.hpp"
 
-void Sobel_filter(AXI_STREAM& INPUT_STREAM, AXI_STREAM& OUTPUT_STREAM, char enable)//, int rows, int cols)
+void Sobel_filter(AXI_STREAM& INPUT_STREAM, AXI_STREAM& OUTPUT_STREAM, ap_uint<1> enable)//, int rows, int cols)
 {
 
 #pragma HLS INTERFACE axis port=INPUT_STREAM

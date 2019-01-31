@@ -293,7 +293,7 @@ wire   [3:0] tmp_39_fu_1200_p4;
 wire   [0:0] not_i_i_i_fu_1216_p2;
 wire   [0:0] tmp_i_i_fu_1210_p2;
 wire   [0:0] overflow_fu_1222_p2;
-wire   [0:0] tmp_i_i_84_fu_1236_p2;
+wire   [0:0] tmp_i_i_85_fu_1236_p2;
 wire   [7:0] p_mux_i_i_cast_fu_1228_p3;
 wire   [7:0] p_Val2_2_fu_1195_p2;
 wire  signed [1:0] grp_fu_1250_p0;
@@ -379,7 +379,7 @@ Sobel_filter_mux_hbi #(
     .din2_WIDTH( 8 ),
     .din3_WIDTH( 2 ),
     .dout_WIDTH( 8 ))
-Sobel_filter_mux_hbi_U56(
+Sobel_filter_mux_hbi_U68(
     .din0(right_border_buf_0_s_fu_184),
     .din1(right_border_buf_0_14_fu_188),
     .din2(8'd0),
@@ -395,7 +395,7 @@ Sobel_filter_mux_hbi #(
     .din2_WIDTH( 8 ),
     .din3_WIDTH( 2 ),
     .dout_WIDTH( 8 ))
-Sobel_filter_mux_hbi_U57(
+Sobel_filter_mux_hbi_U69(
     .din0(right_border_buf_0_16_fu_196),
     .din1(right_border_buf_0_17_fu_200),
     .din2(8'd0),
@@ -411,7 +411,7 @@ Sobel_filter_mux_hbi #(
     .din2_WIDTH( 8 ),
     .din3_WIDTH( 2 ),
     .dout_WIDTH( 8 ))
-Sobel_filter_mux_hbi_U58(
+Sobel_filter_mux_hbi_U70(
     .din0(right_border_buf_0_18_fu_204),
     .din1(right_border_buf_0_15_fu_192),
     .din2(8'd0),
@@ -427,7 +427,7 @@ Sobel_filter_mux_hbi #(
     .din2_WIDTH( 8 ),
     .din3_WIDTH( 2 ),
     .dout_WIDTH( 8 ))
-Sobel_filter_mux_hbi_U59(
+Sobel_filter_mux_hbi_U71(
     .din0(col_buf_0_val_0_0_fu_859_p3),
     .din1(col_buf_0_val_1_0_fu_878_p3),
     .din2(col_buf_0_val_2_0_fu_897_p3),
@@ -443,7 +443,7 @@ Sobel_filter_mux_hbi #(
     .din2_WIDTH( 8 ),
     .din3_WIDTH( 2 ),
     .dout_WIDTH( 8 ))
-Sobel_filter_mux_hbi_U60(
+Sobel_filter_mux_hbi_U72(
     .din0(col_buf_0_val_0_0_fu_859_p3),
     .din1(col_buf_0_val_1_0_fu_878_p3),
     .din2(col_buf_0_val_2_0_fu_897_p3),
@@ -459,7 +459,7 @@ Sobel_filter_mux_hbi #(
     .din2_WIDTH( 8 ),
     .din3_WIDTH( 2 ),
     .dout_WIDTH( 8 ))
-Sobel_filter_mux_hbi_U61(
+Sobel_filter_mux_hbi_U73(
     .din0(col_buf_0_val_0_0_fu_859_p3),
     .din1(col_buf_0_val_1_0_fu_878_p3),
     .din2(col_buf_0_val_2_0_fu_897_p3),
@@ -474,7 +474,7 @@ Sobel_filter_mac_pcA #(
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 9 ),
     .dout_WIDTH( 11 ))
-Sobel_filter_mac_pcA_U62(
+Sobel_filter_mac_pcA_U74(
     .din0(grp_fu_1250_p0),
     .din1(grp_fu_1250_p1),
     .din2(r_V_8_fu_1004_p2),
@@ -488,7 +488,7 @@ Sobel_filter_mac_qcK #(
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 11 ),
     .dout_WIDTH( 11 ))
-Sobel_filter_mac_qcK_U63(
+Sobel_filter_mac_qcK_U75(
     .din0(grp_fu_1257_p0),
     .din1(grp_fu_1257_p1),
     .din2(p_Val2_89_0_1_reg_1494),
@@ -1054,7 +1054,7 @@ assign p_Val2_89_0_2_cast_fu_1043_p1 = grp_fu_1257_p3;
 
 assign p_Val2_89_1_1_fu_1066_p2 = ($signed(tmp_463_1_cast_cast_fu_1055_p1) + $signed(p_Val2_89_0_2_cast_fu_1043_p1));
 
-assign p_Val2_s_fu_1242_p3 = ((tmp_i_i_84_fu_1236_p2[0:0] === 1'b1) ? p_mux_i_i_cast_fu_1228_p3 : p_Val2_2_fu_1195_p2);
+assign p_Val2_s_fu_1242_p3 = ((tmp_i_i_85_fu_1236_p2[0:0] === 1'b1) ? p_mux_i_i_cast_fu_1228_p3 : p_Val2_2_fu_1195_p2);
 
 assign p_assign_1_fu_732_p2 = (12'd1 - t_V_2_cast_fu_660_p1);
 
@@ -1250,7 +1250,7 @@ assign tmp_76_fu_1112_p1 = r_V_8_2_1_fu_1107_p2[7:0];
 
 assign tmp_7_fu_434_p2 = ($signed(11'd2047) + $signed(t_V_cast_fu_368_p1));
 
-assign tmp_i_i_84_fu_1236_p2 = (overflow_fu_1222_p2 | isneg_fu_1183_p3);
+assign tmp_i_i_85_fu_1236_p2 = (overflow_fu_1222_p2 | isneg_fu_1183_p3);
 
 assign tmp_i_i_fu_1210_p2 = (isneg_fu_1183_p3 ^ 1'd1);
 

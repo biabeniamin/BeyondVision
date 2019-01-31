@@ -729,7 +729,7 @@
             <Obj>
               <type>0</type>
               <id>37</id>
-              <name>tmp_i_106</name>
+              <name>tmp_i_107</name>
               <fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>276</lineNumber>
@@ -826,7 +826,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>Sobel_filter_sitotde_U82</rtlName>
+              <rtlName>Sobel_filter_sitotde_U94</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -885,7 +885,7 @@
                 </item>
               </inlineStackInfo>
               <originalName>t1</originalName>
-              <rtlName>Sobel_filter_dmulsc4_U80</rtlName>
+              <rtlName>Sobel_filter_dmulsc4_U92</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -1004,7 +1004,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>Sobel_filter_sitotde_U83</rtlName>
+              <rtlName>Sobel_filter_sitotde_U95</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -1063,7 +1063,7 @@
                 </item>
               </inlineStackInfo>
               <originalName>t2</originalName>
-              <rtlName>Sobel_filter_dmulsc4_U81</rtlName>
+              <rtlName>Sobel_filter_dmulsc4_U93</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -1123,7 +1123,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>Sobel_filter_daddrcU_U78</rtlName>
+              <rtlName>Sobel_filter_daddrcU_U90</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -1183,7 +1183,7 @@
                 </item>
               </inlineStackInfo>
               <originalName>sum</originalName>
-              <rtlName>Sobel_filter_daddrcU_U79</rtlName>
+              <rtlName>Sobel_filter_daddrcU_U91</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -1634,7 +1634,7 @@
             <Obj>
               <type>0</type>
               <id>49</id>
-              <name>tmp_i_i_i_i_107</name>
+              <name>tmp_i_i_i_i_108</name>
               <fileName>r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_isnan.h</fileName>
               <fileDirectory>r:/builds/2018.2/continuous/2018_06_14_2258646/src/products</fileDirectory>
               <lineNumber>17</lineNumber>
@@ -1714,7 +1714,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_i_i_i_i_107_fu_281_p2</rtlName>
+              <rtlName>tmp_i_i_i_i_108_fu_281_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -15358,7 +15358,7 @@
         <count>6</count>
         <item_version>0</item_version>
         <item class_id="38" tracking_level="0" version="0">
-          <first>Sobel_filter_daddrcU_U78 (Sobel_filter_daddrcU)</first>
+          <first>Sobel_filter_daddrcU_U90 (Sobel_filter_daddrcU)</first>
           <second class_id="39" tracking_level="0" version="0">
             <count>3</count>
             <item_version>0</item_version>
@@ -15377,7 +15377,7 @@
           </second>
         </item>
         <item>
-          <first>Sobel_filter_daddrcU_U79 (Sobel_filter_daddrcU)</first>
+          <first>Sobel_filter_daddrcU_U91 (Sobel_filter_daddrcU)</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -15396,7 +15396,7 @@
           </second>
         </item>
         <item>
-          <first>Sobel_filter_dmulsc4_U80 (Sobel_filter_dmulsc4)</first>
+          <first>Sobel_filter_dmulsc4_U92 (Sobel_filter_dmulsc4)</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -15415,7 +15415,7 @@
           </second>
         </item>
         <item>
-          <first>Sobel_filter_dmulsc4_U81 (Sobel_filter_dmulsc4)</first>
+          <first>Sobel_filter_dmulsc4_U93 (Sobel_filter_dmulsc4)</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -15434,7 +15434,7 @@
           </second>
         </item>
         <item>
-          <first>Sobel_filter_sitotde_U82 (Sobel_filter_sitotde)</first>
+          <first>Sobel_filter_sitotde_U94 (Sobel_filter_sitotde)</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -15453,7 +15453,7 @@
           </second>
         </item>
         <item>
-          <first>Sobel_filter_sitotde_U83 (Sobel_filter_sitotde)</first>
+          <first>Sobel_filter_sitotde_U95 (Sobel_filter_sitotde)</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -17779,7 +17779,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_i_i_i_i_107_fu_281_p2 ( icmp ) </first>
+          <first>tmp_i_i_i_i_108_fu_281_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -19550,7 +19550,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_i_i_i_i_107_reg_1014</first>
+          <first>tmp_i_i_i_i_108_reg_1014</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -19611,42 +19611,42 @@
         <count>6</count>
         <item_version>0</item_version>
         <item>
-          <first>Sobel_filter_daddrcU_U78</first>
+          <first>Sobel_filter_daddrcU_U90</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>Sobel_filter_daddrcU_U79</first>
+          <first>Sobel_filter_daddrcU_U91</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>Sobel_filter_dmulsc4_U80</first>
+          <first>Sobel_filter_dmulsc4_U92</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>Sobel_filter_dmulsc4_U81</first>
+          <first>Sobel_filter_dmulsc4_U93</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>Sobel_filter_sitotde_U82</first>
+          <first>Sobel_filter_sitotde_U94</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>Sobel_filter_sitotde_U83</first>
+          <first>Sobel_filter_sitotde_U95</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
@@ -19657,7 +19657,7 @@
         <count>6</count>
         <item_version>0</item_version>
         <item class_id="42" tracking_level="0" version="0">
-          <first>Sobel_filter_daddrcU_U78 (Sobel_filter_daddrcU)</first>
+          <first>Sobel_filter_daddrcU_U90 (Sobel_filter_daddrcU)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -19665,7 +19665,7 @@
           </second>
         </item>
         <item>
-          <first>Sobel_filter_daddrcU_U79 (Sobel_filter_daddrcU)</first>
+          <first>Sobel_filter_daddrcU_U91 (Sobel_filter_daddrcU)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -19673,7 +19673,7 @@
           </second>
         </item>
         <item>
-          <first>Sobel_filter_dmulsc4_U80 (Sobel_filter_dmulsc4)</first>
+          <first>Sobel_filter_dmulsc4_U92 (Sobel_filter_dmulsc4)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -19681,7 +19681,7 @@
           </second>
         </item>
         <item>
-          <first>Sobel_filter_dmulsc4_U81 (Sobel_filter_dmulsc4)</first>
+          <first>Sobel_filter_dmulsc4_U93 (Sobel_filter_dmulsc4)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -19689,7 +19689,7 @@
           </second>
         </item>
         <item>
-          <first>Sobel_filter_sitotde_U82 (Sobel_filter_sitotde)</first>
+          <first>Sobel_filter_sitotde_U94 (Sobel_filter_sitotde)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -19697,7 +19697,7 @@
           </second>
         </item>
         <item>
-          <first>Sobel_filter_sitotde_U83 (Sobel_filter_sitotde)</first>
+          <first>Sobel_filter_sitotde_U95 (Sobel_filter_sitotde)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -20437,7 +20437,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_i_i_i_i_107_fu_281_p2 ( icmp ) </first>
+          <first>tmp_i_i_i_i_108_fu_281_p2 ( icmp ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -23679,7 +23679,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_i_106_fu_250</first>
+        <first>tmp_i_107_fu_250</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -23687,7 +23687,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_i_i_i_i_107_fu_281</first>
+        <first>tmp_i_i_i_i_108_fu_281</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -24509,7 +24509,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_i_106_reg_968</first>
+        <first>tmp_i_107_reg_968</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -24517,7 +24517,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_i_i_i_i_107_reg_1014</first>
+        <first>tmp_i_i_i_i_108_reg_1014</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

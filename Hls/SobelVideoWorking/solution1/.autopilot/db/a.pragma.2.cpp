@@ -43135,7 +43135,7 @@ typedef hls::Mat<720, 1280, (((0) & ((1 << 11) - 1)) + (((1)-1) << 11))> GRAY_IM
 void Sobel_filter(AXI_STREAM& INPUT_STREAM, AXI_STREAM& OUTPUT_STREAM);
 # 2 "SobelVideoWorking/a.cpp" 2
 
-void Sobel_filter(AXI_STREAM& INPUT_STREAM, AXI_STREAM& OUTPUT_STREAM, char enable)
+void Sobel_filter(AXI_STREAM& INPUT_STREAM, AXI_STREAM& OUTPUT_STREAM, ap_uint<1> enable)
 {
 
 _ssdm_op_SpecInterface(&INPUT_STREAM, "axis", 1, 1, "both", 0, 0, "", "", "", 0, 0, 0, 0, "", "");

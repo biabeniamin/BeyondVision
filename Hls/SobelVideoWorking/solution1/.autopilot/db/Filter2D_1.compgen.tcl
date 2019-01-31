@@ -1,6 +1,6 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 33
+set id 45
 set name Sobel_filter_mux_hbi
 set corename simcore_mux
 set op mux
@@ -79,7 +79,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_pipemux, check your
 }
 
 
-set id 39
+set id 51
 set name Sobel_filter_mul_ibs
 set corename simcore_mul
 set op mul
@@ -155,7 +155,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 }
 
 
-set id 40
+set id 52
 set name Sobel_filter_ama_jbC
 set corename simcore_ama
 set op ama
@@ -243,7 +243,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 }
 
 
-set id 41
+set id 53
 set name Sobel_filter_mac_kbM
 set corename simcore_mac
 set op mac
@@ -325,7 +325,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 }
 
 
-set id 42
+set id 54
 set name Sobel_filter_mac_lbW
 set corename simcore_mac
 set op mac
@@ -408,7 +408,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 
 
 # Memory (RAM/ROM)  definition:
-set ID 48
+set ID 60
 set hasByteEnable 0
 set MemName Filter2D_1_k_buf_eOg
 set CoreName ap_simcore_mem
@@ -502,7 +502,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 49 \
+    id 61 \
     name p_src_data_stream_V \
     type fifo \
     dir I \
@@ -517,7 +517,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 50 \
+    id 62 \
     name p_dst_data_stream_V \
     type fifo \
     dir O \

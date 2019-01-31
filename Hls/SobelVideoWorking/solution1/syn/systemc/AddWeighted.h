@@ -50,12 +50,12 @@ struct AddWeighted : public sc_module {
 
     sc_trace_file* mVcdFile;
 
-    Sobel_filter_daddrcU<1,6,64,64,64>* Sobel_filter_daddrcU_U78;
-    Sobel_filter_daddrcU<1,6,64,64,64>* Sobel_filter_daddrcU_U79;
-    Sobel_filter_dmulsc4<1,6,64,64,64>* Sobel_filter_dmulsc4_U80;
-    Sobel_filter_dmulsc4<1,6,64,64,64>* Sobel_filter_dmulsc4_U81;
-    Sobel_filter_sitotde<1,6,32,64>* Sobel_filter_sitotde_U82;
-    Sobel_filter_sitotde<1,6,32,64>* Sobel_filter_sitotde_U83;
+    Sobel_filter_daddrcU<1,6,64,64,64>* Sobel_filter_daddrcU_U90;
+    Sobel_filter_daddrcU<1,6,64,64,64>* Sobel_filter_daddrcU_U91;
+    Sobel_filter_dmulsc4<1,6,64,64,64>* Sobel_filter_dmulsc4_U92;
+    Sobel_filter_dmulsc4<1,6,64,64,64>* Sobel_filter_dmulsc4_U93;
+    Sobel_filter_sitotde<1,6,32,64>* Sobel_filter_sitotde_U94;
+    Sobel_filter_sitotde<1,6,32,64>* Sobel_filter_sitotde_U95;
     sc_signal< sc_logic > real_start;
     sc_signal< sc_logic > start_once_reg;
     sc_signal< sc_logic > ap_done_reg;
@@ -155,10 +155,10 @@ struct AddWeighted : public sc_module {
     sc_signal< sc_lv<1> > tmp_i_i_i_i_reg_1008;
     sc_signal< sc_lv<1> > tmp_i_i_i_i_reg_1008_pp0_iter27_reg;
     sc_signal< sc_lv<1> > tmp_i_i_i_i_reg_1008_pp0_iter28_reg;
-    sc_signal< sc_lv<1> > tmp_i_i_i_i_107_fu_281_p2;
-    sc_signal< sc_lv<1> > tmp_i_i_i_i_107_reg_1014;
-    sc_signal< sc_lv<1> > tmp_i_i_i_i_107_reg_1014_pp0_iter27_reg;
-    sc_signal< sc_lv<1> > tmp_i_i_i_i_107_reg_1014_pp0_iter28_reg;
+    sc_signal< sc_lv<1> > tmp_i_i_i_i_108_fu_281_p2;
+    sc_signal< sc_lv<1> > tmp_i_i_i_i_108_reg_1014;
+    sc_signal< sc_lv<1> > tmp_i_i_i_i_108_reg_1014_pp0_iter27_reg;
+    sc_signal< sc_lv<1> > tmp_i_i_i_i_108_reg_1014_pp0_iter28_reg;
     sc_signal< sc_lv<1> > isneg_reg_1020;
     sc_signal< sc_lv<1> > isneg_reg_1020_pp0_iter27_reg;
     sc_signal< sc_lv<54> > p_Result_s_fu_311_p1;
@@ -572,7 +572,7 @@ struct AddWeighted : public sc_module {
     void thread_tmp_demorgan_i_fu_849_p2();
     void thread_tmp_fu_287_p1();
     void thread_tmp_i2_fu_333_p2();
-    void thread_tmp_i_i_i_i_107_fu_281_p2();
+    void thread_tmp_i_i_i_i_108_fu_281_p2();
     void thread_tmp_i_i_i_i_fu_275_p2();
     void thread_tmp_s_fu_896_p2();
     void thread_underflow_fu_830_p3();

@@ -115,9 +115,9 @@ set RtlHierarchyInfo {[
 			{"Name" : "p_dst_data_stream_V", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "0", "DependentChan" : "0",
 				"BlockSignal" : [
 					{"Name" : "p_dst_data_stream_V_blk_n", "Type" : "RtlSignal"}]}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Sobel_filter_mul_bkb_U21", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Sobel_filter_mac_cud_U22", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Sobel_filter_mac_dEe_U23", "Parent" : "0"}]}
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Sobel_filter_mul_bkb_U33", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Sobel_filter_mac_cud_U34", "Parent" : "0"},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Sobel_filter_mac_dEe_U35", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {

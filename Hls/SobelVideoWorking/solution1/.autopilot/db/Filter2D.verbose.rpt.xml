@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'Filter2D'" level="0">
-<item name = "Date">Thu Jan 31 19:14:57 2019
+<item name = "Date">Thu Jan 31 19:24:34 2019
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">SobelVideoWorking</item>
@@ -63,18 +63,18 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
-<column name="Sobel_filter_mux_hbi_U56">Sobel_filter_mux_hbi, 0, 0, 0, 15</column>
-<column name="Sobel_filter_mux_hbi_U57">Sobel_filter_mux_hbi, 0, 0, 0, 15</column>
-<column name="Sobel_filter_mux_hbi_U58">Sobel_filter_mux_hbi, 0, 0, 0, 15</column>
-<column name="Sobel_filter_mux_hbi_U59">Sobel_filter_mux_hbi, 0, 0, 0, 15</column>
-<column name="Sobel_filter_mux_hbi_U60">Sobel_filter_mux_hbi, 0, 0, 0, 15</column>
-<column name="Sobel_filter_mux_hbi_U61">Sobel_filter_mux_hbi, 0, 0, 0, 15</column>
+<column name="Sobel_filter_mux_hbi_U68">Sobel_filter_mux_hbi, 0, 0, 0, 15</column>
+<column name="Sobel_filter_mux_hbi_U69">Sobel_filter_mux_hbi, 0, 0, 0, 15</column>
+<column name="Sobel_filter_mux_hbi_U70">Sobel_filter_mux_hbi, 0, 0, 0, 15</column>
+<column name="Sobel_filter_mux_hbi_U71">Sobel_filter_mux_hbi, 0, 0, 0, 15</column>
+<column name="Sobel_filter_mux_hbi_U72">Sobel_filter_mux_hbi, 0, 0, 0, 15</column>
+<column name="Sobel_filter_mux_hbi_U73">Sobel_filter_mux_hbi, 0, 0, 0, 15</column>
 </table>
 </item>
 <item name = "DSP48"><table name="" hasTotal="0">
 <keys size="3">Instance, Module, Expression</keys>
-<column name="Sobel_filter_mac_pcA_U62">Sobel_filter_mac_pcA, i0 + i1 * i2</column>
-<column name="Sobel_filter_mac_qcK_U63">Sobel_filter_mac_qcK, i0 * i1 + i2</column>
+<column name="Sobel_filter_mac_pcA_U74">Sobel_filter_mac_pcA, i0 + i1 * i2</column>
+<column name="Sobel_filter_mac_qcK_U75">Sobel_filter_mac_qcK, i0 * i1 + i2</column>
 </table>
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
@@ -145,7 +145,7 @@
 <column name="ap_block_state5_pp0_stage0_iter2">or, 0, 0, 2, 1, 1</column>
 <column name="brmerge_fu_804_p2">or, 0, 0, 2, 1, 1</column>
 <column name="sel_tmp7_fu_780_p2">or, 0, 0, 2, 1, 1</column>
-<column name="tmp_i_i_84_fu_1236_p2">or, 0, 0, 2, 1, 1</column>
+<column name="tmp_i_i_85_fu_1236_p2">or, 0, 0, 2, 1, 1</column>
 <column name="col_buf_0_val_0_0_fu_859_p3">select, 0, 0, 8, 1, 8</column>
 <column name="col_buf_0_val_1_0_fu_878_p3">select, 0, 0, 8, 1, 8</column>
 <column name="col_buf_0_val_2_0_fu_897_p3">select, 0, 0, 8, 1, 8</column>

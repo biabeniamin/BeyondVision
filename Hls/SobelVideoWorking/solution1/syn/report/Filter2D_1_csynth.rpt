@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'Filter2D_1'
 ================================================================
-* Date:           Thu Jan 31 19:14:56 2019
+* Date:           Thu Jan 31 19:24:32 2019
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        SobelVideoWorking
@@ -74,12 +74,12 @@
     +--------------------------+----------------------+---------+-------+---+----+
     |         Instance         |        Module        | BRAM_18K| DSP48E| FF| LUT|
     +--------------------------+----------------------+---------+-------+---+----+
-    |Sobel_filter_mux_hbi_U33  |Sobel_filter_mux_hbi  |        0|      0|  0|  15|
-    |Sobel_filter_mux_hbi_U34  |Sobel_filter_mux_hbi  |        0|      0|  0|  15|
-    |Sobel_filter_mux_hbi_U35  |Sobel_filter_mux_hbi  |        0|      0|  0|  15|
-    |Sobel_filter_mux_hbi_U36  |Sobel_filter_mux_hbi  |        0|      0|  0|  15|
-    |Sobel_filter_mux_hbi_U37  |Sobel_filter_mux_hbi  |        0|      0|  0|  15|
-    |Sobel_filter_mux_hbi_U38  |Sobel_filter_mux_hbi  |        0|      0|  0|  15|
+    |Sobel_filter_mux_hbi_U45  |Sobel_filter_mux_hbi  |        0|      0|  0|  15|
+    |Sobel_filter_mux_hbi_U46  |Sobel_filter_mux_hbi  |        0|      0|  0|  15|
+    |Sobel_filter_mux_hbi_U47  |Sobel_filter_mux_hbi  |        0|      0|  0|  15|
+    |Sobel_filter_mux_hbi_U48  |Sobel_filter_mux_hbi  |        0|      0|  0|  15|
+    |Sobel_filter_mux_hbi_U49  |Sobel_filter_mux_hbi  |        0|      0|  0|  15|
+    |Sobel_filter_mux_hbi_U50  |Sobel_filter_mux_hbi  |        0|      0|  0|  15|
     +--------------------------+----------------------+---------+-------+---+----+
     |Total                     |                      |        0|      0|  0|  90|
     +--------------------------+----------------------+---------+-------+---+----+
@@ -88,10 +88,10 @@
     +--------------------------+----------------------+---------------------+
     |         Instance         |        Module        |      Expression     |
     +--------------------------+----------------------+---------------------+
-    |Sobel_filter_ama_jbC_U40  |Sobel_filter_ama_jbC  | (i0 + i1) * i2 + i3 |
-    |Sobel_filter_mac_kbM_U41  |Sobel_filter_mac_kbM  |     i0 + i1 * i2    |
-    |Sobel_filter_mac_lbW_U42  |Sobel_filter_mac_lbW  |     i0 + i1 * i2    |
-    |Sobel_filter_mul_ibs_U39  |Sobel_filter_mul_ibs  |       i0 * i1       |
+    |Sobel_filter_ama_jbC_U52  |Sobel_filter_ama_jbC  | (i0 + i1) * i2 + i3 |
+    |Sobel_filter_mac_kbM_U53  |Sobel_filter_mac_kbM  |     i0 + i1 * i2    |
+    |Sobel_filter_mac_lbW_U54  |Sobel_filter_mac_lbW  |     i0 + i1 * i2    |
+    |Sobel_filter_mul_ibs_U51  |Sobel_filter_mul_ibs  |       i0 * i1       |
     +--------------------------+----------------------+---------------------+
 
     * Memory: 

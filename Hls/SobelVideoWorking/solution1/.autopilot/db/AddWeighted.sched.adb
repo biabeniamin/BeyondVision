@@ -729,7 +729,7 @@
 					<Obj>
 						<type>0</type>
 						<id>37</id>
-						<name>tmp_i_106</name>
+						<name>tmp_i_107</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>276</lineNumber>
@@ -1634,7 +1634,7 @@
 					<Obj>
 						<type>0</type>
 						<id>49</id>
-						<name>tmp_i_i_i_i_107</name>
+						<name>tmp_i_i_i_i_108</name>
 						<fileName>r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_isnan.h</fileName>
 						<fileDirectory>r:\builds\2018.2\continuous\2018_06_14_2258646\src\products</fileDirectory>
 						<lineNumber>17</lineNumber>

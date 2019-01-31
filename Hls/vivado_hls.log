@@ -1,5 +1,5 @@
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/vivado_hls.exe'
-INFO: [HLS 200-10] For user 'biabe' on host 'desktop-871tsom' (Windows NT_amd64 version 6.2) on Thu Jan 31 19:15:49 +0200 2019
+INFO: [HLS 200-10] For user 'biabe' on host 'desktop-871tsom' (Windows NT_amd64 version 6.2) on Thu Jan 31 19:25:08 +0200 2019
 INFO: [HLS 200-10] In directory 'C:/Digilent19/Hls'
 INFO: [HLS 200-10] Opening project 'C:/Digilent19/Hls/SobelVideoWorking'.
 INFO: [HLS 200-10] Opening solution 'C:/Digilent19/Hls/SobelVideoWorking/solution1'.
@@ -29,4 +29,4 @@ INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'Sobel_filter_ap_s
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Thu Jan 31 19:16:09 2019...
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 31 19:25:25 2019...
