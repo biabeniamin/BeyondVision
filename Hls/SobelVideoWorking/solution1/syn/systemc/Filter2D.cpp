@@ -84,52 +84,52 @@ Filter2D::Filter2D(sc_module_name name) : sc_module(name), mVcdFile(0) {
     k_buf_0_val_5_U->ce1(k_buf_0_val_5_ce1);
     k_buf_0_val_5_U->we1(k_buf_0_val_5_we1);
     k_buf_0_val_5_U->d1(k_buf_0_val_5_d1);
-    Sobel_filter_mux_hbi_U52 = new Sobel_filter_mux_hbi<1,1,8,8,8,2,8>("Sobel_filter_mux_hbi_U52");
-    Sobel_filter_mux_hbi_U52->din0(right_border_buf_0_s_fu_184);
-    Sobel_filter_mux_hbi_U52->din1(right_border_buf_0_14_fu_188);
-    Sobel_filter_mux_hbi_U52->din2(ap_var_for_const0);
-    Sobel_filter_mux_hbi_U52->din3(col_assign_3_t_fu_842_p2);
-    Sobel_filter_mux_hbi_U52->dout(tmp_23_fu_847_p5);
-    Sobel_filter_mux_hbi_U53 = new Sobel_filter_mux_hbi<1,1,8,8,8,2,8>("Sobel_filter_mux_hbi_U53");
-    Sobel_filter_mux_hbi_U53->din0(right_border_buf_0_16_fu_196);
-    Sobel_filter_mux_hbi_U53->din1(right_border_buf_0_17_fu_200);
-    Sobel_filter_mux_hbi_U53->din2(ap_var_for_const0);
-    Sobel_filter_mux_hbi_U53->din3(col_assign_3_t_fu_842_p2);
-    Sobel_filter_mux_hbi_U53->dout(tmp_24_fu_866_p5);
-    Sobel_filter_mux_hbi_U54 = new Sobel_filter_mux_hbi<1,1,8,8,8,2,8>("Sobel_filter_mux_hbi_U54");
-    Sobel_filter_mux_hbi_U54->din0(right_border_buf_0_18_fu_204);
-    Sobel_filter_mux_hbi_U54->din1(right_border_buf_0_15_fu_192);
-    Sobel_filter_mux_hbi_U54->din2(ap_var_for_const0);
-    Sobel_filter_mux_hbi_U54->din3(col_assign_3_t_fu_842_p2);
-    Sobel_filter_mux_hbi_U54->dout(tmp_25_fu_885_p5);
-    Sobel_filter_mux_hbi_U55 = new Sobel_filter_mux_hbi<1,1,8,8,8,2,8>("Sobel_filter_mux_hbi_U55");
-    Sobel_filter_mux_hbi_U55->din0(col_buf_0_val_0_0_fu_859_p3);
-    Sobel_filter_mux_hbi_U55->din1(col_buf_0_val_1_0_fu_878_p3);
-    Sobel_filter_mux_hbi_U55->din2(col_buf_0_val_2_0_fu_897_p3);
-    Sobel_filter_mux_hbi_U55->din3(row_assign_10_0_t_reg_1409);
-    Sobel_filter_mux_hbi_U55->dout(tmp_26_fu_940_p5);
     Sobel_filter_mux_hbi_U56 = new Sobel_filter_mux_hbi<1,1,8,8,8,2,8>("Sobel_filter_mux_hbi_U56");
-    Sobel_filter_mux_hbi_U56->din0(col_buf_0_val_0_0_fu_859_p3);
-    Sobel_filter_mux_hbi_U56->din1(col_buf_0_val_1_0_fu_878_p3);
-    Sobel_filter_mux_hbi_U56->din2(col_buf_0_val_2_0_fu_897_p3);
-    Sobel_filter_mux_hbi_U56->din3(row_assign_10_1_t_reg_1414);
-    Sobel_filter_mux_hbi_U56->dout(tmp_30_fu_958_p5);
+    Sobel_filter_mux_hbi_U56->din0(right_border_buf_0_s_fu_184);
+    Sobel_filter_mux_hbi_U56->din1(right_border_buf_0_14_fu_188);
+    Sobel_filter_mux_hbi_U56->din2(ap_var_for_const0);
+    Sobel_filter_mux_hbi_U56->din3(col_assign_3_t_fu_842_p2);
+    Sobel_filter_mux_hbi_U56->dout(tmp_23_fu_847_p5);
     Sobel_filter_mux_hbi_U57 = new Sobel_filter_mux_hbi<1,1,8,8,8,2,8>("Sobel_filter_mux_hbi_U57");
-    Sobel_filter_mux_hbi_U57->din0(col_buf_0_val_0_0_fu_859_p3);
-    Sobel_filter_mux_hbi_U57->din1(col_buf_0_val_1_0_fu_878_p3);
-    Sobel_filter_mux_hbi_U57->din2(col_buf_0_val_2_0_fu_897_p3);
-    Sobel_filter_mux_hbi_U57->din3(row_assign_10_2_t_reg_1419);
-    Sobel_filter_mux_hbi_U57->dout(tmp_34_fu_976_p5);
-    Sobel_filter_mac_pcA_U58 = new Sobel_filter_mac_pcA<1,1,2,8,9,11>("Sobel_filter_mac_pcA_U58");
-    Sobel_filter_mac_pcA_U58->din0(grp_fu_1250_p0);
-    Sobel_filter_mac_pcA_U58->din1(grp_fu_1250_p1);
-    Sobel_filter_mac_pcA_U58->din2(r_V_8_fu_1004_p2);
-    Sobel_filter_mac_pcA_U58->dout(grp_fu_1250_p3);
-    Sobel_filter_mac_qcK_U59 = new Sobel_filter_mac_qcK<1,1,2,8,11,11>("Sobel_filter_mac_qcK_U59");
-    Sobel_filter_mac_qcK_U59->din0(grp_fu_1257_p0);
-    Sobel_filter_mac_qcK_U59->din1(grp_fu_1257_p1);
-    Sobel_filter_mac_qcK_U59->din2(p_Val2_89_0_1_reg_1494);
-    Sobel_filter_mac_qcK_U59->dout(grp_fu_1257_p3);
+    Sobel_filter_mux_hbi_U57->din0(right_border_buf_0_16_fu_196);
+    Sobel_filter_mux_hbi_U57->din1(right_border_buf_0_17_fu_200);
+    Sobel_filter_mux_hbi_U57->din2(ap_var_for_const0);
+    Sobel_filter_mux_hbi_U57->din3(col_assign_3_t_fu_842_p2);
+    Sobel_filter_mux_hbi_U57->dout(tmp_24_fu_866_p5);
+    Sobel_filter_mux_hbi_U58 = new Sobel_filter_mux_hbi<1,1,8,8,8,2,8>("Sobel_filter_mux_hbi_U58");
+    Sobel_filter_mux_hbi_U58->din0(right_border_buf_0_18_fu_204);
+    Sobel_filter_mux_hbi_U58->din1(right_border_buf_0_15_fu_192);
+    Sobel_filter_mux_hbi_U58->din2(ap_var_for_const0);
+    Sobel_filter_mux_hbi_U58->din3(col_assign_3_t_fu_842_p2);
+    Sobel_filter_mux_hbi_U58->dout(tmp_25_fu_885_p5);
+    Sobel_filter_mux_hbi_U59 = new Sobel_filter_mux_hbi<1,1,8,8,8,2,8>("Sobel_filter_mux_hbi_U59");
+    Sobel_filter_mux_hbi_U59->din0(col_buf_0_val_0_0_fu_859_p3);
+    Sobel_filter_mux_hbi_U59->din1(col_buf_0_val_1_0_fu_878_p3);
+    Sobel_filter_mux_hbi_U59->din2(col_buf_0_val_2_0_fu_897_p3);
+    Sobel_filter_mux_hbi_U59->din3(row_assign_10_0_t_reg_1409);
+    Sobel_filter_mux_hbi_U59->dout(tmp_26_fu_940_p5);
+    Sobel_filter_mux_hbi_U60 = new Sobel_filter_mux_hbi<1,1,8,8,8,2,8>("Sobel_filter_mux_hbi_U60");
+    Sobel_filter_mux_hbi_U60->din0(col_buf_0_val_0_0_fu_859_p3);
+    Sobel_filter_mux_hbi_U60->din1(col_buf_0_val_1_0_fu_878_p3);
+    Sobel_filter_mux_hbi_U60->din2(col_buf_0_val_2_0_fu_897_p3);
+    Sobel_filter_mux_hbi_U60->din3(row_assign_10_1_t_reg_1414);
+    Sobel_filter_mux_hbi_U60->dout(tmp_30_fu_958_p5);
+    Sobel_filter_mux_hbi_U61 = new Sobel_filter_mux_hbi<1,1,8,8,8,2,8>("Sobel_filter_mux_hbi_U61");
+    Sobel_filter_mux_hbi_U61->din0(col_buf_0_val_0_0_fu_859_p3);
+    Sobel_filter_mux_hbi_U61->din1(col_buf_0_val_1_0_fu_878_p3);
+    Sobel_filter_mux_hbi_U61->din2(col_buf_0_val_2_0_fu_897_p3);
+    Sobel_filter_mux_hbi_U61->din3(row_assign_10_2_t_reg_1419);
+    Sobel_filter_mux_hbi_U61->dout(tmp_34_fu_976_p5);
+    Sobel_filter_mac_pcA_U62 = new Sobel_filter_mac_pcA<1,1,2,8,9,11>("Sobel_filter_mac_pcA_U62");
+    Sobel_filter_mac_pcA_U62->din0(grp_fu_1250_p0);
+    Sobel_filter_mac_pcA_U62->din1(grp_fu_1250_p1);
+    Sobel_filter_mac_pcA_U62->din2(r_V_8_fu_1004_p2);
+    Sobel_filter_mac_pcA_U62->dout(grp_fu_1250_p3);
+    Sobel_filter_mac_qcK_U63 = new Sobel_filter_mac_qcK<1,1,2,8,11,11>("Sobel_filter_mac_qcK_U63");
+    Sobel_filter_mac_qcK_U63->din0(grp_fu_1257_p0);
+    Sobel_filter_mac_qcK_U63->din1(grp_fu_1257_p1);
+    Sobel_filter_mac_qcK_U63->din2(p_Val2_89_0_1_reg_1494);
+    Sobel_filter_mac_qcK_U63->dout(grp_fu_1257_p3);
 
     SC_METHOD(thread_ap_clk_no_reset_);
     dont_initialize();
@@ -498,7 +498,7 @@ Filter2D::Filter2D(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sensitive << ( p_Val2_89_0_2_cast_fu_1043_p1 );
 
     SC_METHOD(thread_p_Val2_s_fu_1242_p3);
-    sensitive << ( tmp_i_i_91_fu_1236_p2 );
+    sensitive << ( tmp_i_i_84_fu_1236_p2 );
     sensitive << ( p_mux_i_i_cast_fu_1228_p3 );
     sensitive << ( p_Val2_2_fu_1195_p2 );
 
@@ -891,7 +891,7 @@ Filter2D::Filter2D(sc_module_name name) : sc_module(name), mVcdFile(0) {
     SC_METHOD(thread_tmp_7_fu_434_p2);
     sensitive << ( t_V_cast_fu_368_p1 );
 
-    SC_METHOD(thread_tmp_i_i_91_fu_1236_p2);
+    SC_METHOD(thread_tmp_i_i_84_fu_1236_p2);
     sensitive << ( isneg_fu_1183_p3 );
     sensitive << ( overflow_fu_1222_p2 );
 
@@ -1198,7 +1198,7 @@ Filter2D::Filter2D(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, not_i_i_i_fu_1216_p2, "not_i_i_i_fu_1216_p2");
     sc_trace(mVcdFile, tmp_i_i_fu_1210_p2, "tmp_i_i_fu_1210_p2");
     sc_trace(mVcdFile, overflow_fu_1222_p2, "overflow_fu_1222_p2");
-    sc_trace(mVcdFile, tmp_i_i_91_fu_1236_p2, "tmp_i_i_91_fu_1236_p2");
+    sc_trace(mVcdFile, tmp_i_i_84_fu_1236_p2, "tmp_i_i_84_fu_1236_p2");
     sc_trace(mVcdFile, p_mux_i_i_cast_fu_1228_p3, "p_mux_i_i_cast_fu_1228_p3");
     sc_trace(mVcdFile, p_Val2_2_fu_1195_p2, "p_Val2_2_fu_1195_p2");
     sc_trace(mVcdFile, grp_fu_1250_p0, "grp_fu_1250_p0");
@@ -1228,14 +1228,14 @@ Filter2D::~Filter2D() {
     delete k_buf_0_val_3_U;
     delete k_buf_0_val_4_U;
     delete k_buf_0_val_5_U;
-    delete Sobel_filter_mux_hbi_U52;
-    delete Sobel_filter_mux_hbi_U53;
-    delete Sobel_filter_mux_hbi_U54;
-    delete Sobel_filter_mux_hbi_U55;
     delete Sobel_filter_mux_hbi_U56;
     delete Sobel_filter_mux_hbi_U57;
-    delete Sobel_filter_mac_pcA_U58;
-    delete Sobel_filter_mac_qcK_U59;
+    delete Sobel_filter_mux_hbi_U58;
+    delete Sobel_filter_mux_hbi_U59;
+    delete Sobel_filter_mux_hbi_U60;
+    delete Sobel_filter_mux_hbi_U61;
+    delete Sobel_filter_mac_pcA_U62;
+    delete Sobel_filter_mac_qcK_U63;
 }
 
 void Filter2D::thread_ap_var_for_const0() {
@@ -1862,7 +1862,7 @@ void Filter2D::thread_p_Val2_89_1_1_fu_1066_p2() {
 }
 
 void Filter2D::thread_p_Val2_s_fu_1242_p3() {
-    p_Val2_s_fu_1242_p3 = (!tmp_i_i_91_fu_1236_p2.read()[0].is_01())? sc_lv<8>(): ((tmp_i_i_91_fu_1236_p2.read()[0].to_bool())? p_mux_i_i_cast_fu_1228_p3.read(): p_Val2_2_fu_1195_p2.read());
+    p_Val2_s_fu_1242_p3 = (!tmp_i_i_84_fu_1236_p2.read()[0].is_01())? sc_lv<8>(): ((tmp_i_i_84_fu_1236_p2.read()[0].to_bool())? p_mux_i_i_cast_fu_1228_p3.read(): p_Val2_2_fu_1195_p2.read());
 }
 
 void Filter2D::thread_p_assign_1_fu_732_p2() {
@@ -2304,8 +2304,8 @@ void Filter2D::thread_tmp_7_fu_434_p2() {
     tmp_7_fu_434_p2 = (!ap_const_lv11_7FF.is_01() || !t_V_cast_fu_368_p1.read().is_01())? sc_lv<11>(): (sc_bigint<11>(ap_const_lv11_7FF) + sc_biguint<11>(t_V_cast_fu_368_p1.read()));
 }
 
-void Filter2D::thread_tmp_i_i_91_fu_1236_p2() {
-    tmp_i_i_91_fu_1236_p2 = (isneg_fu_1183_p3.read() | overflow_fu_1222_p2.read());
+void Filter2D::thread_tmp_i_i_84_fu_1236_p2() {
+    tmp_i_i_84_fu_1236_p2 = (isneg_fu_1183_p3.read() | overflow_fu_1222_p2.read());
 }
 
 void Filter2D::thread_tmp_i_i_fu_1210_p2() {

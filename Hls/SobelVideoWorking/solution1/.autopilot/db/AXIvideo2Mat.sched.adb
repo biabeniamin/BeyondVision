@@ -1718,7 +1718,7 @@
 					<Obj>
 						<type>0</type>
 						<id>81</id>
-						<name>empty_111</name>
+						<name>empty_112</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>81</lineNumber>
@@ -2012,7 +2012,7 @@
 					<Obj>
 						<type>0</type>
 						<id>89</id>
-						<name>tmp_37</name>
+						<name>tmp_40</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_axi_io.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>49</lineNumber>
@@ -2067,7 +2067,7 @@
 					<Obj>
 						<type>0</type>
 						<id>90</id>
-						<name>tmp_38</name>
+						<name>tmp_108</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_axi_io.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>49</lineNumber>
@@ -2578,7 +2578,7 @@
 					<Obj>
 						<type>0</type>
 						<id>112</id>
-						<name>empty_114</name>
+						<name>empty_115</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>100</lineNumber>
@@ -5317,7 +5317,7 @@
 			<pipe_depth>2</pipe_depth>
 		</item>
 		<item class_id_reference="33" object_id="_266">
-			<region_name>hls_label_0</region_name>
+			<region_name>hls_label_2</region_name>
 			<basic_blocks>
 				<count>1</count>
 				<item_version>0</item_version>

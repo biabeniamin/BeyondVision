@@ -595,7 +595,7 @@
 					<Obj>
 						<type>0</type>
 						<id>30</id>
-						<name>tmp_102</name>
+						<name>tmp_106</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>624</lineNumber>
@@ -662,7 +662,7 @@
 					<Obj>
 						<type>0</type>
 						<id>34</id>
-						<name>tmp_103</name>
+						<name>tmp_107</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>624</lineNumber>
@@ -729,7 +729,7 @@
 					<Obj>
 						<type>0</type>
 						<id>37</id>
-						<name>tmp_i_105</name>
+						<name>tmp_i_106</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>276</lineNumber>
@@ -1634,7 +1634,7 @@
 					<Obj>
 						<type>0</type>
 						<id>49</id>
-						<name>tmp_i_i_i_i_106</name>
+						<name>tmp_i_i_i_i_107</name>
 						<fileName>r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_isnan.h</fileName>
 						<fileDirectory>r:\builds\2018.2\continuous\2018_06_14_2258646\src\products</fileDirectory>
 						<lineNumber>17</lineNumber>
@@ -2699,7 +2699,7 @@
 					<Obj>
 						<type>0</type>
 						<id>63</id>
-						<name>tmp_91</name>
+						<name>tmp_95</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -2919,7 +2919,7 @@
 					<Obj>
 						<type>0</type>
 						<id>66</id>
-						<name>tmp_92</name>
+						<name>tmp_96</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -3066,7 +3066,7 @@
 					<Obj>
 						<type>0</type>
 						<id>68</id>
-						<name>tmp_93</name>
+						<name>tmp_97</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -3363,7 +3363,7 @@
 					<Obj>
 						<type>0</type>
 						<id>72</id>
-						<name>tmp_94</name>
+						<name>tmp_98</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -3881,7 +3881,7 @@
 					<Obj>
 						<type>0</type>
 						<id>79</id>
-						<name>tmp_95</name>
+						<name>tmp_99</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -4031,7 +4031,7 @@
 					<Obj>
 						<type>0</type>
 						<id>81</id>
-						<name>tmp_96</name>
+						<name>tmp_100</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -4253,7 +4253,7 @@
 					<Obj>
 						<type>0</type>
 						<id>84</id>
-						<name>tmp_97</name>
+						<name>tmp_101</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -6033,7 +6033,7 @@
 					<Obj>
 						<type>0</type>
 						<id>108</id>
-						<name>tmp_99</name>
+						<name>tmp_103</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -6550,7 +6550,7 @@
 					<Obj>
 						<type>0</type>
 						<id>115</id>
-						<name>tmp_101</name>
+						<name>tmp_105</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -10111,7 +10111,7 @@
 					<Obj>
 						<type>0</type>
 						<id>163</id>
-						<name>tmp_39</name>
+						<name>tmp_41</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -14687,7 +14687,7 @@
 			<pipe_depth>30</pipe_depth>
 		</item>
 		<item class_id_reference="33" object_id="_484">
-			<region_name>hls_label_4</region_name>
+			<region_name>hls_label_6</region_name>
 			<basic_blocks>
 				<count>1</count>
 				<item_version>0</item_version>

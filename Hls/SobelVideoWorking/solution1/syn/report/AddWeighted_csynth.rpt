@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'AddWeighted'
 ================================================================
-* Date:           Sun Jan 27 12:59:35 2019
+* Date:           Thu Jan 31 19:14:59 2019
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        SobelVideoWorking
@@ -74,12 +74,12 @@
     +--------------------------+----------------------+---------+-------+-----+-----+
     |         Instance         |        Module        | BRAM_18K| DSP48E|  FF | LUT |
     +--------------------------+----------------------+---------+-------+-----+-----+
-    |Sobel_filter_daddrcU_U74  |Sobel_filter_daddrcU  |        0|      3|  509|  817|
-    |Sobel_filter_daddrcU_U75  |Sobel_filter_daddrcU  |        0|      3|  509|  817|
-    |Sobel_filter_dmulsc4_U76  |Sobel_filter_dmulsc4  |        0|     11|  317|  204|
-    |Sobel_filter_dmulsc4_U77  |Sobel_filter_dmulsc4  |        0|     11|  317|  204|
-    |Sobel_filter_sitotde_U78  |Sobel_filter_sitotde  |        0|      0|  412|  452|
-    |Sobel_filter_sitotde_U79  |Sobel_filter_sitotde  |        0|      0|  412|  452|
+    |Sobel_filter_daddrcU_U78  |Sobel_filter_daddrcU  |        0|      3|  509|  817|
+    |Sobel_filter_daddrcU_U79  |Sobel_filter_daddrcU  |        0|      3|  509|  817|
+    |Sobel_filter_dmulsc4_U80  |Sobel_filter_dmulsc4  |        0|     11|  317|  204|
+    |Sobel_filter_dmulsc4_U81  |Sobel_filter_dmulsc4  |        0|     11|  317|  204|
+    |Sobel_filter_sitotde_U82  |Sobel_filter_sitotde  |        0|      0|  412|  452|
+    |Sobel_filter_sitotde_U83  |Sobel_filter_sitotde  |        0|      0|  412|  452|
     +--------------------------+----------------------+---------+-------+-----+-----+
     |Total                     |                      |        0|     28| 2476| 2946|
     +--------------------------+----------------------+---------+-------+-----+-----+
@@ -145,7 +145,7 @@
     |tmp_5_i3_fu_387_p2                  |   icmp   |      0|  0|   13|          12|           6|
     |tmp_9_i_fu_321_p2                   |   icmp   |      0|  0|   29|          63|           1|
     |tmp_i2_fu_333_p2                    |   icmp   |      0|  0|   13|          12|           1|
-    |tmp_i_i_i_i_106_fu_281_p2           |   icmp   |      0|  0|   29|          52|           1|
+    |tmp_i_i_i_i_107_fu_281_p2           |   icmp   |      0|  0|   29|          52|           1|
     |tmp_i_i_i_i_fu_275_p2               |   icmp   |      0|  0|   13|          11|           2|
     |Range2_V_1_fu_560_p2                |   lshr   |      0|  0|  162|          54|          54|
     |r_V_fu_715_p2                       |   lshr   |      0|  0|  162|           2|          54|
@@ -283,9 +283,10 @@
     |t2_reg_993                       |  64|   0|   64|          0|
     |t_V_4_reg_190                    |  11|   0|   11|          0|
     |t_V_reg_179                      |  10|   0|   10|          0|
-    |tmp_101_reg_1125                 |   1|   0|    1|          0|
-    |tmp_102_reg_958                  |   8|   0|    8|          0|
-    |tmp_103_reg_963                  |   8|   0|    8|          0|
+    |tmp_100_reg_1086                 |   1|   0|    1|          0|
+    |tmp_105_reg_1125                 |   1|   0|    1|          0|
+    |tmp_106_reg_958                  |   8|   0|    8|          0|
+    |tmp_107_reg_963                  |   8|   0|    8|          0|
     |tmp_18_i_reg_1105                |   1|   0|    1|          0|
     |tmp_23_i_reg_1130                |   1|   0|    1|          0|
     |tmp_24_i_reg_1136                |  32|   0|   54|         22|
@@ -294,17 +295,16 @@
     |tmp_43_i_reg_978                 |  64|   0|   64|          0|
     |tmp_45_i_reg_983                 |  64|   0|   64|          0|
     |tmp_46_i_reg_998                 |  64|   0|   64|          0|
-    |tmp_92_reg_1080                  |   8|   0|    8|          0|
-    |tmp_96_reg_1086                  |   1|   0|    1|          0|
+    |tmp_96_reg_1080                  |   8|   0|    8|          0|
     |tmp_9_i_reg_1040                 |   1|   0|    1|          0|
     |tmp_i2_reg_1054                  |   1|   0|    1|          0|
     |tmp_i2_reg_1054_pp0_iter27_reg   |   1|   0|    1|          0|
-    |tmp_i_i_i_i_106_reg_1014         |   1|   0|    1|          0|
+    |tmp_i_i_i_i_107_reg_1014         |   1|   0|    1|          0|
     |tmp_i_i_i_i_reg_1008             |   1|   0|    1|          0|
     |underflow_reg_1164               |   1|   0|    1|          0|
     |exitcond_i_reg_949               |  64|  32|    1|          0|
     |tmp_9_i_reg_1040                 |  64|  32|    1|          0|
-    |tmp_i_i_i_i_106_reg_1014         |  64|  32|    1|          0|
+    |tmp_i_i_i_i_107_reg_1014         |  64|  32|    1|          0|
     |tmp_i_i_i_i_reg_1008             |  64|  32|    1|          0|
     +---------------------------------+----+----+-----+-----------+
     |Total                            | 998| 128|  770|         24|

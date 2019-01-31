@@ -72,16 +72,16 @@ set RtlHierarchyInfo {[
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.k_buf_0_val_3_U", "Parent" : "0"},
 	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.k_buf_0_val_4_U", "Parent" : "0"},
 	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.k_buf_0_val_5_U", "Parent" : "0"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Sobel_filter_mux_hbi_U29", "Parent" : "0"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Sobel_filter_mux_hbi_U30", "Parent" : "0"},
-	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Sobel_filter_mux_hbi_U31", "Parent" : "0"},
-	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Sobel_filter_mux_hbi_U32", "Parent" : "0"},
-	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Sobel_filter_mux_hbi_U33", "Parent" : "0"},
-	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Sobel_filter_mux_hbi_U34", "Parent" : "0"},
-	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Sobel_filter_mul_ibs_U35", "Parent" : "0"},
-	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Sobel_filter_ama_jbC_U36", "Parent" : "0"},
-	{"ID" : "12", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Sobel_filter_mac_kbM_U37", "Parent" : "0"},
-	{"ID" : "13", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Sobel_filter_mac_lbW_U38", "Parent" : "0"}]}
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Sobel_filter_mux_hbi_U33", "Parent" : "0"},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Sobel_filter_mux_hbi_U34", "Parent" : "0"},
+	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Sobel_filter_mux_hbi_U35", "Parent" : "0"},
+	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Sobel_filter_mux_hbi_U36", "Parent" : "0"},
+	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Sobel_filter_mux_hbi_U37", "Parent" : "0"},
+	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Sobel_filter_mux_hbi_U38", "Parent" : "0"},
+	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Sobel_filter_mul_ibs_U39", "Parent" : "0"},
+	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Sobel_filter_ama_jbC_U40", "Parent" : "0"},
+	{"ID" : "12", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Sobel_filter_mac_kbM_U41", "Parent" : "0"},
+	{"ID" : "13", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Sobel_filter_mac_lbW_U42", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {

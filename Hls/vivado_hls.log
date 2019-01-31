@@ -1,16 +1,17 @@
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/vivado_hls.exe'
-INFO: [HLS 200-10] For user 'biabe' on host 'desktop-871tsom' (Windows NT_amd64 version 6.2) on Sun Jan 27 12:58:57 +0200 2019
+INFO: [HLS 200-10] For user 'biabe' on host 'desktop-871tsom' (Windows NT_amd64 version 6.2) on Thu Jan 31 19:14:16 +0200 2019
 INFO: [HLS 200-10] In directory 'C:/Digilent19/Hls'
 INFO: [HLS 200-10] Opening project 'C:/Digilent19/Hls/SobelVideoWorking'.
-INFO: [HLS 200-10] Adding design file 'SobelVideoWorking/a.cpp' to the project
 INFO: [HLS 200-10] Adding design file 'SobelVideoWorking/a.hpp' to the project
+INFO: [HLS 200-10] Adding design file 'SobelVideoWorking/a.cpp' to the project
 INFO: [HLS 200-10] Opening solution 'C:/Digilent19/Hls/SobelVideoWorking/solution1'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-10] Setting target device to 'xc7a200tsbg484-1'
 INFO: [HLS 200-10] Analyzing design file 'SobelVideoWorking/a.cpp' ... 
-WARNING: [HLS 214-114] Only function calls and local variable declarations are allowed in a dataflow region: SobelVideoWorking/a.cpp:18:1
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:15 . Memory (MB): peak = 104.391 ; gain = 46.672
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:15 . Memory (MB): peak = 104.391 ; gain = 46.672
+WARNING: [HLS 214-113] Variables defined outside dataflow region are not supported: SobelVideoWorking/a.cpp:26:20
+WARNING: [HLS 214-113] Variables defined outside dataflow region are not supported: SobelVideoWorking/a.cpp:29:30
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:16 . Memory (MB): peak = 104.445 ; gain = 47.418
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:16 . Memory (MB): peak = 104.445 ; gain = 47.418
 INFO: [HLS 200-10] Starting code transformations ...
 INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:622) in function 'hls::Mat<720, 1280, 0>::read()' completely.
 INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:646) in function 'hls::Mat<720, 1280, 0>::write(hls::Scalar<1, unsigned char>)' completely.
@@ -22,8 +23,10 @@ INFO: [XFORM 203-603] Inlining function 'hls::Mat<720, 1280, 4096>::write' into 
 INFO: [XFORM 203-603] Inlining function 'hls::Mat<720, 1280, 4096>::operator<<' into 'hls::CvtColor<HLS_GRAY2RGB, 0, 4096, 720, 1280>' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1953).
 INFO: [XFORM 203-603] Inlining function 'hls::Mat<720, 1280, 4096>::operator<<' into 'hls::AXIvideo2Mat<24, 720, 1280, 4096>' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:94).
 INFO: [XFORM 203-603] Inlining function 'hls::Mat<720, 1280, 4096>::read' into 'hls::Mat<720, 1280, 4096>::operator>>' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:656).
-INFO: [XFORM 203-603] Inlining function 'hls::Mat<720, 1280, 4096>::operator>>' into 'hls::Mat2AXIvideo<24, 720, 1280, 4096>' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:140).
 INFO: [XFORM 203-603] Inlining function 'hls::Mat<720, 1280, 4096>::operator>>' into 'hls::CvtColor<HLS_BGR2GRAY, 4096, 0, 720, 1280>' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1951).
+INFO: [XFORM 203-603] Inlining function 'hls::Mat<720, 1280, 4096>::operator>>' into 'hls::Mat2AXIvideo<24, 720, 1280, 4096>' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:140).
+INFO: [XFORM 203-603] Inlining function 'hls::AXISetBitFields<24, unsigned char>.1' into 'hls::AXISetBitFields<24, unsigned char>' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_axi_io.h:100).
+INFO: [XFORM 203-603] Inlining function 'hls::AXISetBitFields<24, unsigned char>' into 'hls::Mat2AXIvideo<24, 720, 1280, 4096>' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:143).
 INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<8, 8, false, (ap_q_mode)0, (ap_o_mode)0, 0>::quantization_adjust' into 'ap_fixed_base<8, 8, false, (ap_q_mode)0, (ap_o_mode)0, 0>::ap_fixed_base' ().
 INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<8, 8, false, (ap_q_mode)0, (ap_o_mode)0, 0>::quantization_adjust' into 'ap_fixed_base<8, 8, false, (ap_q_mode)0, (ap_o_mode)0, 0>::ap_fixed_base<28, 14, true, (ap_q_mode)5, (ap_o_mode)3, 0>' ().
 INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<8, 8, false, (ap_q_mode)0, (ap_o_mode)0, 0>::quantization_adjust' into 'ap_fixed_base<8, 8, false, (ap_q_mode)0, (ap_o_mode)0, 0>::ap_fixed_base<35, 13, true, (ap_q_mode)5, (ap_o_mode)3, 0>' ().
@@ -124,9 +127,7 @@ INFO: [XFORM 203-603] Inlining function 'hls::filter2d_kernel::apply<unsigned ch
 INFO: [XFORM 203-603] Inlining function 'hls::filter_opr<hls::filter2d_kernel, hls::BORDER_DEFAULT>::filter<0, 0, ap_int<8>, int, 720, 1280, 3, 3>' into 'hls::Filter2D<hls::BORDER_DEFAULT, 0, 0, ap_int<8>, int, 720, 1280, 3, 3>' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277).
 INFO: [XFORM 203-603] Inlining function 'hls::kernel_addWeighted::apply<unsigned char, unsigned char, unsigned char, double>' into 'hls::arithm_pro<hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361).
 INFO: [XFORM 203-603] Inlining function 'hls::kernel_CvtColor<HLS_GRAY2RGB, unsigned char, unsigned char>::apply<1, 3>' into 'hls::CvtColor<HLS_GRAY2RGB, 0, 4096, 720, 1280>' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1952).
-INFO: [XFORM 203-603] Inlining function 'hls::AXISetBitFields<24, unsigned char>.1' into 'hls::AXISetBitFields<24, unsigned char>' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_axi_io.h:100).
-INFO: [XFORM 203-603] Inlining function 'hls::AXISetBitFields<24, unsigned char>' into 'hls::Mat2AXIvideo<24, 720, 1280, 4096>' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:143).
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:05 ; elapsed = 00:00:20 . Memory (MB): peak = 356.367 ; gain = 298.648
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:05 ; elapsed = 00:00:22 . Memory (MB): peak = 357.098 ; gain = 300.070
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO: [XFORM 203-602] Inlining function 'hls::sr_cast_class<ap_uint<8> >::operator()<35, 13, (ap_q_mode)5, (ap_o_mode)3>' into 'hls::sr_cast<unsigned char, ap_fixed<35, 13, (ap_q_mode)5, (ap_o_mode)3, 0> >' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500) automatically.
 INFO: [XFORM 203-602] Inlining function 'hls::kernel_CvtColor<HLS_BGR2GRAY, unsigned char, unsigned char>::apply<3, 1>' into 'hls::CvtColor<HLS_BGR2GRAY, 4096, 0, 720, 1280>' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1952) automatically.
@@ -147,7 +148,7 @@ INFO: [XFORM 203-602] Inlining function 'hls::sr_cast_class<ap_uint<8> >::operat
 INFO: [XFORM 203-602] Inlining function 'hls::sr_cast<unsigned char, unsigned char>' into 'hls::CvtColor<HLS_GRAY2RGB, 0, 4096, 720, 1280>' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1534->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1952) automatically.
 WARNING: [SYNCHK 200-23] C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429: variable-indexed range selection may cause suboptimal QoR.
 INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:06 ; elapsed = 00:00:22 . Memory (MB): peak = 408.191 ; gain = 350.473
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:06 ; elapsed = 00:00:23 . Memory (MB): peak = 407.953 ; gain = 350.926
 WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'img_5.data_stream.V' (SobelVideoWorking/a.cpp:16).
 WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'img_2a.data_stream.V' (SobelVideoWorking/a.cpp:12).
 WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'img_2b.data_stream.V' (SobelVideoWorking/a.cpp:13).
@@ -209,10 +210,10 @@ INFO: [XFORM 203-102] Automatically partitioning streamed array 'img_3.data_stre
 INFO: [XFORM 203-102] Automatically partitioning streamed array 'img_5.data_stream.V' (SobelVideoWorking/a.cpp:16) .
 INFO: [XFORM 203-102] Automatically partitioning streamed array 'img_2a.data_stream.V' (SobelVideoWorking/a.cpp:12) .
 INFO: [XFORM 203-102] Automatically partitioning streamed array 'img_2b.data_stream.V' (SobelVideoWorking/a.cpp:13) .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'img_0.data_stream.V' (SobelVideoWorking/a.cpp:9) .
 INFO: [XFORM 203-102] Automatically partitioning streamed array 'img_6.data_stream.V' (SobelVideoWorking/a.cpp:17) .
 INFO: [XFORM 203-102] Automatically partitioning streamed array 'img_1.data_stream.V' (SobelVideoWorking/a.cpp:10) .
 INFO: [XFORM 203-102] Automatically partitioning streamed array 'img_2.data_stream.V' (SobelVideoWorking/a.cpp:11) .
-INFO: [XFORM 203-102] Automatically partitioning streamed array 'img_0.data_stream.V' (SobelVideoWorking/a.cpp:9) .
 INFO: [XFORM 203-101] Partitioning array 's1.val' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:351) in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 's2.val' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:352) in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'd.val' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:353) in dimension 1 completely.
@@ -246,10 +247,10 @@ INFO: [XFORM 203-101] Partitioning array 'img_3.data_stream.V' (SobelVideoWorkin
 INFO: [XFORM 203-101] Partitioning array 'img_5.data_stream.V' (SobelVideoWorking/a.cpp:16) in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'img_2a.data_stream.V' (SobelVideoWorking/a.cpp:12) in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'img_2b.data_stream.V' (SobelVideoWorking/a.cpp:13) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'img_0.data_stream.V' (SobelVideoWorking/a.cpp:9) in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'img_6.data_stream.V' (SobelVideoWorking/a.cpp:17) in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'img_1.data_stream.V' (SobelVideoWorking/a.cpp:10) in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'img_2.data_stream.V' (SobelVideoWorking/a.cpp:11) in dimension 1 completely.
-INFO: [XFORM 203-101] Partitioning array 'img_0.data_stream.V' (SobelVideoWorking/a.cpp:9) in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'kernel.val.V'  in dimension 2 completely.
 INFO: [XFORM 203-101] Partitioning array 'kernel.val.V210'  in dimension 2 completely.
 INFO: [XFORM 203-101] Partitioning array 'kernel.val.V211'  in dimension 2 completely.
@@ -285,25 +286,18 @@ INFO: [XFORM 203-602] Inlining function 'hls::arithm_pro<hls::kernel_addWeighted
 INFO: [XFORM 203-602] Inlining function 'hls::sr_cast_class<ap_uint<8> >::operator()<8>' into 'hls::sr_cast_class<ap_uint<8> >::operator()' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:432) automatically.
 INFO: [XFORM 203-602] Inlining function 'hls::sr_cast_class<ap_uint<8> >::operator()' into 'hls::sr_cast<unsigned char, unsigned char>' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500) automatically.
 INFO: [XFORM 203-602] Inlining function 'hls::sr_cast<unsigned char, unsigned char>' into 'hls::CvtColor<HLS_GRAY2RGB, 0, 4096, 720, 1280>' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1534->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1952) automatically.
-WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 1280 for loop 'loop_width' in function 'hls::Mat2AXIvideo<24, 720, 1280, 4096>'.
-WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 720 for loop 'loop_height' in function 'hls::Mat2AXIvideo<24, 720, 1280, 4096>'.
 WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 1280 for loop 'loop_width' in function 'hls::Duplicate<720, 1280, 0, 0>'.
 WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 720 for loop 'loop_height' in function 'hls::Duplicate<720, 1280, 0, 0>'.
 WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 1280 for loop 'loop_width' in function 'hls::CvtColor<HLS_GRAY2RGB, 0, 4096, 720, 1280>'.
 WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 720 for loop 'loop_height' in function 'hls::CvtColor<HLS_GRAY2RGB, 0, 4096, 720, 1280>'.
 WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 1280 for loop 'loop_width' in function 'hls::AddWeighted<720, 1280, 0, 0, 0, double>'.
 WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 720 for loop 'loop_height' in function 'hls::AddWeighted<720, 1280, 0, 0, 0, double>'.
-INFO: [XFORM 203-712] Applying dataflow to function 'Sobel_filter', detected/extracted 10 process function(s): 
-	 'Block__proc'
-	 'hls::AXIvideo2Mat<24, 720, 1280, 4096>'
-	 'hls::CvtColor<HLS_BGR2GRAY, 4096, 0, 720, 1280>'
-	 'hls::GaussianBlur<3, 3, 0, 0, 720, 1280>'
-	 'hls::Duplicate<720, 1280, 0, 0>'
-	 'hls::Sobel<1, 0, 3, 0, 0, 720, 1280, 720, 1280>'
-	 'hls::Sobel<0, 1, 3, 0, 0, 720, 1280, 720, 1280>'
-	 'hls::AddWeighted<720, 1280, 0, 0, 0, double>'
-	 'hls::CvtColor<HLS_GRAY2RGB, 0, 4096, 720, 1280>'
+INFO: [XFORM 203-712] Applying dataflow to function 'Block__proc303304', detected/extracted 1 process function(s): 
 	 'hls::Mat2AXIvideo<24, 720, 1280, 4096>'.
+INFO: [XFORM 203-712] Applying dataflow to function 'Sobel_filter', detected/extracted 3 process function(s): 
+	 'Block__proc466'
+	 'hls::AXIvideo2Mat<24, 720, 1280, 4096>'
+	 'Block__proc303304'.
 WARNING: [XFORM 203-561] Updating loop lower bound from 10 to 1282 for loop 'loop_width' in function 'hls::Filter2D<hls::BORDER_DEFAULT, 0, 0, ap_int<8>, int, 720, 1280, 3, 3>'.
 WARNING: [XFORM 203-561] Updating loop upper bound from 723 to 722 for loop 'loop_height' in function 'hls::Filter2D<hls::BORDER_DEFAULT, 0, 0, ap_int<8>, int, 720, 1280, 3, 3>'.
 WARNING: [XFORM 203-561] Updating loop lower bound from 9 to 722 for loop 'loop_height' in function 'hls::Filter2D<hls::BORDER_DEFAULT, 0, 0, ap_int<8>, int, 720, 1280, 3, 3>'.
@@ -320,7 +314,7 @@ INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (C:/Xilinx/Viv
 INFO: [XFORM 203-602] Inlining function 'hls::sr_cast_class<ap_uint<8> >::operator().1' into 'hls::AddWeighted<720, 1280, 0, 0, 0, double>' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853) automatically.
 INFO: [XFORM 203-11] Balancing expressions in function 'hls::Filter2D<hls::BORDER_DEFAULT, 0, 0, ap_int<8>, int, 720, 1280, 3, 3>' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1269)...11 expression(s) balanced.
 INFO: [XFORM 203-11] Balancing expressions in function 'hls::Filter2D<hls::BORDER_DEFAULT, 0, 0, ap_fixed<16, 2, (ap_q_mode)0, (ap_o_mode)3, 0>, int, 720, 1280, 3, 3>' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:118:33)...4 expression(s) balanced.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:09 ; elapsed = 00:00:26 . Memory (MB): peak = 524.809 ; gain = 467.090
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:10 ; elapsed = 00:00:29 . Memory (MB): peak = 524.137 ; gain = 467.109
 WARNING: [XFORM 203-631] Renaming function 'hls::Sobel<1, 0, 3, 0, 0, 720, 1280, 720, 1280>' to 'Sobel' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:2591:1)
 WARNING: [XFORM 203-631] Renaming function 'hls::Sobel<0, 1, 3, 0, 0, 720, 1280, 720, 1280>' to 'Sobel.1' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:2591:1)
 WARNING: [XFORM 203-631] Renaming function 'hls::Mat2AXIvideo<24, 720, 1280, 4096>' to 'Mat2AXIvideo' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:78:50)
@@ -335,28 +329,29 @@ WARNING: [XFORM 203-631] Renaming function 'hls::AXIvideo2Mat<24, 720, 1280, 409
 WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[3]' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
 WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[4]' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
 WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[5]' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[4]' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
 WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[3]' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
 WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[5]' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[4]' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:11 ; elapsed = 00:00:27 . Memory (MB): peak = 648.898 ; gain = 591.180
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:12 ; elapsed = 00:00:31 . Memory (MB): peak = 662.297 ; gain = 605.270
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'Sobel_filter' ...
-WARNING: [SYN 201-103] Legalizing function name 'Block__proc' to 'Block_proc'.
+WARNING: [SYN 201-103] Legalizing function name 'Block__proc466' to 'Block_proc466'.
 WARNING: [SYN 201-103] Legalizing function name 'CvtColor.1' to 'CvtColor_1'.
 WARNING: [SYN 201-103] Legalizing function name 'Filter2D.1' to 'Filter2D_1'.
 WARNING: [SYN 201-103] Legalizing function name 'Sobel.1' to 'Sobel_1'.
+WARNING: [SYN 201-103] Legalizing function name 'Block__proc303304' to 'Block_proc303304'.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'Block_proc' 
+INFO: [HLS 200-42] -- Implementing module 'Block_proc466' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 27.463 seconds; current allocated memory: 578.911 MB.
+INFO: [HLS 200-111]  Elapsed time: 30.972 seconds; current allocated memory: 589.031 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.114 seconds; current allocated memory: 578.965 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.129 seconds; current allocated memory: 589.128 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'AXIvideo2Mat' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -368,7 +363,7 @@ INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
 INFO: [SCHED 204-61] Pipelining loop 'loop_wait_for_eol'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.349 seconds; current allocated memory: 579.277 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.376 seconds; current allocated memory: 589.442 MB.
 WARNING: [HLS 200-433] Loop - loop_wait_for_start has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop.
 INFO: [HLS 200-434] Only 3 loops out of a total 4 loops have been pipelined in this design.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
@@ -376,7 +371,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.176 seconds; current allocated memory: 579.667 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.191 seconds; current allocated memory: 589.832 MB.
 WARNING: [HLS 200-433] Loop - loop_wait_for_start has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'CvtColor_1' 
@@ -390,13 +385,13 @@ WARNING: [SCHED 204-21] The critical path consists of the following:
 	'add' operation ('__Val2__', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1477->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1514->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1952) (3.82 ns)
 	'add' operation ('r.V', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1477->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1514->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1952) (3.82 ns)
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.362 seconds; current allocated memory: 579.942 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.367 seconds; current allocated memory: 590.107 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.152 seconds; current allocated memory: 580.205 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.164 seconds; current allocated memory: 590.371 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'Filter2D_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -409,25 +404,25 @@ WARNING: [SCHED 204-21] The critical path consists of the following:
 	'add' operation ('tmp5', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:288->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:301->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:512->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277) (3.82 ns)
 	'add' operation ('op.V', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:288->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:301->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:512->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277) (2.49 ns)
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.345 seconds; current allocated memory: 581.130 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.36 seconds; current allocated memory: 591.311 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.257 seconds; current allocated memory: 581.826 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.27 seconds; current allocated memory: 592.007 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'GaussianBlur' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.282 seconds; current allocated memory: 581.979 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.298 seconds; current allocated memory: 592.144 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.159 seconds; current allocated memory: 582.024 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.151 seconds; current allocated memory: 592.190 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'Duplicate' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -435,13 +430,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'loop_width'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.278 seconds; current allocated memory: 582.217 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.295 seconds; current allocated memory: 592.383 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.139 seconds; current allocated memory: 582.336 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.147 seconds; current allocated memory: 592.502 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'Filter2D' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -455,37 +450,37 @@ WARNING: [SCHED 204-21] The critical path consists of the following:
 	'add' operation ('tmp_38', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:288->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:301->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:512->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277) (0 ns)
 	'add' operation ('tmp6', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:409->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:302->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:512->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277) (3.68 ns)
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.336 seconds; current allocated memory: 583.208 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.345 seconds; current allocated memory: 593.380 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.292 seconds; current allocated memory: 583.895 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.268 seconds; current allocated memory: 594.060 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'Sobel' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.688 seconds; current allocated memory: 584.013 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.307 seconds; current allocated memory: 594.195 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.28 seconds; current allocated memory: 584.105 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.148 seconds; current allocated memory: 594.286 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'Sobel_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.188 seconds; current allocated memory: 584.192 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.191 seconds; current allocated memory: 594.373 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.144 seconds; current allocated memory: 584.247 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.147 seconds; current allocated memory: 594.428 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'AddWeighted' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -493,13 +488,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'loop_width'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 30.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.374 seconds; current allocated memory: 585.280 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.376 seconds; current allocated memory: 595.461 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.277 seconds; current allocated memory: 585.937 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.291 seconds; current allocated memory: 596.103 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'CvtColor' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -507,13 +502,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'loop_width'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.414 seconds; current allocated memory: 586.204 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.427 seconds; current allocated memory: 596.369 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.143 seconds; current allocated memory: 586.370 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.151 seconds; current allocated memory: 596.536 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'Mat2AXIvideo' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -521,35 +516,47 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'loop_width'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.301 seconds; current allocated memory: 586.516 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.296 seconds; current allocated memory: 596.693 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.149 seconds; current allocated memory: 586.683 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.161 seconds; current allocated memory: 596.897 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_proc303304' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.191 seconds; current allocated memory: 597.091 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.582 seconds; current allocated memory: 597.993 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'Sobel_filter' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.164 seconds; current allocated memory: 586.852 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.437 seconds; current allocated memory: 598.460 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.639 seconds; current allocated memory: 587.886 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.342 seconds; current allocated memory: 598.965 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'Block_proc' 
+INFO: [HLS 200-10] -- Generating RTL for module 'Block_proc466' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_proc'.
-INFO: [HLS 200-111]  Elapsed time: 0.42 seconds; current allocated memory: 588.342 MB.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_proc466'.
+INFO: [HLS 200-111]  Elapsed time: 0.427 seconds; current allocated memory: 599.427 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'AXIvideo2Mat' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'AXIvideo2Mat'.
-INFO: [HLS 200-111]  Elapsed time: 0.188 seconds; current allocated memory: 589.426 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.209 seconds; current allocated memory: 600.509 MB.
 WARNING: [HLS 200-433] Loop - loop_wait_for_start has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop.
 WARNING: [HLS 200-433] Loop - loop_wait_for_start has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop.
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -562,7 +569,7 @@ INFO: [RTGEN 206-100] Generating core module 'Sobel_filter_mac_cud': 1 instance(
 INFO: [RTGEN 206-100] Generating core module 'Sobel_filter_mac_dEe': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'Sobel_filter_mul_bkb': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'CvtColor_1'.
-INFO: [HLS 200-111]  Elapsed time: 0.374 seconds; current allocated memory: 589.932 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.408 seconds; current allocated memory: 601.041 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'Filter2D_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -580,17 +587,17 @@ INFO: [RTGEN 206-100] Generating core module 'Sobel_filter_mac_lbW': 1 instance(
 INFO: [RTGEN 206-100] Generating core module 'Sobel_filter_mul_ibs': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'Sobel_filter_mux_hbi': 6 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'Filter2D_1'.
-INFO: [HLS 200-111]  Elapsed time: 0.417 seconds; current allocated memory: 591.419 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.448 seconds; current allocated memory: 602.490 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'GaussianBlur' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'GaussianBlur'.
-INFO: [HLS 200-111]  Elapsed time: 0.615 seconds; current allocated memory: 592.006 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.632 seconds; current allocated memory: 603.062 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'Duplicate' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'Duplicate'.
-INFO: [HLS 200-111]  Elapsed time: 0.266 seconds; current allocated memory: 592.370 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.258 seconds; current allocated memory: 603.426 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'Filter2D' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -603,17 +610,17 @@ INFO: [RTGEN 206-100] Generating core module 'Sobel_filter_mac_pcA': 1 instance(
 INFO: [RTGEN 206-100] Generating core module 'Sobel_filter_mac_qcK': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'Sobel_filter_mux_hbi': 6 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'Filter2D'.
-INFO: [HLS 200-111]  Elapsed time: 0.335 seconds; current allocated memory: 593.718 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.374 seconds; current allocated memory: 604.796 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'Sobel' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'Sobel'.
-INFO: [HLS 200-111]  Elapsed time: 0.62 seconds; current allocated memory: 594.286 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.666 seconds; current allocated memory: 605.328 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'Sobel_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'Sobel_1'.
-INFO: [HLS 200-111]  Elapsed time: 0.251 seconds; current allocated memory: 594.553 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.266 seconds; current allocated memory: 605.596 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'AddWeighted' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -624,17 +631,27 @@ INFO: [RTGEN 206-100] Generating core module 'Sobel_filter_daddrcU': 2 instance(
 INFO: [RTGEN 206-100] Generating core module 'Sobel_filter_dmulsc4': 2 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'Sobel_filter_sitotde': 2 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'AddWeighted'.
-INFO: [HLS 200-111]  Elapsed time: 0.359 seconds; current allocated memory: 596.044 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.379 seconds; current allocated memory: 607.088 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'CvtColor' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'CvtColor'.
-INFO: [HLS 200-111]  Elapsed time: 0.703 seconds; current allocated memory: 596.723 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.705 seconds; current allocated memory: 607.754 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'Mat2AXIvideo' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'Mat2AXIvideo'.
-INFO: [HLS 200-111]  Elapsed time: 0.26 seconds; current allocated memory: 597.512 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.285 seconds; current allocated memory: 608.610 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Block_proc303304' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'start_for_Duplicate_U0' to 'start_for_Duplicaudo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_GaussianBlur_U0' to 'start_for_Gaussiavdy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_Sobel_1_U0' to 'start_for_Sobel_1wdI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_AddWeighted_U0' to 'start_for_AddWeigxdS' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_CvtColor_U0' to 'start_for_CvtColoyd2' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_proc303304'.
+INFO: [HLS 200-111]  Elapsed time: 0.387 seconds; current allocated memory: 609.618 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'Sobel_filter' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -652,24 +669,13 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'Sobel_filter/OUTPUT_STREAM
 INFO: [RTGEN 206-500] Setting interface mode on port 'Sobel_filter/OUTPUT_STREAM_V_last_V' to 'axis' (register, both mode).
 INFO: [RTGEN 206-500] Setting interface mode on port 'Sobel_filter/OUTPUT_STREAM_V_id_V' to 'axis' (register, both mode).
 INFO: [RTGEN 206-500] Setting interface mode on port 'Sobel_filter/OUTPUT_STREAM_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Sobel_filter/enable' to 'ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'Sobel_filter' to 'ap_ctrl_hs'.
-INFO: [SYN 201-210] Renamed object name 'start_for_CvtColor_1_U0' to 'start_for_CvtColoudo' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'start_for_GaussianBlur_U0' to 'start_for_Gaussiavdy' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'start_for_Duplicate_U0' to 'start_for_DuplicawdI' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'start_for_Sobel_1_U0' to 'start_for_Sobel_1xdS' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'start_for_AddWeighted_U0' to 'start_for_AddWeigyd2' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'start_for_CvtColor_U0' to 'start_for_CvtColozec' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'start_for_Mat2AXIvideo_U0' to 'start_for_Mat2AXIAem' due to the length limit 20
+WARNING: [RTGEN 206-101] RTL name 'fifo_w8_d2_A' is changed to 'fifo_w8_d2_A_x' due to conflict.
+INFO: [SYN 201-210] Renamed object name 'start_for_Block_proc303304_U0' to 'start_for_Block_pzec' due to the length limit 20
 INFO: [RTGEN 206-100] Finished creating RTL model for 'Sobel_filter'.
-INFO: [HLS 200-111]  Elapsed time: 0.539 seconds; current allocated memory: 598.690 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.84 seconds; current allocated memory: 610.717 MB.
 INFO: [RTMG 210-278] Implementing memory 'Filter2D_1_k_buf_eOg_ram (RAM)' using block RAMs.
-INFO: [RTMG 210-285] Implementing FIFO 'img_0_rows_V_c_U(fifo_w11_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'img_0_cols_V_c_U(fifo_w12_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'img_0_data_stream_0_U(fifo_w8_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'img_0_data_stream_1_U(fifo_w8_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'img_0_data_stream_2_U(fifo_w8_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'img_0_rows_V_c20_U(fifo_w11_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'img_0_cols_V_c21_U(fifo_w12_d2_A)' using Shift Registers.
 INFO: [RTMG 210-285] Implementing FIFO 'img_1_data_stream_0_U(fifo_w8_d2_A)' using Shift Registers.
 INFO: [RTMG 210-285] Implementing FIFO 'img_2_data_stream_0_U(fifo_w8_d2_A)' using Shift Registers.
 INFO: [RTMG 210-285] Implementing FIFO 'img_2a_data_stream_0_U(fifo_w8_d2_A)' using Shift Registers.
@@ -680,16 +686,25 @@ INFO: [RTMG 210-285] Implementing FIFO 'img_5_data_stream_0_U(fifo_w8_d2_A)' usi
 INFO: [RTMG 210-285] Implementing FIFO 'img_6_data_stream_0_U(fifo_w8_d2_A)' using Shift Registers.
 INFO: [RTMG 210-285] Implementing FIFO 'img_6_data_stream_1_U(fifo_w8_d2_A)' using Shift Registers.
 INFO: [RTMG 210-285] Implementing FIFO 'img_6_data_stream_2_U(fifo_w8_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'start_for_CvtColoudo_U(start_for_CvtColoudo)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_Duplicaudo_U(start_for_Duplicaudo)' using Shift Registers.
 INFO: [RTMG 210-285] Implementing FIFO 'start_for_Gaussiavdy_U(start_for_Gaussiavdy)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'start_for_DuplicawdI_U(start_for_DuplicawdI)' using Shift Registers.
 INFO: [RTMG 210-285] Implementing FIFO 'start_for_Sobel_U0_U(start_for_Sobel_U0)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'start_for_Sobel_1xdS_U(start_for_Sobel_1xdS)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'start_for_AddWeigyd2_U(start_for_AddWeigyd2)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'start_for_CvtColozec_U(start_for_CvtColozec)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'start_for_Mat2AXIAem_U(start_for_Mat2AXIAem)' using Shift Registers.
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:22 ; elapsed = 00:00:44 . Memory (MB): peak = 689.547 ; gain = 631.828
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_Sobel_1wdI_U(start_for_Sobel_1wdI)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_AddWeigxdS_U(start_for_AddWeigxdS)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_CvtColoyd2_U(start_for_CvtColoyd2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_0_rows_V_c_U(fifo_w11_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_0_cols_V_c_U(fifo_w12_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_6_rows_V_c_U(fifo_w11_d3_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_6_cols_V_c_U(fifo_w12_d3_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'enable_c_U(fifo_w8_d3_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_0_data_stream_0_U(fifo_w8_d2_A_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_0_data_stream_1_U(fifo_w8_d2_A_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_0_data_stream_2_U(fifo_w8_d2_A_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_0_rows_V_c25_U(fifo_w11_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_0_cols_V_c26_U(fifo_w12_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_Block_pzec_U(start_for_Block_pzec)' using Shift Registers.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:23 ; elapsed = 00:00:49 . Memory (MB): peak = 702.582 ; gain = 645.555
 INFO: [SYSC 207-301] Generating SystemC RTL for Sobel_filter.
 INFO: [VHDL 208-304] Generating VHDL RTL for Sobel_filter.
 INFO: [VLOG 209-307] Generating Verilog RTL for Sobel_filter.
-INFO: [HLS 200-112] Total elapsed time: 43.93 seconds; peak allocated memory: 598.690 MB.
+INFO: [HLS 200-112] Total elapsed time: 49.14 seconds; peak allocated memory: 610.717 MB.

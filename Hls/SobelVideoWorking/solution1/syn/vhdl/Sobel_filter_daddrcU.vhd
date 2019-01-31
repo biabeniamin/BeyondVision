@@ -10,7 +10,7 @@ use ieee.std_logic_1164.all;
 
 entity Sobel_filter_daddrcU is
     generic (
-        ID         : integer := 74;
+        ID         : integer := 78;
         NUM_STAGE  : integer := 6;
         din0_WIDTH : integer := 64;
         din1_WIDTH : integer := 64;

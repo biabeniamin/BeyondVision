@@ -567,7 +567,7 @@
             <Obj>
               <type>0</type>
               <id>32</id>
-              <name>tmp_88</name>
+              <name>tmp_92</name>
               <fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>624</lineNumber>
@@ -2274,7 +2274,7 @@
         <item_version>0</item_version>
       </dp_memory_resource>
       <dp_multiplexer_resource>
-        <count>10</count>
+        <count>9</count>
         <item_version>0</item_version>
         <item>
           <first>ap_NS_fsm</first>
@@ -2483,32 +2483,9 @@
             </item>
           </second>
         </item>
-        <item>
-          <first>real_start</first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0Size)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>(1Bits)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(2Count)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>9</second>
-            </item>
-          </second>
-        </item>
       </dp_multiplexer_resource>
       <dp_register_resource>
-        <count>9</count>
+        <count>8</count>
         <item_version>0</item_version>
         <item>
           <first>ap_CS_fsm</first>
@@ -2659,25 +2636,6 @@
             <item>
               <first>FF</first>
               <second>11</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>start_once_reg</first>
-          <second>
-            <count>3</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(Bits)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(Consts)</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>1</second>
             </item>
           </second>
         </item>
@@ -2932,7 +2890,7 @@
         <pipe_depth>2</pipe_depth>
       </item>
       <item class_id_reference="50" object_id="_133">
-        <region_name>hls_label_0</region_name>
+        <region_name>hls_label_2</region_name>
         <basic_blocks>
           <count>1</count>
           <item_version>0</item_version>
@@ -3122,7 +3080,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_88_read_fu_112</first>
+        <first>tmp_92_read_fu_112</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

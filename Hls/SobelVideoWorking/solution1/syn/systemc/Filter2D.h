@@ -52,14 +52,14 @@ struct Filter2D : public sc_module {
     Filter2D_1_k_buf_eOg* k_buf_0_val_3_U;
     Filter2D_1_k_buf_eOg* k_buf_0_val_4_U;
     Filter2D_1_k_buf_eOg* k_buf_0_val_5_U;
-    Sobel_filter_mux_hbi<1,1,8,8,8,2,8>* Sobel_filter_mux_hbi_U52;
-    Sobel_filter_mux_hbi<1,1,8,8,8,2,8>* Sobel_filter_mux_hbi_U53;
-    Sobel_filter_mux_hbi<1,1,8,8,8,2,8>* Sobel_filter_mux_hbi_U54;
-    Sobel_filter_mux_hbi<1,1,8,8,8,2,8>* Sobel_filter_mux_hbi_U55;
     Sobel_filter_mux_hbi<1,1,8,8,8,2,8>* Sobel_filter_mux_hbi_U56;
     Sobel_filter_mux_hbi<1,1,8,8,8,2,8>* Sobel_filter_mux_hbi_U57;
-    Sobel_filter_mac_pcA<1,1,2,8,9,11>* Sobel_filter_mac_pcA_U58;
-    Sobel_filter_mac_qcK<1,1,2,8,11,11>* Sobel_filter_mac_qcK_U59;
+    Sobel_filter_mux_hbi<1,1,8,8,8,2,8>* Sobel_filter_mux_hbi_U58;
+    Sobel_filter_mux_hbi<1,1,8,8,8,2,8>* Sobel_filter_mux_hbi_U59;
+    Sobel_filter_mux_hbi<1,1,8,8,8,2,8>* Sobel_filter_mux_hbi_U60;
+    Sobel_filter_mux_hbi<1,1,8,8,8,2,8>* Sobel_filter_mux_hbi_U61;
+    Sobel_filter_mac_pcA<1,1,2,8,9,11>* Sobel_filter_mac_pcA_U62;
+    Sobel_filter_mac_qcK<1,1,2,8,11,11>* Sobel_filter_mac_qcK_U63;
     sc_signal< sc_lv<4> > ap_CS_fsm;
     sc_signal< sc_logic > ap_CS_fsm_state1;
     sc_signal< sc_logic > p_src_data_stream_V_blk_n;
@@ -295,7 +295,7 @@ struct Filter2D : public sc_module {
     sc_signal< sc_lv<1> > not_i_i_i_fu_1216_p2;
     sc_signal< sc_lv<1> > tmp_i_i_fu_1210_p2;
     sc_signal< sc_lv<1> > overflow_fu_1222_p2;
-    sc_signal< sc_lv<1> > tmp_i_i_91_fu_1236_p2;
+    sc_signal< sc_lv<1> > tmp_i_i_84_fu_1236_p2;
     sc_signal< sc_lv<8> > p_mux_i_i_cast_fu_1228_p3;
     sc_signal< sc_lv<8> > p_Val2_2_fu_1195_p2;
     sc_signal< sc_lv<2> > grp_fu_1250_p0;
@@ -532,7 +532,7 @@ struct Filter2D : public sc_module {
     void thread_tmp_75_fu_1099_p1();
     void thread_tmp_76_fu_1112_p1();
     void thread_tmp_7_fu_434_p2();
-    void thread_tmp_i_i_91_fu_1236_p2();
+    void thread_tmp_i_i_84_fu_1236_p2();
     void thread_tmp_i_i_fu_1210_p2();
     void thread_tmp_s_fu_384_p2();
     void thread_x_fu_792_p3();

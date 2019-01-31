@@ -369,7 +369,7 @@ Sobel_filter_mux_hbi #(
     .din2_WIDTH( 8 ),
     .din3_WIDTH( 2 ),
     .dout_WIDTH( 8 ))
-Sobel_filter_mux_hbi_U29(
+Sobel_filter_mux_hbi_U33(
     .din0(right_border_buf_0_s_fu_190),
     .din1(right_border_buf_0_1_fu_194),
     .din2(8'd0),
@@ -385,7 +385,7 @@ Sobel_filter_mux_hbi #(
     .din2_WIDTH( 8 ),
     .din3_WIDTH( 2 ),
     .dout_WIDTH( 8 ))
-Sobel_filter_mux_hbi_U30(
+Sobel_filter_mux_hbi_U34(
     .din0(right_border_buf_0_3_fu_202),
     .din1(right_border_buf_0_4_fu_206),
     .din2(8'd0),
@@ -401,7 +401,7 @@ Sobel_filter_mux_hbi #(
     .din2_WIDTH( 8 ),
     .din3_WIDTH( 2 ),
     .dout_WIDTH( 8 ))
-Sobel_filter_mux_hbi_U31(
+Sobel_filter_mux_hbi_U35(
     .din0(right_border_buf_0_5_fu_210),
     .din1(right_border_buf_0_2_fu_198),
     .din2(8'd0),
@@ -417,7 +417,7 @@ Sobel_filter_mux_hbi #(
     .din2_WIDTH( 8 ),
     .din3_WIDTH( 2 ),
     .dout_WIDTH( 8 ))
-Sobel_filter_mux_hbi_U32(
+Sobel_filter_mux_hbi_U36(
     .din0(col_buf_0_val_0_0_fu_805_p3),
     .din1(col_buf_0_val_1_0_fu_824_p3),
     .din2(col_buf_0_val_2_0_fu_843_p3),
@@ -433,7 +433,7 @@ Sobel_filter_mux_hbi #(
     .din2_WIDTH( 8 ),
     .din3_WIDTH( 2 ),
     .dout_WIDTH( 8 ))
-Sobel_filter_mux_hbi_U33(
+Sobel_filter_mux_hbi_U37(
     .din0(col_buf_0_val_0_0_fu_805_p3),
     .din1(col_buf_0_val_1_0_fu_824_p3),
     .din2(col_buf_0_val_2_0_fu_843_p3),
@@ -449,7 +449,7 @@ Sobel_filter_mux_hbi #(
     .din2_WIDTH( 8 ),
     .din3_WIDTH( 2 ),
     .dout_WIDTH( 8 ))
-Sobel_filter_mux_hbi_U34(
+Sobel_filter_mux_hbi_U38(
     .din0(col_buf_0_val_0_0_fu_805_p3),
     .din1(col_buf_0_val_1_0_fu_824_p3),
     .din2(col_buf_0_val_2_0_fu_843_p3),
@@ -463,7 +463,7 @@ Sobel_filter_mul_ibs #(
     .din0_WIDTH( 8 ),
     .din1_WIDTH( 14 ),
     .dout_WIDTH( 21 ))
-Sobel_filter_mul_ibs_U35(
+Sobel_filter_mul_ibs_U39(
     .din0(r_V_10_1_1_fu_1282_p0),
     .din1(r_V_10_1_1_fu_1282_p1),
     .dout(r_V_10_1_1_fu_1282_p2)
@@ -477,7 +477,7 @@ Sobel_filter_ama_jbC #(
     .din2_WIDTH( 11 ),
     .din3_WIDTH( 24 ),
     .dout_WIDTH( 25 ))
-Sobel_filter_ama_jbC_U36(
+Sobel_filter_ama_jbC_U40(
     .din0(grp_fu_1288_p0),
     .din1(grp_fu_1288_p1),
     .din2(grp_fu_1288_p2),
@@ -492,7 +492,7 @@ Sobel_filter_mac_kbM #(
     .din1_WIDTH( 11 ),
     .din2_WIDTH( 21 ),
     .dout_WIDTH( 21 ))
-Sobel_filter_mac_kbM_U37(
+Sobel_filter_mac_kbM_U41(
     .din0(grp_fu_1298_p0),
     .din1(grp_fu_1298_p1),
     .din2(r_V_10_1_1_reg_1515),
@@ -506,7 +506,7 @@ Sobel_filter_mac_lbW #(
     .din1_WIDTH( 11 ),
     .din2_WIDTH( 24 ),
     .dout_WIDTH( 25 ))
-Sobel_filter_mac_lbW_U38(
+Sobel_filter_mac_lbW_U42(
     .din0(grp_fu_1306_p0),
     .din1(grp_fu_1306_p1),
     .din2(grp_fu_1306_p2),

@@ -296,7 +296,7 @@
 					<Obj>
 						<type>0</type>
 						<id>17</id>
-						<name>i_i</name>
+						<name>i</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -330,7 +330,7 @@
 					<Obj>
 						<type>0</type>
 						<id>18</id>
-						<name>i_cast_cast_i</name>
+						<name>i_cast_cast</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>1947</lineNumber>
@@ -375,7 +375,7 @@
 					<Obj>
 						<type>0</type>
 						<id>19</id>
-						<name>tmp_i</name>
+						<name>tmp_s</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>1947</lineNumber>
@@ -421,7 +421,7 @@
 					<Obj>
 						<type>0</type>
 						<id>21</id>
-						<name>i</name>
+						<name>i_1</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>1947</lineNumber>
@@ -559,7 +559,7 @@
 					<Obj>
 						<type>0</type>
 						<id>28</id>
-						<name>j_i</name>
+						<name>j</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -593,7 +593,7 @@
 					<Obj>
 						<type>0</type>
 						<id>29</id>
-						<name>j_cast_cast_i</name>
+						<name>j_cast_cast</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>1948</lineNumber>
@@ -638,7 +638,7 @@
 					<Obj>
 						<type>0</type>
 						<id>30</id>
-						<name>tmp_72_i</name>
+						<name>tmp_39</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>1948</lineNumber>
@@ -684,7 +684,7 @@
 					<Obj>
 						<type>0</type>
 						<id>32</id>
-						<name>j</name>
+						<name>j_1</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>1948</lineNumber>
@@ -777,7 +777,7 @@
 					<Obj>
 						<type>0</type>
 						<id>40</id>
-						<name>tmp_84</name>
+						<name>tmp_88</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>624</lineNumber>
@@ -837,7 +837,7 @@
 					<Obj>
 						<type>0</type>
 						<id>41</id>
-						<name>tmp_85</name>
+						<name>tmp_89</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>624</lineNumber>
@@ -897,7 +897,7 @@
 					<Obj>
 						<type>0</type>
 						<id>42</id>
-						<name>tmp_86</name>
+						<name>tmp_90</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>624</lineNumber>
@@ -957,7 +957,7 @@
 					<Obj>
 						<type>0</type>
 						<id>44</id>
-						<name>OP2_V_i_cast_i</name>
+						<name>OP2_V_i_cast</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>1473</lineNumber>
@@ -1076,7 +1076,7 @@
 					<Obj>
 						<type>0</type>
 						<id>46</id>
-						<name>OP2_V_1_i_cast_i</name>
+						<name>OP2_V_1_i_cast</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>1477</lineNumber>
@@ -1135,7 +1135,7 @@
 					<Obj>
 						<type>0</type>
 						<id>47</id>
-						<name>r_V_3_i_i</name>
+						<name>r_V_3_i</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>1477</lineNumber>
@@ -1195,7 +1195,7 @@
 					<Obj>
 						<type>0</type>
 						<id>48</id>
-						<name>OP2_V_2_i_cast_i</name>
+						<name>OP2_V_2_i_cast</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>1477</lineNumber>
@@ -1254,7 +1254,7 @@
 					<Obj>
 						<type>0</type>
 						<id>49</id>
-						<name>r_V_4_i_i</name>
+						<name>r_V_4_i</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>1477</lineNumber>
@@ -1314,7 +1314,7 @@
 					<Obj>
 						<type>0</type>
 						<id>50</id>
-						<name>tmp1_i_cast_i</name>
+						<name>tmp1_i_cast</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>1477</lineNumber>
@@ -1433,7 +1433,7 @@
 					<Obj>
 						<type>0</type>
 						<id>52</id>
-						<name>tmp_i_cast_i</name>
+						<name>tmp_i_cast</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>1477</lineNumber>
@@ -1619,7 +1619,7 @@
 				</oprand_edges>
 				<opcode>partselect</opcode>
 				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isOnCriticalPath>1</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_delay>0.00</m_delay>
 			</item>
@@ -1628,7 +1628,7 @@
 					<Obj>
 						<type>0</type>
 						<id>55</id>
-						<name>tmp</name>
+						<name>tmp_84</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>409</lineNumber>
@@ -1703,7 +1703,7 @@
 					<Obj>
 						<type>0</type>
 						<id>56</id>
-						<name>tmp_1_i_i_i_i</name>
+						<name>tmp_1_i_i_i</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>409</lineNumber>
@@ -1776,7 +1776,7 @@
 					<Obj>
 						<type>0</type>
 						<id>57</id>
-						<name>tmp_81</name>
+						<name>tmp_85</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>409</lineNumber>
@@ -1925,7 +1925,7 @@
 					<Obj>
 						<type>0</type>
 						<id>59</id>
-						<name>tmp_82</name>
+						<name>tmp_86</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>409</lineNumber>
@@ -2000,7 +2000,7 @@
 					<Obj>
 						<type>0</type>
 						<id>60</id>
-						<name>p_Result_1_i_i_i_i_1</name>
+						<name>p_Result_1_i_i_i_n</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>409</lineNumber>
@@ -2375,13 +2375,27 @@
 						<type>0</type>
 						<id>73</id>
 						<name></name>
-						<fileName></fileName>
-						<fileDirectory></fileDirectory>
-						<lineNumber>0</lineNumber>
-						<contextFuncName></contextFuncName>
+						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</fileName>
+						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
+						<lineNumber>1956</lineNumber>
+						<contextFuncName>CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 720, 1280&amp;gt;</contextFuncName>
 						<inlineStackInfo>
-							<count>0</count>
+							<count>1</count>
 							<item_version>0</item_version>
+							<item>
+								<first>C:\Digilent19\Hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h</first>
+											<second>CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 720, 1280&amp;gt;</second>
+										</first>
+										<second>1956</second>
+									</item>
+								</second>
+							</item>
 						</inlineStackInfo>
 						<originalName></originalName>
 						<rtlName></rtlName>
@@ -2710,7 +2724,7 @@
 				<Obj>
 					<type>3</type>
 					<id>16</id>
-					<name>entry</name>
+					<name>ap_fixed_base.exit25.i.i</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -2812,7 +2826,7 @@
 				<Obj>
 					<type>3</type>
 					<id>69</id>
-					<name>operator&gt;&gt;.exit.i_ifconv</name>
+					<name>operator&gt;&gt;.exit_ifconv</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -2881,7 +2895,7 @@
 				<Obj>
 					<type>3</type>
 					<id>74</id>
-					<name>.exit</name>
+					<name></name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -4495,7 +4509,7 @@
 			<pipe_depth>5</pipe_depth>
 		</item>
 		<item class_id_reference="44" object_id="_231">
-			<region_name>hls_label_4</region_name>
+			<region_name>hls_label_6</region_name>
 			<basic_blocks>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4766,7 +4780,7 @@
 		<count>24</count>
 		<item_version>0</item_version>
 		<item class_id="49" tracking_level="0" version="0">
-			<first>OP2_V_1_i_cast_i_fu_261</first>
+			<first>OP2_V_1_i_cast_fu_261</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4774,7 +4788,7 @@
 			</second>
 		</item>
 		<item>
-			<first>OP2_V_2_i_cast_i_fu_255</first>
+			<first>OP2_V_2_i_cast_fu_255</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4782,7 +4796,7 @@
 			</second>
 		</item>
 		<item>
-			<first>OP2_V_i_cast_i_fu_258</first>
+			<first>OP2_V_i_cast_fu_258</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4809,15 +4823,7 @@
 			</second>
 		</item>
 		<item>
-			<first>i_cast_cast_i_fu_225</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>18</item>
-			</second>
-		</item>
-		<item>
-			<first>i_fu_234</first>
+			<first>i_1_fu_234</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4825,7 +4831,15 @@
 			</second>
 		</item>
 		<item>
-			<first>i_i_phi_fu_207</first>
+			<first>i_cast_cast_fu_225</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>18</item>
+			</second>
+		</item>
+		<item>
+			<first>i_phi_fu_207</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4833,15 +4847,7 @@
 			</second>
 		</item>
 		<item>
-			<first>j_cast_cast_i_fu_240</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>29</item>
-			</second>
-		</item>
-		<item>
-			<first>j_fu_249</first>
+			<first>j_1_fu_249</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4849,7 +4855,15 @@
 			</second>
 		</item>
 		<item>
-			<first>j_i_phi_fu_218</first>
+			<first>j_cast_cast_fu_240</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>29</item>
+			</second>
+		</item>
+		<item>
+			<first>j_phi_fu_218</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4865,7 +4879,7 @@
 			</second>
 		</item>
 		<item>
-			<first>p_Result_1_i_i_i_i_1_fu_306</first>
+			<first>p_Result_1_i_i_i_n_fu_306</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4897,7 +4911,7 @@
 			</second>
 		</item>
 		<item>
-			<first>r_V_4_i_i_fu_327</first>
+			<first>r_V_4_i_fu_327</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4905,7 +4919,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_1_i_i_i_i_fu_283</first>
+			<first>tmp_1_i_i_i_fu_283</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4913,7 +4927,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_72_i_fu_244</first>
+			<first>tmp_39_fu_244</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4921,23 +4935,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_81_fu_286</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>57</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_82_fu_298</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>59</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_fu_276</first>
+			<first>tmp_84_fu_276</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4945,7 +4943,23 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_i_cast_i_fu_264</first>
+			<first>tmp_85_fu_286</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>57</item>
+			</second>
+		</item>
+		<item>
+			<first>tmp_86_fu_298</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>59</item>
+			</second>
+		</item>
+		<item>
+			<first>tmp_i_cast_fu_264</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4953,7 +4967,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_i_fu_229</first>
+			<first>tmp_s_fu_229</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4993,7 +5007,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_84_read_fu_178</first>
+			<first>tmp_88_read_fu_178</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -5001,7 +5015,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_85_read_fu_184</first>
+			<first>tmp_89_read_fu_184</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -5009,7 +5023,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_86_read_fu_190</first>
+			<first>tmp_90_read_fu_190</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -5153,15 +5167,7 @@
 		<count>15</count>
 		<item_version>0</item_version>
 		<item>
-			<first>i_i_reg_203</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>17</item>
-			</second>
-		</item>
-		<item>
-			<first>i_reg_365</first>
+			<first>i_1_reg_365</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -5169,19 +5175,27 @@
 			</second>
 		</item>
 		<item>
-			<first>j_i_reg_214</first>
+			<first>i_reg_203</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>28</item>
+				<item>17</item>
 			</second>
 		</item>
 		<item>
-			<first>j_reg_374</first>
+			<first>j_1_reg_374</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
 				<item>32</item>
+			</second>
+		</item>
+		<item>
+			<first>j_reg_214</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>28</item>
 			</second>
 		</item>
 		<item>
@@ -5217,7 +5231,7 @@
 			</second>
 		</item>
 		<item>
-			<first>r_V_4_i_i_reg_394</first>
+			<first>r_V_4_i_reg_394</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -5225,7 +5239,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_72_i_reg_370</first>
+			<first>tmp_39_reg_370</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -5233,7 +5247,15 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_84_reg_379</first>
+			<first>tmp_84_reg_409</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>55</item>
+			</second>
+		</item>
+		<item>
+			<first>tmp_88_reg_379</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -5241,7 +5263,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_85_reg_384</first>
+			<first>tmp_89_reg_384</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -5249,7 +5271,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_86_reg_389</first>
+			<first>tmp_90_reg_389</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -5257,19 +5279,11 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_i_reg_361</first>
+			<first>tmp_s_reg_361</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
 				<item>19</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_reg_409</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>55</item>
 			</second>
 		</item>
 	</dp_regname_nodes>
@@ -5297,7 +5311,7 @@
 		<count>2</count>
 		<item_version>0</item_version>
 		<item>
-			<first>i_i_reg_203</first>
+			<first>i_reg_203</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -5305,7 +5319,7 @@
 			</second>
 		</item>
 		<item>
-			<first>j_i_reg_214</first>
+			<first>j_reg_214</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>

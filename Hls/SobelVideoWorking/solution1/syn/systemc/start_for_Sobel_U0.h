@@ -13,7 +13,7 @@ using namespace std;
 SC_MODULE(start_for_Sobel_U0) {
     static const unsigned int DATA_WIDTH = 1;
     static const unsigned int ADDR_WIDTH = 2;
-    static const unsigned int start_for_Sobel_U0_depth = 3;
+    static const unsigned int start_for_Sobel_U0_depth = 4;
     sc_core::sc_in_clk clk;
     sc_core::sc_in< sc_dt::sc_logic > reset;
     sc_core::sc_out< sc_dt::sc_logic > if_empty_n;

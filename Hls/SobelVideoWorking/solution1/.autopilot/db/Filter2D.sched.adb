@@ -11953,7 +11953,7 @@
 					<Obj>
 						<type>0</type>
 						<id>246</id>
-						<name>tmp_i_i_91</name>
+						<name>tmp_i_i_84</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>409</lineNumber>

@@ -315,7 +315,7 @@ architecture behav of Filter2D is
     signal not_i_i_i_fu_1216_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal tmp_i_i_fu_1210_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal overflow_fu_1222_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal tmp_i_i_91_fu_1236_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_i_i_84_fu_1236_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal p_mux_i_i_cast_fu_1228_p3 : STD_LOGIC_VECTOR (7 downto 0);
     signal p_Val2_2_fu_1195_p2 : STD_LOGIC_VECTOR (7 downto 0);
     signal grp_fu_1250_p0 : STD_LOGIC_VECTOR (1 downto 0);
@@ -452,7 +452,7 @@ begin
         we1 => k_buf_0_val_5_we1,
         d1 => k_buf_0_val_5_d1);
 
-    Sobel_filter_mux_hbi_U52 : component Sobel_filter_mux_hbi
+    Sobel_filter_mux_hbi_U56 : component Sobel_filter_mux_hbi
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -468,7 +468,7 @@ begin
         din3 => col_assign_3_t_fu_842_p2,
         dout => tmp_23_fu_847_p5);
 
-    Sobel_filter_mux_hbi_U53 : component Sobel_filter_mux_hbi
+    Sobel_filter_mux_hbi_U57 : component Sobel_filter_mux_hbi
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -484,7 +484,7 @@ begin
         din3 => col_assign_3_t_fu_842_p2,
         dout => tmp_24_fu_866_p5);
 
-    Sobel_filter_mux_hbi_U54 : component Sobel_filter_mux_hbi
+    Sobel_filter_mux_hbi_U58 : component Sobel_filter_mux_hbi
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -500,7 +500,7 @@ begin
         din3 => col_assign_3_t_fu_842_p2,
         dout => tmp_25_fu_885_p5);
 
-    Sobel_filter_mux_hbi_U55 : component Sobel_filter_mux_hbi
+    Sobel_filter_mux_hbi_U59 : component Sobel_filter_mux_hbi
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -516,7 +516,7 @@ begin
         din3 => row_assign_10_0_t_reg_1409,
         dout => tmp_26_fu_940_p5);
 
-    Sobel_filter_mux_hbi_U56 : component Sobel_filter_mux_hbi
+    Sobel_filter_mux_hbi_U60 : component Sobel_filter_mux_hbi
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -532,7 +532,7 @@ begin
         din3 => row_assign_10_1_t_reg_1414,
         dout => tmp_30_fu_958_p5);
 
-    Sobel_filter_mux_hbi_U57 : component Sobel_filter_mux_hbi
+    Sobel_filter_mux_hbi_U61 : component Sobel_filter_mux_hbi
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -548,7 +548,7 @@ begin
         din3 => row_assign_10_2_t_reg_1419,
         dout => tmp_34_fu_976_p5);
 
-    Sobel_filter_mac_pcA_U58 : component Sobel_filter_mac_pcA
+    Sobel_filter_mac_pcA_U62 : component Sobel_filter_mac_pcA
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -562,7 +562,7 @@ begin
         din2 => r_V_8_fu_1004_p2,
         dout => grp_fu_1250_p3);
 
-    Sobel_filter_mac_qcK_U59 : component Sobel_filter_mac_qcK
+    Sobel_filter_mac_qcK_U63 : component Sobel_filter_mac_qcK
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1180,7 +1180,7 @@ begin
 
     p_Val2_89_1_1_fu_1066_p2 <= std_logic_vector(signed(tmp_463_1_cast_cast_fu_1055_p1) + signed(p_Val2_89_0_2_cast_fu_1043_p1));
     p_Val2_s_fu_1242_p3 <= 
-        p_mux_i_i_cast_fu_1228_p3 when (tmp_i_i_91_fu_1236_p2(0) = '1') else 
+        p_mux_i_i_cast_fu_1228_p3 when (tmp_i_i_84_fu_1236_p2(0) = '1') else 
         p_Val2_2_fu_1195_p2;
     p_assign_1_fu_732_p2 <= std_logic_vector(unsigned(ap_const_lv12_1) - unsigned(t_V_2_cast_fu_660_p1));
     p_assign_2_fu_756_p2 <= std_logic_vector(signed(ap_const_lv12_9FE) - signed(p_p2_i_i_fu_738_p3));
@@ -1347,7 +1347,7 @@ begin
     tmp_75_fu_1099_p1 <= r_V_8_2_fu_1094_p2(8 - 1 downto 0);
     tmp_76_fu_1112_p1 <= r_V_8_2_1_fu_1107_p2(8 - 1 downto 0);
     tmp_7_fu_434_p2 <= std_logic_vector(signed(ap_const_lv11_7FF) + signed(t_V_cast_fu_368_p1));
-    tmp_i_i_91_fu_1236_p2 <= (overflow_fu_1222_p2 or isneg_fu_1183_p3);
+    tmp_i_i_84_fu_1236_p2 <= (overflow_fu_1222_p2 or isneg_fu_1183_p3);
     tmp_i_i_fu_1210_p2 <= (isneg_fu_1183_p3 xor ap_const_lv1_1);
     tmp_s_fu_384_p2 <= "1" when (unsigned(t_V_reg_322) < unsigned(ap_const_lv10_2D0)) else "0";
     x_fu_792_p3 <= 

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'Mat2AXIvideo'" level="0">
-<item name = "Date">Sun Jan 27 12:59:31 2019
+<item name = "Date">Thu Jan 31 19:14:53 2019
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">SobelVideoWorking</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 3.908, 1.25</column>
+<column name="ap_clk">10.00, 6.610, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">924481, 924481, 924481, 924481, none</column>
+<column name="">1, 924481, 1, 924481, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,8 +35,8 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- loop_height">924480, 924480, 1284, -, -, 720, no</column>
-<column name=" + loop_width">1281, 1281, 3, 1, 1, 1280, yes</column>
+<column name="- loop_height">0, 924480, 3 ~ 1284, -, -, 0 ~ 720, no</column>
+<column name=" + loop_width">0, 1281, 3, 1, 1, 0 ~ 1280, yes</column>
 </table>
 </item>
 </section>

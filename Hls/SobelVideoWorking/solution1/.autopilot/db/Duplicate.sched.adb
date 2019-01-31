@@ -1801,7 +1801,7 @@
 			<pipe_depth>2</pipe_depth>
 		</item>
 		<item class_id_reference="33" object_id="_80">
-			<region_name>hls_label_4</region_name>
+			<region_name>hls_label_6</region_name>
 			<basic_blocks>
 				<count>1</count>
 				<item_version>0</item_version>

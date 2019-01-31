@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'Filter2D'
 ================================================================
-* Date:           Sun Jan 27 12:59:34 2019
+* Date:           Thu Jan 31 19:14:57 2019
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        SobelVideoWorking
@@ -74,12 +74,12 @@
     +--------------------------+----------------------+---------+-------+---+----+
     |         Instance         |        Module        | BRAM_18K| DSP48E| FF| LUT|
     +--------------------------+----------------------+---------+-------+---+----+
-    |Sobel_filter_mux_hbi_U52  |Sobel_filter_mux_hbi  |        0|      0|  0|  15|
-    |Sobel_filter_mux_hbi_U53  |Sobel_filter_mux_hbi  |        0|      0|  0|  15|
-    |Sobel_filter_mux_hbi_U54  |Sobel_filter_mux_hbi  |        0|      0|  0|  15|
-    |Sobel_filter_mux_hbi_U55  |Sobel_filter_mux_hbi  |        0|      0|  0|  15|
     |Sobel_filter_mux_hbi_U56  |Sobel_filter_mux_hbi  |        0|      0|  0|  15|
     |Sobel_filter_mux_hbi_U57  |Sobel_filter_mux_hbi  |        0|      0|  0|  15|
+    |Sobel_filter_mux_hbi_U58  |Sobel_filter_mux_hbi  |        0|      0|  0|  15|
+    |Sobel_filter_mux_hbi_U59  |Sobel_filter_mux_hbi  |        0|      0|  0|  15|
+    |Sobel_filter_mux_hbi_U60  |Sobel_filter_mux_hbi  |        0|      0|  0|  15|
+    |Sobel_filter_mux_hbi_U61  |Sobel_filter_mux_hbi  |        0|      0|  0|  15|
     +--------------------------+----------------------+---------+-------+---+----+
     |Total                     |                      |        0|      0|  0|  90|
     +--------------------------+----------------------+---------+-------+---+----+
@@ -88,8 +88,8 @@
     +--------------------------+----------------------+--------------+
     |         Instance         |        Module        |  Expression  |
     +--------------------------+----------------------+--------------+
-    |Sobel_filter_mac_pcA_U58  |Sobel_filter_mac_pcA  | i0 + i1 * i2 |
-    |Sobel_filter_mac_qcK_U59  |Sobel_filter_mac_qcK  | i0 * i1 + i2 |
+    |Sobel_filter_mac_pcA_U62  |Sobel_filter_mac_pcA  | i0 + i1 * i2 |
+    |Sobel_filter_mac_qcK_U63  |Sobel_filter_mac_qcK  | i0 * i1 + i2 |
     +--------------------------+----------------------+--------------+
 
     * Memory: 
@@ -165,7 +165,7 @@
     |ap_block_state5_pp0_stage0_iter2  |    or    |      0|  0|   2|           1|           1|
     |brmerge_fu_804_p2                 |    or    |      0|  0|   2|           1|           1|
     |sel_tmp7_fu_780_p2                |    or    |      0|  0|   2|           1|           1|
-    |tmp_i_i_91_fu_1236_p2             |    or    |      0|  0|   2|           1|           1|
+    |tmp_i_i_84_fu_1236_p2             |    or    |      0|  0|   2|           1|           1|
     |col_buf_0_val_0_0_fu_859_p3       |  select  |      0|  0|   8|           1|           8|
     |col_buf_0_val_1_0_fu_878_p3       |  select  |      0|  0|   8|           1|           8|
     |col_buf_0_val_2_0_fu_897_p3       |  select  |      0|  0|   8|           1|           8|
