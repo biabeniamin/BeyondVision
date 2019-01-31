@@ -109,7 +109,7 @@ preplace netloc microblaze_0_axi_periph_M09_AXI 1 4 5 1710 750 NJ 750 N 750 N 75
 preplace netloc dvi2rgb_0_RGB 1 4 4 N 1700 N 1700 N 1700 2930
 preplace netloc dvi2rgb_0_PixelClk 1 2 7 660 1570 N 1570 1680 1570 NJ 1570 NJ 1570 2990J 1500 NJ
 preplace netloc axi_timer_0_interrupt 1 0 3 -270J 1410 NJ 1410 640
-levelinfo -pg 1 -340 140 520 880 1420 2140 2600 2830 3214 3790 4260 4650 5030 5220 -top -470 -bot 2300
+levelinfo -pg 1 -340 140 520 880 1420 2140 2600 2830 3214 3790 4260 4650 5030 5220 -top -470 -bot 2340
 ",
 }
 {

@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Thu Jan 31 21:15:52 2019
+--Date        : Thu Jan 31 21:51:58 2019
 --Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
 --Command     : generate_target hdmi.bd
 --Design      : hdmi
@@ -7449,6 +7449,11 @@ architecture STRUCTURE of hdmi is
     gpio_io_i : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   end component hdmi_axi_gpio_2_0;
+  component hdmi_xlconstant_1_0 is
+  port (
+    dout : out STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component hdmi_xlconstant_1_0;
   component hdmi_Sobel_filter_0_0 is
   port (
     INPUT_STREAM_TVALID : in STD_LOGIC;
@@ -7472,17 +7477,12 @@ architecture STRUCTURE of hdmi is
     enable_V : in STD_LOGIC_VECTOR ( 0 to 0 );
     ap_clk : in STD_LOGIC;
     ap_rst_n : in STD_LOGIC;
-    ap_done : out STD_LOGIC;
     ap_start : in STD_LOGIC;
+    ap_done : out STD_LOGIC;
     ap_ready : out STD_LOGIC;
     ap_idle : out STD_LOGIC
   );
   end component hdmi_Sobel_filter_0_0;
-  component hdmi_xlconstant_1_0 is
-  port (
-    dout : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component hdmi_xlconstant_1_0;
   signal Net : STD_LOGIC_VECTOR ( 0 to 0 );
   signal SYS_Rst_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal Sobel_filter_0_OUTPUT_STREAM_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );

@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Thu Jan 31 21:15:52 2019
+--Date        : Thu Jan 31 21:51:59 2019
 --Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
 --Command     : generate_target hdmi_wrapper.bd
 --Design      : hdmi_wrapper
@@ -82,11 +82,11 @@ architecture STRUCTURE of hdmi_wrapper is
     usb_uart_rxd : in STD_LOGIC;
     usb_uart_txd : out STD_LOGIC;
     dip_switches_8bits_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    enable : in STD_LOGIC_VECTOR ( 0 to 0 );
     hdmi_hpd : out STD_LOGIC_VECTOR ( 0 to 0 );
     reset : in STD_LOGIC;
     sys_clk_i : in STD_LOGIC;
-    hdmi_rx_txen : out STD_LOGIC_VECTOR ( 0 to 0 );
-    enable : in STD_LOGIC_VECTOR ( 0 to 0 )
+    hdmi_rx_txen : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component hdmi;
   component IOBUF is
