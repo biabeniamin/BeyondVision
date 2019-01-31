@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Sun Jan 27 12:12:56 2019
+--Date        : Thu Jan 31 19:28:55 2019
 --Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
 --Command     : generate_target hdmi.bd
 --Design      : hdmi
@@ -6671,6 +6671,7 @@ entity hdmi is
     TMDS_OUT_data_n : out STD_LOGIC_VECTOR ( 2 downto 0 );
     TMDS_OUT_data_p : out STD_LOGIC_VECTOR ( 2 downto 0 );
     dip_switches_8bits_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    enable : in STD_LOGIC_VECTOR ( 0 to 0 );
     hdmi_hpd : out STD_LOGIC_VECTOR ( 0 to 0 );
     hdmi_rx_txen : out STD_LOGIC_VECTOR ( 0 to 0 );
     reset : in STD_LOGIC;
@@ -7468,10 +7469,11 @@ architecture STRUCTURE of hdmi is
     OUTPUT_STREAM_TLAST : out STD_LOGIC_VECTOR ( 0 to 0 );
     OUTPUT_STREAM_TID : out STD_LOGIC_VECTOR ( 0 to 0 );
     OUTPUT_STREAM_TDEST : out STD_LOGIC_VECTOR ( 0 to 0 );
+    enable_V : in STD_LOGIC_VECTOR ( 0 to 0 );
     ap_clk : in STD_LOGIC;
     ap_rst_n : in STD_LOGIC;
-    ap_start : in STD_LOGIC;
     ap_done : out STD_LOGIC;
+    ap_start : in STD_LOGIC;
     ap_ready : out STD_LOGIC;
     ap_idle : out STD_LOGIC
   );
@@ -7589,6 +7591,7 @@ architecture STRUCTURE of hdmi is
   signal dvi2rgb_0_RGB_HSYNC : STD_LOGIC;
   signal dvi2rgb_0_RGB_VSYNC : STD_LOGIC;
   signal dvi2rgb_0_aPixelClkLckd : STD_LOGIC;
+  signal enable_V_0_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal microblaze_0_M_AXI_DC_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal microblaze_0_M_AXI_DC_ARBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal microblaze_0_M_AXI_DC_ARCACHE : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -8033,6 +8036,8 @@ architecture STRUCTURE of hdmi is
   attribute X_INTERFACE_INFO of TMDS_OUT_data_n : signal is "digilentinc.com:interface:tmds:1.0 TMDS_OUT DATA_N";
   attribute X_INTERFACE_INFO of TMDS_OUT_data_p : signal is "digilentinc.com:interface:tmds:1.0 TMDS_OUT DATA_P";
   attribute X_INTERFACE_INFO of dip_switches_8bits_tri_i : signal is "xilinx.com:interface:gpio:1.0 dip_switches_8bits TRI_I";
+  attribute X_INTERFACE_INFO of enable : signal is "xilinx.com:signal:data:1.0 DATA.ENABLE DATA";
+  attribute X_INTERFACE_PARAMETER of enable : signal is "XIL_INTERFACENAME DATA.ENABLE, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}";
 begin
   DDC_scl_o <= dvi2rgb_0_DDC_SCL_O;
   DDC_scl_t <= dvi2rgb_0_DDC_SCL_T;
@@ -8061,6 +8066,7 @@ begin
   axi_uartlite_0_UART_RxD <= usb_uart_rxd;
   dvi2rgb_0_DDC_SCL_I <= DDC_scl_i;
   dvi2rgb_0_DDC_SDA_I <= DDC_sda_i;
+  enable_V_0_1(0) <= enable(0);
   hdmi_hpd(0) <= axi_gpio_video_gpio_io_o(0);
   hdmi_rx_txen(0) <= xlconstant_0_dout(0);
   reset_1 <= reset;
@@ -8091,7 +8097,8 @@ Sobel_filter_0: component hdmi_Sobel_filter_0_0
       ap_idle => NLW_Sobel_filter_0_ap_idle_UNCONNECTED,
       ap_ready => NLW_Sobel_filter_0_ap_ready_UNCONNECTED,
       ap_rst_n => Net(0),
-      ap_start => axi_gpio_0_gpio2_io_o(0)
+      ap_start => axi_gpio_0_gpio2_io_o(0),
+      enable_V(0) => enable_V_0_1(0)
     );
 axi_dynclk_0: component hdmi_axi_dynclk_0_0
      port map (

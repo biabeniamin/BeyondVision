@@ -404,6 +404,10 @@ proc create_root_design { parentCell } {
   set usb_uart [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:uart_rtl:1.0 usb_uart ]
 
   # Create ports
+  set enable [ create_bd_port -dir I -from 0 -to 0 -type data enable ]
+  set_property -dict [ list \
+   CONFIG.LAYERED_METADATA {xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}} \
+ ] $enable
   set hdmi_hpd [ create_bd_port -dir O -from 0 -to 0 hdmi_hpd ]
   set hdmi_rx_txen [ create_bd_port -dir O -from 0 -to 0 hdmi_rx_txen ]
   set reset [ create_bd_port -dir I -type rst reset ]
@@ -739,6 +743,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net axi_vdma_0_s2mm_introut [get_bd_pins axi_vdma_0/s2mm_introut] [get_bd_pins microblaze_0_xlconcat/In0]
   connect_bd_net -net dvi2rgb_0_PixelClk [get_bd_pins dvi2rgb_0/PixelClk] [get_bd_pins rst_mig_7series_0_pxl/slowest_sync_clk] [get_bd_pins v_tc_1/clk] [get_bd_pins v_vid_in_axi4s_0/vid_io_in_clk]
   connect_bd_net -net dvi2rgb_0_aPixelClkLckd [get_bd_pins axi_gpio_video/gpio2_io_i] [get_bd_pins dvi2rgb_0/aPixelClkLckd] [get_bd_pins rst_mig_7series_0_pxl/dcm_locked]
+  connect_bd_net -net enable_V_0_1 [get_bd_ports enable] [get_bd_pins Sobel_filter_0/enable_V]
   connect_bd_net -net microblaze_0_intr [get_bd_pins microblaze_0_axi_intc/intr] [get_bd_pins microblaze_0_xlconcat/dout]
   connect_bd_net -net mig_7series_0_mmcm_locked [get_bd_pins dvi2rgb_0/aRst_n] [get_bd_pins mig_7series_0/mmcm_locked] [get_bd_pins rst_mig_7series_0_100M/dcm_locked]
   connect_bd_net -net mig_7series_0_ui_addn_clk_0 [get_bd_pins Sobel_filter_0/ap_clk] [get_bd_pins axi_vdma_0/s_axis_s2mm_aclk] [get_bd_pins axis_subset_converter_1/aclk] [get_bd_pins mig_7series_0/ui_addn_clk_0] [get_bd_pins rst_hdmi_160M/slowest_sync_clk] [get_bd_pins v_vid_in_axi4s_0/aclk]

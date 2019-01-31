@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:hls:Sobel_filter:1.0
--- IP Revision: 1901271210
+-- IP Revision: 1901311924
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -73,10 +73,11 @@ ENTITY hdmi_Sobel_filter_0_0 IS
     OUTPUT_STREAM_TLAST : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     OUTPUT_STREAM_TID : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     OUTPUT_STREAM_TDEST : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    enable_V : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     ap_clk : IN STD_LOGIC;
     ap_rst_n : IN STD_LOGIC;
-    ap_start : IN STD_LOGIC;
     ap_done : OUT STD_LOGIC;
+    ap_start : IN STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
     ap_idle : OUT STD_LOGIC
   );
@@ -105,10 +106,11 @@ ARCHITECTURE hdmi_Sobel_filter_0_0_arch OF hdmi_Sobel_filter_0_0 IS
       OUTPUT_STREAM_TLAST : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
       OUTPUT_STREAM_TID : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
       OUTPUT_STREAM_TDEST : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+      enable_V : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
       ap_clk : IN STD_LOGIC;
       ap_rst_n : IN STD_LOGIC;
-      ap_start : IN STD_LOGIC;
       ap_done : OUT STD_LOGIC;
+      ap_start : IN STD_LOGIC;
       ap_ready : OUT STD_LOGIC;
       ap_idle : OUT STD_LOGIC
     );
@@ -119,16 +121,19 @@ ARCHITECTURE hdmi_Sobel_filter_0_0_arch OF hdmi_Sobel_filter_0_0 IS
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
   ATTRIBUTE X_INTERFACE_INFO OF ap_idle: SIGNAL IS "xilinx.com:interface:acc_handshake:1.0 ap_ctrl idle";
   ATTRIBUTE X_INTERFACE_INFO OF ap_ready: SIGNAL IS "xilinx.com:interface:acc_handshake:1.0 ap_ctrl ready";
-  ATTRIBUTE X_INTERFACE_INFO OF ap_done: SIGNAL IS "xilinx.com:interface:acc_handshake:1.0 ap_ctrl done";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF ap_start: SIGNAL IS "XIL_INTERFACENAME ap_ctrl, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {start {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} done {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum " & 
+  ATTRIBUTE X_INTERFACE_INFO OF ap_start: SIGNAL IS "xilinx.com:interface:acc_handshake:1.0 ap_ctrl start";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF ap_done: SIGNAL IS "XIL_INTERFACENAME ap_ctrl, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {done {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} start {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum " & 
 "{}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} ready {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format lon" & 
 "g minimum {} maximum {}} value 0}}} idle {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}";
-  ATTRIBUTE X_INTERFACE_INFO OF ap_start: SIGNAL IS "xilinx.com:interface:acc_handshake:1.0 ap_ctrl start";
+  ATTRIBUTE X_INTERFACE_INFO OF ap_done: SIGNAL IS "xilinx.com:interface:acc_handshake:1.0 ap_ctrl done";
   ATTRIBUTE X_INTERFACE_PARAMETER OF ap_rst_n: SIGNAL IS "XIL_INTERFACENAME ap_rst_n, POLARITY ACTIVE_LOW, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {RST {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}";
   ATTRIBUTE X_INTERFACE_INFO OF ap_rst_n: SIGNAL IS "xilinx.com:signal:reset:1.0 ap_rst_n RST";
   ATTRIBUTE X_INTERFACE_PARAMETER OF ap_clk: SIGNAL IS "XIL_INTERFACENAME ap_clk, ASSOCIATED_BUSIF INPUT_STREAM:OUTPUT_STREAM, ASSOCIATED_RESET ap_rst_n, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, FREQ_HZ 160000000, PHASE 0, CL" & 
 "K_DOMAIN hdmi_mig_7series_0_0_ui_clk";
   ATTRIBUTE X_INTERFACE_INFO OF ap_clk: SIGNAL IS "xilinx.com:signal:clock:1.0 ap_clk CLK";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF enable_V: SIGNAL IS "XIL_INTERFACENAME enable_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value" & 
+" false}}}}}";
+  ATTRIBUTE X_INTERFACE_INFO OF enable_V: SIGNAL IS "xilinx.com:signal:data:1.0 enable_V DATA";
   ATTRIBUTE X_INTERFACE_INFO OF OUTPUT_STREAM_TDEST: SIGNAL IS "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TDEST";
   ATTRIBUTE X_INTERFACE_INFO OF OUTPUT_STREAM_TID: SIGNAL IS "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TID";
   ATTRIBUTE X_INTERFACE_INFO OF OUTPUT_STREAM_TLAST: SIGNAL IS "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TLAST";
@@ -172,10 +177,11 @@ BEGIN
       OUTPUT_STREAM_TLAST => OUTPUT_STREAM_TLAST,
       OUTPUT_STREAM_TID => OUTPUT_STREAM_TID,
       OUTPUT_STREAM_TDEST => OUTPUT_STREAM_TDEST,
+      enable_V => enable_V,
       ap_clk => ap_clk,
       ap_rst_n => ap_rst_n,
-      ap_start => ap_start,
       ap_done => ap_done,
+      ap_start => ap_start,
       ap_ready => ap_ready,
       ap_idle => ap_idle
     );
