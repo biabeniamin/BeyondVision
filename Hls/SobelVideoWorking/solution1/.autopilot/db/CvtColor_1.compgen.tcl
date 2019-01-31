@@ -1,6 +1,6 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 33
+set id 35
 set name Sobel_filter_mul_bkb
 set corename simcore_mul
 set op mul
@@ -76,7 +76,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 }
 
 
-set id 34
+set id 36
 set name Sobel_filter_mac_cud
 set corename simcore_mac
 set op mac
@@ -158,7 +158,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 }
 
 
-set id 35
+set id 37
 set name Sobel_filter_mac_dEe
 set corename simcore_mac
 set op mac
@@ -245,36 +245,6 @@ if {${::AESL::PGuard_autoexp_gen}} {
     cg_default_interface_gen_dc_begin
     cg_default_interface_gen_bundle_begin
     AESL_LIB_XILADAPTER::native_axis_begin
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 39 \
-    name p_src_rows_V \
-    type fifo \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_p_src_rows_V \
-    op interface \
-    ports { p_src_rows_V_dout { I 11 vector } p_src_rows_V_empty_n { I 1 bit } p_src_rows_V_read { O 1 bit } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 40 \
-    name p_src_cols_V \
-    type fifo \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_p_src_cols_V \
-    op interface \
-    ports { p_src_cols_V_dout { I 12 vector } p_src_cols_V_empty_n { I 1 bit } p_src_cols_V_read { O 1 bit } } \
-} "
 }
 
 # Direct connection:

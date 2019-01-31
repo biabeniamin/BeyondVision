@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'CvtColor'" level="0">
-<item name = "Date">Thu Jan 31 20:24:17 2019
+<item name = "Date">Thu Jan 31 20:48:30 2019
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">SobelVideoWorking</item>
@@ -53,8 +53,8 @@
 <column name="FIFO">-, -, -, -</column>
 <column name="Instance">-, -, -, -</column>
 <column name="Memory">-, -, -, -</column>
-<column name="Multiplexer">-, -, -, 105</column>
-<column name="Register">-, -, 39, -</column>
+<column name="Multiplexer">-, -, -, 114</column>
+<column name="Register">-, -, 40, -</column>
 <specialColumn name="Available">730, 740, 269200, 129000</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, ~0</specialColumn>
 </table>
@@ -101,6 +101,7 @@
 <column name="p_dst_data_stream_1_V_blk_n">9, 2, 1, 2</column>
 <column name="p_dst_data_stream_2_V_blk_n">9, 2, 1, 2</column>
 <column name="p_src_data_stream_V_blk_n">9, 2, 1, 2</column>
+<column name="real_start">9, 2, 1, 2</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
@@ -113,6 +114,7 @@
 <column name="i_1_reg_192">10, 0, 10, 0</column>
 <column name="i_reg_142">10, 0, 10, 0</column>
 <column name="j_reg_153">11, 0, 11, 0</column>
+<column name="start_once_reg">1, 0, 1, 0</column>
 </table>
 </item>
 </section>
@@ -125,10 +127,13 @@
 <column name="ap_clk">in, 1, ap_ctrl_hs, CvtColor, return value</column>
 <column name="ap_rst">in, 1, ap_ctrl_hs, CvtColor, return value</column>
 <column name="ap_start">in, 1, ap_ctrl_hs, CvtColor, return value</column>
+<column name="start_full_n">in, 1, ap_ctrl_hs, CvtColor, return value</column>
 <column name="ap_done">out, 1, ap_ctrl_hs, CvtColor, return value</column>
 <column name="ap_continue">in, 1, ap_ctrl_hs, CvtColor, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, CvtColor, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, CvtColor, return value</column>
+<column name="start_out">out, 1, ap_ctrl_hs, CvtColor, return value</column>
+<column name="start_write">out, 1, ap_ctrl_hs, CvtColor, return value</column>
 <column name="p_src_data_stream_V_dout">in, 8, ap_fifo, p_src_data_stream_V, pointer</column>
 <column name="p_src_data_stream_V_empty_n">in, 1, ap_fifo, p_src_data_stream_V, pointer</column>
 <column name="p_src_data_stream_V_read">out, 1, ap_fifo, p_src_data_stream_V, pointer</column>

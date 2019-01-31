@@ -12,8 +12,6 @@ set isEnableWaveformDebug 1
 set C_modelName {Mat2AXIvideo}
 set C_modelType { void 0 }
 set C_modelArgList {
-	{ img_rows_V int 11 regular {fifo 0}  }
-	{ img_cols_V int 12 regular {fifo 0}  }
 	{ img_data_stream_0_V int 8 regular {fifo 0 volatile }  }
 	{ img_data_stream_1_V int 8 regular {fifo 0 volatile }  }
 	{ img_data_stream_2_V int 8 regular {fifo 0 volatile }  }
@@ -26,9 +24,7 @@ set C_modelArgList {
 	{ AXI_video_strm_V_dest_V int 1 regular {axi_s 1 volatile  { OUTPUT_STREAM Dest } }  }
 }
 set C_modelArgMapList {[ 
-	{ "Name" : "img_rows_V", "interface" : "fifo", "bitwidth" : 11, "direction" : "READONLY"} , 
- 	{ "Name" : "img_cols_V", "interface" : "fifo", "bitwidth" : 12, "direction" : "READONLY"} , 
- 	{ "Name" : "img_data_stream_0_V", "interface" : "fifo", "bitwidth" : 8, "direction" : "READONLY"} , 
+	{ "Name" : "img_data_stream_0_V", "interface" : "fifo", "bitwidth" : 8, "direction" : "READONLY"} , 
  	{ "Name" : "img_data_stream_1_V", "interface" : "fifo", "bitwidth" : 8, "direction" : "READONLY"} , 
  	{ "Name" : "img_data_stream_2_V", "interface" : "fifo", "bitwidth" : 8, "direction" : "READONLY"} , 
  	{ "Name" : "AXI_video_strm_V_data_V", "interface" : "axis", "bitwidth" : 24, "direction" : "WRITEONLY"} , 
@@ -39,60 +35,42 @@ set C_modelArgMapList {[
  	{ "Name" : "AXI_video_strm_V_id_V", "interface" : "axis", "bitwidth" : 1, "direction" : "WRITEONLY"} , 
  	{ "Name" : "AXI_video_strm_V_dest_V", "interface" : "axis", "bitwidth" : 1, "direction" : "WRITEONLY"} ]}
 # RTL Port declarations: 
-set portNum 34
+set portNum 25
 set portList { 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
 	{ ap_rst sc_in sc_logic 1 reset -1 active_high_sync } 
 	{ ap_start sc_in sc_logic 1 start -1 } 
-	{ start_full_n sc_in sc_logic 1 signal -1 } 
 	{ ap_done sc_out sc_logic 1 predone -1 } 
 	{ ap_continue sc_in sc_logic 1 continue -1 } 
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
-	{ start_out sc_out sc_logic 1 signal -1 } 
-	{ start_write sc_out sc_logic 1 signal -1 } 
-	{ img_rows_V_dout sc_in sc_lv 11 signal 0 } 
-	{ img_rows_V_empty_n sc_in sc_logic 1 signal 0 } 
-	{ img_rows_V_read sc_out sc_logic 1 signal 0 } 
-	{ img_cols_V_dout sc_in sc_lv 12 signal 1 } 
-	{ img_cols_V_empty_n sc_in sc_logic 1 signal 1 } 
-	{ img_cols_V_read sc_out sc_logic 1 signal 1 } 
-	{ img_data_stream_0_V_dout sc_in sc_lv 8 signal 2 } 
-	{ img_data_stream_0_V_empty_n sc_in sc_logic 1 signal 2 } 
-	{ img_data_stream_0_V_read sc_out sc_logic 1 signal 2 } 
-	{ img_data_stream_1_V_dout sc_in sc_lv 8 signal 3 } 
-	{ img_data_stream_1_V_empty_n sc_in sc_logic 1 signal 3 } 
-	{ img_data_stream_1_V_read sc_out sc_logic 1 signal 3 } 
-	{ img_data_stream_2_V_dout sc_in sc_lv 8 signal 4 } 
-	{ img_data_stream_2_V_empty_n sc_in sc_logic 1 signal 4 } 
-	{ img_data_stream_2_V_read sc_out sc_logic 1 signal 4 } 
-	{ OUTPUT_STREAM_TDATA sc_out sc_lv 24 signal 5 } 
-	{ OUTPUT_STREAM_TVALID sc_out sc_logic 1 outvld 11 } 
-	{ OUTPUT_STREAM_TREADY sc_in sc_logic 1 outacc 11 } 
-	{ OUTPUT_STREAM_TKEEP sc_out sc_lv 3 signal 6 } 
-	{ OUTPUT_STREAM_TSTRB sc_out sc_lv 3 signal 7 } 
-	{ OUTPUT_STREAM_TUSER sc_out sc_lv 1 signal 8 } 
-	{ OUTPUT_STREAM_TLAST sc_out sc_lv 1 signal 9 } 
-	{ OUTPUT_STREAM_TID sc_out sc_lv 1 signal 10 } 
-	{ OUTPUT_STREAM_TDEST sc_out sc_lv 1 signal 11 } 
+	{ img_data_stream_0_V_dout sc_in sc_lv 8 signal 0 } 
+	{ img_data_stream_0_V_empty_n sc_in sc_logic 1 signal 0 } 
+	{ img_data_stream_0_V_read sc_out sc_logic 1 signal 0 } 
+	{ img_data_stream_1_V_dout sc_in sc_lv 8 signal 1 } 
+	{ img_data_stream_1_V_empty_n sc_in sc_logic 1 signal 1 } 
+	{ img_data_stream_1_V_read sc_out sc_logic 1 signal 1 } 
+	{ img_data_stream_2_V_dout sc_in sc_lv 8 signal 2 } 
+	{ img_data_stream_2_V_empty_n sc_in sc_logic 1 signal 2 } 
+	{ img_data_stream_2_V_read sc_out sc_logic 1 signal 2 } 
+	{ OUTPUT_STREAM_TDATA sc_out sc_lv 24 signal 3 } 
+	{ OUTPUT_STREAM_TVALID sc_out sc_logic 1 outvld 9 } 
+	{ OUTPUT_STREAM_TREADY sc_in sc_logic 1 outacc 9 } 
+	{ OUTPUT_STREAM_TKEEP sc_out sc_lv 3 signal 4 } 
+	{ OUTPUT_STREAM_TSTRB sc_out sc_lv 3 signal 5 } 
+	{ OUTPUT_STREAM_TUSER sc_out sc_lv 1 signal 6 } 
+	{ OUTPUT_STREAM_TLAST sc_out sc_lv 1 signal 7 } 
+	{ OUTPUT_STREAM_TID sc_out sc_lv 1 signal 8 } 
+	{ OUTPUT_STREAM_TDEST sc_out sc_lv 1 signal 9 } 
 }
 set NewPortList {[ 
 	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
  	{ "name": "ap_rst", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "reset", "bundle":{"name": "ap_rst", "role": "default" }} , 
  	{ "name": "ap_start", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "start", "bundle":{"name": "ap_start", "role": "default" }} , 
- 	{ "name": "start_full_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "start_full_n", "role": "default" }} , 
  	{ "name": "ap_done", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "predone", "bundle":{"name": "ap_done", "role": "default" }} , 
  	{ "name": "ap_continue", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "continue", "bundle":{"name": "ap_continue", "role": "default" }} , 
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
- 	{ "name": "start_out", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "start_out", "role": "default" }} , 
- 	{ "name": "start_write", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "start_write", "role": "default" }} , 
- 	{ "name": "img_rows_V_dout", "direction": "in", "datatype": "sc_lv", "bitwidth":11, "type": "signal", "bundle":{"name": "img_rows_V", "role": "dout" }} , 
- 	{ "name": "img_rows_V_empty_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "img_rows_V", "role": "empty_n" }} , 
- 	{ "name": "img_rows_V_read", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "img_rows_V", "role": "read" }} , 
- 	{ "name": "img_cols_V_dout", "direction": "in", "datatype": "sc_lv", "bitwidth":12, "type": "signal", "bundle":{"name": "img_cols_V", "role": "dout" }} , 
- 	{ "name": "img_cols_V_empty_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "img_cols_V", "role": "empty_n" }} , 
- 	{ "name": "img_cols_V_read", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "img_cols_V", "role": "read" }} , 
  	{ "name": "img_data_stream_0_V_dout", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "img_data_stream_0_V", "role": "dout" }} , 
  	{ "name": "img_data_stream_0_V_empty_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "img_data_stream_0_V", "role": "empty_n" }} , 
  	{ "name": "img_data_stream_0_V_read", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "img_data_stream_0_V", "role": "read" }} , 
@@ -119,7 +97,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1", "EstimateLatencyMax" : "924481",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "924481", "EstimateLatencyMax" : "924481",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -127,12 +105,6 @@ set RtlHierarchyInfo {[
 		"InDataflowNetwork" : "1",
 		"HasNonBlockingOperation" : "0",
 		"Port" : [
-			{"Name" : "img_rows_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "0", "DependentChan" : "0",
-				"BlockSignal" : [
-					{"Name" : "img_rows_V_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "img_cols_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "0", "DependentChan" : "0",
-				"BlockSignal" : [
-					{"Name" : "img_cols_V_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "img_data_stream_0_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "0", "DependentChan" : "0",
 				"BlockSignal" : [
 					{"Name" : "img_data_stream_0_V_blk_n", "Type" : "RtlSignal"}]},
@@ -155,8 +127,6 @@ set RtlHierarchyInfo {[
 
 set ArgLastReadFirstWriteLatency {
 	Mat2AXIvideo {
-		img_rows_V {Type I LastRead 0 FirstWrite -1}
-		img_cols_V {Type I LastRead 0 FirstWrite -1}
 		img_data_stream_0_V {Type I LastRead 3 FirstWrite -1}
 		img_data_stream_1_V {Type I LastRead 3 FirstWrite -1}
 		img_data_stream_2_V {Type I LastRead 3 FirstWrite -1}
@@ -171,8 +141,8 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "1", "Max" : "924481"}
-	, {"Name" : "Interval", "Min" : "1", "Max" : "924481"}
+	{"Name" : "Latency", "Min" : "924481", "Max" : "924481"}
+	, {"Name" : "Interval", "Min" : "924481", "Max" : "924481"}
 ]}
 
 set PipelineEnableSignalInfo {[
@@ -180,8 +150,6 @@ set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	img_rows_V { ap_fifo {  { img_rows_V_dout fifo_data 0 11 }  { img_rows_V_empty_n fifo_status 0 1 }  { img_rows_V_read fifo_update 1 1 } } }
-	img_cols_V { ap_fifo {  { img_cols_V_dout fifo_data 0 12 }  { img_cols_V_empty_n fifo_status 0 1 }  { img_cols_V_read fifo_update 1 1 } } }
 	img_data_stream_0_V { ap_fifo {  { img_data_stream_0_V_dout fifo_data 0 8 }  { img_data_stream_0_V_empty_n fifo_status 0 1 }  { img_data_stream_0_V_read fifo_update 1 1 } } }
 	img_data_stream_1_V { ap_fifo {  { img_data_stream_1_V_dout fifo_data 0 8 }  { img_data_stream_1_V_empty_n fifo_status 0 1 }  { img_data_stream_1_V_read fifo_update 1 1 } } }
 	img_data_stream_2_V { ap_fifo {  { img_data_stream_2_V_dout fifo_data 0 8 }  { img_data_stream_2_V_empty_n fifo_status 0 1 }  { img_data_stream_2_V_read fifo_update 1 1 } } }

@@ -15,17 +15,14 @@
 namespace ap_rtl {
 
 struct Duplicate : public sc_module {
-    // Port declarations 19
+    // Port declarations 16
     sc_in_clk ap_clk;
     sc_in< sc_logic > ap_rst;
     sc_in< sc_logic > ap_start;
-    sc_in< sc_logic > start_full_n;
     sc_out< sc_logic > ap_done;
     sc_in< sc_logic > ap_continue;
     sc_out< sc_logic > ap_idle;
     sc_out< sc_logic > ap_ready;
-    sc_out< sc_logic > start_out;
-    sc_out< sc_logic > start_write;
     sc_in< sc_lv<8> > src_data_stream_V_dout;
     sc_in< sc_logic > src_data_stream_V_empty_n;
     sc_out< sc_logic > src_data_stream_V_read;
@@ -45,12 +42,9 @@ struct Duplicate : public sc_module {
 
     sc_trace_file* mVcdFile;
 
-    sc_signal< sc_logic > real_start;
-    sc_signal< sc_logic > start_once_reg;
     sc_signal< sc_logic > ap_done_reg;
     sc_signal< sc_lv<4> > ap_CS_fsm;
     sc_signal< sc_logic > ap_CS_fsm_state1;
-    sc_signal< sc_logic > internal_ap_ready;
     sc_signal< sc_logic > src_data_stream_V_blk_n;
     sc_signal< sc_logic > ap_CS_fsm_pp0_stage0;
     sc_signal< sc_logic > ap_enable_reg_pp0_iter1;
@@ -58,7 +52,7 @@ struct Duplicate : public sc_module {
     sc_signal< sc_lv<1> > exitcond_reg_173;
     sc_signal< sc_logic > dst1_data_stream_V_blk_n;
     sc_signal< sc_logic > dst2_data_stream_V_blk_n;
-    sc_signal< sc_lv<11> > t_V_3_reg_129;
+    sc_signal< sc_lv<11> > t_V_4_reg_129;
     sc_signal< sc_lv<1> > exitcond3_fu_140_p2;
     sc_signal< sc_logic > ap_CS_fsm_state2;
     sc_signal< sc_lv<10> > i_V_fu_146_p2;
@@ -84,8 +78,8 @@ struct Duplicate : public sc_module {
     static const sc_lv<4> ap_ST_fsm_state2;
     static const sc_lv<4> ap_ST_fsm_pp0_stage0;
     static const sc_lv<4> ap_ST_fsm_state5;
-    static const bool ap_const_boolean_1;
     static const sc_lv<32> ap_const_lv32_0;
+    static const bool ap_const_boolean_1;
     static const sc_lv<32> ap_const_lv32_2;
     static const bool ap_const_boolean_0;
     static const sc_lv<1> ap_const_lv1_0;
@@ -126,13 +120,9 @@ struct Duplicate : public sc_module {
     void thread_exitcond3_fu_140_p2();
     void thread_exitcond_fu_152_p2();
     void thread_i_V_fu_146_p2();
-    void thread_internal_ap_ready();
     void thread_j_V_fu_158_p2();
-    void thread_real_start();
     void thread_src_data_stream_V_blk_n();
     void thread_src_data_stream_V_read();
-    void thread_start_out();
-    void thread_start_write();
     void thread_ap_NS_fsm();
 };
 

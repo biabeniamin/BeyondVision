@@ -18,8 +18,8 @@ const sc_lv<4> CvtColor::ap_ST_fsm_state1 = "1";
 const sc_lv<4> CvtColor::ap_ST_fsm_state2 = "10";
 const sc_lv<4> CvtColor::ap_ST_fsm_pp0_stage0 = "100";
 const sc_lv<4> CvtColor::ap_ST_fsm_state5 = "1000";
-const sc_lv<32> CvtColor::ap_const_lv32_0 = "00000000000000000000000000000000";
 const bool CvtColor::ap_const_boolean_1 = true;
+const sc_lv<32> CvtColor::ap_const_lv32_0 = "00000000000000000000000000000000";
 const sc_lv<32> CvtColor::ap_const_lv32_2 = "10";
 const bool CvtColor::ap_const_boolean_0 = false;
 const sc_lv<1> CvtColor::ap_const_lv1_0 = "0";
@@ -78,7 +78,7 @@ CvtColor::CvtColor(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sensitive << ( exitcond_reg_197 );
 
     SC_METHOD(thread_ap_block_state1);
-    sensitive << ( ap_start );
+    sensitive << ( real_start );
     sensitive << ( ap_done_reg );
 
     SC_METHOD(thread_ap_block_state3_pp0_stage0_iter0);
@@ -102,7 +102,7 @@ CvtColor::CvtColor(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sensitive << ( ap_idle_pp0 );
 
     SC_METHOD(thread_ap_idle);
-    sensitive << ( ap_start );
+    sensitive << ( real_start );
     sensitive << ( ap_CS_fsm_state1 );
 
     SC_METHOD(thread_ap_idle_pp0);
@@ -110,8 +110,7 @@ CvtColor::CvtColor(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sensitive << ( ap_enable_reg_pp0_iter0 );
 
     SC_METHOD(thread_ap_ready);
-    sensitive << ( exitcond1_fu_164_p2 );
-    sensitive << ( ap_CS_fsm_state2 );
+    sensitive << ( internal_ap_ready );
 
     SC_METHOD(thread_exitcond1_fu_164_p2);
     sensitive << ( ap_CS_fsm_state2 );
@@ -125,6 +124,10 @@ CvtColor::CvtColor(sc_module_name name) : sc_module(name), mVcdFile(0) {
 
     SC_METHOD(thread_i_1_fu_170_p2);
     sensitive << ( i_reg_142 );
+
+    SC_METHOD(thread_internal_ap_ready);
+    sensitive << ( exitcond1_fu_164_p2 );
+    sensitive << ( ap_CS_fsm_state2 );
 
     SC_METHOD(thread_j_1_fu_182_p2);
     sensitive << ( j_reg_153 );
@@ -202,8 +205,20 @@ CvtColor::CvtColor(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sensitive << ( exitcond_reg_197 );
     sensitive << ( ap_block_pp0_stage0_11001 );
 
-    SC_METHOD(thread_ap_NS_fsm);
+    SC_METHOD(thread_real_start);
     sensitive << ( ap_start );
+    sensitive << ( start_full_n );
+    sensitive << ( start_once_reg );
+
+    SC_METHOD(thread_start_out);
+    sensitive << ( real_start );
+
+    SC_METHOD(thread_start_write);
+    sensitive << ( real_start );
+    sensitive << ( start_once_reg );
+
+    SC_METHOD(thread_ap_NS_fsm);
+    sensitive << ( real_start );
     sensitive << ( ap_done_reg );
     sensitive << ( ap_CS_fsm );
     sensitive << ( ap_CS_fsm_state1 );
@@ -213,6 +228,7 @@ CvtColor::CvtColor(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sensitive << ( ap_enable_reg_pp0_iter0 );
     sensitive << ( ap_block_pp0_stage0_subdone );
 
+    start_once_reg = SC_LOGIC_0;
     ap_done_reg = SC_LOGIC_0;
     ap_CS_fsm = "0001";
     ap_enable_reg_pp0_iter1 = SC_LOGIC_0;
@@ -228,10 +244,13 @@ CvtColor::CvtColor(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, ap_clk, "(port)ap_clk");
     sc_trace(mVcdFile, ap_rst, "(port)ap_rst");
     sc_trace(mVcdFile, ap_start, "(port)ap_start");
+    sc_trace(mVcdFile, start_full_n, "(port)start_full_n");
     sc_trace(mVcdFile, ap_done, "(port)ap_done");
     sc_trace(mVcdFile, ap_continue, "(port)ap_continue");
     sc_trace(mVcdFile, ap_idle, "(port)ap_idle");
     sc_trace(mVcdFile, ap_ready, "(port)ap_ready");
+    sc_trace(mVcdFile, start_out, "(port)start_out");
+    sc_trace(mVcdFile, start_write, "(port)start_write");
     sc_trace(mVcdFile, p_src_data_stream_V_dout, "(port)p_src_data_stream_V_dout");
     sc_trace(mVcdFile, p_src_data_stream_V_empty_n, "(port)p_src_data_stream_V_empty_n");
     sc_trace(mVcdFile, p_src_data_stream_V_read, "(port)p_src_data_stream_V_read");
@@ -246,9 +265,12 @@ CvtColor::CvtColor(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, p_dst_data_stream_2_V_write, "(port)p_dst_data_stream_2_V_write");
 #endif
 #ifdef __HLS_TRACE_LEVEL_INT__
+    sc_trace(mVcdFile, real_start, "real_start");
+    sc_trace(mVcdFile, start_once_reg, "start_once_reg");
     sc_trace(mVcdFile, ap_done_reg, "ap_done_reg");
     sc_trace(mVcdFile, ap_CS_fsm, "ap_CS_fsm");
     sc_trace(mVcdFile, ap_CS_fsm_state1, "ap_CS_fsm_state1");
+    sc_trace(mVcdFile, internal_ap_ready, "internal_ap_ready");
     sc_trace(mVcdFile, p_src_data_stream_V_blk_n, "p_src_data_stream_V_blk_n");
     sc_trace(mVcdFile, ap_CS_fsm_pp0_stage0, "ap_CS_fsm_pp0_stage0");
     sc_trace(mVcdFile, ap_enable_reg_pp0_iter1, "ap_enable_reg_pp0_iter1");
@@ -331,7 +353,7 @@ void CvtColor::thread_ap_clk_no_reset_() {
     }
     if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state5.read())) {
         i_reg_142 = i_1_reg_192.read();
-    } else if ((!(esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_0) || esl_seteq<1,1,1>(ap_done_reg.read(), ap_const_logic_1)) && 
+    } else if ((!(esl_seteq<1,1,1>(real_start.read(), ap_const_logic_0) || esl_seteq<1,1,1>(ap_done_reg.read(), ap_const_logic_1)) && 
                 esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()))) {
         i_reg_142 = ap_const_lv10_0;
     }
@@ -343,6 +365,16 @@ void CvtColor::thread_ap_clk_no_reset_() {
     } else if ((esl_seteq<1,1,1>(exitcond1_fu_164_p2.read(), ap_const_lv1_0) && 
                 esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state2.read()))) {
         j_reg_153 = ap_const_lv11_0;
+    }
+    if ( ap_rst.read() == ap_const_logic_1) {
+        start_once_reg = ap_const_logic_0;
+    } else {
+        if ((esl_seteq<1,1,1>(ap_const_logic_1, real_start.read()) && 
+             esl_seteq<1,1,1>(ap_const_logic_0, internal_ap_ready.read()))) {
+            start_once_reg = ap_const_logic_1;
+        } else if (esl_seteq<1,1,1>(ap_const_logic_1, internal_ap_ready.read())) {
+            start_once_reg = ap_const_logic_0;
+        }
     }
     if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_pp0_stage0.read()) && esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0))) {
         exitcond_reg_197 = exitcond_fu_176_p2.read();
@@ -406,7 +438,7 @@ void CvtColor::thread_ap_block_pp0_stage0_subdone() {
 }
 
 void CvtColor::thread_ap_block_state1() {
-    ap_block_state1 = (esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_0) || esl_seteq<1,1,1>(ap_done_reg.read(), ap_const_logic_1));
+    ap_block_state1 = (esl_seteq<1,1,1>(real_start.read(), ap_const_logic_0) || esl_seteq<1,1,1>(ap_done_reg.read(), ap_const_logic_1));
 }
 
 void CvtColor::thread_ap_block_state3_pp0_stage0_iter0() {
@@ -443,7 +475,7 @@ void CvtColor::thread_ap_enable_pp0() {
 }
 
 void CvtColor::thread_ap_idle() {
-    if ((esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_0) && 
+    if ((esl_seteq<1,1,1>(real_start.read(), ap_const_logic_0) && 
          esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()))) {
         ap_idle = ap_const_logic_1;
     } else {
@@ -461,12 +493,7 @@ void CvtColor::thread_ap_idle_pp0() {
 }
 
 void CvtColor::thread_ap_ready() {
-    if ((esl_seteq<1,1,1>(exitcond1_fu_164_p2.read(), ap_const_lv1_1) && 
-         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state2.read()))) {
-        ap_ready = ap_const_logic_1;
-    } else {
-        ap_ready = ap_const_logic_0;
-    }
+    ap_ready = internal_ap_ready.read();
 }
 
 void CvtColor::thread_exitcond1_fu_164_p2() {
@@ -479,6 +506,15 @@ void CvtColor::thread_exitcond_fu_176_p2() {
 
 void CvtColor::thread_i_1_fu_170_p2() {
     i_1_fu_170_p2 = (!i_reg_142.read().is_01() || !ap_const_lv10_1.is_01())? sc_lv<10>(): (sc_biguint<10>(i_reg_142.read()) + sc_biguint<10>(ap_const_lv10_1));
+}
+
+void CvtColor::thread_internal_ap_ready() {
+    if ((esl_seteq<1,1,1>(exitcond1_fu_164_p2.read(), ap_const_lv1_1) && 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state2.read()))) {
+        internal_ap_ready = ap_const_logic_1;
+    } else {
+        internal_ap_ready = ap_const_logic_0;
+    }
 }
 
 void CvtColor::thread_j_1_fu_182_p2() {
@@ -585,10 +621,32 @@ void CvtColor::thread_p_src_data_stream_V_read() {
     }
 }
 
+void CvtColor::thread_real_start() {
+    if ((esl_seteq<1,1,1>(ap_const_logic_0, start_full_n.read()) && 
+         esl_seteq<1,1,1>(ap_const_logic_0, start_once_reg.read()))) {
+        real_start = ap_const_logic_0;
+    } else {
+        real_start = ap_start.read();
+    }
+}
+
+void CvtColor::thread_start_out() {
+    start_out = real_start.read();
+}
+
+void CvtColor::thread_start_write() {
+    if ((esl_seteq<1,1,1>(ap_const_logic_0, start_once_reg.read()) && 
+         esl_seteq<1,1,1>(ap_const_logic_1, real_start.read()))) {
+        start_write = ap_const_logic_1;
+    } else {
+        start_write = ap_const_logic_0;
+    }
+}
+
 void CvtColor::thread_ap_NS_fsm() {
     switch (ap_CS_fsm.read().to_uint64()) {
         case 1 : 
-            if ((!(esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_0) || esl_seteq<1,1,1>(ap_done_reg.read(), ap_const_logic_1)) && esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()))) {
+            if ((!(esl_seteq<1,1,1>(real_start.read(), ap_const_logic_0) || esl_seteq<1,1,1>(ap_done_reg.read(), ap_const_logic_1)) && esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()))) {
                 ap_NS_fsm = ap_ST_fsm_state2;
             } else {
                 ap_NS_fsm = ap_ST_fsm_state1;

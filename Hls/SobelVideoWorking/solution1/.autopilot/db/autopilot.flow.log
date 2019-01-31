@@ -1,4 +1,4 @@
-INFO-FLOW: Workspace C:/Digilent19/Hls/SobelVideoWorking/solution1 opened at Thu Jan 31 20:23:35 +0200 2019
+INFO-FLOW: Workspace C:/Digilent19/Hls/SobelVideoWorking/solution1 opened at Thu Jan 31 20:47:46 +0200 2019
 Execute     config_clock -quiet -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     open_platform DefaultPlatform 
@@ -77,7 +77,7 @@ Execute       get_default_platform
 Execute     get_default_platform 
 Execute     config_chip_info -quiet -resource  {SLICE 33650} {LUT 129000}    {FF 269200} {DSP48E 740}    {BRAM 730}  
 Execute     config_chip_info -quiet -speed slow 
-Command   open_solution done; 0.19 sec.
+Command   open_solution done; 0.187 sec.
 Execute   set_part xc7a200tsbg484-1 -tool vivado 
 Execute     add_library xilinx/artix7/artix7:xc7a200t:sbg484:-1 
 Execute       get_default_platform 
@@ -114,57 +114,56 @@ Execute       get_default_platform
 INFO-FLOW: Source preprocessing
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "SobelVideoWorking/a.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.pp.0.cpp" 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -fno-exceptions -D__llvm__ -E SobelVideoWorking/a.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.pp.0.cpp
-Command       clang done; 0.694 sec.
+Command       clang done; 0.696 sec.
 INFO-FLOW: Syntax Checking before pre-processing...
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.2/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.pp.0.cpp"  -o "C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/useless.bc"  
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.pp.0.cpp -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/useless.bc
-Command       clang done; 2.134 sec.
+Command       clang done; 2.172 sec.
 INFO-FLOW: GCC PP time: 2 seconds per iteration
 Execute       list_core -type functional_unit 
 Execute       tidy_31 xilinx-systemc-detector C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.pp.0.cpp std=gnu++98 -directive=C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.804 sec.
+Command       tidy_31 done; 0.8 sec.
 INFO-FLOW: CDT Preprocessing with tidy-3.1...
 Execute       tidy_31 xilinx-directive2pragma C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.pp.0.cpp std=gnu++98 -directive=C:/Digilent19/Hls/SobelVideoWorking/solution1/solution1.json 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=C:/Digilent19/Hls/SobelVideoWorking/solution1/solution1.json -quiet -fix-errors C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.789 sec.
+Command       tidy_31 done; 0.791 sec.
 Execute       get_config_dataflow -strict_mode 
 Execute       ap_eval exec -ignorestderr C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/xilinx-dataflow-lawyer.a.pp.0.cpp.diag.yml C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/xilinx-dataflow-lawyer.a.pp.0.cpp.out.log 2> C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/xilinx-dataflow-lawyer.a.pp.0.cpp.err.log 
-Command       ap_eval done; 0.781 sec.
-WARNING: [HLS 214-113] Variables defined outside dataflow region are not supported: SobelVideoWorking/a.cpp:26:20
-WARNING: [HLS 214-113] Variables defined outside dataflow region are not supported: SobelVideoWorking/a.cpp:29:30
-WARNING: [HLS 214-114] Only function calls and local variable declarations are allowed in a dataflow region: SobelVideoWorking/a.cpp:23:1
+Command       ap_eval done; 0.785 sec.
+WARNING: [HLS 214-113] Variables defined outside dataflow region are not supported: SobelVideoWorking/a.cpp:25:34
+WARNING: [HLS 214-113] Variables defined outside dataflow region are not supported: SobelVideoWorking/a.cpp:29:34
 Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.pp.0.cpp std=gnu++98 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer -quiet -fix-errors C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 1.748 sec.
+Command       tidy_31 done; 1.762 sec.
 INFO-FLOW: tidy-3.1 time 3 seconds per iteration
 INFO-FLOW: Pragma Handling...
 Execute       tidy_31 xilinx-ssdm-intrinsics-arguments C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.pragma.1.cpp std=gnu++98 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 1.069 sec.
+Command       tidy_31 done; 1.077 sec.
 INFO-FLOW: Source preprocessing
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.pragma.2.cpp" 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -fno-exceptions -D__llvm__ -E C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.pragma.1.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.pragma.2.cpp
-Command       clang done; 0.661 sec.
+Command       clang done; 0.662 sec.
 Execute       get_default_platform 
 INFO-FLOW: Processing labels
 Execute       clang -src C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.bc" 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.bc
-Command       clang done; 2.685 sec.
+Command       clang done; 2.275 sec.
 INFO-FLOW: Linking Debug ...
 Execute       llvm-ld C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.g.bc -hls-opt -except-internalize Sobel_filter -LC:/Xilinx/Vivado/2018.2/win64/lib -lhlsm -lhlsmc++ -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.g 
-Command       llvm-ld done; 2.374 sec.
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:15 . Memory (MB): peak = 104.438 ; gain = 47.340
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:15 . Memory (MB): peak = 104.438 ; gain = 47.340
+Command       llvm-ld done; 2.403 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:15 . Memory (MB): peak = 104.199 ; gain = 47.285
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:15 . Memory (MB): peak = 104.199 ; gain = 47.285
 Execute       ::config_rtl 
 Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 Execute         cleanup_all_models 
 INFO: [HLS 200-10] Starting code transformations ...
 Execute         transform -promote-dbg-pointer C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.pp.bc -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.pp.0.bc -f 
-Command         transform done; 0.676 sec.
+Command         transform done; 0.685 sec.
 Execute         llvm-ld C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.pp.0.bc -disable-opt -LC:/Xilinx/Vivado/2018.2/win64/lib -lfloatconversion -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.g.0 
-Command         llvm-ld done; 1.591 sec.
+Command         llvm-ld done; 1.635 sec.
 INFO-FLOW: Running Standard Transforms...
 Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top Sobel_filter -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.g.0.bc -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
 INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:622) in function 'hls::Mat<720, 1280, 0>::read()' completely.
@@ -281,8 +280,8 @@ INFO: [XFORM 203-603] Inlining function 'hls::filter2d_kernel::apply<unsigned ch
 INFO: [XFORM 203-603] Inlining function 'hls::filter_opr<hls::filter2d_kernel, hls::BORDER_DEFAULT>::filter<0, 0, ap_int<8>, int, 720, 1280, 3, 3>' into 'hls::Filter2D<hls::BORDER_DEFAULT, 0, 0, ap_int<8>, int, 720, 1280, 3, 3>' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277).
 INFO: [XFORM 203-603] Inlining function 'hls::kernel_addWeighted::apply<unsigned char, unsigned char, unsigned char, double>' into 'hls::arithm_pro<hls::kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361).
 INFO: [XFORM 203-603] Inlining function 'hls::kernel_CvtColor<HLS_GRAY2RGB, unsigned char, unsigned char>::apply<1, 3>' into 'hls::CvtColor<HLS_GRAY2RGB, 0, 4096, 720, 1280>' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1952).
-Command         transform done; 3.476 sec.
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:05 ; elapsed = 00:00:21 . Memory (MB): peak = 357.910 ; gain = 300.813
+Command         transform done; 3.807 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:05 ; elapsed = 00:00:21 . Memory (MB): peak = 357.785 ; gain = 300.871
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO-FLOW: Checking Synthesizability 1/2..
 Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.g.1.bc -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.g.2.prechk.bc -f 
@@ -303,13 +302,13 @@ INFO: [XFORM 203-602] Inlining function 'hls::sr_cast<unsigned char, double>' in
 INFO: [XFORM 203-602] Inlining function 'hls::sr_cast_class<ap_uint<8> >::operator()<8>' into 'hls::sr_cast_class<ap_uint<8> >::operator()' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:432) automatically.
 INFO: [XFORM 203-602] Inlining function 'hls::sr_cast_class<ap_uint<8> >::operator()' into 'hls::sr_cast<unsigned char, unsigned char>' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500) automatically.
 INFO: [XFORM 203-602] Inlining function 'hls::sr_cast<unsigned char, unsigned char>' into 'hls::CvtColor<HLS_GRAY2RGB, 0, 4096, 720, 1280>' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1534->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1952) automatically.
-Command         transform done; 1.126 sec.
+Command         transform done; 1.131 sec.
 INFO-FLOW: Checking Synthesizability 2/2..
 Execute         transform -syn-check C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.g.2.prechk.bc -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
 WARNING: [SYNCHK 200-23] C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429: variable-indexed range selection may cause suboptimal QoR.
 INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
-Command         transform done; 0.232 sec.
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:06 ; elapsed = 00:00:23 . Memory (MB): peak = 408.734 ; gain = 351.637
+Command         transform done; 0.237 sec.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:06 ; elapsed = 00:00:23 . Memory (MB): peak = 408.621 ; gain = 351.707
 INFO-FLOW: Compiler optimizing ...
 INFO-FLOW: Share syncheck's 1.bc for syn flow: copy C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.g.1.bc to C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.o.1.bc
 INFO-FLOW: Presyn 1...
@@ -457,13 +456,12 @@ WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 1280 for loop 'loop
 WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 720 for loop 'loop_height' in function 'hls::CvtColor<HLS_GRAY2RGB, 0, 4096, 720, 1280>'.
 WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 1280 for loop 'loop_width' in function 'hls::AddWeighted<720, 1280, 0, 0, 0, double>'.
 WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 720 for loop 'loop_height' in function 'hls::AddWeighted<720, 1280, 0, 0, 0, double>'.
-INFO: [XFORM 203-712] Applying dataflow to function 'Block__proc304305', detected/extracted 1 process function(s): 
-	 'hls::Mat2AXIvideo<24, 720, 1280, 4096>'.
-INFO: [XFORM 203-712] Applying dataflow to function 'Sobel_filter', detected/extracted 3 process function(s): 
-	 'Block__proc467'
-	 'hls::AXIvideo2Mat<24, 720, 1280, 4096>'
-	 'Block__proc304305'.
-Command         transform done; 3.761 sec.
+INFO: [XFORM 203-712] Applying dataflow to function 'Block__proc304', detected/extracted 2 process function(s): 
+	 'hls::AXIvideo2Mat<24, 720, 1280, 4096>487'
+	 'hls::Mat2AXIvideo<24, 720, 1280, 4096>514'.
+INFO: [XFORM 203-712] Applying dataflow to function 'Sobel_filter', detected/extracted 1 process function(s): 
+	 'Block__proc304'.
+Command         transform done; 3.842 sec.
 INFO-FLOW: Presyn 2...
 Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.o.1.tmp.bc -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
 WARNING: [XFORM 203-561] Updating loop lower bound from 10 to 1282 for loop 'loop_width' in function 'hls::Filter2D<hls::BORDER_DEFAULT, 0, 0, ap_int<8>, int, 720, 1280, 3, 3>'.
@@ -482,12 +480,17 @@ INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (C:/Xilinx/Viv
 INFO: [XFORM 203-602] Inlining function 'hls::sr_cast_class<ap_uint<8> >::operator().1' into 'hls::AddWeighted<720, 1280, 0, 0, 0, double>' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853) automatically.
 INFO: [XFORM 203-11] Balancing expressions in function 'hls::Filter2D<hls::BORDER_DEFAULT, 0, 0, ap_int<8>, int, 720, 1280, 3, 3>' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1269)...11 expression(s) balanced.
 INFO: [XFORM 203-11] Balancing expressions in function 'hls::Filter2D<hls::BORDER_DEFAULT, 0, 0, ap_fixed<16, 2, (ap_q_mode)0, (ap_o_mode)3, 0>, int, 720, 1280, 3, 3>' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:118:33)...4 expression(s) balanced.
-Command         transform done; 1.099 sec.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:09 ; elapsed = 00:00:27 . Memory (MB): peak = 525.250 ; gain = 468.152
+Command         transform done; 1.205 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:10 ; elapsed = 00:00:28 . Memory (MB): peak = 523.961 ; gain = 467.047
 INFO-FLOW: Building ssdm...
 Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -bitwidth -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -dead-allocation-elimination -cdfg-build C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.o.2.bc -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 1280 for loop 'loop_width' in function 'hls::Mat2AXIvideo<24, 720, 1280, 4096>'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 720 for loop 'loop_height' in function 'hls::Mat2AXIvideo<24, 720, 1280, 4096>'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 1280 for loop 'loop_width' in function 'hls::CvtColor<HLS_BGR2GRAY, 4096, 0, 720, 1280>'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 720 for loop 'loop_height' in function 'hls::CvtColor<HLS_BGR2GRAY, 4096, 0, 720, 1280>'.
 WARNING: [XFORM 203-631] Renaming function 'hls::Sobel<1, 0, 3, 0, 0, 720, 1280, 720, 1280>' to 'Sobel' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:2591:1)
 WARNING: [XFORM 203-631] Renaming function 'hls::Sobel<0, 1, 3, 0, 0, 720, 1280, 720, 1280>' to 'Sobel.1' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:2591:1)
+WARNING: [XFORM 203-631] Renaming function 'hls::Mat2AXIvideo<24, 720, 1280, 4096>514' to 'Mat2AXIvideo514' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:78:50)
 WARNING: [XFORM 203-631] Renaming function 'hls::Mat2AXIvideo<24, 720, 1280, 4096>' to 'Mat2AXIvideo' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:78:50)
 WARNING: [XFORM 203-631] Renaming function 'hls::GaussianBlur<3, 3, 0, 0, 720, 1280>' to 'GaussianBlur' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:2650:1)
 WARNING: [XFORM 203-631] Renaming function 'hls::Filter2D<hls::BORDER_DEFAULT, 0, 0, ap_int<8>, int, 720, 1280, 3, 3>' to 'Filter2D' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:118:33)
@@ -496,31 +499,36 @@ WARNING: [XFORM 203-631] Renaming function 'hls::Duplicate<720, 1280, 0, 0>' to 
 WARNING: [XFORM 203-631] Renaming function 'hls::CvtColor<HLS_GRAY2RGB, 0, 4096, 720, 1280>' to 'CvtColor' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:617:42)
 WARNING: [XFORM 203-631] Renaming function 'hls::CvtColor<HLS_BGR2GRAY, 4096, 0, 720, 1280>' to 'CvtColor.1' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:409:39)
 WARNING: [XFORM 203-631] Renaming function 'hls::AddWeighted<720, 1280, 0, 0, 0, double>' to 'AddWeighted' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:17:50)
+WARNING: [XFORM 203-631] Renaming function 'hls::AXIvideo2Mat<24, 720, 1280, 4096>487' to 'AXIvideo2Mat487' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:49:9)
 WARNING: [XFORM 203-631] Renaming function 'hls::AXIvideo2Mat<24, 720, 1280, 4096>' to 'AXIvideo2Mat' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:49:9)
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 1280 for loop 'loop_width' in function 'AXIvideo2Mat487'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 720 for loop 'loop_height' in function 'AXIvideo2Mat487'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 1280 for loop 'loop_width' in function 'AXIvideo2Mat'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 720 for loop 'loop_height' in function 'AXIvideo2Mat'.
 WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[5]' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[3]' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[4]' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
 WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[4]' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
 WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[3]' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[3]' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[4]' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
 WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[5]' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
-Command         transform done; 1.803 sec.
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:11 ; elapsed = 00:00:29 . Memory (MB): peak = 661.270 ; gain = 604.172
+Command         transform done; 2.305 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:12 ; elapsed = 00:00:30 . Memory (MB): peak = 668.852 ; gain = 611.938
 INFO-FLOW: Finish building internal data model.
-Command       opt_and_import_c done; 13.846 sec.
-Command     elaborate done; 28.541 sec.
+Command       opt_and_import_c done; 14.924 sec.
+Command     elaborate done; 29.288 sec.
 Execute     autosyn -from_csynth_design=1 
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO-FLOW: Synthesizing C/C++ design ...
 INFO: [HLS 200-10] Synthesizing 'Sobel_filter' ...
 Execute       ap_set_top_model Sobel_filter 
-WARNING: [SYN 201-103] Legalizing function name 'Block__proc467' to 'Block_proc467'.
 WARNING: [SYN 201-103] Legalizing function name 'CvtColor.1' to 'CvtColor_1'.
 WARNING: [SYN 201-103] Legalizing function name 'Filter2D.1' to 'Filter2D_1'.
 WARNING: [SYN 201-103] Legalizing function name 'Sobel.1' to 'Sobel_1'.
-WARNING: [SYN 201-103] Legalizing function name 'Block__proc304305' to 'Block_proc304305'.
+WARNING: [SYN 201-103] Legalizing function name 'Block__proc304' to 'Block_proc304'.
 Execute       get_model_list Sobel_filter -filter all-wo-channel -topdown 
 Execute       preproc_iomode -model Sobel_filter 
-Execute       preproc_iomode -model Block__proc304305 
+Execute       preproc_iomode -model Block__proc304 
+Execute       preproc_iomode -model Mat2AXIvideo 
 Execute       preproc_iomode -model CvtColor 
 Execute       preproc_iomode -model AddWeighted 
 Execute       preproc_iomode -model Sobel.1 
@@ -530,20 +538,20 @@ Execute       preproc_iomode -model Duplicate
 Execute       preproc_iomode -model GaussianBlur 
 Execute       preproc_iomode -model Filter2D.1 
 Execute       preproc_iomode -model CvtColor.1 
-Execute       preproc_iomode -model Mat2AXIvideo 
 Execute       preproc_iomode -model AXIvideo2Mat 
-Execute       preproc_iomode -model Block__proc467 
+Execute       preproc_iomode -model Mat2AXIvideo514 
+Execute       preproc_iomode -model AXIvideo2Mat487 
 Execute       get_model_list Sobel_filter -filter all-wo-channel 
-INFO-FLOW: Model list for configure: Block__proc467 AXIvideo2Mat Mat2AXIvideo CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Block__proc304305 Sobel_filter
-INFO-FLOW: Configuring Module : Block__proc467 ...
-Execute       set_default_model Block__proc467 
-Execute       apply_spec_resource_limit Block__proc467 
+INFO-FLOW: Model list for configure: AXIvideo2Mat487 Mat2AXIvideo514 AXIvideo2Mat CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Mat2AXIvideo Block__proc304 Sobel_filter
+INFO-FLOW: Configuring Module : AXIvideo2Mat487 ...
+Execute       set_default_model AXIvideo2Mat487 
+Execute       apply_spec_resource_limit AXIvideo2Mat487 
+INFO-FLOW: Configuring Module : Mat2AXIvideo514 ...
+Execute       set_default_model Mat2AXIvideo514 
+Execute       apply_spec_resource_limit Mat2AXIvideo514 
 INFO-FLOW: Configuring Module : AXIvideo2Mat ...
 Execute       set_default_model AXIvideo2Mat 
 Execute       apply_spec_resource_limit AXIvideo2Mat 
-INFO-FLOW: Configuring Module : Mat2AXIvideo ...
-Execute       set_default_model Mat2AXIvideo 
-Execute       apply_spec_resource_limit Mat2AXIvideo 
 INFO-FLOW: Configuring Module : CvtColor.1 ...
 Execute       set_default_model CvtColor.1 
 Execute       apply_spec_resource_limit CvtColor.1 
@@ -571,25 +579,28 @@ Execute       apply_spec_resource_limit AddWeighted
 INFO-FLOW: Configuring Module : CvtColor ...
 Execute       set_default_model CvtColor 
 Execute       apply_spec_resource_limit CvtColor 
-INFO-FLOW: Configuring Module : Block__proc304305 ...
-Execute       set_default_model Block__proc304305 
-Execute       apply_spec_resource_limit Block__proc304305 
+INFO-FLOW: Configuring Module : Mat2AXIvideo ...
+Execute       set_default_model Mat2AXIvideo 
+Execute       apply_spec_resource_limit Mat2AXIvideo 
+INFO-FLOW: Configuring Module : Block__proc304 ...
+Execute       set_default_model Block__proc304 
+Execute       apply_spec_resource_limit Block__proc304 
 INFO-FLOW: Configuring Module : Sobel_filter ...
 Execute       set_default_model Sobel_filter 
 Execute       apply_spec_resource_limit Sobel_filter 
-INFO-FLOW: Model list for preprocess: Block__proc467 AXIvideo2Mat Mat2AXIvideo CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Block__proc304305 Sobel_filter
-INFO-FLOW: Preprocessing Module: Block__proc467 ...
-Execute       set_default_model Block__proc467 
-Execute       cdfg_preprocess -model Block__proc467 
-Execute       rtl_gen_preprocess Block__proc467 
+INFO-FLOW: Model list for preprocess: AXIvideo2Mat487 Mat2AXIvideo514 AXIvideo2Mat CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Mat2AXIvideo Block__proc304 Sobel_filter
+INFO-FLOW: Preprocessing Module: AXIvideo2Mat487 ...
+Execute       set_default_model AXIvideo2Mat487 
+Execute       cdfg_preprocess -model AXIvideo2Mat487 
+Execute       rtl_gen_preprocess AXIvideo2Mat487 
+INFO-FLOW: Preprocessing Module: Mat2AXIvideo514 ...
+Execute       set_default_model Mat2AXIvideo514 
+Execute       cdfg_preprocess -model Mat2AXIvideo514 
+Execute       rtl_gen_preprocess Mat2AXIvideo514 
 INFO-FLOW: Preprocessing Module: AXIvideo2Mat ...
 Execute       set_default_model AXIvideo2Mat 
 Execute       cdfg_preprocess -model AXIvideo2Mat 
 Execute       rtl_gen_preprocess AXIvideo2Mat 
-INFO-FLOW: Preprocessing Module: Mat2AXIvideo ...
-Execute       set_default_model Mat2AXIvideo 
-Execute       cdfg_preprocess -model Mat2AXIvideo 
-Execute       rtl_gen_preprocess Mat2AXIvideo 
 INFO-FLOW: Preprocessing Module: CvtColor.1 ...
 Execute       set_default_model CvtColor.1 
 Execute       cdfg_preprocess -model CvtColor.1 
@@ -626,41 +637,82 @@ INFO-FLOW: Preprocessing Module: CvtColor ...
 Execute       set_default_model CvtColor 
 Execute       cdfg_preprocess -model CvtColor 
 Execute       rtl_gen_preprocess CvtColor 
-INFO-FLOW: Preprocessing Module: Block__proc304305 ...
-Execute       set_default_model Block__proc304305 
-Execute       cdfg_preprocess -model Block__proc304305 
-Execute       rtl_gen_preprocess Block__proc304305 
+INFO-FLOW: Preprocessing Module: Mat2AXIvideo ...
+Execute       set_default_model Mat2AXIvideo 
+Execute       cdfg_preprocess -model Mat2AXIvideo 
+Execute       rtl_gen_preprocess Mat2AXIvideo 
+INFO-FLOW: Preprocessing Module: Block__proc304 ...
+Execute       set_default_model Block__proc304 
+Execute       cdfg_preprocess -model Block__proc304 
+Execute       rtl_gen_preprocess Block__proc304 
 INFO-FLOW: Preprocessing Module: Sobel_filter ...
 Execute       set_default_model Sobel_filter 
 Execute       cdfg_preprocess -model Sobel_filter 
 Execute       rtl_gen_preprocess Sobel_filter 
-INFO-FLOW: Model list for synthesis: Block__proc467 AXIvideo2Mat Mat2AXIvideo CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Block__proc304305 Sobel_filter
+INFO-FLOW: Model list for synthesis: AXIvideo2Mat487 Mat2AXIvideo514 AXIvideo2Mat CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Mat2AXIvideo Block__proc304 Sobel_filter
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'Block_proc467' 
+INFO: [HLS 200-42] -- Implementing module 'AXIvideo2Mat487' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-Execute       set_default_model Block__proc467 
-Execute       schedule -model Block__proc467 
+Execute       set_default_model AXIvideo2Mat487 
+Execute       schedule -model AXIvideo2Mat487 
 INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_wait_for_start'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'loop_width'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'loop_wait_for_eol'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.138 sec.
-INFO: [HLS 200-111]  Elapsed time: 29.55 seconds; current allocated memory: 589.040 MB.
-Execute       report -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc467.verbose.sched.rpt -verbose -f 
-Execute       db_write -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc467.sched.adb -f 
-INFO-FLOW: Finish scheduling Block__proc467.
-Execute       set_default_model Block__proc467 
-Execute       bind -model Block__proc467 
+Command       schedule done; 0.225 sec.
+INFO: [HLS 200-111]  Elapsed time: 30.383 seconds; current allocated memory: 599.192 MB.
+Execute       report -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AXIvideo2Mat487.verbose.sched.rpt -verbose -f 
+WARNING: [HLS 200-433] Loop - loop_wait_for_start has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop.
+INFO: [HLS 200-434] Only 3 loops out of a total 4 loops have been pipelined in this design.
+Execute       db_write -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AXIvideo2Mat487.sched.adb -f 
+INFO-FLOW: Finish scheduling AXIvideo2Mat487.
+Execute       set_default_model AXIvideo2Mat487 
+Execute       bind -model AXIvideo2Mat487 
 BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
-BIND OPTION: model=Block__proc467
+BIND OPTION: model=AXIvideo2Mat487
 BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.137 seconds; current allocated memory: 589.137 MB.
-Execute       report -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc467.verbose.bind.rpt -verbose -f 
-Execute       db_write -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc467.bind.adb -f 
-INFO-FLOW: Finish binding Block__proc467.
+INFO: [HLS 200-111]  Elapsed time: 0.194 seconds; current allocated memory: 599.555 MB.
+Execute       report -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AXIvideo2Mat487.verbose.bind.rpt -verbose -f 
+WARNING: [HLS 200-433] Loop - loop_wait_for_start has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop.
+Execute       db_write -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AXIvideo2Mat487.bind.adb -f 
+INFO-FLOW: Finish binding AXIvideo2Mat487.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Mat2AXIvideo514' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model Mat2AXIvideo514 
+Execute       schedule -model Mat2AXIvideo514 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_width'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.171 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.327 seconds; current allocated memory: 599.734 MB.
+Execute       report -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo514.verbose.sched.rpt -verbose -f 
+Execute       db_write -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo514.sched.adb -f 
+INFO-FLOW: Finish scheduling Mat2AXIvideo514.
+Execute       set_default_model Mat2AXIvideo514 
+Execute       bind -model Mat2AXIvideo514 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=Mat2AXIvideo514
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.152 seconds; current allocated memory: 600.021 MB.
+Execute       report -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo514.verbose.bind.rpt -verbose -f 
+Execute       db_write -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo514.bind.adb -f 
+INFO-FLOW: Finish binding Mat2AXIvideo514.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'AXIvideo2Mat' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -674,11 +726,10 @@ INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
 INFO: [SCHED 204-61] Pipelining loop 'loop_wait_for_eol'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.265 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.373 seconds; current allocated memory: 589.451 MB.
+Command       schedule done; 0.175 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.302 seconds; current allocated memory: 600.296 MB.
 Execute       report -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AXIvideo2Mat.verbose.sched.rpt -verbose -f 
 WARNING: [HLS 200-433] Loop - loop_wait_for_start has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop.
-INFO: [HLS 200-434] Only 3 loops out of a total 4 loops have been pipelined in this design.
 Execute       db_write -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AXIvideo2Mat.sched.adb -f 
 INFO-FLOW: Finish scheduling AXIvideo2Mat.
 Execute       set_default_model AXIvideo2Mat 
@@ -691,39 +742,11 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 589.841 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.186 seconds; current allocated memory: 600.559 MB.
 Execute       report -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AXIvideo2Mat.verbose.bind.rpt -verbose -f 
 WARNING: [HLS 200-433] Loop - loop_wait_for_start has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop.
 Execute       db_write -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AXIvideo2Mat.bind.adb -f 
 INFO-FLOW: Finish binding AXIvideo2Mat.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'Mat2AXIvideo' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-Execute       set_default_model Mat2AXIvideo 
-Execute       schedule -model Mat2AXIvideo 
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'loop_width'.
-INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
-INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.167 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.32 seconds; current allocated memory: 589.998 MB.
-Execute       report -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo.verbose.sched.rpt -verbose -f 
-Execute       db_write -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo.sched.adb -f 
-INFO-FLOW: Finish scheduling Mat2AXIvideo.
-Execute       set_default_model Mat2AXIvideo 
-Execute       bind -model Mat2AXIvideo 
-BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
-BIND OPTION: model=Mat2AXIvideo
-BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 590.238 MB.
-Execute       report -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo.verbose.bind.rpt -verbose -f 
-Execute       db_write -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo.bind.adb -f 
-INFO-FLOW: Finish binding Mat2AXIvideo.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'CvtColor_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -738,8 +761,8 @@ WARNING: [SCHED 204-21] The critical path consists of the following:
 	'add' operation ('__Val2__', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1477->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1514->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1952) (3.82 ns)
 	'add' operation ('r.V', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1477->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1514->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1952) (3.82 ns)
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.217 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.344 seconds; current allocated memory: 590.529 MB.
+Command       schedule done; 0.169 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.32 seconds; current allocated memory: 600.811 MB.
 Execute       report -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/CvtColor_1.verbose.sched.rpt -verbose -f 
 Execute       db_write -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/CvtColor_1.sched.adb -f 
 INFO-FLOW: Finish scheduling CvtColor.1.
@@ -753,7 +776,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.161 seconds; current allocated memory: 590.756 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.174 seconds; current allocated memory: 601.045 MB.
 Execute       report -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/CvtColor_1.verbose.bind.rpt -verbose -f 
 Execute       db_write -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/CvtColor_1.bind.adb -f 
 INFO-FLOW: Finish binding CvtColor.1.
@@ -771,8 +794,8 @@ WARNING: [SCHED 204-21] The critical path consists of the following:
 	'add' operation ('tmp5', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:288->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:301->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:512->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277) (3.82 ns)
 	'add' operation ('op.V', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:288->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:301->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:512->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277) (2.49 ns)
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.222 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.363 seconds; current allocated memory: 591.702 MB.
+Command       schedule done; 0.223 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.36 seconds; current allocated memory: 601.970 MB.
 Execute       report -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Filter2D_1.verbose.sched.rpt -verbose -f 
 Execute       db_write -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Filter2D_1.sched.adb -f 
 INFO-FLOW: Finish scheduling Filter2D.1.
@@ -786,9 +809,9 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.271 seconds; current allocated memory: 592.398 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.276 seconds; current allocated memory: 602.666 MB.
 Execute       report -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Filter2D_1.verbose.bind.rpt -verbose -f 
-Command       report done; 0.106 sec.
+Command       report done; 0.112 sec.
 Execute       db_write -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Filter2D_1.bind.adb -f 
 INFO-FLOW: Finish binding Filter2D.1.
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -798,7 +821,7 @@ Execute       set_default_model GaussianBlur
 Execute       schedule -model GaussianBlur 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.293 seconds; current allocated memory: 592.514 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.303 seconds; current allocated memory: 602.766 MB.
 Execute       report -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/GaussianBlur.verbose.sched.rpt -verbose -f 
 Execute       db_write -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/GaussianBlur.sched.adb -f 
 INFO-FLOW: Finish scheduling GaussianBlur.
@@ -812,7 +835,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.146 seconds; current allocated memory: 592.559 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.154 seconds; current allocated memory: 602.848 MB.
 Execute       report -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/GaussianBlur.verbose.bind.rpt -verbose -f 
 Execute       db_write -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/GaussianBlur.bind.adb -f 
 INFO-FLOW: Finish binding GaussianBlur.
@@ -826,7 +849,7 @@ INFO: [SCHED 204-61] Pipelining loop 'loop_width'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
 INFO: [SCHED 204-11] Finished scheduling.
 Command       schedule done; 0.121 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.304 seconds; current allocated memory: 592.780 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.288 seconds; current allocated memory: 603.048 MB.
 Execute       report -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Duplicate.verbose.sched.rpt -verbose -f 
 Execute       db_write -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Duplicate.sched.adb -f 
 INFO-FLOW: Finish scheduling Duplicate.
@@ -840,7 +863,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.149 seconds; current allocated memory: 592.899 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.149 seconds; current allocated memory: 603.167 MB.
 Execute       report -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Duplicate.verbose.bind.rpt -verbose -f 
 Execute       db_write -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Duplicate.bind.adb -f 
 INFO-FLOW: Finish binding Duplicate.
@@ -856,11 +879,11 @@ WARNING: [SCHED 204-21] Estimated clock period (10.858ns) exceeds the target (ta
 WARNING: [SCHED 204-21] The critical path consists of the following:
 	'mul' operation ('r_V_8_0_2', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:287->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:301->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:512->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277) (3.36 ns)
 	'add' operation ('p_Val2_89_0_2', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:288->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:301->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:512->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277) (3.82 ns)
-	'add' operation ('tmp_38', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:288->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:301->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:512->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277) (0 ns)
+	'add' operation ('tmp_37', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:288->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:301->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:512->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277) (0 ns)
 	'add' operation ('tmp6', C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:409->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:302->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:512->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277) (3.68 ns)
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.224 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.35 seconds; current allocated memory: 593.750 MB.
+Command       schedule done; 0.239 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.367 seconds; current allocated memory: 604.054 MB.
 Execute       report -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Filter2D.verbose.sched.rpt -verbose -f 
 Execute       db_write -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Filter2D.sched.adb -f 
 INFO-FLOW: Finish scheduling Filter2D.
@@ -874,9 +897,9 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.269 seconds; current allocated memory: 594.430 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.28 seconds; current allocated memory: 604.734 MB.
 Execute       report -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Filter2D.verbose.bind.rpt -verbose -f 
-Command       report done; 0.108 sec.
+Command       report done; 0.104 sec.
 Execute       db_write -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Filter2D.bind.adb -f 
 INFO-FLOW: Finish binding Filter2D.
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -886,7 +909,7 @@ Execute       set_default_model Sobel
 Execute       schedule -model Sobel 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.294 seconds; current allocated memory: 594.570 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.295 seconds; current allocated memory: 604.853 MB.
 Execute       report -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel.verbose.sched.rpt -verbose -f 
 Execute       db_write -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel.sched.adb -f 
 INFO-FLOW: Finish scheduling Sobel.
@@ -900,7 +923,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 594.624 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.189 seconds; current allocated memory: 604.945 MB.
 Execute       report -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel.verbose.bind.rpt -verbose -f 
 Execute       db_write -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel.bind.adb -f 
 INFO-FLOW: Finish binding Sobel.
@@ -911,7 +934,7 @@ Execute       set_default_model Sobel.1
 Execute       schedule -model Sobel.1 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.199 seconds; current allocated memory: 594.743 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.196 seconds; current allocated memory: 605.032 MB.
 Execute       report -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_1.verbose.sched.rpt -verbose -f 
 Execute       db_write -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_1.sched.adb -f 
 INFO-FLOW: Finish scheduling Sobel.1.
@@ -925,7 +948,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.175 seconds; current allocated memory: 594.834 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.164 seconds; current allocated memory: 605.087 MB.
 Execute       report -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_1.verbose.bind.rpt -verbose -f 
 Execute       db_write -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_1.bind.adb -f 
 INFO-FLOW: Finish binding Sobel.1.
@@ -938,8 +961,8 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'loop_width'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 30.
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.214 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.385 seconds; current allocated memory: 595.799 MB.
+Command       schedule done; 0.215 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.387 seconds; current allocated memory: 606.067 MB.
 Execute       report -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AddWeighted.verbose.sched.rpt -verbose -f 
 Execute       db_write -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AddWeighted.sched.adb -f 
 INFO-FLOW: Finish scheduling AddWeighted.
@@ -953,9 +976,9 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.291 seconds; current allocated memory: 596.493 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.297 seconds; current allocated memory: 606.761 MB.
 Execute       report -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AddWeighted.verbose.bind.rpt -verbose -f 
-Command       report done; 0.133 sec.
+Command       report done; 0.136 sec.
 Execute       db_write -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AddWeighted.bind.adb -f 
 INFO-FLOW: Finish binding AddWeighted.
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -968,7 +991,7 @@ INFO: [SCHED 204-61] Pipelining loop 'loop_width'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
 INFO: [SCHED 204-11] Finished scheduling.
 Command       schedule done; 0.156 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.44 seconds; current allocated memory: 596.776 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.447 seconds; current allocated memory: 607.012 MB.
 Execute       report -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/CvtColor.verbose.sched.rpt -verbose -f 
 Execute       db_write -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/CvtColor.sched.adb -f 
 INFO-FLOW: Finish scheduling CvtColor.
@@ -982,37 +1005,65 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.154 seconds; current allocated memory: 596.905 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.162 seconds; current allocated memory: 607.142 MB.
 Execute       report -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/CvtColor.verbose.bind.rpt -verbose -f 
 Execute       db_write -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/CvtColor.bind.adb -f 
 INFO-FLOW: Finish binding CvtColor.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'Block_proc304305' 
+INFO: [HLS 200-42] -- Implementing module 'Mat2AXIvideo' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-Execute       set_default_model Block__proc304305 
-Execute       schedule -model Block__proc304305 
+Execute       set_default_model Mat2AXIvideo 
+Execute       schedule -model Mat2AXIvideo 
 INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_width'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.182 seconds; current allocated memory: 597.082 MB.
-Execute       report -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc304305.verbose.sched.rpt -verbose -f 
-Execute       db_write -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc304305.sched.adb -f 
-INFO-FLOW: Finish scheduling Block__proc304305.
-Execute       set_default_model Block__proc304305 
-Execute       bind -model Block__proc304305 
+Command       schedule done; 0.127 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.257 seconds; current allocated memory: 607.324 MB.
+Execute       report -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo.verbose.sched.rpt -verbose -f 
+Execute       db_write -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo.sched.adb -f 
+INFO-FLOW: Finish scheduling Mat2AXIvideo.
+Execute       set_default_model Mat2AXIvideo 
+Execute       bind -model Mat2AXIvideo 
 BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
-BIND OPTION: model=Block__proc304305
+BIND OPTION: model=Mat2AXIvideo
 BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.482 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.589 seconds; current allocated memory: 597.981 MB.
-Execute       report -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc304305.verbose.bind.rpt -verbose -f 
-Command       report done; 0.28 sec.
-Execute       db_write -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc304305.bind.adb -f 
-INFO-FLOW: Finish binding Block__proc304305.
+INFO: [HLS 200-111]  Elapsed time: 0.163 seconds; current allocated memory: 607.491 MB.
+Execute       report -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo.verbose.bind.rpt -verbose -f 
+Execute       db_write -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo.bind.adb -f 
+INFO-FLOW: Finish binding Mat2AXIvideo.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_proc304' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model Block__proc304 
+Execute       schedule -model Block__proc304 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.18 seconds; current allocated memory: 607.677 MB.
+Execute       report -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc304.verbose.sched.rpt -verbose -f 
+Execute       db_write -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc304.sched.adb -f 
+INFO-FLOW: Finish scheduling Block__proc304.
+Execute       set_default_model Block__proc304 
+Execute       bind -model Block__proc304 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=Block__proc304
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.579 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.688 seconds; current allocated memory: 608.769 MB.
+Execute       report -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc304.verbose.bind.rpt -verbose -f 
+Command       report done; 0.303 sec.
+Execute       db_write -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc304.bind.adb -f 
+INFO-FLOW: Finish binding Block__proc304.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'Sobel_filter' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -1020,7 +1071,7 @@ Execute       set_default_model Sobel_filter
 Execute       schedule -model Sobel_filter 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.437 seconds; current allocated memory: 598.464 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.462 seconds; current allocated memory: 609.206 MB.
 Execute       report -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.verbose.sched.rpt -verbose -f 
 Execute       db_write -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.sched.adb -f 
 INFO-FLOW: Finish scheduling Sobel_filter.
@@ -1034,17 +1085,17 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.263 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.365 seconds; current allocated memory: 598.970 MB.
+Command       bind done; 0.148 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.24 seconds; current allocated memory: 609.399 MB.
 Execute       report -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.verbose.bind.rpt -verbose -f 
-Command       report done; 0.286 sec.
+Command       report done; 0.297 sec.
 Execute       db_write -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.bind.adb -f 
 INFO-FLOW: Finish binding Sobel_filter.
 Execute       get_model_list Sobel_filter -filter all-wo-channel 
 INFO-FLOW: Preprocessing for RTLGen ...
-Execute       rtl_gen_preprocess Block__proc467 
+Execute       rtl_gen_preprocess AXIvideo2Mat487 
+Execute       rtl_gen_preprocess Mat2AXIvideo514 
 Execute       rtl_gen_preprocess AXIvideo2Mat 
-Execute       rtl_gen_preprocess Mat2AXIvideo 
 Execute       rtl_gen_preprocess CvtColor.1 
 Execute       rtl_gen_preprocess Filter2D.1 
 Execute       rtl_gen_preprocess GaussianBlur 
@@ -1054,26 +1105,46 @@ Execute       rtl_gen_preprocess Sobel
 Execute       rtl_gen_preprocess Sobel.1 
 Execute       rtl_gen_preprocess AddWeighted 
 Execute       rtl_gen_preprocess CvtColor 
-Execute       rtl_gen_preprocess Block__proc304305 
+Execute       rtl_gen_preprocess Mat2AXIvideo 
+Execute       rtl_gen_preprocess Block__proc304 
 Execute       rtl_gen_preprocess Sobel_filter 
-INFO-FLOW: Model list for RTL generation: Block__proc467 AXIvideo2Mat Mat2AXIvideo CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Block__proc304305 Sobel_filter
+INFO-FLOW: Model list for RTL generation: AXIvideo2Mat487 Mat2AXIvideo514 AXIvideo2Mat CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Mat2AXIvideo Block__proc304 Sobel_filter
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'Block_proc467' 
+INFO: [HLS 200-10] -- Generating RTL for module 'AXIvideo2Mat487' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute       get_config_rtl -prefix 
 Execute       get_config_rtl -auto_prefix 
-Execute       create_rtl_model Block__proc467 -vendor xilinx -mg_file C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc467.compgen.tcl 
-INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_proc467'.
-INFO: [HLS 200-111]  Elapsed time: 0.435 seconds; current allocated memory: 599.434 MB.
+Execute       create_rtl_model AXIvideo2Mat487 -vendor xilinx -mg_file C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AXIvideo2Mat487.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'AXIvideo2Mat487'.
+INFO: [HLS 200-111]  Elapsed time: 0.472 seconds; current allocated memory: 610.710 MB.
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.rtl_wrap.cfg.tcl 
-Execute       gen_rtl Block__proc467 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/systemc/Block_proc467 -synmodules Block__proc467 AXIvideo2Mat Mat2AXIvideo CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Block__proc304305 Sobel_filter 
-Execute       gen_rtl Block__proc467 -style xilinx -f -lang vhdl -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/vhdl/Block_proc467 
-Execute       gen_rtl Block__proc467 -style xilinx -f -lang vlog -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/verilog/Block_proc467 
-Execute       gen_tb_info Block__proc467 -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc467 -p C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db 
-Execute       report -model Block__proc467 -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/report/Block_proc467_csynth.rpt -f 
-Execute       report -model Block__proc467 -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/report/Block_proc467_csynth.xml -f -x 
-Execute       report -model Block__proc467 -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc467.verbose.rpt -verbose -f 
-Execute       db_write -model Block__proc467 -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc467.adb -f 
+Execute       gen_rtl AXIvideo2Mat487 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/systemc/AXIvideo2Mat487 -synmodules AXIvideo2Mat487 Mat2AXIvideo514 AXIvideo2Mat CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Mat2AXIvideo Block__proc304 Sobel_filter 
+Execute       gen_rtl AXIvideo2Mat487 -style xilinx -f -lang vhdl -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/vhdl/AXIvideo2Mat487 
+Execute       gen_rtl AXIvideo2Mat487 -style xilinx -f -lang vlog -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/verilog/AXIvideo2Mat487 
+Execute       gen_tb_info AXIvideo2Mat487 -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AXIvideo2Mat487 -p C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db 
+Execute       report -model AXIvideo2Mat487 -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/report/AXIvideo2Mat487_csynth.rpt -f 
+WARNING: [HLS 200-433] Loop - loop_wait_for_start has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop.
+Execute       report -model AXIvideo2Mat487 -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/report/AXIvideo2Mat487_csynth.xml -f -x 
+Execute       report -model AXIvideo2Mat487 -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AXIvideo2Mat487.verbose.rpt -verbose -f 
+WARNING: [HLS 200-433] Loop - loop_wait_for_start has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop.
+Execute       db_write -model AXIvideo2Mat487 -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AXIvideo2Mat487.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Mat2AXIvideo514' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model Mat2AXIvideo514 -vendor xilinx -mg_file C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo514.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Mat2AXIvideo514'.
+INFO: [HLS 200-111]  Elapsed time: 0.35 seconds; current allocated memory: 611.609 MB.
+Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.rtl_wrap.cfg.tcl 
+Execute       gen_rtl Mat2AXIvideo514 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/systemc/Mat2AXIvideo514 -synmodules AXIvideo2Mat487 Mat2AXIvideo514 AXIvideo2Mat CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Mat2AXIvideo Block__proc304 Sobel_filter 
+Execute       gen_rtl Mat2AXIvideo514 -style xilinx -f -lang vhdl -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/vhdl/Mat2AXIvideo514 
+Execute       gen_rtl Mat2AXIvideo514 -style xilinx -f -lang vlog -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/verilog/Mat2AXIvideo514 
+Execute       gen_tb_info Mat2AXIvideo514 -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo514 -p C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db 
+Execute       report -model Mat2AXIvideo514 -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/report/Mat2AXIvideo514_csynth.rpt -f 
+Execute       report -model Mat2AXIvideo514 -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/report/Mat2AXIvideo514_csynth.xml -f -x 
+Execute       report -model Mat2AXIvideo514 -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo514.verbose.rpt -verbose -f 
+Execute       db_write -model Mat2AXIvideo514 -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo514.adb -f 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'AXIvideo2Mat' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -1081,9 +1152,9 @@ Execute       get_config_rtl -prefix
 Execute       get_config_rtl -auto_prefix 
 Execute       create_rtl_model AXIvideo2Mat -vendor xilinx -mg_file C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AXIvideo2Mat.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'AXIvideo2Mat'.
-INFO: [HLS 200-111]  Elapsed time: 0.22 seconds; current allocated memory: 600.500 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.298 seconds; current allocated memory: 612.554 MB.
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.rtl_wrap.cfg.tcl 
-Execute       gen_rtl AXIvideo2Mat -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/systemc/AXIvideo2Mat -synmodules Block__proc467 AXIvideo2Mat Mat2AXIvideo CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Block__proc304305 Sobel_filter 
+Execute       gen_rtl AXIvideo2Mat -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/systemc/AXIvideo2Mat -synmodules AXIvideo2Mat487 Mat2AXIvideo514 AXIvideo2Mat CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Mat2AXIvideo Block__proc304 Sobel_filter 
 Execute       gen_rtl AXIvideo2Mat -style xilinx -f -lang vhdl -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/vhdl/AXIvideo2Mat 
 Execute       gen_rtl AXIvideo2Mat -style xilinx -f -lang vlog -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/verilog/AXIvideo2Mat 
 Execute       gen_tb_info AXIvideo2Mat -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AXIvideo2Mat -p C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db 
@@ -1093,23 +1164,6 @@ Execute       report -model AXIvideo2Mat -o C:/Digilent19/Hls/SobelVideoWorking/
 Execute       report -model AXIvideo2Mat -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AXIvideo2Mat.verbose.rpt -verbose -f 
 WARNING: [HLS 200-433] Loop - loop_wait_for_start has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop.
 Execute       db_write -model AXIvideo2Mat -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AXIvideo2Mat.adb -f 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'Mat2AXIvideo' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-Execute       get_config_rtl -prefix 
-Execute       get_config_rtl -auto_prefix 
-Execute       create_rtl_model Mat2AXIvideo -vendor xilinx -mg_file C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo.compgen.tcl 
-INFO: [RTGEN 206-100] Finished creating RTL model for 'Mat2AXIvideo'.
-INFO: [HLS 200-111]  Elapsed time: 0.34 seconds; current allocated memory: 601.388 MB.
-Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.rtl_wrap.cfg.tcl 
-Execute       gen_rtl Mat2AXIvideo -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/systemc/Mat2AXIvideo -synmodules Block__proc467 AXIvideo2Mat Mat2AXIvideo CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Block__proc304305 Sobel_filter 
-Execute       gen_rtl Mat2AXIvideo -style xilinx -f -lang vhdl -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/vhdl/Mat2AXIvideo 
-Execute       gen_rtl Mat2AXIvideo -style xilinx -f -lang vlog -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/verilog/Mat2AXIvideo 
-Execute       gen_tb_info Mat2AXIvideo -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo -p C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db 
-Execute       report -model Mat2AXIvideo -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/report/Mat2AXIvideo_csynth.rpt -f 
-Execute       report -model Mat2AXIvideo -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/report/Mat2AXIvideo_csynth.xml -f -x 
-Execute       report -model Mat2AXIvideo -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo.verbose.rpt -verbose -f 
-Execute       db_write -model Mat2AXIvideo -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo.adb -f 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'CvtColor_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -1123,9 +1177,9 @@ INFO: [RTGEN 206-100] Generating core module 'Sobel_filter_mac_cud': 1 instance(
 INFO: [RTGEN 206-100] Generating core module 'Sobel_filter_mac_dEe': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'Sobel_filter_mul_bkb': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'CvtColor_1'.
-INFO: [HLS 200-111]  Elapsed time: 0.347 seconds; current allocated memory: 601.856 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.421 seconds; current allocated memory: 612.986 MB.
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.rtl_wrap.cfg.tcl 
-Execute       gen_rtl CvtColor.1 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/systemc/CvtColor_1 -synmodules Block__proc467 AXIvideo2Mat Mat2AXIvideo CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Block__proc304305 Sobel_filter 
+Execute       gen_rtl CvtColor.1 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/systemc/CvtColor_1 -synmodules AXIvideo2Mat487 Mat2AXIvideo514 AXIvideo2Mat CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Mat2AXIvideo Block__proc304 Sobel_filter 
 Execute       gen_rtl CvtColor.1 -style xilinx -f -lang vhdl -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/vhdl/CvtColor_1 
 Execute       gen_rtl CvtColor.1 -style xilinx -f -lang vlog -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/verilog/CvtColor_1 
 Execute       gen_tb_info CvtColor.1 -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/CvtColor_1 -p C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db 
@@ -1153,19 +1207,19 @@ INFO: [RTGEN 206-100] Generating core module 'Sobel_filter_mac_lbW': 1 instance(
 INFO: [RTGEN 206-100] Generating core module 'Sobel_filter_mul_ibs': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'Sobel_filter_mux_hbi': 6 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'Filter2D_1'.
-Command       create_rtl_model done; 0.208 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.464 seconds; current allocated memory: 603.358 MB.
+Command       create_rtl_model done; 0.21 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.483 seconds; current allocated memory: 614.498 MB.
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.rtl_wrap.cfg.tcl 
-Execute       gen_rtl Filter2D.1 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/systemc/Filter2D_1 -synmodules Block__proc467 AXIvideo2Mat Mat2AXIvideo CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Block__proc304305 Sobel_filter 
+Execute       gen_rtl Filter2D.1 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/systemc/Filter2D_1 -synmodules AXIvideo2Mat487 Mat2AXIvideo514 AXIvideo2Mat CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Mat2AXIvideo Block__proc304 Sobel_filter 
 Execute       gen_rtl Filter2D.1 -style xilinx -f -lang vhdl -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/vhdl/Filter2D_1 
 Execute       gen_rtl Filter2D.1 -style xilinx -f -lang vlog -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/verilog/Filter2D_1 
 Execute       gen_tb_info Filter2D.1 -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Filter2D_1 -p C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db 
 Execute       report -model Filter2D.1 -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/report/Filter2D_1_csynth.rpt -f 
 Execute       report -model Filter2D.1 -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/report/Filter2D_1_csynth.xml -f -x 
 Execute       report -model Filter2D.1 -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Filter2D_1.verbose.rpt -verbose -f 
-Command       report done; 0.137 sec.
+Command       report done; 0.136 sec.
 Execute       db_write -model Filter2D.1 -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Filter2D_1.adb -f 
-Command       db_write done; 0.126 sec.
+Command       db_write done; 0.127 sec.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'GaussianBlur' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -1173,9 +1227,9 @@ Execute       get_config_rtl -prefix
 Execute       get_config_rtl -auto_prefix 
 Execute       create_rtl_model GaussianBlur -vendor xilinx -mg_file C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/GaussianBlur.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'GaussianBlur'.
-INFO: [HLS 200-111]  Elapsed time: 0.648 seconds; current allocated memory: 603.914 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.65 seconds; current allocated memory: 615.074 MB.
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.rtl_wrap.cfg.tcl 
-Execute       gen_rtl GaussianBlur -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/systemc/GaussianBlur -synmodules Block__proc467 AXIvideo2Mat Mat2AXIvideo CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Block__proc304305 Sobel_filter 
+Execute       gen_rtl GaussianBlur -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/systemc/GaussianBlur -synmodules AXIvideo2Mat487 Mat2AXIvideo514 AXIvideo2Mat CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Mat2AXIvideo Block__proc304 Sobel_filter 
 Execute       gen_rtl GaussianBlur -style xilinx -f -lang vhdl -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/vhdl/GaussianBlur 
 Execute       gen_rtl GaussianBlur -style xilinx -f -lang vlog -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/verilog/GaussianBlur 
 Execute       gen_tb_info GaussianBlur -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/GaussianBlur -p C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db 
@@ -1190,9 +1244,9 @@ Execute       get_config_rtl -prefix
 Execute       get_config_rtl -auto_prefix 
 Execute       create_rtl_model Duplicate -vendor xilinx -mg_file C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Duplicate.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'Duplicate'.
-INFO: [HLS 200-111]  Elapsed time: 0.269 seconds; current allocated memory: 604.248 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.275 seconds; current allocated memory: 615.396 MB.
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.rtl_wrap.cfg.tcl 
-Execute       gen_rtl Duplicate -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/systemc/Duplicate -synmodules Block__proc467 AXIvideo2Mat Mat2AXIvideo CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Block__proc304305 Sobel_filter 
+Execute       gen_rtl Duplicate -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/systemc/Duplicate -synmodules AXIvideo2Mat487 Mat2AXIvideo514 AXIvideo2Mat CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Mat2AXIvideo Block__proc304 Sobel_filter 
 Execute       gen_rtl Duplicate -style xilinx -f -lang vhdl -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/vhdl/Duplicate 
 Execute       gen_rtl Duplicate -style xilinx -f -lang vlog -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/verilog/Duplicate 
 Execute       gen_tb_info Duplicate -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Duplicate -p C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db 
@@ -1215,19 +1269,19 @@ INFO: [RTGEN 206-100] Generating core module 'Sobel_filter_mac_pcA': 1 instance(
 INFO: [RTGEN 206-100] Generating core module 'Sobel_filter_mac_qcK': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'Sobel_filter_mux_hbi': 6 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'Filter2D'.
-Command       create_rtl_model done; 0.189 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.423 seconds; current allocated memory: 605.596 MB.
+Command       create_rtl_model done; 0.149 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.401 seconds; current allocated memory: 616.743 MB.
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.rtl_wrap.cfg.tcl 
-Execute       gen_rtl Filter2D -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/systemc/Filter2D -synmodules Block__proc467 AXIvideo2Mat Mat2AXIvideo CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Block__proc304305 Sobel_filter 
+Execute       gen_rtl Filter2D -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/systemc/Filter2D -synmodules AXIvideo2Mat487 Mat2AXIvideo514 AXIvideo2Mat CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Mat2AXIvideo Block__proc304 Sobel_filter 
 Execute       gen_rtl Filter2D -style xilinx -f -lang vhdl -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/vhdl/Filter2D 
 Execute       gen_rtl Filter2D -style xilinx -f -lang vlog -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/verilog/Filter2D 
 Execute       gen_tb_info Filter2D -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Filter2D -p C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db 
 Execute       report -model Filter2D -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/report/Filter2D_csynth.rpt -f 
 Execute       report -model Filter2D -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/report/Filter2D_csynth.xml -f -x 
 Execute       report -model Filter2D -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Filter2D.verbose.rpt -verbose -f 
-Command       report done; 0.137 sec.
+Command       report done; 0.138 sec.
 Execute       db_write -model Filter2D -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Filter2D.adb -f 
-Command       db_write done; 0.135 sec.
+Command       db_write done; 0.137 sec.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'Sobel' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -1235,9 +1289,9 @@ Execute       get_config_rtl -prefix
 Execute       get_config_rtl -auto_prefix 
 Execute       create_rtl_model Sobel -vendor xilinx -mg_file C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'Sobel'.
-INFO: [HLS 200-111]  Elapsed time: 0.654 seconds; current allocated memory: 606.165 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.665 seconds; current allocated memory: 617.300 MB.
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.rtl_wrap.cfg.tcl 
-Execute       gen_rtl Sobel -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/systemc/Sobel -synmodules Block__proc467 AXIvideo2Mat Mat2AXIvideo CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Block__proc304305 Sobel_filter 
+Execute       gen_rtl Sobel -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/systemc/Sobel -synmodules AXIvideo2Mat487 Mat2AXIvideo514 AXIvideo2Mat CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Mat2AXIvideo Block__proc304 Sobel_filter 
 Execute       gen_rtl Sobel -style xilinx -f -lang vhdl -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/vhdl/Sobel 
 Execute       gen_rtl Sobel -style xilinx -f -lang vlog -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/verilog/Sobel 
 Execute       gen_tb_info Sobel -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel -p C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db 
@@ -1252,9 +1306,9 @@ Execute       get_config_rtl -prefix
 Execute       get_config_rtl -auto_prefix 
 Execute       create_rtl_model Sobel.1 -vendor xilinx -mg_file C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_1.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'Sobel_1'.
-INFO: [HLS 200-111]  Elapsed time: 0.27 seconds; current allocated memory: 606.432 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.285 seconds; current allocated memory: 617.567 MB.
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.rtl_wrap.cfg.tcl 
-Execute       gen_rtl Sobel.1 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/systemc/Sobel_1 -synmodules Block__proc467 AXIvideo2Mat Mat2AXIvideo CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Block__proc304305 Sobel_filter 
+Execute       gen_rtl Sobel.1 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/systemc/Sobel_1 -synmodules AXIvideo2Mat487 Mat2AXIvideo514 AXIvideo2Mat CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Mat2AXIvideo Block__proc304 Sobel_filter 
 Execute       gen_rtl Sobel.1 -style xilinx -f -lang vhdl -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/vhdl/Sobel_1 
 Execute       gen_rtl Sobel.1 -style xilinx -f -lang vlog -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/verilog/Sobel_1 
 Execute       gen_tb_info Sobel.1 -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_1 -p C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db 
@@ -1275,19 +1329,19 @@ INFO: [RTGEN 206-100] Generating core module 'Sobel_filter_daddrcU': 2 instance(
 INFO: [RTGEN 206-100] Generating core module 'Sobel_filter_dmulsc4': 2 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'Sobel_filter_sitotde': 2 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'AddWeighted'.
-Command       create_rtl_model done; 0.131 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.384 seconds; current allocated memory: 607.909 MB.
+Command       create_rtl_model done; 0.134 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.395 seconds; current allocated memory: 619.082 MB.
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.rtl_wrap.cfg.tcl 
-Execute       gen_rtl AddWeighted -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/systemc/AddWeighted -synmodules Block__proc467 AXIvideo2Mat Mat2AXIvideo CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Block__proc304305 Sobel_filter 
+Execute       gen_rtl AddWeighted -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/systemc/AddWeighted -synmodules AXIvideo2Mat487 Mat2AXIvideo514 AXIvideo2Mat CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Mat2AXIvideo Block__proc304 Sobel_filter 
 Execute       gen_rtl AddWeighted -style xilinx -f -lang vhdl -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/vhdl/AddWeighted 
 Execute       gen_rtl AddWeighted -style xilinx -f -lang vlog -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/verilog/AddWeighted 
 Execute       gen_tb_info AddWeighted -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AddWeighted -p C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db 
 Execute       report -model AddWeighted -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/report/AddWeighted_csynth.rpt -f 
 Execute       report -model AddWeighted -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/report/AddWeighted_csynth.xml -f -x 
 Execute       report -model AddWeighted -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AddWeighted.verbose.rpt -verbose -f 
-Command       report done; 0.167 sec.
+Command       report done; 0.166 sec.
 Execute       db_write -model AddWeighted -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AddWeighted.adb -f 
-Command       db_write done; 0.138 sec.
+Command       db_write done; 0.141 sec.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'CvtColor' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -1295,9 +1349,9 @@ Execute       get_config_rtl -prefix
 Execute       get_config_rtl -auto_prefix 
 Execute       create_rtl_model CvtColor -vendor xilinx -mg_file C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/CvtColor.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'CvtColor'.
-INFO: [HLS 200-111]  Elapsed time: 0.673 seconds; current allocated memory: 608.591 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.677 seconds; current allocated memory: 619.762 MB.
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.rtl_wrap.cfg.tcl 
-Execute       gen_rtl CvtColor -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/systemc/CvtColor -synmodules Block__proc467 AXIvideo2Mat Mat2AXIvideo CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Block__proc304305 Sobel_filter 
+Execute       gen_rtl CvtColor -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/systemc/CvtColor -synmodules AXIvideo2Mat487 Mat2AXIvideo514 AXIvideo2Mat CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Mat2AXIvideo Block__proc304 Sobel_filter 
 Execute       gen_rtl CvtColor -style xilinx -f -lang vhdl -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/vhdl/CvtColor 
 Execute       gen_rtl CvtColor -style xilinx -f -lang vlog -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/verilog/CvtColor 
 Execute       gen_tb_info CvtColor -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/CvtColor -p C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db 
@@ -1306,28 +1360,43 @@ Execute       report -model CvtColor -o C:/Digilent19/Hls/SobelVideoWorking/solu
 Execute       report -model CvtColor -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/CvtColor.verbose.rpt -verbose -f 
 Execute       db_write -model CvtColor -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/CvtColor.adb -f 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'Block_proc304305' 
+INFO: [HLS 200-10] -- Generating RTL for module 'Mat2AXIvideo' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute       get_config_rtl -prefix 
 Execute       get_config_rtl -auto_prefix 
-Execute       create_rtl_model Block__proc304305 -vendor xilinx -mg_file C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc304305.compgen.tcl 
-INFO: [SYN 201-210] Renamed object name 'start_for_Mat2AXIvideo_U0' to 'start_for_Mat2AXIudo' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'start_for_Duplicate_U0' to 'start_for_Duplicavdy' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'start_for_Sobel_1_U0' to 'start_for_Sobel_1wdI' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'start_for_AddWeighted_U0' to 'start_for_AddWeigxdS' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'start_for_CvtColor_U0' to 'start_for_CvtColoyd2' due to the length limit 20
-INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_proc304305'.
-INFO: [HLS 200-111]  Elapsed time: 0.342 seconds; current allocated memory: 609.584 MB.
+Execute       create_rtl_model Mat2AXIvideo -vendor xilinx -mg_file C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Mat2AXIvideo'.
+INFO: [HLS 200-111]  Elapsed time: 0.298 seconds; current allocated memory: 620.553 MB.
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.rtl_wrap.cfg.tcl 
-Execute       gen_rtl Block__proc304305 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/systemc/Block_proc304305 -synmodules Block__proc467 AXIvideo2Mat Mat2AXIvideo CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Block__proc304305 Sobel_filter 
-Execute       gen_rtl Block__proc304305 -style xilinx -f -lang vhdl -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/vhdl/Block_proc304305 
-Execute       gen_rtl Block__proc304305 -style xilinx -f -lang vlog -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/verilog/Block_proc304305 
-Execute       gen_tb_info Block__proc304305 -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc304305 -p C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db 
-Execute       report -model Block__proc304305 -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/report/Block_proc304305_csynth.rpt -f 
-Execute       report -model Block__proc304305 -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/report/Block_proc304305_csynth.xml -f -x 
-Execute       report -model Block__proc304305 -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc304305.verbose.rpt -verbose -f 
-Command       report done; 0.295 sec.
-Execute       db_write -model Block__proc304305 -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc304305.adb -f 
+Execute       gen_rtl Mat2AXIvideo -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/systemc/Mat2AXIvideo -synmodules AXIvideo2Mat487 Mat2AXIvideo514 AXIvideo2Mat CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Mat2AXIvideo Block__proc304 Sobel_filter 
+Execute       gen_rtl Mat2AXIvideo -style xilinx -f -lang vhdl -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/vhdl/Mat2AXIvideo 
+Execute       gen_rtl Mat2AXIvideo -style xilinx -f -lang vlog -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/verilog/Mat2AXIvideo 
+Execute       gen_tb_info Mat2AXIvideo -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo -p C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db 
+Execute       report -model Mat2AXIvideo -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/report/Mat2AXIvideo_csynth.rpt -f 
+Execute       report -model Mat2AXIvideo -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/report/Mat2AXIvideo_csynth.xml -f -x 
+Execute       report -model Mat2AXIvideo -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo.verbose.rpt -verbose -f 
+Execute       db_write -model Mat2AXIvideo -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Block_proc304' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model Block__proc304 -vendor xilinx -mg_file C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc304.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'start_for_Mat2AXIvideo514_U0' to 'start_for_Mat2AXIudo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_Mat2AXIvideo_U0' to 'start_for_Mat2AXIvdy' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_proc304'.
+INFO: [HLS 200-111]  Elapsed time: 0.374 seconds; current allocated memory: 621.684 MB.
+Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.rtl_wrap.cfg.tcl 
+Execute       gen_rtl Block__proc304 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/systemc/Block_proc304 -synmodules AXIvideo2Mat487 Mat2AXIvideo514 AXIvideo2Mat CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Mat2AXIvideo Block__proc304 Sobel_filter 
+Execute       gen_rtl Block__proc304 -style xilinx -f -lang vhdl -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/vhdl/Block_proc304 
+Execute       gen_rtl Block__proc304 -style xilinx -f -lang vlog -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/verilog/Block_proc304 
+Execute       gen_tb_info Block__proc304 -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc304 -p C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db 
+Execute       report -model Block__proc304 -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/report/Block_proc304_csynth.rpt -f 
+Execute       report -model Block__proc304 -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/report/Block_proc304_csynth.xml -f -x 
+Execute       report -model Block__proc304 -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc304.verbose.rpt -verbose -f 
+Command       report done; 0.326 sec.
+Execute       db_write -model Block__proc304 -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc304.adb -f 
+Command       db_write done; 0.115 sec.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'Sobel_filter' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -1350,34 +1419,32 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'Sobel_filter/OUTPUT_STREAM
 INFO: [RTGEN 206-500] Setting interface mode on port 'Sobel_filter/OUTPUT_STREAM_V_dest_V' to 'axis' (register, both mode).
 INFO: [RTGEN 206-500] Setting interface mode on port 'Sobel_filter/enable_V' to 'ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'Sobel_filter' to 'ap_ctrl_hs'.
-WARNING: [RTGEN 206-101] RTL name 'fifo_w8_d2_A' is changed to 'fifo_w8_d2_A_x' due to conflict.
-INFO: [SYN 201-210] Renamed object name 'start_for_Block_proc304305_U0' to 'start_for_Block_pzec' due to the length limit 20
 INFO: [RTGEN 206-100] Finished creating RTL model for 'Sobel_filter'.
-Command       create_rtl_model done; 0.244 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.833 seconds; current allocated memory: 610.687 MB.
+Command       create_rtl_model done; 0.225 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.899 seconds; current allocated memory: 622.331 MB.
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.rtl_wrap.cfg.tcl 
-Execute       gen_rtl Sobel_filter -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/systemc/Sobel_filter -synmodules Block__proc467 AXIvideo2Mat Mat2AXIvideo CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Block__proc304305 Sobel_filter 
+Execute       gen_rtl Sobel_filter -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/systemc/Sobel_filter -synmodules AXIvideo2Mat487 Mat2AXIvideo514 AXIvideo2Mat CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Mat2AXIvideo Block__proc304 Sobel_filter 
 Execute       gen_rtl Sobel_filter -istop -style xilinx -f -lang vhdl -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/vhdl/Sobel_filter 
 Execute       gen_rtl Sobel_filter -istop -style xilinx -f -lang vlog -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/verilog/Sobel_filter 
 Execute       export_constraint_db -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.constraint.tcl -f -tool general 
 Execute       report -model Sobel_filter -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.design.xml -verbose -f -dv 
-Command       report done; 0.261 sec.
+Command       report done; 0.27 sec.
 Execute       report -model Sobel_filter -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.sdaccel.xml -verbose -f -sdaccel 
 Execute       gen_tb_info Sobel_filter -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter -p C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db 
 Execute       report -model Sobel_filter -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/report/Sobel_filter_csynth.rpt -f 
 Execute       report -model Sobel_filter -o C:/Digilent19/Hls/SobelVideoWorking/solution1/syn/report/Sobel_filter_csynth.xml -f -x 
 Execute       report -model Sobel_filter -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.verbose.rpt -verbose -f 
-Command       report done; 0.306 sec.
+Command       report done; 0.297 sec.
 Execute       db_write -model Sobel_filter -o C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.adb -f 
 Execute       sc_get_clocks Sobel_filter 
 Execute       sc_get_portdomain Sobel_filter 
-INFO-FLOW: Model list for RTL component generation: Block__proc467 AXIvideo2Mat Mat2AXIvideo CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Block__proc304305 Sobel_filter
-INFO-FLOW: Handling components in module [Block_proc467] ... 
-Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc467.compgen.tcl 
+INFO-FLOW: Model list for RTL component generation: AXIvideo2Mat487 Mat2AXIvideo514 AXIvideo2Mat CvtColor.1 Filter2D.1 GaussianBlur Duplicate Filter2D Sobel Sobel.1 AddWeighted CvtColor Mat2AXIvideo Block__proc304 Sobel_filter
+INFO-FLOW: Handling components in module [AXIvideo2Mat487] ... 
+Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AXIvideo2Mat487.compgen.tcl 
+INFO-FLOW: Handling components in module [Mat2AXIvideo514] ... 
+Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo514.compgen.tcl 
 INFO-FLOW: Handling components in module [AXIvideo2Mat] ... 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AXIvideo2Mat.compgen.tcl 
-INFO-FLOW: Handling components in module [Mat2AXIvideo] ... 
-Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo.compgen.tcl 
 INFO-FLOW: Handling components in module [CvtColor_1] ... 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/CvtColor_1.compgen.tcl 
 INFO-FLOW: Found component Sobel_filter_mul_bkb.
@@ -1424,8 +1491,20 @@ INFO-FLOW: Found component Sobel_filter_sitotde.
 INFO-FLOW: Append model Sobel_filter_sitotde
 INFO-FLOW: Handling components in module [CvtColor] ... 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/CvtColor.compgen.tcl 
-INFO-FLOW: Handling components in module [Block_proc304305] ... 
-Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc304305.compgen.tcl 
+INFO-FLOW: Handling components in module [Mat2AXIvideo] ... 
+Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo.compgen.tcl 
+INFO-FLOW: Handling components in module [Block_proc304] ... 
+Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc304.compgen.tcl 
+INFO-FLOW: Found component fifo_w8_d2_A.
+INFO-FLOW: Append model fifo_w8_d2_A
+INFO-FLOW: Found component fifo_w8_d2_A.
+INFO-FLOW: Append model fifo_w8_d2_A
+INFO-FLOW: Found component fifo_w8_d2_A.
+INFO-FLOW: Append model fifo_w8_d2_A
+INFO-FLOW: Found component fifo_w11_d2_A.
+INFO-FLOW: Append model fifo_w11_d2_A
+INFO-FLOW: Found component fifo_w12_d2_A.
+INFO-FLOW: Append model fifo_w12_d2_A
 INFO-FLOW: Found component fifo_w8_d2_A.
 INFO-FLOW: Append model fifo_w8_d2_A
 INFO-FLOW: Found component fifo_w8_d2_A.
@@ -1448,43 +1527,13 @@ INFO-FLOW: Found component fifo_w8_d2_A.
 INFO-FLOW: Append model fifo_w8_d2_A
 INFO-FLOW: Found component start_for_Mat2AXIudo.
 INFO-FLOW: Append model start_for_Mat2AXIudo
-INFO-FLOW: Found component start_for_Duplicavdy.
-INFO-FLOW: Append model start_for_Duplicavdy
-INFO-FLOW: Found component start_for_Sobel_U0.
-INFO-FLOW: Append model start_for_Sobel_U0
-INFO-FLOW: Found component start_for_Sobel_1wdI.
-INFO-FLOW: Append model start_for_Sobel_1wdI
-INFO-FLOW: Found component start_for_AddWeigxdS.
-INFO-FLOW: Append model start_for_AddWeigxdS
-INFO-FLOW: Found component start_for_CvtColoyd2.
-INFO-FLOW: Append model start_for_CvtColoyd2
+INFO-FLOW: Found component start_for_Mat2AXIvdy.
+INFO-FLOW: Append model start_for_Mat2AXIvdy
 INFO-FLOW: Handling components in module [Sobel_filter] ... 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.compgen.tcl 
-INFO-FLOW: Found component fifo_w11_d2_A.
-INFO-FLOW: Append model fifo_w11_d2_A
-INFO-FLOW: Found component fifo_w12_d2_A.
-INFO-FLOW: Append model fifo_w12_d2_A
-INFO-FLOW: Found component fifo_w11_d3_A.
-INFO-FLOW: Append model fifo_w11_d3_A
-INFO-FLOW: Found component fifo_w12_d3_A.
-INFO-FLOW: Append model fifo_w12_d3_A
-INFO-FLOW: Found component fifo_w1_d3_A.
-INFO-FLOW: Append model fifo_w1_d3_A
-INFO-FLOW: Found component fifo_w8_d2_A_x.
-INFO-FLOW: Append model fifo_w8_d2_A_x
-INFO-FLOW: Found component fifo_w8_d2_A_x.
-INFO-FLOW: Append model fifo_w8_d2_A_x
-INFO-FLOW: Found component fifo_w8_d2_A_x.
-INFO-FLOW: Append model fifo_w8_d2_A_x
-INFO-FLOW: Found component fifo_w11_d2_A.
-INFO-FLOW: Append model fifo_w11_d2_A
-INFO-FLOW: Found component fifo_w12_d2_A.
-INFO-FLOW: Append model fifo_w12_d2_A
-INFO-FLOW: Found component start_for_Block_pzec.
-INFO-FLOW: Append model start_for_Block_pzec
-INFO-FLOW: Append model Block_proc467
+INFO-FLOW: Append model AXIvideo2Mat487
+INFO-FLOW: Append model Mat2AXIvideo514
 INFO-FLOW: Append model AXIvideo2Mat
-INFO-FLOW: Append model Mat2AXIvideo
 INFO-FLOW: Append model CvtColor_1
 INFO-FLOW: Append model Filter2D_1
 INFO-FLOW: Append model GaussianBlur
@@ -1494,10 +1543,11 @@ INFO-FLOW: Append model Sobel
 INFO-FLOW: Append model Sobel_1
 INFO-FLOW: Append model AddWeighted
 INFO-FLOW: Append model CvtColor
-INFO-FLOW: Append model Block_proc304305
+INFO-FLOW: Append model Mat2AXIvideo
+INFO-FLOW: Append model Block_proc304
 INFO-FLOW: Append model Sobel_filter
 INFO-FLOW: Generating RTL model list ...
-INFO-FLOW: All models in this session: Sobel_filter_mul_bkb Sobel_filter_mac_cud Sobel_filter_mac_dEe Sobel_filter_mux_hbi Sobel_filter_mul_ibs Sobel_filter_ama_jbC Sobel_filter_mac_kbM Sobel_filter_mac_lbW Filter2D_1_k_buf_eOg Sobel_filter_mac_pcA Sobel_filter_mac_qcK Sobel_filter_daddrcU Sobel_filter_dmulsc4 Sobel_filter_sitotde fifo_w8_d2_A fifo_w8_d2_A fifo_w8_d2_A fifo_w8_d2_A fifo_w8_d2_A fifo_w8_d2_A fifo_w8_d2_A fifo_w8_d2_A fifo_w8_d2_A fifo_w8_d2_A start_for_Mat2AXIudo start_for_Duplicavdy start_for_Sobel_U0 start_for_Sobel_1wdI start_for_AddWeigxdS start_for_CvtColoyd2 fifo_w11_d2_A fifo_w12_d2_A fifo_w11_d3_A fifo_w12_d3_A fifo_w1_d3_A fifo_w8_d2_A_x fifo_w8_d2_A_x fifo_w8_d2_A_x fifo_w11_d2_A fifo_w12_d2_A start_for_Block_pzec Block_proc467 AXIvideo2Mat Mat2AXIvideo CvtColor_1 Filter2D_1 GaussianBlur Duplicate Filter2D Sobel Sobel_1 AddWeighted CvtColor Block_proc304305 Sobel_filter
+INFO-FLOW: All models in this session: Sobel_filter_mul_bkb Sobel_filter_mac_cud Sobel_filter_mac_dEe Sobel_filter_mux_hbi Sobel_filter_mul_ibs Sobel_filter_ama_jbC Sobel_filter_mac_kbM Sobel_filter_mac_lbW Filter2D_1_k_buf_eOg Sobel_filter_mac_pcA Sobel_filter_mac_qcK Sobel_filter_daddrcU Sobel_filter_dmulsc4 Sobel_filter_sitotde fifo_w8_d2_A fifo_w8_d2_A fifo_w8_d2_A fifo_w11_d2_A fifo_w12_d2_A fifo_w8_d2_A fifo_w8_d2_A fifo_w8_d2_A fifo_w8_d2_A fifo_w8_d2_A fifo_w8_d2_A fifo_w8_d2_A fifo_w8_d2_A fifo_w8_d2_A fifo_w8_d2_A start_for_Mat2AXIudo start_for_Mat2AXIvdy AXIvideo2Mat487 Mat2AXIvideo514 AXIvideo2Mat CvtColor_1 Filter2D_1 GaussianBlur Duplicate Filter2D Sobel Sobel_1 AddWeighted CvtColor Mat2AXIvideo Block_proc304 Sobel_filter
 INFO-FLOW: To file: write model Sobel_filter_mul_bkb
 INFO-FLOW: To file: write model Sobel_filter_mac_cud
 INFO-FLOW: To file: write model Sobel_filter_mac_dEe
@@ -1515,6 +1565,11 @@ INFO-FLOW: To file: write model Sobel_filter_sitotde
 INFO-FLOW: To file: write model fifo_w8_d2_A
 INFO-FLOW: To file: write model fifo_w8_d2_A
 INFO-FLOW: To file: write model fifo_w8_d2_A
+INFO-FLOW: To file: write model fifo_w11_d2_A
+INFO-FLOW: To file: write model fifo_w12_d2_A
+INFO-FLOW: To file: write model fifo_w8_d2_A
+INFO-FLOW: To file: write model fifo_w8_d2_A
+INFO-FLOW: To file: write model fifo_w8_d2_A
 INFO-FLOW: To file: write model fifo_w8_d2_A
 INFO-FLOW: To file: write model fifo_w8_d2_A
 INFO-FLOW: To file: write model fifo_w8_d2_A
@@ -1523,25 +1578,10 @@ INFO-FLOW: To file: write model fifo_w8_d2_A
 INFO-FLOW: To file: write model fifo_w8_d2_A
 INFO-FLOW: To file: write model fifo_w8_d2_A
 INFO-FLOW: To file: write model start_for_Mat2AXIudo
-INFO-FLOW: To file: write model start_for_Duplicavdy
-INFO-FLOW: To file: write model start_for_Sobel_U0
-INFO-FLOW: To file: write model start_for_Sobel_1wdI
-INFO-FLOW: To file: write model start_for_AddWeigxdS
-INFO-FLOW: To file: write model start_for_CvtColoyd2
-INFO-FLOW: To file: write model fifo_w11_d2_A
-INFO-FLOW: To file: write model fifo_w12_d2_A
-INFO-FLOW: To file: write model fifo_w11_d3_A
-INFO-FLOW: To file: write model fifo_w12_d3_A
-INFO-FLOW: To file: write model fifo_w1_d3_A
-INFO-FLOW: To file: write model fifo_w8_d2_A_x
-INFO-FLOW: To file: write model fifo_w8_d2_A_x
-INFO-FLOW: To file: write model fifo_w8_d2_A_x
-INFO-FLOW: To file: write model fifo_w11_d2_A
-INFO-FLOW: To file: write model fifo_w12_d2_A
-INFO-FLOW: To file: write model start_for_Block_pzec
-INFO-FLOW: To file: write model Block_proc467
+INFO-FLOW: To file: write model start_for_Mat2AXIvdy
+INFO-FLOW: To file: write model AXIvideo2Mat487
+INFO-FLOW: To file: write model Mat2AXIvideo514
 INFO-FLOW: To file: write model AXIvideo2Mat
-INFO-FLOW: To file: write model Mat2AXIvideo
 INFO-FLOW: To file: write model CvtColor_1
 INFO-FLOW: To file: write model Filter2D_1
 INFO-FLOW: To file: write model GaussianBlur
@@ -1551,7 +1591,8 @@ INFO-FLOW: To file: write model Sobel
 INFO-FLOW: To file: write model Sobel_1
 INFO-FLOW: To file: write model AddWeighted
 INFO-FLOW: To file: write model CvtColor
-INFO-FLOW: To file: write model Block_proc304305
+INFO-FLOW: To file: write model Mat2AXIvideo
+INFO-FLOW: To file: write model Block_proc304
 INFO-FLOW: To file: write model Sobel_filter
 INFO-FLOW: Finished generating RTL model list.
 
@@ -1588,23 +1629,29 @@ Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/x
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/global.setting.tcl 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/global.setting.tcl 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/global.setting.tcl 
-Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc467.compgen.tcl 
+Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AXIvideo2Mat487.compgen.tcl 
+Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo514.compgen.tcl 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AXIvideo2Mat.compgen.tcl 
-Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo.compgen.tcl 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/CvtColor_1.compgen.tcl 
-Command       ap_source done; 0.117 sec.
+Command       ap_source done; 0.108 sec.
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Filter2D_1.compgen.tcl 
 INFO: [RTMG 210-278] Implementing memory 'Filter2D_1_k_buf_eOg_ram (RAM)' using block RAMs.
-Command       ap_source done; 0.18 sec.
+Command       ap_source done; 0.165 sec.
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/GaussianBlur.compgen.tcl 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Duplicate.compgen.tcl 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Filter2D.compgen.tcl 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel.compgen.tcl 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_1.compgen.tcl 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AddWeighted.compgen.tcl 
-Command       ap_source done; 0.164 sec.
+Command       ap_source done; 0.163 sec.
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/CvtColor.compgen.tcl 
-Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc304305.compgen.tcl 
+Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo.compgen.tcl 
+Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc304.compgen.tcl 
+INFO: [RTMG 210-285] Implementing FIFO 'img_0_data_stream_0_U(fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_0_data_stream_1_U(fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_0_data_stream_2_U(fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_0_rows_V1_c_U(fifo_w11_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_0_cols_V2_c_U(fifo_w12_d2_A)' using Shift Registers.
 INFO: [RTMG 210-285] Implementing FIFO 'img_1_data_stream_0_U(fifo_w8_d2_A)' using Shift Registers.
 INFO: [RTMG 210-285] Implementing FIFO 'img_2_data_stream_0_U(fifo_w8_d2_A)' using Shift Registers.
 INFO: [RTMG 210-285] Implementing FIFO 'img_2a_data_stream_0_U(fifo_w8_d2_A)' using Shift Registers.
@@ -1616,25 +1663,9 @@ INFO: [RTMG 210-285] Implementing FIFO 'img_6_data_stream_0_U(fifo_w8_d2_A)' usi
 INFO: [RTMG 210-285] Implementing FIFO 'img_6_data_stream_1_U(fifo_w8_d2_A)' using Shift Registers.
 INFO: [RTMG 210-285] Implementing FIFO 'img_6_data_stream_2_U(fifo_w8_d2_A)' using Shift Registers.
 INFO: [RTMG 210-285] Implementing FIFO 'start_for_Mat2AXIudo_U(start_for_Mat2AXIudo)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'start_for_Duplicavdy_U(start_for_Duplicavdy)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'start_for_Sobel_U0_U(start_for_Sobel_U0)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'start_for_Sobel_1wdI_U(start_for_Sobel_1wdI)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'start_for_AddWeigxdS_U(start_for_AddWeigxdS)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'start_for_CvtColoyd2_U(start_for_CvtColoyd2)' using Shift Registers.
-Command       ap_source done; 0.43 sec.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_Mat2AXIvdy_U(start_for_Mat2AXIvdy)' using Shift Registers.
+Command       ap_source done; 0.421 sec.
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.compgen.tcl 
-INFO: [RTMG 210-285] Implementing FIFO 'img_0_rows_V_c_U(fifo_w11_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'img_0_cols_V_c_U(fifo_w12_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'img_6_rows_V_c_U(fifo_w11_d3_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'img_6_cols_V_c_U(fifo_w12_d3_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'enable_V_c_U(fifo_w1_d3_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'img_0_data_stream_0_U(fifo_w8_d2_A_x)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'img_0_data_stream_1_U(fifo_w8_d2_A_x)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'img_0_data_stream_2_U(fifo_w8_d2_A_x)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'img_0_rows_V_c25_U(fifo_w11_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'img_0_cols_V_c26_U(fifo_w12_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'start_for_Block_pzec_U(start_for_Block_pzec)' using Shift Registers.
-Command       ap_source done; 0.297 sec.
 Execute       get_config_sdx -target 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/global.setting.tcl 
 Execute       source C:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
@@ -1667,9 +1698,9 @@ Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.tbgen.tcl 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.tbgen.tcl 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/global.setting.tcl 
-Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc467.compgen.tcl 
+Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AXIvideo2Mat487.compgen.tcl 
+Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo514.compgen.tcl 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AXIvideo2Mat.compgen.tcl 
-Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo.compgen.tcl 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/CvtColor_1.compgen.tcl 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Filter2D_1.compgen.tcl 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/GaussianBlur.compgen.tcl 
@@ -1679,12 +1710,13 @@ Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_1.compgen.tcl 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AddWeighted.compgen.tcl 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/CvtColor.compgen.tcl 
-Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc304305.compgen.tcl 
+Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo.compgen.tcl 
+Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc304.compgen.tcl 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.compgen.tcl 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/global.setting.tcl 
-Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc467.compgen.tcl 
+Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AXIvideo2Mat487.compgen.tcl 
+Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo514.compgen.tcl 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AXIvideo2Mat.compgen.tcl 
-Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo.compgen.tcl 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/CvtColor_1.compgen.tcl 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Filter2D_1.compgen.tcl 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/GaussianBlur.compgen.tcl 
@@ -1694,12 +1726,13 @@ Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_1.compgen.tcl 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AddWeighted.compgen.tcl 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/CvtColor.compgen.tcl 
-Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc304305.compgen.tcl 
+Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo.compgen.tcl 
+Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc304.compgen.tcl 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.compgen.tcl 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/global.setting.tcl 
-Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc467.compgen.tcl 
+Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AXIvideo2Mat487.compgen.tcl 
+Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo514.compgen.tcl 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AXIvideo2Mat.compgen.tcl 
-Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo.compgen.tcl 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/CvtColor_1.compgen.tcl 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Filter2D_1.compgen.tcl 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/GaussianBlur.compgen.tcl 
@@ -1709,7 +1742,8 @@ Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_1.compgen.tcl 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AddWeighted.compgen.tcl 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/CvtColor.compgen.tcl 
-Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc304305.compgen.tcl 
+Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo.compgen.tcl 
+Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc304.compgen.tcl 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.compgen.tcl 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/global.setting.tcl 
 Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.constraint.tcl 
@@ -1735,15 +1769,15 @@ Execute       source C:/Digilent19/Hls/SobelVideoWorking/solution1/impl/misc/Sob
 Execute       get_config_sdx -target 
 Execute       get_config_sdx -profile 
 Execute       ::config_rtl 
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:23 ; elapsed = 00:00:48 . Memory (MB): peak = 701.129 ; gain = 644.031
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:24 ; elapsed = 00:00:49 . Memory (MB): peak = 716.367 ; gain = 659.453
 INFO: [SYSC 207-301] Generating SystemC RTL for Sobel_filter.
 INFO: [VHDL 208-304] Generating VHDL RTL for Sobel_filter.
 INFO: [VLOG 209-307] Generating Verilog RTL for Sobel_filter.
-Command     autosyn done; 18.803 sec.
-Command   csynth_design done; 47.348 sec.
-Command ap_source done; 47.593 sec.
+Command     autosyn done; 19.448 sec.
+Command   csynth_design done; 48.74 sec.
+Command ap_source done; 48.984 sec.
 Execute cleanup_all 
-INFO-FLOW: Workspace C:/Digilent19/Hls/SobelVideoWorking/solution1 opened at Thu Jan 31 20:24:32 +0200 2019
+INFO-FLOW: Workspace C:/Digilent19/Hls/SobelVideoWorking/solution1 opened at Thu Jan 31 20:49:27 +0200 2019
 Execute     config_clock -quiet -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     open_platform DefaultPlatform 
@@ -1793,8 +1827,6 @@ Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/uti
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
 Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
-Command       ap_source done; 0.101 sec.
-Command     ap_source done; 0.101 sec.
 Execute     open_platform DefaultPlatform 
 Execute     import_lib C:/Xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6 
 Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
@@ -1824,7 +1856,7 @@ Execute       get_default_platform
 Execute     get_default_platform 
 Execute     config_chip_info -quiet -resource  {SLICE 33650} {LUT 129000}    {FF 269200} {DSP48E 740}    {BRAM 730}  
 Execute     config_chip_info -quiet -speed slow 
-Command   open_solution done; 0.192 sec.
+Command   open_solution done; 0.189 sec.
 Execute   export_design -rtl verilog -format ip_catalog 
 Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/global.setting.tcl 
 Execute     source C:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
@@ -1886,9 +1918,9 @@ Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/S
 Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.tbgen.tcl 
 Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.tbgen.tcl 
 Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/global.setting.tcl 
-Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc467.compgen.tcl 
+Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AXIvideo2Mat487.compgen.tcl 
+Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo514.compgen.tcl 
 Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AXIvideo2Mat.compgen.tcl 
-Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo.compgen.tcl 
 Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/CvtColor_1.compgen.tcl 
 Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Filter2D_1.compgen.tcl 
 Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/GaussianBlur.compgen.tcl 
@@ -1898,12 +1930,13 @@ Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/S
 Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_1.compgen.tcl 
 Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AddWeighted.compgen.tcl 
 Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/CvtColor.compgen.tcl 
-Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc304305.compgen.tcl 
+Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo.compgen.tcl 
+Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc304.compgen.tcl 
 Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.compgen.tcl 
 Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/global.setting.tcl 
-Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc467.compgen.tcl 
+Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AXIvideo2Mat487.compgen.tcl 
+Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo514.compgen.tcl 
 Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AXIvideo2Mat.compgen.tcl 
-Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo.compgen.tcl 
 Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/CvtColor_1.compgen.tcl 
 Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Filter2D_1.compgen.tcl 
 Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/GaussianBlur.compgen.tcl 
@@ -1913,12 +1946,13 @@ Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/S
 Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_1.compgen.tcl 
 Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AddWeighted.compgen.tcl 
 Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/CvtColor.compgen.tcl 
-Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc304305.compgen.tcl 
+Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo.compgen.tcl 
+Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc304.compgen.tcl 
 Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.compgen.tcl 
 Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/global.setting.tcl 
-Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc467.compgen.tcl 
+Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AXIvideo2Mat487.compgen.tcl 
+Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo514.compgen.tcl 
 Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AXIvideo2Mat.compgen.tcl 
-Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo.compgen.tcl 
 Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/CvtColor_1.compgen.tcl 
 Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Filter2D_1.compgen.tcl 
 Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/GaussianBlur.compgen.tcl 
@@ -1928,7 +1962,8 @@ Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/S
 Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_1.compgen.tcl 
 Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/AddWeighted.compgen.tcl 
 Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/CvtColor.compgen.tcl 
-Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc304305.compgen.tcl 
+Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Mat2AXIvideo.compgen.tcl 
+Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Block_proc304.compgen.tcl 
 Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.compgen.tcl 
 Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/global.setting.tcl 
 Execute     source C:/Digilent19/Hls/SobelVideoWorking/solution1/.autopilot/db/Sobel_filter.constraint.tcl 
@@ -1990,6 +2025,6 @@ Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfi
 Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
 Execute     source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6.gen 
 Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
-Command   export_design done; 16.47 sec.
-Command ap_source done; 16.668 sec.
+Command   export_design done; 15.298 sec.
+Command ap_source done; 15.49 sec.
 Execute cleanup_all 

@@ -16,17 +16,14 @@
 namespace ap_rtl {
 
 struct GaussianBlur : public sc_module {
-    // Port declarations 16
+    // Port declarations 13
     sc_in_clk ap_clk;
     sc_in< sc_logic > ap_rst;
     sc_in< sc_logic > ap_start;
-    sc_in< sc_logic > start_full_n;
     sc_out< sc_logic > ap_done;
     sc_in< sc_logic > ap_continue;
     sc_out< sc_logic > ap_idle;
     sc_out< sc_logic > ap_ready;
-    sc_out< sc_logic > start_out;
-    sc_out< sc_logic > start_write;
     sc_in< sc_lv<8> > p_src_data_stream_V_dout;
     sc_in< sc_logic > p_src_data_stream_V_empty_n;
     sc_out< sc_logic > p_src_data_stream_V_read;
@@ -44,12 +41,9 @@ struct GaussianBlur : public sc_module {
     sc_trace_file* mVcdFile;
 
     Filter2D_1* grp_Filter2D_1_fu_40;
-    sc_signal< sc_logic > real_start;
-    sc_signal< sc_logic > start_once_reg;
     sc_signal< sc_logic > ap_done_reg;
     sc_signal< sc_lv<2> > ap_CS_fsm;
     sc_signal< sc_logic > ap_CS_fsm_state1;
-    sc_signal< sc_logic > internal_ap_ready;
     sc_signal< sc_logic > grp_Filter2D_1_fu_40_ap_start;
     sc_signal< sc_logic > grp_Filter2D_1_fu_40_ap_done;
     sc_signal< sc_logic > grp_Filter2D_1_fu_40_ap_idle;
@@ -79,13 +73,9 @@ struct GaussianBlur : public sc_module {
     void thread_ap_idle();
     void thread_ap_ready();
     void thread_grp_Filter2D_1_fu_40_ap_start();
-    void thread_internal_ap_ready();
     void thread_p_dst_data_stream_V_din();
     void thread_p_dst_data_stream_V_write();
     void thread_p_src_data_stream_V_read();
-    void thread_real_start();
-    void thread_start_out();
-    void thread_start_write();
     void thread_ap_NS_fsm();
 };
 

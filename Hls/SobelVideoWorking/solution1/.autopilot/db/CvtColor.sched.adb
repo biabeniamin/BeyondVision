@@ -567,7 +567,7 @@
 					<Obj>
 						<type>0</type>
 						<id>32</id>
-						<name>tmp_92</name>
+						<name>tmp_93</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>624</lineNumber>

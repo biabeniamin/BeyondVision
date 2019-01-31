@@ -226,7 +226,7 @@
 
 <Node id="4" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
 <![CDATA[
-._crit_edge3:0  call void (...)* @_ssdm_op_SpecInterface(i8* %dst_data_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str440, i32 0, i32 0, [1 x i8]* @p_str441, [1 x i8]* @p_str442, [1 x i8]* @p_str443, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str444, [1 x i8]* @p_str445)
+._crit_edge3:0  call void (...)* @_ssdm_op_SpecInterface(i8* %dst_data_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str460, i32 0, i32 0, [1 x i8]* @p_str461, [1 x i8]* @p_str462, [1 x i8]* @p_str463, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str464, [1 x i8]* @p_str465)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -241,7 +241,7 @@
 
 <Node id="5" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
 <![CDATA[
-._crit_edge3:1  call void (...)* @_ssdm_op_SpecInterface(i8* %src1_data_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str433, i32 0, i32 0, [1 x i8]* @p_str434, [1 x i8]* @p_str435, [1 x i8]* @p_str436, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str437, [1 x i8]* @p_str438)
+._crit_edge3:1  call void (...)* @_ssdm_op_SpecInterface(i8* %src1_data_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str453, i32 0, i32 0, [1 x i8]* @p_str454, [1 x i8]* @p_str455, [1 x i8]* @p_str456, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str457, [1 x i8]* @p_str458)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -256,7 +256,7 @@
 
 <Node id="6" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
 <![CDATA[
-._crit_edge3:2  call void (...)* @_ssdm_op_SpecInterface(i8* %src2_data_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str426, i32 0, i32 0, [1 x i8]* @p_str427, [1 x i8]* @p_str428, [1 x i8]* @p_str429, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str430, [1 x i8]* @p_str431)
+._crit_edge3:2  call void (...)* @_ssdm_op_SpecInterface(i8* %src2_data_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str446, i32 0, i32 0, [1 x i8]* @p_str447, [1 x i8]* @p_str448, [1 x i8]* @p_str449, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str450, [1 x i8]* @p_str451)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -431,10 +431,10 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="19" bw="11" op_0_bw="11" op_1_bw="0">
 <![CDATA[
-:0  %t_V_4 = phi i11 [ 0, %1 ], [ %j_V, %.critedge.i ]
+:0  %t_V_5 = phi i11 [ 0, %1 ], [ %j_V, %.critedge.i ]
 
 ]]></Node>
-<StgValue><ssdm name="t_V_4"/></StgValue>
+<StgValue><ssdm name="t_V_5"/></StgValue>
 </operation>
 
 <operation id="48" st_id="3" stage="1" lat="1">
@@ -446,7 +446,7 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="20" bw="1" op_0_bw="11" op_1_bw="11">
 <![CDATA[
-:1  %exitcond_i = icmp eq i11 %t_V_4, -768
+:1  %exitcond_i = icmp eq i11 %t_V_5, -768
 
 ]]></Node>
 <StgValue><ssdm name="exitcond_i"/></StgValue>
@@ -476,7 +476,7 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="22" bw="11" op_0_bw="11" op_1_bw="11">
 <![CDATA[
-:3  %j_V = add i11 %t_V_4, 1
+:3  %j_V = add i11 %t_V_5, 1
 
 ]]></Node>
 <StgValue><ssdm name="j_V"/></StgValue>
@@ -542,10 +542,10 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="30" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-.critedge.i:5  %tmp_106 = call i8 @_ssdm_op_Read.ap_fifo.volatile.i8P(i8* %src1_data_stream_V)
+.critedge.i:5  %tmp_107 = call i8 @_ssdm_op_Read.ap_fifo.volatile.i8P(i8* %src1_data_stream_V)
 
 ]]></Node>
-<StgValue><ssdm name="tmp_106"/></StgValue>
+<StgValue><ssdm name="tmp_107"/></StgValue>
 </operation>
 
 <operation id="55" st_id="4" stage="1" lat="1">
@@ -606,10 +606,10 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="34" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-.critedge.i:9  %tmp_107 = call i8 @_ssdm_op_Read.ap_fifo.volatile.i8P(i8* %src2_data_stream_V)
+.critedge.i:9  %tmp_108 = call i8 @_ssdm_op_Read.ap_fifo.volatile.i8P(i8* %src2_data_stream_V)
 
 ]]></Node>
-<StgValue><ssdm name="tmp_107"/></StgValue>
+<StgValue><ssdm name="tmp_108"/></StgValue>
 </operation>
 
 <operation id="59" st_id="4" stage="1" lat="1">
@@ -622,10 +622,10 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="35" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-.critedge.i:10  %empty_106 = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str13, i32 %tmp_7_i)
+.critedge.i:10  %empty_104 = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str13, i32 %tmp_7_i)
 
 ]]></Node>
-<StgValue><ssdm name="empty_106"/></StgValue>
+<StgValue><ssdm name="empty_104"/></StgValue>
 </operation>
 </state>
 
@@ -641,10 +641,10 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="37" bw="32" op_0_bw="8">
 <![CDATA[
-.critedge.i:12  %tmp_i_107 = zext i8 %tmp_106 to i32
+.critedge.i:12  %tmp_i_105 = zext i8 %tmp_107 to i32
 
 ]]></Node>
-<StgValue><ssdm name="tmp_i_107"/></StgValue>
+<StgValue><ssdm name="tmp_i_105"/></StgValue>
 </operation>
 
 <operation id="61" st_id="5" stage="6" lat="6">
@@ -657,7 +657,7 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="38" bw="64" op_0_bw="32">
 <![CDATA[
-.critedge.i:13  %tmp_43_i = sitofp i32 %tmp_i_107 to double
+.critedge.i:13  %tmp_43_i = sitofp i32 %tmp_i_105 to double
 
 ]]></Node>
 <StgValue><ssdm name="tmp_43_i"/></StgValue>
@@ -673,7 +673,7 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="40" bw="32" op_0_bw="8">
 <![CDATA[
-.critedge.i:15  %tmp_44_i = zext i8 %tmp_107 to i32
+.critedge.i:15  %tmp_44_i = zext i8 %tmp_108 to i32
 
 ]]></Node>
 <StgValue><ssdm name="tmp_44_i"/></StgValue>
@@ -708,7 +708,7 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="38" bw="64" op_0_bw="32">
 <![CDATA[
-.critedge.i:13  %tmp_43_i = sitofp i32 %tmp_i_107 to double
+.critedge.i:13  %tmp_43_i = sitofp i32 %tmp_i_105 to double
 
 ]]></Node>
 <StgValue><ssdm name="tmp_43_i"/></StgValue>
@@ -743,7 +743,7 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="38" bw="64" op_0_bw="32">
 <![CDATA[
-.critedge.i:13  %tmp_43_i = sitofp i32 %tmp_i_107 to double
+.critedge.i:13  %tmp_43_i = sitofp i32 %tmp_i_105 to double
 
 ]]></Node>
 <StgValue><ssdm name="tmp_43_i"/></StgValue>
@@ -778,7 +778,7 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="38" bw="64" op_0_bw="32">
 <![CDATA[
-.critedge.i:13  %tmp_43_i = sitofp i32 %tmp_i_107 to double
+.critedge.i:13  %tmp_43_i = sitofp i32 %tmp_i_105 to double
 
 ]]></Node>
 <StgValue><ssdm name="tmp_43_i"/></StgValue>
@@ -813,7 +813,7 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="38" bw="64" op_0_bw="32">
 <![CDATA[
-.critedge.i:13  %tmp_43_i = sitofp i32 %tmp_i_107 to double
+.critedge.i:13  %tmp_43_i = sitofp i32 %tmp_i_105 to double
 
 ]]></Node>
 <StgValue><ssdm name="tmp_43_i"/></StgValue>
@@ -848,7 +848,7 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="38" bw="64" op_0_bw="32">
 <![CDATA[
-.critedge.i:13  %tmp_43_i = sitofp i32 %tmp_i_107 to double
+.critedge.i:13  %tmp_43_i = sitofp i32 %tmp_i_105 to double
 
 ]]></Node>
 <StgValue><ssdm name="tmp_43_i"/></StgValue>
@@ -1385,10 +1385,10 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="49" bw="1" op_0_bw="52" op_1_bw="52">
 <![CDATA[
-.critedge.i:24  %tmp_i_i_i_i_108 = icmp ne i52 %loc_V_1, 0
+.critedge.i:24  %tmp_i_i_i_i_106 = icmp ne i52 %loc_V_1, 0
 
 ]]></Node>
-<StgValue><ssdm name="tmp_i_i_i_i_108"/></StgValue>
+<StgValue><ssdm name="tmp_i_i_i_i_106"/></StgValue>
 </operation>
 
 <operation id="103" st_id="29" stage="1" lat="1">
@@ -1593,10 +1593,10 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="68" bw="9" op_0_bw="9" op_1_bw="12" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-.critedge.i:43  %tmp_97 = call i9 @_ssdm_op_PartSelect.i9.i12.i32.i32(i12 %F2_2, i32 3, i32 11)
+.critedge.i:43  %tmp_98 = call i9 @_ssdm_op_PartSelect.i9.i12.i32.i32(i12 %F2_2, i32 3, i32 11)
 
 ]]></Node>
-<StgValue><ssdm name="tmp_97"/></StgValue>
+<StgValue><ssdm name="tmp_98"/></StgValue>
 </operation>
 
 <operation id="116" st_id="29" stage="1" lat="1">
@@ -1609,7 +1609,7 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="69" bw="1" op_0_bw="9" op_1_bw="9">
 <![CDATA[
-.critedge.i:44  %icmp = icmp eq i9 %tmp_97, 0
+.critedge.i:44  %icmp = icmp eq i9 %tmp_98, 0
 
 ]]></Node>
 <StgValue><ssdm name="icmp"/></StgValue>
@@ -1660,10 +1660,10 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="66" bw="8" op_0_bw="54">
 <![CDATA[
-.critedge.i:41  %tmp_96 = trunc i54 %p_Val2_s to i8
+.critedge.i:41  %tmp_97 = trunc i54 %p_Val2_s to i8
 
 ]]></Node>
-<StgValue><ssdm name="tmp_96"/></StgValue>
+<StgValue><ssdm name="tmp_97"/></StgValue>
 </operation>
 
 <operation id="120" st_id="30" stage="1" lat="1">
@@ -1724,10 +1724,10 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="72" bw="8" op_0_bw="54">
 <![CDATA[
-.critedge.i:47  %tmp_98 = trunc i54 %tmp_11_i to i8
+.critedge.i:47  %tmp_99 = trunc i54 %tmp_11_i to i8
 
 ]]></Node>
-<StgValue><ssdm name="tmp_98"/></StgValue>
+<StgValue><ssdm name="tmp_99"/></StgValue>
 </operation>
 
 <operation id="124" st_id="30" stage="1" lat="1">
@@ -1756,7 +1756,7 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="75" bw="8" op_0_bw="1" op_1_bw="8" op_2_bw="8">
 <![CDATA[
-.critedge.i:50  %p_Val2_12 = select i1 %tmp_5_i3, i8 %tmp_98, i8 %p_Val2_0_i_i6_i
+.critedge.i:50  %p_Val2_12 = select i1 %tmp_5_i3, i8 %tmp_99, i8 %p_Val2_0_i_i6_i
 
 ]]></Node>
 <StgValue><ssdm name="p_Val2_12"/></StgValue>
@@ -1820,10 +1820,10 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="79" bw="1" op_0_bw="1" op_1_bw="54" op_2_bw="32">
 <![CDATA[
-.critedge.i:54  %tmp_99 = call i1 @_ssdm_op_BitSelect.i1.i54.i32(i54 %p_Val2_s, i32 %tmp_25_cast_i)
+.critedge.i:54  %tmp_100 = call i1 @_ssdm_op_BitSelect.i1.i54.i32(i54 %p_Val2_s, i32 %tmp_25_cast_i)
 
 ]]></Node>
-<StgValue><ssdm name="tmp_99"/></StgValue>
+<StgValue><ssdm name="tmp_100"/></StgValue>
 </operation>
 
 <operation id="130" st_id="30" stage="1" lat="1">
@@ -1836,7 +1836,7 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="80" bw="1" op_0_bw="1" op_1_bw="1" op_2_bw="1">
 <![CDATA[
-.critedge.i:55  %qb = select i1 %tmp_14_i, i1 %isneg, i1 %tmp_99
+.critedge.i:55  %qb = select i1 %tmp_14_i, i1 %isneg, i1 %tmp_100
 
 ]]></Node>
 <StgValue><ssdm name="qb"/></StgValue>
@@ -1852,10 +1852,10 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="81" bw="1" op_0_bw="1" op_1_bw="8" op_2_bw="32">
 <![CDATA[
-.critedge.i:56  %tmp_100 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %p_Val2_12, i32 7)
+.critedge.i:56  %tmp_101 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %p_Val2_12, i32 7)
 
 ]]></Node>
-<StgValue><ssdm name="tmp_100"/></StgValue>
+<StgValue><ssdm name="tmp_101"/></StgValue>
 </operation>
 
 <operation id="132" st_id="30" stage="1" lat="1">
@@ -2012,10 +2012,10 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="108" bw="1" op_0_bw="1" op_1_bw="12" op_2_bw="32">
 <![CDATA[
-.critedge.i:83  %tmp_103 = call i1 @_ssdm_op_BitSelect.i1.i12.i32(i12 %pos1, i32 11)
+.critedge.i:83  %tmp_104 = call i1 @_ssdm_op_BitSelect.i1.i12.i32(i12 %pos1, i32 11)
 
 ]]></Node>
-<StgValue><ssdm name="tmp_103"/></StgValue>
+<StgValue><ssdm name="tmp_104"/></StgValue>
 </operation>
 
 <operation id="142" st_id="30" stage="1" lat="1">
@@ -2028,7 +2028,7 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="109" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-.critedge.i:84  %rev = xor i1 %tmp_103, true
+.critedge.i:84  %rev = xor i1 %tmp_104, true
 
 ]]></Node>
 <StgValue><ssdm name="rev"/></StgValue>
@@ -2124,10 +2124,10 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="115" bw="1" op_0_bw="1" op_1_bw="12" op_2_bw="32">
 <![CDATA[
-.critedge.i:90  %tmp_105 = call i1 @_ssdm_op_BitSelect.i1.i12.i32(i12 %pos2, i32 11)
+.critedge.i:90  %tmp_106 = call i1 @_ssdm_op_BitSelect.i1.i12.i32(i12 %pos2, i32 11)
 
 ]]></Node>
-<StgValue><ssdm name="tmp_105"/></StgValue>
+<StgValue><ssdm name="tmp_106"/></StgValue>
 </operation>
 
 <operation id="149" st_id="30" stage="1" lat="1">
@@ -2236,7 +2236,7 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="133" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-.critedge.i:108  %sel_tmp33_i = or i1 %tmp_103, %tmp_23_i_not
+.critedge.i:108  %sel_tmp33_i = or i1 %tmp_104, %tmp_23_i_not
 
 ]]></Node>
 <StgValue><ssdm name="sel_tmp33_i"/></StgValue>
@@ -2271,10 +2271,10 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="63" bw="8" op_0_bw="12">
 <![CDATA[
-.critedge.i:38  %tmp_95 = trunc i12 %F2_2 to i8
+.critedge.i:38  %tmp_96 = trunc i12 %F2_2 to i8
 
 ]]></Node>
-<StgValue><ssdm name="tmp_95"/></StgValue>
+<StgValue><ssdm name="tmp_96"/></StgValue>
 </operation>
 
 <operation id="158" st_id="31" stage="1" lat="1">
@@ -2287,7 +2287,7 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="74" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-.critedge.i:49  %tmp_13_i = shl i8 %tmp_96, %tmp_95
+.critedge.i:49  %tmp_13_i = shl i8 %tmp_97, %tmp_96
 
 ]]></Node>
 <StgValue><ssdm name="tmp_13_i"/></StgValue>
@@ -2303,10 +2303,10 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="84" bw="1" op_0_bw="1" op_1_bw="8" op_2_bw="32">
 <![CDATA[
-.critedge.i:59  %tmp_101 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %p_Val2_13, i32 7)
+.critedge.i:59  %tmp_102 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %p_Val2_13, i32 7)
 
 ]]></Node>
-<StgValue><ssdm name="tmp_101"/></StgValue>
+<StgValue><ssdm name="tmp_102"/></StgValue>
 </operation>
 
 <operation id="160" st_id="31" stage="1" lat="1">
@@ -2319,7 +2319,7 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="85" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-.critedge.i:60  %tmp_17_i = xor i1 %tmp_101, true
+.critedge.i:60  %tmp_17_i = xor i1 %tmp_102, true
 
 ]]></Node>
 <StgValue><ssdm name="tmp_17_i"/></StgValue>
@@ -2335,7 +2335,7 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="86" bw="8" op_0_bw="1" op_1_bw="8" op_2_bw="8">
 <![CDATA[
-.critedge.i:61  %sel_tmp_i = select i1 %tmp_3_i, i8 %tmp_96, i8 0
+.critedge.i:61  %sel_tmp_i = select i1 %tmp_3_i, i8 %tmp_97, i8 0
 
 ]]></Node>
 <StgValue><ssdm name="sel_tmp_i"/></StgValue>
@@ -2351,7 +2351,7 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="89" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-.critedge.i:64  %sel_tmp3_i = and i1 %sel_tmp2_i, %tmp_100
+.critedge.i:64  %sel_tmp3_i = and i1 %sel_tmp2_i, %tmp_101
 
 ]]></Node>
 <StgValue><ssdm name="sel_tmp3_i"/></StgValue>
@@ -2383,7 +2383,7 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="91" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-.critedge.i:66  %sel_tmp7_i = xor i1 %tmp_100, true
+.critedge.i:66  %sel_tmp7_i = xor i1 %tmp_101, true
 
 ]]></Node>
 <StgValue><ssdm name="sel_tmp7_i"/></StgValue>
@@ -2575,7 +2575,7 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="116" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-.critedge.i:91  %rev4 = xor i1 %tmp_105, true
+.critedge.i:91  %rev4 = xor i1 %tmp_106, true
 
 ]]></Node>
 <StgValue><ssdm name="rev4"/></StgValue>
@@ -3043,7 +3043,7 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="50" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-.critedge.i:25  %tmp_demorgan_i = and i1 %tmp_i_i_i_i, %tmp_i_i_i_i_108
+.critedge.i:25  %tmp_demorgan_i = and i1 %tmp_i_i_i_i, %tmp_i_i_i_i_106
 
 ]]></Node>
 <StgValue><ssdm name="tmp_demorgan_i"/></StgValue>
@@ -3139,7 +3139,7 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="154" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-.critedge.i:129  %sel_tmp50_i_demorgan = and i1 %tmp_i_i_i_i, %tmp_i_i_i_i_108
+.critedge.i:129  %sel_tmp50_i_demorgan = and i1 %tmp_i_i_i_i, %tmp_i_i_i_i_106
 
 ]]></Node>
 <StgValue><ssdm name="sel_tmp50_i_demorgan"/></StgValue>
@@ -3347,10 +3347,10 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="167" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-.critedge.i:142  %empty_109 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str19, i32 %tmp_8_i)
+.critedge.i:142  %empty_107 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str19, i32 %tmp_8_i)
 
 ]]></Node>
-<StgValue><ssdm name="empty_109"/></StgValue>
+<StgValue><ssdm name="empty_107"/></StgValue>
 </operation>
 
 <operation id="225" st_id="32" stage="1" lat="1">
@@ -3363,10 +3363,10 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="168" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-.critedge.i:143  %empty_110 = call i32 (...)* @_ssdm_op_SpecRegionEnd([11 x i8]* @p_str10, i32 %tmp_5_i)
+.critedge.i:143  %empty_108 = call i32 (...)* @_ssdm_op_SpecRegionEnd([11 x i8]* @p_str10, i32 %tmp_5_i)
 
 ]]></Node>
-<StgValue><ssdm name="empty_110"/></StgValue>
+<StgValue><ssdm name="empty_108"/></StgValue>
 </operation>
 
 <operation id="226" st_id="32" stage="1" lat="1">
@@ -3397,10 +3397,10 @@ arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit:
 
 <Node id="171" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-:0  %empty_111 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str9, i32 %tmp_i)
+:0  %empty_109 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str9, i32 %tmp_i)
 
 ]]></Node>
-<StgValue><ssdm name="empty_111"/></StgValue>
+<StgValue><ssdm name="empty_109"/></StgValue>
 </operation>
 
 <operation id="228" st_id="33" stage="1" lat="1">

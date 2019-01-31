@@ -366,7 +366,7 @@
 					<Obj>
 						<type>0</type>
 						<id>19</id>
-						<name>t_V_3</name>
+						<name>t_V_4</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -539,7 +539,7 @@
 					<Obj>
 						<type>0</type>
 						<id>30</id>
-						<name>tmp_80</name>
+						<name>tmp_81</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>624</lineNumber>

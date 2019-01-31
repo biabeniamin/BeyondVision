@@ -43153,14 +43153,15 @@ RGB_IMAGE img_6(720, 1280);
 
 
 
-_ssdm_op_SpecDataflowPipeline(-1, "");
-hls::AXIvideo2Mat(INPUT_STREAM, img_0);
+
 if(0 == enable)
 {
 _ssdm_op_SpecDataflowPipeline(-1, "");
+ hls::AXIvideo2Mat(INPUT_STREAM, img_0);
  hls::Mat2AXIvideo(img_0, OUTPUT_STREAM);
 } else {
 _ssdm_op_SpecDataflowPipeline(-1, "");
+ hls::AXIvideo2Mat(INPUT_STREAM, img_0);
  hls::CvtColor<HLS_BGR2GRAY>(img_0, img_1);
  hls::GaussianBlur<3,3>(img_1,img_2);
  hls::Duplicate(img_2,img_2a,img_2b);
@@ -43170,5 +43171,5 @@ _ssdm_op_SpecDataflowPipeline(-1, "");
  hls::CvtColor<HLS_GRAY2RGB>(img_5, img_6);
  hls::Mat2AXIvideo(img_6, OUTPUT_STREAM);
 }
-# 54 "SobelVideoWorking/a.cpp"
+# 55 "SobelVideoWorking/a.cpp"
 }

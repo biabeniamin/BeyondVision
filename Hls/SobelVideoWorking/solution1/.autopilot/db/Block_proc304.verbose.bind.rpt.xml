@@ -1,0 +1,56 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'Block_proc304'" level="0">
+<item name = "Date">Thu Jan 31 20:48:24 2019
+</item>
+<item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
+<item name = "Project">SobelVideoWorking</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a200tsbg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 11.000, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">943937, 943937, 943922, 943922, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_AddWeighted_fu_392">AddWeighted, 943921, 943921, 943921, 943921, none</column>
+<column name="grp_Sobel_fu_399">Sobel, 930660, 930660, 930660, 930660, none</column>
+<column name="grp_Sobel_1_fu_405">Sobel_1, 930660, 930660, 930660, 930660, none</column>
+<column name="grp_GaussianBlur_fu_411">GaussianBlur, 930660, 930660, 930660, 930660, none</column>
+<column name="grp_Mat2AXIvideo514_fu_417">Mat2AXIvideo514, 1, 924481, 1, 924481, none</column>
+<column name="grp_AXIvideo2Mat487_fu_440">AXIvideo2Mat487, 926643, 926643, 926643, 926643, none</column>
+<column name="grp_AXIvideo2Mat_fu_463">AXIvideo2Mat, 926643, 926643, 926643, 926643, none</column>
+<column name="grp_CvtColor_1_fu_484">CvtColor_1, 925921, 925921, 925921, 925921, none</column>
+<column name="grp_Mat2AXIvideo_fu_492">Mat2AXIvideo, 924481, 924481, 924481, 924481, none</column>
+<column name="grp_CvtColor_fu_513">CvtColor, 923761, 923761, 923761, 923761, none</column>
+<column name="grp_Duplicate_fu_521">Duplicate, 923761, 923761, 923761, 923761, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>
