@@ -366,7 +366,7 @@
             <Obj>
               <type>0</type>
               <id>19</id>
-              <name>t_V_3</name>
+              <name>t_V_4</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -539,7 +539,7 @@
             <Obj>
               <type>0</type>
               <id>30</id>
-              <name>tmp_80</name>
+              <name>tmp_81</name>
               <fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>624</lineNumber>
@@ -2175,7 +2175,7 @@
         <item_version>0</item_version>
       </dp_memory_resource>
       <dp_multiplexer_resource>
-        <count>9</count>
+        <count>8</count>
         <item_version>0</item_version>
         <item>
           <first>ap_NS_fsm</first>
@@ -2293,29 +2293,6 @@
           </second>
         </item>
         <item>
-          <first>real_start</first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0Size)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>(1Bits)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(2Count)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>9</second>
-            </item>
-          </second>
-        </item>
-        <item>
           <first>src_data_stream_V_blk_n</first>
           <second>
             <count>4</count>
@@ -2339,7 +2316,7 @@
           </second>
         </item>
         <item>
-          <first>t_V_3_reg_129</first>
+          <first>t_V_4_reg_129</first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -2386,7 +2363,7 @@
         </item>
       </dp_multiplexer_resource>
       <dp_register_resource>
-        <count>9</count>
+        <count>8</count>
         <item_version>0</item_version>
         <item>
           <first>ap_CS_fsm</first>
@@ -2503,26 +2480,7 @@
           </second>
         </item>
         <item>
-          <first>start_once_reg</first>
-          <second>
-            <count>3</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(Bits)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(Consts)</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>1</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>t_V_3_reg_129</first>
+          <first>t_V_4_reg_129</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -2803,7 +2761,7 @@
         <pipe_depth>2</pipe_depth>
       </item>
       <item class_id_reference="50" object_id="_130">
-        <region_name>hls_label_4</region_name>
+        <region_name>hls_label_6</region_name>
         <basic_blocks>
           <count>1</count>
           <item_version>0</item_version>
@@ -2935,7 +2893,7 @@
         </second>
       </item>
       <item>
-        <first>t_V_3_phi_fu_133</first>
+        <first>t_V_4_phi_fu_133</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -2975,7 +2933,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_80_read_fu_96</first>
+        <first>tmp_81_read_fu_96</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -3079,7 +3037,7 @@
         </second>
       </item>
       <item>
-        <first>t_V_3_reg_129</first>
+        <first>t_V_4_reg_129</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -3119,7 +3077,7 @@
       <count>2</count>
       <item_version>0</item_version>
       <item>
-        <first>t_V_3_reg_129</first>
+        <first>t_V_4_reg_129</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

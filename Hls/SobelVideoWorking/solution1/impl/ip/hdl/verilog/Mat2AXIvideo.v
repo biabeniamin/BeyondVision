@@ -160,7 +160,7 @@ reg    img_data_stream_2_V_blk_n;
 reg    OUTPUT_STREAM_TDATA_blk_n;
 reg    ap_enable_reg_pp0_iter2;
 reg   [0:0] exitcond_reg_270_pp0_iter1_reg;
-reg   [10:0] t_V_1_reg_188;
+reg   [10:0] t_V_2_reg_188;
 wire   [0:0] exitcond2_fu_204_p2;
 wire    ap_CS_fsm_state2;
 reg    ap_block_state2;
@@ -487,9 +487,9 @@ end
 
 always @ (posedge ap_clk) begin
     if (((exitcond_fu_216_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        t_V_1_reg_188 <= j_V_fu_222_p2;
+        t_V_2_reg_188 <= j_V_fu_222_p2;
     end else if ((~((1'b0 == AXI_video_strm_V_data_V_1_ack_in) | (1'b0 == AXI_video_strm_V_dest_V_1_ack_in) | (1'b0 == AXI_video_strm_V_id_V_1_ack_in) | (1'b0 == AXI_video_strm_V_last_V_1_ack_in) | (1'b0 == AXI_video_strm_V_user_V_1_ack_in) | (1'b0 == AXI_video_strm_V_strb_V_1_ack_in) | (1'b0 == AXI_video_strm_V_keep_V_1_ack_in)) & (exitcond2_fu_204_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
-        t_V_1_reg_188 <= 11'd0;
+        t_V_2_reg_188 <= 11'd0;
     end
 end
 
@@ -922,15 +922,15 @@ assign ap_block_state5_pp0_stage0_iter2 = ~(1'b1 == 1'b1);
 
 assign ap_enable_pp0 = (ap_idle_pp0 ^ 1'b1);
 
-assign axi_last_V_fu_228_p2 = ((t_V_1_reg_188 == 11'd1279) ? 1'b1 : 1'b0);
+assign axi_last_V_fu_228_p2 = ((t_V_2_reg_188 == 11'd1279) ? 1'b1 : 1'b0);
 
 assign exitcond2_fu_204_p2 = ((t_V_reg_177 == 10'd720) ? 1'b1 : 1'b0);
 
-assign exitcond_fu_216_p2 = ((t_V_1_reg_188 == 11'd1280) ? 1'b1 : 1'b0);
+assign exitcond_fu_216_p2 = ((t_V_2_reg_188 == 11'd1280) ? 1'b1 : 1'b0);
 
 assign i_V_fu_210_p2 = (t_V_reg_177 + 10'd1);
 
-assign j_V_fu_222_p2 = (t_V_1_reg_188 + 11'd1);
+assign j_V_fu_222_p2 = (t_V_2_reg_188 + 11'd1);
 
 assign tmp_data_V_fu_238_p4 = {{{img_data_stream_2_V_dout}, {img_data_stream_1_V_dout}}, {img_data_stream_0_V_dout}};
 

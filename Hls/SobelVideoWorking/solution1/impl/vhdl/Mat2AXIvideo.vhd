@@ -159,7 +159,7 @@ architecture behav of Mat2AXIvideo is
     signal OUTPUT_STREAM_TDATA_blk_n : STD_LOGIC;
     signal ap_enable_reg_pp0_iter2 : STD_LOGIC := '0';
     signal exitcond_reg_270_pp0_iter1_reg : STD_LOGIC_VECTOR (0 downto 0);
-    signal t_V_1_reg_188 : STD_LOGIC_VECTOR (10 downto 0);
+    signal t_V_2_reg_188 : STD_LOGIC_VECTOR (10 downto 0);
     signal exitcond2_fu_204_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal ap_CS_fsm_state2 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
@@ -554,13 +554,13 @@ begin
     end process;
 
 
-    t_V_1_reg_188_assign_proc : process (ap_clk)
+    t_V_2_reg_188_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((exitcond_fu_216_p2 = ap_const_lv1_0) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter0 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-                t_V_1_reg_188 <= j_V_fu_222_p2;
+                t_V_2_reg_188 <= j_V_fu_222_p2;
             elsif ((not(((ap_const_logic_0 = AXI_video_strm_V_data_V_1_ack_in) or (ap_const_logic_0 = AXI_video_strm_V_dest_V_1_ack_in) or (ap_const_logic_0 = AXI_video_strm_V_id_V_1_ack_in) or (ap_const_logic_0 = AXI_video_strm_V_last_V_1_ack_in) or (ap_const_logic_0 = AXI_video_strm_V_user_V_1_ack_in) or (ap_const_logic_0 = AXI_video_strm_V_strb_V_1_ack_in) or (ap_const_logic_0 = AXI_video_strm_V_keep_V_1_ack_in))) and (exitcond2_fu_204_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                t_V_1_reg_188 <= ap_const_lv11_0;
+                t_V_2_reg_188 <= ap_const_lv11_0;
             end if; 
         end if;
     end process;
@@ -956,9 +956,9 @@ begin
         end if; 
     end process;
 
-    axi_last_V_fu_228_p2 <= "1" when (t_V_1_reg_188 = ap_const_lv11_4FF) else "0";
+    axi_last_V_fu_228_p2 <= "1" when (t_V_2_reg_188 = ap_const_lv11_4FF) else "0";
     exitcond2_fu_204_p2 <= "1" when (t_V_reg_177 = ap_const_lv10_2D0) else "0";
-    exitcond_fu_216_p2 <= "1" when (t_V_1_reg_188 = ap_const_lv11_500) else "0";
+    exitcond_fu_216_p2 <= "1" when (t_V_2_reg_188 = ap_const_lv11_500) else "0";
     i_V_fu_210_p2 <= std_logic_vector(unsigned(t_V_reg_177) + unsigned(ap_const_lv10_1));
 
     img_data_stream_0_V_blk_n_assign_proc : process(img_data_stream_0_V_empty_n, ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_block_pp0_stage0, exitcond_reg_270)
@@ -1020,6 +1020,6 @@ begin
         end if; 
     end process;
 
-    j_V_fu_222_p2 <= std_logic_vector(unsigned(t_V_1_reg_188) + unsigned(ap_const_lv11_1));
+    j_V_fu_222_p2 <= std_logic_vector(unsigned(t_V_2_reg_188) + unsigned(ap_const_lv11_1));
     tmp_data_V_fu_238_p4 <= ((img_data_stream_2_V_dout & img_data_stream_1_V_dout) & img_data_stream_0_V_dout);
 end behav;

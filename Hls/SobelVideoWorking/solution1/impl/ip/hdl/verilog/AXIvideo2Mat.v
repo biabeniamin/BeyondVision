@@ -180,7 +180,7 @@ reg    img_data_stream_1_V_blk_n;
 reg    img_data_stream_2_V_blk_n;
 reg    img_rows_V_out_blk_n;
 reg    img_cols_V_out_blk_n;
-reg   [31:0] t_V_5_reg_284;
+reg   [31:0] t_V_6_reg_284;
 reg   [0:0] eol_i_reg_295;
 reg   [0:0] eol_reg_307;
 reg   [23:0] axi_data_V_1_i_reg_318;
@@ -534,9 +534,9 @@ end
 
 always @ (posedge ap_clk) begin
     if (((exitcond_i_fu_427_p2 == 1'd0) & (1'b0 == ap_block_pp1_stage0_11001) & (ap_enable_reg_pp1_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp1_stage0))) begin
-        t_V_5_reg_284 <= j_V_fu_432_p2;
+        t_V_6_reg_284 <= j_V_fu_432_p2;
     end else if (((exitcond4_i_fu_416_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4))) begin
-        t_V_5_reg_284 <= 32'd0;
+        t_V_6_reg_284 <= 32'd0;
     end
 end
 
@@ -1078,7 +1078,7 @@ assign cols_V_fu_403_p1 = cols_V_fu_403_p0;
 
 assign exitcond4_i_fu_416_p2 = ((t_V_reg_273 == rows_V_reg_479) ? 1'b1 : 1'b0);
 
-assign exitcond_i_fu_427_p2 = ((t_V_5_reg_284 == cols_V_reg_484) ? 1'b1 : 1'b0);
+assign exitcond_i_fu_427_p2 = ((t_V_6_reg_284 == cols_V_reg_484) ? 1'b1 : 1'b0);
 
 assign i_V_fu_421_p2 = (t_V_reg_273 + 32'd1);
 
@@ -1092,7 +1092,7 @@ assign img_data_stream_2_V_din = {{ap_phi_mux_p_Val2_s_phi_fu_346_p4[23:16]}};
 
 assign img_rows_V_out_din = img_rows_V_dout;
 
-assign j_V_fu_432_p2 = (t_V_5_reg_284 + 32'd1);
+assign j_V_fu_432_p2 = (t_V_6_reg_284 + 32'd1);
 
 assign rows_V_fu_399_p0 = img_rows_V_dout;
 

@@ -161,7 +161,7 @@ architecture behav of AXIvideo2Mat is
     signal img_data_stream_2_V_blk_n : STD_LOGIC;
     signal img_rows_V_out_blk_n : STD_LOGIC;
     signal img_cols_V_out_blk_n : STD_LOGIC;
-    signal t_V_5_reg_284 : STD_LOGIC_VECTOR (31 downto 0);
+    signal t_V_6_reg_284 : STD_LOGIC_VECTOR (31 downto 0);
     signal eol_i_reg_295 : STD_LOGIC_VECTOR (0 downto 0);
     signal eol_reg_307 : STD_LOGIC_VECTOR (0 downto 0);
     signal axi_data_V_1_i_reg_318 : STD_LOGIC_VECTOR (23 downto 0);
@@ -597,13 +597,13 @@ begin
         end if;
     end process;
 
-    t_V_5_reg_284_assign_proc : process (ap_clk)
+    t_V_6_reg_284_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((exitcond_i_fu_427_p2 = ap_const_lv1_0) and (ap_const_boolean_0 = ap_block_pp1_stage0_11001) and (ap_enable_reg_pp1_iter0 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp1_stage0))) then 
-                t_V_5_reg_284 <= j_V_fu_432_p2;
+                t_V_6_reg_284 <= j_V_fu_432_p2;
             elsif (((exitcond4_i_fu_416_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
-                t_V_5_reg_284 <= ap_const_lv32_0;
+                t_V_6_reg_284 <= ap_const_lv32_0;
             end if; 
         end if;
     end process;
@@ -1035,7 +1035,7 @@ begin
         cols_V_fu_403_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(cols_V_fu_403_p0),32));
 
     exitcond4_i_fu_416_p2 <= "1" when (t_V_reg_273 = rows_V_reg_479) else "0";
-    exitcond_i_fu_427_p2 <= "1" when (t_V_5_reg_284 = cols_V_reg_484) else "0";
+    exitcond_i_fu_427_p2 <= "1" when (t_V_6_reg_284 = cols_V_reg_484) else "0";
     i_V_fu_421_p2 <= std_logic_vector(unsigned(t_V_reg_273) + unsigned(ap_const_lv32_1));
 
     img_cols_V_blk_n_assign_proc : process(real_start, ap_done_reg, ap_CS_fsm_state1, img_cols_V_empty_n)
@@ -1192,7 +1192,7 @@ begin
         end if; 
     end process;
 
-    j_V_fu_432_p2 <= std_logic_vector(unsigned(t_V_5_reg_284) + unsigned(ap_const_lv32_1));
+    j_V_fu_432_p2 <= std_logic_vector(unsigned(t_V_6_reg_284) + unsigned(ap_const_lv32_1));
 
     real_start_assign_proc : process(ap_start, start_full_n, start_once_reg)
     begin

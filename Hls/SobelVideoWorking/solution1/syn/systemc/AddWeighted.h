@@ -18,17 +18,14 @@
 namespace ap_rtl {
 
 struct AddWeighted : public sc_module {
-    // Port declarations 19
+    // Port declarations 16
     sc_in_clk ap_clk;
     sc_in< sc_logic > ap_rst;
     sc_in< sc_logic > ap_start;
-    sc_in< sc_logic > start_full_n;
     sc_out< sc_logic > ap_done;
     sc_in< sc_logic > ap_continue;
     sc_out< sc_logic > ap_idle;
     sc_out< sc_logic > ap_ready;
-    sc_out< sc_logic > start_out;
-    sc_out< sc_logic > start_write;
     sc_in< sc_lv<8> > src1_data_stream_V_dout;
     sc_in< sc_logic > src1_data_stream_V_empty_n;
     sc_out< sc_logic > src1_data_stream_V_read;
@@ -50,18 +47,15 @@ struct AddWeighted : public sc_module {
 
     sc_trace_file* mVcdFile;
 
-    Sobel_filter_daddrcU<1,6,64,64,64>* Sobel_filter_daddrcU_U74;
-    Sobel_filter_daddrcU<1,6,64,64,64>* Sobel_filter_daddrcU_U75;
-    Sobel_filter_dmulsc4<1,6,64,64,64>* Sobel_filter_dmulsc4_U76;
-    Sobel_filter_dmulsc4<1,6,64,64,64>* Sobel_filter_dmulsc4_U77;
-    Sobel_filter_sitotde<1,6,32,64>* Sobel_filter_sitotde_U78;
-    Sobel_filter_sitotde<1,6,32,64>* Sobel_filter_sitotde_U79;
-    sc_signal< sc_logic > real_start;
-    sc_signal< sc_logic > start_once_reg;
+    Sobel_filter_daddrcU<1,6,64,64,64>* Sobel_filter_daddrcU_U84;
+    Sobel_filter_daddrcU<1,6,64,64,64>* Sobel_filter_daddrcU_U85;
+    Sobel_filter_dmulsc4<1,6,64,64,64>* Sobel_filter_dmulsc4_U86;
+    Sobel_filter_dmulsc4<1,6,64,64,64>* Sobel_filter_dmulsc4_U87;
+    Sobel_filter_sitotde<1,6,32,64>* Sobel_filter_sitotde_U88;
+    Sobel_filter_sitotde<1,6,32,64>* Sobel_filter_sitotde_U89;
     sc_signal< sc_logic > ap_done_reg;
     sc_signal< sc_lv<4> > ap_CS_fsm;
     sc_signal< sc_logic > ap_CS_fsm_state1;
-    sc_signal< sc_logic > internal_ap_ready;
     sc_signal< sc_logic > src1_data_stream_V_blk_n;
     sc_signal< sc_logic > ap_CS_fsm_pp0_stage0;
     sc_signal< sc_logic > ap_enable_reg_pp0_iter1;
@@ -71,7 +65,7 @@ struct AddWeighted : public sc_module {
     sc_signal< sc_logic > dst_data_stream_V_blk_n;
     sc_signal< sc_logic > ap_enable_reg_pp0_iter29;
     sc_signal< sc_lv<1> > exitcond_i_reg_949_pp0_iter28_reg;
-    sc_signal< sc_lv<11> > t_V_4_reg_190;
+    sc_signal< sc_lv<11> > t_V_5_reg_190;
     sc_signal< sc_lv<1> > exitcond4_i_fu_226_p2;
     sc_signal< sc_logic > ap_CS_fsm_state2;
     sc_signal< sc_lv<10> > i_V_fu_232_p2;
@@ -137,8 +131,8 @@ struct AddWeighted : public sc_module {
     sc_signal< sc_lv<1> > exitcond_i_reg_949_pp0_iter27_reg;
     sc_signal< sc_lv<11> > j_V_fu_244_p2;
     sc_signal< sc_logic > ap_enable_reg_pp0_iter0;
-    sc_signal< sc_lv<8> > tmp_102_reg_958;
-    sc_signal< sc_lv<8> > tmp_103_reg_963;
+    sc_signal< sc_lv<8> > tmp_107_reg_958;
+    sc_signal< sc_lv<8> > tmp_108_reg_963;
     sc_signal< sc_lv<64> > grp_fu_220_p1;
     sc_signal< sc_lv<64> > tmp_43_i_reg_978;
     sc_signal< sc_lv<64> > grp_fu_223_p1;
@@ -155,10 +149,10 @@ struct AddWeighted : public sc_module {
     sc_signal< sc_lv<1> > tmp_i_i_i_i_reg_1008;
     sc_signal< sc_lv<1> > tmp_i_i_i_i_reg_1008_pp0_iter27_reg;
     sc_signal< sc_lv<1> > tmp_i_i_i_i_reg_1008_pp0_iter28_reg;
-    sc_signal< sc_lv<1> > tmp_i_i_i_i_106_fu_281_p2;
-    sc_signal< sc_lv<1> > tmp_i_i_i_i_106_reg_1014;
-    sc_signal< sc_lv<1> > tmp_i_i_i_i_106_reg_1014_pp0_iter27_reg;
-    sc_signal< sc_lv<1> > tmp_i_i_i_i_106_reg_1014_pp0_iter28_reg;
+    sc_signal< sc_lv<1> > tmp_i_i_i_i_108_fu_281_p2;
+    sc_signal< sc_lv<1> > tmp_i_i_i_i_108_reg_1014;
+    sc_signal< sc_lv<1> > tmp_i_i_i_i_108_reg_1014_pp0_iter27_reg;
+    sc_signal< sc_lv<1> > tmp_i_i_i_i_108_reg_1014_pp0_iter28_reg;
     sc_signal< sc_lv<1> > isneg_reg_1020;
     sc_signal< sc_lv<1> > isneg_reg_1020_pp0_iter27_reg;
     sc_signal< sc_lv<54> > p_Result_s_fu_311_p1;
@@ -183,9 +177,9 @@ struct AddWeighted : public sc_module {
     sc_signal< sc_lv<1> > icmp_fu_369_p2;
     sc_signal< sc_lv<1> > icmp_reg_1074;
     sc_signal< sc_lv<1> > icmp_reg_1074_pp0_iter27_reg;
-    sc_signal< sc_lv<8> > tmp_92_fu_383_p1;
-    sc_signal< sc_lv<8> > tmp_92_reg_1080;
-    sc_signal< sc_lv<1> > tmp_96_reg_1086;
+    sc_signal< sc_lv<8> > tmp_97_fu_383_p1;
+    sc_signal< sc_lv<8> > tmp_97_reg_1080;
+    sc_signal< sc_lv<1> > tmp_101_reg_1086;
     sc_signal< sc_lv<8> > p_Val2_13_fu_462_p2;
     sc_signal< sc_lv<8> > p_Val2_13_reg_1092;
     sc_signal< sc_lv<1> > sel_tmp2_i_fu_473_p2;
@@ -196,7 +190,7 @@ struct AddWeighted : public sc_module {
     sc_signal< sc_lv<1> > rev_reg_1111;
     sc_signal< sc_lv<1> > Range1_all_ones_1_fu_536_p2;
     sc_signal< sc_lv<1> > Range1_all_ones_1_reg_1118;
-    sc_signal< sc_lv<1> > tmp_101_reg_1125;
+    sc_signal< sc_lv<1> > tmp_106_reg_1125;
     sc_signal< sc_lv<1> > tmp_23_i_fu_550_p2;
     sc_signal< sc_lv<1> > tmp_23_i_reg_1130;
     sc_signal< sc_lv<54> > tmp_24_i_fu_556_p1;
@@ -255,25 +249,25 @@ struct AddWeighted : public sc_module {
     sc_signal< sc_lv<63> > tmp_fu_287_p1;
     sc_signal< sc_lv<12> > tmp_7_i1_fu_299_p1;
     sc_signal< sc_lv<12> > tmp_2_i_fu_339_p2;
-    sc_signal< sc_lv<9> > tmp_93_fu_359_p4;
+    sc_signal< sc_lv<9> > tmp_98_fu_359_p4;
     sc_signal< sc_lv<54> > p_Val2_s_fu_375_p3;
     sc_signal< sc_lv<32> > F2_2_cast_i_fu_380_p1;
     sc_signal< sc_lv<54> > tmp_10_i_fu_392_p1;
     sc_signal< sc_lv<54> > tmp_11_i_fu_396_p2;
     sc_signal< sc_lv<1> > tmp_5_i3_fu_387_p2;
-    sc_signal< sc_lv<8> > tmp_94_fu_402_p1;
+    sc_signal< sc_lv<8> > tmp_99_fu_402_p1;
     sc_signal< sc_lv<8> > p_Val2_0_i_i6_i_fu_406_p3;
     sc_signal< sc_lv<12> > tmp_15_i_fu_426_p2;
     sc_signal< sc_lv<32> > tmp_25_cast_i_fu_431_p1;
     sc_signal< sc_lv<1> > tmp_14_i_fu_421_p2;
-    sc_signal< sc_lv<1> > tmp_95_fu_435_p3;
+    sc_signal< sc_lv<1> > tmp_100_fu_435_p3;
     sc_signal< sc_lv<8> > p_Val2_12_fu_413_p3;
     sc_signal< sc_lv<1> > qb_fu_443_p3;
     sc_signal< sc_lv<8> > tmp_16_i_fu_458_p1;
     sc_signal< sc_lv<1> > sel_tmp1_i_fu_468_p2;
     sc_signal< sc_lv<12> > pos1_fu_478_p2;
     sc_signal< sc_lv<12> > pos2_fu_487_p2;
-    sc_signal< sc_lv<1> > tmp_99_fu_502_p3;
+    sc_signal< sc_lv<1> > tmp_104_fu_502_p3;
     sc_signal< sc_lv<32> > pos1_cast_i_fu_483_p1;
     sc_signal< sc_lv<54> > tmp_20_i_fu_516_p1;
     sc_signal< sc_lv<54> > tmp_21_i_fu_520_p2;
@@ -283,8 +277,8 @@ struct AddWeighted : public sc_module {
     sc_signal< sc_lv<1> > tmp_23_i_not_fu_578_p2;
     sc_signal< sc_lv<1> > tmp_27_i_fu_566_p2;
     sc_signal< sc_lv<1> > sel_tmp33_i_fu_584_p2;
-    sc_signal< sc_lv<8> > tmp_91_fu_596_p1;
-    sc_signal< sc_lv<1> > tmp_97_fu_604_p3;
+    sc_signal< sc_lv<8> > tmp_96_fu_596_p1;
+    sc_signal< sc_lv<1> > tmp_102_fu_604_p3;
     sc_signal< sc_lv<1> > sel_tmp3_i_fu_623_p2;
     sc_signal< sc_lv<8> > sel_tmp_i_fu_617_p3;
     sc_signal< sc_lv<1> > sel_tmp7_i_fu_634_p2;
@@ -332,7 +326,7 @@ struct AddWeighted : public sc_module {
     sc_signal< sc_lv<1> > sel_tmp51_i_fu_891_p2;
     sc_signal< sc_lv<1> > tmp_demorgan_i_fu_849_p2;
     sc_signal< sc_lv<1> > tmp_s_fu_896_p2;
-    sc_signal< sc_lv<1> > tmp_40_fu_902_p2;
+    sc_signal< sc_lv<1> > tmp_39_fu_902_p2;
     sc_signal< sc_lv<1> > sel_tmp55_demorgan_i_fu_914_p2;
     sc_signal< sc_lv<1> > brmerge_i_fu_868_p2;
     sc_signal< sc_lv<1> > sel_tmp55_i_fu_919_p2;
@@ -354,8 +348,8 @@ struct AddWeighted : public sc_module {
     static const sc_lv<4> ap_ST_fsm_state2;
     static const sc_lv<4> ap_ST_fsm_pp0_stage0;
     static const sc_lv<4> ap_ST_fsm_state33;
-    static const bool ap_const_boolean_1;
     static const sc_lv<32> ap_const_lv32_0;
+    static const bool ap_const_boolean_1;
     static const sc_lv<32> ap_const_lv32_2;
     static const bool ap_const_boolean_0;
     static const sc_lv<1> ap_const_lv1_0;
@@ -471,7 +465,6 @@ struct AddWeighted : public sc_module {
     void thread_grp_fu_223_p0();
     void thread_i_V_fu_232_p2();
     void thread_icmp_fu_369_p2();
-    void thread_internal_ap_ready();
     void thread_j_V_fu_244_p2();
     void thread_lD_fu_526_p1();
     void thread_loc_V_1_fu_271_p1();
@@ -499,7 +492,6 @@ struct AddWeighted : public sc_module {
     void thread_pos2_fu_487_p2();
     void thread_qb_fu_443_p3();
     void thread_r_V_fu_715_p2();
-    void thread_real_start();
     void thread_rev4_fu_705_p2();
     void thread_rev_fu_510_p2();
     void thread_sel_tmp12_demorgan_i_fu_651_p2();
@@ -531,12 +523,13 @@ struct AddWeighted : public sc_module {
     void thread_src1_data_stream_V_read();
     void thread_src2_data_stream_V_blk_n();
     void thread_src2_data_stream_V_read();
-    void thread_start_out();
-    void thread_start_write();
     void thread_tmp5_fu_685_p2();
     void thread_tmp6_fu_530_p2();
     void thread_tmp7_fu_815_p2();
     void thread_tmp8_fu_838_p2();
+    void thread_tmp_100_fu_435_p3();
+    void thread_tmp_102_fu_604_p3();
+    void thread_tmp_104_fu_502_p3();
     void thread_tmp_10_i_fu_392_p1();
     void thread_tmp_11_i_fu_396_p2();
     void thread_tmp_13_i_fu_599_p2();
@@ -556,23 +549,20 @@ struct AddWeighted : public sc_module {
     void thread_tmp_27_i_fu_566_p2();
     void thread_tmp_28_i_fu_804_p2();
     void thread_tmp_2_i_fu_339_p2();
+    void thread_tmp_39_fu_902_p2();
     void thread_tmp_3_i_fu_353_p2();
-    void thread_tmp_40_fu_902_p2();
     void thread_tmp_5_i3_fu_387_p2();
     void thread_tmp_7_i1_fu_299_p1();
     void thread_tmp_8_not_i_fu_674_p2();
-    void thread_tmp_91_fu_596_p1();
-    void thread_tmp_92_fu_383_p1();
-    void thread_tmp_93_fu_359_p4();
-    void thread_tmp_94_fu_402_p1();
-    void thread_tmp_95_fu_435_p3();
-    void thread_tmp_97_fu_604_p3();
-    void thread_tmp_99_fu_502_p3();
+    void thread_tmp_96_fu_596_p1();
+    void thread_tmp_97_fu_383_p1();
+    void thread_tmp_98_fu_359_p4();
+    void thread_tmp_99_fu_402_p1();
     void thread_tmp_9_i_fu_321_p2();
     void thread_tmp_demorgan_i_fu_849_p2();
     void thread_tmp_fu_287_p1();
     void thread_tmp_i2_fu_333_p2();
-    void thread_tmp_i_i_i_i_106_fu_281_p2();
+    void thread_tmp_i_i_i_i_108_fu_281_p2();
     void thread_tmp_i_i_i_i_fu_275_p2();
     void thread_tmp_s_fu_896_p2();
     void thread_underflow_fu_830_p3();

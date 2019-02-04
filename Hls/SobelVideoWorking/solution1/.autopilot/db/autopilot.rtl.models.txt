@@ -29,16 +29,11 @@ fifo_w8_d2_A
 fifo_w8_d2_A
 fifo_w8_d2_A
 fifo_w8_d2_A
-start_for_CvtColoudo
-start_for_Gaussiavdy
-start_for_DuplicawdI
-start_for_Sobel_U0
-start_for_Sobel_1xdS
-start_for_AddWeigyd2
-start_for_CvtColozec
-start_for_Mat2AXIAem
-Block_proc
+start_for_Mat2AXIudo
+p_C_Xilinx_Vivado_2_1
+p_C_Xilinx_Vivado_2
 AXIvideo2Mat
+Mat2AXIvideo554
 CvtColor_1
 Filter2D_1
 GaussianBlur
@@ -49,4 +44,5 @@ Sobel_1
 AddWeighted
 CvtColor
 Mat2AXIvideo
+Block_proc304
 Sobel_filter

@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'CvtColor'
 ================================================================
-* Date:           Thu Jan 31 21:48:25 2019
+* Date:           Mon Feb  4 18:08:57 2019
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        SobelVideoWorking
@@ -59,10 +59,10 @@
 |FIFO             |        -|      -|       -|       -|
 |Instance         |        -|      -|       -|       -|
 |Memory           |        -|      -|       -|       -|
-|Multiplexer      |        -|      -|       -|     114|
-|Register         |        -|      -|      40|       -|
+|Multiplexer      |        -|      -|       -|     105|
+|Register         |        -|      -|      39|       -|
 +-----------------+---------+-------+--------+--------+
-|Total            |        0|      0|      40|     185|
+|Total            |        0|      0|      39|     176|
 +-----------------+---------+-------+--------+--------+
 |Available        |      730|    740|  269200|  129000|
 +-----------------+---------+-------+--------+--------+
@@ -112,9 +112,8 @@
     |p_dst_data_stream_1_V_blk_n  |   9|          2|    1|          2|
     |p_dst_data_stream_2_V_blk_n  |   9|          2|    1|          2|
     |p_src_data_stream_V_blk_n    |   9|          2|    1|          2|
-    |real_start                   |   9|          2|    1|          2|
     +-----------------------------+----+-----------+-----+-----------+
-    |Total                        | 114|         24|   29|         62|
+    |Total                        | 105|         22|   28|         60|
     +-----------------------------+----+-----------+-----+-----------+
 
     * Register: 
@@ -129,9 +128,8 @@
     |i_1_reg_192              |  10|   0|   10|          0|
     |i_reg_142                |  10|   0|   10|          0|
     |j_reg_153                |  11|   0|   11|          0|
-    |start_once_reg           |   1|   0|    1|          0|
     +-------------------------+----+----+-----+-----------+
-    |Total                    |  40|   0|   40|          0|
+    |Total                    |  39|   0|   39|          0|
     +-------------------------+----+----+-----+-----------+
 
 
@@ -146,13 +144,10 @@
 |ap_clk                        |  in |    1| ap_ctrl_hs |        CvtColor       | return value |
 |ap_rst                        |  in |    1| ap_ctrl_hs |        CvtColor       | return value |
 |ap_start                      |  in |    1| ap_ctrl_hs |        CvtColor       | return value |
-|start_full_n                  |  in |    1| ap_ctrl_hs |        CvtColor       | return value |
 |ap_done                       | out |    1| ap_ctrl_hs |        CvtColor       | return value |
 |ap_continue                   |  in |    1| ap_ctrl_hs |        CvtColor       | return value |
 |ap_idle                       | out |    1| ap_ctrl_hs |        CvtColor       | return value |
 |ap_ready                      | out |    1| ap_ctrl_hs |        CvtColor       | return value |
-|start_out                     | out |    1| ap_ctrl_hs |        CvtColor       | return value |
-|start_write                   | out |    1| ap_ctrl_hs |        CvtColor       | return value |
 |p_src_data_stream_V_dout      |  in |    8|   ap_fifo  |  p_src_data_stream_V  |    pointer   |
 |p_src_data_stream_V_empty_n   |  in |    1|   ap_fifo  |  p_src_data_stream_V  |    pointer   |
 |p_src_data_stream_V_read      | out |    1|   ap_fifo  |  p_src_data_stream_V  |    pointer   |

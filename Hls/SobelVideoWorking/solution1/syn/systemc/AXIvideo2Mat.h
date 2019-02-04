@@ -135,7 +135,7 @@ struct AXIvideo2Mat : public sc_module {
     sc_signal< sc_logic > img_data_stream_2_V_blk_n;
     sc_signal< sc_logic > img_rows_V_out_blk_n;
     sc_signal< sc_logic > img_cols_V_out_blk_n;
-    sc_signal< sc_lv<32> > t_V_5_reg_284;
+    sc_signal< sc_lv<32> > t_V_6_reg_284;
     sc_signal< sc_lv<1> > eol_i_reg_295;
     sc_signal< sc_lv<1> > eol_reg_307;
     sc_signal< sc_lv<24> > axi_data_V_1_i_reg_318;

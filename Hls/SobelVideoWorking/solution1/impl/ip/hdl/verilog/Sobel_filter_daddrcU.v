@@ -10,7 +10,7 @@
 
 module Sobel_filter_daddrcU
 #(parameter
-    ID         = 74,
+    ID         = 84,
     NUM_STAGE  = 6,
     din0_WIDTH = 64,
     din1_WIDTH = 64,

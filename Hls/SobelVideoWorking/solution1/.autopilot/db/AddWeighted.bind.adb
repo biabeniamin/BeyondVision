@@ -401,7 +401,7 @@
 					<Obj>
 						<type>0</type>
 						<id>19</id>
-						<name>t_V_4</name>
+						<name>t_V_5</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -595,7 +595,7 @@
 					<Obj>
 						<type>0</type>
 						<id>30</id>
-						<name>tmp_102</name>
+						<name>tmp_107</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>624</lineNumber>
@@ -662,7 +662,7 @@
 					<Obj>
 						<type>0</type>
 						<id>34</id>
-						<name>tmp_103</name>
+						<name>tmp_108</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>624</lineNumber>
@@ -729,7 +729,7 @@
 					<Obj>
 						<type>0</type>
 						<id>37</id>
-						<name>tmp_i_105</name>
+						<name>tmp_i_107</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>276</lineNumber>
@@ -1634,7 +1634,7 @@
 					<Obj>
 						<type>0</type>
 						<id>49</id>
-						<name>tmp_i_i_i_i_106</name>
+						<name>tmp_i_i_i_i_108</name>
 						<fileName>r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_isnan.h</fileName>
 						<fileDirectory>r:\builds\2018.2\continuous\2018_06_14_2258646\src\products</fileDirectory>
 						<lineNumber>17</lineNumber>
@@ -2699,7 +2699,7 @@
 					<Obj>
 						<type>0</type>
 						<id>63</id>
-						<name>tmp_91</name>
+						<name>tmp_96</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -2919,7 +2919,7 @@
 					<Obj>
 						<type>0</type>
 						<id>66</id>
-						<name>tmp_92</name>
+						<name>tmp_97</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -3066,7 +3066,7 @@
 					<Obj>
 						<type>0</type>
 						<id>68</id>
-						<name>tmp_93</name>
+						<name>tmp_98</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -3363,7 +3363,7 @@
 					<Obj>
 						<type>0</type>
 						<id>72</id>
-						<name>tmp_94</name>
+						<name>tmp_99</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -3881,7 +3881,7 @@
 					<Obj>
 						<type>0</type>
 						<id>79</id>
-						<name>tmp_95</name>
+						<name>tmp_100</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -4031,7 +4031,7 @@
 					<Obj>
 						<type>0</type>
 						<id>81</id>
-						<name>tmp_96</name>
+						<name>tmp_101</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -4253,7 +4253,7 @@
 					<Obj>
 						<type>0</type>
 						<id>84</id>
-						<name>tmp_97</name>
+						<name>tmp_102</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -6033,7 +6033,7 @@
 					<Obj>
 						<type>0</type>
 						<id>108</id>
-						<name>tmp_99</name>
+						<name>tmp_104</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -6550,7 +6550,7 @@
 					<Obj>
 						<type>0</type>
 						<id>115</id>
-						<name>tmp_101</name>
+						<name>tmp_106</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -9740,7 +9740,7 @@
 					<Obj>
 						<type>0</type>
 						<id>158</id>
-						<name>tmp_40</name>
+						<name>tmp_39</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -10111,7 +10111,7 @@
 					<Obj>
 						<type>0</type>
 						<id>163</id>
-						<name>tmp_39</name>
+						<name>tmp_41</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -16433,7 +16433,7 @@
 			<pipe_depth>30</pipe_depth>
 		</item>
 		<item class_id_reference="44" object_id="_747">
-			<region_name>hls_label_4</region_name>
+			<region_name>hls_label_6</region_name>
 			<basic_blocks>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -18187,7 +18187,7 @@
 			</second>
 		</item>
 		<item>
-			<first>t_V_4_phi_fu_194</first>
+			<first>t_V_5_phi_fu_194</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -18235,7 +18235,39 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_101_fu_542</first>
+			<first>tmp_100_fu_435</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>79</item>
+			</second>
+		</item>
+		<item>
+			<first>tmp_101_fu_450</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>81</item>
+			</second>
+		</item>
+		<item>
+			<first>tmp_102_fu_604</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>84</item>
+			</second>
+		</item>
+		<item>
+			<first>tmp_104_fu_502</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>108</item>
+			</second>
+		</item>
+		<item>
+			<first>tmp_106_fu_542</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -18395,11 +18427,11 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_39_fu_931</first>
+			<first>tmp_39_fu_902</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>163</item>
+				<item>158</item>
 			</second>
 		</item>
 		<item>
@@ -18411,11 +18443,11 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_40_fu_902</first>
+			<first>tmp_41_fu_931</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>158</item>
+				<item>163</item>
 			</second>
 		</item>
 		<item>
@@ -18451,7 +18483,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_91_fu_596</first>
+			<first>tmp_96_fu_596</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -18459,7 +18491,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_92_fu_383</first>
+			<first>tmp_97_fu_383</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -18467,7 +18499,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_93_fu_359</first>
+			<first>tmp_98_fu_359</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -18475,43 +18507,11 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_94_fu_402</first>
+			<first>tmp_99_fu_402</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
 				<item>72</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_95_fu_435</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>79</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_96_fu_450</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>81</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_97_fu_604</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>84</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_99_fu_502</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>108</item>
 			</second>
 		</item>
 		<item>
@@ -18547,7 +18547,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_i_105_fu_250</first>
+			<first>tmp_i_107_fu_250</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -18555,7 +18555,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_i_i_i_i_106_fu_281</first>
+			<first>tmp_i_i_i_i_108_fu_281</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -18689,7 +18689,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_102_read_fu_160</first>
+			<first>tmp_107_read_fu_160</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -18697,7 +18697,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_103_read_fu_166</first>
+			<first>tmp_108_read_fu_166</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -19241,7 +19241,7 @@
 			</second>
 		</item>
 		<item>
-			<first>t_V_4_reg_190</first>
+			<first>t_V_5_reg_190</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -19257,7 +19257,15 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_101_reg_1125</first>
+			<first>tmp_101_reg_1086</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>81</item>
+			</second>
+		</item>
+		<item>
+			<first>tmp_106_reg_1125</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -19265,7 +19273,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_102_reg_958</first>
+			<first>tmp_107_reg_958</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -19273,7 +19281,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_103_reg_963</first>
+			<first>tmp_108_reg_963</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -19345,19 +19353,11 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_92_reg_1080</first>
+			<first>tmp_97_reg_1080</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
 				<item>66</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_96_reg_1086</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>81</item>
 			</second>
 		</item>
 		<item>
@@ -19377,7 +19377,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_i_105_reg_968</first>
+			<first>tmp_i_107_reg_968</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -19385,7 +19385,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_i_i_i_i_106_reg_1014</first>
+			<first>tmp_i_i_i_i_108_reg_1014</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -19433,7 +19433,7 @@
 		<count>2</count>
 		<item_version>0</item_version>
 		<item>
-			<first>t_V_4_reg_190</first>
+			<first>t_V_5_reg_190</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>

@@ -1,6 +1,6 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 74
+set id 84
 set name Sobel_filter_daddrcU
 set corename simcore_dadd
 set op dadd
@@ -91,7 +91,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 76
+set id 86
 set name Sobel_filter_dmulsc4
 set corename simcore_dmul
 set op dmul
@@ -182,7 +182,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 78
+set id 88
 set name Sobel_filter_sitotde
 set corename simcore_sitodp
 set op sitodp
@@ -274,7 +274,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 83 \
+    id 93 \
     name src1_data_stream_V \
     type fifo \
     dir I \
@@ -289,7 +289,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 84 \
+    id 94 \
     name src2_data_stream_V \
     type fifo \
     dir I \
@@ -304,7 +304,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 85 \
+    id 95 \
     name dst_data_stream_V \
     type fifo \
     dir O \
@@ -326,7 +326,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename ap_ctrl \
     op interface \
-    ports { ap_done { O 1 bit } ap_idle { O 1 bit } ap_continue { I 1 bit } } \
+    ports { ap_start { I 1 bit } ap_ready { O 1 bit } ap_done { O 1 bit } ap_idle { O 1 bit } ap_continue { I 1 bit } } \
 } "
 }
 

@@ -432,14 +432,14 @@
         </item>
       </ports>
       <nodes class_id="8" tracking_level="0" version="0">
-        <count>28</count>
+        <count>3</count>
         <item_version>0</item_version>
         <item class_id="9" tracking_level="1" version="0" object_id="_16">
           <Value>
             <Obj>
               <type>0</type>
-              <id>16</id>
-              <name>img_0_cols_V_c21</name>
+              <id>35</id>
+              <name>enable_V_read</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -449,17 +449,18 @@
                 <item_version>0</item_version>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>img_0_cols_V_c21_U</rtlName>
-              <coreName>FIFO</coreName>
+              <rtlName/>
+              <coreName/>
             </Obj>
-            <bitwidth>12</bitwidth>
+            <bitwidth>1</bitwidth>
           </Value>
           <oprand_edges>
-            <count>1</count>
+            <count>2</count>
             <item_version>0</item_version>
-            <item>99</item>
+            <item>40</item>
+            <item>41</item>
           </oprand_edges>
-          <opcode>alloca</opcode>
+          <opcode>read</opcode>
           <m_Display>0</m_Display>
           <m_isOnCriticalPath>0</m_isOnCriticalPath>
           <m_isLCDNode>0</m_isLCDNode>
@@ -469,8 +470,8 @@
           <Value>
             <Obj>
               <type>0</type>
-              <id>17</id>
-              <name>img_0_rows_V_c20</name>
+              <id>36</id>
+              <name/>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -480,17 +481,32 @@
                 <item_version>0</item_version>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>img_0_rows_V_c20_U</rtlName>
-              <coreName>FIFO</coreName>
+              <rtlName>Block_proc304_U0</rtlName>
+              <coreName/>
             </Obj>
-            <bitwidth>11</bitwidth>
+            <bitwidth>0</bitwidth>
           </Value>
           <oprand_edges>
-            <count>1</count>
+            <count>16</count>
             <item_version>0</item_version>
-            <item>100</item>
+            <item>43</item>
+            <item>44</item>
+            <item>45</item>
+            <item>46</item>
+            <item>47</item>
+            <item>48</item>
+            <item>49</item>
+            <item>50</item>
+            <item>51</item>
+            <item>52</item>
+            <item>53</item>
+            <item>54</item>
+            <item>55</item>
+            <item>56</item>
+            <item>57</item>
+            <item>58</item>
           </oprand_edges>
-          <opcode>alloca</opcode>
+          <opcode>call</opcode>
           <m_Display>0</m_Display>
           <m_isOnCriticalPath>0</m_isOnCriticalPath>
           <m_isLCDNode>0</m_isLCDNode>
@@ -500,73 +516,11 @@
           <Value>
             <Obj>
               <type>0</type>
-              <id>18</id>
-              <name>img_0_cols_V_c</name>
-              <fileName/>
-              <fileDirectory/>
-              <lineNumber>0</lineNumber>
-              <contextFuncName/>
-              <inlineStackInfo>
-                <count>0</count>
-                <item_version>0</item_version>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName>img_0_cols_V_c_U</rtlName>
-              <coreName>FIFO</coreName>
-            </Obj>
-            <bitwidth>12</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>101</item>
-          </oprand_edges>
-          <opcode>alloca</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_delay>0.00</m_delay>
-        </item>
-        <item class_id_reference="9" object_id="_19">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>19</id>
-              <name>img_0_rows_V_c</name>
-              <fileName/>
-              <fileDirectory/>
-              <lineNumber>0</lineNumber>
-              <contextFuncName/>
-              <inlineStackInfo>
-                <count>0</count>
-                <item_version>0</item_version>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName>img_0_rows_V_c_U</rtlName>
-              <coreName>FIFO</coreName>
-            </Obj>
-            <bitwidth>11</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>102</item>
-          </oprand_edges>
-          <opcode>alloca</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_delay>0.00</m_delay>
-        </item>
-        <item class_id_reference="9" object_id="_20">
-          <Value>
-            <Obj>
-              <type>0</type>
               <id>37</id>
-              <name>img_0_data_stream_0</name>
+              <name/>
               <fileName>SobelVideoWorking/a.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>9</lineNumber>
+              <lineNumber>38</lineNumber>
               <contextFuncName>Sobel_filter</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -581,1094 +535,7 @@
                         <first>SobelVideoWorking/a.cpp</first>
                         <second>Sobel_filter</second>
                       </first>
-                      <second>9</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName>img_0.data_stream[0].V</originalName>
-              <rtlName>img_0_data_stream_0_U</rtlName>
-              <coreName>FIFO</coreName>
-            </Obj>
-            <bitwidth>8</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>103</item>
-          </oprand_edges>
-          <opcode>alloca</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_delay>0.00</m_delay>
-        </item>
-        <item class_id_reference="9" object_id="_21">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>40</id>
-              <name>img_0_data_stream_1</name>
-              <fileName>SobelVideoWorking/a.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>9</lineNumber>
-              <contextFuncName>Sobel_filter</contextFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>C:\Digilent19\Hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>SobelVideoWorking/a.cpp</first>
-                        <second>Sobel_filter</second>
-                      </first>
-                      <second>9</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName>img_0.data_stream[1].V</originalName>
-              <rtlName>img_0_data_stream_1_U</rtlName>
-              <coreName>FIFO</coreName>
-            </Obj>
-            <bitwidth>8</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>104</item>
-          </oprand_edges>
-          <opcode>alloca</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_delay>0.00</m_delay>
-        </item>
-        <item class_id_reference="9" object_id="_22">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>43</id>
-              <name>img_0_data_stream_2</name>
-              <fileName>SobelVideoWorking/a.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>9</lineNumber>
-              <contextFuncName>Sobel_filter</contextFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>C:\Digilent19\Hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>SobelVideoWorking/a.cpp</first>
-                        <second>Sobel_filter</second>
-                      </first>
-                      <second>9</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName>img_0.data_stream[2].V</originalName>
-              <rtlName>img_0_data_stream_2_U</rtlName>
-              <coreName>FIFO</coreName>
-            </Obj>
-            <bitwidth>8</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>105</item>
-          </oprand_edges>
-          <opcode>alloca</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_delay>0.00</m_delay>
-        </item>
-        <item class_id_reference="9" object_id="_23">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>46</id>
-              <name>img_1_data_stream_0</name>
-              <fileName>SobelVideoWorking/a.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>10</lineNumber>
-              <contextFuncName>Sobel_filter</contextFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>C:\Digilent19\Hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>SobelVideoWorking/a.cpp</first>
-                        <second>Sobel_filter</second>
-                      </first>
-                      <second>10</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName>img_1.data_stream[0].V</originalName>
-              <rtlName>img_1_data_stream_0_U</rtlName>
-              <coreName>FIFO</coreName>
-            </Obj>
-            <bitwidth>8</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>106</item>
-          </oprand_edges>
-          <opcode>alloca</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_delay>0.00</m_delay>
-        </item>
-        <item class_id_reference="9" object_id="_24">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>49</id>
-              <name>img_2_data_stream_0</name>
-              <fileName>SobelVideoWorking/a.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>11</lineNumber>
-              <contextFuncName>Sobel_filter</contextFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>C:\Digilent19\Hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>SobelVideoWorking/a.cpp</first>
-                        <second>Sobel_filter</second>
-                      </first>
-                      <second>11</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName>img_2.data_stream[0].V</originalName>
-              <rtlName>img_2_data_stream_0_U</rtlName>
-              <coreName>FIFO</coreName>
-            </Obj>
-            <bitwidth>8</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>107</item>
-          </oprand_edges>
-          <opcode>alloca</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_delay>0.00</m_delay>
-        </item>
-        <item class_id_reference="9" object_id="_25">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>52</id>
-              <name>img_2a_data_stream_0</name>
-              <fileName>SobelVideoWorking/a.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>12</lineNumber>
-              <contextFuncName>Sobel_filter</contextFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>C:\Digilent19\Hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>SobelVideoWorking/a.cpp</first>
-                        <second>Sobel_filter</second>
-                      </first>
-                      <second>12</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName>img_2a.data_stream[0].V</originalName>
-              <rtlName>img_2a_data_stream_0_U</rtlName>
-              <coreName>FIFO</coreName>
-            </Obj>
-            <bitwidth>8</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>108</item>
-          </oprand_edges>
-          <opcode>alloca</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_delay>0.00</m_delay>
-        </item>
-        <item class_id_reference="9" object_id="_26">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>55</id>
-              <name>img_2b_data_stream_0</name>
-              <fileName>SobelVideoWorking/a.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>13</lineNumber>
-              <contextFuncName>Sobel_filter</contextFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>C:\Digilent19\Hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>SobelVideoWorking/a.cpp</first>
-                        <second>Sobel_filter</second>
-                      </first>
-                      <second>13</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName>img_2b.data_stream[0].V</originalName>
-              <rtlName>img_2b_data_stream_0_U</rtlName>
-              <coreName>FIFO</coreName>
-            </Obj>
-            <bitwidth>8</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>109</item>
-          </oprand_edges>
-          <opcode>alloca</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_delay>0.00</m_delay>
-        </item>
-        <item class_id_reference="9" object_id="_27">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>58</id>
-              <name>img_3_data_stream_0</name>
-              <fileName>SobelVideoWorking/a.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>14</lineNumber>
-              <contextFuncName>Sobel_filter</contextFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>C:\Digilent19\Hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>SobelVideoWorking/a.cpp</first>
-                        <second>Sobel_filter</second>
-                      </first>
-                      <second>14</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName>img_3.data_stream[0].V</originalName>
-              <rtlName>img_3_data_stream_0_U</rtlName>
-              <coreName>FIFO</coreName>
-            </Obj>
-            <bitwidth>8</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>110</item>
-          </oprand_edges>
-          <opcode>alloca</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_delay>0.00</m_delay>
-        </item>
-        <item class_id_reference="9" object_id="_28">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>61</id>
-              <name>img_4_data_stream_0</name>
-              <fileName>SobelVideoWorking/a.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>15</lineNumber>
-              <contextFuncName>Sobel_filter</contextFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>C:\Digilent19\Hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>SobelVideoWorking/a.cpp</first>
-                        <second>Sobel_filter</second>
-                      </first>
-                      <second>15</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName>img_4.data_stream[0].V</originalName>
-              <rtlName>img_4_data_stream_0_U</rtlName>
-              <coreName>FIFO</coreName>
-            </Obj>
-            <bitwidth>8</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>111</item>
-          </oprand_edges>
-          <opcode>alloca</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_delay>0.00</m_delay>
-        </item>
-        <item class_id_reference="9" object_id="_29">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>64</id>
-              <name>img_5_data_stream_0</name>
-              <fileName>SobelVideoWorking/a.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>16</lineNumber>
-              <contextFuncName>Sobel_filter</contextFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>C:\Digilent19\Hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>SobelVideoWorking/a.cpp</first>
-                        <second>Sobel_filter</second>
-                      </first>
-                      <second>16</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName>img_5.data_stream[0].V</originalName>
-              <rtlName>img_5_data_stream_0_U</rtlName>
-              <coreName>FIFO</coreName>
-            </Obj>
-            <bitwidth>8</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>112</item>
-          </oprand_edges>
-          <opcode>alloca</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_delay>0.00</m_delay>
-        </item>
-        <item class_id_reference="9" object_id="_30">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>67</id>
-              <name>img_6_data_stream_0</name>
-              <fileName>SobelVideoWorking/a.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>17</lineNumber>
-              <contextFuncName>Sobel_filter</contextFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>C:\Digilent19\Hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>SobelVideoWorking/a.cpp</first>
-                        <second>Sobel_filter</second>
-                      </first>
-                      <second>17</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName>img_6.data_stream[0].V</originalName>
-              <rtlName>img_6_data_stream_0_U</rtlName>
-              <coreName>FIFO</coreName>
-            </Obj>
-            <bitwidth>8</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>113</item>
-          </oprand_edges>
-          <opcode>alloca</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_delay>0.00</m_delay>
-        </item>
-        <item class_id_reference="9" object_id="_31">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>70</id>
-              <name>img_6_data_stream_1</name>
-              <fileName>SobelVideoWorking/a.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>17</lineNumber>
-              <contextFuncName>Sobel_filter</contextFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>C:\Digilent19\Hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>SobelVideoWorking/a.cpp</first>
-                        <second>Sobel_filter</second>
-                      </first>
-                      <second>17</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName>img_6.data_stream[1].V</originalName>
-              <rtlName>img_6_data_stream_1_U</rtlName>
-              <coreName>FIFO</coreName>
-            </Obj>
-            <bitwidth>8</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>114</item>
-          </oprand_edges>
-          <opcode>alloca</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_delay>0.00</m_delay>
-        </item>
-        <item class_id_reference="9" object_id="_32">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>73</id>
-              <name>img_6_data_stream_2</name>
-              <fileName>SobelVideoWorking/a.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>17</lineNumber>
-              <contextFuncName>Sobel_filter</contextFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>C:\Digilent19\Hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>SobelVideoWorking/a.cpp</first>
-                        <second>Sobel_filter</second>
-                      </first>
-                      <second>17</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName>img_6.data_stream[2].V</originalName>
-              <rtlName>img_6_data_stream_2_U</rtlName>
-              <coreName>FIFO</coreName>
-            </Obj>
-            <bitwidth>8</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>115</item>
-          </oprand_edges>
-          <opcode>alloca</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_delay>0.00</m_delay>
-        </item>
-        <item class_id_reference="9" object_id="_33">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>82</id>
-              <name/>
-              <fileName/>
-              <fileDirectory/>
-              <lineNumber>0</lineNumber>
-              <contextFuncName/>
-              <inlineStackInfo>
-                <count>0</count>
-                <item_version>0</item_version>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName>Block_proc_U0</rtlName>
-              <coreName/>
-            </Obj>
-            <bitwidth>0</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>3</count>
-            <item_version>0</item_version>
-            <item>117</item>
-            <item>118</item>
-            <item>119</item>
-          </oprand_edges>
-          <opcode>call</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_delay>0.00</m_delay>
-        </item>
-        <item class_id_reference="9" object_id="_34">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>87</id>
-              <name/>
-              <fileName>SobelVideoWorking/a.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>24</lineNumber>
-              <contextFuncName>Sobel_filter</contextFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>C:\Digilent19\Hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>SobelVideoWorking/a.cpp</first>
-                        <second>Sobel_filter</second>
-                      </first>
-                      <second>24</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName>AXIvideo2Mat_U0</rtlName>
-              <coreName/>
-            </Obj>
-            <bitwidth>0</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>17</count>
-            <item_version>0</item_version>
-            <item>121</item>
-            <item>122</item>
-            <item>123</item>
-            <item>124</item>
-            <item>125</item>
-            <item>126</item>
-            <item>127</item>
-            <item>128</item>
-            <item>129</item>
-            <item>130</item>
-            <item>131</item>
-            <item>132</item>
-            <item>133</item>
-            <item>134</item>
-            <item>135</item>
-            <item>867</item>
-            <item>868</item>
-          </oprand_edges>
-          <opcode>call</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_delay>0.00</m_delay>
-        </item>
-        <item class_id_reference="9" object_id="_35">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>88</id>
-              <name/>
-              <fileName>SobelVideoWorking/a.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>25</lineNumber>
-              <contextFuncName>Sobel_filter</contextFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>C:\Digilent19\Hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>SobelVideoWorking/a.cpp</first>
-                        <second>Sobel_filter</second>
-                      </first>
-                      <second>25</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName>CvtColor_1_U0</rtlName>
-              <coreName/>
-            </Obj>
-            <bitwidth>0</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>9</count>
-            <item_version>0</item_version>
-            <item>137</item>
-            <item>138</item>
-            <item>139</item>
-            <item>140</item>
-            <item>141</item>
-            <item>142</item>
-            <item>143</item>
-            <item>866</item>
-            <item>869</item>
-          </oprand_edges>
-          <opcode>call</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_delay>0.00</m_delay>
-        </item>
-        <item class_id_reference="9" object_id="_36">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>89</id>
-              <name/>
-              <fileName>SobelVideoWorking/a.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>26</lineNumber>
-              <contextFuncName>Sobel_filter</contextFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>C:\Digilent19\Hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>SobelVideoWorking/a.cpp</first>
-                        <second>Sobel_filter</second>
-                      </first>
-                      <second>26</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName>GaussianBlur_U0</rtlName>
-              <coreName/>
-            </Obj>
-            <bitwidth>0</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>5</count>
-            <item_version>0</item_version>
-            <item>145</item>
-            <item>146</item>
-            <item>147</item>
-            <item>865</item>
-            <item>870</item>
-          </oprand_edges>
-          <opcode>call</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_delay>0.00</m_delay>
-        </item>
-        <item class_id_reference="9" object_id="_37">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>90</id>
-              <name/>
-              <fileName>SobelVideoWorking/a.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>27</lineNumber>
-              <contextFuncName>Sobel_filter</contextFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>C:\Digilent19\Hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>SobelVideoWorking/a.cpp</first>
-                        <second>Sobel_filter</second>
-                      </first>
-                      <second>27</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName>Duplicate_U0</rtlName>
-              <coreName/>
-            </Obj>
-            <bitwidth>0</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>6</count>
-            <item_version>0</item_version>
-            <item>149</item>
-            <item>150</item>
-            <item>151</item>
-            <item>152</item>
-            <item>864</item>
-            <item>871</item>
-          </oprand_edges>
-          <opcode>call</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_delay>0.00</m_delay>
-        </item>
-        <item class_id_reference="9" object_id="_38">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>91</id>
-              <name/>
-              <fileName>SobelVideoWorking/a.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>28</lineNumber>
-              <contextFuncName>Sobel_filter</contextFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>C:\Digilent19\Hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>SobelVideoWorking/a.cpp</first>
-                        <second>Sobel_filter</second>
-                      </first>
-                      <second>28</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName>Sobel_U0</rtlName>
-              <coreName/>
-            </Obj>
-            <bitwidth>0</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>5</count>
-            <item_version>0</item_version>
-            <item>154</item>
-            <item>155</item>
-            <item>156</item>
-            <item>862</item>
-            <item>872</item>
-          </oprand_edges>
-          <opcode>call</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_delay>0.00</m_delay>
-        </item>
-        <item class_id_reference="9" object_id="_39">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>92</id>
-              <name/>
-              <fileName>SobelVideoWorking/a.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>29</lineNumber>
-              <contextFuncName>Sobel_filter</contextFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>C:\Digilent19\Hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>SobelVideoWorking/a.cpp</first>
-                        <second>Sobel_filter</second>
-                      </first>
-                      <second>29</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName>Sobel_1_U0</rtlName>
-              <coreName/>
-            </Obj>
-            <bitwidth>0</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>158</item>
-            <item>159</item>
-            <item>160</item>
-            <item>863</item>
-          </oprand_edges>
-          <opcode>call</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_delay>0.00</m_delay>
-        </item>
-        <item class_id_reference="9" object_id="_40">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>93</id>
-              <name/>
-              <fileName>SobelVideoWorking/a.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>30</lineNumber>
-              <contextFuncName>Sobel_filter</contextFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>C:\Digilent19\Hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>SobelVideoWorking/a.cpp</first>
-                        <second>Sobel_filter</second>
-                      </first>
-                      <second>30</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName>AddWeighted_U0</rtlName>
-              <coreName/>
-            </Obj>
-            <bitwidth>0</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>7</count>
-            <item_version>0</item_version>
-            <item>162</item>
-            <item>163</item>
-            <item>164</item>
-            <item>165</item>
-            <item>860</item>
-            <item>861</item>
-            <item>873</item>
-          </oprand_edges>
-          <opcode>call</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_delay>0.00</m_delay>
-        </item>
-        <item class_id_reference="9" object_id="_41">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>94</id>
-              <name/>
-              <fileName>SobelVideoWorking/a.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>31</lineNumber>
-              <contextFuncName>Sobel_filter</contextFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>C:\Digilent19\Hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>SobelVideoWorking/a.cpp</first>
-                        <second>Sobel_filter</second>
-                      </first>
-                      <second>31</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName>CvtColor_U0</rtlName>
-              <coreName/>
-            </Obj>
-            <bitwidth>0</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>7</count>
-            <item_version>0</item_version>
-            <item>167</item>
-            <item>168</item>
-            <item>169</item>
-            <item>170</item>
-            <item>171</item>
-            <item>859</item>
-            <item>874</item>
-          </oprand_edges>
-          <opcode>call</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_delay>0.00</m_delay>
-        </item>
-        <item class_id_reference="9" object_id="_42">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>95</id>
-              <name/>
-              <fileName>SobelVideoWorking/a.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>32</lineNumber>
-              <contextFuncName>Sobel_filter</contextFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>C:\Digilent19\Hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>SobelVideoWorking/a.cpp</first>
-                        <second>Sobel_filter</second>
-                      </first>
-                      <second>32</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName>Mat2AXIvideo_U0</rtlName>
-              <coreName/>
-            </Obj>
-            <bitwidth>0</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>13</count>
-            <item_version>0</item_version>
-            <item>173</item>
-            <item>174</item>
-            <item>175</item>
-            <item>176</item>
-            <item>177</item>
-            <item>178</item>
-            <item>179</item>
-            <item>180</item>
-            <item>181</item>
-            <item>182</item>
-            <item>183</item>
-            <item>858</item>
-            <item>875</item>
-          </oprand_edges>
-          <opcode>call</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_delay>0.00</m_delay>
-        </item>
-        <item class_id_reference="9" object_id="_43">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>96</id>
-              <name/>
-              <fileName>SobelVideoWorking/a.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>50</lineNumber>
-              <contextFuncName>Sobel_filter</contextFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>C:\Digilent19\Hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>SobelVideoWorking/a.cpp</first>
-                        <second>Sobel_filter</second>
-                      </first>
-                      <second>50</second>
+                      <second>38</second>
                     </item>
                   </second>
                 </item>
@@ -1691,37 +558,14 @@
         </item>
       </nodes>
       <consts class_id="15" tracking_level="0" version="0">
-        <count>11</count>
+        <count>1</count>
         <item_version>0</item_version>
-        <item class_id="16" tracking_level="1" version="0" object_id="_44">
+        <item class_id="16" tracking_level="1" version="0" object_id="_19">
           <Value>
             <Obj>
               <type>2</type>
-              <id>98</id>
-              <name>empty</name>
-              <fileName/>
-              <fileDirectory/>
-              <lineNumber>0</lineNumber>
-              <contextFuncName/>
-              <inlineStackInfo>
-                <count>0</count>
-                <item_version>0</item_version>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName/>
-              <coreName/>
-            </Obj>
-            <bitwidth>64</bitwidth>
-          </Value>
-          <const_type>0</const_type>
-          <content>1</content>
-        </item>
-        <item class_id_reference="16" object_id="_45">
-          <Value>
-            <Obj>
-              <type>2</type>
-              <id>116</id>
-              <name>Block_proc</name>
+              <id>42</id>
+              <name>Block_proc304</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -1737,223 +581,16 @@
             <bitwidth>0</bitwidth>
           </Value>
           <const_type>6</const_type>
-          <content>&lt;constant:Block__proc&gt;</content>
-        </item>
-        <item class_id_reference="16" object_id="_46">
-          <Value>
-            <Obj>
-              <type>2</type>
-              <id>120</id>
-              <name>AXIvideo2Mat</name>
-              <fileName/>
-              <fileDirectory/>
-              <lineNumber>0</lineNumber>
-              <contextFuncName/>
-              <inlineStackInfo>
-                <count>0</count>
-                <item_version>0</item_version>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName/>
-              <coreName/>
-            </Obj>
-            <bitwidth>0</bitwidth>
-          </Value>
-          <const_type>6</const_type>
-          <content>&lt;constant:AXIvideo2Mat&gt;</content>
-        </item>
-        <item class_id_reference="16" object_id="_47">
-          <Value>
-            <Obj>
-              <type>2</type>
-              <id>136</id>
-              <name>CvtColor_1</name>
-              <fileName/>
-              <fileDirectory/>
-              <lineNumber>0</lineNumber>
-              <contextFuncName/>
-              <inlineStackInfo>
-                <count>0</count>
-                <item_version>0</item_version>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName/>
-              <coreName/>
-            </Obj>
-            <bitwidth>0</bitwidth>
-          </Value>
-          <const_type>6</const_type>
-          <content>&lt;constant:CvtColor.1&gt;</content>
-        </item>
-        <item class_id_reference="16" object_id="_48">
-          <Value>
-            <Obj>
-              <type>2</type>
-              <id>144</id>
-              <name>GaussianBlur</name>
-              <fileName/>
-              <fileDirectory/>
-              <lineNumber>0</lineNumber>
-              <contextFuncName/>
-              <inlineStackInfo>
-                <count>0</count>
-                <item_version>0</item_version>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName/>
-              <coreName/>
-            </Obj>
-            <bitwidth>0</bitwidth>
-          </Value>
-          <const_type>6</const_type>
-          <content>&lt;constant:GaussianBlur&gt;</content>
-        </item>
-        <item class_id_reference="16" object_id="_49">
-          <Value>
-            <Obj>
-              <type>2</type>
-              <id>148</id>
-              <name>Duplicate</name>
-              <fileName/>
-              <fileDirectory/>
-              <lineNumber>0</lineNumber>
-              <contextFuncName/>
-              <inlineStackInfo>
-                <count>0</count>
-                <item_version>0</item_version>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName/>
-              <coreName/>
-            </Obj>
-            <bitwidth>0</bitwidth>
-          </Value>
-          <const_type>6</const_type>
-          <content>&lt;constant:Duplicate&gt;</content>
-        </item>
-        <item class_id_reference="16" object_id="_50">
-          <Value>
-            <Obj>
-              <type>2</type>
-              <id>153</id>
-              <name>Sobel</name>
-              <fileName/>
-              <fileDirectory/>
-              <lineNumber>0</lineNumber>
-              <contextFuncName/>
-              <inlineStackInfo>
-                <count>0</count>
-                <item_version>0</item_version>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName/>
-              <coreName/>
-            </Obj>
-            <bitwidth>0</bitwidth>
-          </Value>
-          <const_type>6</const_type>
-          <content>&lt;constant:Sobel&gt;</content>
-        </item>
-        <item class_id_reference="16" object_id="_51">
-          <Value>
-            <Obj>
-              <type>2</type>
-              <id>157</id>
-              <name>Sobel_1</name>
-              <fileName/>
-              <fileDirectory/>
-              <lineNumber>0</lineNumber>
-              <contextFuncName/>
-              <inlineStackInfo>
-                <count>0</count>
-                <item_version>0</item_version>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName/>
-              <coreName/>
-            </Obj>
-            <bitwidth>0</bitwidth>
-          </Value>
-          <const_type>6</const_type>
-          <content>&lt;constant:Sobel.1&gt;</content>
-        </item>
-        <item class_id_reference="16" object_id="_52">
-          <Value>
-            <Obj>
-              <type>2</type>
-              <id>161</id>
-              <name>AddWeighted</name>
-              <fileName/>
-              <fileDirectory/>
-              <lineNumber>0</lineNumber>
-              <contextFuncName/>
-              <inlineStackInfo>
-                <count>0</count>
-                <item_version>0</item_version>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName/>
-              <coreName/>
-            </Obj>
-            <bitwidth>0</bitwidth>
-          </Value>
-          <const_type>6</const_type>
-          <content>&lt;constant:AddWeighted&gt;</content>
-        </item>
-        <item class_id_reference="16" object_id="_53">
-          <Value>
-            <Obj>
-              <type>2</type>
-              <id>166</id>
-              <name>CvtColor</name>
-              <fileName/>
-              <fileDirectory/>
-              <lineNumber>0</lineNumber>
-              <contextFuncName/>
-              <inlineStackInfo>
-                <count>0</count>
-                <item_version>0</item_version>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName/>
-              <coreName/>
-            </Obj>
-            <bitwidth>0</bitwidth>
-          </Value>
-          <const_type>6</const_type>
-          <content>&lt;constant:CvtColor&gt;</content>
-        </item>
-        <item class_id_reference="16" object_id="_54">
-          <Value>
-            <Obj>
-              <type>2</type>
-              <id>172</id>
-              <name>Mat2AXIvideo</name>
-              <fileName/>
-              <fileDirectory/>
-              <lineNumber>0</lineNumber>
-              <contextFuncName/>
-              <inlineStackInfo>
-                <count>0</count>
-                <item_version>0</item_version>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName/>
-              <coreName/>
-            </Obj>
-            <bitwidth>0</bitwidth>
-          </Value>
-          <const_type>6</const_type>
-          <content>&lt;constant:Mat2AXIvideo&gt;</content>
+          <content>&lt;constant:Block__proc304&gt;</content>
         </item>
       </consts>
       <blocks class_id="17" tracking_level="0" version="0">
         <count>1</count>
         <item_version>0</item_version>
-        <item class_id="18" tracking_level="1" version="0" object_id="_55">
+        <item class_id="18" tracking_level="1" version="0" object_id="_20">
           <Obj>
             <type>3</type>
-            <id>97</id>
+            <id>38</id>
             <name>Sobel_filter</name>
             <fileName/>
             <fileDirectory/>
@@ -1968,691 +605,134 @@
             <coreName/>
           </Obj>
           <node_objs>
-            <count>28</count>
+            <count>3</count>
             <item_version>0</item_version>
-            <item>16</item>
-            <item>17</item>
-            <item>18</item>
-            <item>19</item>
+            <item>35</item>
+            <item>36</item>
             <item>37</item>
-            <item>40</item>
-            <item>43</item>
-            <item>46</item>
-            <item>49</item>
-            <item>52</item>
-            <item>55</item>
-            <item>58</item>
-            <item>61</item>
-            <item>64</item>
-            <item>67</item>
-            <item>70</item>
-            <item>73</item>
-            <item>82</item>
-            <item>87</item>
-            <item>88</item>
-            <item>89</item>
-            <item>90</item>
-            <item>91</item>
-            <item>92</item>
-            <item>93</item>
-            <item>94</item>
-            <item>95</item>
-            <item>96</item>
           </node_objs>
         </item>
       </blocks>
       <edges class_id="19" tracking_level="0" version="0">
-        <count>93</count>
+        <count>17</count>
         <item_version>0</item_version>
-        <item class_id="20" tracking_level="1" version="0" object_id="_56">
-          <id>99</id>
+        <item class_id="20" tracking_level="1" version="0" object_id="_21">
+          <id>41</id>
           <edge_type>1</edge_type>
-          <source_obj>98</source_obj>
-          <sink_obj>16</sink_obj>
+          <source_obj>15</source_obj>
+          <sink_obj>35</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_57">
-          <id>100</id>
+        <item class_id_reference="20" object_id="_22">
+          <id>43</id>
           <edge_type>1</edge_type>
-          <source_obj>98</source_obj>
-          <sink_obj>17</sink_obj>
+          <source_obj>42</source_obj>
+          <sink_obj>36</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_58">
-          <id>101</id>
+        <item class_id_reference="20" object_id="_23">
+          <id>44</id>
           <edge_type>1</edge_type>
-          <source_obj>98</source_obj>
-          <sink_obj>18</sink_obj>
+          <source_obj>35</source_obj>
+          <sink_obj>36</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_59">
-          <id>102</id>
-          <edge_type>1</edge_type>
-          <source_obj>98</source_obj>
-          <sink_obj>19</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_60">
-          <id>103</id>
-          <edge_type>1</edge_type>
-          <source_obj>98</source_obj>
-          <sink_obj>37</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_61">
-          <id>104</id>
-          <edge_type>1</edge_type>
-          <source_obj>98</source_obj>
-          <sink_obj>40</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_62">
-          <id>105</id>
-          <edge_type>1</edge_type>
-          <source_obj>98</source_obj>
-          <sink_obj>43</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_63">
-          <id>106</id>
-          <edge_type>1</edge_type>
-          <source_obj>98</source_obj>
-          <sink_obj>46</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_64">
-          <id>107</id>
-          <edge_type>1</edge_type>
-          <source_obj>98</source_obj>
-          <sink_obj>49</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_65">
-          <id>108</id>
-          <edge_type>1</edge_type>
-          <source_obj>98</source_obj>
-          <sink_obj>52</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_66">
-          <id>109</id>
-          <edge_type>1</edge_type>
-          <source_obj>98</source_obj>
-          <sink_obj>55</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_67">
-          <id>110</id>
-          <edge_type>1</edge_type>
-          <source_obj>98</source_obj>
-          <sink_obj>58</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_68">
-          <id>111</id>
-          <edge_type>1</edge_type>
-          <source_obj>98</source_obj>
-          <sink_obj>61</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_69">
-          <id>112</id>
-          <edge_type>1</edge_type>
-          <source_obj>98</source_obj>
-          <sink_obj>64</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_70">
-          <id>113</id>
-          <edge_type>1</edge_type>
-          <source_obj>98</source_obj>
-          <sink_obj>67</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_71">
-          <id>114</id>
-          <edge_type>1</edge_type>
-          <source_obj>98</source_obj>
-          <sink_obj>70</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_72">
-          <id>115</id>
-          <edge_type>1</edge_type>
-          <source_obj>98</source_obj>
-          <sink_obj>73</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_73">
-          <id>117</id>
-          <edge_type>1</edge_type>
-          <source_obj>116</source_obj>
-          <sink_obj>82</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_74">
-          <id>118</id>
-          <edge_type>1</edge_type>
-          <source_obj>19</source_obj>
-          <sink_obj>82</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_75">
-          <id>119</id>
-          <edge_type>1</edge_type>
-          <source_obj>18</source_obj>
-          <sink_obj>82</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_76">
-          <id>121</id>
-          <edge_type>1</edge_type>
-          <source_obj>120</source_obj>
-          <sink_obj>87</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_77">
-          <id>122</id>
+        <item class_id_reference="20" object_id="_24">
+          <id>45</id>
           <edge_type>1</edge_type>
           <source_obj>1</source_obj>
-          <sink_obj>87</sink_obj>
+          <sink_obj>36</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_78">
-          <id>123</id>
+        <item class_id_reference="20" object_id="_25">
+          <id>46</id>
           <edge_type>1</edge_type>
           <source_obj>2</source_obj>
-          <sink_obj>87</sink_obj>
+          <sink_obj>36</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_79">
-          <id>124</id>
+        <item class_id_reference="20" object_id="_26">
+          <id>47</id>
           <edge_type>1</edge_type>
           <source_obj>3</source_obj>
-          <sink_obj>87</sink_obj>
+          <sink_obj>36</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_80">
-          <id>125</id>
+        <item class_id_reference="20" object_id="_27">
+          <id>48</id>
           <edge_type>1</edge_type>
           <source_obj>4</source_obj>
-          <sink_obj>87</sink_obj>
+          <sink_obj>36</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_81">
-          <id>126</id>
+        <item class_id_reference="20" object_id="_28">
+          <id>49</id>
           <edge_type>1</edge_type>
           <source_obj>5</source_obj>
-          <sink_obj>87</sink_obj>
+          <sink_obj>36</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_82">
-          <id>127</id>
+        <item class_id_reference="20" object_id="_29">
+          <id>50</id>
           <edge_type>1</edge_type>
           <source_obj>6</source_obj>
-          <sink_obj>87</sink_obj>
+          <sink_obj>36</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_83">
-          <id>128</id>
+        <item class_id_reference="20" object_id="_30">
+          <id>51</id>
           <edge_type>1</edge_type>
           <source_obj>7</source_obj>
-          <sink_obj>87</sink_obj>
+          <sink_obj>36</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_84">
-          <id>129</id>
-          <edge_type>1</edge_type>
-          <source_obj>19</source_obj>
-          <sink_obj>87</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_85">
-          <id>130</id>
-          <edge_type>1</edge_type>
-          <source_obj>18</source_obj>
-          <sink_obj>87</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_86">
-          <id>131</id>
-          <edge_type>1</edge_type>
-          <source_obj>37</source_obj>
-          <sink_obj>87</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_87">
-          <id>132</id>
-          <edge_type>1</edge_type>
-          <source_obj>40</source_obj>
-          <sink_obj>87</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_88">
-          <id>133</id>
-          <edge_type>1</edge_type>
-          <source_obj>43</source_obj>
-          <sink_obj>87</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_89">
-          <id>134</id>
-          <edge_type>1</edge_type>
-          <source_obj>17</source_obj>
-          <sink_obj>87</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_90">
-          <id>135</id>
-          <edge_type>1</edge_type>
-          <source_obj>16</source_obj>
-          <sink_obj>87</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_91">
-          <id>137</id>
-          <edge_type>1</edge_type>
-          <source_obj>136</source_obj>
-          <sink_obj>88</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_92">
-          <id>138</id>
-          <edge_type>1</edge_type>
-          <source_obj>17</source_obj>
-          <sink_obj>88</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_93">
-          <id>139</id>
-          <edge_type>1</edge_type>
-          <source_obj>16</source_obj>
-          <sink_obj>88</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_94">
-          <id>140</id>
-          <edge_type>1</edge_type>
-          <source_obj>37</source_obj>
-          <sink_obj>88</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_95">
-          <id>141</id>
-          <edge_type>1</edge_type>
-          <source_obj>40</source_obj>
-          <sink_obj>88</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_96">
-          <id>142</id>
-          <edge_type>1</edge_type>
-          <source_obj>43</source_obj>
-          <sink_obj>88</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_97">
-          <id>143</id>
-          <edge_type>1</edge_type>
-          <source_obj>46</source_obj>
-          <sink_obj>88</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_98">
-          <id>145</id>
-          <edge_type>1</edge_type>
-          <source_obj>144</source_obj>
-          <sink_obj>89</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_99">
-          <id>146</id>
-          <edge_type>1</edge_type>
-          <source_obj>46</source_obj>
-          <sink_obj>89</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_100">
-          <id>147</id>
-          <edge_type>1</edge_type>
-          <source_obj>49</source_obj>
-          <sink_obj>89</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_101">
-          <id>149</id>
-          <edge_type>1</edge_type>
-          <source_obj>148</source_obj>
-          <sink_obj>90</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_102">
-          <id>150</id>
-          <edge_type>1</edge_type>
-          <source_obj>49</source_obj>
-          <sink_obj>90</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_103">
-          <id>151</id>
-          <edge_type>1</edge_type>
-          <source_obj>52</source_obj>
-          <sink_obj>90</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_104">
-          <id>152</id>
-          <edge_type>1</edge_type>
-          <source_obj>55</source_obj>
-          <sink_obj>90</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_105">
-          <id>154</id>
-          <edge_type>1</edge_type>
-          <source_obj>153</source_obj>
-          <sink_obj>91</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_106">
-          <id>155</id>
-          <edge_type>1</edge_type>
-          <source_obj>52</source_obj>
-          <sink_obj>91</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_107">
-          <id>156</id>
-          <edge_type>1</edge_type>
-          <source_obj>58</source_obj>
-          <sink_obj>91</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_108">
-          <id>158</id>
-          <edge_type>1</edge_type>
-          <source_obj>157</source_obj>
-          <sink_obj>92</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_109">
-          <id>159</id>
-          <edge_type>1</edge_type>
-          <source_obj>55</source_obj>
-          <sink_obj>92</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_110">
-          <id>160</id>
-          <edge_type>1</edge_type>
-          <source_obj>61</source_obj>
-          <sink_obj>92</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_111">
-          <id>162</id>
-          <edge_type>1</edge_type>
-          <source_obj>161</source_obj>
-          <sink_obj>93</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_112">
-          <id>163</id>
-          <edge_type>1</edge_type>
-          <source_obj>61</source_obj>
-          <sink_obj>93</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_113">
-          <id>164</id>
-          <edge_type>1</edge_type>
-          <source_obj>58</source_obj>
-          <sink_obj>93</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_114">
-          <id>165</id>
-          <edge_type>1</edge_type>
-          <source_obj>64</source_obj>
-          <sink_obj>93</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_115">
-          <id>167</id>
-          <edge_type>1</edge_type>
-          <source_obj>166</source_obj>
-          <sink_obj>94</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_116">
-          <id>168</id>
-          <edge_type>1</edge_type>
-          <source_obj>64</source_obj>
-          <sink_obj>94</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_117">
-          <id>169</id>
-          <edge_type>1</edge_type>
-          <source_obj>67</source_obj>
-          <sink_obj>94</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_118">
-          <id>170</id>
-          <edge_type>1</edge_type>
-          <source_obj>70</source_obj>
-          <sink_obj>94</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_119">
-          <id>171</id>
-          <edge_type>1</edge_type>
-          <source_obj>73</source_obj>
-          <sink_obj>94</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_120">
-          <id>173</id>
-          <edge_type>1</edge_type>
-          <source_obj>172</source_obj>
-          <sink_obj>95</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_121">
-          <id>174</id>
-          <edge_type>1</edge_type>
-          <source_obj>67</source_obj>
-          <sink_obj>95</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_122">
-          <id>175</id>
-          <edge_type>1</edge_type>
-          <source_obj>70</source_obj>
-          <sink_obj>95</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_123">
-          <id>176</id>
-          <edge_type>1</edge_type>
-          <source_obj>73</source_obj>
-          <sink_obj>95</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_124">
-          <id>177</id>
+        <item class_id_reference="20" object_id="_31">
+          <id>52</id>
           <edge_type>1</edge_type>
           <source_obj>8</source_obj>
-          <sink_obj>95</sink_obj>
+          <sink_obj>36</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_125">
-          <id>178</id>
+        <item class_id_reference="20" object_id="_32">
+          <id>53</id>
           <edge_type>1</edge_type>
           <source_obj>9</source_obj>
-          <sink_obj>95</sink_obj>
+          <sink_obj>36</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_126">
-          <id>179</id>
+        <item class_id_reference="20" object_id="_33">
+          <id>54</id>
           <edge_type>1</edge_type>
           <source_obj>10</source_obj>
-          <sink_obj>95</sink_obj>
+          <sink_obj>36</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_127">
-          <id>180</id>
+        <item class_id_reference="20" object_id="_34">
+          <id>55</id>
           <edge_type>1</edge_type>
           <source_obj>11</source_obj>
-          <sink_obj>95</sink_obj>
+          <sink_obj>36</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_128">
-          <id>181</id>
+        <item class_id_reference="20" object_id="_35">
+          <id>56</id>
           <edge_type>1</edge_type>
           <source_obj>12</source_obj>
-          <sink_obj>95</sink_obj>
+          <sink_obj>36</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_129">
-          <id>182</id>
+        <item class_id_reference="20" object_id="_36">
+          <id>57</id>
           <edge_type>1</edge_type>
           <source_obj>13</source_obj>
-          <sink_obj>95</sink_obj>
+          <sink_obj>36</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_130">
-          <id>183</id>
+        <item class_id_reference="20" object_id="_37">
+          <id>58</id>
           <edge_type>1</edge_type>
           <source_obj>14</source_obj>
-          <sink_obj>95</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_131">
-          <id>858</id>
-          <edge_type>4</edge_type>
-          <source_obj>94</source_obj>
-          <sink_obj>95</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_132">
-          <id>859</id>
-          <edge_type>4</edge_type>
-          <source_obj>93</source_obj>
-          <sink_obj>94</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_133">
-          <id>860</id>
-          <edge_type>4</edge_type>
-          <source_obj>92</source_obj>
-          <sink_obj>93</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_134">
-          <id>861</id>
-          <edge_type>4</edge_type>
-          <source_obj>91</source_obj>
-          <sink_obj>93</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_135">
-          <id>862</id>
-          <edge_type>4</edge_type>
-          <source_obj>90</source_obj>
-          <sink_obj>91</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_136">
-          <id>863</id>
-          <edge_type>4</edge_type>
-          <source_obj>90</source_obj>
-          <sink_obj>92</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_137">
-          <id>864</id>
-          <edge_type>4</edge_type>
-          <source_obj>89</source_obj>
-          <sink_obj>90</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_138">
-          <id>865</id>
-          <edge_type>4</edge_type>
-          <source_obj>88</source_obj>
-          <sink_obj>89</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_139">
-          <id>866</id>
-          <edge_type>4</edge_type>
-          <source_obj>87</source_obj>
-          <sink_obj>88</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_140">
-          <id>867</id>
-          <edge_type>4</edge_type>
-          <source_obj>82</source_obj>
-          <sink_obj>87</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_141">
-          <id>868</id>
-          <edge_type>4</edge_type>
-          <source_obj>82</source_obj>
-          <sink_obj>87</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_142">
-          <id>869</id>
-          <edge_type>4</edge_type>
-          <source_obj>87</source_obj>
-          <sink_obj>88</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_143">
-          <id>870</id>
-          <edge_type>4</edge_type>
-          <source_obj>88</source_obj>
-          <sink_obj>89</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_144">
-          <id>871</id>
-          <edge_type>4</edge_type>
-          <source_obj>89</source_obj>
-          <sink_obj>90</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_145">
-          <id>872</id>
-          <edge_type>4</edge_type>
-          <source_obj>90</source_obj>
-          <sink_obj>91</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_146">
-          <id>873</id>
-          <edge_type>4</edge_type>
-          <source_obj>91</source_obj>
-          <sink_obj>93</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_147">
-          <id>874</id>
-          <edge_type>4</edge_type>
-          <source_obj>93</source_obj>
-          <sink_obj>94</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_148">
-          <id>875</id>
-          <edge_type>4</edge_type>
-          <source_obj>94</source_obj>
-          <sink_obj>95</sink_obj>
+          <sink_obj>36</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
       </edges>
@@ -2660,7 +740,7 @@
     <cdfg_regions class_id="21" tracking_level="0" version="0">
       <count>1</count>
       <item_version>0</item_version>
-      <item class_id="22" tracking_level="1" version="0" object_id="_149">
+      <item class_id="22" tracking_level="1" version="0" object_id="_38">
         <mId>1</mId>
         <mTag>Sobel_filter</mTag>
         <mType>0</mType>
@@ -2671,1557 +751,335 @@
         <basic_blocks>
           <count>1</count>
           <item_version>0</item_version>
-          <item>97</item>
+          <item>38</item>
         </basic_blocks>
         <mII>-1</mII>
         <mDepth>-1</mDepth>
         <mMinTripCount>-1</mMinTripCount>
         <mMaxTripCount>-1</mMaxTripCount>
-        <mMinLatency>943938</mMinLatency>
-        <mMaxLatency>943938</mMaxLatency>
+        <mMinLatency>943932</mMinLatency>
+        <mMaxLatency>943932</mMaxLatency>
         <mIsDfPipe>1</mIsDfPipe>
-        <mDfPipe class_id="23" tracking_level="1" version="0" object_id="_150">
+        <mDfPipe class_id="23" tracking_level="1" version="0" object_id="_39">
           <port_list class_id="24" tracking_level="0" version="0">
             <count>0</count>
             <item_version>0</item_version>
           </port_list>
           <process_list class_id="25" tracking_level="0" version="0">
-            <count>10</count>
+            <count>1</count>
             <item_version>0</item_version>
-            <item class_id="26" tracking_level="1" version="0" object_id="_151">
+            <item class_id="26" tracking_level="1" version="0" object_id="_40">
               <type>0</type>
-              <name>Block_proc_U0</name>
-              <ssdmobj_id>82</ssdmobj_id>
+              <name>Block_proc304_U0</name>
+              <ssdmobj_id>36</ssdmobj_id>
               <pins class_id="27" tracking_level="0" version="0">
-                <count>2</count>
+                <count>15</count>
                 <item_version>0</item_version>
-                <item class_id="28" tracking_level="1" version="0" object_id="_152">
-                  <port class_id="29" tracking_level="1" version="0" object_id="_153">
-                    <name>img_0_rows_V_out</name>
-                    <dir>0</dir>
-                    <type>1</type>
-                  </port>
-                  <inst class_id="30" tracking_level="1" version="0" object_id="_154">
+                <item class_id="28" tracking_level="1" version="0" object_id="_41">
+                  <port class_id="29" tracking_level="1" version="0" object_id="_42">
+                    <name>enable_V</name>
+                    <dir>3</dir>
                     <type>0</type>
-                    <name>Block_proc_U0</name>
-                    <ssdmobj_id>82</ssdmobj_id>
+                  </port>
+                  <inst class_id="30" tracking_level="1" version="0" object_id="_43">
+                    <type>0</type>
+                    <name>Block_proc304_U0</name>
+                    <ssdmobj_id>36</ssdmobj_id>
                   </inst>
                 </item>
-                <item class_id_reference="28" object_id="_155">
-                  <port class_id_reference="29" object_id="_156">
-                    <name>img_0_cols_V_out</name>
-                    <dir>0</dir>
-                    <type>1</type>
-                  </port>
-                  <inst class_id_reference="30" object_id_reference="_154"/>
-                </item>
-              </pins>
-            </item>
-            <item class_id_reference="26" object_id="_157">
-              <type>0</type>
-              <name>AXIvideo2Mat_U0</name>
-              <ssdmobj_id>87</ssdmobj_id>
-              <pins>
-                <count>14</count>
-                <item_version>0</item_version>
-                <item class_id_reference="28" object_id="_158">
-                  <port class_id_reference="29" object_id="_159">
-                    <name>AXI_video_strm_V_data_V</name>
+                <item class_id_reference="28" object_id="_44">
+                  <port class_id_reference="29" object_id="_45">
+                    <name>INPUT_STREAM_V_data_V</name>
                     <dir>3</dir>
                     <type>0</type>
                   </port>
-                  <inst class_id_reference="30" object_id="_160">
-                    <type>0</type>
-                    <name>AXIvideo2Mat_U0</name>
-                    <ssdmobj_id>87</ssdmobj_id>
-                  </inst>
+                  <inst class_id_reference="30" object_id_reference="_43"/>
                 </item>
-                <item class_id_reference="28" object_id="_161">
-                  <port class_id_reference="29" object_id="_162">
-                    <name>AXI_video_strm_V_keep_V</name>
+                <item class_id_reference="28" object_id="_46">
+                  <port class_id_reference="29" object_id="_47">
+                    <name>INPUT_STREAM_V_keep_V</name>
                     <dir>3</dir>
                     <type>0</type>
                   </port>
-                  <inst class_id_reference="30" object_id_reference="_160"/>
+                  <inst class_id_reference="30" object_id_reference="_43"/>
                 </item>
-                <item class_id_reference="28" object_id="_163">
-                  <port class_id_reference="29" object_id="_164">
-                    <name>AXI_video_strm_V_strb_V</name>
+                <item class_id_reference="28" object_id="_48">
+                  <port class_id_reference="29" object_id="_49">
+                    <name>INPUT_STREAM_V_strb_V</name>
                     <dir>3</dir>
                     <type>0</type>
                   </port>
-                  <inst class_id_reference="30" object_id_reference="_160"/>
+                  <inst class_id_reference="30" object_id_reference="_43"/>
                 </item>
-                <item class_id_reference="28" object_id="_165">
-                  <port class_id_reference="29" object_id="_166">
-                    <name>AXI_video_strm_V_user_V</name>
+                <item class_id_reference="28" object_id="_50">
+                  <port class_id_reference="29" object_id="_51">
+                    <name>INPUT_STREAM_V_user_V</name>
                     <dir>3</dir>
                     <type>0</type>
                   </port>
-                  <inst class_id_reference="30" object_id_reference="_160"/>
+                  <inst class_id_reference="30" object_id_reference="_43"/>
                 </item>
-                <item class_id_reference="28" object_id="_167">
-                  <port class_id_reference="29" object_id="_168">
-                    <name>AXI_video_strm_V_last_V</name>
+                <item class_id_reference="28" object_id="_52">
+                  <port class_id_reference="29" object_id="_53">
+                    <name>INPUT_STREAM_V_last_V</name>
                     <dir>3</dir>
                     <type>0</type>
                   </port>
-                  <inst class_id_reference="30" object_id_reference="_160"/>
+                  <inst class_id_reference="30" object_id_reference="_43"/>
                 </item>
-                <item class_id_reference="28" object_id="_169">
-                  <port class_id_reference="29" object_id="_170">
-                    <name>AXI_video_strm_V_id_V</name>
+                <item class_id_reference="28" object_id="_54">
+                  <port class_id_reference="29" object_id="_55">
+                    <name>INPUT_STREAM_V_id_V</name>
                     <dir>3</dir>
                     <type>0</type>
                   </port>
-                  <inst class_id_reference="30" object_id_reference="_160"/>
+                  <inst class_id_reference="30" object_id_reference="_43"/>
                 </item>
-                <item class_id_reference="28" object_id="_171">
-                  <port class_id_reference="29" object_id="_172">
-                    <name>AXI_video_strm_V_dest_V</name>
+                <item class_id_reference="28" object_id="_56">
+                  <port class_id_reference="29" object_id="_57">
+                    <name>INPUT_STREAM_V_dest_V</name>
                     <dir>3</dir>
                     <type>0</type>
                   </port>
-                  <inst class_id_reference="30" object_id_reference="_160"/>
+                  <inst class_id_reference="30" object_id_reference="_43"/>
                 </item>
-                <item class_id_reference="28" object_id="_173">
-                  <port class_id_reference="29" object_id="_174">
-                    <name>img_rows_V</name>
-                    <dir>0</dir>
-                    <type>0</type>
-                  </port>
-                  <inst class_id_reference="30" object_id_reference="_160"/>
-                </item>
-                <item class_id_reference="28" object_id="_175">
-                  <port class_id_reference="29" object_id="_176">
-                    <name>img_cols_V</name>
-                    <dir>0</dir>
-                    <type>0</type>
-                  </port>
-                  <inst class_id_reference="30" object_id_reference="_160"/>
-                </item>
-                <item class_id_reference="28" object_id="_177">
-                  <port class_id_reference="29" object_id="_178">
-                    <name>img_data_stream_0_V</name>
-                    <dir>0</dir>
-                    <type>1</type>
-                  </port>
-                  <inst class_id_reference="30" object_id_reference="_160"/>
-                </item>
-                <item class_id_reference="28" object_id="_179">
-                  <port class_id_reference="29" object_id="_180">
-                    <name>img_data_stream_1_V</name>
-                    <dir>0</dir>
-                    <type>1</type>
-                  </port>
-                  <inst class_id_reference="30" object_id_reference="_160"/>
-                </item>
-                <item class_id_reference="28" object_id="_181">
-                  <port class_id_reference="29" object_id="_182">
-                    <name>img_data_stream_2_V</name>
-                    <dir>0</dir>
-                    <type>1</type>
-                  </port>
-                  <inst class_id_reference="30" object_id_reference="_160"/>
-                </item>
-                <item class_id_reference="28" object_id="_183">
-                  <port class_id_reference="29" object_id="_184">
-                    <name>img_rows_V_out</name>
-                    <dir>0</dir>
-                    <type>1</type>
-                  </port>
-                  <inst class_id_reference="30" object_id_reference="_160"/>
-                </item>
-                <item class_id_reference="28" object_id="_185">
-                  <port class_id_reference="29" object_id="_186">
-                    <name>img_cols_V_out</name>
-                    <dir>0</dir>
-                    <type>1</type>
-                  </port>
-                  <inst class_id_reference="30" object_id_reference="_160"/>
-                </item>
-              </pins>
-            </item>
-            <item class_id_reference="26" object_id="_187">
-              <type>0</type>
-              <name>CvtColor_1_U0</name>
-              <ssdmobj_id>88</ssdmobj_id>
-              <pins>
-                <count>6</count>
-                <item_version>0</item_version>
-                <item class_id_reference="28" object_id="_188">
-                  <port class_id_reference="29" object_id="_189">
-                    <name>p_src_rows_V</name>
-                    <dir>0</dir>
-                    <type>0</type>
-                  </port>
-                  <inst class_id_reference="30" object_id="_190">
-                    <type>0</type>
-                    <name>CvtColor_1_U0</name>
-                    <ssdmobj_id>88</ssdmobj_id>
-                  </inst>
-                </item>
-                <item class_id_reference="28" object_id="_191">
-                  <port class_id_reference="29" object_id="_192">
-                    <name>p_src_cols_V</name>
-                    <dir>0</dir>
-                    <type>0</type>
-                  </port>
-                  <inst class_id_reference="30" object_id_reference="_190"/>
-                </item>
-                <item class_id_reference="28" object_id="_193">
-                  <port class_id_reference="29" object_id="_194">
-                    <name>p_src_data_stream_0_V</name>
-                    <dir>0</dir>
-                    <type>0</type>
-                  </port>
-                  <inst class_id_reference="30" object_id_reference="_190"/>
-                </item>
-                <item class_id_reference="28" object_id="_195">
-                  <port class_id_reference="29" object_id="_196">
-                    <name>p_src_data_stream_1_V</name>
-                    <dir>0</dir>
-                    <type>0</type>
-                  </port>
-                  <inst class_id_reference="30" object_id_reference="_190"/>
-                </item>
-                <item class_id_reference="28" object_id="_197">
-                  <port class_id_reference="29" object_id="_198">
-                    <name>p_src_data_stream_2_V</name>
-                    <dir>0</dir>
-                    <type>0</type>
-                  </port>
-                  <inst class_id_reference="30" object_id_reference="_190"/>
-                </item>
-                <item class_id_reference="28" object_id="_199">
-                  <port class_id_reference="29" object_id="_200">
-                    <name>p_dst_data_stream_V</name>
-                    <dir>0</dir>
-                    <type>1</type>
-                  </port>
-                  <inst class_id_reference="30" object_id_reference="_190"/>
-                </item>
-              </pins>
-            </item>
-            <item class_id_reference="26" object_id="_201">
-              <type>0</type>
-              <name>GaussianBlur_U0</name>
-              <ssdmobj_id>89</ssdmobj_id>
-              <pins>
-                <count>2</count>
-                <item_version>0</item_version>
-                <item class_id_reference="28" object_id="_202">
-                  <port class_id_reference="29" object_id="_203">
-                    <name>p_src_data_stream_V</name>
-                    <dir>0</dir>
-                    <type>0</type>
-                  </port>
-                  <inst class_id_reference="30" object_id="_204">
-                    <type>0</type>
-                    <name>GaussianBlur_U0</name>
-                    <ssdmobj_id>89</ssdmobj_id>
-                  </inst>
-                </item>
-                <item class_id_reference="28" object_id="_205">
-                  <port class_id_reference="29" object_id="_206">
-                    <name>p_dst_data_stream_V</name>
-                    <dir>0</dir>
-                    <type>1</type>
-                  </port>
-                  <inst class_id_reference="30" object_id_reference="_204"/>
-                </item>
-              </pins>
-            </item>
-            <item class_id_reference="26" object_id="_207">
-              <type>0</type>
-              <name>Duplicate_U0</name>
-              <ssdmobj_id>90</ssdmobj_id>
-              <pins>
-                <count>3</count>
-                <item_version>0</item_version>
-                <item class_id_reference="28" object_id="_208">
-                  <port class_id_reference="29" object_id="_209">
-                    <name>src_data_stream_V</name>
-                    <dir>0</dir>
-                    <type>0</type>
-                  </port>
-                  <inst class_id_reference="30" object_id="_210">
-                    <type>0</type>
-                    <name>Duplicate_U0</name>
-                    <ssdmobj_id>90</ssdmobj_id>
-                  </inst>
-                </item>
-                <item class_id_reference="28" object_id="_211">
-                  <port class_id_reference="29" object_id="_212">
-                    <name>dst1_data_stream_V</name>
-                    <dir>0</dir>
-                    <type>1</type>
-                  </port>
-                  <inst class_id_reference="30" object_id_reference="_210"/>
-                </item>
-                <item class_id_reference="28" object_id="_213">
-                  <port class_id_reference="29" object_id="_214">
-                    <name>dst2_data_stream_V</name>
-                    <dir>0</dir>
-                    <type>1</type>
-                  </port>
-                  <inst class_id_reference="30" object_id_reference="_210"/>
-                </item>
-              </pins>
-            </item>
-            <item class_id_reference="26" object_id="_215">
-              <type>0</type>
-              <name>Sobel_U0</name>
-              <ssdmobj_id>91</ssdmobj_id>
-              <pins>
-                <count>2</count>
-                <item_version>0</item_version>
-                <item class_id_reference="28" object_id="_216">
-                  <port class_id_reference="29" object_id="_217">
-                    <name>p_src_data_stream_V</name>
-                    <dir>0</dir>
-                    <type>0</type>
-                  </port>
-                  <inst class_id_reference="30" object_id="_218">
-                    <type>0</type>
-                    <name>Sobel_U0</name>
-                    <ssdmobj_id>91</ssdmobj_id>
-                  </inst>
-                </item>
-                <item class_id_reference="28" object_id="_219">
-                  <port class_id_reference="29" object_id="_220">
-                    <name>p_dst_data_stream_V</name>
-                    <dir>0</dir>
-                    <type>1</type>
-                  </port>
-                  <inst class_id_reference="30" object_id_reference="_218"/>
-                </item>
-              </pins>
-            </item>
-            <item class_id_reference="26" object_id="_221">
-              <type>0</type>
-              <name>Sobel_1_U0</name>
-              <ssdmobj_id>92</ssdmobj_id>
-              <pins>
-                <count>2</count>
-                <item_version>0</item_version>
-                <item class_id_reference="28" object_id="_222">
-                  <port class_id_reference="29" object_id="_223">
-                    <name>p_src_data_stream_V</name>
-                    <dir>0</dir>
-                    <type>0</type>
-                  </port>
-                  <inst class_id_reference="30" object_id="_224">
-                    <type>0</type>
-                    <name>Sobel_1_U0</name>
-                    <ssdmobj_id>92</ssdmobj_id>
-                  </inst>
-                </item>
-                <item class_id_reference="28" object_id="_225">
-                  <port class_id_reference="29" object_id="_226">
-                    <name>p_dst_data_stream_V</name>
-                    <dir>0</dir>
-                    <type>1</type>
-                  </port>
-                  <inst class_id_reference="30" object_id_reference="_224"/>
-                </item>
-              </pins>
-            </item>
-            <item class_id_reference="26" object_id="_227">
-              <type>0</type>
-              <name>AddWeighted_U0</name>
-              <ssdmobj_id>93</ssdmobj_id>
-              <pins>
-                <count>3</count>
-                <item_version>0</item_version>
-                <item class_id_reference="28" object_id="_228">
-                  <port class_id_reference="29" object_id="_229">
-                    <name>src1_data_stream_V</name>
-                    <dir>0</dir>
-                    <type>0</type>
-                  </port>
-                  <inst class_id_reference="30" object_id="_230">
-                    <type>0</type>
-                    <name>AddWeighted_U0</name>
-                    <ssdmobj_id>93</ssdmobj_id>
-                  </inst>
-                </item>
-                <item class_id_reference="28" object_id="_231">
-                  <port class_id_reference="29" object_id="_232">
-                    <name>src2_data_stream_V</name>
-                    <dir>0</dir>
-                    <type>0</type>
-                  </port>
-                  <inst class_id_reference="30" object_id_reference="_230"/>
-                </item>
-                <item class_id_reference="28" object_id="_233">
-                  <port class_id_reference="29" object_id="_234">
-                    <name>dst_data_stream_V</name>
-                    <dir>0</dir>
-                    <type>1</type>
-                  </port>
-                  <inst class_id_reference="30" object_id_reference="_230"/>
-                </item>
-              </pins>
-            </item>
-            <item class_id_reference="26" object_id="_235">
-              <type>0</type>
-              <name>CvtColor_U0</name>
-              <ssdmobj_id>94</ssdmobj_id>
-              <pins>
-                <count>4</count>
-                <item_version>0</item_version>
-                <item class_id_reference="28" object_id="_236">
-                  <port class_id_reference="29" object_id="_237">
-                    <name>p_src_data_stream_V</name>
-                    <dir>0</dir>
-                    <type>0</type>
-                  </port>
-                  <inst class_id_reference="30" object_id="_238">
-                    <type>0</type>
-                    <name>CvtColor_U0</name>
-                    <ssdmobj_id>94</ssdmobj_id>
-                  </inst>
-                </item>
-                <item class_id_reference="28" object_id="_239">
-                  <port class_id_reference="29" object_id="_240">
-                    <name>p_dst_data_stream_0_V</name>
-                    <dir>0</dir>
-                    <type>1</type>
-                  </port>
-                  <inst class_id_reference="30" object_id_reference="_238"/>
-                </item>
-                <item class_id_reference="28" object_id="_241">
-                  <port class_id_reference="29" object_id="_242">
-                    <name>p_dst_data_stream_1_V</name>
-                    <dir>0</dir>
-                    <type>1</type>
-                  </port>
-                  <inst class_id_reference="30" object_id_reference="_238"/>
-                </item>
-                <item class_id_reference="28" object_id="_243">
-                  <port class_id_reference="29" object_id="_244">
-                    <name>p_dst_data_stream_2_V</name>
-                    <dir>0</dir>
-                    <type>1</type>
-                  </port>
-                  <inst class_id_reference="30" object_id_reference="_238"/>
-                </item>
-              </pins>
-            </item>
-            <item class_id_reference="26" object_id="_245">
-              <type>0</type>
-              <name>Mat2AXIvideo_U0</name>
-              <ssdmobj_id>95</ssdmobj_id>
-              <pins>
-                <count>10</count>
-                <item_version>0</item_version>
-                <item class_id_reference="28" object_id="_246">
-                  <port class_id_reference="29" object_id="_247">
-                    <name>img_data_stream_0_V</name>
-                    <dir>0</dir>
-                    <type>0</type>
-                  </port>
-                  <inst class_id_reference="30" object_id="_248">
-                    <type>0</type>
-                    <name>Mat2AXIvideo_U0</name>
-                    <ssdmobj_id>95</ssdmobj_id>
-                  </inst>
-                </item>
-                <item class_id_reference="28" object_id="_249">
-                  <port class_id_reference="29" object_id="_250">
-                    <name>img_data_stream_1_V</name>
-                    <dir>0</dir>
-                    <type>0</type>
-                  </port>
-                  <inst class_id_reference="30" object_id_reference="_248"/>
-                </item>
-                <item class_id_reference="28" object_id="_251">
-                  <port class_id_reference="29" object_id="_252">
-                    <name>img_data_stream_2_V</name>
-                    <dir>0</dir>
-                    <type>0</type>
-                  </port>
-                  <inst class_id_reference="30" object_id_reference="_248"/>
-                </item>
-                <item class_id_reference="28" object_id="_253">
-                  <port class_id_reference="29" object_id="_254">
-                    <name>AXI_video_strm_V_data_V</name>
+                <item class_id_reference="28" object_id="_58">
+                  <port class_id_reference="29" object_id="_59">
+                    <name>OUTPUT_STREAM_V_data_V</name>
                     <dir>3</dir>
                     <type>1</type>
                   </port>
-                  <inst class_id_reference="30" object_id_reference="_248"/>
+                  <inst class_id_reference="30" object_id_reference="_43"/>
                 </item>
-                <item class_id_reference="28" object_id="_255">
-                  <port class_id_reference="29" object_id="_256">
-                    <name>AXI_video_strm_V_keep_V</name>
+                <item class_id_reference="28" object_id="_60">
+                  <port class_id_reference="29" object_id="_61">
+                    <name>OUTPUT_STREAM_V_keep_V</name>
                     <dir>3</dir>
                     <type>1</type>
                   </port>
-                  <inst class_id_reference="30" object_id_reference="_248"/>
+                  <inst class_id_reference="30" object_id_reference="_43"/>
                 </item>
-                <item class_id_reference="28" object_id="_257">
-                  <port class_id_reference="29" object_id="_258">
-                    <name>AXI_video_strm_V_strb_V</name>
+                <item class_id_reference="28" object_id="_62">
+                  <port class_id_reference="29" object_id="_63">
+                    <name>OUTPUT_STREAM_V_strb_V</name>
                     <dir>3</dir>
                     <type>1</type>
                   </port>
-                  <inst class_id_reference="30" object_id_reference="_248"/>
+                  <inst class_id_reference="30" object_id_reference="_43"/>
                 </item>
-                <item class_id_reference="28" object_id="_259">
-                  <port class_id_reference="29" object_id="_260">
-                    <name>AXI_video_strm_V_user_V</name>
+                <item class_id_reference="28" object_id="_64">
+                  <port class_id_reference="29" object_id="_65">
+                    <name>OUTPUT_STREAM_V_user_V</name>
                     <dir>3</dir>
                     <type>1</type>
                   </port>
-                  <inst class_id_reference="30" object_id_reference="_248"/>
+                  <inst class_id_reference="30" object_id_reference="_43"/>
                 </item>
-                <item class_id_reference="28" object_id="_261">
-                  <port class_id_reference="29" object_id="_262">
-                    <name>AXI_video_strm_V_last_V</name>
+                <item class_id_reference="28" object_id="_66">
+                  <port class_id_reference="29" object_id="_67">
+                    <name>OUTPUT_STREAM_V_last_V</name>
                     <dir>3</dir>
                     <type>1</type>
                   </port>
-                  <inst class_id_reference="30" object_id_reference="_248"/>
+                  <inst class_id_reference="30" object_id_reference="_43"/>
                 </item>
-                <item class_id_reference="28" object_id="_263">
-                  <port class_id_reference="29" object_id="_264">
-                    <name>AXI_video_strm_V_id_V</name>
+                <item class_id_reference="28" object_id="_68">
+                  <port class_id_reference="29" object_id="_69">
+                    <name>OUTPUT_STREAM_V_id_V</name>
                     <dir>3</dir>
                     <type>1</type>
                   </port>
-                  <inst class_id_reference="30" object_id_reference="_248"/>
+                  <inst class_id_reference="30" object_id_reference="_43"/>
                 </item>
-                <item class_id_reference="28" object_id="_265">
-                  <port class_id_reference="29" object_id="_266">
-                    <name>AXI_video_strm_V_dest_V</name>
+                <item class_id_reference="28" object_id="_70">
+                  <port class_id_reference="29" object_id="_71">
+                    <name>OUTPUT_STREAM_V_dest_V</name>
                     <dir>3</dir>
                     <type>1</type>
                   </port>
-                  <inst class_id_reference="30" object_id_reference="_248"/>
+                  <inst class_id_reference="30" object_id_reference="_43"/>
                 </item>
               </pins>
             </item>
           </process_list>
           <channel_list class_id="31" tracking_level="0" version="0">
-            <count>17</count>
+            <count>0</count>
             <item_version>0</item_version>
-            <item class_id="32" tracking_level="1" version="0" object_id="_267">
-              <type>1</type>
-              <name>img_0_rows_V_c</name>
-              <ssdmobj_id>19</ssdmobj_id>
-              <ctype>0</ctype>
-              <depth>2</depth>
-              <bitwidth>11</bitwidth>
-              <source class_id_reference="28" object_id="_268">
-                <port class_id_reference="29" object_id="_269">
-                  <name>in</name>
-                  <dir>3</dir>
-                  <type>0</type>
-                </port>
-                <inst class_id_reference="30" object_id_reference="_154"/>
-              </source>
-              <sink class_id_reference="28" object_id="_270">
-                <port class_id_reference="29" object_id="_271">
-                  <name>out</name>
-                  <dir>3</dir>
-                  <type>1</type>
-                </port>
-                <inst class_id_reference="30" object_id_reference="_160"/>
-              </sink>
-            </item>
-            <item class_id_reference="32" object_id="_272">
-              <type>1</type>
-              <name>img_0_cols_V_c</name>
-              <ssdmobj_id>18</ssdmobj_id>
-              <ctype>0</ctype>
-              <depth>2</depth>
-              <bitwidth>12</bitwidth>
-              <source class_id_reference="28" object_id="_273">
-                <port class_id_reference="29" object_id="_274">
-                  <name>in</name>
-                  <dir>3</dir>
-                  <type>0</type>
-                </port>
-                <inst class_id_reference="30" object_id_reference="_154"/>
-              </source>
-              <sink class_id_reference="28" object_id="_275">
-                <port class_id_reference="29" object_id="_276">
-                  <name>out</name>
-                  <dir>3</dir>
-                  <type>1</type>
-                </port>
-                <inst class_id_reference="30" object_id_reference="_160"/>
-              </sink>
-            </item>
-            <item class_id_reference="32" object_id="_277">
-              <type>1</type>
-              <name>img_0_data_stream_0</name>
-              <ssdmobj_id>37</ssdmobj_id>
-              <ctype>0</ctype>
-              <depth>2</depth>
-              <bitwidth>8</bitwidth>
-              <source class_id_reference="28" object_id="_278">
-                <port class_id_reference="29" object_id="_279">
-                  <name>in</name>
-                  <dir>3</dir>
-                  <type>0</type>
-                </port>
-                <inst class_id_reference="30" object_id_reference="_160"/>
-              </source>
-              <sink class_id_reference="28" object_id="_280">
-                <port class_id_reference="29" object_id="_281">
-                  <name>out</name>
-                  <dir>3</dir>
-                  <type>1</type>
-                </port>
-                <inst class_id_reference="30" object_id_reference="_190"/>
-              </sink>
-            </item>
-            <item class_id_reference="32" object_id="_282">
-              <type>1</type>
-              <name>img_0_data_stream_1</name>
-              <ssdmobj_id>40</ssdmobj_id>
-              <ctype>0</ctype>
-              <depth>2</depth>
-              <bitwidth>8</bitwidth>
-              <source class_id_reference="28" object_id="_283">
-                <port class_id_reference="29" object_id="_284">
-                  <name>in</name>
-                  <dir>3</dir>
-                  <type>0</type>
-                </port>
-                <inst class_id_reference="30" object_id_reference="_160"/>
-              </source>
-              <sink class_id_reference="28" object_id="_285">
-                <port class_id_reference="29" object_id="_286">
-                  <name>out</name>
-                  <dir>3</dir>
-                  <type>1</type>
-                </port>
-                <inst class_id_reference="30" object_id_reference="_190"/>
-              </sink>
-            </item>
-            <item class_id_reference="32" object_id="_287">
-              <type>1</type>
-              <name>img_0_data_stream_2</name>
-              <ssdmobj_id>43</ssdmobj_id>
-              <ctype>0</ctype>
-              <depth>2</depth>
-              <bitwidth>8</bitwidth>
-              <source class_id_reference="28" object_id="_288">
-                <port class_id_reference="29" object_id="_289">
-                  <name>in</name>
-                  <dir>3</dir>
-                  <type>0</type>
-                </port>
-                <inst class_id_reference="30" object_id_reference="_160"/>
-              </source>
-              <sink class_id_reference="28" object_id="_290">
-                <port class_id_reference="29" object_id="_291">
-                  <name>out</name>
-                  <dir>3</dir>
-                  <type>1</type>
-                </port>
-                <inst class_id_reference="30" object_id_reference="_190"/>
-              </sink>
-            </item>
-            <item class_id_reference="32" object_id="_292">
-              <type>1</type>
-              <name>img_0_rows_V_c20</name>
-              <ssdmobj_id>17</ssdmobj_id>
-              <ctype>0</ctype>
-              <depth>2</depth>
-              <bitwidth>11</bitwidth>
-              <source class_id_reference="28" object_id="_293">
-                <port class_id_reference="29" object_id="_294">
-                  <name>in</name>
-                  <dir>3</dir>
-                  <type>0</type>
-                </port>
-                <inst class_id_reference="30" object_id_reference="_160"/>
-              </source>
-              <sink class_id_reference="28" object_id="_295">
-                <port class_id_reference="29" object_id="_296">
-                  <name>out</name>
-                  <dir>3</dir>
-                  <type>1</type>
-                </port>
-                <inst class_id_reference="30" object_id_reference="_190"/>
-              </sink>
-            </item>
-            <item class_id_reference="32" object_id="_297">
-              <type>1</type>
-              <name>img_0_cols_V_c21</name>
-              <ssdmobj_id>16</ssdmobj_id>
-              <ctype>0</ctype>
-              <depth>2</depth>
-              <bitwidth>12</bitwidth>
-              <source class_id_reference="28" object_id="_298">
-                <port class_id_reference="29" object_id="_299">
-                  <name>in</name>
-                  <dir>3</dir>
-                  <type>0</type>
-                </port>
-                <inst class_id_reference="30" object_id_reference="_160"/>
-              </source>
-              <sink class_id_reference="28" object_id="_300">
-                <port class_id_reference="29" object_id="_301">
-                  <name>out</name>
-                  <dir>3</dir>
-                  <type>1</type>
-                </port>
-                <inst class_id_reference="30" object_id_reference="_190"/>
-              </sink>
-            </item>
-            <item class_id_reference="32" object_id="_302">
-              <type>1</type>
-              <name>img_1_data_stream_0</name>
-              <ssdmobj_id>46</ssdmobj_id>
-              <ctype>0</ctype>
-              <depth>2</depth>
-              <bitwidth>8</bitwidth>
-              <source class_id_reference="28" object_id="_303">
-                <port class_id_reference="29" object_id="_304">
-                  <name>in</name>
-                  <dir>3</dir>
-                  <type>0</type>
-                </port>
-                <inst class_id_reference="30" object_id_reference="_190"/>
-              </source>
-              <sink class_id_reference="28" object_id="_305">
-                <port class_id_reference="29" object_id="_306">
-                  <name>out</name>
-                  <dir>3</dir>
-                  <type>1</type>
-                </port>
-                <inst class_id_reference="30" object_id_reference="_204"/>
-              </sink>
-            </item>
-            <item class_id_reference="32" object_id="_307">
-              <type>1</type>
-              <name>img_2_data_stream_0</name>
-              <ssdmobj_id>49</ssdmobj_id>
-              <ctype>0</ctype>
-              <depth>2</depth>
-              <bitwidth>8</bitwidth>
-              <source class_id_reference="28" object_id="_308">
-                <port class_id_reference="29" object_id="_309">
-                  <name>in</name>
-                  <dir>3</dir>
-                  <type>0</type>
-                </port>
-                <inst class_id_reference="30" object_id_reference="_204"/>
-              </source>
-              <sink class_id_reference="28" object_id="_310">
-                <port class_id_reference="29" object_id="_311">
-                  <name>out</name>
-                  <dir>3</dir>
-                  <type>1</type>
-                </port>
-                <inst class_id_reference="30" object_id_reference="_210"/>
-              </sink>
-            </item>
-            <item class_id_reference="32" object_id="_312">
-              <type>1</type>
-              <name>img_2a_data_stream_0</name>
-              <ssdmobj_id>52</ssdmobj_id>
-              <ctype>0</ctype>
-              <depth>2</depth>
-              <bitwidth>8</bitwidth>
-              <source class_id_reference="28" object_id="_313">
-                <port class_id_reference="29" object_id="_314">
-                  <name>in</name>
-                  <dir>3</dir>
-                  <type>0</type>
-                </port>
-                <inst class_id_reference="30" object_id_reference="_210"/>
-              </source>
-              <sink class_id_reference="28" object_id="_315">
-                <port class_id_reference="29" object_id="_316">
-                  <name>out</name>
-                  <dir>3</dir>
-                  <type>1</type>
-                </port>
-                <inst class_id_reference="30" object_id_reference="_218"/>
-              </sink>
-            </item>
-            <item class_id_reference="32" object_id="_317">
-              <type>1</type>
-              <name>img_2b_data_stream_0</name>
-              <ssdmobj_id>55</ssdmobj_id>
-              <ctype>0</ctype>
-              <depth>2</depth>
-              <bitwidth>8</bitwidth>
-              <source class_id_reference="28" object_id="_318">
-                <port class_id_reference="29" object_id="_319">
-                  <name>in</name>
-                  <dir>3</dir>
-                  <type>0</type>
-                </port>
-                <inst class_id_reference="30" object_id_reference="_210"/>
-              </source>
-              <sink class_id_reference="28" object_id="_320">
-                <port class_id_reference="29" object_id="_321">
-                  <name>out</name>
-                  <dir>3</dir>
-                  <type>1</type>
-                </port>
-                <inst class_id_reference="30" object_id_reference="_224"/>
-              </sink>
-            </item>
-            <item class_id_reference="32" object_id="_322">
-              <type>1</type>
-              <name>img_3_data_stream_0</name>
-              <ssdmobj_id>58</ssdmobj_id>
-              <ctype>0</ctype>
-              <depth>2</depth>
-              <bitwidth>8</bitwidth>
-              <source class_id_reference="28" object_id="_323">
-                <port class_id_reference="29" object_id="_324">
-                  <name>in</name>
-                  <dir>3</dir>
-                  <type>0</type>
-                </port>
-                <inst class_id_reference="30" object_id_reference="_218"/>
-              </source>
-              <sink class_id_reference="28" object_id="_325">
-                <port class_id_reference="29" object_id="_326">
-                  <name>out</name>
-                  <dir>3</dir>
-                  <type>1</type>
-                </port>
-                <inst class_id_reference="30" object_id_reference="_230"/>
-              </sink>
-            </item>
-            <item class_id_reference="32" object_id="_327">
-              <type>1</type>
-              <name>img_4_data_stream_0</name>
-              <ssdmobj_id>61</ssdmobj_id>
-              <ctype>0</ctype>
-              <depth>2</depth>
-              <bitwidth>8</bitwidth>
-              <source class_id_reference="28" object_id="_328">
-                <port class_id_reference="29" object_id="_329">
-                  <name>in</name>
-                  <dir>3</dir>
-                  <type>0</type>
-                </port>
-                <inst class_id_reference="30" object_id_reference="_224"/>
-              </source>
-              <sink class_id_reference="28" object_id="_330">
-                <port class_id_reference="29" object_id="_331">
-                  <name>out</name>
-                  <dir>3</dir>
-                  <type>1</type>
-                </port>
-                <inst class_id_reference="30" object_id_reference="_230"/>
-              </sink>
-            </item>
-            <item class_id_reference="32" object_id="_332">
-              <type>1</type>
-              <name>img_5_data_stream_0</name>
-              <ssdmobj_id>64</ssdmobj_id>
-              <ctype>0</ctype>
-              <depth>2</depth>
-              <bitwidth>8</bitwidth>
-              <source class_id_reference="28" object_id="_333">
-                <port class_id_reference="29" object_id="_334">
-                  <name>in</name>
-                  <dir>3</dir>
-                  <type>0</type>
-                </port>
-                <inst class_id_reference="30" object_id_reference="_230"/>
-              </source>
-              <sink class_id_reference="28" object_id="_335">
-                <port class_id_reference="29" object_id="_336">
-                  <name>out</name>
-                  <dir>3</dir>
-                  <type>1</type>
-                </port>
-                <inst class_id_reference="30" object_id_reference="_238"/>
-              </sink>
-            </item>
-            <item class_id_reference="32" object_id="_337">
-              <type>1</type>
-              <name>img_6_data_stream_0</name>
-              <ssdmobj_id>67</ssdmobj_id>
-              <ctype>0</ctype>
-              <depth>2</depth>
-              <bitwidth>8</bitwidth>
-              <source class_id_reference="28" object_id="_338">
-                <port class_id_reference="29" object_id="_339">
-                  <name>in</name>
-                  <dir>3</dir>
-                  <type>0</type>
-                </port>
-                <inst class_id_reference="30" object_id_reference="_238"/>
-              </source>
-              <sink class_id_reference="28" object_id="_340">
-                <port class_id_reference="29" object_id="_341">
-                  <name>out</name>
-                  <dir>3</dir>
-                  <type>1</type>
-                </port>
-                <inst class_id_reference="30" object_id_reference="_248"/>
-              </sink>
-            </item>
-            <item class_id_reference="32" object_id="_342">
-              <type>1</type>
-              <name>img_6_data_stream_1</name>
-              <ssdmobj_id>70</ssdmobj_id>
-              <ctype>0</ctype>
-              <depth>2</depth>
-              <bitwidth>8</bitwidth>
-              <source class_id_reference="28" object_id="_343">
-                <port class_id_reference="29" object_id="_344">
-                  <name>in</name>
-                  <dir>3</dir>
-                  <type>0</type>
-                </port>
-                <inst class_id_reference="30" object_id_reference="_238"/>
-              </source>
-              <sink class_id_reference="28" object_id="_345">
-                <port class_id_reference="29" object_id="_346">
-                  <name>out</name>
-                  <dir>3</dir>
-                  <type>1</type>
-                </port>
-                <inst class_id_reference="30" object_id_reference="_248"/>
-              </sink>
-            </item>
-            <item class_id_reference="32" object_id="_347">
-              <type>1</type>
-              <name>img_6_data_stream_2</name>
-              <ssdmobj_id>73</ssdmobj_id>
-              <ctype>0</ctype>
-              <depth>2</depth>
-              <bitwidth>8</bitwidth>
-              <source class_id_reference="28" object_id="_348">
-                <port class_id_reference="29" object_id="_349">
-                  <name>in</name>
-                  <dir>3</dir>
-                  <type>0</type>
-                </port>
-                <inst class_id_reference="30" object_id_reference="_238"/>
-              </source>
-              <sink class_id_reference="28" object_id="_350">
-                <port class_id_reference="29" object_id="_351">
-                  <name>out</name>
-                  <dir>3</dir>
-                  <type>1</type>
-                </port>
-                <inst class_id_reference="30" object_id_reference="_248"/>
-              </sink>
-            </item>
           </channel_list>
-          <net_list class_id="33" tracking_level="0" version="0">
+          <net_list class_id="32" tracking_level="0" version="0">
             <count>0</count>
             <item_version>0</item_version>
           </net_list>
         </mDfPipe>
       </item>
     </cdfg_regions>
-    <fsm class_id="34" tracking_level="1" version="0" object_id="_352">
-      <states class_id="35" tracking_level="0" version="0">
-        <count>18</count>
+    <fsm class_id="33" tracking_level="1" version="0" object_id="_72">
+      <states class_id="34" tracking_level="0" version="0">
+        <count>4</count>
         <item_version>0</item_version>
-        <item class_id="36" tracking_level="1" version="0" object_id="_353">
+        <item class_id="35" tracking_level="1" version="0" object_id="_73">
           <id>1</id>
-          <operations class_id="37" tracking_level="0" version="0">
-            <count>18</count>
+          <operations class_id="36" tracking_level="0" version="0">
+            <count>0</count>
             <item_version>0</item_version>
-            <item class_id="38" tracking_level="1" version="0" object_id="_354">
-              <id>16</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_355">
-              <id>17</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_356">
-              <id>18</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_357">
-              <id>19</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_358">
-              <id>37</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_359">
-              <id>40</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_360">
-              <id>43</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_361">
-              <id>46</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_362">
-              <id>49</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_363">
-              <id>52</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_364">
-              <id>55</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_365">
-              <id>58</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_366">
-              <id>61</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_367">
-              <id>64</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_368">
-              <id>67</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_369">
-              <id>70</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_370">
-              <id>73</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_371">
-              <id>82</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
           </operations>
         </item>
-        <item class_id_reference="36" object_id="_372">
+        <item class_id_reference="35" object_id="_74">
           <id>2</id>
           <operations>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item class_id_reference="38" object_id="_373">
-              <id>87</id>
-              <stage>2</stage>
-              <latency>2</latency>
-            </item>
-          </operations>
-        </item>
-        <item class_id_reference="36" object_id="_374">
-          <id>3</id>
-          <operations>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item class_id_reference="38" object_id="_375">
-              <id>87</id>
-              <stage>1</stage>
-              <latency>2</latency>
-            </item>
-          </operations>
-        </item>
-        <item class_id_reference="36" object_id="_376">
-          <id>4</id>
-          <operations>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item class_id_reference="38" object_id="_377">
-              <id>88</id>
-              <stage>2</stage>
-              <latency>2</latency>
-            </item>
-          </operations>
-        </item>
-        <item class_id_reference="36" object_id="_378">
-          <id>5</id>
-          <operations>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item class_id_reference="38" object_id="_379">
-              <id>88</id>
-              <stage>1</stage>
-              <latency>2</latency>
-            </item>
-          </operations>
-        </item>
-        <item class_id_reference="36" object_id="_380">
-          <id>6</id>
-          <operations>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item class_id_reference="38" object_id="_381">
-              <id>89</id>
-              <stage>2</stage>
-              <latency>2</latency>
-            </item>
-          </operations>
-        </item>
-        <item class_id_reference="36" object_id="_382">
-          <id>7</id>
-          <operations>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item class_id_reference="38" object_id="_383">
-              <id>89</id>
-              <stage>1</stage>
-              <latency>2</latency>
-            </item>
-          </operations>
-        </item>
-        <item class_id_reference="36" object_id="_384">
-          <id>8</id>
-          <operations>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item class_id_reference="38" object_id="_385">
-              <id>90</id>
-              <stage>2</stage>
-              <latency>2</latency>
-            </item>
-          </operations>
-        </item>
-        <item class_id_reference="36" object_id="_386">
-          <id>9</id>
-          <operations>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item class_id_reference="38" object_id="_387">
-              <id>90</id>
-              <stage>1</stage>
-              <latency>2</latency>
-            </item>
-          </operations>
-        </item>
-        <item class_id_reference="36" object_id="_388">
-          <id>10</id>
-          <operations>
             <count>2</count>
             <item_version>0</item_version>
-            <item class_id_reference="38" object_id="_389">
-              <id>91</id>
-              <stage>2</stage>
-              <latency>2</latency>
-            </item>
-            <item class_id_reference="38" object_id="_390">
-              <id>92</id>
-              <stage>2</stage>
-              <latency>2</latency>
-            </item>
-          </operations>
-        </item>
-        <item class_id_reference="36" object_id="_391">
-          <id>11</id>
-          <operations>
-            <count>2</count>
-            <item_version>0</item_version>
-            <item class_id_reference="38" object_id="_392">
-              <id>91</id>
-              <stage>1</stage>
-              <latency>2</latency>
-            </item>
-            <item class_id_reference="38" object_id="_393">
-              <id>92</id>
-              <stage>1</stage>
-              <latency>2</latency>
-            </item>
-          </operations>
-        </item>
-        <item class_id_reference="36" object_id="_394">
-          <id>12</id>
-          <operations>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item class_id_reference="38" object_id="_395">
-              <id>93</id>
-              <stage>2</stage>
-              <latency>2</latency>
-            </item>
-          </operations>
-        </item>
-        <item class_id_reference="36" object_id="_396">
-          <id>13</id>
-          <operations>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item class_id_reference="38" object_id="_397">
-              <id>93</id>
-              <stage>1</stage>
-              <latency>2</latency>
-            </item>
-          </operations>
-        </item>
-        <item class_id_reference="36" object_id="_398">
-          <id>14</id>
-          <operations>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item class_id_reference="38" object_id="_399">
-              <id>94</id>
-              <stage>2</stage>
-              <latency>2</latency>
-            </item>
-          </operations>
-        </item>
-        <item class_id_reference="36" object_id="_400">
-          <id>15</id>
-          <operations>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item class_id_reference="38" object_id="_401">
-              <id>94</id>
-              <stage>1</stage>
-              <latency>2</latency>
-            </item>
-          </operations>
-        </item>
-        <item class_id_reference="36" object_id="_402">
-          <id>16</id>
-          <operations>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item class_id_reference="38" object_id="_403">
-              <id>95</id>
-              <stage>2</stage>
-              <latency>2</latency>
-            </item>
-          </operations>
-        </item>
-        <item class_id_reference="36" object_id="_404">
-          <id>17</id>
-          <operations>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item class_id_reference="38" object_id="_405">
-              <id>95</id>
-              <stage>1</stage>
-              <latency>2</latency>
-            </item>
-          </operations>
-        </item>
-        <item class_id_reference="36" object_id="_406">
-          <id>18</id>
-          <operations>
-            <count>54</count>
-            <item_version>0</item_version>
-            <item class_id_reference="38" object_id="_407">
-              <id>20</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_408">
-              <id>21</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_409">
-              <id>22</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_410">
-              <id>23</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_411">
-              <id>24</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_412">
-              <id>25</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_413">
-              <id>26</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_414">
-              <id>27</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_415">
-              <id>28</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_416">
-              <id>29</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_417">
-              <id>30</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_418">
-              <id>31</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_419">
-              <id>32</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_420">
-              <id>33</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_421">
-              <id>34</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_422">
+            <item class_id="37" tracking_level="1" version="0" object_id="_75">
               <id>35</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_423">
+            <item class_id_reference="37" object_id="_76">
+              <id>36</id>
+              <stage>2</stage>
+              <latency>2</latency>
+            </item>
+          </operations>
+        </item>
+        <item class_id_reference="35" object_id="_77">
+          <id>3</id>
+          <operations>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item class_id_reference="37" object_id="_78">
               <id>36</id>
               <stage>1</stage>
-              <latency>1</latency>
+              <latency>2</latency>
             </item>
-            <item class_id_reference="38" object_id="_424">
-              <id>38</id>
+          </operations>
+        </item>
+        <item class_id_reference="35" object_id="_79">
+          <id>4</id>
+          <operations>
+            <count>20</count>
+            <item_version>0</item_version>
+            <item class_id_reference="37" object_id="_80">
+              <id>16</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_425">
-              <id>39</id>
+            <item class_id_reference="37" object_id="_81">
+              <id>17</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_426">
-              <id>41</id>
+            <item class_id_reference="37" object_id="_82">
+              <id>18</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_427">
-              <id>42</id>
+            <item class_id_reference="37" object_id="_83">
+              <id>19</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_428">
-              <id>44</id>
+            <item class_id_reference="37" object_id="_84">
+              <id>20</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_429">
-              <id>45</id>
+            <item class_id_reference="37" object_id="_85">
+              <id>21</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_430">
-              <id>47</id>
+            <item class_id_reference="37" object_id="_86">
+              <id>22</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_431">
-              <id>48</id>
+            <item class_id_reference="37" object_id="_87">
+              <id>23</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_432">
-              <id>50</id>
+            <item class_id_reference="37" object_id="_88">
+              <id>24</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_433">
-              <id>51</id>
+            <item class_id_reference="37" object_id="_89">
+              <id>25</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_434">
-              <id>53</id>
+            <item class_id_reference="37" object_id="_90">
+              <id>26</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_435">
-              <id>54</id>
+            <item class_id_reference="37" object_id="_91">
+              <id>27</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_436">
-              <id>56</id>
+            <item class_id_reference="37" object_id="_92">
+              <id>28</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_437">
-              <id>57</id>
+            <item class_id_reference="37" object_id="_93">
+              <id>29</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_438">
-              <id>59</id>
+            <item class_id_reference="37" object_id="_94">
+              <id>30</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_439">
-              <id>60</id>
+            <item class_id_reference="37" object_id="_95">
+              <id>31</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_440">
-              <id>62</id>
+            <item class_id_reference="37" object_id="_96">
+              <id>32</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_441">
-              <id>63</id>
+            <item class_id_reference="37" object_id="_97">
+              <id>33</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_442">
-              <id>65</id>
+            <item class_id_reference="37" object_id="_98">
+              <id>34</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_443">
-              <id>66</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_444">
-              <id>68</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_445">
-              <id>69</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_446">
-              <id>71</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_447">
-              <id>72</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_448">
-              <id>74</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_449">
-              <id>75</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_450">
-              <id>76</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_451">
-              <id>77</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_452">
-              <id>78</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_453">
-              <id>79</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_454">
-              <id>80</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_455">
-              <id>81</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_456">
-              <id>83</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_457">
-              <id>84</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_458">
-              <id>85</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_459">
-              <id>86</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="38" object_id="_460">
-              <id>96</id>
+            <item class_id_reference="37" object_id="_99">
+              <id>37</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
           </operations>
         </item>
       </states>
-      <transitions class_id="39" tracking_level="0" version="0">
-        <count>17</count>
+      <transitions class_id="38" tracking_level="0" version="0">
+        <count>3</count>
         <item_version>0</item_version>
-        <item class_id="40" tracking_level="1" version="0" object_id="_461">
+        <item class_id="39" tracking_level="1" version="0" object_id="_100">
           <inState>1</inState>
           <outState>2</outState>
-          <condition class_id="41" tracking_level="0" version="0">
+          <condition class_id="40" tracking_level="0" version="0">
             <id>0</id>
-            <sop class_id="42" tracking_level="0" version="0">
+            <sop class_id="41" tracking_level="0" version="0">
               <count>1</count>
               <item_version>0</item_version>
-              <item class_id="43" tracking_level="0" version="0">
+              <item class_id="42" tracking_level="0" version="0">
                 <count>0</count>
                 <item_version>0</item_version>
               </item>
             </sop>
           </condition>
         </item>
-        <item class_id_reference="40" object_id="_462">
+        <item class_id_reference="39" object_id="_101">
           <inState>2</inState>
           <outState>3</outState>
           <condition>
@@ -4236,7 +1094,7 @@
             </sop>
           </condition>
         </item>
-        <item class_id_reference="40" object_id="_463">
+        <item class_id_reference="39" object_id="_102">
           <inState>3</inState>
           <outState>4</outState>
           <condition>
@@ -4251,1049 +1109,43 @@
             </sop>
           </condition>
         </item>
-        <item class_id_reference="40" object_id="_464">
-          <inState>4</inState>
-          <outState>5</outState>
-          <condition>
-            <id>3</id>
-            <sop>
-              <count>1</count>
-              <item_version>0</item_version>
-              <item>
-                <count>0</count>
-                <item_version>0</item_version>
-              </item>
-            </sop>
-          </condition>
-        </item>
-        <item class_id_reference="40" object_id="_465">
-          <inState>5</inState>
-          <outState>6</outState>
-          <condition>
-            <id>4</id>
-            <sop>
-              <count>1</count>
-              <item_version>0</item_version>
-              <item>
-                <count>0</count>
-                <item_version>0</item_version>
-              </item>
-            </sop>
-          </condition>
-        </item>
-        <item class_id_reference="40" object_id="_466">
-          <inState>6</inState>
-          <outState>7</outState>
-          <condition>
-            <id>5</id>
-            <sop>
-              <count>1</count>
-              <item_version>0</item_version>
-              <item>
-                <count>0</count>
-                <item_version>0</item_version>
-              </item>
-            </sop>
-          </condition>
-        </item>
-        <item class_id_reference="40" object_id="_467">
-          <inState>7</inState>
-          <outState>8</outState>
-          <condition>
-            <id>6</id>
-            <sop>
-              <count>1</count>
-              <item_version>0</item_version>
-              <item>
-                <count>0</count>
-                <item_version>0</item_version>
-              </item>
-            </sop>
-          </condition>
-        </item>
-        <item class_id_reference="40" object_id="_468">
-          <inState>8</inState>
-          <outState>9</outState>
-          <condition>
-            <id>7</id>
-            <sop>
-              <count>1</count>
-              <item_version>0</item_version>
-              <item>
-                <count>0</count>
-                <item_version>0</item_version>
-              </item>
-            </sop>
-          </condition>
-        </item>
-        <item class_id_reference="40" object_id="_469">
-          <inState>9</inState>
-          <outState>10</outState>
-          <condition>
-            <id>8</id>
-            <sop>
-              <count>1</count>
-              <item_version>0</item_version>
-              <item>
-                <count>0</count>
-                <item_version>0</item_version>
-              </item>
-            </sop>
-          </condition>
-        </item>
-        <item class_id_reference="40" object_id="_470">
-          <inState>10</inState>
-          <outState>11</outState>
-          <condition>
-            <id>9</id>
-            <sop>
-              <count>1</count>
-              <item_version>0</item_version>
-              <item>
-                <count>0</count>
-                <item_version>0</item_version>
-              </item>
-            </sop>
-          </condition>
-        </item>
-        <item class_id_reference="40" object_id="_471">
-          <inState>11</inState>
-          <outState>12</outState>
-          <condition>
-            <id>10</id>
-            <sop>
-              <count>1</count>
-              <item_version>0</item_version>
-              <item>
-                <count>0</count>
-                <item_version>0</item_version>
-              </item>
-            </sop>
-          </condition>
-        </item>
-        <item class_id_reference="40" object_id="_472">
-          <inState>12</inState>
-          <outState>13</outState>
-          <condition>
-            <id>11</id>
-            <sop>
-              <count>1</count>
-              <item_version>0</item_version>
-              <item>
-                <count>0</count>
-                <item_version>0</item_version>
-              </item>
-            </sop>
-          </condition>
-        </item>
-        <item class_id_reference="40" object_id="_473">
-          <inState>13</inState>
-          <outState>14</outState>
-          <condition>
-            <id>12</id>
-            <sop>
-              <count>1</count>
-              <item_version>0</item_version>
-              <item>
-                <count>0</count>
-                <item_version>0</item_version>
-              </item>
-            </sop>
-          </condition>
-        </item>
-        <item class_id_reference="40" object_id="_474">
-          <inState>14</inState>
-          <outState>15</outState>
-          <condition>
-            <id>13</id>
-            <sop>
-              <count>1</count>
-              <item_version>0</item_version>
-              <item>
-                <count>0</count>
-                <item_version>0</item_version>
-              </item>
-            </sop>
-          </condition>
-        </item>
-        <item class_id_reference="40" object_id="_475">
-          <inState>15</inState>
-          <outState>16</outState>
-          <condition>
-            <id>14</id>
-            <sop>
-              <count>1</count>
-              <item_version>0</item_version>
-              <item>
-                <count>0</count>
-                <item_version>0</item_version>
-              </item>
-            </sop>
-          </condition>
-        </item>
-        <item class_id_reference="40" object_id="_476">
-          <inState>16</inState>
-          <outState>17</outState>
-          <condition>
-            <id>15</id>
-            <sop>
-              <count>1</count>
-              <item_version>0</item_version>
-              <item>
-                <count>0</count>
-                <item_version>0</item_version>
-              </item>
-            </sop>
-          </condition>
-        </item>
-        <item class_id_reference="40" object_id="_477">
-          <inState>17</inState>
-          <outState>18</outState>
-          <condition>
-            <id>16</id>
-            <sop>
-              <count>1</count>
-              <item_version>0</item_version>
-              <item>
-                <count>0</count>
-                <item_version>0</item_version>
-              </item>
-            </sop>
-          </condition>
-        </item>
       </transitions>
     </fsm>
-    <res class_id="44" tracking_level="1" version="0" object_id="_478">
-      <dp_component_resource class_id="45" tracking_level="0" version="0">
-        <count>18</count>
+    <res class_id="43" tracking_level="1" version="0" object_id="_103">
+      <dp_component_resource class_id="44" tracking_level="0" version="0">
+        <count>1</count>
         <item_version>0</item_version>
-        <item class_id="46" tracking_level="0" version="0">
-          <first>AXIvideo2Mat_U0 (AXIvideo2Mat)</first>
-          <second class_id="47" tracking_level="0" version="0">
-            <count>2</count>
-            <item_version>0</item_version>
-            <item class_id="48" tracking_level="0" version="0">
-              <first>FF</first>
-              <second>345</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>547</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>AddWeighted_U0 (AddWeighted)</first>
-          <second>
+        <item class_id="45" tracking_level="0" version="0">
+          <first>Block_proc304_U0 (Block_proc304)</first>
+          <second class_id="46" tracking_level="0" version="0">
             <count>4</count>
             <item_version>0</item_version>
-            <item>
+            <item class_id="47" tracking_level="0" version="0">
               <first>BRAM</first>
-              <second>0</second>
+              <second>9</second>
             </item>
             <item>
               <first>DSP48E</first>
-              <second>28</second>
+              <second>39</second>
             </item>
             <item>
               <first>FF</first>
-              <second>3474</second>
+              <second>6006</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>4597</second>
+              <second>10250</second>
             </item>
-          </second>
-        </item>
-        <item>
-          <first>Block_proc_U0 (Block_proc)</first>
-          <second>
-            <count>2</count>
-            <item_version>0</item_version>
-            <item>
-              <first>FF</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>29</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>CvtColor_1_U0 (CvtColor_1)</first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>BRAM</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>DSP48E</first>
-              <second>3</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>238</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>267</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>CvtColor_U0 (CvtColor)</first>
-          <second>
-            <count>2</count>
-            <item_version>0</item_version>
-            <item>
-              <first>FF</first>
-              <second>40</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>185</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>Duplicate_U0 (Duplicate)</first>
-          <second>
-            <count>2</count>
-            <item_version>0</item_version>
-            <item>
-              <first>FF</first>
-              <second>40</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>176</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>GaussianBlur_U0 (GaussianBlur)</first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>BRAM</first>
-              <second>3</second>
-            </item>
-            <item>
-              <first>DSP48E</first>
-              <second>4</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>516</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>1069</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>Mat2AXIvideo_U0 (Mat2AXIvideo)</first>
-          <second>
-            <count>2</count>
-            <item_version>0</item_version>
-            <item>
-              <first>FF</first>
-              <second>119</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>368</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>Sobel_1_U0 (Sobel_1)</first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>BRAM</first>
-              <second>3</second>
-            </item>
-            <item>
-              <first>DSP48E</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>487</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>1156</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>Sobel_U0 (Sobel)</first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>BRAM</first>
-              <second>3</second>
-            </item>
-            <item>
-              <first>DSP48E</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>488</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>1165</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>start_for_AddWeigyd2_U (start_for_AddWeigyd2)</first>
-          <second>
-            <count>0</count>
-            <item_version>0</item_version>
-          </second>
-        </item>
-        <item>
-          <first>start_for_CvtColoudo_U (start_for_CvtColoudo)</first>
-          <second>
-            <count>0</count>
-            <item_version>0</item_version>
-          </second>
-        </item>
-        <item>
-          <first>start_for_CvtColozec_U (start_for_CvtColozec)</first>
-          <second>
-            <count>0</count>
-            <item_version>0</item_version>
-          </second>
-        </item>
-        <item>
-          <first>start_for_DuplicawdI_U (start_for_DuplicawdI)</first>
-          <second>
-            <count>0</count>
-            <item_version>0</item_version>
-          </second>
-        </item>
-        <item>
-          <first>start_for_Gaussiavdy_U (start_for_Gaussiavdy)</first>
-          <second>
-            <count>0</count>
-            <item_version>0</item_version>
-          </second>
-        </item>
-        <item>
-          <first>start_for_Mat2AXIAem_U (start_for_Mat2AXIAem)</first>
-          <second>
-            <count>0</count>
-            <item_version>0</item_version>
-          </second>
-        </item>
-        <item>
-          <first>start_for_Sobel_1xdS_U (start_for_Sobel_1xdS)</first>
-          <second>
-            <count>0</count>
-            <item_version>0</item_version>
-          </second>
-        </item>
-        <item>
-          <first>start_for_Sobel_U0_U (start_for_Sobel_U0)</first>
-          <second>
-            <count>0</count>
-            <item_version>0</item_version>
           </second>
         </item>
       </dp_component_resource>
       <dp_expression_resource>
-        <count>2</count>
+        <count>0</count>
         <item_version>0</item_version>
-        <item>
-          <first>Duplicate_U0_start_full_n ( and ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>ap_idle ( and ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
       </dp_expression_resource>
       <dp_fifo_resource>
-        <count>17</count>
+        <count>0</count>
         <item_version>0</item_version>
-        <item>
-          <first>img_0_cols_V_c21_U</first>
-          <second>
-            <count>6</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0Depth)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>(1Bits)</first>
-              <second>12</second>
-            </item>
-            <item>
-              <first>(2Size:D*B)</first>
-              <second>24</second>
-            </item>
-            <item>
-              <first>BRAM</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>5</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>22</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>img_0_cols_V_c_U</first>
-          <second>
-            <count>6</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0Depth)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>(1Bits)</first>
-              <second>12</second>
-            </item>
-            <item>
-              <first>(2Size:D*B)</first>
-              <second>24</second>
-            </item>
-            <item>
-              <first>BRAM</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>5</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>22</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>img_0_data_stream_0_U</first>
-          <second>
-            <count>6</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0Depth)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>(1Bits)</first>
-              <second>8</second>
-            </item>
-            <item>
-              <first>(2Size:D*B)</first>
-              <second>16</second>
-            </item>
-            <item>
-              <first>BRAM</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>5</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>18</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>img_0_data_stream_1_U</first>
-          <second>
-            <count>6</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0Depth)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>(1Bits)</first>
-              <second>8</second>
-            </item>
-            <item>
-              <first>(2Size:D*B)</first>
-              <second>16</second>
-            </item>
-            <item>
-              <first>BRAM</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>5</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>18</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>img_0_data_stream_2_U</first>
-          <second>
-            <count>6</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0Depth)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>(1Bits)</first>
-              <second>8</second>
-            </item>
-            <item>
-              <first>(2Size:D*B)</first>
-              <second>16</second>
-            </item>
-            <item>
-              <first>BRAM</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>5</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>18</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>img_0_rows_V_c20_U</first>
-          <second>
-            <count>6</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0Depth)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>(1Bits)</first>
-              <second>11</second>
-            </item>
-            <item>
-              <first>(2Size:D*B)</first>
-              <second>22</second>
-            </item>
-            <item>
-              <first>BRAM</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>5</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>21</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>img_0_rows_V_c_U</first>
-          <second>
-            <count>6</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0Depth)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>(1Bits)</first>
-              <second>11</second>
-            </item>
-            <item>
-              <first>(2Size:D*B)</first>
-              <second>22</second>
-            </item>
-            <item>
-              <first>BRAM</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>5</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>21</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>img_1_data_stream_0_U</first>
-          <second>
-            <count>6</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0Depth)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>(1Bits)</first>
-              <second>8</second>
-            </item>
-            <item>
-              <first>(2Size:D*B)</first>
-              <second>16</second>
-            </item>
-            <item>
-              <first>BRAM</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>5</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>18</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>img_2_data_stream_0_U</first>
-          <second>
-            <count>6</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0Depth)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>(1Bits)</first>
-              <second>8</second>
-            </item>
-            <item>
-              <first>(2Size:D*B)</first>
-              <second>16</second>
-            </item>
-            <item>
-              <first>BRAM</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>5</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>18</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>img_2a_data_stream_0_U</first>
-          <second>
-            <count>6</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0Depth)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>(1Bits)</first>
-              <second>8</second>
-            </item>
-            <item>
-              <first>(2Size:D*B)</first>
-              <second>16</second>
-            </item>
-            <item>
-              <first>BRAM</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>5</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>18</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>img_2b_data_stream_0_U</first>
-          <second>
-            <count>6</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0Depth)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>(1Bits)</first>
-              <second>8</second>
-            </item>
-            <item>
-              <first>(2Size:D*B)</first>
-              <second>16</second>
-            </item>
-            <item>
-              <first>BRAM</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>5</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>18</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>img_3_data_stream_0_U</first>
-          <second>
-            <count>6</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0Depth)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>(1Bits)</first>
-              <second>8</second>
-            </item>
-            <item>
-              <first>(2Size:D*B)</first>
-              <second>16</second>
-            </item>
-            <item>
-              <first>BRAM</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>5</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>18</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>img_4_data_stream_0_U</first>
-          <second>
-            <count>6</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0Depth)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>(1Bits)</first>
-              <second>8</second>
-            </item>
-            <item>
-              <first>(2Size:D*B)</first>
-              <second>16</second>
-            </item>
-            <item>
-              <first>BRAM</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>5</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>18</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>img_5_data_stream_0_U</first>
-          <second>
-            <count>6</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0Depth)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>(1Bits)</first>
-              <second>8</second>
-            </item>
-            <item>
-              <first>(2Size:D*B)</first>
-              <second>16</second>
-            </item>
-            <item>
-              <first>BRAM</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>5</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>18</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>img_6_data_stream_0_U</first>
-          <second>
-            <count>6</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0Depth)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>(1Bits)</first>
-              <second>8</second>
-            </item>
-            <item>
-              <first>(2Size:D*B)</first>
-              <second>16</second>
-            </item>
-            <item>
-              <first>BRAM</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>5</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>18</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>img_6_data_stream_1_U</first>
-          <second>
-            <count>6</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0Depth)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>(1Bits)</first>
-              <second>8</second>
-            </item>
-            <item>
-              <first>(2Size:D*B)</first>
-              <second>16</second>
-            </item>
-            <item>
-              <first>BRAM</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>5</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>18</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>img_6_data_stream_2_U</first>
-          <second>
-            <count>6</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0Depth)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>(1Bits)</first>
-              <second>8</second>
-            </item>
-            <item>
-              <first>(2Size:D*B)</first>
-              <second>16</second>
-            </item>
-            <item>
-              <first>BRAM</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>5</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>18</second>
-            </item>
-          </second>
-        </item>
       </dp_fifo_resource>
       <dp_memory_resource>
         <count>0</count>
@@ -5308,216 +1160,25 @@
         <item_version>0</item_version>
       </dp_register_resource>
       <dp_dsp_resource>
-        <count>18</count>
+        <count>1</count>
         <item_version>0</item_version>
         <item>
-          <first>AXIvideo2Mat_U0</first>
-          <second>
-            <count>0</count>
-            <item_version>0</item_version>
-          </second>
-        </item>
-        <item>
-          <first>AddWeighted_U0</first>
-          <second>
-            <count>0</count>
-            <item_version>0</item_version>
-          </second>
-        </item>
-        <item>
-          <first>Block_proc_U0</first>
-          <second>
-            <count>0</count>
-            <item_version>0</item_version>
-          </second>
-        </item>
-        <item>
-          <first>CvtColor_1_U0</first>
-          <second>
-            <count>0</count>
-            <item_version>0</item_version>
-          </second>
-        </item>
-        <item>
-          <first>CvtColor_U0</first>
-          <second>
-            <count>0</count>
-            <item_version>0</item_version>
-          </second>
-        </item>
-        <item>
-          <first>Duplicate_U0</first>
-          <second>
-            <count>0</count>
-            <item_version>0</item_version>
-          </second>
-        </item>
-        <item>
-          <first>GaussianBlur_U0</first>
-          <second>
-            <count>0</count>
-            <item_version>0</item_version>
-          </second>
-        </item>
-        <item>
-          <first>Mat2AXIvideo_U0</first>
-          <second>
-            <count>0</count>
-            <item_version>0</item_version>
-          </second>
-        </item>
-        <item>
-          <first>Sobel_1_U0</first>
-          <second>
-            <count>0</count>
-            <item_version>0</item_version>
-          </second>
-        </item>
-        <item>
-          <first>Sobel_U0</first>
-          <second>
-            <count>0</count>
-            <item_version>0</item_version>
-          </second>
-        </item>
-        <item>
-          <first>start_for_AddWeigyd2_U</first>
-          <second>
-            <count>0</count>
-            <item_version>0</item_version>
-          </second>
-        </item>
-        <item>
-          <first>start_for_CvtColoudo_U</first>
-          <second>
-            <count>0</count>
-            <item_version>0</item_version>
-          </second>
-        </item>
-        <item>
-          <first>start_for_CvtColozec_U</first>
-          <second>
-            <count>0</count>
-            <item_version>0</item_version>
-          </second>
-        </item>
-        <item>
-          <first>start_for_DuplicawdI_U</first>
-          <second>
-            <count>0</count>
-            <item_version>0</item_version>
-          </second>
-        </item>
-        <item>
-          <first>start_for_Gaussiavdy_U</first>
-          <second>
-            <count>0</count>
-            <item_version>0</item_version>
-          </second>
-        </item>
-        <item>
-          <first>start_for_Mat2AXIAem_U</first>
-          <second>
-            <count>0</count>
-            <item_version>0</item_version>
-          </second>
-        </item>
-        <item>
-          <first>start_for_Sobel_1xdS_U</first>
-          <second>
-            <count>0</count>
-            <item_version>0</item_version>
-          </second>
-        </item>
-        <item>
-          <first>start_for_Sobel_U0_U</first>
+          <first>Block_proc304_U0</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
       </dp_dsp_resource>
-      <dp_component_map class_id="49" tracking_level="0" version="0">
-        <count>10</count>
+      <dp_component_map class_id="48" tracking_level="0" version="0">
+        <count>1</count>
         <item_version>0</item_version>
-        <item class_id="50" tracking_level="0" version="0">
-          <first>AXIvideo2Mat_U0 (AXIvideo2Mat)</first>
+        <item class_id="49" tracking_level="0" version="0">
+          <first>Block_proc304_U0 (Block_proc304)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
-            <item>87</item>
-          </second>
-        </item>
-        <item>
-          <first>AddWeighted_U0 (AddWeighted)</first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>93</item>
-          </second>
-        </item>
-        <item>
-          <first>Block_proc_U0 (Block_proc)</first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>82</item>
-          </second>
-        </item>
-        <item>
-          <first>CvtColor_1_U0 (CvtColor_1)</first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>88</item>
-          </second>
-        </item>
-        <item>
-          <first>CvtColor_U0 (CvtColor)</first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>94</item>
-          </second>
-        </item>
-        <item>
-          <first>Duplicate_U0 (Duplicate)</first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>90</item>
-          </second>
-        </item>
-        <item>
-          <first>GaussianBlur_U0 (GaussianBlur)</first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>89</item>
-          </second>
-        </item>
-        <item>
-          <first>Mat2AXIvideo_U0 (Mat2AXIvideo)</first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>95</item>
-          </second>
-        </item>
-        <item>
-          <first>Sobel_1_U0 (Sobel_1)</first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>92</item>
-          </second>
-        </item>
-        <item>
-          <first>Sobel_U0 (Sobel)</first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>91</item>
+            <item>36</item>
           </second>
         </item>
       </dp_component_map>
@@ -5526,373 +1187,62 @@
         <item_version>0</item_version>
       </dp_expression_map>
       <dp_fifo_map>
-        <count>17</count>
+        <count>0</count>
         <item_version>0</item_version>
-        <item>
-          <first>img_0_cols_V_c21_U</first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>304</item>
-          </second>
-        </item>
-        <item>
-          <first>img_0_cols_V_c_U</first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>253</item>
-          </second>
-        </item>
-        <item>
-          <first>img_0_data_stream_0_U</first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>264</item>
-          </second>
-        </item>
-        <item>
-          <first>img_0_data_stream_1_U</first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>274</item>
-          </second>
-        </item>
-        <item>
-          <first>img_0_data_stream_2_U</first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>284</item>
-          </second>
-        </item>
-        <item>
-          <first>img_0_rows_V_c20_U</first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>294</item>
-          </second>
-        </item>
-        <item>
-          <first>img_0_rows_V_c_U</first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>242</item>
-          </second>
-        </item>
-        <item>
-          <first>img_1_data_stream_0_U</first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>314</item>
-          </second>
-        </item>
-        <item>
-          <first>img_2_data_stream_0_U</first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>324</item>
-          </second>
-        </item>
-        <item>
-          <first>img_2a_data_stream_0_U</first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>334</item>
-          </second>
-        </item>
-        <item>
-          <first>img_2b_data_stream_0_U</first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>344</item>
-          </second>
-        </item>
-        <item>
-          <first>img_3_data_stream_0_U</first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>354</item>
-          </second>
-        </item>
-        <item>
-          <first>img_4_data_stream_0_U</first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>364</item>
-          </second>
-        </item>
-        <item>
-          <first>img_5_data_stream_0_U</first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>374</item>
-          </second>
-        </item>
-        <item>
-          <first>img_6_data_stream_0_U</first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>384</item>
-          </second>
-        </item>
-        <item>
-          <first>img_6_data_stream_1_U</first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>394</item>
-          </second>
-        </item>
-        <item>
-          <first>img_6_data_stream_2_U</first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>404</item>
-          </second>
-        </item>
       </dp_fifo_map>
       <dp_memory_map>
         <count>0</count>
         <item_version>0</item_version>
       </dp_memory_map>
     </res>
-    <node_label_latency class_id="51" tracking_level="0" version="0">
-      <count>28</count>
+    <node_label_latency class_id="50" tracking_level="0" version="0">
+      <count>3</count>
       <item_version>0</item_version>
-      <item class_id="52" tracking_level="0" version="0">
-        <first>16</first>
-        <second class_id="53" tracking_level="0" version="0">
-          <first>0</first>
+      <item class_id="51" tracking_level="0" version="0">
+        <first>35</first>
+        <second class_id="52" tracking_level="0" version="0">
+          <first>1</first>
           <second>0</second>
         </second>
       </item>
       <item>
-        <first>17</first>
-        <second>
-          <first>0</first>
-          <second>0</second>
-        </second>
-      </item>
-      <item>
-        <first>18</first>
-        <second>
-          <first>0</first>
-          <second>0</second>
-        </second>
-      </item>
-      <item>
-        <first>19</first>
-        <second>
-          <first>0</first>
-          <second>0</second>
-        </second>
-      </item>
-      <item>
-        <first>37</first>
-        <second>
-          <first>0</first>
-          <second>0</second>
-        </second>
-      </item>
-      <item>
-        <first>40</first>
-        <second>
-          <first>0</first>
-          <second>0</second>
-        </second>
-      </item>
-      <item>
-        <first>43</first>
-        <second>
-          <first>0</first>
-          <second>0</second>
-        </second>
-      </item>
-      <item>
-        <first>46</first>
-        <second>
-          <first>0</first>
-          <second>0</second>
-        </second>
-      </item>
-      <item>
-        <first>49</first>
-        <second>
-          <first>0</first>
-          <second>0</second>
-        </second>
-      </item>
-      <item>
-        <first>52</first>
-        <second>
-          <first>0</first>
-          <second>0</second>
-        </second>
-      </item>
-      <item>
-        <first>55</first>
-        <second>
-          <first>0</first>
-          <second>0</second>
-        </second>
-      </item>
-      <item>
-        <first>58</first>
-        <second>
-          <first>0</first>
-          <second>0</second>
-        </second>
-      </item>
-      <item>
-        <first>61</first>
-        <second>
-          <first>0</first>
-          <second>0</second>
-        </second>
-      </item>
-      <item>
-        <first>64</first>
-        <second>
-          <first>0</first>
-          <second>0</second>
-        </second>
-      </item>
-      <item>
-        <first>67</first>
-        <second>
-          <first>0</first>
-          <second>0</second>
-        </second>
-      </item>
-      <item>
-        <first>70</first>
-        <second>
-          <first>0</first>
-          <second>0</second>
-        </second>
-      </item>
-      <item>
-        <first>73</first>
-        <second>
-          <first>0</first>
-          <second>0</second>
-        </second>
-      </item>
-      <item>
-        <first>82</first>
-        <second>
-          <first>0</first>
-          <second>0</second>
-        </second>
-      </item>
-      <item>
-        <first>87</first>
+        <first>36</first>
         <second>
           <first>1</first>
           <second>1</second>
         </second>
       </item>
       <item>
-        <first>88</first>
+        <first>37</first>
         <second>
           <first>3</first>
-          <second>1</second>
-        </second>
-      </item>
-      <item>
-        <first>89</first>
-        <second>
-          <first>5</first>
-          <second>1</second>
-        </second>
-      </item>
-      <item>
-        <first>90</first>
-        <second>
-          <first>7</first>
-          <second>1</second>
-        </second>
-      </item>
-      <item>
-        <first>91</first>
-        <second>
-          <first>9</first>
-          <second>1</second>
-        </second>
-      </item>
-      <item>
-        <first>92</first>
-        <second>
-          <first>9</first>
-          <second>1</second>
-        </second>
-      </item>
-      <item>
-        <first>93</first>
-        <second>
-          <first>11</first>
-          <second>1</second>
-        </second>
-      </item>
-      <item>
-        <first>94</first>
-        <second>
-          <first>13</first>
-          <second>1</second>
-        </second>
-      </item>
-      <item>
-        <first>95</first>
-        <second>
-          <first>15</first>
-          <second>1</second>
-        </second>
-      </item>
-      <item>
-        <first>96</first>
-        <second>
-          <first>17</first>
           <second>0</second>
         </second>
       </item>
     </node_label_latency>
-    <bblk_ent_exit class_id="54" tracking_level="0" version="0">
+    <bblk_ent_exit class_id="53" tracking_level="0" version="0">
       <count>1</count>
       <item_version>0</item_version>
-      <item class_id="55" tracking_level="0" version="0">
-        <first>97</first>
-        <second class_id="56" tracking_level="0" version="0">
+      <item class_id="54" tracking_level="0" version="0">
+        <first>38</first>
+        <second class_id="55" tracking_level="0" version="0">
           <first>0</first>
-          <second>17</second>
+          <second>3</second>
         </second>
       </item>
     </bblk_ent_exit>
-    <regions class_id="57" tracking_level="0" version="0">
+    <regions class_id="56" tracking_level="0" version="0">
       <count>1</count>
       <item_version>0</item_version>
-      <item class_id="58" tracking_level="1" version="0" object_id="_479">
+      <item class_id="57" tracking_level="1" version="0" object_id="_104">
         <region_name>Sobel_filter</region_name>
         <basic_blocks>
           <count>1</count>
           <item_version>0</item_version>
-          <item>97</item>
+          <item>38</item>
         </basic_blocks>
         <nodes>
-          <count>81</count>
+          <count>22</count>
           <item_version>0</item_version>
           <item>16</item>
           <item>17</item>
@@ -5916,65 +1266,6 @@
           <item>35</item>
           <item>36</item>
           <item>37</item>
-          <item>38</item>
-          <item>39</item>
-          <item>40</item>
-          <item>41</item>
-          <item>42</item>
-          <item>43</item>
-          <item>44</item>
-          <item>45</item>
-          <item>46</item>
-          <item>47</item>
-          <item>48</item>
-          <item>49</item>
-          <item>50</item>
-          <item>51</item>
-          <item>52</item>
-          <item>53</item>
-          <item>54</item>
-          <item>55</item>
-          <item>56</item>
-          <item>57</item>
-          <item>58</item>
-          <item>59</item>
-          <item>60</item>
-          <item>61</item>
-          <item>62</item>
-          <item>63</item>
-          <item>64</item>
-          <item>65</item>
-          <item>66</item>
-          <item>67</item>
-          <item>68</item>
-          <item>69</item>
-          <item>70</item>
-          <item>71</item>
-          <item>72</item>
-          <item>73</item>
-          <item>74</item>
-          <item>75</item>
-          <item>76</item>
-          <item>77</item>
-          <item>78</item>
-          <item>79</item>
-          <item>80</item>
-          <item>81</item>
-          <item>82</item>
-          <item>83</item>
-          <item>84</item>
-          <item>85</item>
-          <item>86</item>
-          <item>87</item>
-          <item>88</item>
-          <item>89</item>
-          <item>90</item>
-          <item>91</item>
-          <item>92</item>
-          <item>93</item>
-          <item>94</item>
-          <item>95</item>
-          <item>96</item>
         </nodes>
         <anchor_node>-1</anchor_node>
         <region_type>16</region_type>
@@ -5982,757 +1273,85 @@
         <pipe_depth>0</pipe_depth>
       </item>
     </regions>
-    <dp_fu_nodes class_id="59" tracking_level="0" version="0">
-      <count>27</count>
+    <dp_fu_nodes class_id="58" tracking_level="0" version="0">
+      <count>2</count>
       <item_version>0</item_version>
-      <item class_id="60" tracking_level="0" version="0">
-        <first>354</first>
+      <item class_id="59" tracking_level="0" version="0">
+        <first>56</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>16</item>
+          <item>35</item>
         </second>
       </item>
       <item>
-        <first>358</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>17</item>
-        </second>
-      </item>
-      <item>
-        <first>362</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>18</item>
-        </second>
-      </item>
-      <item>
-        <first>366</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>19</item>
-        </second>
-      </item>
-      <item>
-        <first>370</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>37</item>
-        </second>
-      </item>
-      <item>
-        <first>374</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>40</item>
-        </second>
-      </item>
-      <item>
-        <first>378</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>43</item>
-        </second>
-      </item>
-      <item>
-        <first>382</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>46</item>
-        </second>
-      </item>
-      <item>
-        <first>386</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>49</item>
-        </second>
-      </item>
-      <item>
-        <first>390</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>52</item>
-        </second>
-      </item>
-      <item>
-        <first>394</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>55</item>
-        </second>
-      </item>
-      <item>
-        <first>398</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>58</item>
-        </second>
-      </item>
-      <item>
-        <first>402</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>61</item>
-        </second>
-      </item>
-      <item>
-        <first>406</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>64</item>
-        </second>
-      </item>
-      <item>
-        <first>410</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>67</item>
-        </second>
-      </item>
-      <item>
-        <first>414</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>70</item>
-        </second>
-      </item>
-      <item>
-        <first>418</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>73</item>
-        </second>
-      </item>
-      <item>
-        <first>422</first>
+        <first>62</first>
         <second>
           <count>2</count>
           <item_version>0</item_version>
-          <item>93</item>
-          <item>93</item>
-        </second>
-      </item>
-      <item>
-        <first>429</first>
-        <second>
-          <count>2</count>
-          <item_version>0</item_version>
-          <item>91</item>
-          <item>91</item>
-        </second>
-      </item>
-      <item>
-        <first>435</first>
-        <second>
-          <count>2</count>
-          <item_version>0</item_version>
-          <item>92</item>
-          <item>92</item>
-        </second>
-      </item>
-      <item>
-        <first>441</first>
-        <second>
-          <count>2</count>
-          <item_version>0</item_version>
-          <item>89</item>
-          <item>89</item>
-        </second>
-      </item>
-      <item>
-        <first>447</first>
-        <second>
-          <count>2</count>
-          <item_version>0</item_version>
-          <item>87</item>
-          <item>87</item>
-        </second>
-      </item>
-      <item>
-        <first>472</first>
-        <second>
-          <count>2</count>
-          <item_version>0</item_version>
-          <item>88</item>
-          <item>88</item>
-        </second>
-      </item>
-      <item>
-        <first>482</first>
-        <second>
-          <count>2</count>
-          <item_version>0</item_version>
-          <item>95</item>
-          <item>95</item>
-        </second>
-      </item>
-      <item>
-        <first>503</first>
-        <second>
-          <count>2</count>
-          <item_version>0</item_version>
-          <item>94</item>
-          <item>94</item>
-        </second>
-      </item>
-      <item>
-        <first>511</first>
-        <second>
-          <count>2</count>
-          <item_version>0</item_version>
-          <item>90</item>
-          <item>90</item>
-        </second>
-      </item>
-      <item>
-        <first>518</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>82</item>
+          <item>36</item>
+          <item>36</item>
         </second>
       </item>
     </dp_fu_nodes>
-    <dp_fu_nodes_expression class_id="62" tracking_level="0" version="0">
-      <count>17</count>
+    <dp_fu_nodes_expression class_id="61" tracking_level="0" version="0">
+      <count>0</count>
       <item_version>0</item_version>
-      <item class_id="63" tracking_level="0" version="0">
-        <first>img_0_cols_V_c21_fu_354</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>16</item>
-        </second>
-      </item>
-      <item>
-        <first>img_0_cols_V_c_fu_362</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>18</item>
-        </second>
-      </item>
-      <item>
-        <first>img_0_data_stream_0_fu_370</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>37</item>
-        </second>
-      </item>
-      <item>
-        <first>img_0_data_stream_1_fu_374</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>40</item>
-        </second>
-      </item>
-      <item>
-        <first>img_0_data_stream_2_fu_378</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>43</item>
-        </second>
-      </item>
-      <item>
-        <first>img_0_rows_V_c20_fu_358</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>17</item>
-        </second>
-      </item>
-      <item>
-        <first>img_0_rows_V_c_fu_366</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>19</item>
-        </second>
-      </item>
-      <item>
-        <first>img_1_data_stream_0_fu_382</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>46</item>
-        </second>
-      </item>
-      <item>
-        <first>img_2_data_stream_0_fu_386</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>49</item>
-        </second>
-      </item>
-      <item>
-        <first>img_2a_data_stream_0_fu_390</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>52</item>
-        </second>
-      </item>
-      <item>
-        <first>img_2b_data_stream_0_fu_394</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>55</item>
-        </second>
-      </item>
-      <item>
-        <first>img_3_data_stream_0_fu_398</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>58</item>
-        </second>
-      </item>
-      <item>
-        <first>img_4_data_stream_0_fu_402</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>61</item>
-        </second>
-      </item>
-      <item>
-        <first>img_5_data_stream_0_fu_406</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>64</item>
-        </second>
-      </item>
-      <item>
-        <first>img_6_data_stream_0_fu_410</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>67</item>
-        </second>
-      </item>
-      <item>
-        <first>img_6_data_stream_1_fu_414</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>70</item>
-        </second>
-      </item>
-      <item>
-        <first>img_6_data_stream_2_fu_418</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>73</item>
-        </second>
-      </item>
     </dp_fu_nodes_expression>
     <dp_fu_nodes_module>
-      <count>10</count>
+      <count>1</count>
       <item_version>0</item_version>
-      <item>
-        <first>StgValue_36_Block_proc_fu_518</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>82</item>
-        </second>
-      </item>
-      <item>
-        <first>grp_AXIvideo2Mat_fu_447</first>
+      <item class_id="62" tracking_level="0" version="0">
+        <first>grp_Block_proc304_fu_62</first>
         <second>
           <count>2</count>
           <item_version>0</item_version>
-          <item>87</item>
-          <item>87</item>
-        </second>
-      </item>
-      <item>
-        <first>grp_AddWeighted_fu_422</first>
-        <second>
-          <count>2</count>
-          <item_version>0</item_version>
-          <item>93</item>
-          <item>93</item>
-        </second>
-      </item>
-      <item>
-        <first>grp_CvtColor_1_fu_472</first>
-        <second>
-          <count>2</count>
-          <item_version>0</item_version>
-          <item>88</item>
-          <item>88</item>
-        </second>
-      </item>
-      <item>
-        <first>grp_CvtColor_fu_503</first>
-        <second>
-          <count>2</count>
-          <item_version>0</item_version>
-          <item>94</item>
-          <item>94</item>
-        </second>
-      </item>
-      <item>
-        <first>grp_Duplicate_fu_511</first>
-        <second>
-          <count>2</count>
-          <item_version>0</item_version>
-          <item>90</item>
-          <item>90</item>
-        </second>
-      </item>
-      <item>
-        <first>grp_GaussianBlur_fu_441</first>
-        <second>
-          <count>2</count>
-          <item_version>0</item_version>
-          <item>89</item>
-          <item>89</item>
-        </second>
-      </item>
-      <item>
-        <first>grp_Mat2AXIvideo_fu_482</first>
-        <second>
-          <count>2</count>
-          <item_version>0</item_version>
-          <item>95</item>
-          <item>95</item>
-        </second>
-      </item>
-      <item>
-        <first>grp_Sobel_1_fu_435</first>
-        <second>
-          <count>2</count>
-          <item_version>0</item_version>
-          <item>92</item>
-          <item>92</item>
-        </second>
-      </item>
-      <item>
-        <first>grp_Sobel_fu_429</first>
-        <second>
-          <count>2</count>
-          <item_version>0</item_version>
-          <item>91</item>
-          <item>91</item>
+          <item>36</item>
+          <item>36</item>
         </second>
       </item>
     </dp_fu_nodes_module>
     <dp_fu_nodes_io>
-      <count>0</count>
+      <count>1</count>
       <item_version>0</item_version>
+      <item>
+        <first>enable_V_read_read_fu_56</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>35</item>
+        </second>
+      </item>
     </dp_fu_nodes_io>
     <return_ports>
       <count>0</count>
       <item_version>0</item_version>
     </return_ports>
-    <dp_mem_port_nodes class_id="64" tracking_level="0" version="0">
+    <dp_mem_port_nodes class_id="63" tracking_level="0" version="0">
       <count>0</count>
       <item_version>0</item_version>
     </dp_mem_port_nodes>
     <dp_reg_nodes>
-      <count>17</count>
+      <count>1</count>
       <item_version>0</item_version>
       <item>
-        <first>524</first>
+        <first>96</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>16</item>
-        </second>
-      </item>
-      <item>
-        <first>530</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>17</item>
-        </second>
-      </item>
-      <item>
-        <first>536</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>18</item>
-        </second>
-      </item>
-      <item>
-        <first>542</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>19</item>
-        </second>
-      </item>
-      <item>
-        <first>548</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>37</item>
-        </second>
-      </item>
-      <item>
-        <first>554</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>40</item>
-        </second>
-      </item>
-      <item>
-        <first>560</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>43</item>
-        </second>
-      </item>
-      <item>
-        <first>566</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>46</item>
-        </second>
-      </item>
-      <item>
-        <first>572</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>49</item>
-        </second>
-      </item>
-      <item>
-        <first>578</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>52</item>
-        </second>
-      </item>
-      <item>
-        <first>584</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>55</item>
-        </second>
-      </item>
-      <item>
-        <first>590</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>58</item>
-        </second>
-      </item>
-      <item>
-        <first>596</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>61</item>
-        </second>
-      </item>
-      <item>
-        <first>602</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>64</item>
-        </second>
-      </item>
-      <item>
-        <first>608</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>67</item>
-        </second>
-      </item>
-      <item>
-        <first>614</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>70</item>
-        </second>
-      </item>
-      <item>
-        <first>620</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>73</item>
+          <item>35</item>
         </second>
       </item>
     </dp_reg_nodes>
     <dp_regname_nodes>
-      <count>17</count>
+      <count>1</count>
       <item_version>0</item_version>
       <item>
-        <first>img_0_cols_V_c21_reg_524</first>
+        <first>enable_V_read_reg_96</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>16</item>
-        </second>
-      </item>
-      <item>
-        <first>img_0_cols_V_c_reg_536</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>18</item>
-        </second>
-      </item>
-      <item>
-        <first>img_0_data_stream_0_reg_548</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>37</item>
-        </second>
-      </item>
-      <item>
-        <first>img_0_data_stream_1_reg_554</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>40</item>
-        </second>
-      </item>
-      <item>
-        <first>img_0_data_stream_2_reg_560</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>43</item>
-        </second>
-      </item>
-      <item>
-        <first>img_0_rows_V_c20_reg_530</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>17</item>
-        </second>
-      </item>
-      <item>
-        <first>img_0_rows_V_c_reg_542</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>19</item>
-        </second>
-      </item>
-      <item>
-        <first>img_1_data_stream_0_reg_566</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>46</item>
-        </second>
-      </item>
-      <item>
-        <first>img_2_data_stream_0_reg_572</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>49</item>
-        </second>
-      </item>
-      <item>
-        <first>img_2a_data_stream_0_reg_578</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>52</item>
-        </second>
-      </item>
-      <item>
-        <first>img_2b_data_stream_0_reg_584</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>55</item>
-        </second>
-      </item>
-      <item>
-        <first>img_3_data_stream_0_reg_590</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>58</item>
-        </second>
-      </item>
-      <item>
-        <first>img_4_data_stream_0_reg_596</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>61</item>
-        </second>
-      </item>
-      <item>
-        <first>img_5_data_stream_0_reg_602</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>64</item>
-        </second>
-      </item>
-      <item>
-        <first>img_6_data_stream_0_reg_608</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>67</item>
-        </second>
-      </item>
-      <item>
-        <first>img_6_data_stream_1_reg_614</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>70</item>
-        </second>
-      </item>
-      <item>
-        <first>img_6_data_stream_2_reg_620</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>73</item>
+          <item>35</item>
         </second>
       </item>
     </dp_regname_nodes>
@@ -6744,10 +1363,10 @@
       <count>0</count>
       <item_version>0</item_version>
     </dp_regname_phi>
-    <dp_port_io_nodes class_id="65" tracking_level="0" version="0">
+    <dp_port_io_nodes class_id="64" tracking_level="0" version="0">
       <count>15</count>
       <item_version>0</item_version>
-      <item class_id="66" tracking_level="0" version="0">
+      <item class_id="65" tracking_level="0" version="0">
         <first>INPUT_STREAM_V_data_V</first>
         <second>
           <count>1</count>
@@ -6757,7 +1376,7 @@
             <second>
               <count>1</count>
               <item_version>0</item_version>
-              <item>87</item>
+              <item>36</item>
             </second>
           </item>
         </second>
@@ -6772,7 +1391,7 @@
             <second>
               <count>1</count>
               <item_version>0</item_version>
-              <item>87</item>
+              <item>36</item>
             </second>
           </item>
         </second>
@@ -6787,7 +1406,7 @@
             <second>
               <count>1</count>
               <item_version>0</item_version>
-              <item>87</item>
+              <item>36</item>
             </second>
           </item>
         </second>
@@ -6802,7 +1421,7 @@
             <second>
               <count>1</count>
               <item_version>0</item_version>
-              <item>87</item>
+              <item>36</item>
             </second>
           </item>
         </second>
@@ -6817,7 +1436,7 @@
             <second>
               <count>1</count>
               <item_version>0</item_version>
-              <item>87</item>
+              <item>36</item>
             </second>
           </item>
         </second>
@@ -6832,7 +1451,7 @@
             <second>
               <count>1</count>
               <item_version>0</item_version>
-              <item>87</item>
+              <item>36</item>
             </second>
           </item>
         </second>
@@ -6847,7 +1466,7 @@
             <second>
               <count>1</count>
               <item_version>0</item_version>
-              <item>87</item>
+              <item>36</item>
             </second>
           </item>
         </second>
@@ -6862,7 +1481,7 @@
             <second>
               <count>1</count>
               <item_version>0</item_version>
-              <item>95</item>
+              <item>36</item>
             </second>
           </item>
         </second>
@@ -6877,7 +1496,7 @@
             <second>
               <count>1</count>
               <item_version>0</item_version>
-              <item>95</item>
+              <item>36</item>
             </second>
           </item>
         </second>
@@ -6892,7 +1511,7 @@
             <second>
               <count>1</count>
               <item_version>0</item_version>
-              <item>95</item>
+              <item>36</item>
             </second>
           </item>
         </second>
@@ -6907,7 +1526,7 @@
             <second>
               <count>1</count>
               <item_version>0</item_version>
-              <item>95</item>
+              <item>36</item>
             </second>
           </item>
         </second>
@@ -6922,7 +1541,7 @@
             <second>
               <count>1</count>
               <item_version>0</item_version>
-              <item>95</item>
+              <item>36</item>
             </second>
           </item>
         </second>
@@ -6937,7 +1556,7 @@
             <second>
               <count>1</count>
               <item_version>0</item_version>
-              <item>95</item>
+              <item>36</item>
             </second>
           </item>
         </second>
@@ -6952,7 +1571,7 @@
             <second>
               <count>1</count>
               <item_version>0</item_version>
-              <item>95</item>
+              <item>36</item>
             </second>
           </item>
         </second>
@@ -6960,86 +1579,26 @@
       <item>
         <first>enable_V</first>
         <second>
-          <count>0</count>
+          <count>1</count>
           <item_version>0</item_version>
+          <item>
+            <first>read</first>
+            <second>
+              <count>1</count>
+              <item_version>0</item_version>
+              <item>35</item>
+            </second>
+          </item>
         </second>
       </item>
     </dp_port_io_nodes>
-    <port2core class_id="67" tracking_level="0" version="0">
+    <port2core class_id="66" tracking_level="0" version="0">
       <count>0</count>
       <item_version>0</item_version>
     </port2core>
     <node2core>
-      <count>17</count>
+      <count>0</count>
       <item_version>0</item_version>
-      <item class_id="68" tracking_level="0" version="0">
-        <first>16</first>
-        <second>FIFO</second>
-      </item>
-      <item>
-        <first>17</first>
-        <second>FIFO</second>
-      </item>
-      <item>
-        <first>18</first>
-        <second>FIFO</second>
-      </item>
-      <item>
-        <first>19</first>
-        <second>FIFO</second>
-      </item>
-      <item>
-        <first>37</first>
-        <second>FIFO</second>
-      </item>
-      <item>
-        <first>40</first>
-        <second>FIFO</second>
-      </item>
-      <item>
-        <first>43</first>
-        <second>FIFO</second>
-      </item>
-      <item>
-        <first>46</first>
-        <second>FIFO</second>
-      </item>
-      <item>
-        <first>49</first>
-        <second>FIFO</second>
-      </item>
-      <item>
-        <first>52</first>
-        <second>FIFO</second>
-      </item>
-      <item>
-        <first>55</first>
-        <second>FIFO</second>
-      </item>
-      <item>
-        <first>58</first>
-        <second>FIFO</second>
-      </item>
-      <item>
-        <first>61</first>
-        <second>FIFO</second>
-      </item>
-      <item>
-        <first>64</first>
-        <second>FIFO</second>
-      </item>
-      <item>
-        <first>67</first>
-        <second>FIFO</second>
-      </item>
-      <item>
-        <first>70</first>
-        <second>FIFO</second>
-      </item>
-      <item>
-        <first>73</first>
-        <second>FIFO</second>
-      </item>
     </node2core>
   </syndb>
 </boost_serialization>
