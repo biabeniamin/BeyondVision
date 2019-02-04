@@ -10,7 +10,7 @@ use ieee.std_logic_1164.all;
 
 entity Sobel_filter_sitotde is
     generic (
-        ID         : integer := 98;
+        ID         : integer := 78;
         NUM_STAGE  : integer := 6;
         din0_WIDTH : integer := 32;
         dout_WIDTH : integer := 64

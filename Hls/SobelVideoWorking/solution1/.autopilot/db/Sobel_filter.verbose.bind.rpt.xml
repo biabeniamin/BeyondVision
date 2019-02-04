@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'Sobel_filter'" level="0">
-<item name = "Date">Mon Feb  4 18:37:45 2019
+<item name = "Date">Mon Feb  4 20:24:59 2019
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">SobelVideoWorking</item>
@@ -24,14 +24,23 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">943937, 943937, 943922, 943922, dataflow</column>
+<column name="">943938, 943938, 943922, 943922, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_Block_proc306_fu_62">Block_proc306, 943937, 943937, 943922, 943922, dataflow</column>
+<column name="grp_AddWeighted_fu_422">AddWeighted, 943921, 943921, 943921, 943921, none</column>
+<column name="grp_Sobel_fu_429">Sobel, 930660, 930660, 930660, 930660, none</column>
+<column name="grp_Sobel_1_fu_435">Sobel_1, 930660, 930660, 930660, 930660, none</column>
+<column name="grp_GaussianBlur_fu_441">GaussianBlur, 930660, 930660, 930660, 930660, none</column>
+<column name="grp_AXIvideo2Mat_fu_447">AXIvideo2Mat, 3, 926643, 3, 926643, none</column>
+<column name="grp_CvtColor_1_fu_472">CvtColor_1, 1, 925921, 1, 925921, none</column>
+<column name="grp_Mat2AXIvideo_fu_482">Mat2AXIvideo, 924481, 924481, 924481, 924481, none</column>
+<column name="grp_CvtColor_fu_503">CvtColor, 923761, 923761, 923761, 923761, none</column>
+<column name="grp_Duplicate_fu_511">Duplicate, 923761, 923761, 923761, 923761, none</column>
+<column name="StgValue_36_Block_proc_fu_518">Block_proc, 0, 0, 0, 0, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

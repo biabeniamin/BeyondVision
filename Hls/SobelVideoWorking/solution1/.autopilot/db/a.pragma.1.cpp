@@ -42981,15 +42981,6 @@ _ssdm_op_SpecInterface(&INPUT_STREAM, "axis", 1, 1, "both", 0, 0, "", "", "", 0,
 _ssdm_op_SpecInterface(&OUTPUT_STREAM, "axis", 1, 1, "both", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
 
 
-
-if(0 == enable)
-{
-RGB_IMAGE img_0a(720, 1280);
-
-_ssdm_op_SpecDataflowPipeline(-1, "");
-hls::AXIvideo2Mat(INPUT_STREAM, img_0a);
- hls::Mat2AXIvideo(img_0a, OUTPUT_STREAM);
-} else {
  RGB_IMAGE img_0(720, 1280);
  GRAY_IMAGE img_1(720, 1280);
  GRAY_IMAGE img_2(720, 1280);
@@ -43009,5 +43000,5 @@ _ssdm_op_SpecDataflowPipeline(-1, "");
  hls::AddWeighted(img_4,0.5,img_3,0.5,0.0,img_5);
  hls::CvtColor<HLS_GRAY2RGB>(img_5, img_6);
  hls::Mat2AXIvideo(img_6, OUTPUT_STREAM);
-}
+# 57 "SobelVideoWorking/a.cpp"
 }

@@ -625,7 +625,7 @@
 					<Obj>
 						<type>0</type>
 						<id>29</id>
-						<name>t_V_2</name>
+						<name>t_V_1</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -890,7 +890,7 @@
 					<Obj>
 						<type>0</type>
 						<id>42</id>
-						<name>tmp_6</name>
+						<name>tmp_4</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>624</lineNumber>
@@ -950,7 +950,7 @@
 					<Obj>
 						<type>0</type>
 						<id>43</id>
-						<name>tmp_7</name>
+						<name>tmp_5</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>624</lineNumber>
@@ -1010,7 +1010,7 @@
 					<Obj>
 						<type>0</type>
 						<id>44</id>
-						<name>tmp_5</name>
+						<name>tmp_3</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>624</lineNumber>
@@ -3060,7 +3060,7 @@
 			<pipe_depth>3</pipe_depth>
 		</item>
 		<item class_id_reference="44" object_id="_181">
-			<region_name>hls_label_4</region_name>
+			<region_name>hls_label_2</region_name>
 			<basic_blocks>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3259,7 +3259,7 @@
 			</second>
 		</item>
 		<item>
-			<first>t_V_2_phi_fu_192</first>
+			<first>t_V_1_phi_fu_192</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3324,7 +3324,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_5_read_fu_142</first>
+			<first>tmp_3_read_fu_142</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3332,7 +3332,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_6_read_fu_130</first>
+			<first>tmp_4_read_fu_130</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3340,7 +3340,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_7_read_fu_136</first>
+			<first>tmp_5_read_fu_136</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3492,7 +3492,7 @@
 			</second>
 		</item>
 		<item>
-			<first>t_V_2_reg_188</first>
+			<first>t_V_1_reg_188</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3556,7 +3556,7 @@
 		<count>2</count>
 		<item_version>0</item_version>
 		<item>
-			<first>t_V_2_reg_188</first>
+			<first>t_V_1_reg_188</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>

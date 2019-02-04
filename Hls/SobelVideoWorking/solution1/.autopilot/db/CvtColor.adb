@@ -567,7 +567,7 @@
             <Obj>
               <type>0</type>
               <id>32</id>
-              <name>tmp_93</name>
+              <name>tmp_88</name>
               <fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>624</lineNumber>
@@ -2932,7 +2932,7 @@
         <pipe_depth>2</pipe_depth>
       </item>
       <item class_id_reference="50" object_id="_133">
-        <region_name>hls_label_2</region_name>
+        <region_name>hls_label_0</region_name>
         <basic_blocks>
           <count>1</count>
           <item_version>0</item_version>
@@ -3122,7 +3122,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_93_read_fu_112</first>
+        <first>tmp_88_read_fu_112</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

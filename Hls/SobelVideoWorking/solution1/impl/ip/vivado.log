@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Mon Feb  4 18:38:06 2019
-# Process ID: 21192
+# Start of session at: Mon Feb  4 20:25:25 2019
+# Process ID: 12604
 # Current directory: C:/Digilent19/Hls/SobelVideoWorking/solution1/impl/ip
 # Command line: vivado.exe -notrace -mode batch -source run_ippack.tcl
 # Log file: C:/Digilent19/Hls/SobelVideoWorking/solution1/impl/ip/vivado.log
@@ -26,4 +26,4 @@ INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'Sobel_filter_ap_s
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Mon Feb  4 18:38:18 2019...
+INFO: [Common 17-206] Exiting Vivado at Mon Feb  4 20:25:38 2019...

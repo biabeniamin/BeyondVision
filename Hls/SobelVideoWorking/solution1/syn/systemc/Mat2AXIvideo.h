@@ -138,7 +138,7 @@ struct Mat2AXIvideo : public sc_module {
     sc_signal< sc_logic > OUTPUT_STREAM_TDATA_blk_n;
     sc_signal< sc_logic > ap_enable_reg_pp0_iter2;
     sc_signal< sc_lv<1> > exitcond_reg_270_pp0_iter1_reg;
-    sc_signal< sc_lv<11> > t_V_2_reg_188;
+    sc_signal< sc_lv<11> > t_V_1_reg_188;
     sc_signal< sc_lv<1> > exitcond2_fu_204_p2;
     sc_signal< sc_logic > ap_CS_fsm_state2;
     sc_signal< bool > ap_block_state2;

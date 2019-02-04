@@ -20,7 +20,7 @@
     "ClockPeriod": "10",
     "IsCombLogic": "0",
     "II": "x",
-    "Latency": "943937",
+    "Latency": "943938",
     "Uncertainty": "1.25"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
@@ -39,8 +39,7 @@
     "Vhdl": [
       "impl\/vhdl\/AddWeighted.vhd",
       "impl\/vhdl\/AXIvideo2Mat.vhd",
-      "impl\/vhdl\/AXIvideo2Mat559.vhd",
-      "impl\/vhdl\/Block_proc306.vhd",
+      "impl\/vhdl\/Block_proc.vhd",
       "impl\/vhdl\/CvtColor.vhd",
       "impl\/vhdl\/CvtColor_1.vhd",
       "impl\/vhdl\/Duplicate.vhd",
@@ -52,9 +51,6 @@
       "impl\/vhdl\/Filter2D_1_k_buf_eOg.vhd",
       "impl\/vhdl\/GaussianBlur.vhd",
       "impl\/vhdl\/Mat2AXIvideo.vhd",
-      "impl\/vhdl\/Mat2AXIvideo598.vhd",
-      "impl\/vhdl\/p_C_Xilinx_Vivado_2.vhd",
-      "impl\/vhdl\/p_C_Xilinx_Vivado_2_1.vhd",
       "impl\/vhdl\/Sobel.vhd",
       "impl\/vhdl\/Sobel_1.vhd",
       "impl\/vhdl\/Sobel_filter_ama_jbC.vhd",
@@ -70,20 +66,20 @@
       "impl\/vhdl\/Sobel_filter_mul_ibs.vhd",
       "impl\/vhdl\/Sobel_filter_mux_hbi.vhd",
       "impl\/vhdl\/Sobel_filter_sitotde.vhd",
-      "impl\/vhdl\/start_for_AddWeigudo.vhd",
-      "impl\/vhdl\/start_for_CvtColoxdS.vhd",
-      "impl\/vhdl\/start_for_Duplicazec.vhd",
-      "impl\/vhdl\/start_for_Gaussiayd2.vhd",
-      "impl\/vhdl\/start_for_Mat2AXIvdy.vhd",
-      "impl\/vhdl\/start_for_Mat2AXIwdI.vhd",
-      "impl\/vhdl\/start_for_Sobel_1Aem.vhd",
+      "impl\/vhdl\/start_for_AddWeigyd2.vhd",
+      "impl\/vhdl\/start_for_CvtColoudo.vhd",
+      "impl\/vhdl\/start_for_CvtColozec.vhd",
+      "impl\/vhdl\/start_for_DuplicawdI.vhd",
+      "impl\/vhdl\/start_for_Gaussiavdy.vhd",
+      "impl\/vhdl\/start_for_Mat2AXIAem.vhd",
+      "impl\/vhdl\/start_for_Sobel_1xdS.vhd",
+      "impl\/vhdl\/start_for_Sobel_U0.vhd",
       "impl\/vhdl\/Sobel_filter.vhd"
     ],
     "Verilog": [
       "impl\/verilog\/AddWeighted.v",
       "impl\/verilog\/AXIvideo2Mat.v",
-      "impl\/verilog\/AXIvideo2Mat559.v",
-      "impl\/verilog\/Block_proc306.v",
+      "impl\/verilog\/Block_proc.v",
       "impl\/verilog\/CvtColor.v",
       "impl\/verilog\/CvtColor_1.v",
       "impl\/verilog\/Duplicate.v",
@@ -95,9 +91,6 @@
       "impl\/verilog\/Filter2D_1_k_buf_eOg.v",
       "impl\/verilog\/GaussianBlur.v",
       "impl\/verilog\/Mat2AXIvideo.v",
-      "impl\/verilog\/Mat2AXIvideo598.v",
-      "impl\/verilog\/p_C_Xilinx_Vivado_2.v",
-      "impl\/verilog\/p_C_Xilinx_Vivado_2_1.v",
       "impl\/verilog\/Sobel.v",
       "impl\/verilog\/Sobel_1.v",
       "impl\/verilog\/Sobel_filter_ama_jbC.v",
@@ -113,13 +106,14 @@
       "impl\/verilog\/Sobel_filter_mul_ibs.v",
       "impl\/verilog\/Sobel_filter_mux_hbi.v",
       "impl\/verilog\/Sobel_filter_sitotde.v",
-      "impl\/verilog\/start_for_AddWeigudo.v",
-      "impl\/verilog\/start_for_CvtColoxdS.v",
-      "impl\/verilog\/start_for_Duplicazec.v",
-      "impl\/verilog\/start_for_Gaussiayd2.v",
-      "impl\/verilog\/start_for_Mat2AXIvdy.v",
-      "impl\/verilog\/start_for_Mat2AXIwdI.v",
-      "impl\/verilog\/start_for_Sobel_1Aem.v",
+      "impl\/verilog\/start_for_AddWeigyd2.v",
+      "impl\/verilog\/start_for_CvtColoudo.v",
+      "impl\/verilog\/start_for_CvtColozec.v",
+      "impl\/verilog\/start_for_DuplicawdI.v",
+      "impl\/verilog\/start_for_Gaussiavdy.v",
+      "impl\/verilog\/start_for_Mat2AXIAem.v",
+      "impl\/verilog\/start_for_Sobel_1xdS.v",
+      "impl\/verilog\/start_for_Sobel_U0.v",
       "impl\/verilog\/Sobel_filter.v"
     ],
     "Misc": ["impl\/misc\/logo.png"],
@@ -253,10 +247,10 @@
     },
     "ap_ctrl": {
       "type": "ap_ctrl",
-      "ctrl_ports": "ap_done ap_start ap_ready ap_idle",
+      "ctrl_ports": "ap_start ap_done ap_ready ap_idle",
       "ctype": {
-        "done": {"Type": "bool"},
         "start": {"Type": "bool"},
+        "done": {"Type": "bool"},
         "ready": {"Type": "bool"},
         "idle": {"Type": "bool"}
       }
@@ -370,12 +364,12 @@
       "dir": "in",
       "width": "1"
     },
-    "ap_done": {
-      "dir": "out",
-      "width": "1"
-    },
     "ap_start": {
       "dir": "in",
+      "width": "1"
+    },
+    "ap_done": {
+      "dir": "out",
       "width": "1"
     },
     "ap_ready": {
@@ -465,79 +459,63 @@
   "ModuleInfo": {
     "Hierarchy": {
       "ModuleName": "Sobel_filter",
-      "Instances": [{
-          "ModuleName": "Block_proc306",
-          "InstanceName": "Block_proc306_U0",
-          "Instances": [
-            {
-              "ModuleName": "AddWeighted",
-              "InstanceName": "AddWeighted_U0"
-            },
-            {
-              "ModuleName": "Sobel",
-              "InstanceName": "Sobel_U0",
-              "Instances": [{
-                  "ModuleName": "Filter2D",
-                  "InstanceName": "grp_Filter2D_fu_52"
-                }]
-            },
-            {
-              "ModuleName": "Sobel_1",
-              "InstanceName": "Sobel_1_U0",
-              "Instances": [{
-                  "ModuleName": "Filter2D",
-                  "InstanceName": "grp_Filter2D_fu_52"
-                }]
-            },
-            {
-              "ModuleName": "GaussianBlur",
-              "InstanceName": "GaussianBlur_U0",
-              "Instances": [{
-                  "ModuleName": "Filter2D_1",
-                  "InstanceName": "grp_Filter2D_1_fu_40"
-                }]
-            },
-            {
-              "ModuleName": "AXIvideo2Mat559",
-              "InstanceName": "AXIvideo2Mat559_U0"
-            },
-            {
-              "ModuleName": "Mat2AXIvideo598",
-              "InstanceName": "Mat2AXIvideo598_U0"
-            },
-            {
-              "ModuleName": "AXIvideo2Mat",
-              "InstanceName": "AXIvideo2Mat_U0"
-            },
-            {
-              "ModuleName": "CvtColor_1",
-              "InstanceName": "CvtColor_1_U0"
-            },
-            {
-              "ModuleName": "Mat2AXIvideo",
-              "InstanceName": "Mat2AXIvideo_U0"
-            },
-            {
-              "ModuleName": "CvtColor",
-              "InstanceName": "CvtColor_U0"
-            },
-            {
-              "ModuleName": "Duplicate",
-              "InstanceName": "Duplicate_U0"
-            },
-            {
-              "ModuleName": "p_C_Xilinx_Vivado_2_1",
-              "InstanceName": "p_C_Xilinx_Vivado_2_1_U0"
-            },
-            {
-              "ModuleName": "p_C_Xilinx_Vivado_2",
-              "InstanceName": "p_C_Xilinx_Vivado_2_U0"
-            }
-          ]
-        }]
+      "Instances": [
+        {
+          "ModuleName": "AddWeighted",
+          "InstanceName": "AddWeighted_U0"
+        },
+        {
+          "ModuleName": "Sobel",
+          "InstanceName": "Sobel_U0",
+          "Instances": [{
+              "ModuleName": "Filter2D",
+              "InstanceName": "grp_Filter2D_fu_52"
+            }]
+        },
+        {
+          "ModuleName": "Sobel_1",
+          "InstanceName": "Sobel_1_U0",
+          "Instances": [{
+              "ModuleName": "Filter2D",
+              "InstanceName": "grp_Filter2D_fu_52"
+            }]
+        },
+        {
+          "ModuleName": "GaussianBlur",
+          "InstanceName": "GaussianBlur_U0",
+          "Instances": [{
+              "ModuleName": "Filter2D_1",
+              "InstanceName": "grp_Filter2D_1_fu_40"
+            }]
+        },
+        {
+          "ModuleName": "AXIvideo2Mat",
+          "InstanceName": "AXIvideo2Mat_U0"
+        },
+        {
+          "ModuleName": "CvtColor_1",
+          "InstanceName": "CvtColor_1_U0"
+        },
+        {
+          "ModuleName": "Mat2AXIvideo",
+          "InstanceName": "Mat2AXIvideo_U0"
+        },
+        {
+          "ModuleName": "CvtColor",
+          "InstanceName": "CvtColor_U0"
+        },
+        {
+          "ModuleName": "Duplicate",
+          "InstanceName": "Duplicate_U0"
+        },
+        {
+          "ModuleName": "Block_proc",
+          "InstanceName": "Block_proc_U0"
+        }
+      ]
     },
     "Metrics": {
-      "p_C_Xilinx_Vivado_2_1": {
+      "Block_proc": {
         "Latency": {
           "LatencyBest": "0",
           "LatencyAvg": "0",
@@ -552,34 +530,13 @@
           "Estimate": "3.908"
         },
         "Area": {
-          "FF": "3",
+          "FF": "2",
           "LUT": "29",
           "BRAM_18K": "0",
           "DSP48E": "0"
         }
       },
-      "p_C_Xilinx_Vivado_2": {
-        "Latency": {
-          "LatencyBest": "0",
-          "LatencyAvg": "0",
-          "LatencyWorst": "0",
-          "PipelineII": "0",
-          "PipelineDepth": "",
-          "PipelineType": "none"
-        },
-        "Timing": {
-          "Target": "10.00",
-          "Uncertainty": "1.25",
-          "Estimate": "3.908"
-        },
-        "Area": {
-          "FF": "3",
-          "LUT": "29",
-          "BRAM_18K": "0",
-          "DSP48E": "0"
-        }
-      },
-      "AXIvideo2Mat559": {
+      "AXIvideo2Mat": {
         "Latency": {
           "LatencyBest": "3",
           "LatencyAvg": "",
@@ -640,108 +597,14 @@
           "DSP48E": "0"
         }
       },
-      "Mat2AXIvideo598": {
+      "CvtColor_1": {
         "Latency": {
           "LatencyBest": "1",
           "LatencyAvg": "",
-          "LatencyWorst": "924481",
-          "PipelineIIMin": "1",
-          "PipelineIIMax": "924481",
-          "PipelineII": "1 ~ 924481",
-          "PipelineDepth": "",
-          "PipelineType": "none"
-        },
-        "Timing": {
-          "Target": "10.00",
-          "Uncertainty": "1.25",
-          "Estimate": "6.610"
-        },
-        "Loops": [{
-            "Name": "loop_height",
-            "TripCount": "",
-            "LatencyMin": "0",
-            "LatencyMax": "924480",
-            "Latency": "0 ~ 924480",
-            "PipelineII": "",
-            "PipelineDepthMin": "3",
-            "PipelineDepthMax": "1284",
-            "PipelineDepth": "3 ~ 1284",
-            "Loops": [{
-                "Name": "loop_width",
-                "TripCount": "",
-                "LatencyMin": "0",
-                "LatencyMax": "1281",
-                "Latency": "0 ~ 1281",
-                "PipelineII": "1",
-                "PipelineDepth": "3"
-              }]
-          }],
-        "Area": {
-          "FF": "281",
-          "LUT": "487",
-          "BRAM_18K": "0",
-          "DSP48E": "0"
-        }
-      },
-      "AXIvideo2Mat": {
-        "Latency": {
-          "LatencyBest": "926643",
-          "LatencyAvg": "926643",
-          "LatencyWorst": "926643",
-          "PipelineII": "926643",
-          "PipelineDepth": "",
-          "PipelineType": "none"
-        },
-        "Timing": {
-          "Target": "10.00",
-          "Uncertainty": "1.25",
-          "Estimate": "5.572"
-        },
-        "Loops": [
-          {
-            "Name": "loop_wait_for_start",
-            "TripCount": "0",
-            "Latency": "0",
-            "PipelineII": "1",
-            "PipelineDepth": "1"
-          },
-          {
-            "Name": "loop_height",
-            "TripCount": "720",
-            "Latency": "926640",
-            "PipelineII": "",
-            "PipelineDepth": "1287",
-            "Loops": [
-              {
-                "Name": "loop_width",
-                "TripCount": "1280",
-                "Latency": "1281",
-                "PipelineII": "1",
-                "PipelineDepth": "2"
-              },
-              {
-                "Name": "loop_wait_for_eol",
-                "TripCount": "0",
-                "Latency": "1",
-                "PipelineII": "1",
-                "PipelineDepth": "2"
-              }
-            ]
-          }
-        ],
-        "Area": {
-          "FF": "216",
-          "LUT": "458",
-          "BRAM_18K": "0",
-          "DSP48E": "0"
-        }
-      },
-      "CvtColor_1": {
-        "Latency": {
-          "LatencyBest": "925921",
-          "LatencyAvg": "925921",
           "LatencyWorst": "925921",
-          "PipelineII": "925921",
+          "PipelineIIMin": "1",
+          "PipelineIIMax": "925921",
+          "PipelineII": "1 ~ 925921",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
@@ -752,14 +615,20 @@
         },
         "Loops": [{
             "Name": "loop_height",
-            "TripCount": "720",
-            "Latency": "925920",
+            "TripCount": "",
+            "LatencyMin": "0",
+            "LatencyMax": "925920",
+            "Latency": "0 ~ 925920",
             "PipelineII": "",
-            "PipelineDepth": "1286",
+            "PipelineDepthMin": "3",
+            "PipelineDepthMax": "1286",
+            "PipelineDepth": "3 ~ 1286",
             "Loops": [{
                 "Name": "loop_width",
-                "TripCount": "1280",
-                "Latency": "1283",
+                "TripCount": "",
+                "LatencyMin": "0",
+                "LatencyMax": "1283",
+                "Latency": "0 ~ 1283",
                 "PipelineII": "1",
                 "PipelineDepth": "5"
               }]
@@ -767,8 +636,8 @@
         "Area": {
           "BRAM_18K": "0",
           "DSP48E": "3",
-          "FF": "215",
-          "LUT": "249"
+          "FF": "238",
+          "LUT": "267"
         }
       },
       "Filter2D_1": {
@@ -970,8 +839,8 @@
         "Area": {
           "BRAM_18K": "0",
           "DSP48E": "28",
-          "FF": "3473",
-          "LUT": "4588"
+          "FF": "3474",
+          "LUT": "4597"
         }
       },
       "CvtColor": {
@@ -1044,32 +913,11 @@
           "DSP48E": "0"
         }
       },
-      "Block_proc306": {
-        "Latency": {
-          "LatencyBest": "943937",
-          "LatencyAvg": "",
-          "LatencyWorst": "943937",
-          "PipelineII": "943922",
-          "PipelineDepth": "",
-          "PipelineType": "dataflow"
-        },
-        "Timing": {
-          "Target": "10.00",
-          "Uncertainty": "1.25",
-          "Estimate": "11.000"
-        },
-        "Area": {
-          "BRAM_18K": "9",
-          "DSP48E": "39",
-          "FF": "6332",
-          "LUT": "10952"
-        }
-      },
       "Sobel_filter": {
         "Latency": {
-          "LatencyBest": "943937",
+          "LatencyBest": "943938",
           "LatencyAvg": "",
-          "LatencyWorst": "943937",
+          "LatencyWorst": "943938",
           "PipelineII": "943922",
           "PipelineDepth": "",
           "PipelineType": "dataflow"
@@ -1082,8 +930,8 @@
         "Area": {
           "BRAM_18K": "9",
           "DSP48E": "39",
-          "FF": "6332",
-          "LUT": "10952"
+          "FF": "5834",
+          "LUT": "9883"
         }
       }
     }
@@ -1095,7 +943,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2019-02-04 18:37:57 +0200",
+    "Time": "2019-02-04 20:25:09 +0200",
     "ToolName": "vivado_hls",
     "ToolVersion": "2018.2"
   }

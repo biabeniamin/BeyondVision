@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'AddWeighted'
 ================================================================
-* Date:           Mon Feb  4 18:37:42 2019
+* Date:           Mon Feb  4 20:24:57 2019
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        SobelVideoWorking
@@ -151,9 +151,9 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 1.66>
-ST_1 : Operation 34 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %dst_data_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str504, i32 0, i32 0, [1 x i8]* @p_str505, [1 x i8]* @p_str506, [1 x i8]* @p_str507, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str508, [1 x i8]* @p_str509)"   --->   Operation 34 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 35 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %src1_data_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str497, i32 0, i32 0, [1 x i8]* @p_str498, [1 x i8]* @p_str499, [1 x i8]* @p_str500, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str501, [1 x i8]* @p_str502)"   --->   Operation 35 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 36 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %src2_data_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str490, i32 0, i32 0, [1 x i8]* @p_str491, [1 x i8]* @p_str492, [1 x i8]* @p_str493, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str494, [1 x i8]* @p_str495)"   --->   Operation 36 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %dst_data_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str360, i32 0, i32 0, [1 x i8]* @p_str361, [1 x i8]* @p_str362, [1 x i8]* @p_str363, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str364, [1 x i8]* @p_str365)"   --->   Operation 34 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %src1_data_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str353, i32 0, i32 0, [1 x i8]* @p_str354, [1 x i8]* @p_str355, [1 x i8]* @p_str356, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str357, [1 x i8]* @p_str358)"   --->   Operation 35 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %src2_data_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str346, i32 0, i32 0, [1 x i8]* @p_str347, [1 x i8]* @p_str348, [1 x i8]* @p_str349, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str350, [1 x i8]* @p_str351)"   --->   Operation 36 'specinterface' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 37 [1/1] (1.66ns)   --->   "br label %0" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:354->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 37 'br' <Predicate = true> <Delay = 1.66>
 
 State 2 <SV = 1> <Delay = 2.67>
@@ -162,52 +162,52 @@ ST_2 : Operation 39 [1/1] (1.70ns)   --->   "%exitcond4_i = icmp eq i10 %t_V, -3
 ST_2 : Operation 40 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 720, i64 720, i64 720)"   --->   Operation 40 'speclooptripcount' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 41 [1/1] (2.12ns)   --->   "%i_V = add i10 %t_V, 1" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:354->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 41 'add' 'i_V' <Predicate = true> <Delay = 2.12> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 42 [1/1] (0.00ns)   --->   "br i1 %exitcond4_i, label %"arithm_pro<kernel_addWeighted, 720, 1280, 0, 0, 0, double, double, double>.exit", label %1" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:354->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 42 'br' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 43 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str9) nounwind" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:354->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 43 'specloopname' <Predicate = (!exitcond4_i)> <Delay = 0.00>
-ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%tmp_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str9)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:354->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 44 'specregionbegin' 'tmp_i' <Predicate = (!exitcond4_i)> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str8) nounwind" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:354->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 43 'specloopname' <Predicate = (!exitcond4_i)> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%tmp_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str8)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:354->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 44 'specregionbegin' 'tmp_i' <Predicate = (!exitcond4_i)> <Delay = 0.00>
 ST_2 : Operation 45 [1/1] (1.66ns)   --->   "br label %2" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:355->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 45 'br' <Predicate = (!exitcond4_i)> <Delay = 1.66>
 ST_2 : Operation 46 [1/1] (0.00ns)   --->   "ret void" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:854]   --->   Operation 46 'ret' <Predicate = (exitcond4_i)> <Delay = 0.00>
 
 State 3 <SV = 2> <Delay = 2.12>
-ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%t_V_5 = phi i11 [ 0, %1 ], [ %j_V, %.critedge.i ]"   --->   Operation 47 'phi' 't_V_5' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 48 [1/1] (1.81ns)   --->   "%exitcond_i = icmp eq i11 %t_V_5, -768" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:355->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 48 'icmp' 'exitcond_i' <Predicate = true> <Delay = 1.81> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%t_V_4 = phi i11 [ 0, %1 ], [ %j_V, %.critedge.i ]"   --->   Operation 47 'phi' 't_V_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 48 [1/1] (1.81ns)   --->   "%exitcond_i = icmp eq i11 %t_V_4, -768" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:355->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 48 'icmp' 'exitcond_i' <Predicate = true> <Delay = 1.81> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_3 : Operation 49 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 1280, i64 1280, i64 1280)"   --->   Operation 49 'speclooptripcount' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 50 [1/1] (2.12ns)   --->   "%j_V = add i11 %t_V_5, 1" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:355->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 50 'add' 'j_V' <Predicate = true> <Delay = 2.12> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 50 [1/1] (2.12ns)   --->   "%j_V = add i11 %t_V_4, 1" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:355->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 50 'add' 'j_V' <Predicate = true> <Delay = 2.12> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_3 : Operation 51 [1/1] (0.00ns)   --->   "br i1 %exitcond_i, label %3, label %.critedge.i" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:355->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 51 'br' <Predicate = true> <Delay = 0.00>
 
 State 4 <SV = 3> <Delay = 3.90>
-ST_4 : Operation 52 [1/1] (0.00ns)   --->   "%tmp_6_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str13)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:617->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:656->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:358->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 52 'specregionbegin' 'tmp_6_i' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_4 : Operation 52 [1/1] (0.00ns)   --->   "%tmp_6_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str19)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:617->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:656->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:358->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 52 'specregionbegin' 'tmp_6_i' <Predicate = (!exitcond_i)> <Delay = 0.00>
 ST_4 : Operation 53 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecProtocol(i32 0, [1 x i8]* @p_str3) nounwind" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:621->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:656->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:358->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 53 'specprotocol' <Predicate = (!exitcond_i)> <Delay = 0.00>
-ST_4 : Operation 54 [1/1] (3.90ns)   --->   "%tmp_107 = call i8 @_ssdm_op_Read.ap_fifo.volatile.i8P(i8* %src1_data_stream_V)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:624->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:656->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:358->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 54 'read' 'tmp_107' <Predicate = (!exitcond_i)> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
-ST_4 : Operation 55 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str13, i32 %tmp_6_i)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:626->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:656->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:358->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 55 'specregionend' 'empty' <Predicate = (!exitcond_i)> <Delay = 0.00>
-ST_4 : Operation 56 [1/1] (0.00ns)   --->   "%tmp_7_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str13)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:617->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:656->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:359->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 56 'specregionbegin' 'tmp_7_i' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_4 : Operation 54 [1/1] (3.90ns)   --->   "%tmp_102 = call i8 @_ssdm_op_Read.ap_fifo.volatile.i8P(i8* %src1_data_stream_V)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:624->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:656->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:358->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 54 'read' 'tmp_102' <Predicate = (!exitcond_i)> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+ST_4 : Operation 55 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str19, i32 %tmp_6_i)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:626->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:656->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:358->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 55 'specregionend' 'empty' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_4 : Operation 56 [1/1] (0.00ns)   --->   "%tmp_7_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str19)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:617->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:656->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:359->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 56 'specregionbegin' 'tmp_7_i' <Predicate = (!exitcond_i)> <Delay = 0.00>
 ST_4 : Operation 57 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecProtocol(i32 0, [1 x i8]* @p_str3) nounwind" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:621->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:656->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:359->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 57 'specprotocol' <Predicate = (!exitcond_i)> <Delay = 0.00>
-ST_4 : Operation 58 [1/1] (3.90ns)   --->   "%tmp_108 = call i8 @_ssdm_op_Read.ap_fifo.volatile.i8P(i8* %src2_data_stream_V)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:624->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:656->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:359->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 58 'read' 'tmp_108' <Predicate = (!exitcond_i)> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
-ST_4 : Operation 59 [1/1] (0.00ns)   --->   "%empty_109 = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str13, i32 %tmp_7_i)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:626->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:656->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:359->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 59 'specregionend' 'empty_109' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_4 : Operation 58 [1/1] (3.90ns)   --->   "%tmp_103 = call i8 @_ssdm_op_Read.ap_fifo.volatile.i8P(i8* %src2_data_stream_V)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:624->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:656->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:359->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 58 'read' 'tmp_103' <Predicate = (!exitcond_i)> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+ST_4 : Operation 59 [1/1] (0.00ns)   --->   "%empty_104 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str19, i32 %tmp_7_i)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:626->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:656->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:359->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 59 'specregionend' 'empty_104' <Predicate = (!exitcond_i)> <Delay = 0.00>
 
 State 5 <SV = 4> <Delay = 6.02>
-ST_5 : Operation 60 [1/1] (0.00ns)   --->   "%tmp_i_110 = zext i8 %tmp_107 to i32" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:276->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 60 'zext' 'tmp_i_110' <Predicate = (!exitcond_i)> <Delay = 0.00>
-ST_5 : Operation 61 [6/6] (6.02ns)   --->   "%tmp_43_i = sitofp i32 %tmp_i_110 to double" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:276->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 61 'sitodp' 'tmp_43_i' <Predicate = (!exitcond_i)> <Delay = 6.02> <Core = "Int2Double">   --->   Core 116 'Int2Double' <Latency = 5> <II = 1> <Delay = 6.02> <FuncUnit> <Opcode : 'sitodp' 'uitodp'> <InPorts = 1> <OutPorts = 1>
-ST_5 : Operation 62 [1/1] (0.00ns)   --->   "%tmp_44_i = zext i8 %tmp_108 to i32" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:278->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 62 'zext' 'tmp_44_i' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_5 : Operation 60 [1/1] (0.00ns)   --->   "%tmp_i_105 = zext i8 %tmp_102 to i32" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:276->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 60 'zext' 'tmp_i_105' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_5 : Operation 61 [6/6] (6.02ns)   --->   "%tmp_43_i = sitofp i32 %tmp_i_105 to double" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:276->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 61 'sitodp' 'tmp_43_i' <Predicate = (!exitcond_i)> <Delay = 6.02> <Core = "Int2Double">   --->   Core 116 'Int2Double' <Latency = 5> <II = 1> <Delay = 6.02> <FuncUnit> <Opcode : 'sitodp' 'uitodp'> <InPorts = 1> <OutPorts = 1>
+ST_5 : Operation 62 [1/1] (0.00ns)   --->   "%tmp_44_i = zext i8 %tmp_103 to i32" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:278->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 62 'zext' 'tmp_44_i' <Predicate = (!exitcond_i)> <Delay = 0.00>
 ST_5 : Operation 63 [6/6] (6.02ns)   --->   "%tmp_45_i = sitofp i32 %tmp_44_i to double" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:278->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 63 'sitodp' 'tmp_45_i' <Predicate = (!exitcond_i)> <Delay = 6.02> <Core = "Int2Double">   --->   Core 116 'Int2Double' <Latency = 5> <II = 1> <Delay = 6.02> <FuncUnit> <Opcode : 'sitodp' 'uitodp'> <InPorts = 1> <OutPorts = 1>
 
 State 6 <SV = 5> <Delay = 6.02>
-ST_6 : Operation 64 [5/6] (6.02ns)   --->   "%tmp_43_i = sitofp i32 %tmp_i_110 to double" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:276->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 64 'sitodp' 'tmp_43_i' <Predicate = (!exitcond_i)> <Delay = 6.02> <Core = "Int2Double">   --->   Core 116 'Int2Double' <Latency = 5> <II = 1> <Delay = 6.02> <FuncUnit> <Opcode : 'sitodp' 'uitodp'> <InPorts = 1> <OutPorts = 1>
+ST_6 : Operation 64 [5/6] (6.02ns)   --->   "%tmp_43_i = sitofp i32 %tmp_i_105 to double" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:276->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 64 'sitodp' 'tmp_43_i' <Predicate = (!exitcond_i)> <Delay = 6.02> <Core = "Int2Double">   --->   Core 116 'Int2Double' <Latency = 5> <II = 1> <Delay = 6.02> <FuncUnit> <Opcode : 'sitodp' 'uitodp'> <InPorts = 1> <OutPorts = 1>
 ST_6 : Operation 65 [5/6] (6.02ns)   --->   "%tmp_45_i = sitofp i32 %tmp_44_i to double" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:278->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 65 'sitodp' 'tmp_45_i' <Predicate = (!exitcond_i)> <Delay = 6.02> <Core = "Int2Double">   --->   Core 116 'Int2Double' <Latency = 5> <II = 1> <Delay = 6.02> <FuncUnit> <Opcode : 'sitodp' 'uitodp'> <InPorts = 1> <OutPorts = 1>
 
 State 7 <SV = 6> <Delay = 6.02>
-ST_7 : Operation 66 [4/6] (6.02ns)   --->   "%tmp_43_i = sitofp i32 %tmp_i_110 to double" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:276->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 66 'sitodp' 'tmp_43_i' <Predicate = (!exitcond_i)> <Delay = 6.02> <Core = "Int2Double">   --->   Core 116 'Int2Double' <Latency = 5> <II = 1> <Delay = 6.02> <FuncUnit> <Opcode : 'sitodp' 'uitodp'> <InPorts = 1> <OutPorts = 1>
+ST_7 : Operation 66 [4/6] (6.02ns)   --->   "%tmp_43_i = sitofp i32 %tmp_i_105 to double" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:276->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 66 'sitodp' 'tmp_43_i' <Predicate = (!exitcond_i)> <Delay = 6.02> <Core = "Int2Double">   --->   Core 116 'Int2Double' <Latency = 5> <II = 1> <Delay = 6.02> <FuncUnit> <Opcode : 'sitodp' 'uitodp'> <InPorts = 1> <OutPorts = 1>
 ST_7 : Operation 67 [4/6] (6.02ns)   --->   "%tmp_45_i = sitofp i32 %tmp_44_i to double" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:278->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 67 'sitodp' 'tmp_45_i' <Predicate = (!exitcond_i)> <Delay = 6.02> <Core = "Int2Double">   --->   Core 116 'Int2Double' <Latency = 5> <II = 1> <Delay = 6.02> <FuncUnit> <Opcode : 'sitodp' 'uitodp'> <InPorts = 1> <OutPorts = 1>
 
 State 8 <SV = 7> <Delay = 6.02>
-ST_8 : Operation 68 [3/6] (6.02ns)   --->   "%tmp_43_i = sitofp i32 %tmp_i_110 to double" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:276->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 68 'sitodp' 'tmp_43_i' <Predicate = (!exitcond_i)> <Delay = 6.02> <Core = "Int2Double">   --->   Core 116 'Int2Double' <Latency = 5> <II = 1> <Delay = 6.02> <FuncUnit> <Opcode : 'sitodp' 'uitodp'> <InPorts = 1> <OutPorts = 1>
+ST_8 : Operation 68 [3/6] (6.02ns)   --->   "%tmp_43_i = sitofp i32 %tmp_i_105 to double" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:276->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 68 'sitodp' 'tmp_43_i' <Predicate = (!exitcond_i)> <Delay = 6.02> <Core = "Int2Double">   --->   Core 116 'Int2Double' <Latency = 5> <II = 1> <Delay = 6.02> <FuncUnit> <Opcode : 'sitodp' 'uitodp'> <InPorts = 1> <OutPorts = 1>
 ST_8 : Operation 69 [3/6] (6.02ns)   --->   "%tmp_45_i = sitofp i32 %tmp_44_i to double" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:278->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 69 'sitodp' 'tmp_45_i' <Predicate = (!exitcond_i)> <Delay = 6.02> <Core = "Int2Double">   --->   Core 116 'Int2Double' <Latency = 5> <II = 1> <Delay = 6.02> <FuncUnit> <Opcode : 'sitodp' 'uitodp'> <InPorts = 1> <OutPorts = 1>
 
 State 9 <SV = 8> <Delay = 6.02>
-ST_9 : Operation 70 [2/6] (6.02ns)   --->   "%tmp_43_i = sitofp i32 %tmp_i_110 to double" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:276->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 70 'sitodp' 'tmp_43_i' <Predicate = (!exitcond_i)> <Delay = 6.02> <Core = "Int2Double">   --->   Core 116 'Int2Double' <Latency = 5> <II = 1> <Delay = 6.02> <FuncUnit> <Opcode : 'sitodp' 'uitodp'> <InPorts = 1> <OutPorts = 1>
+ST_9 : Operation 70 [2/6] (6.02ns)   --->   "%tmp_43_i = sitofp i32 %tmp_i_105 to double" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:276->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 70 'sitodp' 'tmp_43_i' <Predicate = (!exitcond_i)> <Delay = 6.02> <Core = "Int2Double">   --->   Core 116 'Int2Double' <Latency = 5> <II = 1> <Delay = 6.02> <FuncUnit> <Opcode : 'sitodp' 'uitodp'> <InPorts = 1> <OutPorts = 1>
 ST_9 : Operation 71 [2/6] (6.02ns)   --->   "%tmp_45_i = sitofp i32 %tmp_44_i to double" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:278->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 71 'sitodp' 'tmp_45_i' <Predicate = (!exitcond_i)> <Delay = 6.02> <Core = "Int2Double">   --->   Core 116 'Int2Double' <Latency = 5> <II = 1> <Delay = 6.02> <FuncUnit> <Opcode : 'sitodp' 'uitodp'> <InPorts = 1> <OutPorts = 1>
 
 State 10 <SV = 9> <Delay = 6.02>
-ST_10 : Operation 72 [1/6] (6.02ns)   --->   "%tmp_43_i = sitofp i32 %tmp_i_110 to double" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:276->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 72 'sitodp' 'tmp_43_i' <Predicate = (!exitcond_i)> <Delay = 6.02> <Core = "Int2Double">   --->   Core 116 'Int2Double' <Latency = 5> <II = 1> <Delay = 6.02> <FuncUnit> <Opcode : 'sitodp' 'uitodp'> <InPorts = 1> <OutPorts = 1>
+ST_10 : Operation 72 [1/6] (6.02ns)   --->   "%tmp_43_i = sitofp i32 %tmp_i_105 to double" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:276->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 72 'sitodp' 'tmp_43_i' <Predicate = (!exitcond_i)> <Delay = 6.02> <Core = "Int2Double">   --->   Core 116 'Int2Double' <Latency = 5> <II = 1> <Delay = 6.02> <FuncUnit> <Opcode : 'sitodp' 'uitodp'> <InPorts = 1> <OutPorts = 1>
 ST_10 : Operation 73 [1/6] (6.02ns)   --->   "%tmp_45_i = sitofp i32 %tmp_44_i to double" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:278->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 73 'sitodp' 'tmp_45_i' <Predicate = (!exitcond_i)> <Delay = 6.02> <Core = "Int2Double">   --->   Core 116 'Int2Double' <Latency = 5> <II = 1> <Delay = 6.02> <FuncUnit> <Opcode : 'sitodp' 'uitodp'> <InPorts = 1> <OutPorts = 1>
 
 State 11 <SV = 10> <Delay = 7.79>
@@ -275,7 +275,7 @@ ST_29 : Operation 98 [1/1] (0.00ns)   --->   "%p_Val2_11 = bitcast double %sum t
 ST_29 : Operation 99 [1/1] (0.00ns)   --->   "%loc_V = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %p_Val2_11, i32 52, i32 62) nounwind" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files\utils/x_hls_utils.h:440->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files\utils/x_hls_utils.h:442->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_isnan.h:16->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/c++/isnandouble.cpp:6->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/c++/isnandouble.cpp:10->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:428->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 99 'partselect' 'loc_V' <Predicate = (!exitcond_i)> <Delay = 0.00>
 ST_29 : Operation 100 [1/1] (0.00ns)   --->   "%loc_V_1 = trunc i64 %p_Val2_11 to i52" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files\utils/x_hls_utils.h:441->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files\utils/x_hls_utils.h:442->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_isnan.h:16->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/c++/isnandouble.cpp:6->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/c++/isnandouble.cpp:10->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:428->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 100 'trunc' 'loc_V_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
 ST_29 : Operation 101 [1/1] (1.81ns)   --->   "%tmp_i_i_i_i = icmp eq i11 %loc_V, -1" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_isnan.h:17->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/c++/isnandouble.cpp:6->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/c++/isnandouble.cpp:10->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:428->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 101 'icmp' 'tmp_i_i_i_i' <Predicate = (!exitcond_i)> <Delay = 1.81> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_29 : Operation 102 [1/1] (2.77ns)   --->   "%tmp_i_i_i_i_111 = icmp ne i52 %loc_V_1, 0" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_isnan.h:17->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/c++/isnandouble.cpp:6->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/c++/isnandouble.cpp:10->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:428->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 102 'icmp' 'tmp_i_i_i_i_111' <Predicate = (!exitcond_i)> <Delay = 2.77> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 102 [1/1] (2.77ns)   --->   "%tmp_i_i_i_i_106 = icmp ne i52 %loc_V_1, 0" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_isnan.h:17->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/c++/isnandouble.cpp:6->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/c++/isnandouble.cpp:10->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:428->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 102 'icmp' 'tmp_i_i_i_i_106' <Predicate = (!exitcond_i)> <Delay = 2.77> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_29 : Operation 103 [1/1] (0.00ns)   --->   "%tmp = trunc i64 %p_Val2_11 to i63" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 103 'trunc' 'tmp' <Predicate = (!exitcond_i)> <Delay = 0.00>
 ST_29 : Operation 104 [1/1] (0.00ns)   --->   "%isneg = call i1 @_ssdm_op_BitSelect.i1.i64.i32(i64 %p_Val2_11, i32 63)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 104 'bitselect' 'isneg' <Predicate = (!exitcond_i)> <Delay = 0.00>
 ST_29 : Operation 105 [1/1] (0.00ns)   --->   "%tmp_7_i1 = zext i11 %loc_V to i12" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 105 'zext' 'tmp_7_i1' <Predicate = (!exitcond_i)> <Delay = 0.00>
@@ -288,25 +288,25 @@ ST_29 : Operation 111 [1/1] (1.92ns)   --->   "%tmp_i2 = icmp sgt i12 %F2, 0" [C
 ST_29 : Operation 112 [1/1] (2.13ns)   --->   "%tmp_2_i = sub i12 0, %F2" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 112 'sub' 'tmp_2_i' <Predicate = (!exitcond_i)> <Delay = 2.13> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_29 : Operation 113 [1/1] (0.68ns)   --->   "%F2_2 = select i1 %tmp_i2, i12 %F2, i12 %tmp_2_i" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 113 'select' 'F2_2' <Predicate = (!exitcond_i)> <Delay = 0.68> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.04> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_29 : Operation 114 [1/1] (1.81ns)   --->   "%tmp_3_i = icmp eq i11 %loc_V, -973" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 114 'icmp' 'tmp_3_i' <Predicate = (!exitcond_i)> <Delay = 1.81> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_29 : Operation 115 [1/1] (0.00ns)   --->   "%tmp_98 = call i9 @_ssdm_op_PartSelect.i9.i12.i32.i32(i12 %F2_2, i32 3, i32 11)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 115 'partselect' 'tmp_98' <Predicate = (!exitcond_i)> <Delay = 0.00>
-ST_29 : Operation 116 [1/1] (1.58ns)   --->   "%icmp = icmp eq i9 %tmp_98, 0" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 116 'icmp' 'icmp' <Predicate = (!exitcond_i)> <Delay = 1.58> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 115 [1/1] (0.00ns)   --->   "%tmp_93 = call i9 @_ssdm_op_PartSelect.i9.i12.i32.i32(i12 %F2_2, i32 3, i32 11)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 115 'partselect' 'tmp_93' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_29 : Operation 116 [1/1] (1.58ns)   --->   "%icmp = icmp eq i9 %tmp_93, 0" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 116 'icmp' 'icmp' <Predicate = (!exitcond_i)> <Delay = 1.58> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 
 State 30 <SV = 29> <Delay = 8.34>
 ST_30 : Operation 117 [1/1] (1.38ns)   --->   "%p_Val2_s = select i1 %isneg, i54 %man_V_1, i54 %p_Result_s" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 117 'select' 'p_Val2_s' <Predicate = (!exitcond_i)> <Delay = 1.38> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.04> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_30 : Operation 118 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_12)   --->   "%F2_2_cast_i = sext i12 %F2_2 to i32" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 118 'sext' 'F2_2_cast_i' <Predicate = (!exitcond_i)> <Delay = 0.00>
-ST_30 : Operation 119 [1/1] (0.00ns)   --->   "%tmp_97 = trunc i54 %p_Val2_s to i8" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 119 'trunc' 'tmp_97' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_30 : Operation 119 [1/1] (0.00ns)   --->   "%tmp_92 = trunc i54 %p_Val2_s to i8" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 119 'trunc' 'tmp_92' <Predicate = (!exitcond_i)> <Delay = 0.00>
 ST_30 : Operation 120 [1/1] (1.92ns)   --->   "%tmp_5_i3 = icmp ult i12 %F2_2, 54" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 120 'icmp' 'tmp_5_i3' <Predicate = (!exitcond_i)> <Delay = 1.92> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_30 : Operation 121 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_12)   --->   "%tmp_10_i = zext i32 %F2_2_cast_i to i54" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 121 'zext' 'tmp_10_i' <Predicate = (!exitcond_i)> <Delay = 0.00>
 ST_30 : Operation 122 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_12)   --->   "%tmp_11_i = ashr i54 %p_Val2_s, %tmp_10_i" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 122 'ashr' 'tmp_11_i' <Predicate = (!exitcond_i)> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 4.08> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
-ST_30 : Operation 123 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_12)   --->   "%tmp_99 = trunc i54 %tmp_11_i to i8" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 123 'trunc' 'tmp_99' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_30 : Operation 123 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_12)   --->   "%tmp_94 = trunc i54 %tmp_11_i to i8" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 123 'trunc' 'tmp_94' <Predicate = (!exitcond_i)> <Delay = 0.00>
 ST_30 : Operation 124 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_12)   --->   "%p_Val2_0_i_i6_i = select i1 %isneg, i8 -1, i8 0" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 124 'select' 'p_Val2_0_i_i6_i' <Predicate = (!exitcond_i)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.04> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_30 : Operation 125 [1/1] (4.28ns) (out node of the LUT)   --->   "%p_Val2_12 = select i1 %tmp_5_i3, i8 %tmp_99, i8 %p_Val2_0_i_i6_i" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 125 'select' 'p_Val2_12' <Predicate = (!exitcond_i)> <Delay = 4.28> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.04> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_30 : Operation 125 [1/1] (4.28ns) (out node of the LUT)   --->   "%p_Val2_12 = select i1 %tmp_5_i3, i8 %tmp_94, i8 %p_Val2_0_i_i6_i" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 125 'select' 'p_Val2_12' <Predicate = (!exitcond_i)> <Delay = 4.28> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.04> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_30 : Operation 126 [1/1] (1.92ns)   --->   "%tmp_14_i = icmp sgt i12 %F2, 54" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 126 'icmp' 'tmp_14_i' <Predicate = (!exitcond_i)> <Delay = 1.92> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_30 : Operation 127 [1/1] (2.13ns)   --->   "%tmp_15_i = add i12 -1, %F2" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 127 'add' 'tmp_15_i' <Predicate = (!exitcond_i)> <Delay = 2.13> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_30 : Operation 128 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_13)   --->   "%tmp_25_cast_i = zext i12 %tmp_15_i to i32" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 128 'zext' 'tmp_25_cast_i' <Predicate = (!exitcond_i)> <Delay = 0.00>
-ST_30 : Operation 129 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_13)   --->   "%tmp_100 = call i1 @_ssdm_op_BitSelect.i1.i54.i32(i54 %p_Val2_s, i32 %tmp_25_cast_i)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 129 'bitselect' 'tmp_100' <Predicate = (!exitcond_i)> <Delay = 0.00>
-ST_30 : Operation 130 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_13)   --->   "%qb = select i1 %tmp_14_i, i1 %isneg, i1 %tmp_100" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 130 'select' 'qb' <Predicate = (!exitcond_i)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.04> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_30 : Operation 131 [1/1] (0.00ns)   --->   "%tmp_101 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %p_Val2_12, i32 7)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 131 'bitselect' 'tmp_101' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_30 : Operation 129 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_13)   --->   "%tmp_95 = call i1 @_ssdm_op_BitSelect.i1.i54.i32(i54 %p_Val2_s, i32 %tmp_25_cast_i)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 129 'bitselect' 'tmp_95' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_30 : Operation 130 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_13)   --->   "%qb = select i1 %tmp_14_i, i1 %isneg, i1 %tmp_95" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 130 'select' 'qb' <Predicate = (!exitcond_i)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.04> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_30 : Operation 131 [1/1] (0.00ns)   --->   "%tmp_96 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %p_Val2_12, i32 7)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 131 'bitselect' 'tmp_96' <Predicate = (!exitcond_i)> <Delay = 0.00>
 ST_30 : Operation 132 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_13)   --->   "%tmp_16_i = zext i1 %qb to i8" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 132 'zext' 'tmp_16_i' <Predicate = (!exitcond_i)> <Delay = 0.00>
 ST_30 : Operation 133 [1/1] (2.11ns) (out node of the LUT)   --->   "%p_Val2_13 = add i8 %tmp_16_i, %p_Val2_12" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 133 'add' 'p_Val2_13' <Predicate = (!exitcond_i)> <Delay = 2.11> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_30 : Operation 134 [1/1] (0.00ns) (grouped into LUT with out node sel_tmp2_i)   --->   "%sel_tmp1_i = xor i1 %tmp_3_i, true" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 134 'xor' 'sel_tmp1_i' <Predicate = (!exitcond_i)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
@@ -316,32 +316,32 @@ ST_30 : Operation 137 [1/1] (0.00ns) (grouped into LUT with out node Range1_all_
 ST_30 : Operation 138 [1/1] (2.13ns)   --->   "%pos2 = add i12 9, %F2" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 138 'add' 'pos2' <Predicate = (!exitcond_i)> <Delay = 2.13> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_30 : Operation 139 [1/1] (0.00ns)   --->   "%pos2_cast_i = sext i12 %pos2 to i32" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 139 'sext' 'pos2_cast_i' <Predicate = (!exitcond_i)> <Delay = 0.00>
 ST_30 : Operation 140 [1/1] (1.92ns)   --->   "%tmp_18_i = icmp slt i12 %pos1, 54" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 140 'icmp' 'tmp_18_i' <Predicate = (!exitcond_i)> <Delay = 1.92> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_30 : Operation 141 [1/1] (0.00ns)   --->   "%tmp_104 = call i1 @_ssdm_op_BitSelect.i1.i12.i32(i12 %pos1, i32 11)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 141 'bitselect' 'tmp_104' <Predicate = (!exitcond_i)> <Delay = 0.00>
-ST_30 : Operation 142 [1/1] (0.97ns)   --->   "%rev = xor i1 %tmp_104, true" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 142 'xor' 'rev' <Predicate = (!exitcond_i)> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 141 [1/1] (0.00ns)   --->   "%tmp_99 = call i1 @_ssdm_op_BitSelect.i1.i12.i32(i12 %pos1, i32 11)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 141 'bitselect' 'tmp_99' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_30 : Operation 142 [1/1] (0.97ns)   --->   "%rev = xor i1 %tmp_99, true" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 142 'xor' 'rev' <Predicate = (!exitcond_i)> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_30 : Operation 143 [1/1] (0.00ns) (grouped into LUT with out node Range1_all_ones_1)   --->   "%tmp_20_i = zext i32 %pos1_cast_i to i54" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 143 'zext' 'tmp_20_i' <Predicate = (!exitcond_i)> <Delay = 0.00>
 ST_30 : Operation 144 [1/1] (0.00ns) (grouped into LUT with out node Range1_all_ones_1)   --->   "%tmp_21_i = ashr i54 %p_Val2_s, %tmp_20_i" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 144 'ashr' 'tmp_21_i' <Predicate = (!exitcond_i)> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 4.08> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
 ST_30 : Operation 145 [1/1] (0.00ns) (grouped into LUT with out node Range1_all_ones_1)   --->   "%lD = trunc i54 %tmp_21_i to i1" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 145 'trunc' 'lD' <Predicate = (!exitcond_i)> <Delay = 0.00>
 ST_30 : Operation 146 [1/1] (0.00ns) (grouped into LUT with out node Range1_all_ones_1)   --->   "%tmp6 = and i1 %lD, %rev" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 146 'and' 'tmp6' <Predicate = (!exitcond_i)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_30 : Operation 147 [1/1] (4.28ns) (out node of the LUT)   --->   "%Range1_all_ones_1 = and i1 %tmp6, %tmp_18_i" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 147 'and' 'Range1_all_ones_1' <Predicate = (!exitcond_i)> <Delay = 4.28> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_30 : Operation 148 [1/1] (0.00ns)   --->   "%tmp_106 = call i1 @_ssdm_op_BitSelect.i1.i12.i32(i12 %pos2, i32 11)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 148 'bitselect' 'tmp_106' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_30 : Operation 148 [1/1] (0.00ns)   --->   "%tmp_101 = call i1 @_ssdm_op_BitSelect.i1.i12.i32(i12 %pos2, i32 11)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 148 'bitselect' 'tmp_101' <Predicate = (!exitcond_i)> <Delay = 0.00>
 ST_30 : Operation 149 [1/1] (1.92ns)   --->   "%tmp_23_i = icmp slt i12 %pos2, 54" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 149 'icmp' 'tmp_23_i' <Predicate = (!exitcond_i)> <Delay = 1.92> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_30 : Operation 150 [1/1] (0.00ns)   --->   "%tmp_24_i = zext i32 %pos2_cast_i to i54" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 150 'zext' 'tmp_24_i' <Predicate = (!exitcond_i)> <Delay = 0.00>
 ST_30 : Operation 151 [1/1] (4.28ns)   --->   "%Range2_V_1 = lshr i54 %p_Val2_s, %tmp_24_i" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 151 'lshr' 'Range2_V_1' <Predicate = (!exitcond_i)> <Delay = 4.28> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 4.08> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
 ST_30 : Operation 152 [1/1] (1.92ns)   --->   "%tmp_27_i = icmp eq i12 %pos2, 54" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 152 'icmp' 'tmp_27_i' <Predicate = (!exitcond_i)> <Delay = 1.92> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_30 : Operation 153 [1/1] (2.78ns)   --->   "%Range1_all_zeros_1 = icmp eq i54 %p_Val2_s, 0" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 153 'icmp' 'Range1_all_zeros_1' <Predicate = (!exitcond_i)> <Delay = 2.78> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_30 : Operation 154 [1/1] (0.00ns) (grouped into LUT with out node sel_tmp34_i)   --->   "%tmp_23_i_not = xor i1 %tmp_23_i, true" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 154 'xor' 'tmp_23_i_not' <Predicate = (!exitcond_i)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_30 : Operation 155 [1/1] (0.00ns) (grouped into LUT with out node sel_tmp34_i)   --->   "%sel_tmp33_i = or i1 %tmp_104, %tmp_23_i_not" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 155 'or' 'sel_tmp33_i' <Predicate = (!exitcond_i)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 155 [1/1] (0.00ns) (grouped into LUT with out node sel_tmp34_i)   --->   "%sel_tmp33_i = or i1 %tmp_99, %tmp_23_i_not" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 155 'or' 'sel_tmp33_i' <Predicate = (!exitcond_i)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_30 : Operation 156 [1/1] (0.97ns) (out node of the LUT)   --->   "%sel_tmp34_i = and i1 %tmp_27_i, %sel_tmp33_i" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 156 'and' 'sel_tmp34_i' <Predicate = (!exitcond_i)> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 
 State 31 <SV = 30> <Delay = 8.04>
-ST_31 : Operation 157 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_14)   --->   "%tmp_96 = trunc i12 %F2_2 to i8" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 157 'trunc' 'tmp_96' <Predicate = (!exitcond_i)> <Delay = 0.00>
-ST_31 : Operation 158 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_14)   --->   "%tmp_13_i = shl i8 %tmp_97, %tmp_96" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 158 'shl' 'tmp_13_i' <Predicate = (!exitcond_i)> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 4.08> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
-ST_31 : Operation 159 [1/1] (0.00ns) (grouped into LUT with out node carry_1_i_i)   --->   "%tmp_102 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %p_Val2_13, i32 7)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 159 'bitselect' 'tmp_102' <Predicate = (!exitcond_i)> <Delay = 0.00>
-ST_31 : Operation 160 [1/1] (0.00ns) (grouped into LUT with out node carry_1_i_i)   --->   "%tmp_17_i = xor i1 %tmp_102, true" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 160 'xor' 'tmp_17_i' <Predicate = (!exitcond_i)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_31 : Operation 161 [1/1] (0.00ns) (grouped into LUT with out node sel_tmp4_i)   --->   "%sel_tmp_i = select i1 %tmp_3_i, i8 %tmp_97, i8 0" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 161 'select' 'sel_tmp_i' <Predicate = (!exitcond_i)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.04> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_31 : Operation 162 [1/1] (0.97ns)   --->   "%sel_tmp3_i = and i1 %sel_tmp2_i, %tmp_101" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 162 'and' 'sel_tmp3_i' <Predicate = (!exitcond_i)> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 157 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_14)   --->   "%tmp_91 = trunc i12 %F2_2 to i8" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 157 'trunc' 'tmp_91' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_31 : Operation 158 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_14)   --->   "%tmp_13_i = shl i8 %tmp_92, %tmp_91" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 158 'shl' 'tmp_13_i' <Predicate = (!exitcond_i)> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 4.08> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 159 [1/1] (0.00ns) (grouped into LUT with out node carry_1_i_i)   --->   "%tmp_97 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %p_Val2_13, i32 7)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 159 'bitselect' 'tmp_97' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_31 : Operation 160 [1/1] (0.00ns) (grouped into LUT with out node carry_1_i_i)   --->   "%tmp_17_i = xor i1 %tmp_97, true" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 160 'xor' 'tmp_17_i' <Predicate = (!exitcond_i)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 161 [1/1] (0.00ns) (grouped into LUT with out node sel_tmp4_i)   --->   "%sel_tmp_i = select i1 %tmp_3_i, i8 %tmp_92, i8 0" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 161 'select' 'sel_tmp_i' <Predicate = (!exitcond_i)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.04> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_31 : Operation 162 [1/1] (0.97ns)   --->   "%sel_tmp3_i = and i1 %sel_tmp2_i, %tmp_96" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 162 'and' 'sel_tmp3_i' <Predicate = (!exitcond_i)> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_31 : Operation 163 [1/1] (1.04ns) (out node of the LUT)   --->   "%sel_tmp4_i = select i1 %sel_tmp3_i, i8 %p_Val2_13, i8 %sel_tmp_i" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 163 'select' 'sel_tmp4_i' <Predicate = (!exitcond_i)> <Delay = 1.04> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.04> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_31 : Operation 164 [1/1] (0.00ns) (grouped into LUT with out node sel_tmp9_i)   --->   "%sel_tmp7_i = xor i1 %tmp_101, true" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 164 'xor' 'sel_tmp7_i' <Predicate = (!exitcond_i)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 164 [1/1] (0.00ns) (grouped into LUT with out node sel_tmp9_i)   --->   "%sel_tmp7_i = xor i1 %tmp_96, true" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 164 'xor' 'sel_tmp7_i' <Predicate = (!exitcond_i)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_31 : Operation 165 [1/1] (0.00ns) (grouped into LUT with out node sel_tmp9_i)   --->   "%sel_tmp8_i = and i1 %sel_tmp2_i, %sel_tmp7_i" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 165 'and' 'sel_tmp8_i' <Predicate = (!exitcond_i)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_31 : Operation 166 [1/1] (1.04ns) (out node of the LUT)   --->   "%sel_tmp9_i = select i1 %sel_tmp8_i, i8 %p_Val2_13, i8 %sel_tmp4_i" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 166 'select' 'sel_tmp9_i' <Predicate = (!exitcond_i)> <Delay = 1.04> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.04> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_31 : Operation 167 [1/1] (0.97ns)   --->   "%sel_tmp12_demorgan_i = or i1 %tmp_3_i, %tmp_i2" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 167 'or' 'sel_tmp12_demorgan_i' <Predicate = (!exitcond_i)> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
@@ -353,7 +353,7 @@ ST_31 : Operation 172 [1/1] (0.00ns) (grouped into LUT with out node carry_1_i_i
 ST_31 : Operation 173 [1/1] (0.00ns) (grouped into LUT with out node carry_1_i_i)   --->   "%tmp5 = and i1 %not_sel_tmp28_i, %tmp_17_i" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 173 'and' 'tmp5' <Predicate = (!exitcond_i)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_31 : Operation 174 [1/1] (0.97ns) (out node of the LUT)   --->   "%carry_1_i_i = and i1 %tmp5, %sel_tmp3_i" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 174 'and' 'carry_1_i_i' <Predicate = (!exitcond_i)> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_31 : Operation 175 [1/1] (0.00ns) (grouped into LUT with out node sel_tmp46_i)   --->   "%newsignbit = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %p_Val2_14, i32 7)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 175 'bitselect' 'newsignbit' <Predicate = (!exitcond_i)> <Delay = 0.00>
-ST_31 : Operation 176 [1/1] (0.97ns)   --->   "%rev4 = xor i1 %tmp_106, true" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 176 'xor' 'rev4' <Predicate = (!exitcond_i)> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 176 [1/1] (0.97ns)   --->   "%rev4 = xor i1 %tmp_101, true" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 176 'xor' 'rev4' <Predicate = (!exitcond_i)> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_31 : Operation 177 [1/1] (0.00ns) (grouped into LUT with out node Range1_all_ones)   --->   "%or_cond115_i_i = and i1 %tmp_23_i, %rev4" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 177 'and' 'or_cond115_i_i' <Predicate = (!exitcond_i)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_31 : Operation 178 [1/1] (0.00ns) (grouped into LUT with out node Range2_all_ones)   --->   "%r_V = lshr i54 -1, %tmp_24_i" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 178 'lshr' 'r_V' <Predicate = (!exitcond_i)> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 4.08> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
 ST_31 : Operation 179 [1/1] (4.08ns) (out node of the LUT)   --->   "%Range2_all_ones = icmp eq i54 %Range2_V_1, %r_V" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 179 'icmp' 'Range2_all_ones' <Predicate = (!exitcond_i)> <Delay = 4.08> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
@@ -380,17 +380,17 @@ ST_31 : Operation 199 [1/1] (0.00ns) (grouped into LUT with out node p_121_demor
 ST_31 : Operation 200 [1/1] (0.97ns) (out node of the LUT)   --->   "%p_121_demorgan_i_i = or i1 %tmp8, %deleted_zeros" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 200 'or' 'p_121_demorgan_i_i' <Predicate = (!exitcond_i)> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 
 State 32 <SV = 31> <Delay = 6.96>
-ST_32 : Operation 201 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str10) nounwind" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:355->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 201 'specloopname' <Predicate = (!exitcond_i)> <Delay = 0.00>
-ST_32 : Operation 202 [1/1] (0.00ns)   --->   "%tmp_5_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([11 x i8]* @p_str10)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:355->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 202 'specregionbegin' 'tmp_5_i' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_32 : Operation 201 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str9) nounwind" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:355->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 201 'specloopname' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_32 : Operation 202 [1/1] (0.00ns)   --->   "%tmp_5_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([11 x i8]* @p_str9)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:355->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 202 'specregionbegin' 'tmp_5_i' <Predicate = (!exitcond_i)> <Delay = 0.00>
 ST_32 : Operation 203 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str3) nounwind" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:357->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 203 'specpipeline' <Predicate = (!exitcond_i)> <Delay = 0.00>
-ST_32 : Operation 204 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([14 x i8]* @p_str18) nounwind" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:360->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 204 'specloopname' <Predicate = (!exitcond_i)> <Delay = 0.00>
-ST_32 : Operation 205 [1/1] (0.97ns)   --->   "%tmp_demorgan_i = and i1 %tmp_i_i_i_i, %tmp_i_i_i_i_111" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:428->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 205 'and' 'tmp_demorgan_i' <Predicate = (!exitcond_i)> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 204 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([14 x i8]* @p_str10) nounwind" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:360->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 204 'specloopname' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_32 : Operation 205 [1/1] (0.97ns)   --->   "%tmp_demorgan_i = and i1 %tmp_i_i_i_i, %tmp_i_i_i_i_106" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:428->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 205 'and' 'tmp_demorgan_i' <Predicate = (!exitcond_i)> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_32 : Operation 206 [1/1] (0.97ns)   --->   "%underflow_not_i = xor i1 %underflow, true" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 206 'xor' 'underflow_not_i' <Predicate = (!exitcond_i)> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_32 : Operation 207 [1/1] (0.00ns) (grouped into LUT with out node tmp_41)   --->   "%brmerge_i_i_not_i = and i1 %p_121_demorgan_i_i, %underflow_not_i" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 207 'and' 'brmerge_i_i_not_i' <Predicate = (!exitcond_i)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 207 [1/1] (0.00ns) (grouped into LUT with out node tmp_39)   --->   "%brmerge_i_i_not_i = and i1 %p_121_demorgan_i_i, %underflow_not_i" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 207 'and' 'brmerge_i_i_not_i' <Predicate = (!exitcond_i)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_32 : Operation 208 [1/1] (0.00ns) (grouped into LUT with out node sel_tmp56_i)   --->   "%p_121_demorgan_i_not_s = xor i1 %p_121_demorgan_i_i, true" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 208 'xor' 'p_121_demorgan_i_not_s' <Predicate = (!exitcond_i)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_32 : Operation 209 [1/1] (0.00ns) (grouped into LUT with out node sel_tmp56_i)   --->   "%brmerge_i = or i1 %underflow_not_i, %p_121_demorgan_i_not_s" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 209 'or' 'brmerge_i' <Predicate = (!exitcond_i)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_32 : Operation 210 [1/1] (0.00ns) (grouped into LUT with out node tmp_41)   --->   "%p_Val2_12_0_i_mux_i = select i1 %brmerge_i_i_not_i, i8 %p_Val2_14, i8 -1" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 210 'select' 'p_Val2_12_0_i_mux_i' <Predicate = (!exitcond_i)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.04> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_32 : Operation 211 [1/1] (0.00ns) (grouped into LUT with out node sel_tmp52_i)   --->   "%sel_tmp50_i_demorgan = and i1 %tmp_i_i_i_i, %tmp_i_i_i_i_111" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:428->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 211 'and' 'sel_tmp50_i_demorgan' <Predicate = (!exitcond_i)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 210 [1/1] (0.00ns) (grouped into LUT with out node tmp_39)   --->   "%p_Val2_12_0_i_mux_i = select i1 %brmerge_i_i_not_i, i8 %p_Val2_14, i8 -1" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 210 'select' 'p_Val2_12_0_i_mux_i' <Predicate = (!exitcond_i)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.04> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_32 : Operation 211 [1/1] (0.00ns) (grouped into LUT with out node sel_tmp52_i)   --->   "%sel_tmp50_i_demorgan = and i1 %tmp_i_i_i_i, %tmp_i_i_i_i_106" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:428->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 211 'and' 'sel_tmp50_i_demorgan' <Predicate = (!exitcond_i)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_32 : Operation 212 [1/1] (0.00ns) (grouped into LUT with out node sel_tmp52_i)   --->   "%sel_tmp50_i = xor i1 %sel_tmp50_i_demorgan, true" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:428->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 212 'xor' 'sel_tmp50_i' <Predicate = (!exitcond_i)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_32 : Operation 213 [1/1] (0.00ns) (grouped into LUT with out node sel_tmp52_i)   --->   "%sel_tmp51_i = and i1 %tmp_9_i, %sel_tmp50_i" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 213 'and' 'sel_tmp51_i' <Predicate = (!exitcond_i)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_32 : Operation 214 [1/1] (0.00ns) (grouped into LUT with out node sel_tmp52_i)   --->   "%tmp_s = or i1 %sel_tmp51_i, %tmp_demorgan_i" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 214 'or' 'tmp_s' <Predicate = (!exitcond_i)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
@@ -399,16 +399,16 @@ ST_32 : Operation 216 [1/1] (1.04ns) (out node of the LUT)   --->   "%sel_tmp52_
 ST_32 : Operation 217 [1/1] (0.00ns) (grouped into LUT with out node sel_tmp56_i)   --->   "%sel_tmp55_demorgan_i = or i1 %tmp_demorgan_i, %tmp_9_i" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:428->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 217 'or' 'sel_tmp55_demorgan_i' <Predicate = (!exitcond_i)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_32 : Operation 218 [1/1] (0.00ns) (grouped into LUT with out node sel_tmp56_i)   --->   "%sel_tmp55_i = xor i1 %sel_tmp55_demorgan_i, true" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:428->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 218 'xor' 'sel_tmp55_i' <Predicate = (!exitcond_i)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_32 : Operation 219 [1/1] (0.97ns) (out node of the LUT)   --->   "%sel_tmp56_i = and i1 %brmerge_i, %sel_tmp55_i" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 219 'and' 'sel_tmp56_i' <Predicate = (!exitcond_i)> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_32 : Operation 220 [1/1] (1.04ns) (out node of the LUT)   --->   "%tmp_41 = select i1 %sel_tmp56_i, i8 %p_Val2_12_0_i_mux_i, i8 %sel_tmp52_i" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 220 'select' 'tmp_41' <Predicate = (!exitcond_i)> <Delay = 1.04> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.04> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_32 : Operation 221 [1/1] (0.00ns)   --->   "%tmp_8_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str19)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:641->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:662->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:363->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 221 'specregionbegin' 'tmp_8_i' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_32 : Operation 220 [1/1] (1.04ns) (out node of the LUT)   --->   "%tmp_39 = select i1 %sel_tmp56_i, i8 %p_Val2_12_0_i_mux_i, i8 %sel_tmp52_i" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:429->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:282->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:361->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 220 'select' 'tmp_39' <Predicate = (!exitcond_i)> <Delay = 1.04> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.04> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_32 : Operation 221 [1/1] (0.00ns)   --->   "%tmp_8_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str23)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:641->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:662->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:363->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 221 'specregionbegin' 'tmp_8_i' <Predicate = (!exitcond_i)> <Delay = 0.00>
 ST_32 : Operation 222 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecProtocol(i32 0, [1 x i8]* @p_str3) nounwind" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:645->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:662->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:363->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 222 'specprotocol' <Predicate = (!exitcond_i)> <Delay = 0.00>
-ST_32 : Operation 223 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %dst_data_stream_V, i8 %tmp_41)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:648->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:662->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:363->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 223 'write' <Predicate = (!exitcond_i)> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
-ST_32 : Operation 224 [1/1] (0.00ns)   --->   "%empty_112 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str19, i32 %tmp_8_i)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:650->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:662->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:363->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 224 'specregionend' 'empty_112' <Predicate = (!exitcond_i)> <Delay = 0.00>
-ST_32 : Operation 225 [1/1] (0.00ns)   --->   "%empty_113 = call i32 (...)* @_ssdm_op_SpecRegionEnd([11 x i8]* @p_str10, i32 %tmp_5_i)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:364->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 225 'specregionend' 'empty_113' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_32 : Operation 223 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %dst_data_stream_V, i8 %tmp_39)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:648->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:662->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:363->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 223 'write' <Predicate = (!exitcond_i)> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+ST_32 : Operation 224 [1/1] (0.00ns)   --->   "%empty_107 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str23, i32 %tmp_8_i)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:650->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:662->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:363->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 224 'specregionend' 'empty_107' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_32 : Operation 225 [1/1] (0.00ns)   --->   "%empty_108 = call i32 (...)* @_ssdm_op_SpecRegionEnd([11 x i8]* @p_str9, i32 %tmp_5_i)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:364->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 225 'specregionend' 'empty_108' <Predicate = (!exitcond_i)> <Delay = 0.00>
 ST_32 : Operation 226 [1/1] (0.00ns)   --->   "br label %2" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:355->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 226 'br' <Predicate = (!exitcond_i)> <Delay = 0.00>
 
 State 33 <SV = 3> <Delay = 0.00>
-ST_33 : Operation 227 [1/1] (0.00ns)   --->   "%empty_114 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str9, i32 %tmp_i)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:365->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 227 'specregionend' 'empty_114' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 227 [1/1] (0.00ns)   --->   "%empty_109 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str8, i32 %tmp_i)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:365->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 227 'specregionend' 'empty_109' <Predicate = true> <Delay = 0.00>
 ST_33 : Operation 228 [1/1] (0.00ns)   --->   "br label %0" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:354->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:853]   --->   Operation 228 'br' <Predicate = true> <Delay = 0.00>
 
 
@@ -445,20 +445,20 @@ StgValue_43            (specloopname     ) [ 0000000000000000000000000000000000]
 tmp_i                  (specregionbegin  ) [ 0001111111111111111111111111111111]
 StgValue_45            (br               ) [ 0011111111111111111111111111111111]
 StgValue_46            (ret              ) [ 0000000000000000000000000000000000]
-t_V_5                  (phi              ) [ 0001000000000000000000000000000000]
+t_V_4                  (phi              ) [ 0001000000000000000000000000000000]
 exitcond_i             (icmp             ) [ 0011111111111111111111111111111111]
 StgValue_49            (speclooptripcount) [ 0000000000000000000000000000000000]
 j_V                    (add              ) [ 0011111111111111111111111111111111]
 StgValue_51            (br               ) [ 0000000000000000000000000000000000]
 tmp_6_i                (specregionbegin  ) [ 0000000000000000000000000000000000]
 StgValue_53            (specprotocol     ) [ 0000000000000000000000000000000000]
-tmp_107                (read             ) [ 0001010000000000000000000000000000]
+tmp_102                (read             ) [ 0001010000000000000000000000000000]
 empty                  (specregionend    ) [ 0000000000000000000000000000000000]
 tmp_7_i                (specregionbegin  ) [ 0000000000000000000000000000000000]
 StgValue_57            (specprotocol     ) [ 0000000000000000000000000000000000]
-tmp_108                (read             ) [ 0001010000000000000000000000000000]
-empty_109              (specregionend    ) [ 0000000000000000000000000000000000]
-tmp_i_110              (zext             ) [ 0001001111100000000000000000000000]
+tmp_103                (read             ) [ 0001010000000000000000000000000000]
+empty_104              (specregionend    ) [ 0000000000000000000000000000000000]
+tmp_i_105              (zext             ) [ 0001001111100000000000000000000000]
 tmp_44_i               (zext             ) [ 0001001111100000000000000000000000]
 tmp_43_i               (sitodp           ) [ 0001000000011111100000000000000000]
 tmp_45_i               (sitodp           ) [ 0001000000011111100000000000000000]
@@ -470,7 +470,7 @@ p_Val2_11              (bitcast          ) [ 0000000000000000000000000000000000]
 loc_V                  (partselect       ) [ 0000000000000000000000000000000000]
 loc_V_1                (trunc            ) [ 0000000000000000000000000000000000]
 tmp_i_i_i_i            (icmp             ) [ 0001000000000000000000000000001110]
-tmp_i_i_i_i_111        (icmp             ) [ 0001000000000000000000000000001110]
+tmp_i_i_i_i_106        (icmp             ) [ 0001000000000000000000000000001110]
 tmp                    (trunc            ) [ 0000000000000000000000000000000000]
 isneg                  (bitselect        ) [ 0001000000000000000000000000001100]
 tmp_7_i1               (zext             ) [ 0000000000000000000000000000000000]
@@ -483,23 +483,23 @@ tmp_i2                 (icmp             ) [ 0001000000000000000000000000001100]
 tmp_2_i                (sub              ) [ 0000000000000000000000000000000000]
 F2_2                   (select           ) [ 0001000000000000000000000000001100]
 tmp_3_i                (icmp             ) [ 0001000000000000000000000000001100]
-tmp_98                 (partselect       ) [ 0000000000000000000000000000000000]
+tmp_93                 (partselect       ) [ 0000000000000000000000000000000000]
 icmp                   (icmp             ) [ 0001000000000000000000000000001100]
 p_Val2_s               (select           ) [ 0000000000000000000000000000000000]
 F2_2_cast_i            (sext             ) [ 0000000000000000000000000000000000]
-tmp_97                 (trunc            ) [ 0001000000000000000000000000000100]
+tmp_92                 (trunc            ) [ 0001000000000000000000000000000100]
 tmp_5_i3               (icmp             ) [ 0000000000000000000000000000000000]
 tmp_10_i               (zext             ) [ 0000000000000000000000000000000000]
 tmp_11_i               (ashr             ) [ 0000000000000000000000000000000000]
-tmp_99                 (trunc            ) [ 0000000000000000000000000000000000]
+tmp_94                 (trunc            ) [ 0000000000000000000000000000000000]
 p_Val2_0_i_i6_i        (select           ) [ 0000000000000000000000000000000000]
 p_Val2_12              (select           ) [ 0000000000000000000000000000000000]
 tmp_14_i               (icmp             ) [ 0000000000000000000000000000000000]
 tmp_15_i               (add              ) [ 0000000000000000000000000000000000]
 tmp_25_cast_i          (zext             ) [ 0000000000000000000000000000000000]
-tmp_100                (bitselect        ) [ 0000000000000000000000000000000000]
+tmp_95                 (bitselect        ) [ 0000000000000000000000000000000000]
 qb                     (select           ) [ 0000000000000000000000000000000000]
-tmp_101                (bitselect        ) [ 0001000000000000000000000000000100]
+tmp_96                 (bitselect        ) [ 0001000000000000000000000000000100]
 tmp_16_i               (zext             ) [ 0000000000000000000000000000000000]
 p_Val2_13              (add              ) [ 0001000000000000000000000000000100]
 sel_tmp1_i             (xor              ) [ 0000000000000000000000000000000000]
@@ -509,14 +509,14 @@ pos1_cast_i            (sext             ) [ 0000000000000000000000000000000000]
 pos2                   (add              ) [ 0000000000000000000000000000000000]
 pos2_cast_i            (sext             ) [ 0000000000000000000000000000000000]
 tmp_18_i               (icmp             ) [ 0001000000000000000000000000000100]
-tmp_104                (bitselect        ) [ 0000000000000000000000000000000000]
+tmp_99                 (bitselect        ) [ 0000000000000000000000000000000000]
 rev                    (xor              ) [ 0001000000000000000000000000000100]
 tmp_20_i               (zext             ) [ 0000000000000000000000000000000000]
 tmp_21_i               (ashr             ) [ 0000000000000000000000000000000000]
 lD                     (trunc            ) [ 0000000000000000000000000000000000]
 tmp6                   (and              ) [ 0000000000000000000000000000000000]
 Range1_all_ones_1      (and              ) [ 0001000000000000000000000000000100]
-tmp_106                (bitselect        ) [ 0001000000000000000000000000000100]
+tmp_101                (bitselect        ) [ 0001000000000000000000000000000100]
 tmp_23_i               (icmp             ) [ 0001000000000000000000000000000100]
 tmp_24_i               (zext             ) [ 0001000000000000000000000000000100]
 Range2_V_1             (lshr             ) [ 0001000000000000000000000000000100]
@@ -525,9 +525,9 @@ Range1_all_zeros_1     (icmp             ) [ 0001000000000000000000000000000100]
 tmp_23_i_not           (xor              ) [ 0000000000000000000000000000000000]
 sel_tmp33_i            (or               ) [ 0000000000000000000000000000000000]
 sel_tmp34_i            (and              ) [ 0001000000000000000000000000000100]
-tmp_96                 (trunc            ) [ 0000000000000000000000000000000000]
+tmp_91                 (trunc            ) [ 0000000000000000000000000000000000]
 tmp_13_i               (shl              ) [ 0000000000000000000000000000000000]
-tmp_102                (bitselect        ) [ 0000000000000000000000000000000000]
+tmp_97                 (bitselect        ) [ 0000000000000000000000000000000000]
 tmp_17_i               (xor              ) [ 0000000000000000000000000000000000]
 sel_tmp_i              (select           ) [ 0000000000000000000000000000000000]
 sel_tmp3_i             (and              ) [ 0000000000000000000000000000000000]
@@ -588,14 +588,14 @@ sel_tmp52_i            (select           ) [ 0000000000000000000000000000000000]
 sel_tmp55_demorgan_i   (or               ) [ 0000000000000000000000000000000000]
 sel_tmp55_i            (xor              ) [ 0000000000000000000000000000000000]
 sel_tmp56_i            (and              ) [ 0000000000000000000000000000000000]
-tmp_41                 (select           ) [ 0000000000000000000000000000000000]
+tmp_39                 (select           ) [ 0000000000000000000000000000000000]
 tmp_8_i                (specregionbegin  ) [ 0000000000000000000000000000000000]
 StgValue_222           (specprotocol     ) [ 0000000000000000000000000000000000]
 StgValue_223           (write            ) [ 0000000000000000000000000000000000]
-empty_112              (specregionend    ) [ 0000000000000000000000000000000000]
-empty_113              (specregionend    ) [ 0000000000000000000000000000000000]
+empty_107              (specregionend    ) [ 0000000000000000000000000000000000]
+empty_108              (specregionend    ) [ 0000000000000000000000000000000000]
 StgValue_226           (br               ) [ 0011111111111111111111111111111111]
-empty_114              (specregionend    ) [ 0000000000000000000000000000000000]
+empty_109              (specregionend    ) [ 0000000000000000000000000000000000]
 StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 </LifeTime>
 
@@ -661,7 +661,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 <pin id="13" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str504"/></StgValue>
+<StgValue><ssdm name="p_str360"/></StgValue>
 </bind>
 </comp>
 
@@ -670,7 +670,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 <pin id="15" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str505"/></StgValue>
+<StgValue><ssdm name="p_str361"/></StgValue>
 </bind>
 </comp>
 
@@ -679,7 +679,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 <pin id="17" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str506"/></StgValue>
+<StgValue><ssdm name="p_str362"/></StgValue>
 </bind>
 </comp>
 
@@ -688,7 +688,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 <pin id="19" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str507"/></StgValue>
+<StgValue><ssdm name="p_str363"/></StgValue>
 </bind>
 </comp>
 
@@ -715,7 +715,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 <pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str508"/></StgValue>
+<StgValue><ssdm name="p_str364"/></StgValue>
 </bind>
 </comp>
 
@@ -724,7 +724,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 <pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str509"/></StgValue>
+<StgValue><ssdm name="p_str365"/></StgValue>
 </bind>
 </comp>
 
@@ -733,7 +733,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 <pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str497"/></StgValue>
+<StgValue><ssdm name="p_str353"/></StgValue>
 </bind>
 </comp>
 
@@ -742,7 +742,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 <pin id="31" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str498"/></StgValue>
+<StgValue><ssdm name="p_str354"/></StgValue>
 </bind>
 </comp>
 
@@ -751,7 +751,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 <pin id="33" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str499"/></StgValue>
+<StgValue><ssdm name="p_str355"/></StgValue>
 </bind>
 </comp>
 
@@ -760,7 +760,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 <pin id="35" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str500"/></StgValue>
+<StgValue><ssdm name="p_str356"/></StgValue>
 </bind>
 </comp>
 
@@ -769,7 +769,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 <pin id="37" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str501"/></StgValue>
+<StgValue><ssdm name="p_str357"/></StgValue>
 </bind>
 </comp>
 
@@ -778,7 +778,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 <pin id="39" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str502"/></StgValue>
+<StgValue><ssdm name="p_str358"/></StgValue>
 </bind>
 </comp>
 
@@ -787,7 +787,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 <pin id="41" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str490"/></StgValue>
+<StgValue><ssdm name="p_str346"/></StgValue>
 </bind>
 </comp>
 
@@ -796,7 +796,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 <pin id="43" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str491"/></StgValue>
+<StgValue><ssdm name="p_str347"/></StgValue>
 </bind>
 </comp>
 
@@ -805,7 +805,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 <pin id="45" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str492"/></StgValue>
+<StgValue><ssdm name="p_str348"/></StgValue>
 </bind>
 </comp>
 
@@ -814,7 +814,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 <pin id="47" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str493"/></StgValue>
+<StgValue><ssdm name="p_str349"/></StgValue>
 </bind>
 </comp>
 
@@ -823,7 +823,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 <pin id="49" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str494"/></StgValue>
+<StgValue><ssdm name="p_str350"/></StgValue>
 </bind>
 </comp>
 
@@ -832,7 +832,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 <pin id="51" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str495"/></StgValue>
+<StgValue><ssdm name="p_str351"/></StgValue>
 </bind>
 </comp>
 
@@ -895,7 +895,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 <pin id="65" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str9"/></StgValue>
+<StgValue><ssdm name="p_str8"/></StgValue>
 </bind>
 </comp>
 
@@ -949,7 +949,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 <pin id="77" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str13"/></StgValue>
+<StgValue><ssdm name="p_str19"/></StgValue>
 </bind>
 </comp>
 
@@ -1273,7 +1273,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 <pin id="149" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str10"/></StgValue>
+<StgValue><ssdm name="p_str9"/></StgValue>
 </bind>
 </comp>
 
@@ -1300,7 +1300,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 <pin id="155" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str18"/></StgValue>
+<StgValue><ssdm name="p_str10"/></StgValue>
 </bind>
 </comp>
 
@@ -1309,7 +1309,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 <pin id="157" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str19"/></StgValue>
+<StgValue><ssdm name="p_str23"/></StgValue>
 </bind>
 </comp>
 
@@ -1322,7 +1322,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 </bind>
 </comp>
 
-<comp id="160" class="1004" name="tmp_107_read_fu_160">
+<comp id="160" class="1004" name="tmp_102_read_fu_160">
 <pin_list>
 <pin id="161" dir="0" index="0" bw="8" slack="0"/>
 <pin id="162" dir="0" index="1" bw="8" slack="0"/>
@@ -1330,11 +1330,11 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 </pin_list>
 <bind>
 <opcode="read(1150) " fcode="read"/>
-<opset="tmp_107/4 "/>
+<opset="tmp_102/4 "/>
 </bind>
 </comp>
 
-<comp id="166" class="1004" name="tmp_108_read_fu_166">
+<comp id="166" class="1004" name="tmp_103_read_fu_166">
 <pin_list>
 <pin id="167" dir="0" index="0" bw="8" slack="0"/>
 <pin id="168" dir="0" index="1" bw="8" slack="0"/>
@@ -1342,7 +1342,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 </pin_list>
 <bind>
 <opcode="read(1150) " fcode="read"/>
-<opset="tmp_108/4 "/>
+<opset="tmp_103/4 "/>
 </bind>
 </comp>
 
@@ -1383,17 +1383,17 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 </bind>
 </comp>
 
-<comp id="190" class="1005" name="t_V_5_reg_190">
+<comp id="190" class="1005" name="t_V_4_reg_190">
 <pin_list>
 <pin id="191" dir="0" index="0" bw="11" slack="1"/>
 <pin id="192" dir="1" index="1" bw="11" slack="1"/>
 </pin_list>
 <bind>
-<opset="t_V_5 (phireg) "/>
+<opset="t_V_4 (phireg) "/>
 </bind>
 </comp>
 
-<comp id="194" class="1004" name="t_V_5_phi_fu_194">
+<comp id="194" class="1004" name="t_V_4_phi_fu_194">
 <pin_list>
 <pin id="195" dir="0" index="0" bw="1" slack="1"/>
 <pin id="196" dir="0" index="1" bw="0" slack="2147483647"/>
@@ -1403,7 +1403,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 </pin_list>
 <bind>
 <opcode="phi(47) " fcode="phi"/>
-<opset="t_V_5/3 "/>
+<opset="t_V_4/3 "/>
 </bind>
 </comp>
 
@@ -1525,14 +1525,14 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 </bind>
 </comp>
 
-<comp id="250" class="1004" name="tmp_i_110_fu_250">
+<comp id="250" class="1004" name="tmp_i_105_fu_250">
 <pin_list>
 <pin id="251" dir="0" index="0" bw="8" slack="1"/>
 <pin id="252" dir="1" index="1" bw="32" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="tmp_i_110/5 "/>
+<opset="tmp_i_105/5 "/>
 </bind>
 </comp>
 
@@ -1595,7 +1595,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 </bind>
 </comp>
 
-<comp id="281" class="1004" name="tmp_i_i_i_i_111_fu_281">
+<comp id="281" class="1004" name="tmp_i_i_i_i_106_fu_281">
 <pin_list>
 <pin id="282" dir="0" index="0" bw="52" slack="0"/>
 <pin id="283" dir="0" index="1" bw="1" slack="0"/>
@@ -1603,7 +1603,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 </pin_list>
 <bind>
 <opcode="icmp(45) " fcode="icmp"/>
-<opset="tmp_i_i_i_i_111/29 "/>
+<opset="tmp_i_i_i_i_106/29 "/>
 </bind>
 </comp>
 
@@ -1751,7 +1751,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 </bind>
 </comp>
 
-<comp id="359" class="1004" name="tmp_98_fu_359">
+<comp id="359" class="1004" name="tmp_93_fu_359">
 <pin_list>
 <pin id="360" dir="0" index="0" bw="9" slack="0"/>
 <pin id="361" dir="0" index="1" bw="12" slack="0"/>
@@ -1761,7 +1761,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_98/29 "/>
+<opset="tmp_93/29 "/>
 </bind>
 </comp>
 
@@ -1801,14 +1801,14 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 </bind>
 </comp>
 
-<comp id="383" class="1004" name="tmp_97_fu_383">
+<comp id="383" class="1004" name="tmp_92_fu_383">
 <pin_list>
 <pin id="384" dir="0" index="0" bw="54" slack="0"/>
 <pin id="385" dir="1" index="1" bw="8" slack="1"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="tmp_97/30 "/>
+<opset="tmp_92/30 "/>
 </bind>
 </comp>
 
@@ -1847,14 +1847,14 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 </bind>
 </comp>
 
-<comp id="402" class="1004" name="tmp_99_fu_402">
+<comp id="402" class="1004" name="tmp_94_fu_402">
 <pin_list>
 <pin id="403" dir="0" index="0" bw="54" slack="0"/>
 <pin id="404" dir="1" index="1" bw="8" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="tmp_99/30 "/>
+<opset="tmp_94/30 "/>
 </bind>
 </comp>
 
@@ -1919,7 +1919,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 </bind>
 </comp>
 
-<comp id="435" class="1004" name="tmp_100_fu_435">
+<comp id="435" class="1004" name="tmp_95_fu_435">
 <pin_list>
 <pin id="436" dir="0" index="0" bw="1" slack="0"/>
 <pin id="437" dir="0" index="1" bw="54" slack="0"/>
@@ -1928,7 +1928,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_100/30 "/>
+<opset="tmp_95/30 "/>
 </bind>
 </comp>
 
@@ -1945,7 +1945,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 </bind>
 </comp>
 
-<comp id="450" class="1004" name="tmp_101_fu_450">
+<comp id="450" class="1004" name="tmp_96_fu_450">
 <pin_list>
 <pin id="451" dir="0" index="0" bw="1" slack="0"/>
 <pin id="452" dir="0" index="1" bw="8" slack="0"/>
@@ -1954,7 +1954,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_101/30 "/>
+<opset="tmp_96/30 "/>
 </bind>
 </comp>
 
@@ -2063,7 +2063,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 </bind>
 </comp>
 
-<comp id="502" class="1004" name="tmp_104_fu_502">
+<comp id="502" class="1004" name="tmp_99_fu_502">
 <pin_list>
 <pin id="503" dir="0" index="0" bw="1" slack="0"/>
 <pin id="504" dir="0" index="1" bw="12" slack="0"/>
@@ -2072,7 +2072,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_104/30 "/>
+<opset="tmp_99/30 "/>
 </bind>
 </comp>
 
@@ -2146,7 +2146,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 </bind>
 </comp>
 
-<comp id="542" class="1004" name="tmp_106_fu_542">
+<comp id="542" class="1004" name="tmp_101_fu_542">
 <pin_list>
 <pin id="543" dir="0" index="0" bw="1" slack="0"/>
 <pin id="544" dir="0" index="1" bw="12" slack="0"/>
@@ -2155,7 +2155,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_106/30 "/>
+<opset="tmp_101/30 "/>
 </bind>
 </comp>
 
@@ -2254,14 +2254,14 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 </bind>
 </comp>
 
-<comp id="596" class="1004" name="tmp_96_fu_596">
+<comp id="596" class="1004" name="tmp_91_fu_596">
 <pin_list>
 <pin id="597" dir="0" index="0" bw="12" slack="2"/>
 <pin id="598" dir="1" index="1" bw="8" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="tmp_96/31 "/>
+<opset="tmp_91/31 "/>
 </bind>
 </comp>
 
@@ -2277,7 +2277,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 </bind>
 </comp>
 
-<comp id="604" class="1004" name="tmp_102_fu_604">
+<comp id="604" class="1004" name="tmp_97_fu_604">
 <pin_list>
 <pin id="605" dir="0" index="0" bw="1" slack="0"/>
 <pin id="606" dir="0" index="1" bw="8" slack="1"/>
@@ -2286,7 +2286,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_102/31 "/>
+<opset="tmp_97/31 "/>
 </bind>
 </comp>
 
@@ -2976,7 +2976,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 </bind>
 </comp>
 
-<comp id="931" class="1004" name="tmp_41_fu_931">
+<comp id="931" class="1004" name="tmp_39_fu_931">
 <pin_list>
 <pin id="932" dir="0" index="0" bw="1" slack="0"/>
 <pin id="933" dir="0" index="1" bw="8" slack="0"/>
@@ -2985,7 +2985,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
-<opset="tmp_41/32 "/>
+<opset="tmp_39/32 "/>
 </bind>
 </comp>
 
@@ -3029,33 +3029,33 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 </bind>
 </comp>
 
-<comp id="958" class="1005" name="tmp_107_reg_958">
+<comp id="958" class="1005" name="tmp_102_reg_958">
 <pin_list>
 <pin id="959" dir="0" index="0" bw="8" slack="1"/>
 <pin id="960" dir="1" index="1" bw="8" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_107 "/>
+<opset="tmp_102 "/>
 </bind>
 </comp>
 
-<comp id="963" class="1005" name="tmp_108_reg_963">
+<comp id="963" class="1005" name="tmp_103_reg_963">
 <pin_list>
 <pin id="964" dir="0" index="0" bw="8" slack="1"/>
 <pin id="965" dir="1" index="1" bw="8" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_108 "/>
+<opset="tmp_103 "/>
 </bind>
 </comp>
 
-<comp id="968" class="1005" name="tmp_i_110_reg_968">
+<comp id="968" class="1005" name="tmp_i_105_reg_968">
 <pin_list>
 <pin id="969" dir="0" index="0" bw="32" slack="1"/>
 <pin id="970" dir="1" index="1" bw="32" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_i_110 "/>
+<opset="tmp_i_105 "/>
 </bind>
 </comp>
 
@@ -3139,13 +3139,13 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 </bind>
 </comp>
 
-<comp id="1014" class="1005" name="tmp_i_i_i_i_111_reg_1014">
+<comp id="1014" class="1005" name="tmp_i_i_i_i_106_reg_1014">
 <pin_list>
 <pin id="1015" dir="0" index="0" bw="1" slack="3"/>
 <pin id="1016" dir="1" index="1" bw="1" slack="3"/>
 </pin_list>
 <bind>
-<opset="tmp_i_i_i_i_111 "/>
+<opset="tmp_i_i_i_i_106 "/>
 </bind>
 </comp>
 
@@ -3239,23 +3239,23 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 </bind>
 </comp>
 
-<comp id="1080" class="1005" name="tmp_97_reg_1080">
+<comp id="1080" class="1005" name="tmp_92_reg_1080">
 <pin_list>
 <pin id="1081" dir="0" index="0" bw="8" slack="1"/>
 <pin id="1082" dir="1" index="1" bw="8" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_97 "/>
+<opset="tmp_92 "/>
 </bind>
 </comp>
 
-<comp id="1086" class="1005" name="tmp_101_reg_1086">
+<comp id="1086" class="1005" name="tmp_96_reg_1086">
 <pin_list>
 <pin id="1087" dir="0" index="0" bw="1" slack="1"/>
 <pin id="1088" dir="1" index="1" bw="1" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_101 "/>
+<opset="tmp_96 "/>
 </bind>
 </comp>
 
@@ -3309,13 +3309,13 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 </bind>
 </comp>
 
-<comp id="1125" class="1005" name="tmp_106_reg_1125">
+<comp id="1125" class="1005" name="tmp_101_reg_1125">
 <pin_list>
 <pin id="1126" dir="0" index="0" bw="1" slack="1"/>
 <pin id="1127" dir="1" index="1" bw="1" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_106 "/>
+<opset="tmp_101 "/>
 </bind>
 </comp>
 
@@ -4081,7 +4081,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 		StgValue_51 : 2
 	State 4
 		empty : 1
-		empty_109 : 1
+		empty_104 : 1
 	State 5
 		tmp_43_i : 1
 		tmp_45_i : 1
@@ -4112,7 +4112,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 		loc_V : 1
 		loc_V_1 : 1
 		tmp_i_i_i_i : 2
-		tmp_i_i_i_i_111 : 2
+		tmp_i_i_i_i_106 : 2
 		tmp : 1
 		isneg : 1
 		tmp_7_i1 : 2
@@ -4125,31 +4125,31 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 		tmp_2_i : 4
 		F2_2 : 5
 		tmp_3_i : 2
-		tmp_98 : 6
+		tmp_93 : 6
 		icmp : 7
 	State 30
-		tmp_97 : 1
+		tmp_92 : 1
 		tmp_10_i : 1
 		tmp_11_i : 2
-		tmp_99 : 3
+		tmp_94 : 3
 		p_Val2_12 : 4
 		tmp_25_cast_i : 1
-		tmp_100 : 2
+		tmp_95 : 2
 		qb : 3
-		tmp_101 : 5
+		tmp_96 : 5
 		tmp_16_i : 4
 		p_Val2_13 : 5
 		pos1_cast_i : 1
 		pos2_cast_i : 1
 		tmp_18_i : 1
-		tmp_104 : 1
+		tmp_99 : 1
 		rev : 2
 		tmp_20_i : 2
 		tmp_21_i : 3
 		lD : 4
 		tmp6 : 5
 		Range1_all_ones_1 : 5
-		tmp_106 : 1
+		tmp_101 : 1
 		tmp_23_i : 1
 		tmp_24_i : 2
 		Range2_V_1 : 3
@@ -4175,10 +4175,10 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 		underflow : 4
 		p_121_demorgan_i_i : 5
 	State 32
-		tmp_41 : 1
+		tmp_39 : 1
 		StgValue_223 : 2
-		empty_112 : 1
-		empty_113 : 1
+		empty_107 : 1
+		empty_108 : 1
 	State 33
 
 
@@ -4205,7 +4205,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 |          |       exitcond4_i_fu_226      |    0    |    0    |    13   |
 |          |       exitcond_i_fu_238       |    0    |    0    |    13   |
 |          |       tmp_i_i_i_i_fu_275      |    0    |    0    |    13   |
-|          |     tmp_i_i_i_i_111_fu_281    |    0    |    0    |    29   |
+|          |     tmp_i_i_i_i_106_fu_281    |    0    |    0    |    29   |
 |          |         tmp_9_i_fu_321        |    0    |    0    |    29   |
 |          |         tmp_i2_fu_333         |    0    |    0    |    13   |
 |          |         tmp_3_i_fu_353        |    0    |    0    |    13   |
@@ -4240,7 +4240,7 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 |          |        underflow_fu_830       |    0    |    0    |    2    |
 |          |   p_Val2_12_0_i_mux_i_fu_874  |    0    |    0    |    8    |
 |          |       sel_tmp52_i_fu_907      |    0    |    0    |    8    |
-|          |         tmp_41_fu_931         |    0    |    0    |    8    |
+|          |         tmp_39_fu_931         |    0    |    0    |    8    |
 |----------|-------------------------------|---------|---------|---------|
 |          |           i_V_fu_232          |    0    |    0    |    17   |
 |          |           j_V_fu_244          |    0    |    0    |    18   |
@@ -4305,12 +4305,12 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 |----------|-------------------------------|---------|---------|---------|
 |    shl   |        tmp_13_i_fu_599        |    0    |    0    |    19   |
 |----------|-------------------------------|---------|---------|---------|
-|   read   |      tmp_107_read_fu_160      |    0    |    0    |    0    |
-|          |      tmp_108_read_fu_166      |    0    |    0    |    0    |
+|   read   |      tmp_102_read_fu_160      |    0    |    0    |    0    |
+|          |      tmp_103_read_fu_166      |    0    |    0    |    0    |
 |----------|-------------------------------|---------|---------|---------|
 |   write  |   StgValue_223_write_fu_172   |    0    |    0    |    0    |
 |----------|-------------------------------|---------|---------|---------|
-|          |        tmp_i_110_fu_250       |    0    |    0    |    0    |
+|          |        tmp_i_105_fu_250       |    0    |    0    |    0    |
 |          |        tmp_44_i_fu_254        |    0    |    0    |    0    |
 |          |        tmp_7_i1_fu_299        |    0    |    0    |    0    |
 |          |       p_Result_s_fu_311       |    0    |    0    |    0    |
@@ -4321,21 +4321,21 @@ StgValue_228           (br               ) [ 0111111111111111111111111111111111]
 |          |        tmp_24_i_fu_556        |    0    |    0    |    0    |
 |----------|-------------------------------|---------|---------|---------|
 |partselect|          loc_V_fu_261         |    0    |    0    |    0    |
-|          |         tmp_98_fu_359         |    0    |    0    |    0    |
+|          |         tmp_93_fu_359         |    0    |    0    |    0    |
 |----------|-------------------------------|---------|---------|---------|
 |          |         loc_V_1_fu_271        |    0    |    0    |    0    |
 |          |           tmp_fu_287          |    0    |    0    |    0    |
-|   trunc  |         tmp_97_fu_383         |    0    |    0    |    0    |
-|          |         tmp_99_fu_402         |    0    |    0    |    0    |
+|   trunc  |         tmp_92_fu_383         |    0    |    0    |    0    |
+|          |         tmp_94_fu_402         |    0    |    0    |    0    |
 |          |           lD_fu_526           |    0    |    0    |    0    |
-|          |         tmp_96_fu_596         |    0    |    0    |    0    |
+|          |         tmp_91_fu_596         |    0    |    0    |    0    |
 |----------|-------------------------------|---------|---------|---------|
 |          |          isneg_fu_291         |    0    |    0    |    0    |
-|          |         tmp_100_fu_435        |    0    |    0    |    0    |
-|          |         tmp_101_fu_450        |    0    |    0    |    0    |
-| bitselect|         tmp_104_fu_502        |    0    |    0    |    0    |
-|          |         tmp_106_fu_542        |    0    |    0    |    0    |
-|          |         tmp_102_fu_604        |    0    |    0    |    0    |
+|          |         tmp_95_fu_435         |    0    |    0    |    0    |
+|          |         tmp_96_fu_450         |    0    |    0    |    0    |
+| bitselect|         tmp_99_fu_502         |    0    |    0    |    0    |
+|          |         tmp_101_fu_542        |    0    |    0    |    0    |
+|          |         tmp_97_fu_604         |    0    |    0    |    0    |
 |          |       newsignbit_fu_697       |    0    |    0    |    0    |
 |----------|-------------------------------|---------|---------|---------|
 |bitconcatenate|         tmp_1_i_fu_303        |    0    |    0    |    0    |
@@ -4376,12 +4376,11 @@ N/A
 |        sum_reg_1003       |   64   |
 |         t1_reg_988        |   64   |
 |         t2_reg_993        |   64   |
-|       t_V_5_reg_190       |   11   |
+|       t_V_4_reg_190       |   11   |
 |        t_V_reg_179        |   10   |
-|      tmp_101_reg_1086     |    1   |
-|      tmp_106_reg_1125     |    1   |
-|      tmp_107_reg_958      |    8   |
-|      tmp_108_reg_963      |    8   |
+|      tmp_101_reg_1125     |    1   |
+|      tmp_102_reg_958      |    8   |
+|      tmp_103_reg_963      |    8   |
 |     tmp_18_i_reg_1105     |    1   |
 |     tmp_23_i_reg_1130     |    1   |
 |     tmp_24_i_reg_1136     |   54   |
@@ -4390,11 +4389,12 @@ N/A
 |      tmp_44_i_reg_973     |   32   |
 |      tmp_45_i_reg_983     |   64   |
 |      tmp_46_i_reg_998     |   64   |
-|      tmp_97_reg_1080      |    8   |
+|      tmp_92_reg_1080      |    8   |
+|      tmp_96_reg_1086      |    1   |
 |      tmp_9_i_reg_1040     |    1   |
 |      tmp_i2_reg_1054      |    1   |
-|     tmp_i_110_reg_968     |   32   |
-|  tmp_i_i_i_i_111_reg_1014 |    1   |
+|     tmp_i_105_reg_968     |   32   |
+|  tmp_i_i_i_i_106_reg_1014 |    1   |
 |    tmp_i_i_i_i_reg_1008   |    1   |
 |     underflow_reg_1164    |    1   |
 +---------------------------+--------+

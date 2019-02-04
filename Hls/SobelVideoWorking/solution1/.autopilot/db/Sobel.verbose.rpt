@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'Sobel'
 ================================================================
-* Date:           Mon Feb  4 18:37:50 2019
+* Date:           Mon Feb  4 20:25:02 2019
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        SobelVideoWorking
@@ -189,8 +189,8 @@ State 1 <SV = 0> <Delay = 0.00>
 ST_1 : Operation 3 [2/2] (0.00ns)   --->   "call fastcc void @Filter2D(i8* %p_src_data_stream_V, i8* %p_dst_data_stream_V, i2 0, i2 1, i3 -2, i4 2, i2 -1, i3 0)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:2591->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:2599]   --->   Operation 3 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 2 <SV = 1> <Delay = 0.00>
-ST_2 : Operation 4 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %p_dst_data_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str490, i32 0, i32 0, [1 x i8]* @p_str491, [1 x i8]* @p_str492, [1 x i8]* @p_str493, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str494, [1 x i8]* @p_str495)"   --->   Operation 4 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %p_src_data_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str476, i32 0, i32 0, [1 x i8]* @p_str477, [1 x i8]* @p_str478, [1 x i8]* @p_str479, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str480, [1 x i8]* @p_str481)"   --->   Operation 5 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 4 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %p_dst_data_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str346, i32 0, i32 0, [1 x i8]* @p_str347, [1 x i8]* @p_str348, [1 x i8]* @p_str349, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str350, [1 x i8]* @p_str351)"   --->   Operation 4 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %p_src_data_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str332, i32 0, i32 0, [1 x i8]* @p_str333, [1 x i8]* @p_str334, [1 x i8]* @p_str335, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str336, [1 x i8]* @p_str337)"   --->   Operation 5 'specinterface' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 6 [1/2] (0.00ns)   --->   "call fastcc void @Filter2D(i8* %p_src_data_stream_V, i8* %p_dst_data_stream_V, i2 0, i2 1, i3 -2, i4 2, i2 -1, i3 0)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:2591->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:2599]   --->   Operation 6 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_2 : Operation 7 [1/1] (0.00ns)   --->   "ret void" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:2600]   --->   Operation 7 'ret' <Predicate = true> <Delay = 0.00>
 
@@ -336,7 +336,7 @@ StgValue_7 (ret          ) [ 000]
 <pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str490"/></StgValue>
+<StgValue><ssdm name="p_str346"/></StgValue>
 </bind>
 </comp>
 
@@ -345,7 +345,7 @@ StgValue_7 (ret          ) [ 000]
 <pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str491"/></StgValue>
+<StgValue><ssdm name="p_str347"/></StgValue>
 </bind>
 </comp>
 
@@ -354,7 +354,7 @@ StgValue_7 (ret          ) [ 000]
 <pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str492"/></StgValue>
+<StgValue><ssdm name="p_str348"/></StgValue>
 </bind>
 </comp>
 
@@ -363,7 +363,7 @@ StgValue_7 (ret          ) [ 000]
 <pin id="31" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str493"/></StgValue>
+<StgValue><ssdm name="p_str349"/></StgValue>
 </bind>
 </comp>
 
@@ -390,7 +390,7 @@ StgValue_7 (ret          ) [ 000]
 <pin id="37" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str494"/></StgValue>
+<StgValue><ssdm name="p_str350"/></StgValue>
 </bind>
 </comp>
 
@@ -399,7 +399,7 @@ StgValue_7 (ret          ) [ 000]
 <pin id="39" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str495"/></StgValue>
+<StgValue><ssdm name="p_str351"/></StgValue>
 </bind>
 </comp>
 
@@ -408,7 +408,7 @@ StgValue_7 (ret          ) [ 000]
 <pin id="41" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str476"/></StgValue>
+<StgValue><ssdm name="p_str332"/></StgValue>
 </bind>
 </comp>
 
@@ -417,7 +417,7 @@ StgValue_7 (ret          ) [ 000]
 <pin id="43" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str477"/></StgValue>
+<StgValue><ssdm name="p_str333"/></StgValue>
 </bind>
 </comp>
 
@@ -426,7 +426,7 @@ StgValue_7 (ret          ) [ 000]
 <pin id="45" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str478"/></StgValue>
+<StgValue><ssdm name="p_str334"/></StgValue>
 </bind>
 </comp>
 
@@ -435,7 +435,7 @@ StgValue_7 (ret          ) [ 000]
 <pin id="47" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str479"/></StgValue>
+<StgValue><ssdm name="p_str335"/></StgValue>
 </bind>
 </comp>
 
@@ -444,7 +444,7 @@ StgValue_7 (ret          ) [ 000]
 <pin id="49" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str480"/></StgValue>
+<StgValue><ssdm name="p_str336"/></StgValue>
 </bind>
 </comp>
 
@@ -453,7 +453,7 @@ StgValue_7 (ret          ) [ 000]
 <pin id="51" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str481"/></StgValue>
+<StgValue><ssdm name="p_str337"/></StgValue>
 </bind>
 </comp>
 

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'Sobel_filter'" level="0">
-<item name = "Date">Mon Feb  4 18:37:53 2019
+<item name = "Date">Mon Feb  4 20:25:05 2019
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">SobelVideoWorking</item>
@@ -24,14 +24,23 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">943937, 943937, 943922, 943922, dataflow</column>
+<column name="">943938, 943938, 943922, 943922, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="Block_proc306_U0">Block_proc306, 943937, 943937, 943922, 943922, dataflow</column>
+<column name="AddWeighted_U0">AddWeighted, 943921, 943921, 943921, 943921, none</column>
+<column name="Sobel_U0">Sobel, 930660, 930660, 930660, 930660, none</column>
+<column name="Sobel_1_U0">Sobel_1, 930660, 930660, 930660, 930660, none</column>
+<column name="GaussianBlur_U0">GaussianBlur, 930660, 930660, 930660, 930660, none</column>
+<column name="AXIvideo2Mat_U0">AXIvideo2Mat, 3, 926643, 3, 926643, none</column>
+<column name="CvtColor_1_U0">CvtColor_1, 1, 925921, 1, 925921, none</column>
+<column name="Mat2AXIvideo_U0">Mat2AXIvideo, 924481, 924481, 924481, 924481, none</column>
+<column name="CvtColor_U0">CvtColor, 923761, 923761, 923761, 923761, none</column>
+<column name="Duplicate_U0">Duplicate, 923761, 923761, 923761, 923761, none</column>
+<column name="Block_proc_U0">Block_proc, 0, 0, 0, 0, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -48,21 +57,30 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="DSP">-, -, -, -</column>
-<column name="Expression">-, -, -, -</column>
-<column name="FIFO">-, -, -, -</column>
-<column name="Instance">9, 39, 6332, 10952</column>
+<column name="Expression">-, -, 0, 4</column>
+<column name="FIFO">0, -, 85, 320</column>
+<column name="Instance">9, 39, 5749, 9559</column>
 <column name="Memory">-, -, -, -</column>
 <column name="Multiplexer">-, -, -, -</column>
 <column name="Register">-, -, -, -</column>
 <specialColumn name="Available">730, 740, 269200, 129000</specialColumn>
-<specialColumn name="Utilization (%)">1, 5, 2, 8</specialColumn>
+<specialColumn name="Utilization (%)">1, 5, 2, 7</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
-<column name="Block_proc306_U0">Block_proc306, 9, 39, 6332, 10952</column>
+<column name="AXIvideo2Mat_U0">AXIvideo2Mat, 0, 0, 345, 547</column>
+<column name="AddWeighted_U0">AddWeighted, 0, 28, 3474, 4597</column>
+<column name="Block_proc_U0">Block_proc, 0, 0, 2, 29</column>
+<column name="CvtColor_U0">CvtColor, 0, 0, 40, 185</column>
+<column name="CvtColor_1_U0">CvtColor_1, 0, 3, 238, 267</column>
+<column name="Duplicate_U0">Duplicate, 0, 0, 40, 176</column>
+<column name="GaussianBlur_U0">GaussianBlur, 3, 4, 516, 1069</column>
+<column name="Mat2AXIvideo_U0">Mat2AXIvideo, 0, 0, 119, 368</column>
+<column name="Sobel_U0">Sobel, 3, 2, 488, 1165</column>
+<column name="Sobel_1_U0">Sobel_1, 3, 2, 487, 1156</column>
 </table>
 </item>
 <item name = "DSP48"><table name="" hasTotal="0">
@@ -75,10 +93,29 @@
 </item>
 <item name = "FIFO"><table name="" hasTotal="1">
 <keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+<column name="img_0_cols_V_c21_U">0, 5, 22, 2, 12, 24</column>
+<column name="img_0_cols_V_c_U">0, 5, 22, 2, 12, 24</column>
+<column name="img_0_data_stream_0_U">0, 5, 18, 2, 8, 16</column>
+<column name="img_0_data_stream_1_U">0, 5, 18, 2, 8, 16</column>
+<column name="img_0_data_stream_2_U">0, 5, 18, 2, 8, 16</column>
+<column name="img_0_rows_V_c20_U">0, 5, 21, 2, 11, 22</column>
+<column name="img_0_rows_V_c_U">0, 5, 21, 2, 11, 22</column>
+<column name="img_1_data_stream_0_U">0, 5, 18, 2, 8, 16</column>
+<column name="img_2_data_stream_0_U">0, 5, 18, 2, 8, 16</column>
+<column name="img_2a_data_stream_0_U">0, 5, 18, 2, 8, 16</column>
+<column name="img_2b_data_stream_0_U">0, 5, 18, 2, 8, 16</column>
+<column name="img_3_data_stream_0_U">0, 5, 18, 2, 8, 16</column>
+<column name="img_4_data_stream_0_U">0, 5, 18, 2, 8, 16</column>
+<column name="img_5_data_stream_0_U">0, 5, 18, 2, 8, 16</column>
+<column name="img_6_data_stream_0_U">0, 5, 18, 2, 8, 16</column>
+<column name="img_6_data_stream_1_U">0, 5, 18, 2, 8, 16</column>
+<column name="img_6_data_stream_2_U">0, 5, 18, 2, 8, 16</column>
 </table>
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="Duplicate_U0_start_full_n">and, 0, 0, 2, 1, 1</column>
+<column name="ap_idle">and, 0, 0, 2, 1, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -117,8 +154,8 @@
 <column name="enable_V">in, 1, ap_none, enable_V, scalar</column>
 <column name="ap_clk">in, 1, ap_ctrl_hs, Sobel_filter, return value</column>
 <column name="ap_rst_n">in, 1, ap_ctrl_hs, Sobel_filter, return value</column>
-<column name="ap_done">out, 1, ap_ctrl_hs, Sobel_filter, return value</column>
 <column name="ap_start">in, 1, ap_ctrl_hs, Sobel_filter, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, Sobel_filter, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, Sobel_filter, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, Sobel_filter, return value</column>
 </table>

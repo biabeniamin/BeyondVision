@@ -58,7 +58,7 @@ struct Duplicate : public sc_module {
     sc_signal< sc_lv<1> > exitcond_reg_173;
     sc_signal< sc_logic > dst1_data_stream_V_blk_n;
     sc_signal< sc_logic > dst2_data_stream_V_blk_n;
-    sc_signal< sc_lv<11> > t_V_4_reg_129;
+    sc_signal< sc_lv<11> > t_V_3_reg_129;
     sc_signal< sc_lv<1> > exitcond3_fu_140_p2;
     sc_signal< sc_logic > ap_CS_fsm_state2;
     sc_signal< sc_lv<10> > i_V_fu_146_p2;

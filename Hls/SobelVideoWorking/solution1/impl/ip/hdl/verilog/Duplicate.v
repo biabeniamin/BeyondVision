@@ -74,7 +74,7 @@ wire    ap_block_pp0_stage0;
 reg   [0:0] exitcond_reg_173;
 reg    dst1_data_stream_V_blk_n;
 reg    dst2_data_stream_V_blk_n;
-reg   [10:0] t_V_4_reg_129;
+reg   [10:0] t_V_3_reg_129;
 wire   [0:0] exitcond3_fu_140_p2;
 wire    ap_CS_fsm_state2;
 wire   [9:0] i_V_fu_146_p2;
@@ -164,9 +164,9 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (exitcond_fu_152_p2 == 1'd0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
-        t_V_4_reg_129 <= j_V_fu_158_p2;
+        t_V_3_reg_129 <= j_V_fu_158_p2;
     end else if (((exitcond3_fu_140_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
-        t_V_4_reg_129 <= 11'd0;
+        t_V_3_reg_129 <= 11'd0;
     end
 end
 
@@ -370,11 +370,11 @@ assign dst2_data_stream_V_din = src_data_stream_V_dout;
 
 assign exitcond3_fu_140_p2 = ((t_V_reg_118 == 10'd720) ? 1'b1 : 1'b0);
 
-assign exitcond_fu_152_p2 = ((t_V_4_reg_129 == 11'd1280) ? 1'b1 : 1'b0);
+assign exitcond_fu_152_p2 = ((t_V_3_reg_129 == 11'd1280) ? 1'b1 : 1'b0);
 
 assign i_V_fu_146_p2 = (t_V_reg_118 + 10'd1);
 
-assign j_V_fu_158_p2 = (t_V_4_reg_129 + 11'd1);
+assign j_V_fu_158_p2 = (t_V_3_reg_129 + 11'd1);
 
 assign start_out = real_start;
 

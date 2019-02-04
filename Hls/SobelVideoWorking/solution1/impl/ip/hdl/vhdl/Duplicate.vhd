@@ -72,7 +72,7 @@ architecture behav of Duplicate is
     signal exitcond_reg_173 : STD_LOGIC_VECTOR (0 downto 0);
     signal dst1_data_stream_V_blk_n : STD_LOGIC;
     signal dst2_data_stream_V_blk_n : STD_LOGIC;
-    signal t_V_4_reg_129 : STD_LOGIC_VECTOR (10 downto 0);
+    signal t_V_3_reg_129 : STD_LOGIC_VECTOR (10 downto 0);
     signal exitcond3_fu_140_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal ap_CS_fsm_state2 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
@@ -179,13 +179,13 @@ begin
     end process;
 
 
-    t_V_4_reg_129_assign_proc : process (ap_clk)
+    t_V_3_reg_129_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (exitcond_fu_152_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0) and (ap_enable_reg_pp0_iter0 = ap_const_logic_1))) then 
-                t_V_4_reg_129 <= j_V_fu_158_p2;
+                t_V_3_reg_129 <= j_V_fu_158_p2;
             elsif (((exitcond3_fu_140_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                t_V_4_reg_129 <= ap_const_lv11_0;
+                t_V_3_reg_129 <= ap_const_lv11_0;
             end if; 
         end if;
     end process;
@@ -367,7 +367,7 @@ begin
     end process;
 
     exitcond3_fu_140_p2 <= "1" when (t_V_reg_118 = ap_const_lv10_2D0) else "0";
-    exitcond_fu_152_p2 <= "1" when (t_V_4_reg_129 = ap_const_lv11_500) else "0";
+    exitcond_fu_152_p2 <= "1" when (t_V_3_reg_129 = ap_const_lv11_500) else "0";
     i_V_fu_146_p2 <= std_logic_vector(unsigned(t_V_reg_118) + unsigned(ap_const_lv10_1));
 
     internal_ap_ready_assign_proc : process(exitcond3_fu_140_p2, ap_CS_fsm_state2)
@@ -379,7 +379,7 @@ begin
         end if; 
     end process;
 
-    j_V_fu_158_p2 <= std_logic_vector(unsigned(t_V_4_reg_129) + unsigned(ap_const_lv11_1));
+    j_V_fu_158_p2 <= std_logic_vector(unsigned(t_V_3_reg_129) + unsigned(ap_const_lv11_1));
 
     real_start_assign_proc : process(ap_start, start_full_n, start_once_reg)
     begin

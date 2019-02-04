@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'Filter2D_1'" level="0">
-<item name = "Date">Mon Feb  4 18:37:48 2019
+<item name = "Date">Mon Feb  4 20:25:01 2019
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">SobelVideoWorking</item>
@@ -63,20 +63,20 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
-<column name="Sobel_filter_mux_hbi_U49">Sobel_filter_mux_hbi, 0, 0, 0, 15</column>
-<column name="Sobel_filter_mux_hbi_U50">Sobel_filter_mux_hbi, 0, 0, 0, 15</column>
-<column name="Sobel_filter_mux_hbi_U51">Sobel_filter_mux_hbi, 0, 0, 0, 15</column>
-<column name="Sobel_filter_mux_hbi_U52">Sobel_filter_mux_hbi, 0, 0, 0, 15</column>
-<column name="Sobel_filter_mux_hbi_U53">Sobel_filter_mux_hbi, 0, 0, 0, 15</column>
-<column name="Sobel_filter_mux_hbi_U54">Sobel_filter_mux_hbi, 0, 0, 0, 15</column>
+<column name="Sobel_filter_mux_hbi_U29">Sobel_filter_mux_hbi, 0, 0, 0, 15</column>
+<column name="Sobel_filter_mux_hbi_U30">Sobel_filter_mux_hbi, 0, 0, 0, 15</column>
+<column name="Sobel_filter_mux_hbi_U31">Sobel_filter_mux_hbi, 0, 0, 0, 15</column>
+<column name="Sobel_filter_mux_hbi_U32">Sobel_filter_mux_hbi, 0, 0, 0, 15</column>
+<column name="Sobel_filter_mux_hbi_U33">Sobel_filter_mux_hbi, 0, 0, 0, 15</column>
+<column name="Sobel_filter_mux_hbi_U34">Sobel_filter_mux_hbi, 0, 0, 0, 15</column>
 </table>
 </item>
 <item name = "DSP48"><table name="" hasTotal="0">
 <keys size="3">Instance, Module, Expression</keys>
-<column name="Sobel_filter_ama_jbC_U56">Sobel_filter_ama_jbC, (i0 + i1) * i2 + i3</column>
-<column name="Sobel_filter_mac_kbM_U57">Sobel_filter_mac_kbM, i0 + i1 * i2</column>
-<column name="Sobel_filter_mac_lbW_U58">Sobel_filter_mac_lbW, i0 + i1 * i2</column>
-<column name="Sobel_filter_mul_ibs_U55">Sobel_filter_mul_ibs, i0 * i1</column>
+<column name="Sobel_filter_ama_jbC_U36">Sobel_filter_ama_jbC, (i0 + i1) * i2 + i3</column>
+<column name="Sobel_filter_mac_kbM_U37">Sobel_filter_mac_kbM, i0 + i1 * i2</column>
+<column name="Sobel_filter_mac_lbW_U38">Sobel_filter_mac_lbW, i0 + i1 * i2</column>
+<column name="Sobel_filter_mul_ibs_U35">Sobel_filter_mul_ibs, i0 * i1</column>
 </table>
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
@@ -102,7 +102,7 @@
 <column name="p_assign_14_2_fu_482_p2">+, 0, 0, 18, 3, 11</column>
 <column name="tmp2_fu_1132_p2">+, 0, 0, 8, 26, 26</column>
 <column name="tmp3_fu_1088_p2">+, 0, 0, 32, 25, 25</column>
-<column name="tmp_13_fu_568_p2">+, 0, 0, 10, 1, 2</column>
+<column name="tmp_16_fu_568_p2">+, 0, 0, 10, 1, 2</column>
 <column name="tmp_5_fu_380_p2">+, 0, 0, 18, 2, 11</column>
 <column name="tmp_68_cast_fu_386_p2">+, 0, 0, 10, 2, 2</column>
 <column name="p_assign_1_fu_450_p2">-, 0, 0, 12, 3, 2</column>
@@ -113,7 +113,7 @@
 <column name="r_V_10_1_2_fu_1067_p2">-, 0, 0, 27, 20, 20</column>
 <column name="r_V_10_1_fu_1039_p2">-, 0, 0, 27, 20, 20</column>
 <column name="r_V_10_2_1_fu_1173_p2">-, 0, 0, 27, 20, 20</column>
-<column name="tmp_29_fu_536_p2">-, 0, 0, 12, 3, 2</column>
+<column name="tmp_27_fu_536_p2">-, 0, 0, 12, 3, 2</column>
 <column name="ap_block_state8_pp0_stage0_iter5">and, 0, 0, 2, 1, 1</column>
 <column name="ap_condition_343">and, 0, 0, 2, 1, 1</column>
 <column name="ap_condition_349">and, 0, 0, 2, 1, 1</column>
@@ -129,8 +129,8 @@
 <column name="exitcond389_i_fu_318_p2">icmp, 0, 0, 13, 10, 10</column>
 <column name="icmp1_fu_632_p2">icmp, 0, 0, 13, 10, 1</column>
 <column name="icmp_fu_352_p2">icmp, 0, 0, 13, 9, 1</column>
-<column name="tmp_19_fu_658_p2">icmp, 0, 0, 13, 12, 11</column>
-<column name="tmp_22_fu_696_p2">icmp, 0, 0, 13, 12, 11</column>
+<column name="tmp_22_fu_658_p2">icmp, 0, 0, 13, 12, 11</column>
+<column name="tmp_23_fu_696_p2">icmp, 0, 0, 13, 12, 11</column>
 <column name="tmp_2_fu_358_p2">icmp, 0, 0, 13, 10, 1</column>
 <column name="tmp_3_fu_370_p2">icmp, 0, 0, 13, 10, 10</column>
 <column name="tmp_562_1_fu_364_p2">icmp, 0, 0, 13, 10, 1</column>
@@ -153,10 +153,10 @@
 <column name="src_kernel_win_0_va_6_fu_897_p3">select, 0, 0, 8, 1, 8</column>
 <column name="src_kernel_win_0_va_7_fu_915_p3">select, 0, 0, 8, 1, 8</column>
 <column name="src_kernel_win_0_va_8_fu_933_p3">select, 0, 0, 8, 1, 8</column>
-<column name="tmp_16_fu_584_p3">select, 0, 0, 2, 1, 2</column>
-<column name="tmp_17_fu_592_p3">select, 0, 0, 2, 1, 2</column>
+<column name="tmp_13_fu_554_p3">select, 0, 0, 2, 1, 2</column>
+<column name="tmp_17_fu_584_p3">select, 0, 0, 2, 1, 2</column>
+<column name="tmp_18_fu_592_p3">select, 0, 0, 2, 1, 2</column>
 <column name="tmp_4_fu_546_p3">select, 0, 0, 2, 1, 2</column>
-<column name="tmp_6_fu_554_p3">select, 0, 0, 2, 1, 2</column>
 <column name="x_fu_738_p3">select, 0, 0, 13, 1, 13</column>
 <column name="y_2_fu_516_p3">select, 0, 0, 2, 1, 2</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
@@ -169,7 +169,7 @@
 <column name="row_assign_13_2_t_fu_600_p2">xor, 0, 0, 2, 2, 2</column>
 <column name="tmp_1_fu_530_p2">xor, 0, 0, 3, 2, 3</column>
 <column name="tmp_26_not_fu_720_p2">xor, 0, 0, 2, 1, 2</column>
-<column name="tmp_39_fu_574_p2">xor, 0, 0, 2, 2, 2</column>
+<column name="tmp_38_fu_574_p2">xor, 0, 0, 2, 2, 2</column>
 <column name="tmp_518_0_not_fu_336_p2">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
@@ -182,7 +182,7 @@
 <column name="k_buf_0_val_5_d1">15, 3, 8, 24</column>
 <column name="p_dst_data_stream_V_blk_n">9, 2, 1, 2</column>
 <column name="p_src_data_stream_V_blk_n">9, 2, 1, 2</column>
-<column name="t_V_3_reg_303">9, 2, 11, 22</column>
+<column name="t_V_2_reg_303">9, 2, 11, 22</column>
 <column name="t_V_reg_292">9, 2, 10, 20</column>
 </table>
 </item>
@@ -232,15 +232,15 @@
 <column name="src_kernel_win_0_va_8_reg_1509">8, 0, 8, 0</column>
 <column name="src_kernel_win_0_va_9_reg_1525">8, 0, 8, 0</column>
 <column name="src_kernel_win_0_va_fu_166">8, 0, 8, 0</column>
-<column name="t_V_3_reg_303">11, 0, 11, 0</column>
+<column name="t_V_2_reg_303">11, 0, 11, 0</column>
 <column name="t_V_reg_292">10, 0, 10, 0</column>
 <column name="tmp3_reg_1541">25, 0, 25, 0</column>
 <column name="tmp_2_reg_1415">1, 0, 1, 0</column>
-<column name="tmp_34_reg_1561">5, 0, 5, 0</column>
+<column name="tmp_35_reg_1561">5, 0, 5, 0</column>
 <column name="tmp_3_reg_1423">1, 0, 1, 0</column>
-<column name="tmp_44_reg_1463">2, 0, 2, 0</column>
-<column name="tmp_44_reg_1463_pp0_iter1_reg">2, 0, 2, 0</column>
-<column name="tmp_47_reg_1556">1, 0, 1, 0</column>
+<column name="tmp_43_reg_1463">2, 0, 2, 0</column>
+<column name="tmp_43_reg_1463_pp0_iter1_reg">2, 0, 2, 0</column>
+<column name="tmp_46_reg_1556">1, 0, 1, 0</column>
 <column name="tmp_518_0_not_reg_1405">1, 0, 1, 0</column>
 <column name="tmp_562_1_reg_1419">1, 0, 1, 0</column>
 <column name="tmp_s_reg_1401">1, 0, 1, 0</column>
