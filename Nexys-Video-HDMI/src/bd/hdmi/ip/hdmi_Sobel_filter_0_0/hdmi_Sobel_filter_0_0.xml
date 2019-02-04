@@ -532,11 +532,11 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Feb 04 16:13:25 UTC 2019</spirit:value>
+            <spirit:value>Mon Feb 04 16:40:30 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:15c2c39a</spirit:value>
+            <spirit:value>8:e4304df3</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -552,11 +552,11 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Feb 04 16:13:25 UTC 2019</spirit:value>
+            <spirit:value>Mon Feb 04 16:40:30 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:15c2c39a</spirit:value>
+            <spirit:value>8:e4304df3</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -599,11 +599,11 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Feb 04 16:13:25 UTC 2019</spirit:value>
+            <spirit:value>Mon Feb 04 16:40:29 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:f2e024d0</spirit:value>
+            <spirit:value>8:3ccb4230</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -619,11 +619,11 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Feb 04 16:13:25 UTC 2019</spirit:value>
+            <spirit:value>Mon Feb 04 16:40:30 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:f2e024d0</spirit:value>
+            <spirit:value>8:3ccb4230</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1173,15 +1173,15 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/ip/Sobel_filter_ap_dadd_4_full_dsp_64.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/ip/Sobel_filter_ap_dadd_4_full_dsp_64.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/ip/Sobel_filter_ap_dmul_4_max_dsp_64.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/ip/Sobel_filter_ap_dmul_4_max_dsp_64.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/ip/Sobel_filter_ap_sitodp_4_no_dsp_32.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/ip/Sobel_filter_ap_sitodp_4_no_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1190,139 +1190,167 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/AddWeighted.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/AddWeighted.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/AXIvideo2Mat.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/AXIvideo2Mat.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Block_proc304.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/AXIvideo2Mat559.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/CvtColor.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Block_proc306.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/CvtColor_1.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/CvtColor.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Duplicate.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/CvtColor_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/fifo_w8_d2_A.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Duplicate.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/fifo_w11_d2_A.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/fifo_w8_d2_A.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/fifo_w12_d2_A.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/fifo_w11_d2_A.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Filter2D.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/fifo_w12_d2_A.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Filter2D_1.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Filter2D.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Filter2D_1_k_buf_eOg.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Filter2D_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/GaussianBlur.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Filter2D_1_k_buf_eOg.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Mat2AXIvideo.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/GaussianBlur.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Mat2AXIvideo554.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Mat2AXIvideo.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/p_C_Xilinx_Vivado_2.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Mat2AXIvideo598.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/p_C_Xilinx_Vivado_2_1.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/p_C_Xilinx_Vivado_2.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Sobel.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/p_C_Xilinx_Vivado_2_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Sobel_1.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Sobel.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Sobel_filter_ama_jbC.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Sobel_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Sobel_filter_daddrcU.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Sobel_filter_ama_jbC.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Sobel_filter_dmulsc4.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Sobel_filter_daddrcU.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Sobel_filter_mac_cud.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Sobel_filter_dmulsc4.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Sobel_filter_mac_dEe.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Sobel_filter_mac_cud.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Sobel_filter_mac_kbM.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Sobel_filter_mac_dEe.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Sobel_filter_mac_lbW.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Sobel_filter_mac_kbM.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Sobel_filter_mac_pcA.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Sobel_filter_mac_lbW.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Sobel_filter_mac_qcK.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Sobel_filter_mac_pcA.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Sobel_filter_mul_bkb.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Sobel_filter_mac_qcK.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Sobel_filter_mul_ibs.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Sobel_filter_mul_bkb.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Sobel_filter_mux_hbi.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Sobel_filter_mul_ibs.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Sobel_filter_sitotde.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Sobel_filter_mux_hbi.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/start_for_Mat2AXIudo.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Sobel_filter_sitotde.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Sobel_filter.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/start_for_AddWeigudo.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/start_for_CvtColoxdS.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/start_for_Duplicazec.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/start_for_Gaussiayd2.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/start_for_Mat2AXIvdy.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/start_for_Mat2AXIwdI.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/start_for_Sobel_1Aem.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Sobel_filter.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1481,187 +1509,222 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/AddWeighted.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/AddWeighted.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/AXIvideo2Mat.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/AXIvideo2Mat.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Block_proc304.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/AXIvideo2Mat559.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/CvtColor.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Block_proc306.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/CvtColor_1.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/CvtColor.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Duplicate.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/CvtColor_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/fifo_w8_d2_A.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Duplicate.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/fifo_w11_d2_A.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/fifo_w8_d2_A.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/fifo_w12_d2_A.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/fifo_w11_d2_A.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Filter2D.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/fifo_w12_d2_A.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Filter2D_1.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Filter2D.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Filter2D_1_k_buf_eOg.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Filter2D_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/GaussianBlur.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Filter2D_1_k_buf_eOg.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Mat2AXIvideo.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/GaussianBlur.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Mat2AXIvideo554.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Mat2AXIvideo.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/p_C_Xilinx_Vivado_2.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Mat2AXIvideo598.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/p_C_Xilinx_Vivado_2_1.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/p_C_Xilinx_Vivado_2.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Sobel.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/p_C_Xilinx_Vivado_2_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Sobel_1.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Sobel.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Sobel_filter_ama_jbC.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Sobel_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Sobel_filter_daddrcU.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Sobel_filter_ama_jbC.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Sobel_filter_dmulsc4.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Sobel_filter_daddrcU.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Sobel_filter_mac_cud.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Sobel_filter_dmulsc4.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Sobel_filter_mac_dEe.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Sobel_filter_mac_cud.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Sobel_filter_mac_kbM.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Sobel_filter_mac_dEe.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Sobel_filter_mac_lbW.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Sobel_filter_mac_kbM.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Sobel_filter_mac_pcA.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Sobel_filter_mac_lbW.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Sobel_filter_mac_qcK.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Sobel_filter_mac_pcA.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Sobel_filter_mul_bkb.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Sobel_filter_mac_qcK.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Sobel_filter_mul_ibs.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Sobel_filter_mul_bkb.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Sobel_filter_mux_hbi.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Sobel_filter_mul_ibs.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Sobel_filter_sitotde.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Sobel_filter_mux_hbi.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/start_for_Mat2AXIudo.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Sobel_filter_sitotde.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/vhdl/Sobel_filter.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/start_for_AddWeigudo.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/ip/Sobel_filter_ap_dadd_4_full_dsp_64.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/start_for_CvtColoxdS.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/ip/Sobel_filter_ap_dmul_4_max_dsp_64.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/start_for_Duplicazec.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/2f41/hdl/ip/Sobel_filter_ap_sitodp_4_no_dsp_32.vhd</spirit:name>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/start_for_Gaussiayd2.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/start_for_Mat2AXIvdy.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/start_for_Mat2AXIwdI.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/start_for_Sobel_1Aem.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/85da/hdl/vhdl/Sobel_filter.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/85da/hdl/ip/Sobel_filter_ap_dadd_4_full_dsp_64.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/85da/hdl/ip/Sobel_filter_ap_dmul_4_max_dsp_64.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/85da/hdl/ip/Sobel_filter_ap_sitodp_4_no_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1716,7 +1779,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>latency</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="5">943932</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="5">943937</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -1741,7 +1804,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
     <xilinx:coreExtensions>
       <xilinx:displayName>Sobel_filter</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>1902041810</xilinx:coreRevision>
+      <xilinx:coreRevision>1902041838</xilinx:coreRevision>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AP_CLK.CLK_DOMAIN" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AP_CLK.FREQ_HZ" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
@@ -1771,9 +1834,9 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="3a797998"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="a7fe1681"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="eeec87f3"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="011cf822"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="bcb740c9"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="0d01794c"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>
