@@ -1,11 +1,11 @@
 set C_TypeInfoList {{ 
 "Sobel_filter" : [[], { "return": [[], "void"]} , [{"ExternC" : 0}], [ {"INPUT_STREAM": [[], {"reference": "0"}] }, {"OUTPUT_STREAM": [[], {"reference": "0"}] }, {"enable": [[],"1"] }],[],""], 
+"1": [ "ap_uint<1>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 1}}]],""]}}], 
 "0": [ "AXI_STREAM", {"typedef": [[[],"2"],""]}], 
 "2": [ "stream<ap_axiu<24, 1, 1, 1> >", {"hls_type": {"stream": [[[[],"3"]],"4"]}}], 
 "3": [ "ap_axiu<24, 1, 1, 1>", {"struct": [[],[{"D":[[], {"scalar": { "int": 24}}]},{"U":[[], {"scalar": { "int": 1}}]},{"TI":[[], {"scalar": { "int": 1}}]},{"TD":[[], {"scalar": { "int": 1}}]}],[{ "data": [[], "5"]},{ "keep": [[], "6"]},{ "strb": [[], "6"]},{ "user": [[], "1"]},{ "last": [[], "1"]},{ "id": [[], "1"]},{ "dest": [[], "1"]}],""]}], 
-"5": [ "ap_uint<24>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 24}}]],""]}}], 
-"1": [ "ap_uint<1>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 1}}]],""]}}], 
-"6": [ "ap_uint<3>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 3}}]],""]}}],
+"6": [ "ap_uint<3>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 3}}]],""]}}], 
+"5": [ "ap_uint<24>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 24}}]],""]}}],
 "4": ["hls", ""]
 }}
 set moduleName Sobel_filter
@@ -117,7 +117,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"Pipeline" : "Dataflow", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "1",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "943932", "EstimateLatencyMax" : "943932",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "943937", "EstimateLatencyMax" : "943937",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -125,60 +125,60 @@ set RtlHierarchyInfo {[
 		"InDataflowNetwork" : "0",
 		"HasNonBlockingOperation" : "0",
 		"InputProcess" : [
-			{"ID" : "1", "Name" : "Block_proc304_U0"}],
+			{"ID" : "1", "Name" : "Block_proc306_U0"}],
 		"OutputProcess" : [
-			{"ID" : "1", "Name" : "Block_proc304_U0"}],
+			{"ID" : "1", "Name" : "Block_proc306_U0"}],
 		"Port" : [
 			{"Name" : "INPUT_STREAM_V_data_V", "Type" : "Axis", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "Block_proc304_U0", "Port" : "INPUT_STREAM_V_data_V"}]},
+					{"ID" : "1", "SubInstance" : "Block_proc306_U0", "Port" : "INPUT_STREAM_V_data_V"}]},
 			{"Name" : "INPUT_STREAM_V_keep_V", "Type" : "Axis", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "Block_proc304_U0", "Port" : "INPUT_STREAM_V_keep_V"}]},
+					{"ID" : "1", "SubInstance" : "Block_proc306_U0", "Port" : "INPUT_STREAM_V_keep_V"}]},
 			{"Name" : "INPUT_STREAM_V_strb_V", "Type" : "Axis", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "Block_proc304_U0", "Port" : "INPUT_STREAM_V_strb_V"}]},
+					{"ID" : "1", "SubInstance" : "Block_proc306_U0", "Port" : "INPUT_STREAM_V_strb_V"}]},
 			{"Name" : "INPUT_STREAM_V_user_V", "Type" : "Axis", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "Block_proc304_U0", "Port" : "INPUT_STREAM_V_user_V"}]},
+					{"ID" : "1", "SubInstance" : "Block_proc306_U0", "Port" : "INPUT_STREAM_V_user_V"}]},
 			{"Name" : "INPUT_STREAM_V_last_V", "Type" : "Axis", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "Block_proc304_U0", "Port" : "INPUT_STREAM_V_last_V"}]},
+					{"ID" : "1", "SubInstance" : "Block_proc306_U0", "Port" : "INPUT_STREAM_V_last_V"}]},
 			{"Name" : "INPUT_STREAM_V_id_V", "Type" : "Axis", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "Block_proc304_U0", "Port" : "INPUT_STREAM_V_id_V"}]},
+					{"ID" : "1", "SubInstance" : "Block_proc306_U0", "Port" : "INPUT_STREAM_V_id_V"}]},
 			{"Name" : "INPUT_STREAM_V_dest_V", "Type" : "Axis", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "Block_proc304_U0", "Port" : "INPUT_STREAM_V_dest_V"}]},
+					{"ID" : "1", "SubInstance" : "Block_proc306_U0", "Port" : "INPUT_STREAM_V_dest_V"}]},
 			{"Name" : "OUTPUT_STREAM_V_data_V", "Type" : "Axis", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "Block_proc304_U0", "Port" : "OUTPUT_STREAM_V_data_V"}]},
+					{"ID" : "1", "SubInstance" : "Block_proc306_U0", "Port" : "OUTPUT_STREAM_V_data_V"}]},
 			{"Name" : "OUTPUT_STREAM_V_keep_V", "Type" : "Axis", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "Block_proc304_U0", "Port" : "OUTPUT_STREAM_V_keep_V"}]},
+					{"ID" : "1", "SubInstance" : "Block_proc306_U0", "Port" : "OUTPUT_STREAM_V_keep_V"}]},
 			{"Name" : "OUTPUT_STREAM_V_strb_V", "Type" : "Axis", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "Block_proc304_U0", "Port" : "OUTPUT_STREAM_V_strb_V"}]},
+					{"ID" : "1", "SubInstance" : "Block_proc306_U0", "Port" : "OUTPUT_STREAM_V_strb_V"}]},
 			{"Name" : "OUTPUT_STREAM_V_user_V", "Type" : "Axis", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "Block_proc304_U0", "Port" : "OUTPUT_STREAM_V_user_V"}]},
+					{"ID" : "1", "SubInstance" : "Block_proc306_U0", "Port" : "OUTPUT_STREAM_V_user_V"}]},
 			{"Name" : "OUTPUT_STREAM_V_last_V", "Type" : "Axis", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "Block_proc304_U0", "Port" : "OUTPUT_STREAM_V_last_V"}]},
+					{"ID" : "1", "SubInstance" : "Block_proc306_U0", "Port" : "OUTPUT_STREAM_V_last_V"}]},
 			{"Name" : "OUTPUT_STREAM_V_id_V", "Type" : "Axis", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "Block_proc304_U0", "Port" : "OUTPUT_STREAM_V_id_V"}]},
+					{"ID" : "1", "SubInstance" : "Block_proc306_U0", "Port" : "OUTPUT_STREAM_V_id_V"}]},
 			{"Name" : "OUTPUT_STREAM_V_dest_V", "Type" : "Axis", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "Block_proc304_U0", "Port" : "OUTPUT_STREAM_V_dest_V"}]},
+					{"ID" : "1", "SubInstance" : "Block_proc306_U0", "Port" : "OUTPUT_STREAM_V_dest_V"}]},
 			{"Name" : "enable_V", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0", "Parent" : "0", "Child" : ["2", "3", "4", "5", "6", "10", "25", "26", "39", "52", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78"],
-		"CDFG" : "Block_proc304",
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0", "Parent" : "0", "Child" : ["2", "3", "4", "5", "6", "7", "11", "26", "27", "40", "53", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88"],
+		"CDFG" : "Block_proc306",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1",
 		"Pipeline" : "Dataflow", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "1",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "943932", "EstimateLatencyMax" : "943932",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "943937", "EstimateLatencyMax" : "943937",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -186,62 +186,70 @@ set RtlHierarchyInfo {[
 		"InDataflowNetwork" : "1",
 		"HasNonBlockingOperation" : "0",
 		"InputProcess" : [
-			{"ID" : "4", "Name" : "AXIvideo2Mat_U0"}],
+			{"ID" : "4", "Name" : "AXIvideo2Mat559_U0", "ReadyCount" : "AXIvideo2Mat559_U0_ap_ready_count"},
+			{"ID" : "6", "Name" : "AXIvideo2Mat_U0", "ReadyCount" : "AXIvideo2Mat_U0_ap_ready_count"}],
 		"OutputProcess" : [
-			{"ID" : "5", "Name" : "Mat2AXIvideo554_U0"},
-			{"ID" : "60", "Name" : "Mat2AXIvideo_U0"}],
+			{"ID" : "5", "Name" : "Mat2AXIvideo598_U0"},
+			{"ID" : "61", "Name" : "Mat2AXIvideo_U0"}],
 		"Port" : [
 			{"Name" : "enable_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "INPUT_STREAM_V_data_V", "Type" : "Axis", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "AXIvideo2Mat_U0", "Port" : "AXI_video_strm_V_data_V"}]},
+					{"ID" : "4", "SubInstance" : "AXIvideo2Mat559_U0", "Port" : "AXI_video_strm_V_data_V"},
+					{"ID" : "6", "SubInstance" : "AXIvideo2Mat_U0", "Port" : "AXI_video_strm_V_data_V"}]},
 			{"Name" : "INPUT_STREAM_V_keep_V", "Type" : "Axis", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "AXIvideo2Mat_U0", "Port" : "AXI_video_strm_V_keep_V"}]},
+					{"ID" : "4", "SubInstance" : "AXIvideo2Mat559_U0", "Port" : "AXI_video_strm_V_keep_V"},
+					{"ID" : "6", "SubInstance" : "AXIvideo2Mat_U0", "Port" : "AXI_video_strm_V_keep_V"}]},
 			{"Name" : "INPUT_STREAM_V_strb_V", "Type" : "Axis", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "AXIvideo2Mat_U0", "Port" : "AXI_video_strm_V_strb_V"}]},
+					{"ID" : "4", "SubInstance" : "AXIvideo2Mat559_U0", "Port" : "AXI_video_strm_V_strb_V"},
+					{"ID" : "6", "SubInstance" : "AXIvideo2Mat_U0", "Port" : "AXI_video_strm_V_strb_V"}]},
 			{"Name" : "INPUT_STREAM_V_user_V", "Type" : "Axis", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "AXIvideo2Mat_U0", "Port" : "AXI_video_strm_V_user_V"}]},
+					{"ID" : "4", "SubInstance" : "AXIvideo2Mat559_U0", "Port" : "AXI_video_strm_V_user_V"},
+					{"ID" : "6", "SubInstance" : "AXIvideo2Mat_U0", "Port" : "AXI_video_strm_V_user_V"}]},
 			{"Name" : "INPUT_STREAM_V_last_V", "Type" : "Axis", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "AXIvideo2Mat_U0", "Port" : "AXI_video_strm_V_last_V"}]},
+					{"ID" : "4", "SubInstance" : "AXIvideo2Mat559_U0", "Port" : "AXI_video_strm_V_last_V"},
+					{"ID" : "6", "SubInstance" : "AXIvideo2Mat_U0", "Port" : "AXI_video_strm_V_last_V"}]},
 			{"Name" : "INPUT_STREAM_V_id_V", "Type" : "Axis", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "AXIvideo2Mat_U0", "Port" : "AXI_video_strm_V_id_V"}]},
+					{"ID" : "4", "SubInstance" : "AXIvideo2Mat559_U0", "Port" : "AXI_video_strm_V_id_V"},
+					{"ID" : "6", "SubInstance" : "AXIvideo2Mat_U0", "Port" : "AXI_video_strm_V_id_V"}]},
 			{"Name" : "INPUT_STREAM_V_dest_V", "Type" : "Axis", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "AXIvideo2Mat_U0", "Port" : "AXI_video_strm_V_dest_V"}]},
+					{"ID" : "4", "SubInstance" : "AXIvideo2Mat559_U0", "Port" : "AXI_video_strm_V_dest_V"},
+					{"ID" : "6", "SubInstance" : "AXIvideo2Mat_U0", "Port" : "AXI_video_strm_V_dest_V"}]},
 			{"Name" : "OUTPUT_STREAM_V_data_V", "Type" : "Axis", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "60", "SubInstance" : "Mat2AXIvideo_U0", "Port" : "AXI_video_strm_V_data_V"},
-					{"ID" : "5", "SubInstance" : "Mat2AXIvideo554_U0", "Port" : "AXI_video_strm_V_data_V"}]},
+					{"ID" : "61", "SubInstance" : "Mat2AXIvideo_U0", "Port" : "AXI_video_strm_V_data_V"},
+					{"ID" : "5", "SubInstance" : "Mat2AXIvideo598_U0", "Port" : "AXI_video_strm_V_data_V"}]},
 			{"Name" : "OUTPUT_STREAM_V_keep_V", "Type" : "Axis", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "60", "SubInstance" : "Mat2AXIvideo_U0", "Port" : "AXI_video_strm_V_keep_V"},
-					{"ID" : "5", "SubInstance" : "Mat2AXIvideo554_U0", "Port" : "AXI_video_strm_V_keep_V"}]},
+					{"ID" : "61", "SubInstance" : "Mat2AXIvideo_U0", "Port" : "AXI_video_strm_V_keep_V"},
+					{"ID" : "5", "SubInstance" : "Mat2AXIvideo598_U0", "Port" : "AXI_video_strm_V_keep_V"}]},
 			{"Name" : "OUTPUT_STREAM_V_strb_V", "Type" : "Axis", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "60", "SubInstance" : "Mat2AXIvideo_U0", "Port" : "AXI_video_strm_V_strb_V"},
-					{"ID" : "5", "SubInstance" : "Mat2AXIvideo554_U0", "Port" : "AXI_video_strm_V_strb_V"}]},
+					{"ID" : "61", "SubInstance" : "Mat2AXIvideo_U0", "Port" : "AXI_video_strm_V_strb_V"},
+					{"ID" : "5", "SubInstance" : "Mat2AXIvideo598_U0", "Port" : "AXI_video_strm_V_strb_V"}]},
 			{"Name" : "OUTPUT_STREAM_V_user_V", "Type" : "Axis", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "60", "SubInstance" : "Mat2AXIvideo_U0", "Port" : "AXI_video_strm_V_user_V"},
-					{"ID" : "5", "SubInstance" : "Mat2AXIvideo554_U0", "Port" : "AXI_video_strm_V_user_V"}]},
+					{"ID" : "61", "SubInstance" : "Mat2AXIvideo_U0", "Port" : "AXI_video_strm_V_user_V"},
+					{"ID" : "5", "SubInstance" : "Mat2AXIvideo598_U0", "Port" : "AXI_video_strm_V_user_V"}]},
 			{"Name" : "OUTPUT_STREAM_V_last_V", "Type" : "Axis", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "60", "SubInstance" : "Mat2AXIvideo_U0", "Port" : "AXI_video_strm_V_last_V"},
-					{"ID" : "5", "SubInstance" : "Mat2AXIvideo554_U0", "Port" : "AXI_video_strm_V_last_V"}]},
+					{"ID" : "61", "SubInstance" : "Mat2AXIvideo_U0", "Port" : "AXI_video_strm_V_last_V"},
+					{"ID" : "5", "SubInstance" : "Mat2AXIvideo598_U0", "Port" : "AXI_video_strm_V_last_V"}]},
 			{"Name" : "OUTPUT_STREAM_V_id_V", "Type" : "Axis", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "60", "SubInstance" : "Mat2AXIvideo_U0", "Port" : "AXI_video_strm_V_id_V"},
-					{"ID" : "5", "SubInstance" : "Mat2AXIvideo554_U0", "Port" : "AXI_video_strm_V_id_V"}]},
+					{"ID" : "61", "SubInstance" : "Mat2AXIvideo_U0", "Port" : "AXI_video_strm_V_id_V"},
+					{"ID" : "5", "SubInstance" : "Mat2AXIvideo598_U0", "Port" : "AXI_video_strm_V_id_V"}]},
 			{"Name" : "OUTPUT_STREAM_V_dest_V", "Type" : "Axis", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "60", "SubInstance" : "Mat2AXIvideo_U0", "Port" : "AXI_video_strm_V_dest_V"},
-					{"ID" : "5", "SubInstance" : "Mat2AXIvideo554_U0", "Port" : "AXI_video_strm_V_dest_V"}]}]},
-	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.p_C_Xilinx_Vivado_2_1_U0", "Parent" : "1",
+					{"ID" : "61", "SubInstance" : "Mat2AXIvideo_U0", "Port" : "AXI_video_strm_V_dest_V"},
+					{"ID" : "5", "SubInstance" : "Mat2AXIvideo598_U0", "Port" : "AXI_video_strm_V_dest_V"}]}]},
+	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.p_C_Xilinx_Vivado_2_1_U0", "Parent" : "1",
 		"CDFG" : "p_C_Xilinx_Vivado_2_1",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1",
@@ -255,10 +263,10 @@ set RtlHierarchyInfo {[
 		"InDataflowNetwork" : "1",
 		"HasNonBlockingOperation" : "0",
 		"Port" : [
-			{"Name" : "img_0a_rows_V3_out", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "4", "DependentChan" : "61",
+			{"Name" : "img_0a_rows_V5_out", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "4", "DependentChan" : "62",
 				"BlockSignal" : [
-					{"Name" : "img_0a_rows_V3_out_blk_n", "Type" : "RtlSignal"}]}]},
-	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.p_C_Xilinx_Vivado_2_U0", "Parent" : "1",
+					{"Name" : "img_0a_rows_V5_out_blk_n", "Type" : "RtlSignal"}]}]},
+	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.p_C_Xilinx_Vivado_2_U0", "Parent" : "1",
 		"CDFG" : "p_C_Xilinx_Vivado_2",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1",
@@ -272,11 +280,11 @@ set RtlHierarchyInfo {[
 		"InDataflowNetwork" : "1",
 		"HasNonBlockingOperation" : "0",
 		"Port" : [
-			{"Name" : "img_0a_cols_V4_out", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "4", "DependentChan" : "62",
+			{"Name" : "img_0a_cols_V6_out", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "4", "DependentChan" : "63",
 				"BlockSignal" : [
-					{"Name" : "img_0a_cols_V4_out_blk_n", "Type" : "RtlSignal"}]}]},
-	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.AXIvideo2Mat_U0", "Parent" : "1",
-		"CDFG" : "AXIvideo2Mat",
+					{"Name" : "img_0a_cols_V6_out_blk_n", "Type" : "RtlSignal"}]}]},
+	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.AXIvideo2Mat559_U0", "Parent" : "1",
+		"CDFG" : "AXIvideo2Mat559",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -298,29 +306,29 @@ set RtlHierarchyInfo {[
 			{"Name" : "AXI_video_strm_V_last_V", "Type" : "Axis", "Direction" : "I"},
 			{"Name" : "AXI_video_strm_V_id_V", "Type" : "Axis", "Direction" : "I"},
 			{"Name" : "AXI_video_strm_V_dest_V", "Type" : "Axis", "Direction" : "I"},
-			{"Name" : "img_rows_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "2", "DependentChan" : "61",
+			{"Name" : "img_rows_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "2", "DependentChan" : "62",
 				"BlockSignal" : [
 					{"Name" : "img_rows_V_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "img_cols_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "3", "DependentChan" : "62",
+			{"Name" : "img_cols_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "3", "DependentChan" : "63",
 				"BlockSignal" : [
 					{"Name" : "img_cols_V_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "img_data_stream_0_V", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "5", "DependentChan" : "63",
+			{"Name" : "img_data_stream_0_V", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "5", "DependentChan" : "64",
 				"BlockSignal" : [
 					{"Name" : "img_data_stream_0_V_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "img_data_stream_1_V", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "5", "DependentChan" : "64",
+			{"Name" : "img_data_stream_1_V", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "5", "DependentChan" : "65",
 				"BlockSignal" : [
 					{"Name" : "img_data_stream_1_V_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "img_data_stream_2_V", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "5", "DependentChan" : "65",
+			{"Name" : "img_data_stream_2_V", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "5", "DependentChan" : "66",
 				"BlockSignal" : [
 					{"Name" : "img_data_stream_2_V_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "img_rows_V_out", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "5", "DependentChan" : "66",
+			{"Name" : "img_rows_V_out", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "5", "DependentChan" : "67",
 				"BlockSignal" : [
 					{"Name" : "img_rows_V_out_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "img_cols_V_out", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "5", "DependentChan" : "67",
+			{"Name" : "img_cols_V_out", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "5", "DependentChan" : "68",
 				"BlockSignal" : [
 					{"Name" : "img_cols_V_out_blk_n", "Type" : "RtlSignal"}]}]},
-	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.Mat2AXIvideo554_U0", "Parent" : "1",
-		"CDFG" : "Mat2AXIvideo554",
+	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.Mat2AXIvideo598_U0", "Parent" : "1",
+		"CDFG" : "Mat2AXIvideo598",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -333,21 +341,21 @@ set RtlHierarchyInfo {[
 		"InDataflowNetwork" : "1",
 		"HasNonBlockingOperation" : "0",
 		"StartSource" : "4",
-		"StartFifo" : "start_for_Mat2AXIudo_U",
+		"StartFifo" : "start_for_Mat2AXIwdI_U",
 		"Port" : [
-			{"Name" : "img_rows_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "4", "DependentChan" : "66",
+			{"Name" : "img_rows_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "4", "DependentChan" : "67",
 				"BlockSignal" : [
 					{"Name" : "img_rows_V_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "img_cols_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "4", "DependentChan" : "67",
+			{"Name" : "img_cols_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "4", "DependentChan" : "68",
 				"BlockSignal" : [
 					{"Name" : "img_cols_V_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "img_data_stream_0_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "4", "DependentChan" : "63",
+			{"Name" : "img_data_stream_0_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "4", "DependentChan" : "64",
 				"BlockSignal" : [
 					{"Name" : "img_data_stream_0_V_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "img_data_stream_1_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "4", "DependentChan" : "64",
+			{"Name" : "img_data_stream_1_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "4", "DependentChan" : "65",
 				"BlockSignal" : [
 					{"Name" : "img_data_stream_1_V_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "img_data_stream_2_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "4", "DependentChan" : "65",
+			{"Name" : "img_data_stream_2_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "4", "DependentChan" : "66",
 				"BlockSignal" : [
 					{"Name" : "img_data_stream_2_V_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "AXI_video_strm_V_data_V", "Type" : "Axis", "Direction" : "O",
@@ -359,13 +367,13 @@ set RtlHierarchyInfo {[
 			{"Name" : "AXI_video_strm_V_last_V", "Type" : "Axis", "Direction" : "O"},
 			{"Name" : "AXI_video_strm_V_id_V", "Type" : "Axis", "Direction" : "O"},
 			{"Name" : "AXI_video_strm_V_dest_V", "Type" : "Axis", "Direction" : "O"}]},
-	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.CvtColor_1_U0", "Parent" : "1", "Child" : ["7", "8", "9"],
-		"CDFG" : "CvtColor_1",
+	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.AXIvideo2Mat_U0", "Parent" : "1",
+		"CDFG" : "AXIvideo2Mat",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "924481", "EstimateLatencyMax" : "924481",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "926643", "EstimateLatencyMax" : "926643",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -373,16 +381,56 @@ set RtlHierarchyInfo {[
 		"InDataflowNetwork" : "1",
 		"HasNonBlockingOperation" : "0",
 		"Port" : [
-			{"Name" : "p_src_data_stream_0_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "p_src_data_stream_1_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "p_src_data_stream_2_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "p_dst_data_stream_V", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "10", "DependentChan" : "68",
+			{"Name" : "AXI_video_strm_V_data_V", "Type" : "Axis", "Direction" : "I",
+				"BlockSignal" : [
+					{"Name" : "INPUT_STREAM_TDATA_blk_n", "Type" : "RtlSignal"}]},
+			{"Name" : "AXI_video_strm_V_keep_V", "Type" : "Axis", "Direction" : "I"},
+			{"Name" : "AXI_video_strm_V_strb_V", "Type" : "Axis", "Direction" : "I"},
+			{"Name" : "AXI_video_strm_V_user_V", "Type" : "Axis", "Direction" : "I"},
+			{"Name" : "AXI_video_strm_V_last_V", "Type" : "Axis", "Direction" : "I"},
+			{"Name" : "AXI_video_strm_V_id_V", "Type" : "Axis", "Direction" : "I"},
+			{"Name" : "AXI_video_strm_V_dest_V", "Type" : "Axis", "Direction" : "I"},
+			{"Name" : "img_data_stream_0_V", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "7", "DependentChan" : "69",
+				"BlockSignal" : [
+					{"Name" : "img_data_stream_0_V_blk_n", "Type" : "RtlSignal"}]},
+			{"Name" : "img_data_stream_1_V", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "7", "DependentChan" : "70",
+				"BlockSignal" : [
+					{"Name" : "img_data_stream_1_V_blk_n", "Type" : "RtlSignal"}]},
+			{"Name" : "img_data_stream_2_V", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "7", "DependentChan" : "71",
+				"BlockSignal" : [
+					{"Name" : "img_data_stream_2_V_blk_n", "Type" : "RtlSignal"}]}]},
+	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.CvtColor_1_U0", "Parent" : "1", "Child" : ["8", "9", "10"],
+		"CDFG" : "CvtColor_1",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "925921", "EstimateLatencyMax" : "925921",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "1",
+		"HasNonBlockingOperation" : "0",
+		"StartSource" : "6",
+		"StartFifo" : "start_for_CvtColoxdS_U",
+		"Port" : [
+			{"Name" : "p_src_data_stream_0_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "6", "DependentChan" : "69",
+				"BlockSignal" : [
+					{"Name" : "p_src_data_stream_0_V_blk_n", "Type" : "RtlSignal"}]},
+			{"Name" : "p_src_data_stream_1_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "6", "DependentChan" : "70",
+				"BlockSignal" : [
+					{"Name" : "p_src_data_stream_1_V_blk_n", "Type" : "RtlSignal"}]},
+			{"Name" : "p_src_data_stream_2_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "6", "DependentChan" : "71",
+				"BlockSignal" : [
+					{"Name" : "p_src_data_stream_2_V_blk_n", "Type" : "RtlSignal"}]},
+			{"Name" : "p_dst_data_stream_V", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "11", "DependentChan" : "72",
 				"BlockSignal" : [
 					{"Name" : "p_dst_data_stream_V_blk_n", "Type" : "RtlSignal"}]}]},
-	{"ID" : "7", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.CvtColor_1_U0.Sobel_filter_mul_bkb_U29", "Parent" : "6"},
-	{"ID" : "8", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.CvtColor_1_U0.Sobel_filter_mac_cud_U30", "Parent" : "6"},
-	{"ID" : "9", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.CvtColor_1_U0.Sobel_filter_mac_dEe_U31", "Parent" : "6"},
-	{"ID" : "10", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.GaussianBlur_U0", "Parent" : "1", "Child" : ["11"],
+	{"ID" : "8", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.CvtColor_1_U0.Sobel_filter_mul_bkb_U39", "Parent" : "7"},
+	{"ID" : "9", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.CvtColor_1_U0.Sobel_filter_mac_cud_U40", "Parent" : "7"},
+	{"ID" : "10", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.CvtColor_1_U0.Sobel_filter_mac_dEe_U41", "Parent" : "7"},
+	{"ID" : "11", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.GaussianBlur_U0", "Parent" : "1", "Child" : ["12"],
 		"CDFG" : "GaussianBlur",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1",
@@ -395,16 +443,18 @@ set RtlHierarchyInfo {[
 		"HasSubDataflow" : "0",
 		"InDataflowNetwork" : "1",
 		"HasNonBlockingOperation" : "0",
+		"StartSource" : "7",
+		"StartFifo" : "start_for_Gaussiayd2_U",
 		"WaitState" : [
 			{"State" : "ap_ST_fsm_state2", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_Filter2D_1_fu_40"}],
 		"Port" : [
-			{"Name" : "p_src_data_stream_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "6", "DependentChan" : "68",
+			{"Name" : "p_src_data_stream_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "7", "DependentChan" : "72",
 				"SubConnect" : [
-					{"ID" : "11", "SubInstance" : "grp_Filter2D_1_fu_40", "Port" : "p_src_data_stream_V"}]},
-			{"Name" : "p_dst_data_stream_V", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "25", "DependentChan" : "69",
+					{"ID" : "12", "SubInstance" : "grp_Filter2D_1_fu_40", "Port" : "p_src_data_stream_V"}]},
+			{"Name" : "p_dst_data_stream_V", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "26", "DependentChan" : "73",
 				"SubConnect" : [
-					{"ID" : "11", "SubInstance" : "grp_Filter2D_1_fu_40", "Port" : "p_dst_data_stream_V"}]}]},
-	{"ID" : "11", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.GaussianBlur_U0.grp_Filter2D_1_fu_40", "Parent" : "10", "Child" : ["12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"],
+					{"ID" : "12", "SubInstance" : "grp_Filter2D_1_fu_40", "Port" : "p_dst_data_stream_V"}]}]},
+	{"ID" : "12", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.GaussianBlur_U0.grp_Filter2D_1_fu_40", "Parent" : "11", "Child" : ["13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25"],
 		"CDFG" : "Filter2D_1",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
@@ -424,20 +474,20 @@ set RtlHierarchyInfo {[
 			{"Name" : "p_dst_data_stream_V", "Type" : "Fifo", "Direction" : "O",
 				"BlockSignal" : [
 					{"Name" : "p_dst_data_stream_V_blk_n", "Type" : "RtlSignal"}]}]},
-	{"ID" : "12", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.GaussianBlur_U0.grp_Filter2D_1_fu_40.k_buf_0_val_3_U", "Parent" : "11"},
-	{"ID" : "13", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.GaussianBlur_U0.grp_Filter2D_1_fu_40.k_buf_0_val_4_U", "Parent" : "11"},
-	{"ID" : "14", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.GaussianBlur_U0.grp_Filter2D_1_fu_40.k_buf_0_val_5_U", "Parent" : "11"},
-	{"ID" : "15", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.GaussianBlur_U0.grp_Filter2D_1_fu_40.Sobel_filter_mux_hbi_U39", "Parent" : "11"},
-	{"ID" : "16", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.GaussianBlur_U0.grp_Filter2D_1_fu_40.Sobel_filter_mux_hbi_U40", "Parent" : "11"},
-	{"ID" : "17", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.GaussianBlur_U0.grp_Filter2D_1_fu_40.Sobel_filter_mux_hbi_U41", "Parent" : "11"},
-	{"ID" : "18", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.GaussianBlur_U0.grp_Filter2D_1_fu_40.Sobel_filter_mux_hbi_U42", "Parent" : "11"},
-	{"ID" : "19", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.GaussianBlur_U0.grp_Filter2D_1_fu_40.Sobel_filter_mux_hbi_U43", "Parent" : "11"},
-	{"ID" : "20", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.GaussianBlur_U0.grp_Filter2D_1_fu_40.Sobel_filter_mux_hbi_U44", "Parent" : "11"},
-	{"ID" : "21", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.GaussianBlur_U0.grp_Filter2D_1_fu_40.Sobel_filter_mul_ibs_U45", "Parent" : "11"},
-	{"ID" : "22", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.GaussianBlur_U0.grp_Filter2D_1_fu_40.Sobel_filter_ama_jbC_U46", "Parent" : "11"},
-	{"ID" : "23", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.GaussianBlur_U0.grp_Filter2D_1_fu_40.Sobel_filter_mac_kbM_U47", "Parent" : "11"},
-	{"ID" : "24", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.GaussianBlur_U0.grp_Filter2D_1_fu_40.Sobel_filter_mac_lbW_U48", "Parent" : "11"},
-	{"ID" : "25", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.Duplicate_U0", "Parent" : "1",
+	{"ID" : "13", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.GaussianBlur_U0.grp_Filter2D_1_fu_40.k_buf_0_val_3_U", "Parent" : "12"},
+	{"ID" : "14", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.GaussianBlur_U0.grp_Filter2D_1_fu_40.k_buf_0_val_4_U", "Parent" : "12"},
+	{"ID" : "15", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.GaussianBlur_U0.grp_Filter2D_1_fu_40.k_buf_0_val_5_U", "Parent" : "12"},
+	{"ID" : "16", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.GaussianBlur_U0.grp_Filter2D_1_fu_40.Sobel_filter_mux_hbi_U49", "Parent" : "12"},
+	{"ID" : "17", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.GaussianBlur_U0.grp_Filter2D_1_fu_40.Sobel_filter_mux_hbi_U50", "Parent" : "12"},
+	{"ID" : "18", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.GaussianBlur_U0.grp_Filter2D_1_fu_40.Sobel_filter_mux_hbi_U51", "Parent" : "12"},
+	{"ID" : "19", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.GaussianBlur_U0.grp_Filter2D_1_fu_40.Sobel_filter_mux_hbi_U52", "Parent" : "12"},
+	{"ID" : "20", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.GaussianBlur_U0.grp_Filter2D_1_fu_40.Sobel_filter_mux_hbi_U53", "Parent" : "12"},
+	{"ID" : "21", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.GaussianBlur_U0.grp_Filter2D_1_fu_40.Sobel_filter_mux_hbi_U54", "Parent" : "12"},
+	{"ID" : "22", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.GaussianBlur_U0.grp_Filter2D_1_fu_40.Sobel_filter_mul_ibs_U55", "Parent" : "12"},
+	{"ID" : "23", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.GaussianBlur_U0.grp_Filter2D_1_fu_40.Sobel_filter_ama_jbC_U56", "Parent" : "12"},
+	{"ID" : "24", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.GaussianBlur_U0.grp_Filter2D_1_fu_40.Sobel_filter_mac_kbM_U57", "Parent" : "12"},
+	{"ID" : "25", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.GaussianBlur_U0.grp_Filter2D_1_fu_40.Sobel_filter_mac_lbW_U58", "Parent" : "12"},
+	{"ID" : "26", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.Duplicate_U0", "Parent" : "1",
 		"CDFG" : "Duplicate",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1",
@@ -450,17 +500,19 @@ set RtlHierarchyInfo {[
 		"HasSubDataflow" : "0",
 		"InDataflowNetwork" : "1",
 		"HasNonBlockingOperation" : "0",
+		"StartSource" : "11",
+		"StartFifo" : "start_for_Duplicazec_U",
 		"Port" : [
-			{"Name" : "src_data_stream_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "10", "DependentChan" : "69",
+			{"Name" : "src_data_stream_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "11", "DependentChan" : "73",
 				"BlockSignal" : [
 					{"Name" : "src_data_stream_V_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "dst1_data_stream_V", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "26", "DependentChan" : "70",
+			{"Name" : "dst1_data_stream_V", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "27", "DependentChan" : "74",
 				"BlockSignal" : [
 					{"Name" : "dst1_data_stream_V_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "dst2_data_stream_V", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "39", "DependentChan" : "71",
+			{"Name" : "dst2_data_stream_V", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "40", "DependentChan" : "75",
 				"BlockSignal" : [
 					{"Name" : "dst2_data_stream_V_blk_n", "Type" : "RtlSignal"}]}]},
-	{"ID" : "26", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.Sobel_U0", "Parent" : "1", "Child" : ["27"],
+	{"ID" : "27", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.Sobel_U0", "Parent" : "1", "Child" : ["28"],
 		"CDFG" : "Sobel",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1",
@@ -476,13 +528,13 @@ set RtlHierarchyInfo {[
 		"WaitState" : [
 			{"State" : "ap_ST_fsm_state2", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_Filter2D_fu_52"}],
 		"Port" : [
-			{"Name" : "p_src_data_stream_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "25", "DependentChan" : "70",
+			{"Name" : "p_src_data_stream_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "26", "DependentChan" : "74",
 				"SubConnect" : [
-					{"ID" : "27", "SubInstance" : "grp_Filter2D_fu_52", "Port" : "p_src_data_stream_V"}]},
-			{"Name" : "p_dst_data_stream_V", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "52", "DependentChan" : "72",
+					{"ID" : "28", "SubInstance" : "grp_Filter2D_fu_52", "Port" : "p_src_data_stream_V"}]},
+			{"Name" : "p_dst_data_stream_V", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "53", "DependentChan" : "76",
 				"SubConnect" : [
-					{"ID" : "27", "SubInstance" : "grp_Filter2D_fu_52", "Port" : "p_dst_data_stream_V"}]}]},
-	{"ID" : "27", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.Sobel_U0.grp_Filter2D_fu_52", "Parent" : "26", "Child" : ["28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38"],
+					{"ID" : "28", "SubInstance" : "grp_Filter2D_fu_52", "Port" : "p_dst_data_stream_V"}]}]},
+	{"ID" : "28", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.Sobel_U0.grp_Filter2D_fu_52", "Parent" : "27", "Child" : ["29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39"],
 		"CDFG" : "Filter2D",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
@@ -508,18 +560,18 @@ set RtlHierarchyInfo {[
 			{"Name" : "p_kernel_val_1_V_2_read", "Type" : "None", "Direction" : "I"},
 			{"Name" : "p_kernel_val_2_V_0_read", "Type" : "None", "Direction" : "I"},
 			{"Name" : "p_kernel_val_2_V_1_read", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "28", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.Sobel_U0.grp_Filter2D_fu_52.k_buf_0_val_3_U", "Parent" : "27"},
-	{"ID" : "29", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.Sobel_U0.grp_Filter2D_fu_52.k_buf_0_val_4_U", "Parent" : "27"},
-	{"ID" : "30", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.Sobel_U0.grp_Filter2D_fu_52.k_buf_0_val_5_U", "Parent" : "27"},
-	{"ID" : "31", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.Sobel_U0.grp_Filter2D_fu_52.Sobel_filter_mux_hbi_U62", "Parent" : "27"},
-	{"ID" : "32", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.Sobel_U0.grp_Filter2D_fu_52.Sobel_filter_mux_hbi_U63", "Parent" : "27"},
-	{"ID" : "33", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.Sobel_U0.grp_Filter2D_fu_52.Sobel_filter_mux_hbi_U64", "Parent" : "27"},
-	{"ID" : "34", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.Sobel_U0.grp_Filter2D_fu_52.Sobel_filter_mux_hbi_U65", "Parent" : "27"},
-	{"ID" : "35", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.Sobel_U0.grp_Filter2D_fu_52.Sobel_filter_mux_hbi_U66", "Parent" : "27"},
-	{"ID" : "36", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.Sobel_U0.grp_Filter2D_fu_52.Sobel_filter_mux_hbi_U67", "Parent" : "27"},
-	{"ID" : "37", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.Sobel_U0.grp_Filter2D_fu_52.Sobel_filter_mac_pcA_U68", "Parent" : "27"},
-	{"ID" : "38", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.Sobel_U0.grp_Filter2D_fu_52.Sobel_filter_mac_qcK_U69", "Parent" : "27"},
-	{"ID" : "39", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.Sobel_1_U0", "Parent" : "1", "Child" : ["40"],
+	{"ID" : "29", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.Sobel_U0.grp_Filter2D_fu_52.k_buf_0_val_3_U", "Parent" : "28"},
+	{"ID" : "30", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.Sobel_U0.grp_Filter2D_fu_52.k_buf_0_val_4_U", "Parent" : "28"},
+	{"ID" : "31", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.Sobel_U0.grp_Filter2D_fu_52.k_buf_0_val_5_U", "Parent" : "28"},
+	{"ID" : "32", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.Sobel_U0.grp_Filter2D_fu_52.Sobel_filter_mux_hbi_U72", "Parent" : "28"},
+	{"ID" : "33", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.Sobel_U0.grp_Filter2D_fu_52.Sobel_filter_mux_hbi_U73", "Parent" : "28"},
+	{"ID" : "34", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.Sobel_U0.grp_Filter2D_fu_52.Sobel_filter_mux_hbi_U74", "Parent" : "28"},
+	{"ID" : "35", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.Sobel_U0.grp_Filter2D_fu_52.Sobel_filter_mux_hbi_U75", "Parent" : "28"},
+	{"ID" : "36", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.Sobel_U0.grp_Filter2D_fu_52.Sobel_filter_mux_hbi_U76", "Parent" : "28"},
+	{"ID" : "37", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.Sobel_U0.grp_Filter2D_fu_52.Sobel_filter_mux_hbi_U77", "Parent" : "28"},
+	{"ID" : "38", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.Sobel_U0.grp_Filter2D_fu_52.Sobel_filter_mac_pcA_U78", "Parent" : "28"},
+	{"ID" : "39", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.Sobel_U0.grp_Filter2D_fu_52.Sobel_filter_mac_qcK_U79", "Parent" : "28"},
+	{"ID" : "40", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.Sobel_1_U0", "Parent" : "1", "Child" : ["41"],
 		"CDFG" : "Sobel_1",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1",
@@ -532,16 +584,18 @@ set RtlHierarchyInfo {[
 		"HasSubDataflow" : "0",
 		"InDataflowNetwork" : "1",
 		"HasNonBlockingOperation" : "0",
+		"StartSource" : "26",
+		"StartFifo" : "start_for_Sobel_1Aem_U",
 		"WaitState" : [
 			{"State" : "ap_ST_fsm_state2", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_Filter2D_fu_52"}],
 		"Port" : [
-			{"Name" : "p_src_data_stream_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "25", "DependentChan" : "71",
+			{"Name" : "p_src_data_stream_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "26", "DependentChan" : "75",
 				"SubConnect" : [
-					{"ID" : "40", "SubInstance" : "grp_Filter2D_fu_52", "Port" : "p_src_data_stream_V"}]},
-			{"Name" : "p_dst_data_stream_V", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "52", "DependentChan" : "73",
+					{"ID" : "41", "SubInstance" : "grp_Filter2D_fu_52", "Port" : "p_src_data_stream_V"}]},
+			{"Name" : "p_dst_data_stream_V", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "53", "DependentChan" : "77",
 				"SubConnect" : [
-					{"ID" : "40", "SubInstance" : "grp_Filter2D_fu_52", "Port" : "p_dst_data_stream_V"}]}]},
-	{"ID" : "40", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.Sobel_1_U0.grp_Filter2D_fu_52", "Parent" : "39", "Child" : ["41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51"],
+					{"ID" : "41", "SubInstance" : "grp_Filter2D_fu_52", "Port" : "p_dst_data_stream_V"}]}]},
+	{"ID" : "41", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.Sobel_1_U0.grp_Filter2D_fu_52", "Parent" : "40", "Child" : ["42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52"],
 		"CDFG" : "Filter2D",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
@@ -567,18 +621,18 @@ set RtlHierarchyInfo {[
 			{"Name" : "p_kernel_val_1_V_2_read", "Type" : "None", "Direction" : "I"},
 			{"Name" : "p_kernel_val_2_V_0_read", "Type" : "None", "Direction" : "I"},
 			{"Name" : "p_kernel_val_2_V_1_read", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "41", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.Sobel_1_U0.grp_Filter2D_fu_52.k_buf_0_val_3_U", "Parent" : "40"},
-	{"ID" : "42", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.Sobel_1_U0.grp_Filter2D_fu_52.k_buf_0_val_4_U", "Parent" : "40"},
-	{"ID" : "43", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.Sobel_1_U0.grp_Filter2D_fu_52.k_buf_0_val_5_U", "Parent" : "40"},
-	{"ID" : "44", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.Sobel_1_U0.grp_Filter2D_fu_52.Sobel_filter_mux_hbi_U62", "Parent" : "40"},
-	{"ID" : "45", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.Sobel_1_U0.grp_Filter2D_fu_52.Sobel_filter_mux_hbi_U63", "Parent" : "40"},
-	{"ID" : "46", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.Sobel_1_U0.grp_Filter2D_fu_52.Sobel_filter_mux_hbi_U64", "Parent" : "40"},
-	{"ID" : "47", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.Sobel_1_U0.grp_Filter2D_fu_52.Sobel_filter_mux_hbi_U65", "Parent" : "40"},
-	{"ID" : "48", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.Sobel_1_U0.grp_Filter2D_fu_52.Sobel_filter_mux_hbi_U66", "Parent" : "40"},
-	{"ID" : "49", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.Sobel_1_U0.grp_Filter2D_fu_52.Sobel_filter_mux_hbi_U67", "Parent" : "40"},
-	{"ID" : "50", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.Sobel_1_U0.grp_Filter2D_fu_52.Sobel_filter_mac_pcA_U68", "Parent" : "40"},
-	{"ID" : "51", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.Sobel_1_U0.grp_Filter2D_fu_52.Sobel_filter_mac_qcK_U69", "Parent" : "40"},
-	{"ID" : "52", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.AddWeighted_U0", "Parent" : "1", "Child" : ["53", "54", "55", "56", "57", "58"],
+	{"ID" : "42", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.Sobel_1_U0.grp_Filter2D_fu_52.k_buf_0_val_3_U", "Parent" : "41"},
+	{"ID" : "43", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.Sobel_1_U0.grp_Filter2D_fu_52.k_buf_0_val_4_U", "Parent" : "41"},
+	{"ID" : "44", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.Sobel_1_U0.grp_Filter2D_fu_52.k_buf_0_val_5_U", "Parent" : "41"},
+	{"ID" : "45", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.Sobel_1_U0.grp_Filter2D_fu_52.Sobel_filter_mux_hbi_U72", "Parent" : "41"},
+	{"ID" : "46", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.Sobel_1_U0.grp_Filter2D_fu_52.Sobel_filter_mux_hbi_U73", "Parent" : "41"},
+	{"ID" : "47", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.Sobel_1_U0.grp_Filter2D_fu_52.Sobel_filter_mux_hbi_U74", "Parent" : "41"},
+	{"ID" : "48", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.Sobel_1_U0.grp_Filter2D_fu_52.Sobel_filter_mux_hbi_U75", "Parent" : "41"},
+	{"ID" : "49", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.Sobel_1_U0.grp_Filter2D_fu_52.Sobel_filter_mux_hbi_U76", "Parent" : "41"},
+	{"ID" : "50", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.Sobel_1_U0.grp_Filter2D_fu_52.Sobel_filter_mux_hbi_U77", "Parent" : "41"},
+	{"ID" : "51", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.Sobel_1_U0.grp_Filter2D_fu_52.Sobel_filter_mac_pcA_U78", "Parent" : "41"},
+	{"ID" : "52", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.Sobel_1_U0.grp_Filter2D_fu_52.Sobel_filter_mac_qcK_U79", "Parent" : "41"},
+	{"ID" : "53", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.AddWeighted_U0", "Parent" : "1", "Child" : ["54", "55", "56", "57", "58", "59"],
 		"CDFG" : "AddWeighted",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1",
@@ -591,23 +645,25 @@ set RtlHierarchyInfo {[
 		"HasSubDataflow" : "0",
 		"InDataflowNetwork" : "1",
 		"HasNonBlockingOperation" : "0",
+		"StartSource" : "2",
+		"StartFifo" : "start_for_AddWeigudo_U",
 		"Port" : [
-			{"Name" : "src1_data_stream_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "39", "DependentChan" : "73",
+			{"Name" : "src1_data_stream_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "40", "DependentChan" : "77",
 				"BlockSignal" : [
 					{"Name" : "src1_data_stream_V_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "src2_data_stream_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "26", "DependentChan" : "72",
+			{"Name" : "src2_data_stream_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "27", "DependentChan" : "76",
 				"BlockSignal" : [
 					{"Name" : "src2_data_stream_V_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "dst_data_stream_V", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "59", "DependentChan" : "74",
+			{"Name" : "dst_data_stream_V", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "60", "DependentChan" : "78",
 				"BlockSignal" : [
 					{"Name" : "dst_data_stream_V_blk_n", "Type" : "RtlSignal"}]}]},
-	{"ID" : "53", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.AddWeighted_U0.Sobel_filter_daddrcU_U84", "Parent" : "52"},
-	{"ID" : "54", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.AddWeighted_U0.Sobel_filter_daddrcU_U85", "Parent" : "52"},
-	{"ID" : "55", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.AddWeighted_U0.Sobel_filter_dmulsc4_U86", "Parent" : "52"},
-	{"ID" : "56", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.AddWeighted_U0.Sobel_filter_dmulsc4_U87", "Parent" : "52"},
-	{"ID" : "57", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.AddWeighted_U0.Sobel_filter_sitotde_U88", "Parent" : "52"},
-	{"ID" : "58", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.AddWeighted_U0.Sobel_filter_sitotde_U89", "Parent" : "52"},
-	{"ID" : "59", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.CvtColor_U0", "Parent" : "1",
+	{"ID" : "54", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.AddWeighted_U0.Sobel_filter_daddrcU_U94", "Parent" : "53"},
+	{"ID" : "55", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.AddWeighted_U0.Sobel_filter_daddrcU_U95", "Parent" : "53"},
+	{"ID" : "56", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.AddWeighted_U0.Sobel_filter_dmulsc4_U96", "Parent" : "53"},
+	{"ID" : "57", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.AddWeighted_U0.Sobel_filter_dmulsc4_U97", "Parent" : "53"},
+	{"ID" : "58", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.AddWeighted_U0.Sobel_filter_sitotde_U98", "Parent" : "53"},
+	{"ID" : "59", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.AddWeighted_U0.Sobel_filter_sitotde_U99", "Parent" : "53"},
+	{"ID" : "60", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.CvtColor_U0", "Parent" : "1",
 		"CDFG" : "CvtColor",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1",
@@ -621,19 +677,19 @@ set RtlHierarchyInfo {[
 		"InDataflowNetwork" : "1",
 		"HasNonBlockingOperation" : "0",
 		"Port" : [
-			{"Name" : "p_src_data_stream_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "52", "DependentChan" : "74",
+			{"Name" : "p_src_data_stream_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "53", "DependentChan" : "78",
 				"BlockSignal" : [
 					{"Name" : "p_src_data_stream_V_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "p_dst_data_stream_0_V", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "60", "DependentChan" : "75",
+			{"Name" : "p_dst_data_stream_0_V", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "61", "DependentChan" : "79",
 				"BlockSignal" : [
 					{"Name" : "p_dst_data_stream_0_V_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "p_dst_data_stream_1_V", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "60", "DependentChan" : "76",
+			{"Name" : "p_dst_data_stream_1_V", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "61", "DependentChan" : "80",
 				"BlockSignal" : [
 					{"Name" : "p_dst_data_stream_1_V_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "p_dst_data_stream_2_V", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "60", "DependentChan" : "77",
+			{"Name" : "p_dst_data_stream_2_V", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "61", "DependentChan" : "81",
 				"BlockSignal" : [
 					{"Name" : "p_dst_data_stream_2_V_blk_n", "Type" : "RtlSignal"}]}]},
-	{"ID" : "60", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.Mat2AXIvideo_U0", "Parent" : "1",
+	{"ID" : "61", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.Mat2AXIvideo_U0", "Parent" : "1",
 		"CDFG" : "Mat2AXIvideo",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1",
@@ -646,14 +702,16 @@ set RtlHierarchyInfo {[
 		"HasSubDataflow" : "0",
 		"InDataflowNetwork" : "1",
 		"HasNonBlockingOperation" : "0",
+		"StartSource" : "3",
+		"StartFifo" : "start_for_Mat2AXIvdy_U",
 		"Port" : [
-			{"Name" : "img_data_stream_0_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "59", "DependentChan" : "75",
+			{"Name" : "img_data_stream_0_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "60", "DependentChan" : "79",
 				"BlockSignal" : [
 					{"Name" : "img_data_stream_0_V_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "img_data_stream_1_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "59", "DependentChan" : "76",
+			{"Name" : "img_data_stream_1_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "60", "DependentChan" : "80",
 				"BlockSignal" : [
 					{"Name" : "img_data_stream_1_V_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "img_data_stream_2_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "59", "DependentChan" : "77",
+			{"Name" : "img_data_stream_2_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "60", "DependentChan" : "81",
 				"BlockSignal" : [
 					{"Name" : "img_data_stream_2_V_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "AXI_video_strm_V_data_V", "Type" : "Axis", "Direction" : "O",
@@ -665,24 +723,33 @@ set RtlHierarchyInfo {[
 			{"Name" : "AXI_video_strm_V_last_V", "Type" : "Axis", "Direction" : "O"},
 			{"Name" : "AXI_video_strm_V_id_V", "Type" : "Axis", "Direction" : "O"},
 			{"Name" : "AXI_video_strm_V_dest_V", "Type" : "Axis", "Direction" : "O"}]},
-	{"ID" : "61", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.img_0a_rows_V3_c_U", "Parent" : "1"},
-	{"ID" : "62", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.img_0a_cols_V4_c_U", "Parent" : "1"},
-	{"ID" : "63", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.img_0a_data_stream_0_U", "Parent" : "1"},
-	{"ID" : "64", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.img_0a_data_stream_1_U", "Parent" : "1"},
-	{"ID" : "65", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.img_0a_data_stream_2_U", "Parent" : "1"},
-	{"ID" : "66", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.img_0a_rows_V3_c1_U", "Parent" : "1"},
-	{"ID" : "67", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.img_0a_cols_V4_c2_U", "Parent" : "1"},
-	{"ID" : "68", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.img_1_data_stream_0_U", "Parent" : "1"},
-	{"ID" : "69", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.img_2_data_stream_0_U", "Parent" : "1"},
-	{"ID" : "70", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.img_2a_data_stream_0_U", "Parent" : "1"},
-	{"ID" : "71", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.img_2b_data_stream_0_U", "Parent" : "1"},
-	{"ID" : "72", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.img_3_data_stream_0_U", "Parent" : "1"},
-	{"ID" : "73", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.img_4_data_stream_0_U", "Parent" : "1"},
-	{"ID" : "74", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.img_5_data_stream_0_U", "Parent" : "1"},
-	{"ID" : "75", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.img_6_data_stream_0_U", "Parent" : "1"},
-	{"ID" : "76", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.img_6_data_stream_1_U", "Parent" : "1"},
-	{"ID" : "77", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.img_6_data_stream_2_U", "Parent" : "1"},
-	{"ID" : "78", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc304_U0.start_for_Mat2AXIudo_U", "Parent" : "1"}]}
+	{"ID" : "62", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.img_0a_rows_V5_c_U", "Parent" : "1"},
+	{"ID" : "63", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.img_0a_cols_V6_c_U", "Parent" : "1"},
+	{"ID" : "64", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.img_0a_data_stream_0_U", "Parent" : "1"},
+	{"ID" : "65", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.img_0a_data_stream_1_U", "Parent" : "1"},
+	{"ID" : "66", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.img_0a_data_stream_2_U", "Parent" : "1"},
+	{"ID" : "67", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.img_0a_rows_V5_c1_U", "Parent" : "1"},
+	{"ID" : "68", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.img_0a_cols_V6_c2_U", "Parent" : "1"},
+	{"ID" : "69", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.img_0_data_stream_0_U", "Parent" : "1"},
+	{"ID" : "70", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.img_0_data_stream_1_U", "Parent" : "1"},
+	{"ID" : "71", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.img_0_data_stream_2_U", "Parent" : "1"},
+	{"ID" : "72", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.img_1_data_stream_0_U", "Parent" : "1"},
+	{"ID" : "73", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.img_2_data_stream_0_U", "Parent" : "1"},
+	{"ID" : "74", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.img_2a_data_stream_0_U", "Parent" : "1"},
+	{"ID" : "75", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.img_2b_data_stream_0_U", "Parent" : "1"},
+	{"ID" : "76", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.img_3_data_stream_0_U", "Parent" : "1"},
+	{"ID" : "77", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.img_4_data_stream_0_U", "Parent" : "1"},
+	{"ID" : "78", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.img_5_data_stream_0_U", "Parent" : "1"},
+	{"ID" : "79", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.img_6_data_stream_0_U", "Parent" : "1"},
+	{"ID" : "80", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.img_6_data_stream_1_U", "Parent" : "1"},
+	{"ID" : "81", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.img_6_data_stream_2_U", "Parent" : "1"},
+	{"ID" : "82", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.start_for_AddWeigudo_U", "Parent" : "1"},
+	{"ID" : "83", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.start_for_Mat2AXIvdy_U", "Parent" : "1"},
+	{"ID" : "84", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.start_for_Mat2AXIwdI_U", "Parent" : "1"},
+	{"ID" : "85", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.start_for_CvtColoxdS_U", "Parent" : "1"},
+	{"ID" : "86", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.start_for_Gaussiayd2_U", "Parent" : "1"},
+	{"ID" : "87", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.start_for_Duplicazec_U", "Parent" : "1"},
+	{"ID" : "88", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Block_proc306_U0.start_for_Sobel_1Aem_U", "Parent" : "1"}]}
 
 
 set ArgLastReadFirstWriteLatency {
@@ -702,7 +769,7 @@ set ArgLastReadFirstWriteLatency {
 		OUTPUT_STREAM_V_id_V {Type O LastRead -1 FirstWrite 3}
 		OUTPUT_STREAM_V_dest_V {Type O LastRead -1 FirstWrite 3}
 		enable_V {Type I LastRead 1 FirstWrite -1}}
-	Block_proc304 {
+	Block_proc306 {
 		enable_V {Type I LastRead 0 FirstWrite -1}
 		INPUT_STREAM_V_data_V {Type I LastRead 7 FirstWrite -1}
 		INPUT_STREAM_V_keep_V {Type I LastRead 7 FirstWrite -1}
@@ -719,10 +786,10 @@ set ArgLastReadFirstWriteLatency {
 		OUTPUT_STREAM_V_id_V {Type O LastRead -1 FirstWrite 3}
 		OUTPUT_STREAM_V_dest_V {Type O LastRead -1 FirstWrite 3}}
 	p_C_Xilinx_Vivado_2_1 {
-		img_0a_rows_V3_out {Type O LastRead -1 FirstWrite 0}}
+		img_0a_rows_V5_out {Type O LastRead -1 FirstWrite 0}}
 	p_C_Xilinx_Vivado_2 {
-		img_0a_cols_V4_out {Type O LastRead -1 FirstWrite 0}}
-	AXIvideo2Mat {
+		img_0a_cols_V6_out {Type O LastRead -1 FirstWrite 0}}
+	AXIvideo2Mat559 {
 		AXI_video_strm_V_data_V {Type I LastRead 7 FirstWrite -1}
 		AXI_video_strm_V_keep_V {Type I LastRead 7 FirstWrite -1}
 		AXI_video_strm_V_strb_V {Type I LastRead 7 FirstWrite -1}
@@ -737,7 +804,7 @@ set ArgLastReadFirstWriteLatency {
 		img_data_stream_2_V {Type O LastRead -1 FirstWrite 5}
 		img_rows_V_out {Type O LastRead -1 FirstWrite 0}
 		img_cols_V_out {Type O LastRead -1 FirstWrite 0}}
-	Mat2AXIvideo554 {
+	Mat2AXIvideo598 {
 		img_rows_V {Type I LastRead 0 FirstWrite -1}
 		img_cols_V {Type I LastRead 0 FirstWrite -1}
 		img_data_stream_0_V {Type I LastRead 3 FirstWrite -1}
@@ -750,11 +817,22 @@ set ArgLastReadFirstWriteLatency {
 		AXI_video_strm_V_last_V {Type O LastRead -1 FirstWrite 3}
 		AXI_video_strm_V_id_V {Type O LastRead -1 FirstWrite 3}
 		AXI_video_strm_V_dest_V {Type O LastRead -1 FirstWrite 3}}
+	AXIvideo2Mat {
+		AXI_video_strm_V_data_V {Type I LastRead 7 FirstWrite -1}
+		AXI_video_strm_V_keep_V {Type I LastRead 7 FirstWrite -1}
+		AXI_video_strm_V_strb_V {Type I LastRead 7 FirstWrite -1}
+		AXI_video_strm_V_user_V {Type I LastRead 7 FirstWrite -1}
+		AXI_video_strm_V_last_V {Type I LastRead 7 FirstWrite -1}
+		AXI_video_strm_V_id_V {Type I LastRead 7 FirstWrite -1}
+		AXI_video_strm_V_dest_V {Type I LastRead 7 FirstWrite -1}
+		img_data_stream_0_V {Type O LastRead -1 FirstWrite 5}
+		img_data_stream_1_V {Type O LastRead -1 FirstWrite 5}
+		img_data_stream_2_V {Type O LastRead -1 FirstWrite 5}}
 	CvtColor_1 {
-		p_src_data_stream_0_V {Type I LastRead 2 FirstWrite -1}
-		p_src_data_stream_1_V {Type I LastRead 2 FirstWrite -1}
-		p_src_data_stream_2_V {Type I LastRead 2 FirstWrite -1}
-		p_dst_data_stream_V {Type O LastRead -1 FirstWrite 4}}
+		p_src_data_stream_0_V {Type I LastRead 3 FirstWrite -1}
+		p_src_data_stream_1_V {Type I LastRead 3 FirstWrite -1}
+		p_src_data_stream_2_V {Type I LastRead 3 FirstWrite -1}
+		p_dst_data_stream_V {Type O LastRead -1 FirstWrite 6}}
 	GaussianBlur {
 		p_src_data_stream_V {Type I LastRead 4 FirstWrite -1}
 		p_dst_data_stream_V {Type O LastRead -1 FirstWrite 7}}
@@ -810,10 +888,10 @@ set ArgLastReadFirstWriteLatency {
 		AXI_video_strm_V_id_V {Type O LastRead -1 FirstWrite 3}
 		AXI_video_strm_V_dest_V {Type O LastRead -1 FirstWrite 3}}}
 
-set hasDtUnsupportedChannel 1
+set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "943932", "Max" : "943932"}
+	{"Name" : "Latency", "Min" : "943937", "Max" : "943937"}
 	, {"Name" : "Interval", "Min" : "943922", "Max" : "943922"}
 ]}
 

@@ -15,7 +15,7 @@
 					<Obj class_id="5" tracking_level="0" version="0">
 						<type>1</type>
 						<id>1</id>
-						<name>img_0a_cols_V4_out</name>
+						<name>img_0a_cols_V6_out</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -360,7 +360,7 @@
 		<count>1</count>
 		<item_version>0</item_version>
 		<item class_id="45" tracking_level="0" version="0">
-			<first>img_0a_cols_V4_out</first>
+			<first>img_0a_cols_V6_out</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>

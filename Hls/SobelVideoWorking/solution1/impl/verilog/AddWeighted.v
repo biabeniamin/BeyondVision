@@ -151,10 +151,10 @@ wire   [0:0] tmp_i_i_i_i_fu_275_p2;
 reg   [0:0] tmp_i_i_i_i_reg_1008;
 reg   [0:0] tmp_i_i_i_i_reg_1008_pp0_iter27_reg;
 reg   [0:0] tmp_i_i_i_i_reg_1008_pp0_iter28_reg;
-wire   [0:0] tmp_i_i_i_i_108_fu_281_p2;
-reg   [0:0] tmp_i_i_i_i_108_reg_1014;
-reg   [0:0] tmp_i_i_i_i_108_reg_1014_pp0_iter27_reg;
-reg   [0:0] tmp_i_i_i_i_108_reg_1014_pp0_iter28_reg;
+wire   [0:0] tmp_i_i_i_i_111_fu_281_p2;
+reg   [0:0] tmp_i_i_i_i_111_reg_1014;
+reg   [0:0] tmp_i_i_i_i_111_reg_1014_pp0_iter27_reg;
+reg   [0:0] tmp_i_i_i_i_111_reg_1014_pp0_iter28_reg;
 reg   [0:0] isneg_reg_1020;
 reg   [0:0] isneg_reg_1020_pp0_iter27_reg;
 wire   [53:0] p_Result_s_fu_311_p1;
@@ -328,7 +328,7 @@ wire   [0:0] sel_tmp50_i_fu_885_p2;
 wire   [0:0] sel_tmp51_i_fu_891_p2;
 wire   [0:0] tmp_demorgan_i_fu_849_p2;
 wire   [0:0] tmp_s_fu_896_p2;
-wire   [0:0] tmp_39_fu_902_p2;
+wire   [0:0] tmp_40_fu_902_p2;
 wire   [0:0] sel_tmp55_demorgan_i_fu_914_p2;
 wire   [0:0] brmerge_i_fu_868_p2;
 wire   [0:0] sel_tmp55_i_fu_919_p2;
@@ -387,7 +387,7 @@ Sobel_filter_daddrcU #(
     .din0_WIDTH( 64 ),
     .din1_WIDTH( 64 ),
     .dout_WIDTH( 64 ))
-Sobel_filter_daddrcU_U84(
+Sobel_filter_daddrcU_U94(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(t1_reg_988),
@@ -402,7 +402,7 @@ Sobel_filter_daddrcU #(
     .din0_WIDTH( 64 ),
     .din1_WIDTH( 64 ),
     .dout_WIDTH( 64 ))
-Sobel_filter_daddrcU_U85(
+Sobel_filter_daddrcU_U95(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(tmp_46_i_reg_998),
@@ -417,7 +417,7 @@ Sobel_filter_dmulsc4 #(
     .din0_WIDTH( 64 ),
     .din1_WIDTH( 64 ),
     .dout_WIDTH( 64 ))
-Sobel_filter_dmulsc4_U86(
+Sobel_filter_dmulsc4_U96(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(tmp_43_i_reg_978),
@@ -432,7 +432,7 @@ Sobel_filter_dmulsc4 #(
     .din0_WIDTH( 64 ),
     .din1_WIDTH( 64 ),
     .dout_WIDTH( 64 ))
-Sobel_filter_dmulsc4_U87(
+Sobel_filter_dmulsc4_U97(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(tmp_45_i_reg_983),
@@ -446,7 +446,7 @@ Sobel_filter_sitotde #(
     .NUM_STAGE( 6 ),
     .din0_WIDTH( 32 ),
     .dout_WIDTH( 64 ))
-Sobel_filter_sitotde_U88(
+Sobel_filter_sitotde_U98(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_220_p0),
@@ -459,7 +459,7 @@ Sobel_filter_sitotde #(
     .NUM_STAGE( 6 ),
     .din0_WIDTH( 32 ),
     .dout_WIDTH( 64 ))
-Sobel_filter_sitotde_U89(
+Sobel_filter_sitotde_U99(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_223_p0),
@@ -822,7 +822,7 @@ always @ (posedge ap_clk) begin
         tmp_3_i_reg_1067 <= tmp_3_i_fu_353_p2;
         tmp_9_i_reg_1040 <= tmp_9_i_fu_321_p2;
         tmp_i2_reg_1054 <= tmp_i2_fu_333_p2;
-        tmp_i_i_i_i_108_reg_1014 <= tmp_i_i_i_i_108_fu_281_p2;
+        tmp_i_i_i_i_111_reg_1014 <= tmp_i_i_i_i_111_fu_281_p2;
         tmp_i_i_i_i_reg_1008 <= tmp_i_i_i_i_fu_275_p2;
     end
 end
@@ -863,8 +863,8 @@ always @ (posedge ap_clk) begin
         tmp_9_i_reg_1040_pp0_iter27_reg <= tmp_9_i_reg_1040;
         tmp_9_i_reg_1040_pp0_iter28_reg <= tmp_9_i_reg_1040_pp0_iter27_reg;
         tmp_i2_reg_1054_pp0_iter27_reg <= tmp_i2_reg_1054;
-        tmp_i_i_i_i_108_reg_1014_pp0_iter27_reg <= tmp_i_i_i_i_108_reg_1014;
-        tmp_i_i_i_i_108_reg_1014_pp0_iter28_reg <= tmp_i_i_i_i_108_reg_1014_pp0_iter27_reg;
+        tmp_i_i_i_i_111_reg_1014_pp0_iter27_reg <= tmp_i_i_i_i_111_reg_1014;
+        tmp_i_i_i_i_111_reg_1014_pp0_iter28_reg <= tmp_i_i_i_i_111_reg_1014_pp0_iter27_reg;
         tmp_i_i_i_i_reg_1008_pp0_iter27_reg <= tmp_i_i_i_i_reg_1008;
         tmp_i_i_i_i_reg_1008_pp0_iter28_reg <= tmp_i_i_i_i_reg_1008_pp0_iter27_reg;
     end
@@ -1338,13 +1338,13 @@ assign sel_tmp47_i_fu_826_p2 = (tmp_18_i_reg_1105 & isneg_reg_1020_pp0_iter27_re
 
 assign sel_tmp4_i_fu_627_p3 = ((sel_tmp3_i_fu_623_p2[0:0] === 1'b1) ? p_Val2_13_reg_1092 : sel_tmp_i_fu_617_p3);
 
-assign sel_tmp50_i_demorgan_fu_881_p2 = (tmp_i_i_i_i_reg_1008_pp0_iter28_reg & tmp_i_i_i_i_108_reg_1014_pp0_iter28_reg);
+assign sel_tmp50_i_demorgan_fu_881_p2 = (tmp_i_i_i_i_reg_1008_pp0_iter28_reg & tmp_i_i_i_i_111_reg_1014_pp0_iter28_reg);
 
 assign sel_tmp50_i_fu_885_p2 = (sel_tmp50_i_demorgan_fu_881_p2 ^ 1'd1);
 
 assign sel_tmp51_i_fu_891_p2 = (tmp_9_i_reg_1040_pp0_iter28_reg & sel_tmp50_i_fu_885_p2);
 
-assign sel_tmp52_i_fu_907_p3 = ((tmp_39_fu_902_p2[0:0] === 1'b1) ? 8'd0 : p_Val2_14_reg_1158);
+assign sel_tmp52_i_fu_907_p3 = ((tmp_40_fu_902_p2[0:0] === 1'b1) ? 8'd0 : p_Val2_14_reg_1158);
 
 assign sel_tmp55_demorgan_i_fu_914_p2 = (tmp_demorgan_i_fu_849_p2 | tmp_9_i_reg_1040_pp0_iter28_reg);
 
@@ -1412,9 +1412,9 @@ assign tmp_28_i_fu_804_p2 = (1'd1 ^ Range1_all_ones_2_i_fu_798_p2);
 
 assign tmp_2_i_fu_339_p2 = (12'd0 - F2_fu_327_p2);
 
-assign tmp_39_fu_902_p2 = (underflow_reg_1164 | tmp_s_fu_896_p2);
-
 assign tmp_3_i_fu_353_p2 = ((loc_V_fu_261_p4 == 11'd1075) ? 1'b1 : 1'b0);
+
+assign tmp_40_fu_902_p2 = (underflow_reg_1164 | tmp_s_fu_896_p2);
 
 assign tmp_5_i3_fu_387_p2 = ((F2_2_reg_1060 < 12'd54) ? 1'b1 : 1'b0);
 
@@ -1432,13 +1432,13 @@ assign tmp_99_fu_402_p1 = tmp_11_i_fu_396_p2[7:0];
 
 assign tmp_9_i_fu_321_p2 = ((tmp_fu_287_p1 == 63'd0) ? 1'b1 : 1'b0);
 
-assign tmp_demorgan_i_fu_849_p2 = (tmp_i_i_i_i_reg_1008_pp0_iter28_reg & tmp_i_i_i_i_108_reg_1014_pp0_iter28_reg);
+assign tmp_demorgan_i_fu_849_p2 = (tmp_i_i_i_i_reg_1008_pp0_iter28_reg & tmp_i_i_i_i_111_reg_1014_pp0_iter28_reg);
 
 assign tmp_fu_287_p1 = p_Val2_11_fu_258_p1[62:0];
 
 assign tmp_i2_fu_333_p2 = (($signed(F2_fu_327_p2) > $signed(12'd0)) ? 1'b1 : 1'b0);
 
-assign tmp_i_i_i_i_108_fu_281_p2 = ((loc_V_1_fu_271_p1 != 52'd0) ? 1'b1 : 1'b0);
+assign tmp_i_i_i_i_111_fu_281_p2 = ((loc_V_1_fu_271_p1 != 52'd0) ? 1'b1 : 1'b0);
 
 assign tmp_i_i_i_i_fu_275_p2 = ((loc_V_fu_261_p4 == 11'd2047) ? 1'b1 : 1'b0);
 

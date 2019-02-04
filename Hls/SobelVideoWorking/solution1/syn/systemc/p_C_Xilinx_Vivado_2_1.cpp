@@ -29,49 +29,65 @@ p_C_Xilinx_Vivado_2_1::p_C_Xilinx_Vivado_2_1(sc_module_name name) : sc_module(na
     sensitive << ( ap_CS_fsm );
 
     SC_METHOD(thread_ap_block_state1);
-    sensitive << ( ap_start );
+    sensitive << ( real_start );
     sensitive << ( ap_done_reg );
-    sensitive << ( img_0a_rows_V3_out_full_n );
+    sensitive << ( img_0a_rows_V5_out_full_n );
 
     SC_METHOD(thread_ap_done);
-    sensitive << ( ap_start );
+    sensitive << ( real_start );
     sensitive << ( ap_done_reg );
     sensitive << ( ap_CS_fsm_state1 );
-    sensitive << ( img_0a_rows_V3_out_full_n );
+    sensitive << ( img_0a_rows_V5_out_full_n );
 
     SC_METHOD(thread_ap_idle);
-    sensitive << ( ap_start );
+    sensitive << ( real_start );
     sensitive << ( ap_CS_fsm_state1 );
 
     SC_METHOD(thread_ap_ready);
-    sensitive << ( ap_start );
+    sensitive << ( internal_ap_ready );
+
+    SC_METHOD(thread_img_0a_rows_V5_out_blk_n);
+    sensitive << ( ap_CS_fsm_state1 );
+    sensitive << ( img_0a_rows_V5_out_full_n );
+
+    SC_METHOD(thread_img_0a_rows_V5_out_din);
+    sensitive << ( real_start );
     sensitive << ( ap_done_reg );
     sensitive << ( ap_CS_fsm_state1 );
-    sensitive << ( img_0a_rows_V3_out_full_n );
+    sensitive << ( img_0a_rows_V5_out_full_n );
 
-    SC_METHOD(thread_img_0a_rows_V3_out_blk_n);
-    sensitive << ( ap_CS_fsm_state1 );
-    sensitive << ( img_0a_rows_V3_out_full_n );
-
-    SC_METHOD(thread_img_0a_rows_V3_out_din);
-    sensitive << ( ap_start );
+    SC_METHOD(thread_img_0a_rows_V5_out_write);
+    sensitive << ( real_start );
     sensitive << ( ap_done_reg );
     sensitive << ( ap_CS_fsm_state1 );
-    sensitive << ( img_0a_rows_V3_out_full_n );
+    sensitive << ( img_0a_rows_V5_out_full_n );
 
-    SC_METHOD(thread_img_0a_rows_V3_out_write);
-    sensitive << ( ap_start );
+    SC_METHOD(thread_internal_ap_ready);
+    sensitive << ( real_start );
     sensitive << ( ap_done_reg );
     sensitive << ( ap_CS_fsm_state1 );
-    sensitive << ( img_0a_rows_V3_out_full_n );
+    sensitive << ( img_0a_rows_V5_out_full_n );
+
+    SC_METHOD(thread_real_start);
+    sensitive << ( ap_start );
+    sensitive << ( start_full_n );
+    sensitive << ( start_once_reg );
+
+    SC_METHOD(thread_start_out);
+    sensitive << ( real_start );
+
+    SC_METHOD(thread_start_write);
+    sensitive << ( real_start );
+    sensitive << ( start_once_reg );
 
     SC_METHOD(thread_ap_NS_fsm);
-    sensitive << ( ap_start );
+    sensitive << ( real_start );
     sensitive << ( ap_done_reg );
     sensitive << ( ap_CS_fsm );
     sensitive << ( ap_CS_fsm_state1 );
-    sensitive << ( img_0a_rows_V3_out_full_n );
+    sensitive << ( img_0a_rows_V5_out_full_n );
 
+    start_once_reg = SC_LOGIC_0;
     ap_done_reg = SC_LOGIC_0;
     ap_CS_fsm = "1";
     static int apTFileNum = 0;
@@ -85,19 +101,25 @@ p_C_Xilinx_Vivado_2_1::p_C_Xilinx_Vivado_2_1(sc_module_name name) : sc_module(na
     sc_trace(mVcdFile, ap_clk, "(port)ap_clk");
     sc_trace(mVcdFile, ap_rst, "(port)ap_rst");
     sc_trace(mVcdFile, ap_start, "(port)ap_start");
+    sc_trace(mVcdFile, start_full_n, "(port)start_full_n");
     sc_trace(mVcdFile, ap_done, "(port)ap_done");
     sc_trace(mVcdFile, ap_continue, "(port)ap_continue");
     sc_trace(mVcdFile, ap_idle, "(port)ap_idle");
     sc_trace(mVcdFile, ap_ready, "(port)ap_ready");
-    sc_trace(mVcdFile, img_0a_rows_V3_out_din, "(port)img_0a_rows_V3_out_din");
-    sc_trace(mVcdFile, img_0a_rows_V3_out_full_n, "(port)img_0a_rows_V3_out_full_n");
-    sc_trace(mVcdFile, img_0a_rows_V3_out_write, "(port)img_0a_rows_V3_out_write");
+    sc_trace(mVcdFile, start_out, "(port)start_out");
+    sc_trace(mVcdFile, start_write, "(port)start_write");
+    sc_trace(mVcdFile, img_0a_rows_V5_out_din, "(port)img_0a_rows_V5_out_din");
+    sc_trace(mVcdFile, img_0a_rows_V5_out_full_n, "(port)img_0a_rows_V5_out_full_n");
+    sc_trace(mVcdFile, img_0a_rows_V5_out_write, "(port)img_0a_rows_V5_out_write");
 #endif
 #ifdef __HLS_TRACE_LEVEL_INT__
+    sc_trace(mVcdFile, real_start, "real_start");
+    sc_trace(mVcdFile, start_once_reg, "start_once_reg");
     sc_trace(mVcdFile, ap_done_reg, "ap_done_reg");
     sc_trace(mVcdFile, ap_CS_fsm, "ap_CS_fsm");
     sc_trace(mVcdFile, ap_CS_fsm_state1, "ap_CS_fsm_state1");
-    sc_trace(mVcdFile, img_0a_rows_V3_out_blk_n, "img_0a_rows_V3_out_blk_n");
+    sc_trace(mVcdFile, internal_ap_ready, "internal_ap_ready");
+    sc_trace(mVcdFile, img_0a_rows_V5_out_blk_n, "img_0a_rows_V5_out_blk_n");
     sc_trace(mVcdFile, ap_block_state1, "ap_block_state1");
     sc_trace(mVcdFile, ap_NS_fsm, "ap_NS_fsm");
 #endif
@@ -122,9 +144,19 @@ void p_C_Xilinx_Vivado_2_1::thread_ap_clk_no_reset_() {
     } else {
         if (esl_seteq<1,1,1>(ap_const_logic_1, ap_continue.read())) {
             ap_done_reg = ap_const_logic_0;
-        } else if ((!(esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_0) || esl_seteq<1,1,1>(img_0a_rows_V3_out_full_n.read(), ap_const_logic_0) || esl_seteq<1,1,1>(ap_done_reg.read(), ap_const_logic_1)) && 
+        } else if ((!(esl_seteq<1,1,1>(real_start.read(), ap_const_logic_0) || esl_seteq<1,1,1>(img_0a_rows_V5_out_full_n.read(), ap_const_logic_0) || esl_seteq<1,1,1>(ap_done_reg.read(), ap_const_logic_1)) && 
                     esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()))) {
             ap_done_reg = ap_const_logic_1;
+        }
+    }
+    if ( ap_rst.read() == ap_const_logic_1) {
+        start_once_reg = ap_const_logic_0;
+    } else {
+        if ((esl_seteq<1,1,1>(ap_const_logic_1, real_start.read()) && 
+             esl_seteq<1,1,1>(ap_const_logic_0, internal_ap_ready.read()))) {
+            start_once_reg = ap_const_logic_1;
+        } else if (esl_seteq<1,1,1>(ap_const_logic_1, internal_ap_ready.read())) {
+            start_once_reg = ap_const_logic_0;
         }
     }
 }
@@ -134,11 +166,11 @@ void p_C_Xilinx_Vivado_2_1::thread_ap_CS_fsm_state1() {
 }
 
 void p_C_Xilinx_Vivado_2_1::thread_ap_block_state1() {
-    ap_block_state1 = (esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_0) || esl_seteq<1,1,1>(img_0a_rows_V3_out_full_n.read(), ap_const_logic_0) || esl_seteq<1,1,1>(ap_done_reg.read(), ap_const_logic_1));
+    ap_block_state1 = (esl_seteq<1,1,1>(real_start.read(), ap_const_logic_0) || esl_seteq<1,1,1>(img_0a_rows_V5_out_full_n.read(), ap_const_logic_0) || esl_seteq<1,1,1>(ap_done_reg.read(), ap_const_logic_1));
 }
 
 void p_C_Xilinx_Vivado_2_1::thread_ap_done() {
-    if ((!(esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_0) || esl_seteq<1,1,1>(img_0a_rows_V3_out_full_n.read(), ap_const_logic_0) || esl_seteq<1,1,1>(ap_done_reg.read(), ap_const_logic_1)) && 
+    if ((!(esl_seteq<1,1,1>(real_start.read(), ap_const_logic_0) || esl_seteq<1,1,1>(img_0a_rows_V5_out_full_n.read(), ap_const_logic_0) || esl_seteq<1,1,1>(ap_done_reg.read(), ap_const_logic_1)) && 
          esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()))) {
         ap_done = ap_const_logic_1;
     } else {
@@ -147,7 +179,7 @@ void p_C_Xilinx_Vivado_2_1::thread_ap_done() {
 }
 
 void p_C_Xilinx_Vivado_2_1::thread_ap_idle() {
-    if ((esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_0) && 
+    if ((esl_seteq<1,1,1>(real_start.read(), ap_const_logic_0) && 
          esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()))) {
         ap_idle = ap_const_logic_1;
     } else {
@@ -156,32 +188,58 @@ void p_C_Xilinx_Vivado_2_1::thread_ap_idle() {
 }
 
 void p_C_Xilinx_Vivado_2_1::thread_ap_ready() {
-    if ((!(esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_0) || esl_seteq<1,1,1>(img_0a_rows_V3_out_full_n.read(), ap_const_logic_0) || esl_seteq<1,1,1>(ap_done_reg.read(), ap_const_logic_1)) && 
-         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()))) {
-        ap_ready = ap_const_logic_1;
-    } else {
-        ap_ready = ap_const_logic_0;
-    }
+    ap_ready = internal_ap_ready.read();
 }
 
-void p_C_Xilinx_Vivado_2_1::thread_img_0a_rows_V3_out_blk_n() {
+void p_C_Xilinx_Vivado_2_1::thread_img_0a_rows_V5_out_blk_n() {
     if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read())) {
-        img_0a_rows_V3_out_blk_n = img_0a_rows_V3_out_full_n.read();
+        img_0a_rows_V5_out_blk_n = img_0a_rows_V5_out_full_n.read();
     } else {
-        img_0a_rows_V3_out_blk_n = ap_const_logic_1;
+        img_0a_rows_V5_out_blk_n = ap_const_logic_1;
     }
 }
 
-void p_C_Xilinx_Vivado_2_1::thread_img_0a_rows_V3_out_din() {
-    img_0a_rows_V3_out_din = ap_const_lv11_2D0;
+void p_C_Xilinx_Vivado_2_1::thread_img_0a_rows_V5_out_din() {
+    img_0a_rows_V5_out_din = ap_const_lv11_2D0;
 }
 
-void p_C_Xilinx_Vivado_2_1::thread_img_0a_rows_V3_out_write() {
-    if ((!(esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_0) || esl_seteq<1,1,1>(img_0a_rows_V3_out_full_n.read(), ap_const_logic_0) || esl_seteq<1,1,1>(ap_done_reg.read(), ap_const_logic_1)) && 
+void p_C_Xilinx_Vivado_2_1::thread_img_0a_rows_V5_out_write() {
+    if ((!(esl_seteq<1,1,1>(real_start.read(), ap_const_logic_0) || esl_seteq<1,1,1>(img_0a_rows_V5_out_full_n.read(), ap_const_logic_0) || esl_seteq<1,1,1>(ap_done_reg.read(), ap_const_logic_1)) && 
          esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()))) {
-        img_0a_rows_V3_out_write = ap_const_logic_1;
+        img_0a_rows_V5_out_write = ap_const_logic_1;
     } else {
-        img_0a_rows_V3_out_write = ap_const_logic_0;
+        img_0a_rows_V5_out_write = ap_const_logic_0;
+    }
+}
+
+void p_C_Xilinx_Vivado_2_1::thread_internal_ap_ready() {
+    if ((!(esl_seteq<1,1,1>(real_start.read(), ap_const_logic_0) || esl_seteq<1,1,1>(img_0a_rows_V5_out_full_n.read(), ap_const_logic_0) || esl_seteq<1,1,1>(ap_done_reg.read(), ap_const_logic_1)) && 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()))) {
+        internal_ap_ready = ap_const_logic_1;
+    } else {
+        internal_ap_ready = ap_const_logic_0;
+    }
+}
+
+void p_C_Xilinx_Vivado_2_1::thread_real_start() {
+    if ((esl_seteq<1,1,1>(ap_const_logic_0, start_full_n.read()) && 
+         esl_seteq<1,1,1>(ap_const_logic_0, start_once_reg.read()))) {
+        real_start = ap_const_logic_0;
+    } else {
+        real_start = ap_start.read();
+    }
+}
+
+void p_C_Xilinx_Vivado_2_1::thread_start_out() {
+    start_out = real_start.read();
+}
+
+void p_C_Xilinx_Vivado_2_1::thread_start_write() {
+    if ((esl_seteq<1,1,1>(ap_const_logic_0, start_once_reg.read()) && 
+         esl_seteq<1,1,1>(ap_const_logic_1, real_start.read()))) {
+        start_write = ap_const_logic_1;
+    } else {
+        start_write = ap_const_logic_0;
     }
 }
 

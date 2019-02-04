@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'p_C_Xilinx_Vivado_2_1'
 ================================================================
-* Date:           Mon Feb  4 18:08:52 2019
+* Date:           Mon Feb  4 18:37:45 2019
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        SobelVideoWorking
@@ -53,10 +53,10 @@
 |FIFO             |        -|      -|       -|       -|
 |Instance         |        -|      -|       -|       -|
 |Memory           |        -|      -|       -|       -|
-|Multiplexer      |        -|      -|       -|      18|
-|Register         |        -|      -|       2|       -|
+|Multiplexer      |        -|      -|       -|      27|
+|Register         |        -|      -|       3|       -|
 +-----------------+---------+-------+--------+--------+
-|Total            |        0|      0|       2|      20|
+|Total            |        0|      0|       3|      29|
 +-----------------+---------+-------+--------+--------+
 |Available        |      730|    740|  269200|  129000|
 +-----------------+---------+-------+--------+--------+
@@ -90,20 +90,22 @@
     |           Name           | LUT| Input Size| Bits| Total Bits|
     +--------------------------+----+-----------+-----+-----------+
     |ap_done                   |   9|          2|    1|          2|
-    |img_0a_rows_V3_out_blk_n  |   9|          2|    1|          2|
+    |img_0a_rows_V5_out_blk_n  |   9|          2|    1|          2|
+    |real_start                |   9|          2|    1|          2|
     +--------------------------+----+-----------+-----+-----------+
-    |Total                     |  18|          4|    2|          4|
+    |Total                     |  27|          6|    3|          6|
     +--------------------------+----+-----------+-----+-----------+
 
     * Register: 
-    +-------------+---+----+-----+-----------+
-    |     Name    | FF| LUT| Bits| Const Bits|
-    +-------------+---+----+-----+-----------+
-    |ap_CS_fsm    |  1|   0|    1|          0|
-    |ap_done_reg  |  1|   0|    1|          0|
-    +-------------+---+----+-----+-----------+
-    |Total        |  2|   0|    2|          0|
-    +-------------+---+----+-----+-----------+
+    +----------------+---+----+-----+-----------+
+    |      Name      | FF| LUT| Bits| Const Bits|
+    +----------------+---+----+-----+-----------+
+    |ap_CS_fsm       |  1|   0|    1|          0|
+    |ap_done_reg     |  1|   0|    1|          0|
+    |start_once_reg  |  1|   0|    1|          0|
+    +----------------+---+----+-----+-----------+
+    |Total           |  3|   0|    3|          0|
+    +----------------+---+----+-----+-----------+
 
 
 
@@ -117,12 +119,15 @@
 |ap_clk                     |  in |    1| ap_ctrl_hs | __C:/Xilinx/Vivado/2.1 | return value |
 |ap_rst                     |  in |    1| ap_ctrl_hs | __C:/Xilinx/Vivado/2.1 | return value |
 |ap_start                   |  in |    1| ap_ctrl_hs | __C:/Xilinx/Vivado/2.1 | return value |
+|start_full_n               |  in |    1| ap_ctrl_hs | __C:/Xilinx/Vivado/2.1 | return value |
 |ap_done                    | out |    1| ap_ctrl_hs | __C:/Xilinx/Vivado/2.1 | return value |
 |ap_continue                |  in |    1| ap_ctrl_hs | __C:/Xilinx/Vivado/2.1 | return value |
 |ap_idle                    | out |    1| ap_ctrl_hs | __C:/Xilinx/Vivado/2.1 | return value |
 |ap_ready                   | out |    1| ap_ctrl_hs | __C:/Xilinx/Vivado/2.1 | return value |
-|img_0a_rows_V3_out_din     | out |   11|   ap_fifo  |   img_0a_rows_V3_out   |    pointer   |
-|img_0a_rows_V3_out_full_n  |  in |    1|   ap_fifo  |   img_0a_rows_V3_out   |    pointer   |
-|img_0a_rows_V3_out_write   | out |    1|   ap_fifo  |   img_0a_rows_V3_out   |    pointer   |
+|start_out                  | out |    1| ap_ctrl_hs | __C:/Xilinx/Vivado/2.1 | return value |
+|start_write                | out |    1| ap_ctrl_hs | __C:/Xilinx/Vivado/2.1 | return value |
+|img_0a_rows_V5_out_din     | out |   11|   ap_fifo  |   img_0a_rows_V5_out   |    pointer   |
+|img_0a_rows_V5_out_full_n  |  in |    1|   ap_fifo  |   img_0a_rows_V5_out   |    pointer   |
+|img_0a_rows_V5_out_write   | out |    1|   ap_fifo  |   img_0a_rows_V5_out   |    pointer   |
 +---------------------------+-----+-----+------------+------------------------+--------------+
 

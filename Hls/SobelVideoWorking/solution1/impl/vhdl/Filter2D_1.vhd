@@ -488,7 +488,7 @@ begin
         we1 => k_buf_0_val_5_we1,
         d1 => k_buf_0_val_5_d1);
 
-    Sobel_filter_mux_hbi_U39 : component Sobel_filter_mux_hbi
+    Sobel_filter_mux_hbi_U49 : component Sobel_filter_mux_hbi
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -504,7 +504,7 @@ begin
         din3 => col_assign_6_t_fu_788_p2,
         dout => tmp_26_fu_793_p5);
 
-    Sobel_filter_mux_hbi_U40 : component Sobel_filter_mux_hbi
+    Sobel_filter_mux_hbi_U50 : component Sobel_filter_mux_hbi
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -520,7 +520,7 @@ begin
         din3 => col_assign_6_t_fu_788_p2,
         dout => tmp_28_fu_812_p5);
 
-    Sobel_filter_mux_hbi_U41 : component Sobel_filter_mux_hbi
+    Sobel_filter_mux_hbi_U51 : component Sobel_filter_mux_hbi
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -536,7 +536,7 @@ begin
         din3 => col_assign_6_t_fu_788_p2,
         dout => tmp_30_fu_831_p5);
 
-    Sobel_filter_mux_hbi_U42 : component Sobel_filter_mux_hbi
+    Sobel_filter_mux_hbi_U52 : component Sobel_filter_mux_hbi
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -552,7 +552,7 @@ begin
         din3 => row_assign_13_0_t_reg_1430,
         dout => tmp_31_fu_886_p5);
 
-    Sobel_filter_mux_hbi_U43 : component Sobel_filter_mux_hbi
+    Sobel_filter_mux_hbi_U53 : component Sobel_filter_mux_hbi
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -568,7 +568,7 @@ begin
         din3 => row_assign_13_1_t_reg_1435,
         dout => tmp_32_fu_904_p5);
 
-    Sobel_filter_mux_hbi_U44 : component Sobel_filter_mux_hbi
+    Sobel_filter_mux_hbi_U54 : component Sobel_filter_mux_hbi
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -584,7 +584,7 @@ begin
         din3 => row_assign_13_2_t_reg_1440,
         dout => tmp_33_fu_922_p5);
 
-    Sobel_filter_mul_ibs_U45 : component Sobel_filter_mul_ibs
+    Sobel_filter_mul_ibs_U55 : component Sobel_filter_mul_ibs
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -596,7 +596,7 @@ begin
         din1 => r_V_10_1_1_fu_1282_p1,
         dout => r_V_10_1_1_fu_1282_p2);
 
-    Sobel_filter_ama_jbC_U46 : component Sobel_filter_ama_jbC
+    Sobel_filter_ama_jbC_U56 : component Sobel_filter_ama_jbC
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -612,7 +612,7 @@ begin
         din3 => grp_fu_1288_p3,
         dout => grp_fu_1288_p4);
 
-    Sobel_filter_mac_kbM_U47 : component Sobel_filter_mac_kbM
+    Sobel_filter_mac_kbM_U57 : component Sobel_filter_mac_kbM
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -626,7 +626,7 @@ begin
         din2 => r_V_10_1_1_reg_1515,
         dout => grp_fu_1298_p3);
 
-    Sobel_filter_mac_lbW_U48 : component Sobel_filter_mac_lbW
+    Sobel_filter_mac_lbW_U58 : component Sobel_filter_mac_lbW
     generic map (
         ID => 1,
         NUM_STAGE => 1,

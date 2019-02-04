@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'Duplicate'
 ================================================================
-* Date:           Mon Feb  4 18:08:46 2019
+* Date:           Mon Feb  4 18:37:39 2019
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        SobelVideoWorking
@@ -95,9 +95,9 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 1.66>
-ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %dst2_data_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str439, i32 0, i32 0, [1 x i8]* @p_str440, [1 x i8]* @p_str441, [1 x i8]* @p_str442, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str443, [1 x i8]* @p_str444)"   --->   Operation 6 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %dst1_data_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str432, i32 0, i32 0, [1 x i8]* @p_str433, [1 x i8]* @p_str434, [1 x i8]* @p_str435, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str436, [1 x i8]* @p_str437)"   --->   Operation 7 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %src_data_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str425, i32 0, i32 0, [1 x i8]* @p_str426, [1 x i8]* @p_str427, [1 x i8]* @p_str428, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str429, [1 x i8]* @p_str430)"   --->   Operation 8 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %dst2_data_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str483, i32 0, i32 0, [1 x i8]* @p_str484, [1 x i8]* @p_str485, [1 x i8]* @p_str486, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str487, [1 x i8]* @p_str488)"   --->   Operation 6 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %dst1_data_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str476, i32 0, i32 0, [1 x i8]* @p_str477, [1 x i8]* @p_str478, [1 x i8]* @p_str479, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str480, [1 x i8]* @p_str481)"   --->   Operation 7 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %src_data_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str469, i32 0, i32 0, [1 x i8]* @p_str470, [1 x i8]* @p_str471, [1 x i8]* @p_str472, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str473, [1 x i8]* @p_str474)"   --->   Operation 8 'specinterface' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 9 [1/1] (1.66ns)   --->   "br label %0" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:1501]   --->   Operation 9 'br' <Predicate = true> <Delay = 1.66>
 
 State 2 <SV = 1> <Delay = 2.67>

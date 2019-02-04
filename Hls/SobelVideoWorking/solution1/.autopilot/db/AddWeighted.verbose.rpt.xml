@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'AddWeighted'" level="0">
-<item name = "Date">Mon Feb  4 18:08:56 2019
+<item name = "Date">Mon Feb  4 18:37:50 2019
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">SobelVideoWorking</item>
@@ -63,12 +63,12 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
-<column name="Sobel_filter_daddrcU_U84">Sobel_filter_daddrcU, 0, 3, 509, 817</column>
-<column name="Sobel_filter_daddrcU_U85">Sobel_filter_daddrcU, 0, 3, 509, 817</column>
-<column name="Sobel_filter_dmulsc4_U86">Sobel_filter_dmulsc4, 0, 11, 317, 204</column>
-<column name="Sobel_filter_dmulsc4_U87">Sobel_filter_dmulsc4, 0, 11, 317, 204</column>
-<column name="Sobel_filter_sitotde_U88">Sobel_filter_sitotde, 0, 0, 412, 452</column>
-<column name="Sobel_filter_sitotde_U89">Sobel_filter_sitotde, 0, 0, 412, 452</column>
+<column name="Sobel_filter_daddrcU_U94">Sobel_filter_daddrcU, 0, 3, 509, 817</column>
+<column name="Sobel_filter_daddrcU_U95">Sobel_filter_daddrcU, 0, 3, 509, 817</column>
+<column name="Sobel_filter_dmulsc4_U96">Sobel_filter_dmulsc4, 0, 11, 317, 204</column>
+<column name="Sobel_filter_dmulsc4_U97">Sobel_filter_dmulsc4, 0, 11, 317, 204</column>
+<column name="Sobel_filter_sitotde_U98">Sobel_filter_sitotde, 0, 0, 412, 452</column>
+<column name="Sobel_filter_sitotde_U99">Sobel_filter_sitotde, 0, 0, 412, 452</column>
 </table>
 </item>
 <item name = "DSP48"><table name="" hasTotal="0">
@@ -133,7 +133,7 @@
 <column name="tmp_5_i3_fu_387_p2">icmp, 0, 0, 13, 12, 6</column>
 <column name="tmp_9_i_fu_321_p2">icmp, 0, 0, 29, 63, 1</column>
 <column name="tmp_i2_fu_333_p2">icmp, 0, 0, 13, 12, 1</column>
-<column name="tmp_i_i_i_i_108_fu_281_p2">icmp, 0, 0, 29, 52, 1</column>
+<column name="tmp_i_i_i_i_111_fu_281_p2">icmp, 0, 0, 29, 52, 1</column>
 <column name="tmp_i_i_i_i_fu_275_p2">icmp, 0, 0, 13, 11, 2</column>
 <column name="Range2_V_1_fu_560_p2">lshr, 0, 0, 162, 54, 54</column>
 <column name="r_V_fu_715_p2">lshr, 0, 0, 162, 2, 54</column>
@@ -148,7 +148,7 @@
 <column name="sel_tmp33_i_fu_584_p2">or, 0, 0, 2, 1, 1</column>
 <column name="sel_tmp55_demorgan_i_fu_914_p2">or, 0, 0, 2, 1, 1</column>
 <column name="tmp8_fu_838_p2">or, 0, 0, 2, 1, 1</column>
-<column name="tmp_39_fu_902_p2">or, 0, 0, 2, 1, 1</column>
+<column name="tmp_40_fu_902_p2">or, 0, 0, 2, 1, 1</column>
 <column name="tmp_s_fu_896_p2">or, 0, 0, 2, 1, 1</column>
 <column name="F2_2_fu_345_p3">select, 0, 0, 12, 1, 12</column>
 <column name="Range1_all_ones_2_i_s_fu_767_p3">select, 0, 0, 2, 1, 1</column>
@@ -277,12 +277,12 @@
 <column name="tmp_9_i_reg_1040">1, 0, 1, 0</column>
 <column name="tmp_i2_reg_1054">1, 0, 1, 0</column>
 <column name="tmp_i2_reg_1054_pp0_iter27_reg">1, 0, 1, 0</column>
-<column name="tmp_i_i_i_i_108_reg_1014">1, 0, 1, 0</column>
+<column name="tmp_i_i_i_i_111_reg_1014">1, 0, 1, 0</column>
 <column name="tmp_i_i_i_i_reg_1008">1, 0, 1, 0</column>
 <column name="underflow_reg_1164">1, 0, 1, 0</column>
 <column name="exitcond_i_reg_949">64, 32, 1, 0</column>
 <column name="tmp_9_i_reg_1040">64, 32, 1, 0</column>
-<column name="tmp_i_i_i_i_108_reg_1014">64, 32, 1, 0</column>
+<column name="tmp_i_i_i_i_111_reg_1014">64, 32, 1, 0</column>
 <column name="tmp_i_i_i_i_reg_1008">64, 32, 1, 0</column>
 </table>
 </item>

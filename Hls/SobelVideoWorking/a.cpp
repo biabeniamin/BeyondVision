@@ -26,6 +26,7 @@ hls::AXIvideo2Mat(INPUT_STREAM, img_0a);
 	GRAY_IMAGE  img_5(MAX_HEIGHT, MAX_WIDTH);
 	RGB_IMAGE  img_6(MAX_HEIGHT, MAX_WIDTH);
 #pragma HLS dataflow
+	hls::AXIvideo2Mat(INPUT_STREAM, img_0);
 	hls::CvtColor<HLS_BGR2GRAY>(img_0, img_1);
 	hls::GaussianBlur<3,3>(img_1,img_2);
 	hls::Duplicate(img_2,img_2a,img_2b);

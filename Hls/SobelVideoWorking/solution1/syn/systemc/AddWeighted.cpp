@@ -56,46 +56,46 @@ const sc_lv<12> AddWeighted::ap_const_lv12_9 = "1001";
 const sc_lv<54> AddWeighted::ap_const_lv54_3FFFFFFFFFFFFF = "111111111111111111111111111111111111111111111111111111";
 
 AddWeighted::AddWeighted(sc_module_name name) : sc_module(name), mVcdFile(0) {
-    Sobel_filter_daddrcU_U84 = new Sobel_filter_daddrcU<1,6,64,64,64>("Sobel_filter_daddrcU_U84");
-    Sobel_filter_daddrcU_U84->clk(ap_clk);
-    Sobel_filter_daddrcU_U84->reset(ap_rst);
-    Sobel_filter_daddrcU_U84->din0(t1_reg_988);
-    Sobel_filter_daddrcU_U84->din1(t2_reg_993);
-    Sobel_filter_daddrcU_U84->ce(grp_fu_201_ce);
-    Sobel_filter_daddrcU_U84->dout(grp_fu_201_p2);
-    Sobel_filter_daddrcU_U85 = new Sobel_filter_daddrcU<1,6,64,64,64>("Sobel_filter_daddrcU_U85");
-    Sobel_filter_daddrcU_U85->clk(ap_clk);
-    Sobel_filter_daddrcU_U85->reset(ap_rst);
-    Sobel_filter_daddrcU_U85->din0(tmp_46_i_reg_998);
-    Sobel_filter_daddrcU_U85->din1(ap_var_for_const0);
-    Sobel_filter_daddrcU_U85->ce(grp_fu_205_ce);
-    Sobel_filter_daddrcU_U85->dout(grp_fu_205_p2);
-    Sobel_filter_dmulsc4_U86 = new Sobel_filter_dmulsc4<1,6,64,64,64>("Sobel_filter_dmulsc4_U86");
-    Sobel_filter_dmulsc4_U86->clk(ap_clk);
-    Sobel_filter_dmulsc4_U86->reset(ap_rst);
-    Sobel_filter_dmulsc4_U86->din0(tmp_43_i_reg_978);
-    Sobel_filter_dmulsc4_U86->din1(ap_var_for_const1);
-    Sobel_filter_dmulsc4_U86->ce(grp_fu_210_ce);
-    Sobel_filter_dmulsc4_U86->dout(grp_fu_210_p2);
-    Sobel_filter_dmulsc4_U87 = new Sobel_filter_dmulsc4<1,6,64,64,64>("Sobel_filter_dmulsc4_U87");
-    Sobel_filter_dmulsc4_U87->clk(ap_clk);
-    Sobel_filter_dmulsc4_U87->reset(ap_rst);
-    Sobel_filter_dmulsc4_U87->din0(tmp_45_i_reg_983);
-    Sobel_filter_dmulsc4_U87->din1(ap_var_for_const1);
-    Sobel_filter_dmulsc4_U87->ce(grp_fu_215_ce);
-    Sobel_filter_dmulsc4_U87->dout(grp_fu_215_p2);
-    Sobel_filter_sitotde_U88 = new Sobel_filter_sitotde<1,6,32,64>("Sobel_filter_sitotde_U88");
-    Sobel_filter_sitotde_U88->clk(ap_clk);
-    Sobel_filter_sitotde_U88->reset(ap_rst);
-    Sobel_filter_sitotde_U88->din0(grp_fu_220_p0);
-    Sobel_filter_sitotde_U88->ce(grp_fu_220_ce);
-    Sobel_filter_sitotde_U88->dout(grp_fu_220_p1);
-    Sobel_filter_sitotde_U89 = new Sobel_filter_sitotde<1,6,32,64>("Sobel_filter_sitotde_U89");
-    Sobel_filter_sitotde_U89->clk(ap_clk);
-    Sobel_filter_sitotde_U89->reset(ap_rst);
-    Sobel_filter_sitotde_U89->din0(grp_fu_223_p0);
-    Sobel_filter_sitotde_U89->ce(grp_fu_223_ce);
-    Sobel_filter_sitotde_U89->dout(grp_fu_223_p1);
+    Sobel_filter_daddrcU_U94 = new Sobel_filter_daddrcU<1,6,64,64,64>("Sobel_filter_daddrcU_U94");
+    Sobel_filter_daddrcU_U94->clk(ap_clk);
+    Sobel_filter_daddrcU_U94->reset(ap_rst);
+    Sobel_filter_daddrcU_U94->din0(t1_reg_988);
+    Sobel_filter_daddrcU_U94->din1(t2_reg_993);
+    Sobel_filter_daddrcU_U94->ce(grp_fu_201_ce);
+    Sobel_filter_daddrcU_U94->dout(grp_fu_201_p2);
+    Sobel_filter_daddrcU_U95 = new Sobel_filter_daddrcU<1,6,64,64,64>("Sobel_filter_daddrcU_U95");
+    Sobel_filter_daddrcU_U95->clk(ap_clk);
+    Sobel_filter_daddrcU_U95->reset(ap_rst);
+    Sobel_filter_daddrcU_U95->din0(tmp_46_i_reg_998);
+    Sobel_filter_daddrcU_U95->din1(ap_var_for_const0);
+    Sobel_filter_daddrcU_U95->ce(grp_fu_205_ce);
+    Sobel_filter_daddrcU_U95->dout(grp_fu_205_p2);
+    Sobel_filter_dmulsc4_U96 = new Sobel_filter_dmulsc4<1,6,64,64,64>("Sobel_filter_dmulsc4_U96");
+    Sobel_filter_dmulsc4_U96->clk(ap_clk);
+    Sobel_filter_dmulsc4_U96->reset(ap_rst);
+    Sobel_filter_dmulsc4_U96->din0(tmp_43_i_reg_978);
+    Sobel_filter_dmulsc4_U96->din1(ap_var_for_const1);
+    Sobel_filter_dmulsc4_U96->ce(grp_fu_210_ce);
+    Sobel_filter_dmulsc4_U96->dout(grp_fu_210_p2);
+    Sobel_filter_dmulsc4_U97 = new Sobel_filter_dmulsc4<1,6,64,64,64>("Sobel_filter_dmulsc4_U97");
+    Sobel_filter_dmulsc4_U97->clk(ap_clk);
+    Sobel_filter_dmulsc4_U97->reset(ap_rst);
+    Sobel_filter_dmulsc4_U97->din0(tmp_45_i_reg_983);
+    Sobel_filter_dmulsc4_U97->din1(ap_var_for_const1);
+    Sobel_filter_dmulsc4_U97->ce(grp_fu_215_ce);
+    Sobel_filter_dmulsc4_U97->dout(grp_fu_215_p2);
+    Sobel_filter_sitotde_U98 = new Sobel_filter_sitotde<1,6,32,64>("Sobel_filter_sitotde_U98");
+    Sobel_filter_sitotde_U98->clk(ap_clk);
+    Sobel_filter_sitotde_U98->reset(ap_rst);
+    Sobel_filter_sitotde_U98->din0(grp_fu_220_p0);
+    Sobel_filter_sitotde_U98->ce(grp_fu_220_ce);
+    Sobel_filter_sitotde_U98->dout(grp_fu_220_p1);
+    Sobel_filter_sitotde_U99 = new Sobel_filter_sitotde<1,6,32,64>("Sobel_filter_sitotde_U99");
+    Sobel_filter_sitotde_U99->clk(ap_clk);
+    Sobel_filter_sitotde_U99->reset(ap_rst);
+    Sobel_filter_sitotde_U99->din0(grp_fu_223_p0);
+    Sobel_filter_sitotde_U99->ce(grp_fu_223_ce);
+    Sobel_filter_sitotde_U99->dout(grp_fu_223_p1);
 
     SC_METHOD(thread_ap_clk_no_reset_);
     dont_initialize();
@@ -570,7 +570,7 @@ AddWeighted::AddWeighted(sc_module_name name) : sc_module(name), mVcdFile(0) {
 
     SC_METHOD(thread_sel_tmp50_i_demorgan_fu_881_p2);
     sensitive << ( tmp_i_i_i_i_reg_1008_pp0_iter28_reg );
-    sensitive << ( tmp_i_i_i_i_108_reg_1014_pp0_iter28_reg );
+    sensitive << ( tmp_i_i_i_i_111_reg_1014_pp0_iter28_reg );
 
     SC_METHOD(thread_sel_tmp50_i_fu_885_p2);
     sensitive << ( sel_tmp50_i_demorgan_fu_881_p2 );
@@ -581,7 +581,7 @@ AddWeighted::AddWeighted(sc_module_name name) : sc_module(name), mVcdFile(0) {
 
     SC_METHOD(thread_sel_tmp52_i_fu_907_p3);
     sensitive << ( p_Val2_14_reg_1158 );
-    sensitive << ( tmp_39_fu_902_p2 );
+    sensitive << ( tmp_40_fu_902_p2 );
 
     SC_METHOD(thread_sel_tmp55_demorgan_i_fu_914_p2);
     sensitive << ( tmp_9_i_reg_1040_pp0_iter28_reg );
@@ -737,15 +737,15 @@ AddWeighted::AddWeighted(sc_module_name name) : sc_module(name), mVcdFile(0) {
     SC_METHOD(thread_tmp_2_i_fu_339_p2);
     sensitive << ( F2_fu_327_p2 );
 
-    SC_METHOD(thread_tmp_39_fu_902_p2);
-    sensitive << ( underflow_reg_1164 );
-    sensitive << ( tmp_s_fu_896_p2 );
-
     SC_METHOD(thread_tmp_3_i_fu_353_p2);
     sensitive << ( ap_block_pp0_stage0_11001 );
     sensitive << ( exitcond_i_reg_949_pp0_iter25_reg );
     sensitive << ( ap_enable_reg_pp0_iter26 );
     sensitive << ( loc_V_fu_261_p4 );
+
+    SC_METHOD(thread_tmp_40_fu_902_p2);
+    sensitive << ( underflow_reg_1164 );
+    sensitive << ( tmp_s_fu_896_p2 );
 
     SC_METHOD(thread_tmp_5_i3_fu_387_p2);
     sensitive << ( ap_block_pp0_stage0_11001 );
@@ -779,7 +779,7 @@ AddWeighted::AddWeighted(sc_module_name name) : sc_module(name), mVcdFile(0) {
 
     SC_METHOD(thread_tmp_demorgan_i_fu_849_p2);
     sensitive << ( tmp_i_i_i_i_reg_1008_pp0_iter28_reg );
-    sensitive << ( tmp_i_i_i_i_108_reg_1014_pp0_iter28_reg );
+    sensitive << ( tmp_i_i_i_i_111_reg_1014_pp0_iter28_reg );
 
     SC_METHOD(thread_tmp_fu_287_p1);
     sensitive << ( p_Val2_11_fu_258_p1 );
@@ -790,7 +790,7 @@ AddWeighted::AddWeighted(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sensitive << ( F2_fu_327_p2 );
     sensitive << ( ap_enable_reg_pp0_iter26 );
 
-    SC_METHOD(thread_tmp_i_i_i_i_108_fu_281_p2);
+    SC_METHOD(thread_tmp_i_i_i_i_111_fu_281_p2);
     sensitive << ( ap_block_pp0_stage0_11001 );
     sensitive << ( exitcond_i_reg_949_pp0_iter25_reg );
     sensitive << ( ap_enable_reg_pp0_iter26 );
@@ -986,10 +986,10 @@ AddWeighted::AddWeighted(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, tmp_i_i_i_i_reg_1008, "tmp_i_i_i_i_reg_1008");
     sc_trace(mVcdFile, tmp_i_i_i_i_reg_1008_pp0_iter27_reg, "tmp_i_i_i_i_reg_1008_pp0_iter27_reg");
     sc_trace(mVcdFile, tmp_i_i_i_i_reg_1008_pp0_iter28_reg, "tmp_i_i_i_i_reg_1008_pp0_iter28_reg");
-    sc_trace(mVcdFile, tmp_i_i_i_i_108_fu_281_p2, "tmp_i_i_i_i_108_fu_281_p2");
-    sc_trace(mVcdFile, tmp_i_i_i_i_108_reg_1014, "tmp_i_i_i_i_108_reg_1014");
-    sc_trace(mVcdFile, tmp_i_i_i_i_108_reg_1014_pp0_iter27_reg, "tmp_i_i_i_i_108_reg_1014_pp0_iter27_reg");
-    sc_trace(mVcdFile, tmp_i_i_i_i_108_reg_1014_pp0_iter28_reg, "tmp_i_i_i_i_108_reg_1014_pp0_iter28_reg");
+    sc_trace(mVcdFile, tmp_i_i_i_i_111_fu_281_p2, "tmp_i_i_i_i_111_fu_281_p2");
+    sc_trace(mVcdFile, tmp_i_i_i_i_111_reg_1014, "tmp_i_i_i_i_111_reg_1014");
+    sc_trace(mVcdFile, tmp_i_i_i_i_111_reg_1014_pp0_iter27_reg, "tmp_i_i_i_i_111_reg_1014_pp0_iter27_reg");
+    sc_trace(mVcdFile, tmp_i_i_i_i_111_reg_1014_pp0_iter28_reg, "tmp_i_i_i_i_111_reg_1014_pp0_iter28_reg");
     sc_trace(mVcdFile, isneg_reg_1020, "isneg_reg_1020");
     sc_trace(mVcdFile, isneg_reg_1020_pp0_iter27_reg, "isneg_reg_1020_pp0_iter27_reg");
     sc_trace(mVcdFile, p_Result_s_fu_311_p1, "p_Result_s_fu_311_p1");
@@ -1163,7 +1163,7 @@ AddWeighted::AddWeighted(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, sel_tmp51_i_fu_891_p2, "sel_tmp51_i_fu_891_p2");
     sc_trace(mVcdFile, tmp_demorgan_i_fu_849_p2, "tmp_demorgan_i_fu_849_p2");
     sc_trace(mVcdFile, tmp_s_fu_896_p2, "tmp_s_fu_896_p2");
-    sc_trace(mVcdFile, tmp_39_fu_902_p2, "tmp_39_fu_902_p2");
+    sc_trace(mVcdFile, tmp_40_fu_902_p2, "tmp_40_fu_902_p2");
     sc_trace(mVcdFile, sel_tmp55_demorgan_i_fu_914_p2, "sel_tmp55_demorgan_i_fu_914_p2");
     sc_trace(mVcdFile, brmerge_i_fu_868_p2, "brmerge_i_fu_868_p2");
     sc_trace(mVcdFile, sel_tmp55_i_fu_919_p2, "sel_tmp55_i_fu_919_p2");
@@ -1188,12 +1188,12 @@ AddWeighted::~AddWeighted() {
     if (mVcdFile) 
         sc_close_vcd_trace_file(mVcdFile);
 
-    delete Sobel_filter_daddrcU_U84;
-    delete Sobel_filter_daddrcU_U85;
-    delete Sobel_filter_dmulsc4_U86;
-    delete Sobel_filter_dmulsc4_U87;
-    delete Sobel_filter_sitotde_U88;
-    delete Sobel_filter_sitotde_U89;
+    delete Sobel_filter_daddrcU_U94;
+    delete Sobel_filter_daddrcU_U95;
+    delete Sobel_filter_dmulsc4_U96;
+    delete Sobel_filter_dmulsc4_U97;
+    delete Sobel_filter_sitotde_U98;
+    delete Sobel_filter_sitotde_U99;
 }
 
 void AddWeighted::thread_ap_var_for_const0() {
@@ -1467,7 +1467,7 @@ void AddWeighted::thread_ap_clk_no_reset_() {
         tmp_3_i_reg_1067 = tmp_3_i_fu_353_p2.read();
         tmp_9_i_reg_1040 = tmp_9_i_fu_321_p2.read();
         tmp_i2_reg_1054 = tmp_i2_fu_333_p2.read();
-        tmp_i_i_i_i_108_reg_1014 = tmp_i_i_i_i_108_fu_281_p2.read();
+        tmp_i_i_i_i_111_reg_1014 = tmp_i_i_i_i_111_fu_281_p2.read();
         tmp_i_i_i_i_reg_1008 = tmp_i_i_i_i_fu_275_p2.read();
     }
     if (esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0)) {
@@ -1505,8 +1505,8 @@ void AddWeighted::thread_ap_clk_no_reset_() {
         tmp_9_i_reg_1040_pp0_iter27_reg = tmp_9_i_reg_1040.read();
         tmp_9_i_reg_1040_pp0_iter28_reg = tmp_9_i_reg_1040_pp0_iter27_reg.read();
         tmp_i2_reg_1054_pp0_iter27_reg = tmp_i2_reg_1054.read();
-        tmp_i_i_i_i_108_reg_1014_pp0_iter27_reg = tmp_i_i_i_i_108_reg_1014.read();
-        tmp_i_i_i_i_108_reg_1014_pp0_iter28_reg = tmp_i_i_i_i_108_reg_1014_pp0_iter27_reg.read();
+        tmp_i_i_i_i_111_reg_1014_pp0_iter27_reg = tmp_i_i_i_i_111_reg_1014.read();
+        tmp_i_i_i_i_111_reg_1014_pp0_iter28_reg = tmp_i_i_i_i_111_reg_1014_pp0_iter27_reg.read();
         tmp_i_i_i_i_reg_1008_pp0_iter27_reg = tmp_i_i_i_i_reg_1008.read();
         tmp_i_i_i_i_reg_1008_pp0_iter28_reg = tmp_i_i_i_i_reg_1008_pp0_iter27_reg.read();
     }
@@ -2152,7 +2152,7 @@ void AddWeighted::thread_sel_tmp4_i_fu_627_p3() {
 }
 
 void AddWeighted::thread_sel_tmp50_i_demorgan_fu_881_p2() {
-    sel_tmp50_i_demorgan_fu_881_p2 = (tmp_i_i_i_i_reg_1008_pp0_iter28_reg.read() & tmp_i_i_i_i_108_reg_1014_pp0_iter28_reg.read());
+    sel_tmp50_i_demorgan_fu_881_p2 = (tmp_i_i_i_i_reg_1008_pp0_iter28_reg.read() & tmp_i_i_i_i_111_reg_1014_pp0_iter28_reg.read());
 }
 
 void AddWeighted::thread_sel_tmp50_i_fu_885_p2() {
@@ -2164,7 +2164,7 @@ void AddWeighted::thread_sel_tmp51_i_fu_891_p2() {
 }
 
 void AddWeighted::thread_sel_tmp52_i_fu_907_p3() {
-    sel_tmp52_i_fu_907_p3 = (!tmp_39_fu_902_p2.read()[0].is_01())? sc_lv<8>(): ((tmp_39_fu_902_p2.read()[0].to_bool())? ap_const_lv8_0: p_Val2_14_reg_1158.read());
+    sel_tmp52_i_fu_907_p3 = (!tmp_40_fu_902_p2.read()[0].is_01())? sc_lv<8>(): ((tmp_40_fu_902_p2.read()[0].to_bool())? ap_const_lv8_0: p_Val2_14_reg_1158.read());
 }
 
 void AddWeighted::thread_sel_tmp55_demorgan_i_fu_914_p2() {
@@ -2343,12 +2343,12 @@ void AddWeighted::thread_tmp_2_i_fu_339_p2() {
     tmp_2_i_fu_339_p2 = (!ap_const_lv12_0.is_01() || !F2_fu_327_p2.read().is_01())? sc_lv<12>(): (sc_biguint<12>(ap_const_lv12_0) - sc_biguint<12>(F2_fu_327_p2.read()));
 }
 
-void AddWeighted::thread_tmp_39_fu_902_p2() {
-    tmp_39_fu_902_p2 = (tmp_s_fu_896_p2.read() | underflow_reg_1164.read());
-}
-
 void AddWeighted::thread_tmp_3_i_fu_353_p2() {
     tmp_3_i_fu_353_p2 = (!loc_V_fu_261_p4.read().is_01() || !ap_const_lv11_433.is_01())? sc_lv<1>(): sc_lv<1>(loc_V_fu_261_p4.read() == ap_const_lv11_433);
+}
+
+void AddWeighted::thread_tmp_40_fu_902_p2() {
+    tmp_40_fu_902_p2 = (tmp_s_fu_896_p2.read() | underflow_reg_1164.read());
 }
 
 void AddWeighted::thread_tmp_5_i3_fu_387_p2() {
@@ -2384,7 +2384,7 @@ void AddWeighted::thread_tmp_9_i_fu_321_p2() {
 }
 
 void AddWeighted::thread_tmp_demorgan_i_fu_849_p2() {
-    tmp_demorgan_i_fu_849_p2 = (tmp_i_i_i_i_reg_1008_pp0_iter28_reg.read() & tmp_i_i_i_i_108_reg_1014_pp0_iter28_reg.read());
+    tmp_demorgan_i_fu_849_p2 = (tmp_i_i_i_i_reg_1008_pp0_iter28_reg.read() & tmp_i_i_i_i_111_reg_1014_pp0_iter28_reg.read());
 }
 
 void AddWeighted::thread_tmp_fu_287_p1() {
@@ -2395,8 +2395,8 @@ void AddWeighted::thread_tmp_i2_fu_333_p2() {
     tmp_i2_fu_333_p2 = (!F2_fu_327_p2.read().is_01() || !ap_const_lv12_0.is_01())? sc_lv<1>(): (sc_bigint<12>(F2_fu_327_p2.read()) > sc_bigint<12>(ap_const_lv12_0));
 }
 
-void AddWeighted::thread_tmp_i_i_i_i_108_fu_281_p2() {
-    tmp_i_i_i_i_108_fu_281_p2 = (!loc_V_1_fu_271_p1.read().is_01() || !ap_const_lv52_0.is_01())? sc_lv<1>(): sc_lv<1>(loc_V_1_fu_271_p1.read() != ap_const_lv52_0);
+void AddWeighted::thread_tmp_i_i_i_i_111_fu_281_p2() {
+    tmp_i_i_i_i_111_fu_281_p2 = (!loc_V_1_fu_271_p1.read().is_01() || !ap_const_lv52_0.is_01())? sc_lv<1>(): sc_lv<1>(loc_V_1_fu_271_p1.read() != ap_const_lv52_0);
 }
 
 void AddWeighted::thread_tmp_i_i_i_i_fu_275_p2() {

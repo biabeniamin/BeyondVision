@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'p_C_Xilinx_Vivado_2_1'" level="0">
-<item name = "Date">Mon Feb  4 18:08:52 2019
+<item name = "Date">Mon Feb  4 18:37:45 2019
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">SobelVideoWorking</item>
@@ -51,8 +51,8 @@
 <column name="FIFO">-, -, -, -</column>
 <column name="Instance">-, -, -, -</column>
 <column name="Memory">-, -, -, -</column>
-<column name="Multiplexer">-, -, -, 18</column>
-<column name="Register">-, -, 2, -</column>
+<column name="Multiplexer">-, -, -, 27</column>
+<column name="Register">-, -, 3, -</column>
 <specialColumn name="Available">730, 740, 269200, 129000</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, ~0</specialColumn>
 </table>
@@ -83,13 +83,15 @@
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_done">9, 2, 1, 2</column>
-<column name="img_0a_rows_V3_out_blk_n">9, 2, 1, 2</column>
+<column name="img_0a_rows_V5_out_blk_n">9, 2, 1, 2</column>
+<column name="real_start">9, 2, 1, 2</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">1, 0, 1, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="start_once_reg">1, 0, 1, 0</column>
 </table>
 </item>
 </section>
@@ -102,13 +104,16 @@
 <column name="ap_clk">in, 1, ap_ctrl_hs, __C:/Xilinx/Vivado/2.1, return value</column>
 <column name="ap_rst">in, 1, ap_ctrl_hs, __C:/Xilinx/Vivado/2.1, return value</column>
 <column name="ap_start">in, 1, ap_ctrl_hs, __C:/Xilinx/Vivado/2.1, return value</column>
+<column name="start_full_n">in, 1, ap_ctrl_hs, __C:/Xilinx/Vivado/2.1, return value</column>
 <column name="ap_done">out, 1, ap_ctrl_hs, __C:/Xilinx/Vivado/2.1, return value</column>
 <column name="ap_continue">in, 1, ap_ctrl_hs, __C:/Xilinx/Vivado/2.1, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, __C:/Xilinx/Vivado/2.1, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, __C:/Xilinx/Vivado/2.1, return value</column>
-<column name="img_0a_rows_V3_out_din">out, 11, ap_fifo, img_0a_rows_V3_out, pointer</column>
-<column name="img_0a_rows_V3_out_full_n">in, 1, ap_fifo, img_0a_rows_V3_out, pointer</column>
-<column name="img_0a_rows_V3_out_write">out, 1, ap_fifo, img_0a_rows_V3_out, pointer</column>
+<column name="start_out">out, 1, ap_ctrl_hs, __C:/Xilinx/Vivado/2.1, return value</column>
+<column name="start_write">out, 1, ap_ctrl_hs, __C:/Xilinx/Vivado/2.1, return value</column>
+<column name="img_0a_rows_V5_out_din">out, 11, ap_fifo, img_0a_rows_V5_out, pointer</column>
+<column name="img_0a_rows_V5_out_full_n">in, 1, ap_fifo, img_0a_rows_V5_out, pointer</column>
+<column name="img_0a_rows_V5_out_write">out, 1, ap_fifo, img_0a_rows_V5_out, pointer</column>
 </table>
 </item>
 </section>

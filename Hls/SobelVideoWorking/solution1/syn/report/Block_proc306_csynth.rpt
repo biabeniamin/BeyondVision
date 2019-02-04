@@ -1,0 +1,217 @@
+
+
+================================================================
+== Vivado HLS Report for 'Block_proc306'
+================================================================
+* Date:           Mon Feb  4 18:37:52 2019
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        SobelVideoWorking
+* Solution:       solution1
+* Product family: artix7
+* Target device:  xc7a200tsbg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|    11.000|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+----------+
+    |     Latency     |     Interval    | Pipeline |
+    |   min  |   max  |   min  |   max  |   Type   |
+    +--------+--------+--------+--------+----------+
+    |  943937|  943937|  943922|  943922| dataflow |
+    +--------+--------+--------+--------+----------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------+-----------------------+--------+--------+--------+--------+---------+
+        |                          |                       |     Latency     |     Interval    | Pipeline|
+        |         Instance         |         Module        |   min  |   max  |   min  |   max  |   Type  |
+        +--------------------------+-----------------------+--------+--------+--------+--------+---------+
+        |AddWeighted_U0            |AddWeighted            |  943921|  943921|  943921|  943921|   none  |
+        |Sobel_U0                  |Sobel                  |  930660|  930660|  930660|  930660|   none  |
+        |Sobel_1_U0                |Sobel_1                |  930660|  930660|  930660|  930660|   none  |
+        |GaussianBlur_U0           |GaussianBlur           |  930660|  930660|  930660|  930660|   none  |
+        |AXIvideo2Mat559_U0        |AXIvideo2Mat559        |       3|  926643|       3|  926643|   none  |
+        |Mat2AXIvideo598_U0        |Mat2AXIvideo598        |       1|  924481|       1|  924481|   none  |
+        |AXIvideo2Mat_U0           |AXIvideo2Mat           |  926643|  926643|  926643|  926643|   none  |
+        |CvtColor_1_U0             |CvtColor_1             |  925921|  925921|  925921|  925921|   none  |
+        |Mat2AXIvideo_U0           |Mat2AXIvideo           |  924481|  924481|  924481|  924481|   none  |
+        |CvtColor_U0               |CvtColor               |  923761|  923761|  923761|  923761|   none  |
+        |Duplicate_U0              |Duplicate              |  923761|  923761|  923761|  923761|   none  |
+        |p_C_Xilinx_Vivado_2_1_U0  |p_C_Xilinx_Vivado_2_1  |       0|       0|       0|       0|   none  |
+        |p_C_Xilinx_Vivado_2_U0    |p_C_Xilinx_Vivado_2    |       0|       0|       0|       0|   none  |
+        +--------------------------+-----------------------+--------+--------+--------+--------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
++-----------------+---------+-------+--------+--------+
+|DSP              |        -|      -|       -|       -|
+|Expression       |        -|      -|       0|      36|
+|FIFO             |        0|      -|     100|     374|
+|Instance         |        9|     39|    6226|   10506|
+|Memory           |        -|      -|       -|       -|
+|Multiplexer      |        -|      -|       -|      36|
+|Register         |        -|      -|       6|       -|
++-----------------+---------+-------+--------+--------+
+|Total            |        9|     39|    6332|   10952|
++-----------------+---------+-------+--------+--------+
+|Available        |      730|    740|  269200|  129000|
++-----------------+---------+-------+--------+--------+
+|Utilization (%)  |        1|      5|       2|       8|
++-----------------+---------+-------+--------+--------+
+
++ Detail: 
+    * Instance: 
+    +--------------------------+-----------------------+---------+-------+------+------+
+    |         Instance         |         Module        | BRAM_18K| DSP48E|  FF  |  LUT |
+    +--------------------------+-----------------------+---------+-------+------+------+
+    |AXIvideo2Mat_U0           |AXIvideo2Mat           |        0|      0|   216|   458|
+    |AXIvideo2Mat559_U0        |AXIvideo2Mat559        |        0|      0|   345|   547|
+    |AddWeighted_U0            |AddWeighted            |        0|     28|  3473|  4588|
+    |CvtColor_U0               |CvtColor               |        0|      0|    40|   185|
+    |CvtColor_1_U0             |CvtColor_1             |        0|      3|   215|   249|
+    |Duplicate_U0              |Duplicate              |        0|      0|    40|   176|
+    |GaussianBlur_U0           |GaussianBlur           |        3|      4|   516|  1069|
+    |Mat2AXIvideo_U0           |Mat2AXIvideo           |        0|      0|   119|   368|
+    |Mat2AXIvideo598_U0        |Mat2AXIvideo598        |        0|      0|   281|   487|
+    |Sobel_U0                  |Sobel                  |        3|      2|   488|  1165|
+    |Sobel_1_U0                |Sobel_1                |        3|      2|   487|  1156|
+    |p_C_Xilinx_Vivado_2_U0    |p_C_Xilinx_Vivado_2    |        0|      0|     3|    29|
+    |p_C_Xilinx_Vivado_2_1_U0  |p_C_Xilinx_Vivado_2_1  |        0|      0|     3|    29|
+    +--------------------------+-----------------------+---------+-------+------+------+
+    |Total                     |                       |        9|     39|  6226| 10506|
+    +--------------------------+-----------------------+---------+-------+------+------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +------------------------+---------+---+----+------+-----+---------+
+    |          Name          | BRAM_18K| FF| LUT| Depth| Bits| Size:D*B|
+    +------------------------+---------+---+----+------+-----+---------+
+    |img_0_data_stream_0_U   |        0|  5|  18|     2|    8|       16|
+    |img_0_data_stream_1_U   |        0|  5|  18|     2|    8|       16|
+    |img_0_data_stream_2_U   |        0|  5|  18|     2|    8|       16|
+    |img_0a_cols_V6_c2_U     |        0|  5|  22|     2|   12|       24|
+    |img_0a_cols_V6_c_U      |        0|  5|  22|     2|   12|       24|
+    |img_0a_data_stream_0_U  |        0|  5|  18|     2|    8|       16|
+    |img_0a_data_stream_1_U  |        0|  5|  18|     2|    8|       16|
+    |img_0a_data_stream_2_U  |        0|  5|  18|     2|    8|       16|
+    |img_0a_rows_V5_c1_U     |        0|  5|  21|     2|   11|       22|
+    |img_0a_rows_V5_c_U      |        0|  5|  21|     2|   11|       22|
+    |img_1_data_stream_0_U   |        0|  5|  18|     2|    8|       16|
+    |img_2_data_stream_0_U   |        0|  5|  18|     2|    8|       16|
+    |img_2a_data_stream_0_U  |        0|  5|  18|     2|    8|       16|
+    |img_2b_data_stream_0_U  |        0|  5|  18|     2|    8|       16|
+    |img_3_data_stream_0_U   |        0|  5|  18|     2|    8|       16|
+    |img_4_data_stream_0_U   |        0|  5|  18|     2|    8|       16|
+    |img_5_data_stream_0_U   |        0|  5|  18|     2|    8|       16|
+    |img_6_data_stream_0_U   |        0|  5|  18|     2|    8|       16|
+    |img_6_data_stream_1_U   |        0|  5|  18|     2|    8|       16|
+    |img_6_data_stream_2_U   |        0|  5|  18|     2|    8|       16|
+    +------------------------+---------+---+----+------+-----+---------+
+    |Total                   |        0|100| 374|    40|  174|      348|
+    +------------------------+---------+---+----+------+-----+---------+
+
+    * Expression: 
+    +-------------------------------------+----------+-------+---+----+------------+------------+
+    |            Variable Name            | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------------+----------+-------+---+----+------------+------------+
+    |AXIvideo2Mat559_U0_ap_ready_count    |     +    |      0|  0|  10|           2|           1|
+    |AXIvideo2Mat_U0_ap_ready_count       |     +    |      0|  0|  10|           2|           1|
+    |AXIvideo2Mat559_U0_ap_start          |    and   |      0|  0|   2|           1|           1|
+    |AXIvideo2Mat_U0_ap_start             |    and   |      0|  0|   2|           1|           1|
+    |ap_idle                              |    and   |      0|  0|   2|           1|           1|
+    |ap_sync_continue                     |    and   |      0|  0|   2|           1|           1|
+    |ap_sync_done                         |    and   |      0|  0|   2|           1|           1|
+    |ap_sync_ready                        |    and   |      0|  0|   2|           1|           1|
+    |ap_sync_AXIvideo2Mat559_U0_ap_ready  |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_AXIvideo2Mat_U0_ap_ready     |    or    |      0|  0|   2|           1|           1|
+    +-------------------------------------+----------+-------+---+----+------------+------------+
+    |Total                                |          |      0|  0|  36|          12|          10|
+    +-------------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------------------+----+-----------+-----+-----------+
+    |                   Name                  | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------------------+----+-----------+-----+-----------+
+    |AXIvideo2Mat559_U0_ap_ready_count        |   9|          2|    2|          4|
+    |AXIvideo2Mat_U0_ap_ready_count           |   9|          2|    2|          4|
+    |ap_sync_reg_AXIvideo2Mat559_U0_ap_ready  |   9|          2|    1|          2|
+    |ap_sync_reg_AXIvideo2Mat_U0_ap_ready     |   9|          2|    1|          2|
+    +-----------------------------------------+----+-----------+-----+-----------+
+    |Total                                    |  36|          8|    6|         12|
+    +-----------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------------+---+----+-----+-----------+
+    |                   Name                  | FF| LUT| Bits| Const Bits|
+    +-----------------------------------------+---+----+-----+-----------+
+    |AXIvideo2Mat559_U0_ap_ready_count        |  2|   0|    2|          0|
+    |AXIvideo2Mat_U0_ap_ready_count           |  2|   0|    2|          0|
+    |ap_sync_reg_AXIvideo2Mat559_U0_ap_ready  |  1|   0|    1|          0|
+    |ap_sync_reg_AXIvideo2Mat_U0_ap_ready     |  1|   0|    1|          0|
+    +-----------------------------------------+---+----+-----+-----------+
+    |Total                                    |  6|   0|    6|          0|
+    +-----------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+------------+------------------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  |      Source Object     |    C Type    |
++----------------------+-----+-----+------------+------------------------+--------------+
+|enable_V              |  in |    1|   ap_none  |        enable_V        |    scalar    |
+|INPUT_STREAM_TDATA    |  in |   24|    axis    |  INPUT_STREAM_V_data_V |    pointer   |
+|INPUT_STREAM_TKEEP    |  in |    3|    axis    |  INPUT_STREAM_V_keep_V |    pointer   |
+|INPUT_STREAM_TSTRB    |  in |    3|    axis    |  INPUT_STREAM_V_strb_V |    pointer   |
+|INPUT_STREAM_TUSER    |  in |    1|    axis    |  INPUT_STREAM_V_user_V |    pointer   |
+|INPUT_STREAM_TLAST    |  in |    1|    axis    |  INPUT_STREAM_V_last_V |    pointer   |
+|INPUT_STREAM_TID      |  in |    1|    axis    |   INPUT_STREAM_V_id_V  |    pointer   |
+|INPUT_STREAM_TDEST    |  in |    1|    axis    |  INPUT_STREAM_V_dest_V |    pointer   |
+|INPUT_STREAM_TVALID   |  in |    1|    axis    |  INPUT_STREAM_V_dest_V |    pointer   |
+|INPUT_STREAM_TREADY   | out |    1|    axis    |  INPUT_STREAM_V_dest_V |    pointer   |
+|OUTPUT_STREAM_TDATA   | out |   24|    axis    | OUTPUT_STREAM_V_data_V |    pointer   |
+|OUTPUT_STREAM_TKEEP   | out |    3|    axis    | OUTPUT_STREAM_V_keep_V |    pointer   |
+|OUTPUT_STREAM_TSTRB   | out |    3|    axis    | OUTPUT_STREAM_V_strb_V |    pointer   |
+|OUTPUT_STREAM_TUSER   | out |    1|    axis    | OUTPUT_STREAM_V_user_V |    pointer   |
+|OUTPUT_STREAM_TLAST   | out |    1|    axis    | OUTPUT_STREAM_V_last_V |    pointer   |
+|OUTPUT_STREAM_TID     | out |    1|    axis    |  OUTPUT_STREAM_V_id_V  |    pointer   |
+|OUTPUT_STREAM_TDEST   | out |    1|    axis    | OUTPUT_STREAM_V_dest_V |    pointer   |
+|OUTPUT_STREAM_TVALID  | out |    1|    axis    | OUTPUT_STREAM_V_dest_V |    pointer   |
+|OUTPUT_STREAM_TREADY  |  in |    1|    axis    | OUTPUT_STREAM_V_dest_V |    pointer   |
+|ap_clk                |  in |    1| ap_ctrl_hs |     Block__proc306     | return value |
+|ap_rst                |  in |    1| ap_ctrl_hs |     Block__proc306     | return value |
+|ap_start              |  in |    1| ap_ctrl_hs |     Block__proc306     | return value |
+|ap_done               | out |    1| ap_ctrl_hs |     Block__proc306     | return value |
+|ap_ready              | out |    1| ap_ctrl_hs |     Block__proc306     | return value |
+|ap_idle               | out |    1| ap_ctrl_hs |     Block__proc306     | return value |
+|ap_continue           |  in |    1| ap_ctrl_hs |     Block__proc306     | return value |
++----------------------+-----+-----+------------+------------------------+--------------+
+

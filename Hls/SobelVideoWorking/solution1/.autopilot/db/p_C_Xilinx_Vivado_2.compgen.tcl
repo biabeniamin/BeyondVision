@@ -11,14 +11,14 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 2 \
-    name img_0a_cols_V4_out \
+    name img_0a_cols_V6_out \
     type fifo \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_img_0a_cols_V4_out \
+    corename dc_img_0a_cols_V6_out \
     op interface \
-    ports { img_0a_cols_V4_out_din { O 12 vector } img_0a_cols_V4_out_full_n { I 1 bit } img_0a_cols_V4_out_write { O 1 bit } } \
+    ports { img_0a_cols_V6_out_din { O 12 vector } img_0a_cols_V6_out_full_n { I 1 bit } img_0a_cols_V6_out_write { O 1 bit } } \
 } "
 }
 
@@ -32,7 +32,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename ap_ctrl \
     op interface \
-    ports { ap_start { I 1 bit } ap_ready { O 1 bit } ap_done { O 1 bit } ap_idle { O 1 bit } ap_continue { I 1 bit } } \
+    ports { ap_done { O 1 bit } ap_idle { O 1 bit } ap_continue { I 1 bit } } \
 } "
 }
 

@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'Mat2AXIvideo'
 ================================================================
-* Date:           Mon Feb  4 18:08:49 2019
+* Date:           Mon Feb  4 18:37:43 2019
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        SobelVideoWorking
@@ -98,9 +98,9 @@ IsGatedGlobalClock: 0
 
 State 1 <SV = 0> <Delay = 1.66>
 ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%tmp_user_V = alloca i1"   --->   Operation 7 'alloca' 'tmp_user_V' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %img_data_stream_2_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str481, i32 0, i32 0, [1 x i8]* @p_str482, [1 x i8]* @p_str483, [1 x i8]* @p_str484, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str485, [1 x i8]* @p_str486)"   --->   Operation 8 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %img_data_stream_1_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str474, i32 0, i32 0, [1 x i8]* @p_str475, [1 x i8]* @p_str476, [1 x i8]* @p_str477, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str478, [1 x i8]* @p_str479)"   --->   Operation 9 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %img_data_stream_0_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str467, i32 0, i32 0, [1 x i8]* @p_str468, [1 x i8]* @p_str469, [1 x i8]* @p_str470, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str471, [1 x i8]* @p_str472)"   --->   Operation 10 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %img_data_stream_2_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str525, i32 0, i32 0, [1 x i8]* @p_str526, [1 x i8]* @p_str527, [1 x i8]* @p_str528, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str529, [1 x i8]* @p_str530)"   --->   Operation 8 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %img_data_stream_1_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str518, i32 0, i32 0, [1 x i8]* @p_str519, [1 x i8]* @p_str520, [1 x i8]* @p_str521, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str522, [1 x i8]* @p_str523)"   --->   Operation 9 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %img_data_stream_0_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str511, i32 0, i32 0, [1 x i8]* @p_str512, [1 x i8]* @p_str513, [1 x i8]* @p_str514, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str515, [1 x i8]* @p_str516)"   --->   Operation 10 'specinterface' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i24* %AXI_video_strm_V_data_V, i3* %AXI_video_strm_V_keep_V, i3* %AXI_video_strm_V_strb_V, i1* %AXI_video_strm_V_user_V, i1* %AXI_video_strm_V_last_V, i1* %AXI_video_strm_V_id_V, i1* %AXI_video_strm_V_dest_V, [5 x i8]* @p_str, i32 1, i32 1, [5 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str3, [1 x i8]* @p_str3, [1 x i8]* @p_str3, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str3, [1 x i8]* @p_str3) nounwind"   --->   Operation 11 'specinterface' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 12 [1/1] (1.66ns)   --->   "store i1 true, i1* %tmp_user_V"   --->   Operation 12 'store' <Predicate = true> <Delay = 1.66>
 ST_1 : Operation 13 [1/1] (1.66ns)   --->   "br label %0" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:125]   --->   Operation 13 'br' <Predicate = true> <Delay = 1.66>

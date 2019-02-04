@@ -58,11 +58,11 @@ Sobel::Sobel(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sensitive << ( ap_CS_fsm );
 
     SC_METHOD(thread_ap_block_state1);
-    sensitive << ( ap_start );
+    sensitive << ( real_start );
     sensitive << ( ap_done_reg );
 
     SC_METHOD(thread_ap_block_state1_ignore_call2);
-    sensitive << ( ap_start );
+    sensitive << ( real_start );
     sensitive << ( ap_done_reg );
 
     SC_METHOD(thread_ap_done);
@@ -71,15 +71,18 @@ Sobel::Sobel(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sensitive << ( ap_CS_fsm_state2 );
 
     SC_METHOD(thread_ap_idle);
-    sensitive << ( ap_start );
+    sensitive << ( real_start );
     sensitive << ( ap_CS_fsm_state1 );
 
     SC_METHOD(thread_ap_ready);
-    sensitive << ( grp_Filter2D_fu_52_ap_done );
-    sensitive << ( ap_CS_fsm_state2 );
+    sensitive << ( internal_ap_ready );
 
     SC_METHOD(thread_grp_Filter2D_fu_52_ap_start);
     sensitive << ( grp_Filter2D_fu_52_ap_start_reg );
+
+    SC_METHOD(thread_internal_ap_ready);
+    sensitive << ( grp_Filter2D_fu_52_ap_done );
+    sensitive << ( ap_CS_fsm_state2 );
 
     SC_METHOD(thread_p_dst_data_stream_V_din);
     sensitive << ( grp_Filter2D_fu_52_p_dst_data_stream_V_din );
@@ -93,8 +96,20 @@ Sobel::Sobel(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sensitive << ( grp_Filter2D_fu_52_p_src_data_stream_V_read );
     sensitive << ( ap_CS_fsm_state2 );
 
-    SC_METHOD(thread_ap_NS_fsm);
+    SC_METHOD(thread_real_start);
     sensitive << ( ap_start );
+    sensitive << ( start_full_n );
+    sensitive << ( start_once_reg );
+
+    SC_METHOD(thread_start_out);
+    sensitive << ( real_start );
+
+    SC_METHOD(thread_start_write);
+    sensitive << ( real_start );
+    sensitive << ( start_once_reg );
+
+    SC_METHOD(thread_ap_NS_fsm);
+    sensitive << ( real_start );
     sensitive << ( ap_done_reg );
     sensitive << ( ap_CS_fsm );
     sensitive << ( ap_CS_fsm_state1 );
@@ -113,6 +128,7 @@ Sobel::Sobel(sc_module_name name) : sc_module(name), mVcdFile(0) {
 
     SC_THREAD(thread_ap_var_for_const5);
 
+    start_once_reg = SC_LOGIC_0;
     ap_done_reg = SC_LOGIC_0;
     ap_CS_fsm = "01";
     grp_Filter2D_fu_52_ap_start_reg = SC_LOGIC_0;
@@ -127,10 +143,13 @@ Sobel::Sobel(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, ap_clk, "(port)ap_clk");
     sc_trace(mVcdFile, ap_rst, "(port)ap_rst");
     sc_trace(mVcdFile, ap_start, "(port)ap_start");
+    sc_trace(mVcdFile, start_full_n, "(port)start_full_n");
     sc_trace(mVcdFile, ap_done, "(port)ap_done");
     sc_trace(mVcdFile, ap_continue, "(port)ap_continue");
     sc_trace(mVcdFile, ap_idle, "(port)ap_idle");
     sc_trace(mVcdFile, ap_ready, "(port)ap_ready");
+    sc_trace(mVcdFile, start_out, "(port)start_out");
+    sc_trace(mVcdFile, start_write, "(port)start_write");
     sc_trace(mVcdFile, p_src_data_stream_V_dout, "(port)p_src_data_stream_V_dout");
     sc_trace(mVcdFile, p_src_data_stream_V_empty_n, "(port)p_src_data_stream_V_empty_n");
     sc_trace(mVcdFile, p_src_data_stream_V_read, "(port)p_src_data_stream_V_read");
@@ -139,9 +158,12 @@ Sobel::Sobel(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, p_dst_data_stream_V_write, "(port)p_dst_data_stream_V_write");
 #endif
 #ifdef __HLS_TRACE_LEVEL_INT__
+    sc_trace(mVcdFile, real_start, "real_start");
+    sc_trace(mVcdFile, start_once_reg, "start_once_reg");
     sc_trace(mVcdFile, ap_done_reg, "ap_done_reg");
     sc_trace(mVcdFile, ap_CS_fsm, "ap_CS_fsm");
     sc_trace(mVcdFile, ap_CS_fsm_state1, "ap_CS_fsm_state1");
+    sc_trace(mVcdFile, internal_ap_ready, "internal_ap_ready");
     sc_trace(mVcdFile, grp_Filter2D_fu_52_ap_start, "grp_Filter2D_fu_52_ap_start");
     sc_trace(mVcdFile, grp_Filter2D_fu_52_ap_done, "grp_Filter2D_fu_52_ap_done");
     sc_trace(mVcdFile, grp_Filter2D_fu_52_ap_idle, "grp_Filter2D_fu_52_ap_idle");
@@ -209,11 +231,21 @@ void Sobel::thread_ap_clk_no_reset_() {
     if ( ap_rst.read() == ap_const_logic_1) {
         grp_Filter2D_fu_52_ap_start_reg = ap_const_logic_0;
     } else {
-        if ((!(esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_0) || esl_seteq<1,1,1>(ap_done_reg.read(), ap_const_logic_1)) && 
+        if ((!(esl_seteq<1,1,1>(real_start.read(), ap_const_logic_0) || esl_seteq<1,1,1>(ap_done_reg.read(), ap_const_logic_1)) && 
              esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()))) {
             grp_Filter2D_fu_52_ap_start_reg = ap_const_logic_1;
         } else if (esl_seteq<1,1,1>(ap_const_logic_1, grp_Filter2D_fu_52_ap_ready.read())) {
             grp_Filter2D_fu_52_ap_start_reg = ap_const_logic_0;
+        }
+    }
+    if ( ap_rst.read() == ap_const_logic_1) {
+        start_once_reg = ap_const_logic_0;
+    } else {
+        if ((esl_seteq<1,1,1>(ap_const_logic_1, real_start.read()) && 
+             esl_seteq<1,1,1>(ap_const_logic_0, internal_ap_ready.read()))) {
+            start_once_reg = ap_const_logic_1;
+        } else if (esl_seteq<1,1,1>(ap_const_logic_1, internal_ap_ready.read())) {
+            start_once_reg = ap_const_logic_0;
         }
     }
 }
@@ -227,11 +259,11 @@ void Sobel::thread_ap_CS_fsm_state2() {
 }
 
 void Sobel::thread_ap_block_state1() {
-    ap_block_state1 = (esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_0) || esl_seteq<1,1,1>(ap_done_reg.read(), ap_const_logic_1));
+    ap_block_state1 = (esl_seteq<1,1,1>(real_start.read(), ap_const_logic_0) || esl_seteq<1,1,1>(ap_done_reg.read(), ap_const_logic_1));
 }
 
 void Sobel::thread_ap_block_state1_ignore_call2() {
-    ap_block_state1_ignore_call2 = (esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_0) || esl_seteq<1,1,1>(ap_done_reg.read(), ap_const_logic_1));
+    ap_block_state1_ignore_call2 = (esl_seteq<1,1,1>(real_start.read(), ap_const_logic_0) || esl_seteq<1,1,1>(ap_done_reg.read(), ap_const_logic_1));
 }
 
 void Sobel::thread_ap_done() {
@@ -244,7 +276,7 @@ void Sobel::thread_ap_done() {
 }
 
 void Sobel::thread_ap_idle() {
-    if ((esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_0) && 
+    if ((esl_seteq<1,1,1>(real_start.read(), ap_const_logic_0) && 
          esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()))) {
         ap_idle = ap_const_logic_1;
     } else {
@@ -253,16 +285,20 @@ void Sobel::thread_ap_idle() {
 }
 
 void Sobel::thread_ap_ready() {
-    if ((esl_seteq<1,1,1>(grp_Filter2D_fu_52_ap_done.read(), ap_const_logic_1) && 
-         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state2.read()))) {
-        ap_ready = ap_const_logic_1;
-    } else {
-        ap_ready = ap_const_logic_0;
-    }
+    ap_ready = internal_ap_ready.read();
 }
 
 void Sobel::thread_grp_Filter2D_fu_52_ap_start() {
     grp_Filter2D_fu_52_ap_start = grp_Filter2D_fu_52_ap_start_reg.read();
+}
+
+void Sobel::thread_internal_ap_ready() {
+    if ((esl_seteq<1,1,1>(grp_Filter2D_fu_52_ap_done.read(), ap_const_logic_1) && 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state2.read()))) {
+        internal_ap_ready = ap_const_logic_1;
+    } else {
+        internal_ap_ready = ap_const_logic_0;
+    }
 }
 
 void Sobel::thread_p_dst_data_stream_V_din() {
@@ -285,10 +321,32 @@ void Sobel::thread_p_src_data_stream_V_read() {
     }
 }
 
+void Sobel::thread_real_start() {
+    if ((esl_seteq<1,1,1>(ap_const_logic_0, start_full_n.read()) && 
+         esl_seteq<1,1,1>(ap_const_logic_0, start_once_reg.read()))) {
+        real_start = ap_const_logic_0;
+    } else {
+        real_start = ap_start.read();
+    }
+}
+
+void Sobel::thread_start_out() {
+    start_out = real_start.read();
+}
+
+void Sobel::thread_start_write() {
+    if ((esl_seteq<1,1,1>(ap_const_logic_0, start_once_reg.read()) && 
+         esl_seteq<1,1,1>(ap_const_logic_1, real_start.read()))) {
+        start_write = ap_const_logic_1;
+    } else {
+        start_write = ap_const_logic_0;
+    }
+}
+
 void Sobel::thread_ap_NS_fsm() {
     switch (ap_CS_fsm.read().to_uint64()) {
         case 1 : 
-            if ((!(esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_0) || esl_seteq<1,1,1>(ap_done_reg.read(), ap_const_logic_1)) && esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()))) {
+            if ((!(esl_seteq<1,1,1>(real_start.read(), ap_const_logic_0) || esl_seteq<1,1,1>(ap_done_reg.read(), ap_const_logic_1)) && esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()))) {
                 ap_NS_fsm = ap_ST_fsm_state2;
             } else {
                 ap_NS_fsm = ap_ST_fsm_state1;

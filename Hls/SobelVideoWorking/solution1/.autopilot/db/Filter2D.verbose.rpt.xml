@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'Filter2D'" level="0">
-<item name = "Date">Mon Feb  4 18:08:55 2019
+<item name = "Date">Mon Feb  4 18:37:49 2019
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">SobelVideoWorking</item>
@@ -63,18 +63,18 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
-<column name="Sobel_filter_mux_hbi_U62">Sobel_filter_mux_hbi, 0, 0, 0, 15</column>
-<column name="Sobel_filter_mux_hbi_U63">Sobel_filter_mux_hbi, 0, 0, 0, 15</column>
-<column name="Sobel_filter_mux_hbi_U64">Sobel_filter_mux_hbi, 0, 0, 0, 15</column>
-<column name="Sobel_filter_mux_hbi_U65">Sobel_filter_mux_hbi, 0, 0, 0, 15</column>
-<column name="Sobel_filter_mux_hbi_U66">Sobel_filter_mux_hbi, 0, 0, 0, 15</column>
-<column name="Sobel_filter_mux_hbi_U67">Sobel_filter_mux_hbi, 0, 0, 0, 15</column>
+<column name="Sobel_filter_mux_hbi_U72">Sobel_filter_mux_hbi, 0, 0, 0, 15</column>
+<column name="Sobel_filter_mux_hbi_U73">Sobel_filter_mux_hbi, 0, 0, 0, 15</column>
+<column name="Sobel_filter_mux_hbi_U74">Sobel_filter_mux_hbi, 0, 0, 0, 15</column>
+<column name="Sobel_filter_mux_hbi_U75">Sobel_filter_mux_hbi, 0, 0, 0, 15</column>
+<column name="Sobel_filter_mux_hbi_U76">Sobel_filter_mux_hbi, 0, 0, 0, 15</column>
+<column name="Sobel_filter_mux_hbi_U77">Sobel_filter_mux_hbi, 0, 0, 0, 15</column>
 </table>
 </item>
 <item name = "DSP48"><table name="" hasTotal="0">
 <keys size="3">Instance, Module, Expression</keys>
-<column name="Sobel_filter_mac_pcA_U68">Sobel_filter_mac_pcA, i0 + i1 * i2</column>
-<column name="Sobel_filter_mac_qcK_U69">Sobel_filter_mac_qcK, i0 * i1 + i2</column>
+<column name="Sobel_filter_mac_pcA_U78">Sobel_filter_mac_pcA, i0 + i1 * i2</column>
+<column name="Sobel_filter_mac_qcK_U79">Sobel_filter_mac_qcK, i0 * i1 + i2</column>
 </table>
 </item>
 <item name = "Memory"><table name="" hasTotal="1">

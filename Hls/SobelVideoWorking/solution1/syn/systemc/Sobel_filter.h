@@ -11,7 +11,7 @@
 #include "systemc.h"
 #include "AESL_pkg.h"
 
-#include "Block_proc304.h"
+#include "Block_proc306.h"
 
 namespace ap_rtl {
 
@@ -54,39 +54,39 @@ struct Sobel_filter : public sc_module {
 
     ofstream mHdltvinHandle;
     ofstream mHdltvoutHandle;
-    Block_proc304* Block_proc304_U0;
-    sc_signal< sc_lv<24> > Block_proc304_U0_OUTPUT_STREAM_TDATA;
-    sc_signal< sc_lv<3> > Block_proc304_U0_OUTPUT_STREAM_TKEEP;
-    sc_signal< sc_lv<3> > Block_proc304_U0_OUTPUT_STREAM_TSTRB;
-    sc_signal< sc_lv<1> > Block_proc304_U0_OUTPUT_STREAM_TUSER;
-    sc_signal< sc_lv<1> > Block_proc304_U0_OUTPUT_STREAM_TLAST;
-    sc_signal< sc_lv<1> > Block_proc304_U0_OUTPUT_STREAM_TID;
-    sc_signal< sc_lv<1> > Block_proc304_U0_OUTPUT_STREAM_TDEST;
+    Block_proc306* Block_proc306_U0;
+    sc_signal< sc_lv<24> > Block_proc306_U0_OUTPUT_STREAM_TDATA;
+    sc_signal< sc_lv<3> > Block_proc306_U0_OUTPUT_STREAM_TKEEP;
+    sc_signal< sc_lv<3> > Block_proc306_U0_OUTPUT_STREAM_TSTRB;
+    sc_signal< sc_lv<1> > Block_proc306_U0_OUTPUT_STREAM_TUSER;
+    sc_signal< sc_lv<1> > Block_proc306_U0_OUTPUT_STREAM_TLAST;
+    sc_signal< sc_lv<1> > Block_proc306_U0_OUTPUT_STREAM_TID;
+    sc_signal< sc_lv<1> > Block_proc306_U0_OUTPUT_STREAM_TDEST;
     sc_signal< sc_logic > ap_rst_n_inv;
-    sc_signal< sc_logic > Block_proc304_U0_ap_start;
-    sc_signal< sc_logic > Block_proc304_U0_INPUT_STREAM_TREADY;
-    sc_signal< sc_logic > Block_proc304_U0_OUTPUT_STREAM_TVALID;
-    sc_signal< sc_logic > Block_proc304_U0_ap_done;
-    sc_signal< sc_logic > Block_proc304_U0_ap_ready;
-    sc_signal< sc_logic > Block_proc304_U0_ap_idle;
-    sc_signal< sc_logic > Block_proc304_U0_ap_continue;
-    sc_signal< sc_logic > Block_proc304_U0_enable_V_ap_vld;
+    sc_signal< sc_logic > Block_proc306_U0_ap_start;
+    sc_signal< sc_logic > Block_proc306_U0_INPUT_STREAM_TREADY;
+    sc_signal< sc_logic > Block_proc306_U0_OUTPUT_STREAM_TVALID;
+    sc_signal< sc_logic > Block_proc306_U0_ap_done;
+    sc_signal< sc_logic > Block_proc306_U0_ap_ready;
+    sc_signal< sc_logic > Block_proc306_U0_ap_idle;
+    sc_signal< sc_logic > Block_proc306_U0_ap_continue;
+    sc_signal< sc_logic > Block_proc306_U0_enable_V_ap_vld;
     sc_signal< sc_logic > ap_sync_continue;
     sc_signal< sc_logic > ap_sync_done;
     sc_signal< sc_logic > ap_sync_ready;
-    sc_signal< sc_logic > Block_proc304_U0_start_full_n;
-    sc_signal< sc_logic > Block_proc304_U0_start_write;
+    sc_signal< sc_logic > Block_proc306_U0_start_full_n;
+    sc_signal< sc_logic > Block_proc306_U0_start_write;
     static const sc_lv<24> ap_const_lv24_0;
     static const sc_lv<3> ap_const_lv3_0;
     static const sc_lv<1> ap_const_lv1_0;
     static const sc_logic ap_const_logic_1;
     static const sc_logic ap_const_logic_0;
     // Thread declarations
-    void thread_Block_proc304_U0_ap_continue();
-    void thread_Block_proc304_U0_ap_start();
-    void thread_Block_proc304_U0_enable_V_ap_vld();
-    void thread_Block_proc304_U0_start_full_n();
-    void thread_Block_proc304_U0_start_write();
+    void thread_Block_proc306_U0_ap_continue();
+    void thread_Block_proc306_U0_ap_start();
+    void thread_Block_proc306_U0_enable_V_ap_vld();
+    void thread_Block_proc306_U0_start_full_n();
+    void thread_Block_proc306_U0_start_write();
     void thread_INPUT_STREAM_TREADY();
     void thread_OUTPUT_STREAM_TDATA();
     void thread_OUTPUT_STREAM_TDEST();

@@ -55,7 +55,7 @@ codeRepl:19  %enable_V_read = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %enable_V)
 
 <Node id="36" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="24" op_3_bw="3" op_4_bw="3" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="1" op_9_bw="24" op_10_bw="3" op_11_bw="3" op_12_bw="1" op_13_bw="1" op_14_bw="1" op_15_bw="1">
 <![CDATA[
-codeRepl:20  call fastcc void @Block__proc304(i1 %enable_V_read, i24* %INPUT_STREAM_V_data_V, i3* %INPUT_STREAM_V_keep_V, i3* %INPUT_STREAM_V_strb_V, i1* %INPUT_STREAM_V_user_V, i1* %INPUT_STREAM_V_last_V, i1* %INPUT_STREAM_V_id_V, i1* %INPUT_STREAM_V_dest_V, i24* %OUTPUT_STREAM_V_data_V, i3* %OUTPUT_STREAM_V_keep_V, i3* %OUTPUT_STREAM_V_strb_V, i1* %OUTPUT_STREAM_V_user_V, i1* %OUTPUT_STREAM_V_last_V, i1* %OUTPUT_STREAM_V_id_V, i1* %OUTPUT_STREAM_V_dest_V)
+codeRepl:20  call fastcc void @Block__proc306(i1 %enable_V_read, i24* %INPUT_STREAM_V_data_V, i3* %INPUT_STREAM_V_keep_V, i3* %INPUT_STREAM_V_strb_V, i1* %INPUT_STREAM_V_user_V, i1* %INPUT_STREAM_V_last_V, i1* %INPUT_STREAM_V_id_V, i1* %INPUT_STREAM_V_dest_V, i24* %OUTPUT_STREAM_V_data_V, i3* %OUTPUT_STREAM_V_keep_V, i3* %OUTPUT_STREAM_V_strb_V, i1* %OUTPUT_STREAM_V_user_V, i1* %OUTPUT_STREAM_V_last_V, i1* %OUTPUT_STREAM_V_id_V, i1* %OUTPUT_STREAM_V_dest_V)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -73,7 +73,7 @@ codeRepl:20  call fastcc void @Block__proc304(i1 %enable_V_read, i24* %INPUT_STR
 
 <Node id="36" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="24" op_3_bw="3" op_4_bw="3" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="1" op_9_bw="24" op_10_bw="3" op_11_bw="3" op_12_bw="1" op_13_bw="1" op_14_bw="1" op_15_bw="1">
 <![CDATA[
-codeRepl:20  call fastcc void @Block__proc304(i1 %enable_V_read, i24* %INPUT_STREAM_V_data_V, i3* %INPUT_STREAM_V_keep_V, i3* %INPUT_STREAM_V_strb_V, i1* %INPUT_STREAM_V_user_V, i1* %INPUT_STREAM_V_last_V, i1* %INPUT_STREAM_V_id_V, i1* %INPUT_STREAM_V_dest_V, i24* %OUTPUT_STREAM_V_data_V, i3* %OUTPUT_STREAM_V_keep_V, i3* %OUTPUT_STREAM_V_strb_V, i1* %OUTPUT_STREAM_V_user_V, i1* %OUTPUT_STREAM_V_last_V, i1* %OUTPUT_STREAM_V_id_V, i1* %OUTPUT_STREAM_V_dest_V)
+codeRepl:20  call fastcc void @Block__proc306(i1 %enable_V_read, i24* %INPUT_STREAM_V_data_V, i3* %INPUT_STREAM_V_keep_V, i3* %INPUT_STREAM_V_strb_V, i1* %INPUT_STREAM_V_user_V, i1* %INPUT_STREAM_V_last_V, i1* %INPUT_STREAM_V_id_V, i1* %INPUT_STREAM_V_dest_V, i24* %OUTPUT_STREAM_V_data_V, i3* %OUTPUT_STREAM_V_keep_V, i3* %OUTPUT_STREAM_V_strb_V, i1* %OUTPUT_STREAM_V_user_V, i1* %OUTPUT_STREAM_V_last_V, i1* %OUTPUT_STREAM_V_id_V, i1* %OUTPUT_STREAM_V_dest_V)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>

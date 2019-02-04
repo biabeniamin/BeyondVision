@@ -31,8 +31,8 @@
 
 <AreaEstimates>
 <Resources>
-<FF>2</FF>
-<LUT>20</LUT>
+<FF>3</FF>
+<LUT>29</LUT>
 <BRAM_18K>0</BRAM_18K>
 <DSP48E>0</DSP48E>
 </Resources>
@@ -79,6 +79,17 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
+<name>start_full_n</name>
+<Object>__C:/Xilinx/Vivado/2.1</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
 <name>ap_done</name>
 <Object>__C:/Xilinx/Vivado/2.1</Object>
 <Type>return value</Type>
@@ -123,8 +134,30 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>img_0a_rows_V3_out_din</name>
-<Object>img_0a_rows_V3_out</Object>
+<name>start_out</name>
+<Object>__C:/Xilinx/Vivado/2.1</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>start_write</name>
+<Object>__C:/Xilinx/Vivado/2.1</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>img_0a_rows_V5_out_din</name>
+<Object>img_0a_rows_V5_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>
@@ -134,8 +167,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>img_0a_rows_V3_out_full_n</name>
-<Object>img_0a_rows_V3_out</Object>
+<name>img_0a_rows_V5_out_full_n</name>
+<Object>img_0a_rows_V5_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>
@@ -145,8 +178,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>img_0a_rows_V3_out_write</name>
-<Object>img_0a_rows_V3_out</Object>
+<name>img_0a_rows_V5_out_write</name>
+<Object>img_0a_rows_V5_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>

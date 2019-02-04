@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'CvtColor_1'" level="0">
-<item name = "Date">Mon Feb  4 18:08:53 2019
+<item name = "Date">Mon Feb  4 18:37:47 2019
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">SobelVideoWorking</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">924481, 924481, 924481, 924481, none</column>
+<column name="">925921, 925921, 925921, 925921, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,8 +35,8 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- loop_height">924480, 924480, 1284, -, -, 720, no</column>
-<column name=" + loop_width">1281, 1281, 3, 1, 1, 1280, yes</column>
+<column name="- loop_height">925920, 925920, 1286, -, -, 720, no</column>
+<column name=" + loop_width">1283, 1283, 5, 1, 1, 1280, yes</column>
 </table>
 </item>
 </section>
@@ -49,12 +49,12 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="DSP">-, 3, -, -</column>
-<column name="Expression">-, -, 0, 98</column>
+<column name="Expression">-, -, 0, 100</column>
 <column name="FIFO">-, -, -, -</column>
 <column name="Instance">-, -, -, -</column>
 <column name="Memory">-, -, -, -</column>
-<column name="Multiplexer">-, -, -, 81</column>
-<column name="Register">-, -, 125, -</column>
+<column name="Multiplexer">-, -, -, 117</column>
+<column name="Register">0, -, 215, 32</column>
 <specialColumn name="Available">730, 740, 269200, 129000</specialColumn>
 <specialColumn name="Utilization (%)">0, ~0, ~0, ~0</specialColumn>
 </table>
@@ -67,9 +67,9 @@
 </item>
 <item name = "DSP48"><table name="" hasTotal="0">
 <keys size="3">Instance, Module, Expression</keys>
-<column name="Sobel_filter_mac_cud_U30">Sobel_filter_mac_cud, i0 + i1 * i2</column>
-<column name="Sobel_filter_mac_dEe_U31">Sobel_filter_mac_dEe, i0 * i1 + i2</column>
-<column name="Sobel_filter_mul_bkb_U29">Sobel_filter_mul_bkb, i0 * i1</column>
+<column name="Sobel_filter_mac_cud_U40">Sobel_filter_mac_cud, i0 + i1 * i2</column>
+<column name="Sobel_filter_mac_dEe_U41">Sobel_filter_mac_dEe, i0 * i1 + i2</column>
+<column name="Sobel_filter_mul_bkb_U39">Sobel_filter_mul_bkb, i0 * i1</column>
 </table>
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
@@ -82,19 +82,20 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="i_1_fu_153_p2">+, 0, 0, 17, 10, 1</column>
-<column name="j_1_fu_165_p2">+, 0, 0, 18, 11, 1</column>
-<column name="p_Val2_8_fu_210_p2">+, 0, 0, 15, 8, 8</column>
-<column name="ap_block_pp0_stage0_01001">and, 0, 0, 2, 1, 1</column>
-<column name="ap_block_state5_pp0_stage0_iter2">and, 0, 0, 2, 1, 1</column>
-<column name="exitcond5_fu_147_p2">icmp, 0, 0, 13, 10, 10</column>
-<column name="exitcond_fu_159_p2">icmp, 0, 0, 13, 11, 11</column>
+<column name="i_1_fu_191_p2">+, 0, 0, 17, 10, 1</column>
+<column name="j_1_fu_203_p2">+, 0, 0, 18, 11, 1</column>
+<column name="p_Val2_8_fu_247_p2">+, 0, 0, 15, 8, 8</column>
+<column name="ap_block_state7_pp0_stage0_iter4">and, 0, 0, 2, 1, 1</column>
+<column name="tmp_39_fu_197_p2">icmp, 0, 0, 13, 11, 11</column>
+<column name="tmp_s_fu_185_p2">icmp, 0, 0, 13, 10, 10</column>
+<column name="ap_block_pp0_stage0_01001">or, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
-<column name="not_carry_fu_229_p2">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state4_pp0_stage0_iter1">or, 0, 0, 2, 1, 1</column>
+<column name="not_carry_fu_266_p2">or, 0, 0, 2, 1, 1</column>
 <column name="p_dst_data_stream_V_din">select, 0, 0, 8, 1, 8</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 <column name="ap_enable_reg_pp0_iter1">xor, 0, 0, 2, 2, 1</column>
-<column name="p_Result_1_i_i_i_n_fu_223_p2">xor, 0, 0, 2, 1, 2</column>
+<column name="p_Result_1_i_i_i_n_fu_260_p2">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -102,10 +103,14 @@
 <column name="ap_NS_fsm">27, 5, 1, 5</column>
 <column name="ap_done">9, 2, 1, 2</column>
 <column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
-<column name="ap_enable_reg_pp0_iter2">9, 2, 1, 2</column>
-<column name="i_reg_125">9, 2, 10, 20</column>
-<column name="j_reg_136">9, 2, 11, 22</column>
+<column name="ap_enable_reg_pp0_iter4">9, 2, 1, 2</column>
+<column name="i_reg_163">9, 2, 10, 20</column>
+<column name="j_reg_174">9, 2, 11, 22</column>
 <column name="p_dst_data_stream_V_blk_n">9, 2, 1, 2</column>
+<column name="p_src_data_stream_0_V_blk_n">9, 2, 1, 2</column>
+<column name="p_src_data_stream_1_V_blk_n">9, 2, 1, 2</column>
+<column name="p_src_data_stream_2_V_blk_n">9, 2, 1, 2</column>
+<column name="real_start">9, 2, 1, 2</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
@@ -115,17 +120,23 @@
 <column name="ap_enable_reg_pp0_iter0">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
-<column name="exitcond_reg_277">1, 0, 1, 0</column>
-<column name="exitcond_reg_277_pp0_iter1_reg">1, 0, 1, 0</column>
-<column name="i_1_reg_272">10, 0, 10, 0</column>
-<column name="i_reg_125">10, 0, 10, 0</column>
-<column name="j_reg_136">11, 0, 11, 0</column>
-<column name="p_Val2_7_reg_306">8, 0, 8, 0</column>
-<column name="r_V_1_reg_301">30, 0, 30, 0</column>
-<column name="r_V_4_i_reg_296">29, 0, 29, 0</column>
-<column name="tmp_85_reg_311">1, 0, 1, 0</column>
-<column name="tmp_89_reg_286">8, 0, 8, 0</column>
-<column name="tmp_90_reg_291">8, 0, 8, 0</column>
+<column name="ap_enable_reg_pp0_iter3">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter4">1, 0, 1, 0</column>
+<column name="i_1_reg_309">10, 0, 10, 0</column>
+<column name="i_reg_163">10, 0, 10, 0</column>
+<column name="j_reg_174">11, 0, 11, 0</column>
+<column name="p_Val2_7_reg_348">8, 0, 8, 0</column>
+<column name="r_V_1_reg_343">30, 0, 30, 0</column>
+<column name="r_V_4_i_reg_338">29, 0, 29, 0</column>
+<column name="start_once_reg">1, 0, 1, 0</column>
+<column name="tmp_39_reg_314">1, 0, 1, 0</column>
+<column name="tmp_85_reg_353">1, 0, 1, 0</column>
+<column name="tmp_89_reg_323">8, 0, 8, 0</column>
+<column name="tmp_89_reg_323_pp0_iter2_reg">8, 0, 8, 0</column>
+<column name="tmp_90_reg_328">8, 0, 8, 0</column>
+<column name="tmp_90_reg_328_pp0_iter2_reg">8, 0, 8, 0</column>
+<column name="tmp_91_reg_333">8, 0, 8, 0</column>
+<column name="tmp_39_reg_314">64, 32, 1, 0</column>
 </table>
 </item>
 </section>
@@ -138,13 +149,22 @@
 <column name="ap_clk">in, 1, ap_ctrl_hs, CvtColor.1, return value</column>
 <column name="ap_rst">in, 1, ap_ctrl_hs, CvtColor.1, return value</column>
 <column name="ap_start">in, 1, ap_ctrl_hs, CvtColor.1, return value</column>
+<column name="start_full_n">in, 1, ap_ctrl_hs, CvtColor.1, return value</column>
 <column name="ap_done">out, 1, ap_ctrl_hs, CvtColor.1, return value</column>
 <column name="ap_continue">in, 1, ap_ctrl_hs, CvtColor.1, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, CvtColor.1, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, CvtColor.1, return value</column>
-<column name="p_src_data_stream_0_V">in, 8, ap_none, p_src_data_stream_0_V, pointer</column>
-<column name="p_src_data_stream_1_V">in, 8, ap_none, p_src_data_stream_1_V, pointer</column>
-<column name="p_src_data_stream_2_V">in, 8, ap_none, p_src_data_stream_2_V, pointer</column>
+<column name="start_out">out, 1, ap_ctrl_hs, CvtColor.1, return value</column>
+<column name="start_write">out, 1, ap_ctrl_hs, CvtColor.1, return value</column>
+<column name="p_src_data_stream_0_V_dout">in, 8, ap_fifo, p_src_data_stream_0_V, pointer</column>
+<column name="p_src_data_stream_0_V_empty_n">in, 1, ap_fifo, p_src_data_stream_0_V, pointer</column>
+<column name="p_src_data_stream_0_V_read">out, 1, ap_fifo, p_src_data_stream_0_V, pointer</column>
+<column name="p_src_data_stream_1_V_dout">in, 8, ap_fifo, p_src_data_stream_1_V, pointer</column>
+<column name="p_src_data_stream_1_V_empty_n">in, 1, ap_fifo, p_src_data_stream_1_V, pointer</column>
+<column name="p_src_data_stream_1_V_read">out, 1, ap_fifo, p_src_data_stream_1_V, pointer</column>
+<column name="p_src_data_stream_2_V_dout">in, 8, ap_fifo, p_src_data_stream_2_V, pointer</column>
+<column name="p_src_data_stream_2_V_empty_n">in, 1, ap_fifo, p_src_data_stream_2_V, pointer</column>
+<column name="p_src_data_stream_2_V_read">out, 1, ap_fifo, p_src_data_stream_2_V, pointer</column>
 <column name="p_dst_data_stream_V_din">out, 8, ap_fifo, p_dst_data_stream_V, pointer</column>
 <column name="p_dst_data_stream_V_full_n">in, 1, ap_fifo, p_dst_data_stream_V, pointer</column>
 <column name="p_dst_data_stream_V_write">out, 1, ap_fifo, p_dst_data_stream_V, pointer</column>

@@ -590,7 +590,7 @@
         <item_version>0</item_version>
       </dp_memory_resource>
       <dp_multiplexer_resource>
-        <count>4</count>
+        <count>5</count>
         <item_version>0</item_version>
         <item>
           <first>ap_NS_fsm</first>
@@ -684,9 +684,32 @@
             </item>
           </second>
         </item>
+        <item>
+          <first>real_start</first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0Size)</first>
+              <second>2</second>
+            </item>
+            <item>
+              <first>(1Bits)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(2Count)</first>
+              <second>2</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>9</second>
+            </item>
+          </second>
+        </item>
       </dp_multiplexer_resource>
       <dp_register_resource>
-        <count>3</count>
+        <count>4</count>
         <item_version>0</item_version>
         <item>
           <first>ap_CS_fsm</first>
@@ -728,6 +751,25 @@
         </item>
         <item>
           <first>grp_Filter2D_fu_52_ap_start_reg</first>
+          <second>
+            <count>3</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(Bits)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(Consts)</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>1</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>start_once_reg</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>

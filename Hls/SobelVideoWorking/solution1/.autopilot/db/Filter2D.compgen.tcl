@@ -1,6 +1,6 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 68
+set id 78
 set name Sobel_filter_mac_pcA
 set corename simcore_mac
 set op mac
@@ -82,7 +82,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 }
 
 
-set id 69
+set id 79
 set name Sobel_filter_mac_qcK
 set corename simcore_mac
 set op mac
@@ -174,7 +174,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 72 \
+    id 82 \
     name p_src_data_stream_V \
     type fifo \
     dir I \
@@ -189,7 +189,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 73 \
+    id 83 \
     name p_dst_data_stream_V \
     type fifo \
     dir O \
@@ -204,7 +204,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 74 \
+    id 84 \
     name p_kernel_val_0_V_1_read \
     type other \
     dir I \
@@ -219,7 +219,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 75 \
+    id 85 \
     name p_kernel_val_0_V_2_read \
     type other \
     dir I \
@@ -234,7 +234,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 76 \
+    id 86 \
     name p_kernel_val_1_V_0_read \
     type other \
     dir I \
@@ -249,7 +249,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 77 \
+    id 87 \
     name p_kernel_val_1_V_2_read \
     type other \
     dir I \
@@ -264,7 +264,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 78 \
+    id 88 \
     name p_kernel_val_2_V_0_read \
     type other \
     dir I \
@@ -279,7 +279,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 79 \
+    id 89 \
     name p_kernel_val_2_V_1_read \
     type other \
     dir I \

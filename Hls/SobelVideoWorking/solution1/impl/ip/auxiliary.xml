@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="Sobel_filter" xd:componentRef="Sobel_filter" xd:initiationInterval="943933" xd:clockPeriod="10.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="Sobel_filter" xd:componentRef="Sobel_filter" xd:initiationInterval="943938" xd:clockPeriod="10.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
   <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
   <xd:arg xd:name="INPUT_STREAM.data" xd:originalName="INPUT_STREAM" xd:direction="in" xd:interfaceRef="INPUT_STREAM" xd:busTypeRef="axis" xd:dataWidth="24"/>
   <xd:arg xd:name="INPUT_STREAM.keep" xd:originalName="INPUT_STREAM" xd:direction="in" xd:interfaceRef="INPUT_STREAM" xd:busTypeRef="axis" xd:dataWidth="3"/>
@@ -16,6 +16,6 @@
   <xd:arg xd:name="OUTPUT_STREAM.id" xd:originalName="OUTPUT_STREAM" xd:direction="out" xd:interfaceRef="OUTPUT_STREAM" xd:busTypeRef="axis" xd:dataWidth="1"/>
   <xd:arg xd:name="OUTPUT_STREAM.dest" xd:originalName="OUTPUT_STREAM" xd:direction="out" xd:interfaceRef="OUTPUT_STREAM" xd:busTypeRef="axis" xd:dataWidth="1"/>
   <xd:arg xd:name="enable" xd:originalName="enable" xd:direction="in" xd:interfaceRef="enable_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="1" xd:firstOut="3"/>
-  <xd:latencyEstimates xd:best-case="943932" xd:worst-case="943932" xd:average-case="undef"/>
-  <xd:resourceEstimates xd:LUT="10250" xd:FF="6006" xd:BRAM="9" xd:DSP="39"/>
+  <xd:latencyEstimates xd:best-case="943937" xd:worst-case="943937" xd:average-case="undef"/>
+  <xd:resourceEstimates xd:LUT="10952" xd:FF="6332" xd:BRAM="9" xd:DSP="39"/>
 </xd:acceleratorMap>

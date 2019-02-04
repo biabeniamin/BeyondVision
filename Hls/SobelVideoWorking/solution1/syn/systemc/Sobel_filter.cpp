@@ -19,80 +19,80 @@ const sc_logic Sobel_filter::ap_const_logic_1 = sc_dt::Log_1;
 const sc_logic Sobel_filter::ap_const_logic_0 = sc_dt::Log_0;
 
 Sobel_filter::Sobel_filter(sc_module_name name) : sc_module(name), mVcdFile(0) {
-    Block_proc304_U0 = new Block_proc304("Block_proc304_U0");
-    Block_proc304_U0->enable_V(enable_V);
-    Block_proc304_U0->INPUT_STREAM_TDATA(INPUT_STREAM_TDATA);
-    Block_proc304_U0->INPUT_STREAM_TKEEP(INPUT_STREAM_TKEEP);
-    Block_proc304_U0->INPUT_STREAM_TSTRB(INPUT_STREAM_TSTRB);
-    Block_proc304_U0->INPUT_STREAM_TUSER(INPUT_STREAM_TUSER);
-    Block_proc304_U0->INPUT_STREAM_TLAST(INPUT_STREAM_TLAST);
-    Block_proc304_U0->INPUT_STREAM_TID(INPUT_STREAM_TID);
-    Block_proc304_U0->INPUT_STREAM_TDEST(INPUT_STREAM_TDEST);
-    Block_proc304_U0->OUTPUT_STREAM_TDATA(Block_proc304_U0_OUTPUT_STREAM_TDATA);
-    Block_proc304_U0->OUTPUT_STREAM_TKEEP(Block_proc304_U0_OUTPUT_STREAM_TKEEP);
-    Block_proc304_U0->OUTPUT_STREAM_TSTRB(Block_proc304_U0_OUTPUT_STREAM_TSTRB);
-    Block_proc304_U0->OUTPUT_STREAM_TUSER(Block_proc304_U0_OUTPUT_STREAM_TUSER);
-    Block_proc304_U0->OUTPUT_STREAM_TLAST(Block_proc304_U0_OUTPUT_STREAM_TLAST);
-    Block_proc304_U0->OUTPUT_STREAM_TID(Block_proc304_U0_OUTPUT_STREAM_TID);
-    Block_proc304_U0->OUTPUT_STREAM_TDEST(Block_proc304_U0_OUTPUT_STREAM_TDEST);
-    Block_proc304_U0->ap_clk(ap_clk);
-    Block_proc304_U0->ap_rst(ap_rst_n_inv);
-    Block_proc304_U0->ap_start(Block_proc304_U0_ap_start);
-    Block_proc304_U0->INPUT_STREAM_TVALID(INPUT_STREAM_TVALID);
-    Block_proc304_U0->INPUT_STREAM_TREADY(Block_proc304_U0_INPUT_STREAM_TREADY);
-    Block_proc304_U0->OUTPUT_STREAM_TVALID(Block_proc304_U0_OUTPUT_STREAM_TVALID);
-    Block_proc304_U0->OUTPUT_STREAM_TREADY(OUTPUT_STREAM_TREADY);
-    Block_proc304_U0->ap_done(Block_proc304_U0_ap_done);
-    Block_proc304_U0->ap_ready(Block_proc304_U0_ap_ready);
-    Block_proc304_U0->ap_idle(Block_proc304_U0_ap_idle);
-    Block_proc304_U0->ap_continue(Block_proc304_U0_ap_continue);
+    Block_proc306_U0 = new Block_proc306("Block_proc306_U0");
+    Block_proc306_U0->enable_V(enable_V);
+    Block_proc306_U0->INPUT_STREAM_TDATA(INPUT_STREAM_TDATA);
+    Block_proc306_U0->INPUT_STREAM_TKEEP(INPUT_STREAM_TKEEP);
+    Block_proc306_U0->INPUT_STREAM_TSTRB(INPUT_STREAM_TSTRB);
+    Block_proc306_U0->INPUT_STREAM_TUSER(INPUT_STREAM_TUSER);
+    Block_proc306_U0->INPUT_STREAM_TLAST(INPUT_STREAM_TLAST);
+    Block_proc306_U0->INPUT_STREAM_TID(INPUT_STREAM_TID);
+    Block_proc306_U0->INPUT_STREAM_TDEST(INPUT_STREAM_TDEST);
+    Block_proc306_U0->OUTPUT_STREAM_TDATA(Block_proc306_U0_OUTPUT_STREAM_TDATA);
+    Block_proc306_U0->OUTPUT_STREAM_TKEEP(Block_proc306_U0_OUTPUT_STREAM_TKEEP);
+    Block_proc306_U0->OUTPUT_STREAM_TSTRB(Block_proc306_U0_OUTPUT_STREAM_TSTRB);
+    Block_proc306_U0->OUTPUT_STREAM_TUSER(Block_proc306_U0_OUTPUT_STREAM_TUSER);
+    Block_proc306_U0->OUTPUT_STREAM_TLAST(Block_proc306_U0_OUTPUT_STREAM_TLAST);
+    Block_proc306_U0->OUTPUT_STREAM_TID(Block_proc306_U0_OUTPUT_STREAM_TID);
+    Block_proc306_U0->OUTPUT_STREAM_TDEST(Block_proc306_U0_OUTPUT_STREAM_TDEST);
+    Block_proc306_U0->ap_clk(ap_clk);
+    Block_proc306_U0->ap_rst(ap_rst_n_inv);
+    Block_proc306_U0->ap_start(Block_proc306_U0_ap_start);
+    Block_proc306_U0->INPUT_STREAM_TVALID(INPUT_STREAM_TVALID);
+    Block_proc306_U0->INPUT_STREAM_TREADY(Block_proc306_U0_INPUT_STREAM_TREADY);
+    Block_proc306_U0->OUTPUT_STREAM_TVALID(Block_proc306_U0_OUTPUT_STREAM_TVALID);
+    Block_proc306_U0->OUTPUT_STREAM_TREADY(OUTPUT_STREAM_TREADY);
+    Block_proc306_U0->ap_done(Block_proc306_U0_ap_done);
+    Block_proc306_U0->ap_ready(Block_proc306_U0_ap_ready);
+    Block_proc306_U0->ap_idle(Block_proc306_U0_ap_idle);
+    Block_proc306_U0->ap_continue(Block_proc306_U0_ap_continue);
 
-    SC_METHOD(thread_Block_proc304_U0_ap_continue);
+    SC_METHOD(thread_Block_proc306_U0_ap_continue);
 
-    SC_METHOD(thread_Block_proc304_U0_ap_start);
+    SC_METHOD(thread_Block_proc306_U0_ap_start);
     sensitive << ( ap_start );
 
-    SC_METHOD(thread_Block_proc304_U0_enable_V_ap_vld);
+    SC_METHOD(thread_Block_proc306_U0_enable_V_ap_vld);
 
-    SC_METHOD(thread_Block_proc304_U0_start_full_n);
+    SC_METHOD(thread_Block_proc306_U0_start_full_n);
 
-    SC_METHOD(thread_Block_proc304_U0_start_write);
+    SC_METHOD(thread_Block_proc306_U0_start_write);
 
     SC_METHOD(thread_INPUT_STREAM_TREADY);
-    sensitive << ( Block_proc304_U0_INPUT_STREAM_TREADY );
+    sensitive << ( Block_proc306_U0_INPUT_STREAM_TREADY );
 
     SC_METHOD(thread_OUTPUT_STREAM_TDATA);
-    sensitive << ( Block_proc304_U0_OUTPUT_STREAM_TDATA );
+    sensitive << ( Block_proc306_U0_OUTPUT_STREAM_TDATA );
 
     SC_METHOD(thread_OUTPUT_STREAM_TDEST);
-    sensitive << ( Block_proc304_U0_OUTPUT_STREAM_TDEST );
+    sensitive << ( Block_proc306_U0_OUTPUT_STREAM_TDEST );
 
     SC_METHOD(thread_OUTPUT_STREAM_TID);
-    sensitive << ( Block_proc304_U0_OUTPUT_STREAM_TID );
+    sensitive << ( Block_proc306_U0_OUTPUT_STREAM_TID );
 
     SC_METHOD(thread_OUTPUT_STREAM_TKEEP);
-    sensitive << ( Block_proc304_U0_OUTPUT_STREAM_TKEEP );
+    sensitive << ( Block_proc306_U0_OUTPUT_STREAM_TKEEP );
 
     SC_METHOD(thread_OUTPUT_STREAM_TLAST);
-    sensitive << ( Block_proc304_U0_OUTPUT_STREAM_TLAST );
+    sensitive << ( Block_proc306_U0_OUTPUT_STREAM_TLAST );
 
     SC_METHOD(thread_OUTPUT_STREAM_TSTRB);
-    sensitive << ( Block_proc304_U0_OUTPUT_STREAM_TSTRB );
+    sensitive << ( Block_proc306_U0_OUTPUT_STREAM_TSTRB );
 
     SC_METHOD(thread_OUTPUT_STREAM_TUSER);
-    sensitive << ( Block_proc304_U0_OUTPUT_STREAM_TUSER );
+    sensitive << ( Block_proc306_U0_OUTPUT_STREAM_TUSER );
 
     SC_METHOD(thread_OUTPUT_STREAM_TVALID);
-    sensitive << ( Block_proc304_U0_OUTPUT_STREAM_TVALID );
+    sensitive << ( Block_proc306_U0_OUTPUT_STREAM_TVALID );
 
     SC_METHOD(thread_ap_done);
-    sensitive << ( Block_proc304_U0_ap_done );
+    sensitive << ( Block_proc306_U0_ap_done );
 
     SC_METHOD(thread_ap_idle);
-    sensitive << ( Block_proc304_U0_ap_idle );
+    sensitive << ( Block_proc306_U0_ap_idle );
 
     SC_METHOD(thread_ap_ready);
-    sensitive << ( Block_proc304_U0_ap_ready );
+    sensitive << ( Block_proc306_U0_ap_ready );
 
     SC_METHOD(thread_ap_rst_n_inv);
     sensitive << ( ap_rst_n );
@@ -100,10 +100,10 @@ Sobel_filter::Sobel_filter(sc_module_name name) : sc_module(name), mVcdFile(0) {
     SC_METHOD(thread_ap_sync_continue);
 
     SC_METHOD(thread_ap_sync_done);
-    sensitive << ( Block_proc304_U0_ap_done );
+    sensitive << ( Block_proc306_U0_ap_done );
 
     SC_METHOD(thread_ap_sync_ready);
-    sensitive << ( Block_proc304_U0_ap_ready );
+    sensitive << ( Block_proc306_U0_ap_ready );
 
     SC_THREAD(thread_hdltv_gen);
     sensitive << ( ap_clk.pos() );
@@ -143,27 +143,27 @@ Sobel_filter::Sobel_filter(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, ap_idle, "(port)ap_idle");
 #endif
 #ifdef __HLS_TRACE_LEVEL_INT__
-    sc_trace(mVcdFile, Block_proc304_U0_OUTPUT_STREAM_TDATA, "Block_proc304_U0_OUTPUT_STREAM_TDATA");
-    sc_trace(mVcdFile, Block_proc304_U0_OUTPUT_STREAM_TKEEP, "Block_proc304_U0_OUTPUT_STREAM_TKEEP");
-    sc_trace(mVcdFile, Block_proc304_U0_OUTPUT_STREAM_TSTRB, "Block_proc304_U0_OUTPUT_STREAM_TSTRB");
-    sc_trace(mVcdFile, Block_proc304_U0_OUTPUT_STREAM_TUSER, "Block_proc304_U0_OUTPUT_STREAM_TUSER");
-    sc_trace(mVcdFile, Block_proc304_U0_OUTPUT_STREAM_TLAST, "Block_proc304_U0_OUTPUT_STREAM_TLAST");
-    sc_trace(mVcdFile, Block_proc304_U0_OUTPUT_STREAM_TID, "Block_proc304_U0_OUTPUT_STREAM_TID");
-    sc_trace(mVcdFile, Block_proc304_U0_OUTPUT_STREAM_TDEST, "Block_proc304_U0_OUTPUT_STREAM_TDEST");
+    sc_trace(mVcdFile, Block_proc306_U0_OUTPUT_STREAM_TDATA, "Block_proc306_U0_OUTPUT_STREAM_TDATA");
+    sc_trace(mVcdFile, Block_proc306_U0_OUTPUT_STREAM_TKEEP, "Block_proc306_U0_OUTPUT_STREAM_TKEEP");
+    sc_trace(mVcdFile, Block_proc306_U0_OUTPUT_STREAM_TSTRB, "Block_proc306_U0_OUTPUT_STREAM_TSTRB");
+    sc_trace(mVcdFile, Block_proc306_U0_OUTPUT_STREAM_TUSER, "Block_proc306_U0_OUTPUT_STREAM_TUSER");
+    sc_trace(mVcdFile, Block_proc306_U0_OUTPUT_STREAM_TLAST, "Block_proc306_U0_OUTPUT_STREAM_TLAST");
+    sc_trace(mVcdFile, Block_proc306_U0_OUTPUT_STREAM_TID, "Block_proc306_U0_OUTPUT_STREAM_TID");
+    sc_trace(mVcdFile, Block_proc306_U0_OUTPUT_STREAM_TDEST, "Block_proc306_U0_OUTPUT_STREAM_TDEST");
     sc_trace(mVcdFile, ap_rst_n_inv, "ap_rst_n_inv");
-    sc_trace(mVcdFile, Block_proc304_U0_ap_start, "Block_proc304_U0_ap_start");
-    sc_trace(mVcdFile, Block_proc304_U0_INPUT_STREAM_TREADY, "Block_proc304_U0_INPUT_STREAM_TREADY");
-    sc_trace(mVcdFile, Block_proc304_U0_OUTPUT_STREAM_TVALID, "Block_proc304_U0_OUTPUT_STREAM_TVALID");
-    sc_trace(mVcdFile, Block_proc304_U0_ap_done, "Block_proc304_U0_ap_done");
-    sc_trace(mVcdFile, Block_proc304_U0_ap_ready, "Block_proc304_U0_ap_ready");
-    sc_trace(mVcdFile, Block_proc304_U0_ap_idle, "Block_proc304_U0_ap_idle");
-    sc_trace(mVcdFile, Block_proc304_U0_ap_continue, "Block_proc304_U0_ap_continue");
-    sc_trace(mVcdFile, Block_proc304_U0_enable_V_ap_vld, "Block_proc304_U0_enable_V_ap_vld");
+    sc_trace(mVcdFile, Block_proc306_U0_ap_start, "Block_proc306_U0_ap_start");
+    sc_trace(mVcdFile, Block_proc306_U0_INPUT_STREAM_TREADY, "Block_proc306_U0_INPUT_STREAM_TREADY");
+    sc_trace(mVcdFile, Block_proc306_U0_OUTPUT_STREAM_TVALID, "Block_proc306_U0_OUTPUT_STREAM_TVALID");
+    sc_trace(mVcdFile, Block_proc306_U0_ap_done, "Block_proc306_U0_ap_done");
+    sc_trace(mVcdFile, Block_proc306_U0_ap_ready, "Block_proc306_U0_ap_ready");
+    sc_trace(mVcdFile, Block_proc306_U0_ap_idle, "Block_proc306_U0_ap_idle");
+    sc_trace(mVcdFile, Block_proc306_U0_ap_continue, "Block_proc306_U0_ap_continue");
+    sc_trace(mVcdFile, Block_proc306_U0_enable_V_ap_vld, "Block_proc306_U0_enable_V_ap_vld");
     sc_trace(mVcdFile, ap_sync_continue, "ap_sync_continue");
     sc_trace(mVcdFile, ap_sync_done, "ap_sync_done");
     sc_trace(mVcdFile, ap_sync_ready, "ap_sync_ready");
-    sc_trace(mVcdFile, Block_proc304_U0_start_full_n, "Block_proc304_U0_start_full_n");
-    sc_trace(mVcdFile, Block_proc304_U0_start_write, "Block_proc304_U0_start_write");
+    sc_trace(mVcdFile, Block_proc306_U0_start_full_n, "Block_proc306_U0_start_full_n");
+    sc_trace(mVcdFile, Block_proc306_U0_start_write, "Block_proc306_U0_start_write");
 #endif
 
     }
@@ -179,75 +179,75 @@ Sobel_filter::~Sobel_filter() {
     mHdltvoutHandle << "] " << endl;
     mHdltvinHandle.close();
     mHdltvoutHandle.close();
-    delete Block_proc304_U0;
+    delete Block_proc306_U0;
 }
 
-void Sobel_filter::thread_Block_proc304_U0_ap_continue() {
-    Block_proc304_U0_ap_continue = ap_const_logic_1;
+void Sobel_filter::thread_Block_proc306_U0_ap_continue() {
+    Block_proc306_U0_ap_continue = ap_const_logic_1;
 }
 
-void Sobel_filter::thread_Block_proc304_U0_ap_start() {
-    Block_proc304_U0_ap_start = ap_start.read();
+void Sobel_filter::thread_Block_proc306_U0_ap_start() {
+    Block_proc306_U0_ap_start = ap_start.read();
 }
 
-void Sobel_filter::thread_Block_proc304_U0_enable_V_ap_vld() {
-    Block_proc304_U0_enable_V_ap_vld = ap_const_logic_1;
+void Sobel_filter::thread_Block_proc306_U0_enable_V_ap_vld() {
+    Block_proc306_U0_enable_V_ap_vld = ap_const_logic_1;
 }
 
-void Sobel_filter::thread_Block_proc304_U0_start_full_n() {
-    Block_proc304_U0_start_full_n = ap_const_logic_1;
+void Sobel_filter::thread_Block_proc306_U0_start_full_n() {
+    Block_proc306_U0_start_full_n = ap_const_logic_1;
 }
 
-void Sobel_filter::thread_Block_proc304_U0_start_write() {
-    Block_proc304_U0_start_write = ap_const_logic_0;
+void Sobel_filter::thread_Block_proc306_U0_start_write() {
+    Block_proc306_U0_start_write = ap_const_logic_0;
 }
 
 void Sobel_filter::thread_INPUT_STREAM_TREADY() {
-    INPUT_STREAM_TREADY = Block_proc304_U0_INPUT_STREAM_TREADY.read();
+    INPUT_STREAM_TREADY = Block_proc306_U0_INPUT_STREAM_TREADY.read();
 }
 
 void Sobel_filter::thread_OUTPUT_STREAM_TDATA() {
-    OUTPUT_STREAM_TDATA = Block_proc304_U0_OUTPUT_STREAM_TDATA.read();
+    OUTPUT_STREAM_TDATA = Block_proc306_U0_OUTPUT_STREAM_TDATA.read();
 }
 
 void Sobel_filter::thread_OUTPUT_STREAM_TDEST() {
-    OUTPUT_STREAM_TDEST = Block_proc304_U0_OUTPUT_STREAM_TDEST.read();
+    OUTPUT_STREAM_TDEST = Block_proc306_U0_OUTPUT_STREAM_TDEST.read();
 }
 
 void Sobel_filter::thread_OUTPUT_STREAM_TID() {
-    OUTPUT_STREAM_TID = Block_proc304_U0_OUTPUT_STREAM_TID.read();
+    OUTPUT_STREAM_TID = Block_proc306_U0_OUTPUT_STREAM_TID.read();
 }
 
 void Sobel_filter::thread_OUTPUT_STREAM_TKEEP() {
-    OUTPUT_STREAM_TKEEP = Block_proc304_U0_OUTPUT_STREAM_TKEEP.read();
+    OUTPUT_STREAM_TKEEP = Block_proc306_U0_OUTPUT_STREAM_TKEEP.read();
 }
 
 void Sobel_filter::thread_OUTPUT_STREAM_TLAST() {
-    OUTPUT_STREAM_TLAST = Block_proc304_U0_OUTPUT_STREAM_TLAST.read();
+    OUTPUT_STREAM_TLAST = Block_proc306_U0_OUTPUT_STREAM_TLAST.read();
 }
 
 void Sobel_filter::thread_OUTPUT_STREAM_TSTRB() {
-    OUTPUT_STREAM_TSTRB = Block_proc304_U0_OUTPUT_STREAM_TSTRB.read();
+    OUTPUT_STREAM_TSTRB = Block_proc306_U0_OUTPUT_STREAM_TSTRB.read();
 }
 
 void Sobel_filter::thread_OUTPUT_STREAM_TUSER() {
-    OUTPUT_STREAM_TUSER = Block_proc304_U0_OUTPUT_STREAM_TUSER.read();
+    OUTPUT_STREAM_TUSER = Block_proc306_U0_OUTPUT_STREAM_TUSER.read();
 }
 
 void Sobel_filter::thread_OUTPUT_STREAM_TVALID() {
-    OUTPUT_STREAM_TVALID = Block_proc304_U0_OUTPUT_STREAM_TVALID.read();
+    OUTPUT_STREAM_TVALID = Block_proc306_U0_OUTPUT_STREAM_TVALID.read();
 }
 
 void Sobel_filter::thread_ap_done() {
-    ap_done = Block_proc304_U0_ap_done.read();
+    ap_done = Block_proc306_U0_ap_done.read();
 }
 
 void Sobel_filter::thread_ap_idle() {
-    ap_idle = Block_proc304_U0_ap_idle.read();
+    ap_idle = Block_proc306_U0_ap_idle.read();
 }
 
 void Sobel_filter::thread_ap_ready() {
-    ap_ready = Block_proc304_U0_ap_ready.read();
+    ap_ready = Block_proc306_U0_ap_ready.read();
 }
 
 void Sobel_filter::thread_ap_rst_n_inv() {
@@ -259,11 +259,11 @@ void Sobel_filter::thread_ap_sync_continue() {
 }
 
 void Sobel_filter::thread_ap_sync_done() {
-    ap_sync_done = Block_proc304_U0_ap_done.read();
+    ap_sync_done = Block_proc306_U0_ap_done.read();
 }
 
 void Sobel_filter::thread_ap_sync_ready() {
-    ap_sync_ready = Block_proc304_U0_ap_ready.read();
+    ap_sync_ready = Block_proc306_U0_ap_ready.read();
 }
 
 void Sobel_filter::thread_hdltv_gen() {

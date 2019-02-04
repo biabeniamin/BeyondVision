@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'Sobel'
 ================================================================
-* Date:           Mon Feb  4 18:08:47 2019
+* Date:           Mon Feb  4 18:37:41 2019
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        SobelVideoWorking
@@ -80,8 +80,8 @@ State 1 <SV = 0> <Delay = 0.00>
 ST_1 : Operation 3 [2/2] (0.00ns)   --->   "call fastcc void @Filter2D(i8* %p_src_data_stream_V, i8* %p_dst_data_stream_V, i2 0, i2 1, i3 -2, i4 2, i2 -1, i3 0)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:2591->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:2599]   --->   Operation 3 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 2 <SV = 1> <Delay = 0.00>
-ST_2 : Operation 4 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %p_dst_data_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str446, i32 0, i32 0, [1 x i8]* @p_str447, [1 x i8]* @p_str448, [1 x i8]* @p_str449, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str450, [1 x i8]* @p_str451)"   --->   Operation 4 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %p_src_data_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str432, i32 0, i32 0, [1 x i8]* @p_str433, [1 x i8]* @p_str434, [1 x i8]* @p_str435, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str436, [1 x i8]* @p_str437)"   --->   Operation 5 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 4 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %p_dst_data_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str490, i32 0, i32 0, [1 x i8]* @p_str491, [1 x i8]* @p_str492, [1 x i8]* @p_str493, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str494, [1 x i8]* @p_str495)"   --->   Operation 4 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %p_src_data_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str476, i32 0, i32 0, [1 x i8]* @p_str477, [1 x i8]* @p_str478, [1 x i8]* @p_str479, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str480, [1 x i8]* @p_str481)"   --->   Operation 5 'specinterface' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 6 [1/2] (0.00ns)   --->   "call fastcc void @Filter2D(i8* %p_src_data_stream_V, i8* %p_dst_data_stream_V, i2 0, i2 1, i3 -2, i4 2, i2 -1, i3 0)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:2591->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:2599]   --->   Operation 6 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_2 : Operation 7 [1/1] (0.00ns)   --->   "ret void" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:2600]   --->   Operation 7 'ret' <Predicate = true> <Delay = 0.00>
 

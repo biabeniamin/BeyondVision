@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'Sobel_filter'" level="0">
-<item name = "Date">Mon Feb  4 18:08:51 2019
+<item name = "Date">Mon Feb  4 18:37:45 2019
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">SobelVideoWorking</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">943932, 943932, 943922, 943922, dataflow</column>
+<column name="">943937, 943937, 943922, 943922, dataflow</column>
 </table>
 </item>
 <item name = "Detail">

@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'p_C_Xilinx_Vivado_2_1'
 ================================================================
-* Date:           Mon Feb  4 18:08:43 2019
+* Date:           Mon Feb  4 18:37:35 2019
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        SobelVideoWorking
@@ -75,8 +75,8 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 3.90>
-ST_1 : Operation 2 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i11* %img_0a_rows_V3_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str488, i32 0, i32 0, [1 x i8]* @p_str489, [1 x i8]* @p_str490, [1 x i8]* @p_str491, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str492, [1 x i8]* @p_str493)"   --->   Operation 2 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 3 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i11P(i11* %img_0a_rows_V3_out, i11 720)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:601->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:587->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:588->SobelVideoWorking/a.cpp:13]   --->   Operation 3 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i11* %img_0a_rows_V5_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str532, i32 0, i32 0, [1 x i8]* @p_str533, [1 x i8]* @p_str534, [1 x i8]* @p_str535, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str536, [1 x i8]* @p_str537)"   --->   Operation 2 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i11P(i11* %img_0a_rows_V5_out, i11 720)" [C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:601->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:587->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:588->SobelVideoWorking/a.cpp:13]   --->   Operation 3 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
 ST_1 : Operation 4 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 4 'ret' <Predicate = true> <Delay = 0.00>
 
 
@@ -87,7 +87,7 @@ Target clock period: 10ns, clock uncertainty: 1.25ns.
 
  <State 1>: 3.91ns
 The critical path consists of the following:
-	fifo write on port 'img_0a_rows_V3_out' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:601->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:587->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:588->SobelVideoWorking/a.cpp:13) [3]  (3.91 ns)
+	fifo write on port 'img_0a_rows_V5_out' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:601->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:587->C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:588->SobelVideoWorking/a.cpp:13) [3]  (3.91 ns)
 
 
 ============================================================

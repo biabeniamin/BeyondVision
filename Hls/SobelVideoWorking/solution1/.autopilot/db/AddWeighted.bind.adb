@@ -729,7 +729,7 @@
 					<Obj>
 						<type>0</type>
 						<id>37</id>
-						<name>tmp_i_107</name>
+						<name>tmp_i_110</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>276</lineNumber>
@@ -1634,7 +1634,7 @@
 					<Obj>
 						<type>0</type>
 						<id>49</id>
-						<name>tmp_i_i_i_i_108</name>
+						<name>tmp_i_i_i_i_111</name>
 						<fileName>r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_isnan.h</fileName>
 						<fileDirectory>r:\builds\2018.2\continuous\2018_06_14_2258646\src\products</fileDirectory>
 						<lineNumber>17</lineNumber>
@@ -9740,7 +9740,7 @@
 					<Obj>
 						<type>0</type>
 						<id>158</id>
-						<name>tmp_39</name>
+						<name>tmp_40</name>
 						<fileName>C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h</fileName>
 						<fileDirectory>C:\Digilent19\Hls</fileDirectory>
 						<lineNumber>429</lineNumber>
@@ -18427,19 +18427,19 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_39_fu_902</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>158</item>
-			</second>
-		</item>
-		<item>
 			<first>tmp_3_i_fu_353</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
 				<item>65</item>
+			</second>
+		</item>
+		<item>
+			<first>tmp_40_fu_902</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>158</item>
 			</second>
 		</item>
 		<item>
@@ -18547,7 +18547,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_i_107_fu_250</first>
+			<first>tmp_i_110_fu_250</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -18555,7 +18555,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_i_i_i_i_108_fu_281</first>
+			<first>tmp_i_i_i_i_111_fu_281</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -19377,7 +19377,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_i_107_reg_968</first>
+			<first>tmp_i_110_reg_968</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -19385,7 +19385,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_i_i_i_i_108_reg_1014</first>
+			<first>tmp_i_i_i_i_111_reg_1014</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>

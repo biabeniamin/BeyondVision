@@ -42,36 +42,36 @@ end;
 architecture behav of Sobel_filter is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "Sobel_filter,hls_ip_2018_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=1,HLS_INPUT_PART=xc7a200tsbg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=11.000000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=9,HLS_SYN_DSP=39,HLS_SYN_FF=6006,HLS_SYN_LUT=10250,HLS_VERSION=2018_2}";
+    "Sobel_filter,hls_ip_2018_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=1,HLS_INPUT_PART=xc7a200tsbg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=11.000000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=9,HLS_SYN_DSP=39,HLS_SYN_FF=6332,HLS_SYN_LUT=10952,HLS_VERSION=2018_2}";
     constant ap_const_lv24_0 : STD_LOGIC_VECTOR (23 downto 0) := "000000000000000000000000";
     constant ap_const_lv3_0 : STD_LOGIC_VECTOR (2 downto 0) := "000";
     constant ap_const_lv1_0 : STD_LOGIC_VECTOR (0 downto 0) := "0";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
 
-    signal Block_proc304_U0_OUTPUT_STREAM_TDATA : STD_LOGIC_VECTOR (23 downto 0);
-    signal Block_proc304_U0_OUTPUT_STREAM_TKEEP : STD_LOGIC_VECTOR (2 downto 0);
-    signal Block_proc304_U0_OUTPUT_STREAM_TSTRB : STD_LOGIC_VECTOR (2 downto 0);
-    signal Block_proc304_U0_OUTPUT_STREAM_TUSER : STD_LOGIC_VECTOR (0 downto 0);
-    signal Block_proc304_U0_OUTPUT_STREAM_TLAST : STD_LOGIC_VECTOR (0 downto 0);
-    signal Block_proc304_U0_OUTPUT_STREAM_TID : STD_LOGIC_VECTOR (0 downto 0);
-    signal Block_proc304_U0_OUTPUT_STREAM_TDEST : STD_LOGIC_VECTOR (0 downto 0);
+    signal Block_proc306_U0_OUTPUT_STREAM_TDATA : STD_LOGIC_VECTOR (23 downto 0);
+    signal Block_proc306_U0_OUTPUT_STREAM_TKEEP : STD_LOGIC_VECTOR (2 downto 0);
+    signal Block_proc306_U0_OUTPUT_STREAM_TSTRB : STD_LOGIC_VECTOR (2 downto 0);
+    signal Block_proc306_U0_OUTPUT_STREAM_TUSER : STD_LOGIC_VECTOR (0 downto 0);
+    signal Block_proc306_U0_OUTPUT_STREAM_TLAST : STD_LOGIC_VECTOR (0 downto 0);
+    signal Block_proc306_U0_OUTPUT_STREAM_TID : STD_LOGIC_VECTOR (0 downto 0);
+    signal Block_proc306_U0_OUTPUT_STREAM_TDEST : STD_LOGIC_VECTOR (0 downto 0);
     signal ap_rst_n_inv : STD_LOGIC;
-    signal Block_proc304_U0_ap_start : STD_LOGIC;
-    signal Block_proc304_U0_INPUT_STREAM_TREADY : STD_LOGIC;
-    signal Block_proc304_U0_OUTPUT_STREAM_TVALID : STD_LOGIC;
-    signal Block_proc304_U0_ap_done : STD_LOGIC;
-    signal Block_proc304_U0_ap_ready : STD_LOGIC;
-    signal Block_proc304_U0_ap_idle : STD_LOGIC;
-    signal Block_proc304_U0_ap_continue : STD_LOGIC;
-    signal Block_proc304_U0_enable_V_ap_vld : STD_LOGIC;
+    signal Block_proc306_U0_ap_start : STD_LOGIC;
+    signal Block_proc306_U0_INPUT_STREAM_TREADY : STD_LOGIC;
+    signal Block_proc306_U0_OUTPUT_STREAM_TVALID : STD_LOGIC;
+    signal Block_proc306_U0_ap_done : STD_LOGIC;
+    signal Block_proc306_U0_ap_ready : STD_LOGIC;
+    signal Block_proc306_U0_ap_idle : STD_LOGIC;
+    signal Block_proc306_U0_ap_continue : STD_LOGIC;
+    signal Block_proc306_U0_enable_V_ap_vld : STD_LOGIC;
     signal ap_sync_continue : STD_LOGIC;
     signal ap_sync_done : STD_LOGIC;
     signal ap_sync_ready : STD_LOGIC;
-    signal Block_proc304_U0_start_full_n : STD_LOGIC;
-    signal Block_proc304_U0_start_write : STD_LOGIC;
+    signal Block_proc306_U0_start_full_n : STD_LOGIC;
+    signal Block_proc306_U0_start_write : STD_LOGIC;
 
-    component Block_proc304 IS
+    component Block_proc306 IS
     port (
         enable_V : IN STD_LOGIC_VECTOR (0 downto 0);
         INPUT_STREAM_TDATA : IN STD_LOGIC_VECTOR (23 downto 0);
@@ -104,7 +104,7 @@ architecture behav of Sobel_filter is
 
 
 begin
-    Block_proc304_U0 : component Block_proc304
+    Block_proc306_U0 : component Block_proc306
     port map (
         enable_V => enable_V,
         INPUT_STREAM_TDATA => INPUT_STREAM_TDATA,
@@ -114,45 +114,45 @@ begin
         INPUT_STREAM_TLAST => INPUT_STREAM_TLAST,
         INPUT_STREAM_TID => INPUT_STREAM_TID,
         INPUT_STREAM_TDEST => INPUT_STREAM_TDEST,
-        OUTPUT_STREAM_TDATA => Block_proc304_U0_OUTPUT_STREAM_TDATA,
-        OUTPUT_STREAM_TKEEP => Block_proc304_U0_OUTPUT_STREAM_TKEEP,
-        OUTPUT_STREAM_TSTRB => Block_proc304_U0_OUTPUT_STREAM_TSTRB,
-        OUTPUT_STREAM_TUSER => Block_proc304_U0_OUTPUT_STREAM_TUSER,
-        OUTPUT_STREAM_TLAST => Block_proc304_U0_OUTPUT_STREAM_TLAST,
-        OUTPUT_STREAM_TID => Block_proc304_U0_OUTPUT_STREAM_TID,
-        OUTPUT_STREAM_TDEST => Block_proc304_U0_OUTPUT_STREAM_TDEST,
+        OUTPUT_STREAM_TDATA => Block_proc306_U0_OUTPUT_STREAM_TDATA,
+        OUTPUT_STREAM_TKEEP => Block_proc306_U0_OUTPUT_STREAM_TKEEP,
+        OUTPUT_STREAM_TSTRB => Block_proc306_U0_OUTPUT_STREAM_TSTRB,
+        OUTPUT_STREAM_TUSER => Block_proc306_U0_OUTPUT_STREAM_TUSER,
+        OUTPUT_STREAM_TLAST => Block_proc306_U0_OUTPUT_STREAM_TLAST,
+        OUTPUT_STREAM_TID => Block_proc306_U0_OUTPUT_STREAM_TID,
+        OUTPUT_STREAM_TDEST => Block_proc306_U0_OUTPUT_STREAM_TDEST,
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        ap_start => Block_proc304_U0_ap_start,
+        ap_start => Block_proc306_U0_ap_start,
         INPUT_STREAM_TVALID => INPUT_STREAM_TVALID,
-        INPUT_STREAM_TREADY => Block_proc304_U0_INPUT_STREAM_TREADY,
-        OUTPUT_STREAM_TVALID => Block_proc304_U0_OUTPUT_STREAM_TVALID,
+        INPUT_STREAM_TREADY => Block_proc306_U0_INPUT_STREAM_TREADY,
+        OUTPUT_STREAM_TVALID => Block_proc306_U0_OUTPUT_STREAM_TVALID,
         OUTPUT_STREAM_TREADY => OUTPUT_STREAM_TREADY,
-        ap_done => Block_proc304_U0_ap_done,
-        ap_ready => Block_proc304_U0_ap_ready,
-        ap_idle => Block_proc304_U0_ap_idle,
-        ap_continue => Block_proc304_U0_ap_continue);
+        ap_done => Block_proc306_U0_ap_done,
+        ap_ready => Block_proc306_U0_ap_ready,
+        ap_idle => Block_proc306_U0_ap_idle,
+        ap_continue => Block_proc306_U0_ap_continue);
 
 
 
 
-    Block_proc304_U0_ap_continue <= ap_const_logic_1;
-    Block_proc304_U0_ap_start <= ap_start;
-    Block_proc304_U0_enable_V_ap_vld <= ap_const_logic_1;
-    Block_proc304_U0_start_full_n <= ap_const_logic_1;
-    Block_proc304_U0_start_write <= ap_const_logic_0;
-    INPUT_STREAM_TREADY <= Block_proc304_U0_INPUT_STREAM_TREADY;
-    OUTPUT_STREAM_TDATA <= Block_proc304_U0_OUTPUT_STREAM_TDATA;
-    OUTPUT_STREAM_TDEST <= Block_proc304_U0_OUTPUT_STREAM_TDEST;
-    OUTPUT_STREAM_TID <= Block_proc304_U0_OUTPUT_STREAM_TID;
-    OUTPUT_STREAM_TKEEP <= Block_proc304_U0_OUTPUT_STREAM_TKEEP;
-    OUTPUT_STREAM_TLAST <= Block_proc304_U0_OUTPUT_STREAM_TLAST;
-    OUTPUT_STREAM_TSTRB <= Block_proc304_U0_OUTPUT_STREAM_TSTRB;
-    OUTPUT_STREAM_TUSER <= Block_proc304_U0_OUTPUT_STREAM_TUSER;
-    OUTPUT_STREAM_TVALID <= Block_proc304_U0_OUTPUT_STREAM_TVALID;
-    ap_done <= Block_proc304_U0_ap_done;
-    ap_idle <= Block_proc304_U0_ap_idle;
-    ap_ready <= Block_proc304_U0_ap_ready;
+    Block_proc306_U0_ap_continue <= ap_const_logic_1;
+    Block_proc306_U0_ap_start <= ap_start;
+    Block_proc306_U0_enable_V_ap_vld <= ap_const_logic_1;
+    Block_proc306_U0_start_full_n <= ap_const_logic_1;
+    Block_proc306_U0_start_write <= ap_const_logic_0;
+    INPUT_STREAM_TREADY <= Block_proc306_U0_INPUT_STREAM_TREADY;
+    OUTPUT_STREAM_TDATA <= Block_proc306_U0_OUTPUT_STREAM_TDATA;
+    OUTPUT_STREAM_TDEST <= Block_proc306_U0_OUTPUT_STREAM_TDEST;
+    OUTPUT_STREAM_TID <= Block_proc306_U0_OUTPUT_STREAM_TID;
+    OUTPUT_STREAM_TKEEP <= Block_proc306_U0_OUTPUT_STREAM_TKEEP;
+    OUTPUT_STREAM_TLAST <= Block_proc306_U0_OUTPUT_STREAM_TLAST;
+    OUTPUT_STREAM_TSTRB <= Block_proc306_U0_OUTPUT_STREAM_TSTRB;
+    OUTPUT_STREAM_TUSER <= Block_proc306_U0_OUTPUT_STREAM_TUSER;
+    OUTPUT_STREAM_TVALID <= Block_proc306_U0_OUTPUT_STREAM_TVALID;
+    ap_done <= Block_proc306_U0_ap_done;
+    ap_idle <= Block_proc306_U0_ap_idle;
+    ap_ready <= Block_proc306_U0_ap_ready;
 
     ap_rst_n_inv_assign_proc : process(ap_rst_n)
     begin
@@ -160,6 +160,6 @@ begin
     end process;
 
     ap_sync_continue <= ap_const_logic_1;
-    ap_sync_done <= Block_proc304_U0_ap_done;
-    ap_sync_ready <= Block_proc304_U0_ap_ready;
+    ap_sync_done <= Block_proc306_U0_ap_done;
+    ap_sync_ready <= Block_proc306_U0_ap_ready;
 end behav;

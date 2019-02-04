@@ -1,6 +1,6 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 29
+set id 39
 set name Sobel_filter_mul_bkb
 set corename simcore_mul
 set op mul
@@ -76,7 +76,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 }
 
 
-set id 30
+set id 40
 set name Sobel_filter_mac_cud
 set corename simcore_mac
 set op mac
@@ -158,7 +158,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 }
 
 
-set id 31
+set id 41
 set name Sobel_filter_mac_dEe
 set corename simcore_mac
 set op mac
@@ -250,52 +250,52 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 35 \
+    id 45 \
     name p_src_data_stream_0_V \
-    type other \
+    type fifo \
     dir I \
     reset_level 1 \
     sync_rst true \
     corename dc_p_src_data_stream_0_V \
     op interface \
-    ports { p_src_data_stream_0_V { I 8 vector } } \
+    ports { p_src_data_stream_0_V_dout { I 8 vector } p_src_data_stream_0_V_empty_n { I 1 bit } p_src_data_stream_0_V_read { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 36 \
+    id 46 \
     name p_src_data_stream_1_V \
-    type other \
+    type fifo \
     dir I \
     reset_level 1 \
     sync_rst true \
     corename dc_p_src_data_stream_1_V \
     op interface \
-    ports { p_src_data_stream_1_V { I 8 vector } } \
+    ports { p_src_data_stream_1_V_dout { I 8 vector } p_src_data_stream_1_V_empty_n { I 1 bit } p_src_data_stream_1_V_read { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 37 \
+    id 47 \
     name p_src_data_stream_2_V \
-    type other \
+    type fifo \
     dir I \
     reset_level 1 \
     sync_rst true \
     corename dc_p_src_data_stream_2_V \
     op interface \
-    ports { p_src_data_stream_2_V { I 8 vector } } \
+    ports { p_src_data_stream_2_V_dout { I 8 vector } p_src_data_stream_2_V_empty_n { I 1 bit } p_src_data_stream_2_V_read { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 38 \
+    id 48 \
     name p_dst_data_stream_V \
     type fifo \
     dir O \
@@ -317,7 +317,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename ap_ctrl \
     op interface \
-    ports { ap_start { I 1 bit } ap_ready { O 1 bit } ap_done { O 1 bit } ap_idle { O 1 bit } ap_continue { I 1 bit } } \
+    ports { ap_done { O 1 bit } ap_idle { O 1 bit } ap_continue { I 1 bit } } \
 } "
 }
 

@@ -175,10 +175,10 @@ architecture behav of AddWeighted is
     signal tmp_i_i_i_i_reg_1008 : STD_LOGIC_VECTOR (0 downto 0);
     signal tmp_i_i_i_i_reg_1008_pp0_iter27_reg : STD_LOGIC_VECTOR (0 downto 0);
     signal tmp_i_i_i_i_reg_1008_pp0_iter28_reg : STD_LOGIC_VECTOR (0 downto 0);
-    signal tmp_i_i_i_i_108_fu_281_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal tmp_i_i_i_i_108_reg_1014 : STD_LOGIC_VECTOR (0 downto 0);
-    signal tmp_i_i_i_i_108_reg_1014_pp0_iter27_reg : STD_LOGIC_VECTOR (0 downto 0);
-    signal tmp_i_i_i_i_108_reg_1014_pp0_iter28_reg : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_i_i_i_i_111_fu_281_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_i_i_i_i_111_reg_1014 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_i_i_i_i_111_reg_1014_pp0_iter27_reg : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_i_i_i_i_111_reg_1014_pp0_iter28_reg : STD_LOGIC_VECTOR (0 downto 0);
     signal isneg_reg_1020 : STD_LOGIC_VECTOR (0 downto 0);
     signal isneg_reg_1020_pp0_iter27_reg : STD_LOGIC_VECTOR (0 downto 0);
     signal p_Result_s_fu_311_p1 : STD_LOGIC_VECTOR (53 downto 0);
@@ -353,7 +353,7 @@ architecture behav of AddWeighted is
     signal sel_tmp51_i_fu_891_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal tmp_demorgan_i_fu_849_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal tmp_s_fu_896_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal tmp_39_fu_902_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_40_fu_902_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal sel_tmp55_demorgan_i_fu_914_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal brmerge_i_fu_868_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal sel_tmp55_i_fu_919_p2 : STD_LOGIC_VECTOR (0 downto 0);
@@ -421,7 +421,7 @@ architecture behav of AddWeighted is
 
 
 begin
-    Sobel_filter_daddrcU_U84 : component Sobel_filter_daddrcU
+    Sobel_filter_daddrcU_U94 : component Sobel_filter_daddrcU
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -436,7 +436,7 @@ begin
         ce => grp_fu_201_ce,
         dout => grp_fu_201_p2);
 
-    Sobel_filter_daddrcU_U85 : component Sobel_filter_daddrcU
+    Sobel_filter_daddrcU_U95 : component Sobel_filter_daddrcU
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -451,7 +451,7 @@ begin
         ce => grp_fu_205_ce,
         dout => grp_fu_205_p2);
 
-    Sobel_filter_dmulsc4_U86 : component Sobel_filter_dmulsc4
+    Sobel_filter_dmulsc4_U96 : component Sobel_filter_dmulsc4
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -466,7 +466,7 @@ begin
         ce => grp_fu_210_ce,
         dout => grp_fu_210_p2);
 
-    Sobel_filter_dmulsc4_U87 : component Sobel_filter_dmulsc4
+    Sobel_filter_dmulsc4_U97 : component Sobel_filter_dmulsc4
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -481,7 +481,7 @@ begin
         ce => grp_fu_215_ce,
         dout => grp_fu_215_p2);
 
-    Sobel_filter_sitotde_U88 : component Sobel_filter_sitotde
+    Sobel_filter_sitotde_U98 : component Sobel_filter_sitotde
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -494,7 +494,7 @@ begin
         ce => grp_fu_220_ce,
         dout => grp_fu_220_p1);
 
-    Sobel_filter_sitotde_U89 : component Sobel_filter_sitotde
+    Sobel_filter_sitotde_U99 : component Sobel_filter_sitotde
     generic map (
         ID => 1,
         NUM_STAGE => 6,
@@ -1001,7 +1001,7 @@ begin
                 tmp_3_i_reg_1067 <= tmp_3_i_fu_353_p2;
                 tmp_9_i_reg_1040 <= tmp_9_i_fu_321_p2;
                 tmp_i2_reg_1054 <= tmp_i2_fu_333_p2;
-                tmp_i_i_i_i_108_reg_1014 <= tmp_i_i_i_i_108_fu_281_p2;
+                tmp_i_i_i_i_111_reg_1014 <= tmp_i_i_i_i_111_fu_281_p2;
                 tmp_i_i_i_i_reg_1008 <= tmp_i_i_i_i_fu_275_p2;
             end if;
         end if;
@@ -1044,8 +1044,8 @@ begin
                 tmp_9_i_reg_1040_pp0_iter27_reg <= tmp_9_i_reg_1040;
                 tmp_9_i_reg_1040_pp0_iter28_reg <= tmp_9_i_reg_1040_pp0_iter27_reg;
                 tmp_i2_reg_1054_pp0_iter27_reg <= tmp_i2_reg_1054;
-                tmp_i_i_i_i_108_reg_1014_pp0_iter27_reg <= tmp_i_i_i_i_108_reg_1014;
-                tmp_i_i_i_i_108_reg_1014_pp0_iter28_reg <= tmp_i_i_i_i_108_reg_1014_pp0_iter27_reg;
+                tmp_i_i_i_i_111_reg_1014_pp0_iter27_reg <= tmp_i_i_i_i_111_reg_1014;
+                tmp_i_i_i_i_111_reg_1014_pp0_iter28_reg <= tmp_i_i_i_i_111_reg_1014_pp0_iter27_reg;
                 tmp_i_i_i_i_reg_1008_pp0_iter27_reg <= tmp_i_i_i_i_reg_1008;
                 tmp_i_i_i_i_reg_1008_pp0_iter28_reg <= tmp_i_i_i_i_reg_1008_pp0_iter27_reg;
             end if;
@@ -1473,11 +1473,11 @@ begin
     sel_tmp4_i_fu_627_p3 <= 
         p_Val2_13_reg_1092 when (sel_tmp3_i_fu_623_p2(0) = '1') else 
         sel_tmp_i_fu_617_p3;
-    sel_tmp50_i_demorgan_fu_881_p2 <= (tmp_i_i_i_i_reg_1008_pp0_iter28_reg and tmp_i_i_i_i_108_reg_1014_pp0_iter28_reg);
+    sel_tmp50_i_demorgan_fu_881_p2 <= (tmp_i_i_i_i_reg_1008_pp0_iter28_reg and tmp_i_i_i_i_111_reg_1014_pp0_iter28_reg);
     sel_tmp50_i_fu_885_p2 <= (sel_tmp50_i_demorgan_fu_881_p2 xor ap_const_lv1_1);
     sel_tmp51_i_fu_891_p2 <= (tmp_9_i_reg_1040_pp0_iter28_reg and sel_tmp50_i_fu_885_p2);
     sel_tmp52_i_fu_907_p3 <= 
-        ap_const_lv8_0 when (tmp_39_fu_902_p2(0) = '1') else 
+        ap_const_lv8_0 when (tmp_40_fu_902_p2(0) = '1') else 
         p_Val2_14_reg_1158;
     sel_tmp55_demorgan_i_fu_914_p2 <= (tmp_demorgan_i_fu_849_p2 or tmp_9_i_reg_1040_pp0_iter28_reg);
     sel_tmp55_i_fu_919_p2 <= (sel_tmp55_demorgan_i_fu_914_p2 xor ap_const_lv1_1);
@@ -1556,8 +1556,8 @@ begin
     tmp_27_i_fu_566_p2 <= "1" when (pos2_fu_487_p2 = ap_const_lv12_36) else "0";
     tmp_28_i_fu_804_p2 <= (ap_const_lv1_1 xor Range1_all_ones_2_i_fu_798_p2);
     tmp_2_i_fu_339_p2 <= std_logic_vector(unsigned(ap_const_lv12_0) - unsigned(F2_fu_327_p2));
-    tmp_39_fu_902_p2 <= (underflow_reg_1164 or tmp_s_fu_896_p2);
     tmp_3_i_fu_353_p2 <= "1" when (loc_V_fu_261_p4 = ap_const_lv11_433) else "0";
+    tmp_40_fu_902_p2 <= (underflow_reg_1164 or tmp_s_fu_896_p2);
     tmp_5_i3_fu_387_p2 <= "1" when (unsigned(F2_2_reg_1060) < unsigned(ap_const_lv12_36)) else "0";
     tmp_7_i1_fu_299_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(loc_V_fu_261_p4),12));
     tmp_8_not_i_fu_674_p2 <= (icmp_reg_1074_pp0_iter27_reg xor ap_const_lv1_1);
@@ -1566,10 +1566,10 @@ begin
     tmp_98_fu_359_p4 <= F2_2_fu_345_p3(11 downto 3);
     tmp_99_fu_402_p1 <= tmp_11_i_fu_396_p2(8 - 1 downto 0);
     tmp_9_i_fu_321_p2 <= "1" when (tmp_fu_287_p1 = ap_const_lv63_0) else "0";
-    tmp_demorgan_i_fu_849_p2 <= (tmp_i_i_i_i_reg_1008_pp0_iter28_reg and tmp_i_i_i_i_108_reg_1014_pp0_iter28_reg);
+    tmp_demorgan_i_fu_849_p2 <= (tmp_i_i_i_i_reg_1008_pp0_iter28_reg and tmp_i_i_i_i_111_reg_1014_pp0_iter28_reg);
     tmp_fu_287_p1 <= p_Val2_11_fu_258_p1(63 - 1 downto 0);
     tmp_i2_fu_333_p2 <= "1" when (signed(F2_fu_327_p2) > signed(ap_const_lv12_0)) else "0";
-    tmp_i_i_i_i_108_fu_281_p2 <= "0" when (loc_V_1_fu_271_p1 = ap_const_lv52_0) else "1";
+    tmp_i_i_i_i_111_fu_281_p2 <= "0" when (loc_V_1_fu_271_p1 = ap_const_lv52_0) else "1";
     tmp_i_i_i_i_fu_275_p2 <= "1" when (loc_V_fu_261_p4 = ap_const_lv11_7FF) else "0";
     tmp_s_fu_896_p2 <= (tmp_demorgan_i_fu_849_p2 or sel_tmp51_i_fu_891_p2);
     underflow_fu_830_p3 <= 

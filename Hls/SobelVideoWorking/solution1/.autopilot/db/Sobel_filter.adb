@@ -481,7 +481,7 @@
                 <item_version>0</item_version>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>Block_proc304_U0</rtlName>
+              <rtlName>Block_proc306_U0</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -520,7 +520,7 @@
               <name/>
               <fileName>SobelVideoWorking/a.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>38</lineNumber>
+              <lineNumber>39</lineNumber>
               <contextFuncName>Sobel_filter</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -535,7 +535,7 @@
                         <first>SobelVideoWorking/a.cpp</first>
                         <second>Sobel_filter</second>
                       </first>
-                      <second>38</second>
+                      <second>39</second>
                     </item>
                   </second>
                 </item>
@@ -565,7 +565,7 @@
             <Obj>
               <type>2</type>
               <id>42</id>
-              <name>Block_proc304</name>
+              <name>Block_proc306</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -581,7 +581,7 @@
             <bitwidth>0</bitwidth>
           </Value>
           <const_type>6</const_type>
-          <content>&lt;constant:Block__proc304&gt;</content>
+          <content>&lt;constant:Block__proc306&gt;</content>
         </item>
       </consts>
       <blocks class_id="17" tracking_level="0" version="0">
@@ -757,8 +757,8 @@
         <mDepth>-1</mDepth>
         <mMinTripCount>-1</mMinTripCount>
         <mMaxTripCount>-1</mMaxTripCount>
-        <mMinLatency>943932</mMinLatency>
-        <mMaxLatency>943932</mMaxLatency>
+        <mMinLatency>943937</mMinLatency>
+        <mMaxLatency>943937</mMaxLatency>
         <mIsDfPipe>1</mIsDfPipe>
         <mDfPipe class_id="23" tracking_level="1" version="0" object_id="_39">
           <port_list class_id="24" tracking_level="0" version="0">
@@ -770,7 +770,7 @@
             <item_version>0</item_version>
             <item class_id="26" tracking_level="1" version="0" object_id="_40">
               <type>0</type>
-              <name>Block_proc304_U0</name>
+              <name>Block_proc306_U0</name>
               <ssdmobj_id>36</ssdmobj_id>
               <pins class_id="27" tracking_level="0" version="0">
                 <count>15</count>
@@ -783,7 +783,7 @@
                   </port>
                   <inst class_id="30" tracking_level="1" version="0" object_id="_43">
                     <type>0</type>
-                    <name>Block_proc304_U0</name>
+                    <name>Block_proc306_U0</name>
                     <ssdmobj_id>36</ssdmobj_id>
                   </inst>
                 </item>
@@ -1116,7 +1116,7 @@
         <count>1</count>
         <item_version>0</item_version>
         <item class_id="45" tracking_level="0" version="0">
-          <first>Block_proc304_U0 (Block_proc304)</first>
+          <first>Block_proc306_U0 (Block_proc306)</first>
           <second class_id="46" tracking_level="0" version="0">
             <count>4</count>
             <item_version>0</item_version>
@@ -1130,11 +1130,11 @@
             </item>
             <item>
               <first>FF</first>
-              <second>6006</second>
+              <second>6332</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>10250</second>
+              <second>10952</second>
             </item>
           </second>
         </item>
@@ -1163,7 +1163,7 @@
         <count>1</count>
         <item_version>0</item_version>
         <item>
-          <first>Block_proc304_U0</first>
+          <first>Block_proc306_U0</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
@@ -1174,7 +1174,7 @@
         <count>1</count>
         <item_version>0</item_version>
         <item class_id="49" tracking_level="0" version="0">
-          <first>Block_proc304_U0 (Block_proc304)</first>
+          <first>Block_proc306_U0 (Block_proc306)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -1302,7 +1302,7 @@
       <count>1</count>
       <item_version>0</item_version>
       <item class_id="62" tracking_level="0" version="0">
-        <first>grp_Block_proc304_fu_62</first>
+        <first>grp_Block_proc306_fu_62</first>
         <second>
           <count>2</count>
           <item_version>0</item_version>

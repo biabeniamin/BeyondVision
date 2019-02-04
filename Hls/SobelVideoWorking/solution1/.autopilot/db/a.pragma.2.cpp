@@ -43161,6 +43161,7 @@ hls::AXIvideo2Mat(INPUT_STREAM, img_0a);
  GRAY_IMAGE img_5(720, 1280);
  RGB_IMAGE img_6(720, 1280);
 _ssdm_op_SpecDataflowPipeline(-1, "");
+ hls::AXIvideo2Mat(INPUT_STREAM, img_0);
  hls::CvtColor<HLS_BGR2GRAY>(img_0, img_1);
  hls::GaussianBlur<3,3>(img_1,img_2);
  hls::Duplicate(img_2,img_2a,img_2b);

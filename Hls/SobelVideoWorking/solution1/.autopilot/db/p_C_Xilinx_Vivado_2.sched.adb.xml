@@ -19,7 +19,7 @@
 
 <Node id="2" bw="0" op_0_bw="0" op_1_bw="12" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
 <![CDATA[
-entry:0  call void (...)* @_ssdm_op_SpecInterface(i12* %img_0a_cols_V4_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str502, i32 0, i32 0, [1 x i8]* @p_str503, [1 x i8]* @p_str504, [1 x i8]* @p_str505, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str506, [1 x i8]* @p_str507)
+entry:0  call void (...)* @_ssdm_op_SpecInterface(i12* %img_0a_cols_V6_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str546, i32 0, i32 0, [1 x i8]* @p_str547, [1 x i8]* @p_str548, [1 x i8]* @p_str549, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str550, [1 x i8]* @p_str551)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -34,7 +34,7 @@ entry:0  call void (...)* @_ssdm_op_SpecInterface(i12* %img_0a_cols_V4_out, [8 x
 
 <Node id="3" bw="0" op_0_bw="0" op_1_bw="12" op_2_bw="12">
 <![CDATA[
-entry:1  call void @_ssdm_op_Write.ap_fifo.i12P(i12* %img_0a_cols_V4_out, i12 1280)
+entry:1  call void @_ssdm_op_Write.ap_fifo.i12P(i12* %img_0a_cols_V6_out, i12 1280)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
