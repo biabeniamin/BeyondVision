@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Thu Jan 31 21:51:58 2019
+--Date        : Mon Feb  4 18:12:42 2019
 --Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
 --Command     : generate_target hdmi.bd
 --Design      : hdmi
@@ -7477,8 +7477,8 @@ architecture STRUCTURE of hdmi is
     enable_V : in STD_LOGIC_VECTOR ( 0 to 0 );
     ap_clk : in STD_LOGIC;
     ap_rst_n : in STD_LOGIC;
-    ap_start : in STD_LOGIC;
     ap_done : out STD_LOGIC;
+    ap_start : in STD_LOGIC;
     ap_ready : out STD_LOGIC;
     ap_idle : out STD_LOGIC
   );
