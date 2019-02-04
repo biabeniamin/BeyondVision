@@ -653,13 +653,6 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>Sobel_filter_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="hls" spirit:name="Sobel_filter" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">hdmi_Sobel_filter_0_0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
         <spirit:instanceName>system_ila_0</spirit:instanceName>
         <spirit:componentRef spirit:library="ip" spirit:name="system_ila" spirit:vendor="xilinx.com" spirit:version="1.1"/>
         <spirit:configurableElementValues>
@@ -684,6 +677,13 @@
           <spirit:configurableElementValue spirit:referenceId="C_PROBE0_TYPE">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="C_NUM_OF_PROBES">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="C_MON_TYPE">NATIVE</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>Sobel_filter_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="hls" spirit:name="Sobel_filter" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">hdmi_Sobel_filter_0_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>
@@ -934,8 +934,8 @@
         <spirit:internalPortReference spirit:componentRef="v_vid_in_axi4s_0" spirit:portRef="aclk"/>
         <spirit:internalPortReference spirit:componentRef="axis_subset_converter_1" spirit:portRef="aclk"/>
         <spirit:internalPortReference spirit:componentRef="rst_hdmi_160M" spirit:portRef="slowest_sync_clk"/>
-        <spirit:internalPortReference spirit:componentRef="Sobel_filter_0" spirit:portRef="ap_clk"/>
         <spirit:internalPortReference spirit:componentRef="system_ila_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="Sobel_filter_0" spirit:portRef="ap_clk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>mig_7series_0_ui_addn_clk_2</spirit:name>
@@ -1087,8 +1087,8 @@
       <spirit:adHocConnection>
         <spirit:name>xlconstant_1_dout</spirit:name>
         <spirit:externalPortReference spirit:portRef="enable"/>
-        <spirit:internalPortReference spirit:componentRef="Sobel_filter_0" spirit:portRef="enable_V"/>
         <spirit:internalPortReference spirit:componentRef="system_ila_1" spirit:portRef="probe0"/>
+        <spirit:internalPortReference spirit:componentRef="Sobel_filter_0" spirit:portRef="enable_V"/>
         <bd:hdl_attributes>
           <bd:hdl_attribute bd:name="DEBUG" bd:value="true"/>
           <bd:hdl_attribute bd:name="MARK_DEBUG" bd:value="true"/>
