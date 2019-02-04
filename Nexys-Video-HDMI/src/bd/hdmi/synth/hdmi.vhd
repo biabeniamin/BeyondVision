@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Mon Feb  4 18:39:47 2019
+--Date        : Mon Feb  4 19:35:01 2019
 --Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
 --Command     : generate_target hdmi.bd
 --Design      : hdmi
@@ -6680,7 +6680,7 @@ entity hdmi is
     usb_uart_txd : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of hdmi : entity is "hdmi,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=hdmi,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=65,numReposBlks=45,numNonXlnxBlks=3,numHierBlks=20,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_board_cnt=1,da_clkrst_cnt=7,synth_mode=Global}";
+  attribute CORE_GENERATION_INFO of hdmi : entity is "hdmi,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=hdmi,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=66,numReposBlks=46,numNonXlnxBlks=3,numHierBlks=20,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_board_cnt=1,da_clkrst_cnt=8,synth_mode=Global}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of hdmi : entity is "hdmi.hwdef";
 end hdmi;
@@ -7449,11 +7449,6 @@ architecture STRUCTURE of hdmi is
     gpio_io_i : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   end component hdmi_axi_gpio_2_0;
-  component hdmi_xlconstant_1_0 is
-  port (
-    dout : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component hdmi_xlconstant_1_0;
   component hdmi_Sobel_filter_0_0 is
   port (
     INPUT_STREAM_TVALID : in STD_LOGIC;
@@ -7483,14 +7478,73 @@ architecture STRUCTURE of hdmi is
     ap_idle : out STD_LOGIC
   );
   end component hdmi_Sobel_filter_0_0;
+  component hdmi_system_ila_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    SLOT_0_AXIS_tid : in STD_LOGIC_VECTOR ( 0 to 0 );
+    SLOT_0_AXIS_tdest : in STD_LOGIC_VECTOR ( 0 to 0 );
+    SLOT_0_AXIS_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    SLOT_0_AXIS_tstrb : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    SLOT_0_AXIS_tkeep : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    SLOT_0_AXIS_tlast : in STD_LOGIC;
+    SLOT_0_AXIS_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
+    SLOT_0_AXIS_tvalid : in STD_LOGIC;
+    SLOT_0_AXIS_tready : in STD_LOGIC;
+    SLOT_1_AXIS_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    SLOT_1_AXIS_tlast : in STD_LOGIC;
+    SLOT_1_AXIS_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
+    SLOT_1_AXIS_tvalid : in STD_LOGIC;
+    SLOT_1_AXIS_tready : in STD_LOGIC;
+    resetn : in STD_LOGIC
+  );
+  end component hdmi_system_ila_0_0;
+  component hdmi_system_ila_1_0 is
+  port (
+    clk : in STD_LOGIC;
+    probe0 : in STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component hdmi_system_ila_1_0;
   signal Net : STD_LOGIC_VECTOR ( 0 to 0 );
   signal SYS_Rst_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal Sobel_filter_0_OUTPUT_STREAM_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
+  attribute CONN_BUS_INFO : string;
+  attribute CONN_BUS_INFO of Sobel_filter_0_OUTPUT_STREAM_TDATA : signal is "Sobel_filter_0_OUTPUT_STREAM xilinx.com:interface:axis:1.0 None TDATA";
+  attribute DEBUG : string;
+  attribute DEBUG of Sobel_filter_0_OUTPUT_STREAM_TDATA : signal is "true";
+  attribute MARK_DEBUG : boolean;
+  attribute MARK_DEBUG of Sobel_filter_0_OUTPUT_STREAM_TDATA : signal is std.standard.true;
+  signal Sobel_filter_0_OUTPUT_STREAM_TDEST : STD_LOGIC_VECTOR ( 0 to 0 );
+  attribute CONN_BUS_INFO of Sobel_filter_0_OUTPUT_STREAM_TDEST : signal is "Sobel_filter_0_OUTPUT_STREAM xilinx.com:interface:axis:1.0 None TDEST";
+  attribute DEBUG of Sobel_filter_0_OUTPUT_STREAM_TDEST : signal is "true";
+  attribute MARK_DEBUG of Sobel_filter_0_OUTPUT_STREAM_TDEST : signal is std.standard.true;
+  signal Sobel_filter_0_OUTPUT_STREAM_TID : STD_LOGIC_VECTOR ( 0 to 0 );
+  attribute CONN_BUS_INFO of Sobel_filter_0_OUTPUT_STREAM_TID : signal is "Sobel_filter_0_OUTPUT_STREAM xilinx.com:interface:axis:1.0 None TID";
+  attribute DEBUG of Sobel_filter_0_OUTPUT_STREAM_TID : signal is "true";
+  attribute MARK_DEBUG of Sobel_filter_0_OUTPUT_STREAM_TID : signal is std.standard.true;
   signal Sobel_filter_0_OUTPUT_STREAM_TKEEP : STD_LOGIC_VECTOR ( 2 downto 0 );
+  attribute CONN_BUS_INFO of Sobel_filter_0_OUTPUT_STREAM_TKEEP : signal is "Sobel_filter_0_OUTPUT_STREAM xilinx.com:interface:axis:1.0 None TKEEP";
+  attribute DEBUG of Sobel_filter_0_OUTPUT_STREAM_TKEEP : signal is "true";
+  attribute MARK_DEBUG of Sobel_filter_0_OUTPUT_STREAM_TKEEP : signal is std.standard.true;
   signal Sobel_filter_0_OUTPUT_STREAM_TLAST : STD_LOGIC_VECTOR ( 0 to 0 );
+  attribute CONN_BUS_INFO of Sobel_filter_0_OUTPUT_STREAM_TLAST : signal is "Sobel_filter_0_OUTPUT_STREAM xilinx.com:interface:axis:1.0 None TLAST";
+  attribute DEBUG of Sobel_filter_0_OUTPUT_STREAM_TLAST : signal is "true";
+  attribute MARK_DEBUG of Sobel_filter_0_OUTPUT_STREAM_TLAST : signal is std.standard.true;
   signal Sobel_filter_0_OUTPUT_STREAM_TREADY : STD_LOGIC;
+  attribute CONN_BUS_INFO of Sobel_filter_0_OUTPUT_STREAM_TREADY : signal is "Sobel_filter_0_OUTPUT_STREAM xilinx.com:interface:axis:1.0 None TREADY";
+  attribute DEBUG of Sobel_filter_0_OUTPUT_STREAM_TREADY : signal is "true";
+  attribute MARK_DEBUG of Sobel_filter_0_OUTPUT_STREAM_TREADY : signal is std.standard.true;
+  signal Sobel_filter_0_OUTPUT_STREAM_TSTRB : STD_LOGIC_VECTOR ( 2 downto 0 );
+  attribute CONN_BUS_INFO of Sobel_filter_0_OUTPUT_STREAM_TSTRB : signal is "Sobel_filter_0_OUTPUT_STREAM xilinx.com:interface:axis:1.0 None TSTRB";
+  attribute DEBUG of Sobel_filter_0_OUTPUT_STREAM_TSTRB : signal is "true";
+  attribute MARK_DEBUG of Sobel_filter_0_OUTPUT_STREAM_TSTRB : signal is std.standard.true;
   signal Sobel_filter_0_OUTPUT_STREAM_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
+  attribute CONN_BUS_INFO of Sobel_filter_0_OUTPUT_STREAM_TUSER : signal is "Sobel_filter_0_OUTPUT_STREAM xilinx.com:interface:axis:1.0 None TUSER";
+  attribute DEBUG of Sobel_filter_0_OUTPUT_STREAM_TUSER : signal is "true";
+  attribute MARK_DEBUG of Sobel_filter_0_OUTPUT_STREAM_TUSER : signal is std.standard.true;
   signal Sobel_filter_0_OUTPUT_STREAM_TVALID : STD_LOGIC;
+  attribute CONN_BUS_INFO of Sobel_filter_0_OUTPUT_STREAM_TVALID : signal is "Sobel_filter_0_OUTPUT_STREAM xilinx.com:interface:axis:1.0 None TVALID";
+  attribute DEBUG of Sobel_filter_0_OUTPUT_STREAM_TVALID : signal is "true";
+  attribute MARK_DEBUG of Sobel_filter_0_OUTPUT_STREAM_TVALID : signal is std.standard.true;
   signal TMDS_IN_1_CLK_N : STD_LOGIC;
   signal TMDS_IN_1_CLK_P : STD_LOGIC;
   signal TMDS_IN_1_DATA_N : STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -7580,10 +7634,25 @@ architecture STRUCTURE of hdmi is
   signal axis_subset_converter_0_M_AXIS_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
   signal axis_subset_converter_0_M_AXIS_TVALID : STD_LOGIC;
   signal axis_subset_converter_1_M_AXIS_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
+  attribute CONN_BUS_INFO of axis_subset_converter_1_M_AXIS_TDATA : signal is "axis_subset_converter_1_M_AXIS xilinx.com:interface:axis:1.0 None TDATA";
+  attribute DEBUG of axis_subset_converter_1_M_AXIS_TDATA : signal is "true";
+  attribute MARK_DEBUG of axis_subset_converter_1_M_AXIS_TDATA : signal is std.standard.true;
   signal axis_subset_converter_1_M_AXIS_TLAST : STD_LOGIC;
+  attribute CONN_BUS_INFO of axis_subset_converter_1_M_AXIS_TLAST : signal is "axis_subset_converter_1_M_AXIS xilinx.com:interface:axis:1.0 None TLAST";
+  attribute DEBUG of axis_subset_converter_1_M_AXIS_TLAST : signal is "true";
+  attribute MARK_DEBUG of axis_subset_converter_1_M_AXIS_TLAST : signal is std.standard.true;
   signal axis_subset_converter_1_M_AXIS_TREADY : STD_LOGIC;
+  attribute CONN_BUS_INFO of axis_subset_converter_1_M_AXIS_TREADY : signal is "axis_subset_converter_1_M_AXIS xilinx.com:interface:axis:1.0 None TREADY";
+  attribute DEBUG of axis_subset_converter_1_M_AXIS_TREADY : signal is "true";
+  attribute MARK_DEBUG of axis_subset_converter_1_M_AXIS_TREADY : signal is std.standard.true;
   signal axis_subset_converter_1_M_AXIS_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
+  attribute CONN_BUS_INFO of axis_subset_converter_1_M_AXIS_TUSER : signal is "axis_subset_converter_1_M_AXIS xilinx.com:interface:axis:1.0 None TUSER";
+  attribute DEBUG of axis_subset_converter_1_M_AXIS_TUSER : signal is "true";
+  attribute MARK_DEBUG of axis_subset_converter_1_M_AXIS_TUSER : signal is std.standard.true;
   signal axis_subset_converter_1_M_AXIS_TVALID : STD_LOGIC;
+  attribute CONN_BUS_INFO of axis_subset_converter_1_M_AXIS_TVALID : signal is "axis_subset_converter_1_M_AXIS xilinx.com:interface:axis:1.0 None TVALID";
+  attribute DEBUG of axis_subset_converter_1_M_AXIS_TVALID : signal is "true";
+  attribute MARK_DEBUG of axis_subset_converter_1_M_AXIS_TVALID : signal is std.standard.true;
   signal dvi2rgb_0_DDC_SCL_I : STD_LOGIC;
   signal dvi2rgb_0_DDC_SCL_O : STD_LOGIC;
   signal dvi2rgb_0_DDC_SCL_T : STD_LOGIC;
@@ -7907,6 +7976,7 @@ architecture STRUCTURE of hdmi is
   signal rgb2dvi_0_TMDS_CLK_P : STD_LOGIC;
   signal rgb2dvi_0_TMDS_DATA_N : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal rgb2dvi_0_TMDS_DATA_P : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal rst_hdmi_160M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal rst_mig_7series_0_100M_interconnect_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal rst_mig_7series_0_100M_mb_reset : STD_LOGIC;
   signal rst_mig_7series_0_100M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -7934,12 +8004,11 @@ architecture STRUCTURE of hdmi is
   signal v_vid_in_axi4s_0_vtiming_out_VSYNC : STD_LOGIC;
   signal xlconstant_0_dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal xlconstant_1_dout : STD_LOGIC_VECTOR ( 0 to 0 );
+  attribute DEBUG of xlconstant_1_dout : signal is "true";
+  attribute MARK_DEBUG of xlconstant_1_dout : signal is std.standard.true;
   signal NLW_Sobel_filter_0_ap_done_UNCONNECTED : STD_LOGIC;
   signal NLW_Sobel_filter_0_ap_idle_UNCONNECTED : STD_LOGIC;
   signal NLW_Sobel_filter_0_ap_ready_UNCONNECTED : STD_LOGIC;
-  signal NLW_Sobel_filter_0_OUTPUT_STREAM_TDEST_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal NLW_Sobel_filter_0_OUTPUT_STREAM_TID_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal NLW_Sobel_filter_0_OUTPUT_STREAM_TSTRB_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal NLW_axi_dynclk_0_LOCKED_O_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_gpio_1_gpio2_io_o_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_axi_gpio_1_gpio_io_o_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -7977,7 +8046,6 @@ architecture STRUCTURE of hdmi is
   signal NLW_rst_hdmi_160M_mb_reset_UNCONNECTED : STD_LOGIC;
   signal NLW_rst_hdmi_160M_bus_struct_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_hdmi_160M_interconnect_aresetn_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal NLW_rst_hdmi_160M_peripheral_aresetn_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_hdmi_160M_peripheral_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_mig_7series_0_100M_peripheral_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_mig_7series_0_pxl_mb_reset_UNCONNECTED : STD_LOGIC;
@@ -8076,6 +8144,7 @@ begin
   reset_1 <= reset;
   sys_clk_i_1 <= sys_clk_i;
   usb_uart_txd <= axi_uartlite_0_UART_TxD;
+  xlconstant_1_dout(0) <= enable(0);
 Sobel_filter_0: component hdmi_Sobel_filter_0_0
      port map (
       INPUT_STREAM_TDATA(23 downto 0) => axis_subset_converter_1_M_AXIS_TDATA(23 downto 0),
@@ -8088,12 +8157,12 @@ Sobel_filter_0: component hdmi_Sobel_filter_0_0
       INPUT_STREAM_TUSER(0) => axis_subset_converter_1_M_AXIS_TUSER(0),
       INPUT_STREAM_TVALID => axis_subset_converter_1_M_AXIS_TVALID,
       OUTPUT_STREAM_TDATA(23 downto 0) => Sobel_filter_0_OUTPUT_STREAM_TDATA(23 downto 0),
-      OUTPUT_STREAM_TDEST(0) => NLW_Sobel_filter_0_OUTPUT_STREAM_TDEST_UNCONNECTED(0),
-      OUTPUT_STREAM_TID(0) => NLW_Sobel_filter_0_OUTPUT_STREAM_TID_UNCONNECTED(0),
+      OUTPUT_STREAM_TDEST(0) => Sobel_filter_0_OUTPUT_STREAM_TDEST(0),
+      OUTPUT_STREAM_TID(0) => Sobel_filter_0_OUTPUT_STREAM_TID(0),
       OUTPUT_STREAM_TKEEP(2 downto 0) => Sobel_filter_0_OUTPUT_STREAM_TKEEP(2 downto 0),
       OUTPUT_STREAM_TLAST(0) => Sobel_filter_0_OUTPUT_STREAM_TLAST(0),
       OUTPUT_STREAM_TREADY => Sobel_filter_0_OUTPUT_STREAM_TREADY,
-      OUTPUT_STREAM_TSTRB(2 downto 0) => NLW_Sobel_filter_0_OUTPUT_STREAM_TSTRB_UNCONNECTED(2 downto 0),
+      OUTPUT_STREAM_TSTRB(2 downto 0) => Sobel_filter_0_OUTPUT_STREAM_TSTRB(2 downto 0),
       OUTPUT_STREAM_TUSER(0) => Sobel_filter_0_OUTPUT_STREAM_TUSER(0),
       OUTPUT_STREAM_TVALID => Sobel_filter_0_OUTPUT_STREAM_TVALID,
       ap_clk => mig_7series_0_ui_addn_clk_0,
@@ -9094,7 +9163,7 @@ rst_hdmi_160M: component hdmi_rst_hdmi_160M_0
       interconnect_aresetn(0) => NLW_rst_hdmi_160M_interconnect_aresetn_UNCONNECTED(0),
       mb_debug_sys_rst => '0',
       mb_reset => NLW_rst_hdmi_160M_mb_reset_UNCONNECTED,
-      peripheral_aresetn(0) => NLW_rst_hdmi_160M_peripheral_aresetn_UNCONNECTED(0),
+      peripheral_aresetn(0) => rst_hdmi_160M_peripheral_aresetn(0),
       peripheral_reset(0) => NLW_rst_hdmi_160M_peripheral_reset_UNCONNECTED(0),
       slowest_sync_clk => mig_7series_0_ui_addn_clk_0
     );
@@ -9123,6 +9192,30 @@ rst_mig_7series_0_pxl: component hdmi_rst_mig_7series_0_pxl_0
       peripheral_aresetn(0) => rst_mig_7series_0_pxl_peripheral_aresetn(0),
       peripheral_reset(0) => rst_mig_7series_0_pxl_peripheral_reset(0),
       slowest_sync_clk => dvi2rgb_0_PixelClk
+    );
+system_ila_0: component hdmi_system_ila_0_0
+     port map (
+      SLOT_0_AXIS_tdata(23 downto 0) => Sobel_filter_0_OUTPUT_STREAM_TDATA(23 downto 0),
+      SLOT_0_AXIS_tdest(0) => Sobel_filter_0_OUTPUT_STREAM_TDEST(0),
+      SLOT_0_AXIS_tid(0) => Sobel_filter_0_OUTPUT_STREAM_TID(0),
+      SLOT_0_AXIS_tkeep(2 downto 0) => Sobel_filter_0_OUTPUT_STREAM_TKEEP(2 downto 0),
+      SLOT_0_AXIS_tlast => Sobel_filter_0_OUTPUT_STREAM_TLAST(0),
+      SLOT_0_AXIS_tready => Sobel_filter_0_OUTPUT_STREAM_TREADY,
+      SLOT_0_AXIS_tstrb(2 downto 0) => Sobel_filter_0_OUTPUT_STREAM_TSTRB(2 downto 0),
+      SLOT_0_AXIS_tuser(0) => Sobel_filter_0_OUTPUT_STREAM_TUSER(0),
+      SLOT_0_AXIS_tvalid => Sobel_filter_0_OUTPUT_STREAM_TVALID,
+      SLOT_1_AXIS_tdata(23 downto 0) => axis_subset_converter_1_M_AXIS_TDATA(23 downto 0),
+      SLOT_1_AXIS_tlast => axis_subset_converter_1_M_AXIS_TLAST,
+      SLOT_1_AXIS_tready => axis_subset_converter_1_M_AXIS_TREADY,
+      SLOT_1_AXIS_tuser(0) => axis_subset_converter_1_M_AXIS_TUSER(0),
+      SLOT_1_AXIS_tvalid => axis_subset_converter_1_M_AXIS_TVALID,
+      clk => mig_7series_0_ui_addn_clk_0,
+      resetn => rst_hdmi_160M_peripheral_aresetn(0)
+    );
+system_ila_1: component hdmi_system_ila_1_0
+     port map (
+      clk => mig_7series_0_ui_clk,
+      probe0(0) => xlconstant_1_dout(0)
     );
 v_axi4s_vid_out_0: component hdmi_v_axi4s_vid_out_0_0
      port map (
@@ -9258,9 +9351,5 @@ v_vid_in_axi4s_0: component hdmi_v_vid_in_axi4s_0_0
 xlconstant_0: component hdmi_xlconstant_0_0
      port map (
       dout(0) => xlconstant_0_dout(0)
-    );
-xlconstant_1: component hdmi_xlconstant_1_0
-     port map (
-      dout(0) => xlconstant_1_dout(0)
     );
 end STRUCTURE;
