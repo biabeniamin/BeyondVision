@@ -1032,7 +1032,6 @@
   <spirit:memoryMaps>
     <spirit:memoryMap>
       <spirit:name>csirxss_s_axi</spirit:name>
-      <spirit:description>{rx;/rx/s_axi/reg0;0x0000;64K;xilinx.com:ip:mipi_csi2_rx_ctrl:1.0;register;/rx,phy;/phy/s_axi/Reg;0x10000;64K;xilinx.com:ip:mipi_dphy:4.1;register;/phy}</spirit:description>
       <spirit:addressBlock>
         <spirit:name>Reg</spirit:name>
         <spirit:baseAddress spirit:format="bitString" spirit:resolve="generated">0x00000</spirit:baseAddress>
