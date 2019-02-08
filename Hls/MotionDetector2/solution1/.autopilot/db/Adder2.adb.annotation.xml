@@ -1,8 +1,0 @@
-<annotationInfo>
-<annotationInfo>
-<item  id="53" filename="MotionDetector2/main.cpp" linenumber="47" name="tmp" contextFuncName="Adder2" moduleName="Adder2" rtlName="tmp_fu_238_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="18" fileDirectory="C:\Digilent19\Hls"><\/item>
-<item  id="55" filename="MotionDetector2/main.cpp" linenumber="59" name="in1Count_3" contextFuncName="Adder2" moduleName="Adder2" rtlName="in1Count_3_fu_244_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="30" fileDirectory="C:\Digilent19\Hls"><\/item>
-<item  id="69" filename="MotionDetector2/main.cpp" linenumber="51" name="differentBytes_2" contextFuncName="Adder2" moduleName="Adder2" rtlName="differentBytes_2_fu_278_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="C:\Digilent19\Hls"><\/item>
-<item  id="78" filename="MotionDetector2/main.cpp" linenumber="75" name="in1Count_1_cast" contextFuncName="Adder2" moduleName="Adder2" rtlName="agg_result_b" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\Digilent19\Hls"><\/item>
-<\/annotationInfo>
-</annotationInfo>

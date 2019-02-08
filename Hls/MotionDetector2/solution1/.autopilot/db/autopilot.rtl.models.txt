@@ -1,2 +1,0 @@
-Adder2_CONTROL_BUS_s_axi
-Adder2
