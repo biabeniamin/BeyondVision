@@ -4852,11 +4852,11 @@ Note: This value must be greater than or equal to the largest expected packet to
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 08 18:46:27 UTC 2019</spirit:value>
+            <spirit:value>Fri Feb 08 20:03:46 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:351fd023</spirit:value>
+            <spirit:value>8:f244481d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
