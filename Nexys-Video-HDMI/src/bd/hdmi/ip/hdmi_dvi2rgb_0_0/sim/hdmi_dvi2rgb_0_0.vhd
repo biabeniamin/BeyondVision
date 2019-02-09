@@ -148,11 +148,11 @@ BEGIN
     GENERIC MAP (
       kEmulateDDC => true,
       kRstActiveHigh => false,
-      kClkRange => 2,
+      kClkRange => 1,
       kIDLY_TapValuePs => 78,
       kIDLY_TapWidth => 5,
       kAddBUFG => false,
-      kEdidFileName => "dgl_1280_1024_cea.data",
+      kEdidFileName => "dgl_1080p_cea.data",
       kDebug => true
     )
     PORT MAP (
