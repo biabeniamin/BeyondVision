@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'Random'
 ================================================================
-* Date:           Sat Feb  9 21:39:20 2019
+* Date:           Sat Feb  9 22:00:24 2019
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        RandomGenerator
@@ -91,22 +91,22 @@
     +----------------------------------------+----------+-------+---+----+------------+------------+
     |              Variable Name             | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
     +----------------------------------------+----------+-------+---+----+------------+------------+
-    |in1Count_fu_267_p2                      |     +    |      0|  0|  30|          23|           1|
-    |r_V_fu_298_p2                           |     +    |      0|  0|  63|          56|          56|
-    |sum_V_fu_285_p2                         |     +    |      0|  0|  62|          55|          55|
-    |tmp_8_fu_328_p2                         |     -    |      0|  0|  39|           1|          32|
+    |in1Count_fu_264_p2                      |     +    |      0|  0|  30|          23|           1|
+    |r_V_fu_295_p2                           |     +    |      0|  0|  63|          56|          56|
+    |sum_V_fu_282_p2                         |     +    |      0|  0|  62|          55|          55|
+    |tmp_9_fu_325_p2                         |     -    |      0|  0|  39|           1|          32|
     |INPUT_STREAM_V_data_V_0_load_A          |    and   |      0|  0|   2|           1|           1|
     |INPUT_STREAM_V_data_V_0_load_B          |    and   |      0|  0|   2|           1|           1|
     |INPUT_STREAM_V_last_V_0_load_A          |    and   |      0|  0|   2|           1|           1|
     |INPUT_STREAM_V_last_V_0_load_B          |    and   |      0|  0|   2|           1|           1|
     |ap_block_pp0_stage0_11001               |    and   |      0|  0|   2|           1|           1|
     |ap_block_state2_pp0_stage0_iter0        |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_537                        |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_539                        |    and   |      0|  0|   2|           1|           1|
     |INPUT_STREAM_V_data_V_0_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
     |INPUT_STREAM_V_last_V_0_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
-    |tmp_fu_261_p2                           |   icmp   |      0|  0|  18|          23|          16|
+    |tmp_fu_258_p2                           |   icmp   |      0|  0|  18|          23|          16|
     |ap_predicate_tran3to4_state2            |    or    |      0|  0|   2|           1|           1|
-    |r_V_2_fu_342_p3                         |  select  |      0|  0|  32|           1|          32|
+    |r_V_2_fu_339_p3                         |  select  |      0|  0|  32|           1|          32|
     |ap_enable_pp0                           |    xor   |      0|  0|   2|           1|           2|
     +----------------------------------------+----------+-------+---+----+------------+------------+
     |Total                                   |          |      0|  0| 278|         172|         204|
@@ -124,14 +124,14 @@
     |INPUT_STREAM_V_last_V_0_state     |  15|          3|    2|          6|
     |ap_NS_fsm                         |  21|          4|    1|          4|
     |ap_enable_reg_pp0_iter1           |   9|          2|    1|          2|
-    |ap_phi_mux_i_phi_fu_183_p4        |   9|          2|   23|         46|
-    |ap_phi_mux_p_0_phi_fu_172_p4      |   9|          2|   55|        110|
-    |first_2_reg_236                   |   9|          2|   32|         64|
-    |i_reg_179                         |   9|          2|   23|         46|
-    |in1Count_1_reg_247                |   9|          2|   23|         46|
-    |lhs_V_reg_215                     |   9|          2|   55|        110|
-    |p_0_reg_169                       |   9|          2|   55|        110|
-    |value_1_reg_225                   |   9|          2|   32|         64|
+    |ap_phi_mux_i_phi_fu_180_p4        |   9|          2|   23|         46|
+    |ap_phi_mux_p_0_phi_fu_169_p4      |   9|          2|   55|        110|
+    |first_2_reg_233                   |   9|          2|   32|         64|
+    |i_reg_176                         |   9|          2|   23|         46|
+    |in1Count_1_reg_244                |   9|          2|   23|         46|
+    |lhs_V_reg_212                     |   9|          2|   55|        110|
+    |p_0_reg_166                       |   9|          2|   55|        110|
+    |value_1_reg_222                   |   9|          2|   32|         64|
     +----------------------------------+----+-----------+-----+-----------+
     |Total                             | 174|         37|  340|        688|
     +----------------------------------+----+-----------+-----+-----------+
@@ -154,19 +154,19 @@
     |ap_CS_fsm                          |   3|   0|    3|          0|
     |ap_enable_reg_pp0_iter0            |   1|   0|    1|          0|
     |ap_enable_reg_pp0_iter1            |   1|   0|    1|          0|
-    |first_2_reg_236                    |  32|   0|   32|          0|
-    |first_s_reg_203                    |  32|   0|   32|          0|
-    |i_op_assign_reg_191                |  32|   0|   32|          0|
-    |i_reg_179                          |  23|   0|   23|          0|
-    |in1Count_1_reg_247                 |  23|   0|   23|          0|
-    |in1Count_reg_384                   |  23|   0|   23|          0|
-    |lhs_V_reg_215                      |  55|   0|   55|          0|
-    |p_0_reg_169                        |  55|   0|   55|          0|
-    |sum_V_reg_400                      |  55|   0|   55|          0|
-    |tmp_data_V_reg_390                 |  32|   0|   32|          0|
-    |tmp_last_V_reg_396                 |   1|   0|    1|          0|
-    |tmp_reg_380                        |   1|   0|    1|          0|
-    |value_1_reg_225                    |  32|   0|   32|          0|
+    |first_2_reg_233                    |  32|   0|   32|          0|
+    |first_s_reg_200                    |  32|   0|   32|          0|
+    |i_op_assign_reg_188                |  32|   0|   32|          0|
+    |i_reg_176                          |  23|   0|   23|          0|
+    |in1Count_1_reg_244                 |  23|   0|   23|          0|
+    |in1Count_reg_390                   |  23|   0|   23|          0|
+    |lhs_V_reg_212                      |  55|   0|   55|          0|
+    |p_0_reg_166                        |  55|   0|   55|          0|
+    |sum_V_reg_406                      |  55|   0|   55|          0|
+    |tmp_data_V_reg_396                 |  32|   0|   32|          0|
+    |tmp_last_V_reg_402                 |   1|   0|    1|          0|
+    |tmp_reg_386                        |   1|   0|    1|          0|
+    |value_1_reg_222                    |  32|   0|   32|          0|
     +-----------------------------------+----+----+-----+-----------+
     |Total                              | 477|   0|  477|          0|
     +-----------------------------------+----+----+-----+-----------+
@@ -209,6 +209,6 @@
 |INPUT_STREAM_TUSER         |  in |    2|    axis    | INPUT_STREAM_V_user_V |    pointer   |
 |INPUT_STREAM_TLAST         |  in |    1|    axis    | INPUT_STREAM_V_last_V |    pointer   |
 |INPUT_STREAM_TID           |  in |    5|    axis    |  INPUT_STREAM_V_id_V  |    pointer   |
-|temperature_V              |  in |    8|   ap_none  |     temperature_V     |    scalar    |
+|temperature_V              |  in |   16|   ap_none  |     temperature_V     |    scalar    |
 +---------------------------+-----+-----+------------+-----------------------+--------------+
 

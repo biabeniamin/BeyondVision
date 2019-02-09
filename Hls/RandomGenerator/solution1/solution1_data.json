@@ -582,10 +582,10 @@
     "temperature_V": {
       "type": "data",
       "dir": "in",
-      "width": "8",
+      "width": "16",
       "ctype": {"DATA": {
           "Type": "integer unsigned",
-          "Width": "8"
+          "Width": "16"
         }}
     }
   },
@@ -710,7 +710,7 @@
     },
     "temperature_V": {
       "dir": "in",
-      "width": "8"
+      "width": "16"
     }
   },
   "CPorts": {
@@ -804,7 +804,7 @@
     "temperature_V": {
       "interfaceRef": "temperature_V",
       "dir": "in",
-      "dataWidth": "8",
+      "dataWidth": "16",
       "handshakeRef": "ap_none"
     }
   },
@@ -850,7 +850,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2019-02-09 21:39:21 +0200",
+    "Time": "2019-02-09 22:00:24 +0200",
     "ToolName": "vivado_hls",
     "ToolVersion": "2018.2"
   }

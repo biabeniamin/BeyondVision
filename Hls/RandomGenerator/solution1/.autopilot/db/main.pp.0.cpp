@@ -24383,7 +24383,7 @@ struct asd
 
 typedef struct asd asdf;
 
-asdf Random(hls::stream<AXI_VALUE> &in_stream, ap_uint<8> temperature)
+asdf Random(hls::stream<AXI_VALUE> &in_stream, ap_uint<16> temperature)
 {
 
 #pragma HLS INTERFACE s_axilite port=return bundle=CONTROL_BUS
@@ -24432,7 +24432,7 @@ asdf Random(hls::stream<AXI_VALUE> &in_stream, ap_uint<8> temperature)
  a.c = first;
  a.d = sum >> 32;
  a.e = sum & 0xFFFFFFFF;
- a.f = 0x790;
+ a.f = temperature;
  return a;
 
 }
