@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:hls:Adder2:1.0
--- IP Revision: 1902082201
+-- IP Revision: 1902090853
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -157,8 +157,9 @@ ARCHITECTURE system_Adder2_0_0_arch OF system_Adder2_0_0 IS
   ATTRIBUTE X_INTERFACE_INFO OF OUTPUT_STREAM_TDEST: SIGNAL IS "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TDEST";
   ATTRIBUTE X_INTERFACE_INFO OF OUTPUT_STREAM_TDATA: SIGNAL IS "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TDATA";
   ATTRIBUTE X_INTERFACE_INFO OF OUTPUT_STREAM_TREADY: SIGNAL IS "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TREADY";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF OUTPUT_STREAM_TVALID: SIGNAL IS "XIL_INTERFACENAME OUTPUT_STREAM, TDATA_NUM_BYTES 4, TDEST_WIDTH 6, TID_WIDTH 5, TUSER_WIDTH 2, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, HAS_TREADY 1, HAS_TSTRB 1, HAS_TK" & 
-"EEP 1, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN system_processing_system7_0_0_FCLK_CLK0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF OUTPUT_STREAM_TVALID: SIGNAL IS "XIL_INTERFACENAME OUTPUT_STREAM, TDATA_NUM_BYTES 4, TDEST_WIDTH 6, TID_WIDTH 5, TUSER_WIDTH 2, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} TDATA {datatype {name {attribs {res" & 
+"olve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TDATA_WIDTH 32 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minim" & 
+"um {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 2} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TUSER_WIDTH 2}, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN system_processing_system7_0_0_FCLK_CLK0";
   ATTRIBUTE X_INTERFACE_INFO OF OUTPUT_STREAM_TVALID: SIGNAL IS "xilinx.com:interface:axis:1.0 OUTPUT_STREAM TVALID";
   ATTRIBUTE X_INTERFACE_INFO OF INPUT_STREAM_TID: SIGNAL IS "xilinx.com:interface:axis:1.0 INPUT_STREAM TID";
   ATTRIBUTE X_INTERFACE_INFO OF INPUT_STREAM_TLAST: SIGNAL IS "xilinx.com:interface:axis:1.0 INPUT_STREAM TLAST";

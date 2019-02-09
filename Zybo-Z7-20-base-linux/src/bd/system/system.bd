@@ -387,7 +387,7 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>ac_reclrc</spirit:name>
+          <spirit:name>ac_pblrc</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
             <spirit:vector>
@@ -397,7 +397,7 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>ac_pblrc</spirit:name>
+          <spirit:name>ac_reclrc</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
             <spirit:vector>
@@ -1526,23 +1526,6 @@
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">system_Adder2_0_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>system_ila_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="system_ila" spirit:vendor="xilinx.com" spirit:version="1.1"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">system_system_ila_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_SLOT_0_APC_EN">0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_SLOT_1_APC_EN">0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_SLOT_0_AXI_DATA_SEL">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_SLOT_1_AXI_DATA_SEL">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_SLOT_0_AXI_TRIG_SEL">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_SLOT_1_AXI_TRIG_SEL">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_NUM_MONITOR_SLOTS">2</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_SLOT_0_INTF_TYPE">xilinx.com:interface:axis_rtl:1.0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_SLOT_1_INTF_TYPE">xilinx.com:interface:axis_rtl:1.0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_MON_TYPE">INTERFACE</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
     </spirit:componentInstances>
     <spirit:interconnections>
       <spirit:interconnection>
@@ -1749,16 +1732,7 @@
         <spirit:name>axi_dma_2_M_AXIS_MM2S</spirit:name>
         <spirit:activeInterface spirit:busRef="INPUT_STREAM" spirit:componentRef="Adder2_0"/>
         <spirit:activeInterface spirit:busRef="M_AXIS_MM2S" spirit:componentRef="axi_dma_2"/>
-        <bd:hdl_attributes>
-          <bd:hdl_attribute bd:name="DEBUG" bd:value="true"/>
-          <bd:hdl_attribute bd:name="MARK_DEBUG" bd:value="true"/>
-        </bd:hdl_attributes>
       </spirit:interconnection>
-      <spirit:monitorInterconnection>
-        <spirit:name>axi_dma_2_M_AXIS_MM2S</spirit:name>
-        <spirit:monitoredActiveInterface spirit:busRef="INPUT_STREAM" spirit:componentRef="Adder2_0"/>
-        <spirit:monitorInterface spirit:busRef="SLOT_0_AXIS" spirit:componentRef="system_ila_0"/>
-      </spirit:monitorInterconnection>
       <spirit:interconnection>
         <spirit:name>ps7_0_axi_periph_GP0_M18_AXI</spirit:name>
         <spirit:activeInterface spirit:busRef="M18_AXI" spirit:componentRef="ps7_0_axi_periph_GP0"/>
@@ -1798,16 +1772,7 @@
         <spirit:name>Adder2_0_OUTPUT_STREAM</spirit:name>
         <spirit:activeInterface spirit:busRef="OUTPUT_STREAM" spirit:componentRef="Adder2_0"/>
         <spirit:activeInterface spirit:busRef="S_AXIS_S2MM" spirit:componentRef="axi_dma_3"/>
-        <bd:hdl_attributes>
-          <bd:hdl_attribute bd:name="DEBUG" bd:value="true"/>
-          <bd:hdl_attribute bd:name="MARK_DEBUG" bd:value="true"/>
-        </bd:hdl_attributes>
       </spirit:interconnection>
-      <spirit:monitorInterconnection>
-        <spirit:name>Adder2_0_OUTPUT_STREAM</spirit:name>
-        <spirit:monitoredActiveInterface spirit:busRef="OUTPUT_STREAM" spirit:componentRef="Adder2_0"/>
-        <spirit:monitorInterface spirit:busRef="SLOT_1_AXIS" spirit:componentRef="system_ila_0"/>
-      </spirit:monitorInterconnection>
     </spirit:interconnections>
     <spirit:adHocConnections>
       <spirit:adHocConnection>
@@ -1855,8 +1820,8 @@
       <spirit:adHocConnection>
         <spirit:name>axi_i2s_adi_0_LRCLK_O</spirit:name>
         <spirit:internalPortReference spirit:componentRef="axi_i2s_adi_0" spirit:portRef="LRCLK_O"/>
-        <spirit:externalPortReference spirit:portRef="ac_pblrc"/>
         <spirit:externalPortReference spirit:portRef="ac_reclrc"/>
+        <spirit:externalPortReference spirit:portRef="ac_pblrc"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>axi_i2s_adi_0_SDATA_O</spirit:name>
@@ -1935,6 +1900,12 @@
         <spirit:internalPortReference spirit:componentRef="axi_dma_0" spirit:portRef="m_axi_s2mm_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_dma_0" spirit:portRef="m_axi_mm2s_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_dma_0" spirit:portRef="m_axi_sg_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="axi_dma_2" spirit:portRef="s_axi_lite_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="axi_dma_2" spirit:portRef="m_axi_mm2s_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="axi_dma_2" spirit:portRef="m_axi_s2mm_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="axi_dma_3" spirit:portRef="s_axi_lite_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="axi_dma_3" spirit:portRef="m_axi_mm2s_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="axi_dma_3" spirit:portRef="m_axi_s2mm_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="S00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="M00_ACLK"/>
@@ -1965,20 +1936,13 @@
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="S05_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="S06_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph_GP0" spirit:portRef="M18_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="axi_dma_2" spirit:portRef="s_axi_lite_aclk"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph_GP0" spirit:portRef="M19_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="axi_dma_2" spirit:portRef="m_axi_mm2s_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="S07_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="axi_dma_2" spirit:portRef="m_axi_s2mm_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="S08_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="axi_dma_3" spirit:portRef="s_axi_lite_aclk"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph_GP0" spirit:portRef="M20_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="axi_dma_3" spirit:portRef="m_axi_mm2s_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="S09_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="axi_dma_3" spirit:portRef="m_axi_s2mm_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="S10_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="Adder2_0" spirit:portRef="ap_clk"/>
-        <spirit:internalPortReference spirit:componentRef="system_ila_0" spirit:portRef="clk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>processing_system7_0_FCLK_CLK1</spirit:name>
@@ -2037,6 +2001,8 @@
         <spirit:internalPortReference spirit:componentRef="axi_vdma_out" spirit:portRef="axi_resetn"/>
         <spirit:internalPortReference spirit:componentRef="v_frmbuf_wr_0" spirit:portRef="ap_rst_n"/>
         <spirit:internalPortReference spirit:componentRef="axi_dma_0" spirit:portRef="axi_resetn"/>
+        <spirit:internalPortReference spirit:componentRef="axi_dma_2" spirit:portRef="axi_resetn"/>
+        <spirit:internalPortReference spirit:componentRef="axi_dma_3" spirit:portRef="axi_resetn"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="S00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="M00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph_GP0" spirit:portRef="S00_ARESETN"/>
@@ -2065,16 +2031,13 @@
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="S05_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="S06_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph_GP0" spirit:portRef="M18_ARESETN"/>
-        <spirit:internalPortReference spirit:componentRef="axi_dma_2" spirit:portRef="axi_resetn"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph_GP0" spirit:portRef="M19_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="S07_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="S08_ARESETN"/>
-        <spirit:internalPortReference spirit:componentRef="axi_dma_3" spirit:portRef="axi_resetn"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph_GP0" spirit:portRef="M20_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="S09_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="S10_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="Adder2_0" spirit:portRef="ap_rst_n"/>
-        <spirit:internalPortReference spirit:componentRef="system_ila_0" spirit:portRef="resetn"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>rst_ps7_0_133M_interconnect_aresetn</spirit:name>
