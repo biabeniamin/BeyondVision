@@ -425,6 +425,18 @@
 <Attribute>data</Attribute>
 <CType>int</CType>
 </RtlPorts>
+<RtlPorts>
+<name>temperature_V</name>
+<Object>temperature_V</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+<CType>int</CType>
+</RtlPorts>
 </InterfaceSummary>
 
 </profile>

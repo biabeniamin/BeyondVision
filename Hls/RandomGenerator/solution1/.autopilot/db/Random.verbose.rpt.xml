@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'Random'" level="0">
-<item name = "Date">Sat Feb  9 10:54:48 2019
+<item name = "Date">Sat Feb  9 21:39:20 2019
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">RandomGenerator</item>
@@ -79,22 +79,22 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="in1Count_fu_257_p2">+, 0, 0, 30, 23, 1</column>
-<column name="r_V_fu_288_p2">+, 0, 0, 63, 56, 56</column>
-<column name="sum_V_fu_275_p2">+, 0, 0, 62, 55, 55</column>
-<column name="tmp_8_fu_318_p2">-, 0, 0, 39, 1, 32</column>
+<column name="in1Count_fu_267_p2">+, 0, 0, 30, 23, 1</column>
+<column name="r_V_fu_298_p2">+, 0, 0, 63, 56, 56</column>
+<column name="sum_V_fu_285_p2">+, 0, 0, 62, 55, 55</column>
+<column name="tmp_8_fu_328_p2">-, 0, 0, 39, 1, 32</column>
 <column name="INPUT_STREAM_V_data_V_0_load_A">and, 0, 0, 2, 1, 1</column>
 <column name="INPUT_STREAM_V_data_V_0_load_B">and, 0, 0, 2, 1, 1</column>
 <column name="INPUT_STREAM_V_last_V_0_load_A">and, 0, 0, 2, 1, 1</column>
 <column name="INPUT_STREAM_V_last_V_0_load_B">and, 0, 0, 2, 1, 1</column>
 <column name="ap_block_pp0_stage0_11001">and, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state2_pp0_stage0_iter0">and, 0, 0, 2, 1, 1</column>
-<column name="ap_condition_532">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_537">and, 0, 0, 2, 1, 1</column>
 <column name="INPUT_STREAM_V_data_V_0_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
 <column name="INPUT_STREAM_V_last_V_0_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
-<column name="tmp_fu_251_p2">icmp, 0, 0, 18, 23, 16</column>
+<column name="tmp_fu_261_p2">icmp, 0, 0, 18, 23, 16</column>
 <column name="ap_predicate_tran3to4_state2">or, 0, 0, 2, 1, 1</column>
-<column name="r_V_2_fu_332_p3">select, 0, 0, 32, 1, 32</column>
+<column name="r_V_2_fu_342_p3">select, 0, 0, 32, 1, 32</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
@@ -108,14 +108,14 @@
 <column name="INPUT_STREAM_V_last_V_0_state">15, 3, 2, 6</column>
 <column name="ap_NS_fsm">21, 4, 1, 4</column>
 <column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
-<column name="ap_phi_mux_i_phi_fu_177_p4">9, 2, 23, 46</column>
-<column name="ap_phi_mux_p_0_phi_fu_165_p4">9, 2, 55, 110</column>
-<column name="first_2_reg_230">9, 2, 32, 64</column>
-<column name="i_reg_173">9, 2, 23, 46</column>
-<column name="in1Count_1_reg_241">9, 2, 23, 46</column>
-<column name="lhs_V_reg_209">9, 2, 55, 110</column>
-<column name="p_0_reg_161">9, 2, 55, 110</column>
-<column name="value_1_reg_219">9, 2, 32, 64</column>
+<column name="ap_phi_mux_i_phi_fu_183_p4">9, 2, 23, 46</column>
+<column name="ap_phi_mux_p_0_phi_fu_172_p4">9, 2, 55, 110</column>
+<column name="first_2_reg_236">9, 2, 32, 64</column>
+<column name="i_reg_179">9, 2, 23, 46</column>
+<column name="in1Count_1_reg_247">9, 2, 23, 46</column>
+<column name="lhs_V_reg_215">9, 2, 55, 110</column>
+<column name="p_0_reg_169">9, 2, 55, 110</column>
+<column name="value_1_reg_225">9, 2, 32, 64</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
@@ -134,19 +134,19 @@
 <column name="ap_CS_fsm">3, 0, 3, 0</column>
 <column name="ap_enable_reg_pp0_iter0">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
-<column name="first_2_reg_230">32, 0, 32, 0</column>
-<column name="first_s_reg_197">32, 0, 32, 0</column>
-<column name="i_op_assign_reg_185">32, 0, 32, 0</column>
-<column name="i_reg_173">23, 0, 23, 0</column>
-<column name="in1Count_1_reg_241">23, 0, 23, 0</column>
-<column name="in1Count_reg_369">23, 0, 23, 0</column>
-<column name="lhs_V_reg_209">55, 0, 55, 0</column>
-<column name="p_0_reg_161">55, 0, 55, 0</column>
-<column name="sum_V_reg_385">55, 0, 55, 0</column>
-<column name="tmp_data_V_reg_375">32, 0, 32, 0</column>
-<column name="tmp_last_V_reg_381">1, 0, 1, 0</column>
-<column name="tmp_reg_365">1, 0, 1, 0</column>
-<column name="value_1_reg_219">32, 0, 32, 0</column>
+<column name="first_2_reg_236">32, 0, 32, 0</column>
+<column name="first_s_reg_203">32, 0, 32, 0</column>
+<column name="i_op_assign_reg_191">32, 0, 32, 0</column>
+<column name="i_reg_179">23, 0, 23, 0</column>
+<column name="in1Count_1_reg_247">23, 0, 23, 0</column>
+<column name="in1Count_reg_384">23, 0, 23, 0</column>
+<column name="lhs_V_reg_215">55, 0, 55, 0</column>
+<column name="p_0_reg_169">55, 0, 55, 0</column>
+<column name="sum_V_reg_400">55, 0, 55, 0</column>
+<column name="tmp_data_V_reg_390">32, 0, 32, 0</column>
+<column name="tmp_last_V_reg_396">1, 0, 1, 0</column>
+<column name="tmp_reg_380">1, 0, 1, 0</column>
+<column name="value_1_reg_225">32, 0, 32, 0</column>
 </table>
 </item>
 </section>
@@ -185,6 +185,7 @@
 <column name="INPUT_STREAM_TUSER">in, 2, axis, INPUT_STREAM_V_user_V, pointer</column>
 <column name="INPUT_STREAM_TLAST">in, 1, axis, INPUT_STREAM_V_last_V, pointer</column>
 <column name="INPUT_STREAM_TID">in, 5, axis, INPUT_STREAM_V_id_V, pointer</column>
+<column name="temperature_V">in, 8, ap_none, temperature_V, scalar</column>
 </table>
 </item>
 </section>

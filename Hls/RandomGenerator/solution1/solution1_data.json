@@ -578,6 +578,15 @@
         "WDATA": "32",
         "WSTRB": "4"
       }
+    },
+    "temperature_V": {
+      "type": "data",
+      "dir": "in",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }}
     }
   },
   "RtlPorts": {
@@ -698,6 +707,10 @@
     "INPUT_STREAM_TID": {
       "dir": "in",
       "width": "5"
+    },
+    "temperature_V": {
+      "dir": "in",
+      "width": "8"
     }
   },
   "CPorts": {
@@ -787,6 +800,12 @@
     "INPUT_STREAM_V_id_V": {
       "interfaceRef": "INPUT_STREAM",
       "dir": "in"
+    },
+    "temperature_V": {
+      "interfaceRef": "temperature_V",
+      "dir": "in",
+      "dataWidth": "8",
+      "handshakeRef": "ap_none"
     }
   },
   "ModuleInfo": {
@@ -831,7 +850,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2019-02-09 10:54:49 +0200",
+    "Time": "2019-02-09 21:39:21 +0200",
     "ToolName": "vivado_hls",
     "ToolVersion": "2018.2"
   }

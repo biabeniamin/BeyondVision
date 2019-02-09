@@ -216,6 +216,21 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 }
 
 
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 9 \
+    name temperature_V \
+    type other \
+    dir I \
+    reset_level 0 \
+    sync_rst true \
+    corename dc_temperature_V \
+    op interface \
+    ports { temperature_V { I 8 vector } } \
+} "
+}
+
 
 # Adapter definition:
 set PortName ap_clk
