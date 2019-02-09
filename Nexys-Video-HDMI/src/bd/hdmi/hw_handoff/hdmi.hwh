@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Feb  4 20:27:25 2019" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Feb  9 17:12:29 2019" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:nexys_video:part0:1.1" DEVICE="7a200t" NAME="hdmi" PACKAGE="sbg484" SPEEDGRADE="-1"/>
 
@@ -35,12 +35,6 @@
     <PORT DIR="I" NAME="usb_uart_rxd" SIGIS="undef"/>
     <PORT DIR="O" NAME="usb_uart_txd" SIGIS="undef"/>
     <PORT DIR="I" LEFT="7" NAME="dip_switches_8bits_tri_i" RIGHT="0" SIGIS="undef"/>
-    <PORT DIR="I" LEFT="0" NAME="enable" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_enable">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="system_ila_1" PORT="probe0"/>
-        <CONNECTION INSTANCE="Sobel_filter_0" PORT="enable_V"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT DIR="O" LEFT="0" NAME="hdmi_hpd" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_video_gpio_io_o">
       <CONNECTIONS>
         <CONNECTION INSTANCE="axi_gpio_video" PORT="gpio_io_o"/>
@@ -60,6 +54,12 @@
     <PORT DIR="O" LEFT="0" NAME="hdmi_rx_txen" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_0_dout">
       <CONNECTIONS>
         <CONNECTION INSTANCE="xlconstant_0" PORT="dout"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="0" NAME="enable" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_enable">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="system_ila_1" PORT="probe0"/>
+        <CONNECTION INSTANCE="Sobel_filter_0" PORT="enable_V"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -6536,16 +6536,19 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE FULLNAME="/dvi2rgb_0" HWVERSION="1.7" INSTANCE="dvi2rgb_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="dvi2rgb" VLNV="digilentinc.com:ip:dvi2rgb:1.7">
-      <DOCUMENTS/>
+    <MODULE FULLNAME="/dvi2rgb_0" HWVERSION="1.9" INSTANCE="dvi2rgb_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="dvi2rgb" VLNV="digilentinc.com:ip:dvi2rgb:1.9">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="c:/Digilent19/vivado-library-master/ip/dvi2rgb/docs/dvi2rgb.pdf"/>
+      </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="kEmulateDDC" VALUE="true"/>
         <PARAMETER NAME="kRstActiveHigh" VALUE="false"/>
-        <PARAMETER NAME="kClkRange" VALUE="2"/>
+        <PARAMETER NAME="kClkRange" VALUE="3"/>
         <PARAMETER NAME="kIDLY_TapValuePs" VALUE="78"/>
         <PARAMETER NAME="kIDLY_TapWidth" VALUE="5"/>
         <PARAMETER NAME="kAddBUFG" VALUE="false"/>
-        <PARAMETER NAME="kEdidFileName" VALUE="900p_edid.data"/>
+        <PARAMETER NAME="kEdidFileName" VALUE="dgl_720p_cea.data"/>
+        <PARAMETER NAME="kDebug" VALUE="true"/>
         <PARAMETER NAME="Component_Name" VALUE="hdmi_dvi2rgb_0_0"/>
         <PARAMETER NAME="kEnableSerialClkOutput" VALUE="false"/>
         <PARAMETER NAME="TMDS_BOARD_INTERFACE"/>
@@ -6553,8 +6556,8 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="TMDS_Clk_p" SIGIS="clk"/>
-        <PORT DIR="I" NAME="TMDS_Clk_n" SIGIS="clk"/>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="TMDS_Clk_p" SIGIS="clk"/>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="TMDS_Clk_n" SIGIS="clk"/>
         <PORT DIR="I" LEFT="2" NAME="TMDS_Data_p" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="I" LEFT="2" NAME="TMDS_Data_n" RIGHT="0" SIGIS="undef"/>
         <PORT CLKFREQUENCY="200000000" DIR="I" NAME="RefClk" SIGIS="clk" SIGNAME="mig_7series_0_ui_addn_clk_1">
@@ -6600,12 +6603,12 @@
             <CONNECTION INSTANCE="rst_mig_7series_0_pxl" PORT="dcm_locked"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="DDC_SDA_I" SIGIS="undef"/>
-        <PORT DIR="O" NAME="DDC_SDA_O" SIGIS="undef"/>
-        <PORT DIR="O" NAME="DDC_SDA_T" SIGIS="undef"/>
-        <PORT DIR="I" NAME="DDC_SCL_I" SIGIS="undef"/>
-        <PORT DIR="O" NAME="DDC_SCL_O" SIGIS="undef"/>
-        <PORT DIR="O" NAME="DDC_SCL_T" SIGIS="undef"/>
+        <PORT DIR="I" NAME="SDA_I" SIGIS="undef"/>
+        <PORT DIR="O" NAME="SDA_O" SIGIS="undef"/>
+        <PORT DIR="O" NAME="SDA_T" SIGIS="undef"/>
+        <PORT DIR="I" NAME="SCL_I" SIGIS="undef"/>
+        <PORT DIR="O" NAME="SCL_O" SIGIS="undef"/>
+        <PORT DIR="O" NAME="SCL_T" SIGIS="undef"/>
         <PORT DIR="I" NAME="pRst_n" SIGIS="rst"/>
       </PORTS>
       <BUSINTERFACES>
@@ -6617,22 +6620,22 @@
             <PORTMAP LOGICAL="DATA_N" PHYSICAL="TMDS_Data_n"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="dvi2rgb_0_DDC" NAME="DDC" TYPE="INITIATOR" VLNV="xilinx.com:interface:iic:1.0">
-          <PORTMAPS>
-            <PORTMAP LOGICAL="SCL_I" PHYSICAL="DDC_SCL_I"/>
-            <PORTMAP LOGICAL="SCL_O" PHYSICAL="DDC_SCL_O"/>
-            <PORTMAP LOGICAL="SCL_T" PHYSICAL="DDC_SCL_T"/>
-            <PORTMAP LOGICAL="SDA_I" PHYSICAL="DDC_SDA_I"/>
-            <PORTMAP LOGICAL="SDA_O" PHYSICAL="DDC_SDA_O"/>
-            <PORTMAP LOGICAL="SDA_T" PHYSICAL="DDC_SDA_T"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="dvi2rgb_0_RGB" NAME="RGB" TYPE="INITIATOR" VLNV="xilinx.com:interface:vid_io:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="DATA" PHYSICAL="vid_pData"/>
             <PORTMAP LOGICAL="HSYNC" PHYSICAL="vid_pHSync"/>
             <PORTMAP LOGICAL="VSYNC" PHYSICAL="vid_pVSync"/>
             <PORTMAP LOGICAL="ACTIVE_VIDEO" PHYSICAL="vid_pVDE"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="dvi2rgb_0_DDC" NAME="DDC" TYPE="INITIATOR" VLNV="xilinx.com:interface:iic:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="SCL_I" PHYSICAL="SCL_I"/>
+            <PORTMAP LOGICAL="SCL_O" PHYSICAL="SCL_O"/>
+            <PORTMAP LOGICAL="SCL_T" PHYSICAL="SCL_T"/>
+            <PORTMAP LOGICAL="SDA_I" PHYSICAL="SDA_I"/>
+            <PORTMAP LOGICAL="SDA_O" PHYSICAL="SDA_O"/>
+            <PORTMAP LOGICAL="SDA_T" PHYSICAL="SDA_T"/>
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
@@ -12970,6 +12973,7 @@
             <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="axi_gpio_1" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="axi_gpio_2" PORT="s_axi_aclk"/>
+            <CONNECTION INSTANCE="system_ila_1" PORT="clk"/>
             <CONNECTION INSTANCE="microblaze_0_local_memory_dlmb_v10" PORT="LMB_Clk"/>
             <CONNECTION INSTANCE="microblaze_0_local_memory_ilmb_v10" PORT="LMB_Clk"/>
             <CONNECTION INSTANCE="microblaze_0_local_memory_dlmb_bram_if_cntlr" PORT="LMB_Clk"/>
@@ -12993,7 +12997,6 @@
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M08_ACLK"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M09_ACLK"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M10_ACLK"/>
-            <CONNECTION INSTANCE="system_ila_1" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="160000000" DIR="O" NAME="ui_addn_clk_0" SIGIS="clk" SIGNAME="mig_7series_0_ui_addn_clk_0">
@@ -13008,8 +13011,8 @@
         </PORT>
         <PORT CLKFREQUENCY="200000000" DIR="O" NAME="ui_addn_clk_1" SIGIS="clk" SIGNAME="mig_7series_0_ui_addn_clk_1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="dvi2rgb_0" PORT="RefClk"/>
             <CONNECTION INSTANCE="mig_7series_0" PORT="clk_ref_i"/>
+            <CONNECTION INSTANCE="dvi2rgb_0" PORT="RefClk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="1" NAME="s_axi_awid" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_awid">
@@ -13199,8 +13202,8 @@
         </PORT>
         <PORT DIR="O" NAME="mmcm_locked" SIGIS="undef" SIGNAME="mig_7series_0_mmcm_locked">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="dvi2rgb_0" PORT="aRst_n"/>
             <CONNECTION INSTANCE="rst_mig_7series_0_100M" PORT="dcm_locked"/>
+            <CONNECTION INSTANCE="dvi2rgb_0" PORT="aRst_n"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="200000000" DIR="I" NAME="sys_clk_i" SIGIS="clk" SIGNAME="External_Ports_sys_clk_i">

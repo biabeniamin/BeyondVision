@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Mon Feb  4 20:26:35 2019
+--Date        : Sat Feb  9 17:11:36 2019
 --Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
 --Command     : generate_target hdmi.bd
 --Design      : hdmi
@@ -6715,29 +6715,6 @@ architecture STRUCTURE of hdmi is
     s00_axi_rready : in STD_LOGIC
   );
   end component hdmi_axi_dynclk_0_0;
-  component hdmi_dvi2rgb_0_0 is
-  port (
-    TMDS_Clk_p : in STD_LOGIC;
-    TMDS_Clk_n : in STD_LOGIC;
-    TMDS_Data_p : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    TMDS_Data_n : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    RefClk : in STD_LOGIC;
-    aRst_n : in STD_LOGIC;
-    vid_pData : out STD_LOGIC_VECTOR ( 23 downto 0 );
-    vid_pVDE : out STD_LOGIC;
-    vid_pHSync : out STD_LOGIC;
-    vid_pVSync : out STD_LOGIC;
-    PixelClk : out STD_LOGIC;
-    aPixelClkLckd : out STD_LOGIC;
-    DDC_SDA_I : in STD_LOGIC;
-    DDC_SDA_O : out STD_LOGIC;
-    DDC_SDA_T : out STD_LOGIC;
-    DDC_SCL_I : in STD_LOGIC;
-    DDC_SCL_O : out STD_LOGIC;
-    DDC_SCL_T : out STD_LOGIC;
-    pRst_n : in STD_LOGIC
-  );
-  end component hdmi_dvi2rgb_0_0;
   component hdmi_rgb2dvi_0_0 is
   port (
     TMDS_Clk_p : out STD_LOGIC;
@@ -7504,6 +7481,29 @@ architecture STRUCTURE of hdmi is
     ap_idle : out STD_LOGIC
   );
   end component hdmi_Sobel_filter_0_0;
+  component hdmi_dvi2rgb_0_0 is
+  port (
+    TMDS_Clk_p : in STD_LOGIC;
+    TMDS_Clk_n : in STD_LOGIC;
+    TMDS_Data_p : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    TMDS_Data_n : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    RefClk : in STD_LOGIC;
+    aRst_n : in STD_LOGIC;
+    vid_pData : out STD_LOGIC_VECTOR ( 23 downto 0 );
+    vid_pVDE : out STD_LOGIC;
+    vid_pHSync : out STD_LOGIC;
+    vid_pVSync : out STD_LOGIC;
+    PixelClk : out STD_LOGIC;
+    aPixelClkLckd : out STD_LOGIC;
+    SDA_I : in STD_LOGIC;
+    SDA_O : out STD_LOGIC;
+    SDA_T : out STD_LOGIC;
+    SCL_I : in STD_LOGIC;
+    SCL_O : out STD_LOGIC;
+    SCL_T : out STD_LOGIC;
+    pRst_n : in STD_LOGIC
+  );
+  end component hdmi_dvi2rgb_0_0;
   signal Net : STD_LOGIC_VECTOR ( 0 to 0 );
   signal SYS_Rst_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal Sobel_filter_0_OUTPUT_STREAM_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
@@ -8580,14 +8580,14 @@ axis_subset_converter_1: component hdmi_axis_subset_converter_0_1
     );
 dvi2rgb_0: component hdmi_dvi2rgb_0_0
      port map (
-      DDC_SCL_I => dvi2rgb_0_DDC_SCL_I,
-      DDC_SCL_O => dvi2rgb_0_DDC_SCL_O,
-      DDC_SCL_T => dvi2rgb_0_DDC_SCL_T,
-      DDC_SDA_I => dvi2rgb_0_DDC_SDA_I,
-      DDC_SDA_O => dvi2rgb_0_DDC_SDA_O,
-      DDC_SDA_T => dvi2rgb_0_DDC_SDA_T,
       PixelClk => dvi2rgb_0_PixelClk,
       RefClk => mig_7series_0_ui_addn_clk_2,
+      SCL_I => dvi2rgb_0_DDC_SCL_I,
+      SCL_O => dvi2rgb_0_DDC_SCL_O,
+      SCL_T => dvi2rgb_0_DDC_SCL_T,
+      SDA_I => dvi2rgb_0_DDC_SDA_I,
+      SDA_O => dvi2rgb_0_DDC_SDA_O,
+      SDA_T => dvi2rgb_0_DDC_SDA_T,
       TMDS_Clk_n => TMDS_IN_1_CLK_N,
       TMDS_Clk_p => TMDS_IN_1_CLK_P,
       TMDS_Data_n(2 downto 0) => TMDS_IN_1_DATA_N(2 downto 0),
