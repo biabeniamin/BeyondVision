@@ -555,8 +555,8 @@ proc create_root_design { parentCell } {
   set dvi2rgb_0 [ create_bd_cell -type ip -vlnv digilentinc.com:ip:dvi2rgb:1.9 dvi2rgb_0 ]
   set_property -dict [ list \
    CONFIG.kAddBUFG {false} \
-   CONFIG.kClkRange {3} \
-   CONFIG.kEdidFileName {dgl_720p_cea.data} \
+   CONFIG.kClkRange {2} \
+   CONFIG.kEdidFileName {dgl_1280_1024_cea.data} \
    CONFIG.kRstActiveHigh {false} \
  ] $dvi2rgb_0
 

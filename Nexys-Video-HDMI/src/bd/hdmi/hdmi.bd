@@ -548,9 +548,9 @@
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">hdmi_dvi2rgb_0_0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="kRstActiveHigh">false</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="kClkRange">2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="kClkRange">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="kAddBUFG">false</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="kEdidFileName">dgl_1280_1024_cea.data</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="kEdidFileName">dgl_1080p_cea.data</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>
