@@ -341,4 +341,7 @@ xilinx_drm {
 	};
 };
 */
-
+&i2c0 {
+	clock-frequency = <100000>;
+	status = "okay";
+};
