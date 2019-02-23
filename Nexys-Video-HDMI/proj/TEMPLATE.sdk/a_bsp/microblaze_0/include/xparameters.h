@@ -468,9 +468,7 @@
 #define PLATFORM_MB
  
 /* Definitions for sleep timer configuration */
-#define SLEEP_TIMER_BASEADDR XPAR_AXI_TIMER_0_BASEADDR 
-#define SLEEP_TIMER_FREQUENCY XPAR_AXI_TIMER_0_CLOCK_FREQ_HZ 
-#define XSLEEP_TIMER_IS_AXI_TIMER
+#define XSLEEP_TIMER_IS_DEFAULT_TIMER
  
  
 /******************************************************************/

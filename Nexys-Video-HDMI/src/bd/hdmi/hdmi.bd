@@ -328,6 +328,7 @@
           <spirit:configurableElementValue spirit:referenceId="C_DCACHE_DATA_WIDTH">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="C_USE_BRANCH_TARGET_CACHE">0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
+        <bd:hdl_attributes/>
       </spirit:componentInstance>
       <spirit:componentInstance>
         <spirit:instanceName>microblaze_0_axi_intc</spirit:instanceName>
@@ -461,7 +462,7 @@
           <spirit:configurableElementValue spirit:referenceId="S_HAS_TLAST">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="M_HAS_TKEEP">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="M_HAS_TLAST">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="TDATA_REMAP">8'b0,tdata[7:0],tdata[23:16]</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="TDATA_REMAP">tdata[15:8],tdata[7:0],tdata[23:16]</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="TUSER_REMAP">tuser[0:0]</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="TKEEP_REMAP">1'b0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="TLAST_REMAP">tlast[0]</spirit:configurableElementValue>
@@ -683,6 +684,10 @@
         <spirit:name>v_vid_in_axi4s_0_video_out</spirit:name>
         <spirit:activeInterface spirit:busRef="video_out" spirit:componentRef="v_vid_in_axi4s_0"/>
         <spirit:activeInterface spirit:busRef="S_AXIS" spirit:componentRef="axis_subset_converter_1"/>
+        <bd:hdl_attributes>
+          <bd:hdl_attribute bd:name="DEBUG" bd:value="true"/>
+          <bd:hdl_attribute bd:name="MARK_DEBUG" bd:value="true"/>
+        </bd:hdl_attributes>
       </spirit:interconnection>
       <spirit:interconnection>
         <spirit:name>microblaze_0_axi_periph_M09_AXI</spirit:name>
@@ -5784,6 +5789,7 @@
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">hdmi_dlmb_bram_if_cntlr_0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="C_ECC">0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
+        <bd:hdl_attributes/>
       </spirit:componentInstance>
       <spirit:componentInstance>
         <spirit:instanceName>ilmb_bram_if_cntlr</spirit:instanceName>
