@@ -78,6 +78,7 @@ static int __init memAlloc2_init(void)
 	printk("<1>Address %lx\n", address);
 	printk("phys addresws %lx \n", virt_to_phys(address));
 	printk("phys addresws 2 %lx \n", virt_to_phys(address2));
+	printk("phys addresws 3 %lx \n", virt_to_phys(address3));
 	printk("ADDRESS1 %ld \n", virt_to_phys(address));
 	printk("ADDRESS2 %ld \n", virt_to_phys(address2));
 	printk("ADDRESS3 %ld \n", virt_to_phys(address3));
