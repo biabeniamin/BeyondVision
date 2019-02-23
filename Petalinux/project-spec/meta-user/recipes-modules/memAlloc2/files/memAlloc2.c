@@ -77,7 +77,7 @@ static int __init memAlloc2_init(void)
 	address4 = kmalloc(1024*1480, GFP_KERNEL | GFP_DMA);
 	unsigned long i  =0;
 	printk("<1>Address %lx\n", address);
-	printk("<DETECT>phys addresws %lx \n", virt_to_phys(address));
+	printk("<DETECT>phys addresws 1 %lx \n", virt_to_phys(address));
 	printk("<DETECT>phys addresws 2 %lx \n", virt_to_phys(address2));
 	printk("<DETECT>phys addresws 3 %lx \n", virt_to_phys(address3));
 	printk("<DETECT>phys addresws 4 %lx \n", virt_to_phys(address4));
