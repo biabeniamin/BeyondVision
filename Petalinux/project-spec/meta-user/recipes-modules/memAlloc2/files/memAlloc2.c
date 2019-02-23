@@ -57,7 +57,7 @@ static irqreturn_t memAlloc2_irq(int irq, void *lp)
 	return IRQ_HANDLED;
 }
 
-unsigned long address, address2, address3;
+unsigned long address, address2, address3, address4;
 
 static int memAlloc2_probe(struct platform_device *pdev)
 {
@@ -74,11 +74,13 @@ static int __init memAlloc2_init(void)
 	address = kmalloc(1024*1480, GFP_KERNEL | GFP_DMA);
 	address2 = kmalloc(1024*1480, GFP_KERNEL | GFP_DMA);
 	address3 = kmalloc(1024*1480, GFP_KERNEL | GFP_DMA);
+	address4 = kmalloc(1024*1480, GFP_KERNEL | GFP_DMA);
 	unsigned long i  =0;
 	printk("<1>Address %lx\n", address);
 	printk("phys addresws %lx \n", virt_to_phys(address));
 	printk("phys addresws 2 %lx \n", virt_to_phys(address2));
 	printk("phys addresws 3 %lx \n", virt_to_phys(address3));
+	printk("phys addresws 4 %lx \n", virt_to_phys(address4));
 	printk("ADDRESS1 %ld \n", virt_to_phys(address));
 	printk("ADDRESS2 %ld \n", virt_to_phys(address2));
 	printk("ADDRESS3 %ld \n", virt_to_phys(address3));
