@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Sat Feb  9 19:37:00 2019
+--Date        : Fri Feb 22 23:33:49 2019
 --Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
 --Command     : generate_target system_wrapper.bd
 --Design      : system_wrapper
@@ -34,16 +34,12 @@ entity system_wrapper is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
-    Vaux14_v_n : in STD_LOGIC;
-    Vaux14_v_p : in STD_LOGIC;
     Vaux15_v_n : in STD_LOGIC;
     Vaux15_v_p : in STD_LOGIC;
     Vaux6_v_n : in STD_LOGIC;
     Vaux6_v_p : in STD_LOGIC;
     Vaux7_v_n : in STD_LOGIC;
     Vaux7_v_p : in STD_LOGIC;
-    Vp_Vn_v_n : in STD_LOGIC;
-    Vp_Vn_v_p : in STD_LOGIC;
     ac_bclk : out STD_LOGIC_VECTOR ( 0 to 0 );
     ac_iic_scl_io : inout STD_LOGIC;
     ac_iic_sda_io : inout STD_LOGIC;
@@ -114,12 +110,8 @@ architecture STRUCTURE of system_wrapper is
     Vaux6_v_p : in STD_LOGIC;
     Vaux7_v_n : in STD_LOGIC;
     Vaux7_v_p : in STD_LOGIC;
-    Vaux14_v_n : in STD_LOGIC;
-    Vaux14_v_p : in STD_LOGIC;
     Vaux15_v_n : in STD_LOGIC;
     Vaux15_v_p : in STD_LOGIC;
-    Vp_Vn_v_n : in STD_LOGIC;
-    Vp_Vn_v_p : in STD_LOGIC;
     ac_iic_sda_i : in STD_LOGIC;
     ac_iic_sda_o : out STD_LOGIC;
     ac_iic_sda_t : out STD_LOGIC;
@@ -348,16 +340,12 @@ system_i: component system
       FIXED_IO_ps_clk => FIXED_IO_ps_clk,
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
       FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
-      Vaux14_v_n => Vaux14_v_n,
-      Vaux14_v_p => Vaux14_v_p,
       Vaux15_v_n => Vaux15_v_n,
       Vaux15_v_p => Vaux15_v_p,
       Vaux6_v_n => Vaux6_v_n,
       Vaux6_v_p => Vaux6_v_p,
       Vaux7_v_n => Vaux7_v_n,
       Vaux7_v_p => Vaux7_v_p,
-      Vp_Vn_v_n => Vp_Vn_v_n,
-      Vp_Vn_v_p => Vp_Vn_v_p,
       ac_bclk(0) => ac_bclk(0),
       ac_iic_scl_i => ac_iic_scl_i,
       ac_iic_scl_o => ac_iic_scl_o,
