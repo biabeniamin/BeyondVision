@@ -556,7 +556,7 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.kAddBUFG {false} \
    CONFIG.kClkRange {1} \
-   CONFIG.kEdidFileName {dgl_1080p_cea.data} \
+   CONFIG.kEdidFileName {dgl_720p_cea.data} \
    CONFIG.kRstActiveHigh {false} \
  ] $dvi2rgb_0
 

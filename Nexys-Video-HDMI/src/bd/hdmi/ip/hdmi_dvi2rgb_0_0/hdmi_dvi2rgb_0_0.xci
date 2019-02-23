@@ -35,7 +35,7 @@
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.kAddBUFG">false</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.kClkRange">1</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.kDebug">true</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.kEdidFileName">dgl_1080p_cea.data</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.kEdidFileName">dgl_720p_cea.data</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.kEmulateDDC">true</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.kIDLY_TapValuePs">78</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.kIDLY_TapWidth">5</spirit:configurableElementValue>
@@ -47,7 +47,7 @@
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.kAddBUFG">false</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.kClkRange">1</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.kDebug">true</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.kEdidFileName">dgl_1080p_cea.data</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.kEdidFileName">dgl_720p_cea.data</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.kEmulateDDC">true</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.kEnableSerialClkOutput">false</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.kRstActiveHigh">false</spirit:configurableElementValue>
