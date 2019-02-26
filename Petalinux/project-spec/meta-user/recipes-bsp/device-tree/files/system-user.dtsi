@@ -17,7 +17,12 @@
 		view-port = <0x0170>;
 		drv-vbus;
 	};
-
+	
+	mem: memAlloc@0
+	{
+		compatible = "memAlloc";
+		staus = "okay";
+	};
 
 };
 
@@ -55,6 +60,8 @@
 	clock-frequency = <100000>;
 	status = "okay";
 };
+
+
 
 &amba_pl {
 	encoder_0: digilent_encoder {
