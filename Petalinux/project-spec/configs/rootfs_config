@@ -4133,6 +4133,7 @@ CONFIG_pwmdemo=y
 # modules 
 #
 # CONFIG_memAlloc is not set
+# CONFIG_memAlloc2 is not set
 
 #
 # user packages 

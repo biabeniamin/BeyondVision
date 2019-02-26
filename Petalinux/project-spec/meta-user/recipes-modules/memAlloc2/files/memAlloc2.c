@@ -71,12 +71,12 @@ static int __init memAlloc2_init(void)
 	printk("<1>Module parameters were (0x%08x) and \"%s\"\n", myint,
 	       mystr);
 
-	address = kmalloc(1024*1480, GFP_KERNEL | GFP_DMA);
-	address2 = kmalloc(1024*1480, GFP_KERNEL | GFP_DMA);
-	address3 = kmalloc(1024*1480, GFP_KERNEL | GFP_DMA);
-	address4 = kmalloc(1024*1480, GFP_KERNEL | GFP_DMA);
-	address5 = kmalloc(1024*1480, GFP_KERNEL | GFP_DMA);
-	address6 = kmalloc(1024*1480, GFP_KERNEL | GFP_DMA);
+	address = vmalloc(1024*1480*3);
+	address2 = vmalloc(1024*1480*3);
+	address3 = vmalloc(1024*1480*3);
+	address4 = vmalloc(1024*1480*3);
+	address5 = vmalloc(1024*1480*3);
+	address6 = vmalloc(1024*1480*3);
 	unsigned long i  =0;
 	printk("<1>Address %lx\n", address);
 	printk("<DETECT>phys addresws 1 %lx \n", virt_to_phys(address));
@@ -92,6 +92,7 @@ static int __init memAlloc2_init(void)
 	printk("phys addresws %lx \n", phys_to_virt(0xf000000));
 	printk("phys addresws %lx \n", virt_to_phys(printk));
 	printk("phys addresws %lx \n", virt_to_phys(printk));
+	printk("test %lx \n", vmalloc(10024*1480*3));
 
 	return 0;
 }
