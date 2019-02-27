@@ -203,6 +203,7 @@ entity system_xadc_wiz_0_0_axi_xadc is
     eoc_out         : out  STD_LOGIC;                        -- End of Conversion Signal
     eos_out         : out  STD_LOGIC;                        -- End of Sequence Signal
     alarm_out       : out STD_LOGIC_VECTOR (7 downto 0);                         -- OR'ed output of all the Alarms
+    temp_out        : out std_logic_vector(11 downto 0);     
     vp_in           : in  STD_LOGIC;                         -- Dedicated Analog Input Pair
     vn_in           : in  STD_LOGIC
   );   
@@ -288,6 +289,7 @@ component system_xadc_wiz_0_0_xadc_core_drp
      eoc_out                : out  STD_LOGIC;                        -- End of Conversion Signal
      eos_out                : out  STD_LOGIC;                        -- End of Sequence Signal
      alarm_out              : out STD_LOGIC_VECTOR (7 downto 0);                   
+     temp_out               : out std_logic_vector(11 downto 0);     
      vp_in                  : in  STD_LOGIC;                         -- Dedicated Analog Input Pair
      vn_in                  : in  STD_LOGIC
    );
@@ -745,6 +747,7 @@ AXI_XADC_CORE_I : system_xadc_wiz_0_0_xadc_core_drp
     eoc_out                      => eoc_out,
     eos_out                      => eos_out,
     alarm_out                    => alarm_out,
+    temp_out                     => temp_out, 
     vp_in                        => vp_in,
     vn_in                        => vn_in
    );

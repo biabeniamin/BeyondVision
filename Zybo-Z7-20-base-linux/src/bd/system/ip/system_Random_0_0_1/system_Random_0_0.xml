@@ -721,7 +721,7 @@ resolve_type immediate dependency {} format string minimum {} maximum {}} value 
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>LAYERED_METADATA</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.TEMPERATURE_V.LAYERED_METADATA">xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}</spirit:value>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.TEMPERATURE_V.LAYERED_METADATA">xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 12} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}</spirit:value>
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
@@ -1785,7 +1785,7 @@ resolve_type immediate dependency {} format string minimum {} maximum {}} value 
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">15</spirit:left>
+            <spirit:left spirit:format="long">11</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1874,7 +1874,7 @@ resolve_type immediate dependency {} format string minimum {} maximum {}} value 
     <xilinx:coreExtensions>
       <xilinx:displayName>Random</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>1902092218</xilinx:coreRevision>
+      <xilinx:coreRevision>1902270818</xilinx:coreRevision>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.INPUT_STREAM.HAS_TKEEP" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.INPUT_STREAM.HAS_TLAST" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
@@ -1903,10 +1903,10 @@ resolve_type immediate dependency {} format string minimum {} maximum {}} value 
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.2</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="77b6ddc1"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="52da812e"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="eed8c05e"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="8fa28442"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="0188e617"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="d1e459bc"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="ae11f982"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="1d3052e4"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="108cce67"/>
     </xilinx:packagingInfo>
