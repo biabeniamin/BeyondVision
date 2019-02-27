@@ -118,7 +118,7 @@ set Pointer2 "0"
 set Reference2 "0"
 set Dims2 [list 0]
 set Interface2 "wire"
-set DataType2 "[list ap_uint 16 ]"
+set DataType2 "[list ap_uint 12 ]"
 set Port2 [list $PortName2 $Interface2 $DataType2 $Pointer2 $Dims2 $Const2 $Volatile2 $ArrayOpt2]
 lappend PortList $Port2
 set PortName0 "return"

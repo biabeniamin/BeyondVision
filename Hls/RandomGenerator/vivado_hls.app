@@ -1,4 +1,4 @@
-<project xmlns="com.autoesl.autopilot.project" top="Random" name="RandomGenerator">
+<project xmlns="com.autoesl.autopilot.project" name="RandomGenerator" top="Random">
     <includePaths/>
     <libraryPaths/>
     <Simulation>

@@ -912,7 +912,7 @@ void Random::thread_agg_result_e_ap_vld() {
 }
 
 void Random::thread_agg_result_f() {
-    agg_result_f = esl_zext<32,16>(temperature_V.read());
+    agg_result_f = esl_zext<32,12>(temperature_V.read());
 }
 
 void Random::thread_agg_result_f_ap_vld() {
@@ -1051,7 +1051,7 @@ void Random::thread_rhs_V_cast_fu_291_p1() {
 }
 
 void Random::thread_sum_V_cast_fu_254_p1() {
-    sum_V_cast_fu_254_p1 = esl_zext<55,16>(temperature_V.read());
+    sum_V_cast_fu_254_p1 = esl_zext<55,12>(temperature_V.read());
 }
 
 void Random::thread_sum_V_fu_282_p2() {

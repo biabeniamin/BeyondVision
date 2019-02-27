@@ -63,7 +63,7 @@ input  [1:0] INPUT_STREAM_TUSER;
 input  [0:0] INPUT_STREAM_TLAST;
 input  [4:0] INPUT_STREAM_TID;
 input  [5:0] INPUT_STREAM_TDEST;
-input  [15:0] temperature_V;
+input  [11:0] temperature_V;
 input   s_axi_CONTROL_BUS_AWVALID;
 output   s_axi_CONTROL_BUS_AWREADY;
 input  [C_S_AXI_CONTROL_BUS_ADDR_WIDTH - 1:0] s_axi_CONTROL_BUS_AWADDR;

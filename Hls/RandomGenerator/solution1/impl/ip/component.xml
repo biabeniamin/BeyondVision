@@ -388,7 +388,7 @@ resolve_type immediate dependency {} format string minimum {} maximum {}} value 
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>LAYERED_METADATA</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.TEMPERATURE_V.LAYERED_METADATA">xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}</spirit:value>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.TEMPERATURE_V.LAYERED_METADATA">xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 12} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}</spirit:value>
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
@@ -1037,7 +1037,7 @@ resolve_type immediate dependency {} format string minimum {} maximum {}} value 
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>f47d1892</spirit:value>
+            <spirit:value>c42edf99</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1053,7 +1053,7 @@ resolve_type immediate dependency {} format string minimum {} maximum {}} value 
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>a5245026</spirit:value>
+            <spirit:value>9577972d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1069,7 +1069,7 @@ resolve_type immediate dependency {} format string minimum {} maximum {}} value 
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>8574a3f2</spirit:value>
+            <spirit:value>c9064252</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1085,7 +1085,7 @@ resolve_type immediate dependency {} format string minimum {} maximum {}} value 
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>3dc3414f</spirit:value>
+            <spirit:value>71b1a0ef</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1625,7 +1625,7 @@ resolve_type immediate dependency {} format string minimum {} maximum {}} value 
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">15</spirit:left>
+            <spirit:left spirit:format="long">11</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1693,7 +1693,7 @@ resolve_type immediate dependency {} format string minimum {} maximum {}} value 
       <spirit:file>
         <spirit:name>hdl/vhdl/Random.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_c20eb5c1</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_8e7c5461</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1820,15 +1820,15 @@ resolve_type immediate dependency {} format string minimum {} maximum {}} value 
       </xilinx:taxonomies>
       <xilinx:displayName>Random</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>1902092200</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2019-02-09T20:00:58Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>1902270818</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2019-02-27T06:18:18Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.2</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="77b6ddc1"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="52da812e"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="eed8c05e"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="8fa28442"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="0188e617"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="d1e459bc"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="ae11f982"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="1d3052e4"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="108cce67"/>
     </xilinx:packagingInfo>

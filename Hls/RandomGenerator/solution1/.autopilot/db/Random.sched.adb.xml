@@ -241,9 +241,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="28" bw="0" op_0_bw="0" op_1_bw="16">
+<Node id="28" bw="0" op_0_bw="0" op_1_bw="12">
 <![CDATA[
-:13  call void (...)* @_ssdm_op_SpecBitsMap(i16 %temperature_V), !map !131
+:13  call void (...)* @_ssdm_op_SpecBitsMap(i12 %temperature_V), !map !131
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -256,9 +256,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="29" bw="16" op_0_bw="16" op_1_bw="16">
+<Node id="29" bw="12" op_0_bw="12" op_1_bw="12">
 <![CDATA[
-:14  %temperature_V_read = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %temperature_V)
+:14  %temperature_V_read = call i12 @_ssdm_op_Read.ap_auto.i12(i12 %temperature_V)
 
 ]]></Node>
 <StgValue><ssdm name="temperature_V_read"/></StgValue>
@@ -331,9 +331,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="34" bw="55" op_0_bw="16">
+<Node id="34" bw="55" op_0_bw="12">
 <![CDATA[
-:19  %sum_V_cast = zext i16 %temperature_V_read to i55
+:19  %sum_V_cast = zext i12 %temperature_V_read to i55
 
 ]]></Node>
 <StgValue><ssdm name="sum_V_cast"/></StgValue>
@@ -1023,9 +1023,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="82" bw="32" op_0_bw="16">
+<Node id="82" bw="32" op_0_bw="12">
 <![CDATA[
-.loopexit:13  %tmp_1 = zext i16 %temperature_V_read to i32
+.loopexit:13  %tmp_1 = zext i12 %temperature_V_read to i32
 
 ]]></Node>
 <StgValue><ssdm name="tmp_1"/></StgValue>

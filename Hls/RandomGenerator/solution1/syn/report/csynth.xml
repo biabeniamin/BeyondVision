@@ -433,7 +433,7 @@
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>16</Bits>
+<Bits>12</Bits>
 <Attribute>data</Attribute>
 <CType>int</CType>
 </RtlPorts>

@@ -227,7 +227,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_temperature_V \
     op interface \
-    ports { temperature_V { I 16 vector } } \
+    ports { temperature_V { I 12 vector } } \
 } "
 }
 

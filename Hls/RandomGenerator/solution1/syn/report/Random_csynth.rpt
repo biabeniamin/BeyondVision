@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'Random'
 ================================================================
-* Date:           Sat Feb  9 22:00:24 2019
+* Date:           Wed Feb 27 08:17:48 2019
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        RandomGenerator
@@ -209,6 +209,6 @@
 |INPUT_STREAM_TUSER         |  in |    2|    axis    | INPUT_STREAM_V_user_V |    pointer   |
 |INPUT_STREAM_TLAST         |  in |    1|    axis    | INPUT_STREAM_V_last_V |    pointer   |
 |INPUT_STREAM_TID           |  in |    5|    axis    |  INPUT_STREAM_V_id_V  |    pointer   |
-|temperature_V              |  in |   16|   ap_none  |     temperature_V     |    scalar    |
+|temperature_V              |  in |   12|   ap_none  |     temperature_V     |    scalar    |
 +---------------------------+-----+-----+------------+-----------------------+--------------+
 

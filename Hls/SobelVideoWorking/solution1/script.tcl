@@ -5,8 +5,8 @@
 ############################################################
 open_project SobelVideoWorking
 set_top Sobel_filter
-add_files SobelVideoWorking/a.hpp
 add_files SobelVideoWorking/a.cpp
+add_files SobelVideoWorking/a.hpp
 open_solution "solution1"
 set_part {xc7a200tsbg484-1} -tool vivado
 create_clock -period 10 -name default

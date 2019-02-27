@@ -24383,7 +24383,7 @@ struct asd
 
 typedef struct asd asdf;
 
-asdf Random(hls::stream<AXI_VALUE> &in_stream, ap_uint<16> temperature)
+asdf Random(hls::stream<AXI_VALUE> &in_stream, ap_uint<12> temperature)
 {
 
 _ssdm_op_SpecInterface(0, "s_axilite", 0, 0, "", 0, 0, "CONTROL_BUS", "", "", 0, 0, 0, 0, "", "");

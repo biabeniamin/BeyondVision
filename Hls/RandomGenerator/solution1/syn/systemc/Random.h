@@ -30,7 +30,7 @@ struct Random : public sc_module {
     sc_in< sc_lv<1> > INPUT_STREAM_TLAST;
     sc_in< sc_lv<5> > INPUT_STREAM_TID;
     sc_in< sc_lv<6> > INPUT_STREAM_TDEST;
-    sc_in< sc_lv<16> > temperature_V;
+    sc_in< sc_lv<12> > temperature_V;
     sc_in< sc_logic > s_axi_CONTROL_BUS_AWVALID;
     sc_out< sc_logic > s_axi_CONTROL_BUS_AWREADY;
     sc_in< sc_uint<C_S_AXI_CONTROL_BUS_ADDR_WIDTH> > s_axi_CONTROL_BUS_AWADDR;
