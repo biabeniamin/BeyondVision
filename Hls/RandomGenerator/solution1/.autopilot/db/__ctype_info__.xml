@@ -140,7 +140,7 @@
 <InvalidType>0</InvalidType>
 </RtlPorts>
 <RtlPorts>
-<name>last_V</name>
+<name>output_V</name>
 <CType>
 <TypeName>ap_uint 64</TypeName>
 <TypeWidth>64</TypeWidth>

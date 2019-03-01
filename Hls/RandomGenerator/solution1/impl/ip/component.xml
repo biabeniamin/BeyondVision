@@ -393,7 +393,7 @@ resolve_type immediate dependency {} format string minimum {} maximum {}} value 
       </spirit:parameters>
     </spirit:busInterface>
     <spirit:busInterface>
-      <spirit:name>last_V</spirit:name>
+      <spirit:name>output_V_i</spirit:name>
       <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data" spirit:version="1.0"/>
       <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data_rtl" spirit:version="1.0"/>
       <spirit:slave/>
@@ -403,14 +403,36 @@ resolve_type immediate dependency {} format string minimum {} maximum {}} value 
             <spirit:name>DATA</spirit:name>
           </spirit:logicalPort>
           <spirit:physicalPort>
-            <spirit:name>last_V</spirit:name>
+            <spirit:name>output_V_i</spirit:name>
           </spirit:physicalPort>
         </spirit:portMap>
       </spirit:portMaps>
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>LAYERED_METADATA</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.LAST_V.LAYERED_METADATA">xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 64} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}</spirit:value>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.OUTPUT_V_I.LAYERED_METADATA">xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 64} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>output_V_o</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>DATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>output_V_o</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>LAYERED_METADATA</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.OUTPUT_V_O.LAYERED_METADATA">xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 64} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}</spirit:value>
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
@@ -1059,7 +1081,7 @@ resolve_type immediate dependency {} format string minimum {} maximum {}} value 
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>07fc7ddd</spirit:value>
+            <spirit:value>e26f0d14</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1075,7 +1097,7 @@ resolve_type immediate dependency {} format string minimum {} maximum {}} value 
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>38946a60</spirit:value>
+            <spirit:value>f64dfb68</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1091,7 +1113,7 @@ resolve_type immediate dependency {} format string minimum {} maximum {}} value 
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>0930381d</spirit:value>
+            <spirit:value>d5f84d02</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1107,7 +1129,7 @@ resolve_type immediate dependency {} format string minimum {} maximum {}} value 
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>eb4905a2</spirit:value>
+            <spirit:value>50f9c0e6</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1191,6 +1213,19 @@ resolve_type immediate dependency {} format string minimum {} maximum {}} value 
       </spirit:view>
     </spirit:views>
     <spirit:ports>
+      <spirit:port>
+        <spirit:name>output_V_o_ap_vld</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
       <spirit:port>
         <spirit:name>s_axi_CONTROL_BUS_AWADDR</spirit:name>
         <spirit:wire>
@@ -1660,9 +1695,26 @@ resolve_type immediate dependency {} format string minimum {} maximum {}} value 
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>last_V</spirit:name>
+        <spirit:name>output_V_i</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">63</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>output_V_o</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
           <spirit:vector>
             <spirit:left spirit:format="long">63</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
@@ -1732,7 +1784,7 @@ resolve_type immediate dependency {} format string minimum {} maximum {}} value 
       <spirit:file>
         <spirit:name>hdl/vhdl/Random.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_48764ab7</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_f44d56a3</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1859,15 +1911,15 @@ resolve_type immediate dependency {} format string minimum {} maximum {}} value 
       </xilinx:taxonomies>
       <xilinx:displayName>Random</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>1903011033</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2019-03-01T08:33:57Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>1903011042</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2019-03-01T08:42:50Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.2</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="4dcf4ad4"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="db619ad3"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="eed8c05e"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="29a5e1f5"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="6f342920"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="4c01e34c"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="6ce1073c"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="1d3052e4"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="108cce67"/>
     </xilinx:packagingInfo>

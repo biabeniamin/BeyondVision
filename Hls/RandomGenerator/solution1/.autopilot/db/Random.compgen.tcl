@@ -235,14 +235,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 10 \
-    name last_V \
+    name output_V \
     type other \
-    dir I \
+    dir IO \
     reset_level 0 \
     sync_rst true \
-    corename dc_last_V \
+    corename dc_output_V \
     op interface \
-    ports { last_V { I 64 vector } } \
+    ports { output_V_i { I 64 vector } output_V_o { O 64 vector } output_V_o_ap_vld { O 1 bit } } \
 } "
 }
 

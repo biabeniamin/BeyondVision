@@ -124,9 +124,18 @@
       "type": "interrupt",
       "ctype": {"INTERRUPT": {"Type": "bool"}}
     },
-    "last_V": {
+    "output_V_i": {
       "type": "data",
       "dir": "in",
+      "width": "64",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "64"
+        }}
+    },
+    "output_V_o": {
+      "type": "data",
+      "dir": "out",
       "width": "64",
       "ctype": {"DATA": {
           "Type": "integer unsigned",
@@ -721,9 +730,17 @@
       "dir": "in",
       "width": "12"
     },
-    "last_V": {
+    "output_V_i": {
       "dir": "in",
       "width": "64"
+    },
+    "output_V_o": {
+      "dir": "out",
+      "width": "64"
+    },
+    "output_V_o_ap_vld": {
+      "dir": "out",
+      "width": "1"
     }
   },
   "CPorts": {
@@ -820,11 +837,17 @@
       "dataWidth": "12",
       "handshakeRef": "ap_none"
     },
-    "last_V": {
-      "interfaceRef": "last_V",
+    "output_V_i": {
+      "interfaceRef": "output_V_i",
       "dir": "in",
       "dataWidth": "64",
       "handshakeRef": "ap_none"
+    },
+    "output_V_o": {
+      "interfaceRef": "output_V_o",
+      "dir": "out",
+      "dataWidth": "64",
+      "handshakeRef": "ap_vld"
     }
   },
   "ModuleInfo": {
@@ -869,7 +892,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2019-03-01 10:33:42 +0200",
+    "Time": "2019-03-01 10:41:35 +0200",
     "ToolName": "vivado_hls",
     "ToolVersion": "2018.2"
   }
