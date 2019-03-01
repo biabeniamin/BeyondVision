@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Tue Feb 26 23:11:20 2019
+--Date        : Fri Mar  1 10:44:12 2019
 --Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
 --Command     : generate_target system.bd
 --Design      : system
@@ -15038,6 +15038,7 @@ architecture STRUCTURE of system is
   end component system_system_ila_0_0;
   component system_Random_0_0 is
   port (
+    output_V_o_ap_vld : out STD_LOGIC;
     s_axi_CONTROL_BUS_AWADDR : in STD_LOGIC_VECTOR ( 5 downto 0 );
     s_axi_CONTROL_BUS_AWVALID : in STD_LOGIC;
     s_axi_CONTROL_BUS_AWREADY : out STD_LOGIC;
@@ -15067,7 +15068,9 @@ architecture STRUCTURE of system is
     INPUT_STREAM_TUSER : in STD_LOGIC_VECTOR ( 1 downto 0 );
     INPUT_STREAM_TLAST : in STD_LOGIC_VECTOR ( 0 to 0 );
     INPUT_STREAM_TID : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    temperature_V : in STD_LOGIC_VECTOR ( 15 downto 0 )
+    temperature_V : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    output_V_i : in STD_LOGIC_VECTOR ( 63 downto 0 );
+    output_V_o : out STD_LOGIC_VECTOR ( 63 downto 0 )
   );
   end component system_Random_0_0;
   signal Adder2_0_OUTPUT_STREAM_TDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -15110,6 +15113,7 @@ architecture STRUCTURE of system is
   attribute DEBUG of Adder2_0_OUTPUT_STREAM_TVALID : signal is "true";
   attribute MARK_DEBUG of Adder2_0_OUTPUT_STREAM_TVALID : signal is std.standard.true;
   signal PWM_0_pwm : STD_LOGIC_VECTOR ( 5 downto 0 );
+  signal Random_0_output_V_o : STD_LOGIC_VECTOR ( 63 downto 0 );
   signal SDATA_I_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal Vaux15_1_V_N : STD_LOGIC;
   signal Vaux15_1_V_P : STD_LOGIC;
@@ -16030,7 +16034,7 @@ architecture STRUCTURE of system is
   signal xlconstant_1_dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_Adder2_0_interrupt_UNCONNECTED : STD_LOGIC;
   signal NLW_Random_0_interrupt_UNCONNECTED : STD_LOGIC;
-  signal NLW_Random_0_temperature_V_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 12 );
+  signal NLW_Random_0_output_V_o_ap_vld_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_data_fifo_0_m_axi_arregion_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_axi_data_fifo_0_m_axi_awregion_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_axi_dma_0_m_axis_mm2s_cntrl_tlast_UNCONNECTED : STD_LOGIC;
@@ -16358,6 +16362,9 @@ Random_0: component system_Random_0_0
       ap_clk => processing_system7_0_FCLK_CLK0,
       ap_rst_n => rst_ps7_0_100M_peripheral_aresetn(0),
       interrupt => NLW_Random_0_interrupt_UNCONNECTED,
+      output_V_i(63 downto 0) => Random_0_output_V_o(63 downto 0),
+      output_V_o(63 downto 0) => Random_0_output_V_o(63 downto 0),
+      output_V_o_ap_vld => NLW_Random_0_output_V_o_ap_vld_UNCONNECTED,
       s_axi_CONTROL_BUS_ARADDR(5 downto 0) => ps7_0_axi_periph_GP0_M16_AXI_ARADDR(5 downto 0),
       s_axi_CONTROL_BUS_ARREADY => ps7_0_axi_periph_GP0_M16_AXI_ARREADY,
       s_axi_CONTROL_BUS_ARVALID => ps7_0_axi_periph_GP0_M16_AXI_ARVALID,
@@ -16375,7 +16382,6 @@ Random_0: component system_Random_0_0
       s_axi_CONTROL_BUS_WREADY => ps7_0_axi_periph_GP0_M16_AXI_WREADY,
       s_axi_CONTROL_BUS_WSTRB(3 downto 0) => ps7_0_axi_periph_GP0_M16_AXI_WSTRB(3 downto 0),
       s_axi_CONTROL_BUS_WVALID => ps7_0_axi_periph_GP0_M16_AXI_WVALID,
-      temperature_V(15 downto 12) => NLW_Random_0_temperature_V_UNCONNECTED(15 downto 12),
       temperature_V(11 downto 0) => xadc_wiz_0_temp_out(11 downto 0)
     );
 axi_data_fifo_0: component system_axi_data_fifo_0_0

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Feb 26 23:11:34 2019" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Mar  1 10:44:23 2019" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-20:part0:1.0" DEVICE="7z020" NAME="system" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -1697,6 +1697,7 @@
         <PARAMETER NAME="C_S_AXI_CONTROL_BUS_HIGHADDR" VALUE="0x43C9FFFF"/>
       </PARAMETERS>
       <PORTS>
+        <PORT DIR="O" NAME="output_V_o_ap_vld" SIGIS="undef"/>
         <PORT DIR="I" LEFT="5" NAME="s_axi_CONTROL_BUS_AWADDR" RIGHT="0" SIGIS="undef" SIGNAME="Random_0_s_axi_CONTROL_BUS_AWADDR">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph_GP0" PORT="M16_AXI_awaddr"/>
@@ -1822,9 +1823,19 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="4" NAME="INPUT_STREAM_TID" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="15" NAME="temperature_V" RIGHT="0" SIGIS="data" SIGNAME="xadc_wiz_0_temp_out">
+        <PORT DIR="I" LEFT="11" NAME="temperature_V" RIGHT="0" SIGIS="data" SIGNAME="xadc_wiz_0_temp_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="xadc_wiz_0" PORT="temp_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="output_V_i" RIGHT="0" SIGIS="data" SIGNAME="Random_0_output_V_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Random_0" PORT="output_V_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="output_V_o" RIGHT="0" SIGIS="data" SIGNAME="Random_0_output_V_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Random_0" PORT="output_V_i"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -23935,31 +23946,11 @@
             <CONNECTION INSTANCE="axi_dma_4" PORT="s_axi_lite_wvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M21_AXI_awaddr" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M21_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M21_AXI_awvalid" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M21_AXI_awready" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M21_AXI_wdata" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M21_AXI_wstrb" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M21_AXI_wvalid" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M21_AXI_wready" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M21_AXI_bresp" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M21_AXI_bvalid" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M21_AXI_bready" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M21_AXI_araddr" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M21_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M21_AXI_arvalid" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M21_AXI_arready" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M21_AXI_rdata" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M21_AXI_rresp" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M21_AXI_rvalid" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M21_AXI_rready" SIGIS="undef"/>
         <PORT DIR="O" LEFT="31" NAME="M16_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="Random_0_s_axi_CONTROL_BUS_AWADDR">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Random_0" PORT="s_axi_CONTROL_BUS_AWADDR"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M16_AXI_awprot" SIGIS="undef"/>
         <PORT DIR="O" NAME="M16_AXI_awvalid" SIGIS="undef" SIGNAME="Random_0_s_axi_CONTROL_BUS_AWVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Random_0" PORT="s_axi_CONTROL_BUS_AWVALID"/>
@@ -24010,7 +24001,6 @@
             <CONNECTION INSTANCE="Random_0" PORT="s_axi_CONTROL_BUS_ARADDR"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M16_AXI_arprot" SIGIS="undef"/>
         <PORT DIR="O" NAME="M16_AXI_arvalid" SIGIS="undef" SIGNAME="Random_0_s_axi_CONTROL_BUS_ARVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Random_0" PORT="s_axi_CONTROL_BUS_ARVALID"/>
@@ -24041,6 +24031,25 @@
             <CONNECTION INSTANCE="Random_0" PORT="s_axi_CONTROL_BUS_RREADY"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" NAME="M21_AXI_awaddr" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M21_AXI_awprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M21_AXI_awvalid" SIGIS="undef"/>
+        <PORT DIR="I" NAME="M21_AXI_awready" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M21_AXI_wdata" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M21_AXI_wstrb" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M21_AXI_wvalid" SIGIS="undef"/>
+        <PORT DIR="I" NAME="M21_AXI_wready" SIGIS="undef"/>
+        <PORT DIR="I" NAME="M21_AXI_bresp" SIGIS="undef"/>
+        <PORT DIR="I" NAME="M21_AXI_bvalid" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M21_AXI_bready" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M21_AXI_araddr" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M21_AXI_arprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M21_AXI_arvalid" SIGIS="undef"/>
+        <PORT DIR="I" NAME="M21_AXI_arready" SIGIS="undef"/>
+        <PORT DIR="I" NAME="M21_AXI_rdata" SIGIS="undef"/>
+        <PORT DIR="I" NAME="M21_AXI_rresp" SIGIS="undef"/>
+        <PORT DIR="I" NAME="M21_AXI_rvalid" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M21_AXI_rready" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="processing_system7_0_M_AXI_GP0" DATAWIDTH="32" NAME="S00_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
@@ -24427,7 +24436,6 @@
         <BUSINTERFACE BUSNAME="ps7_0_axi_periph_GP0_M16_AXI" DATAWIDTH="32" NAME="M16_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="AWADDR" PHYSICAL="M16_AXI_awaddr"/>
-            <PORTMAP LOGICAL="AWPROT" PHYSICAL="M16_AXI_awprot"/>
             <PORTMAP LOGICAL="AWVALID" PHYSICAL="M16_AXI_awvalid"/>
             <PORTMAP LOGICAL="AWREADY" PHYSICAL="M16_AXI_awready"/>
             <PORTMAP LOGICAL="WDATA" PHYSICAL="M16_AXI_wdata"/>
@@ -24438,7 +24446,6 @@
             <PORTMAP LOGICAL="BVALID" PHYSICAL="M16_AXI_bvalid"/>
             <PORTMAP LOGICAL="BREADY" PHYSICAL="M16_AXI_bready"/>
             <PORTMAP LOGICAL="ARADDR" PHYSICAL="M16_AXI_araddr"/>
-            <PORTMAP LOGICAL="ARPROT" PHYSICAL="M16_AXI_arprot"/>
             <PORTMAP LOGICAL="ARVALID" PHYSICAL="M16_AXI_arvalid"/>
             <PORTMAP LOGICAL="ARREADY" PHYSICAL="M16_AXI_arready"/>
             <PORTMAP LOGICAL="RDATA" PHYSICAL="M16_AXI_rdata"/>
