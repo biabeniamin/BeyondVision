@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="36">
   <CompositeFile CompositeFileTopName="bd_d5b8" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1551429858"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1551429858"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1551429858"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1551429858"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1551437346"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1551437346"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1551437346"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1551437346"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="synth\bd_d5b8.vhd" Type="VHDL">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>

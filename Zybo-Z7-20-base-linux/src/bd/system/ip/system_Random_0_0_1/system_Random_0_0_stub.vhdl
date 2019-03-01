@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Fri Mar  1 10:45:33 2019
+-- Date        : Fri Mar  1 12:50:16 2019
 -- Host        : DESKTOP-871TSOM running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               C:/Digilent19/Zybo-Z7-20-base-linux/src/bd/system/ip/system_Random_0_0_1/system_Random_0_0_stub.vhdl
@@ -14,8 +14,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity system_Random_0_0 is
   Port ( 
-    output_V_o_ap_vld : out STD_LOGIC;
-    s_axi_CONTROL_BUS_AWADDR : in STD_LOGIC_VECTOR ( 5 downto 0 );
+    s_axi_CONTROL_BUS_AWADDR : in STD_LOGIC_VECTOR ( 6 downto 0 );
     s_axi_CONTROL_BUS_AWVALID : in STD_LOGIC;
     s_axi_CONTROL_BUS_AWREADY : out STD_LOGIC;
     s_axi_CONTROL_BUS_WDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -25,7 +24,7 @@ entity system_Random_0_0 is
     s_axi_CONTROL_BUS_BRESP : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_CONTROL_BUS_BVALID : out STD_LOGIC;
     s_axi_CONTROL_BUS_BREADY : in STD_LOGIC;
-    s_axi_CONTROL_BUS_ARADDR : in STD_LOGIC_VECTOR ( 5 downto 0 );
+    s_axi_CONTROL_BUS_ARADDR : in STD_LOGIC_VECTOR ( 6 downto 0 );
     s_axi_CONTROL_BUS_ARVALID : in STD_LOGIC;
     s_axi_CONTROL_BUS_ARREADY : out STD_LOGIC;
     s_axi_CONTROL_BUS_RDATA : out STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -44,9 +43,7 @@ entity system_Random_0_0 is
     INPUT_STREAM_TUSER : in STD_LOGIC_VECTOR ( 1 downto 0 );
     INPUT_STREAM_TLAST : in STD_LOGIC_VECTOR ( 0 to 0 );
     INPUT_STREAM_TID : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    temperature_V : in STD_LOGIC_VECTOR ( 11 downto 0 );
-    output_V_i : in STD_LOGIC_VECTOR ( 63 downto 0 );
-    output_V_o : out STD_LOGIC_VECTOR ( 63 downto 0 )
+    temperature_V : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
 
 end system_Random_0_0;
@@ -55,7 +52,7 @@ architecture stub of system_Random_0_0 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "output_V_o_ap_vld,s_axi_CONTROL_BUS_AWADDR[5:0],s_axi_CONTROL_BUS_AWVALID,s_axi_CONTROL_BUS_AWREADY,s_axi_CONTROL_BUS_WDATA[31:0],s_axi_CONTROL_BUS_WSTRB[3:0],s_axi_CONTROL_BUS_WVALID,s_axi_CONTROL_BUS_WREADY,s_axi_CONTROL_BUS_BRESP[1:0],s_axi_CONTROL_BUS_BVALID,s_axi_CONTROL_BUS_BREADY,s_axi_CONTROL_BUS_ARADDR[5:0],s_axi_CONTROL_BUS_ARVALID,s_axi_CONTROL_BUS_ARREADY,s_axi_CONTROL_BUS_RDATA[31:0],s_axi_CONTROL_BUS_RRESP[1:0],s_axi_CONTROL_BUS_RVALID,s_axi_CONTROL_BUS_RREADY,ap_clk,ap_rst_n,interrupt,INPUT_STREAM_TVALID,INPUT_STREAM_TREADY,INPUT_STREAM_TDATA[31:0],INPUT_STREAM_TDEST[5:0],INPUT_STREAM_TKEEP[3:0],INPUT_STREAM_TSTRB[3:0],INPUT_STREAM_TUSER[1:0],INPUT_STREAM_TLAST[0:0],INPUT_STREAM_TID[4:0],temperature_V[11:0],output_V_i[63:0],output_V_o[63:0]";
+attribute black_box_pad_pin of stub : architecture is "s_axi_CONTROL_BUS_AWADDR[6:0],s_axi_CONTROL_BUS_AWVALID,s_axi_CONTROL_BUS_AWREADY,s_axi_CONTROL_BUS_WDATA[31:0],s_axi_CONTROL_BUS_WSTRB[3:0],s_axi_CONTROL_BUS_WVALID,s_axi_CONTROL_BUS_WREADY,s_axi_CONTROL_BUS_BRESP[1:0],s_axi_CONTROL_BUS_BVALID,s_axi_CONTROL_BUS_BREADY,s_axi_CONTROL_BUS_ARADDR[6:0],s_axi_CONTROL_BUS_ARVALID,s_axi_CONTROL_BUS_ARREADY,s_axi_CONTROL_BUS_RDATA[31:0],s_axi_CONTROL_BUS_RRESP[1:0],s_axi_CONTROL_BUS_RVALID,s_axi_CONTROL_BUS_RREADY,ap_clk,ap_rst_n,interrupt,INPUT_STREAM_TVALID,INPUT_STREAM_TREADY,INPUT_STREAM_TDATA[31:0],INPUT_STREAM_TDEST[5:0],INPUT_STREAM_TKEEP[3:0],INPUT_STREAM_TSTRB[3:0],INPUT_STREAM_TUSER[1:0],INPUT_STREAM_TLAST[0:0],INPUT_STREAM_TID[4:0],temperature_V[11:0]";
 attribute x_core_info : string;
 attribute x_core_info of stub : architecture is "Random,Vivado 2018.2";
 begin

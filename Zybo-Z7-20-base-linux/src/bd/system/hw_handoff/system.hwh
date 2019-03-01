@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Mar  1 10:44:23 2019" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Mar  1 12:49:11 2019" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-20:part0:1.0" DEVICE="7z020" NAME="system" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -1680,11 +1680,31 @@
                 </FIELD>
               </FIELDS>
             </REGISTER>
+            <REGISTER NAME="last_V">
+              <PROPERTY NAME="DESCRIPTION" VALUE="Data signal of last_V"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="64"/>
+              <PROPERTY NAME="SIZE" VALUE="32"/>
+              <PROPERTY NAME="ACCESS" VALUE="write-only"/>
+              <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
+              <PROPERTY NAME="RESET_VALUE" VALUE="0"/>
+              <FIELDS>
+                <FIELD NAME="last_V">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="Bit 31 to 0 Data signal of last_V"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="ACCESS" VALUE="write-only"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="32"/>
+                </FIELD>
+              </FIELDS>
+            </REGISTER>
           </REGISTERS>
         </ADDRESSBLOCK>
       </ADDRESSBLOCKS>
       <PARAMETERS>
-        <PARAMETER NAME="C_S_AXI_CONTROL_BUS_ADDR_WIDTH" VALUE="6"/>
+        <PARAMETER NAME="C_S_AXI_CONTROL_BUS_ADDR_WIDTH" VALUE="7"/>
         <PARAMETER NAME="C_S_AXI_CONTROL_BUS_DATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="Component_Name" VALUE="system_Random_0_0"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
@@ -1697,8 +1717,7 @@
         <PARAMETER NAME="C_S_AXI_CONTROL_BUS_HIGHADDR" VALUE="0x43C9FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="O" NAME="output_V_o_ap_vld" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="5" NAME="s_axi_CONTROL_BUS_AWADDR" RIGHT="0" SIGIS="undef" SIGNAME="Random_0_s_axi_CONTROL_BUS_AWADDR">
+        <PORT DIR="I" LEFT="6" NAME="s_axi_CONTROL_BUS_AWADDR" RIGHT="0" SIGIS="undef" SIGNAME="Random_0_s_axi_CONTROL_BUS_AWADDR">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph_GP0" PORT="M16_AXI_awaddr"/>
           </CONNECTIONS>
@@ -1748,7 +1767,7 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph_GP0" PORT="M16_AXI_bready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="5" NAME="s_axi_CONTROL_BUS_ARADDR" RIGHT="0" SIGIS="undef" SIGNAME="Random_0_s_axi_CONTROL_BUS_ARADDR">
+        <PORT DIR="I" LEFT="6" NAME="s_axi_CONTROL_BUS_ARADDR" RIGHT="0" SIGIS="undef" SIGNAME="Random_0_s_axi_CONTROL_BUS_ARADDR">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph_GP0" PORT="M16_AXI_araddr"/>
           </CONNECTIONS>
@@ -1828,20 +1847,10 @@
             <CONNECTION INSTANCE="xadc_wiz_0" PORT="temp_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="63" NAME="output_V_i" RIGHT="0" SIGIS="data" SIGNAME="Random_0_output_V_o">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Random_0" PORT="output_V_o"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="63" NAME="output_V_o" RIGHT="0" SIGIS="data" SIGNAME="Random_0_output_V_o">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Random_0" PORT="output_V_i"/>
-          </CONNECTIONS>
-        </PORT>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="ps7_0_axi_periph_GP0_M16_AXI" DATAWIDTH="32" NAME="s_axi_CONTROL_BUS" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
-          <PARAMETER NAME="ADDR_WIDTH" VALUE="6"/>
+          <PARAMETER NAME="ADDR_WIDTH" VALUE="7"/>
           <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
           <PARAMETER NAME="PROTOCOL" VALUE="AXI4LITE"/>
           <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>

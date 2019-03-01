@@ -2235,11 +2235,6 @@
         <spirit:internalPortReference spirit:componentRef="xadc_wiz_0" spirit:portRef="temp_out"/>
         <spirit:internalPortReference spirit:componentRef="Random_0" spirit:portRef="temperature_V"/>
       </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>Random_0_output_V_o</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="Random_0" spirit:portRef="output_V_o"/>
-        <spirit:internalPortReference spirit:componentRef="Random_0" spirit:portRef="output_V_i"/>
-      </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>
       <spirit:hierConnection spirit:interfaceRef="DDR/processing_system7_0_DDR">

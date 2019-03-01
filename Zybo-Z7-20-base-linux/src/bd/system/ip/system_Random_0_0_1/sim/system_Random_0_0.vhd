@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:hls:Random:1.0
--- IP Revision: 1903011042
+-- IP Revision: 1903011246
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -55,8 +55,7 @@ USE ieee.numeric_std.ALL;
 
 ENTITY system_Random_0_0 IS
   PORT (
-    output_V_o_ap_vld : OUT STD_LOGIC;
-    s_axi_CONTROL_BUS_AWADDR : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
+    s_axi_CONTROL_BUS_AWADDR : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
     s_axi_CONTROL_BUS_AWVALID : IN STD_LOGIC;
     s_axi_CONTROL_BUS_AWREADY : OUT STD_LOGIC;
     s_axi_CONTROL_BUS_WDATA : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -66,7 +65,7 @@ ENTITY system_Random_0_0 IS
     s_axi_CONTROL_BUS_BRESP : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
     s_axi_CONTROL_BUS_BVALID : OUT STD_LOGIC;
     s_axi_CONTROL_BUS_BREADY : IN STD_LOGIC;
-    s_axi_CONTROL_BUS_ARADDR : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
+    s_axi_CONTROL_BUS_ARADDR : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
     s_axi_CONTROL_BUS_ARVALID : IN STD_LOGIC;
     s_axi_CONTROL_BUS_ARREADY : OUT STD_LOGIC;
     s_axi_CONTROL_BUS_RDATA : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -85,9 +84,7 @@ ENTITY system_Random_0_0 IS
     INPUT_STREAM_TUSER : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
     INPUT_STREAM_TLAST : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     INPUT_STREAM_TID : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
-    temperature_V : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
-    output_V_i : IN STD_LOGIC_VECTOR(63 DOWNTO 0);
-    output_V_o : OUT STD_LOGIC_VECTOR(63 DOWNTO 0)
+    temperature_V : IN STD_LOGIC_VECTOR(11 DOWNTO 0)
   );
 END system_Random_0_0;
 
@@ -100,8 +97,7 @@ ARCHITECTURE system_Random_0_0_arch OF system_Random_0_0 IS
       C_S_AXI_CONTROL_BUS_DATA_WIDTH : INTEGER
     );
     PORT (
-      output_V_o_ap_vld : OUT STD_LOGIC;
-      s_axi_CONTROL_BUS_AWADDR : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
+      s_axi_CONTROL_BUS_AWADDR : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
       s_axi_CONTROL_BUS_AWVALID : IN STD_LOGIC;
       s_axi_CONTROL_BUS_AWREADY : OUT STD_LOGIC;
       s_axi_CONTROL_BUS_WDATA : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -111,7 +107,7 @@ ARCHITECTURE system_Random_0_0_arch OF system_Random_0_0 IS
       s_axi_CONTROL_BUS_BRESP : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
       s_axi_CONTROL_BUS_BVALID : OUT STD_LOGIC;
       s_axi_CONTROL_BUS_BREADY : IN STD_LOGIC;
-      s_axi_CONTROL_BUS_ARADDR : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
+      s_axi_CONTROL_BUS_ARADDR : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
       s_axi_CONTROL_BUS_ARVALID : IN STD_LOGIC;
       s_axi_CONTROL_BUS_ARREADY : OUT STD_LOGIC;
       s_axi_CONTROL_BUS_RDATA : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -130,21 +126,13 @@ ARCHITECTURE system_Random_0_0_arch OF system_Random_0_0 IS
       INPUT_STREAM_TUSER : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
       INPUT_STREAM_TLAST : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
       INPUT_STREAM_TID : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
-      temperature_V : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
-      output_V_i : IN STD_LOGIC_VECTOR(63 DOWNTO 0);
-      output_V_o : OUT STD_LOGIC_VECTOR(63 DOWNTO 0)
+      temperature_V : IN STD_LOGIC_VECTOR(11 DOWNTO 0)
     );
   END COMPONENT Random;
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
   ATTRIBUTE IP_DEFINITION_SOURCE OF system_Random_0_0_arch: ARCHITECTURE IS "HLS";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
-  ATTRIBUTE X_INTERFACE_PARAMETER OF output_V_o: SIGNAL IS "XIL_INTERFACENAME output_V_o, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 64} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} va" & 
-"lue false}}}}}";
-  ATTRIBUTE X_INTERFACE_INFO OF output_V_o: SIGNAL IS "xilinx.com:signal:data:1.0 output_V_o DATA";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF output_V_i: SIGNAL IS "XIL_INTERFACENAME output_V_i, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 64} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} va" & 
-"lue false}}}}}";
-  ATTRIBUTE X_INTERFACE_INFO OF output_V_i: SIGNAL IS "xilinx.com:signal:data:1.0 output_V_i DATA";
   ATTRIBUTE X_INTERFACE_PARAMETER OF temperature_V: SIGNAL IS "XIL_INTERFACENAME temperature_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 12} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}}" & 
 " value false}}}}}";
   ATTRIBUTE X_INTERFACE_INFO OF temperature_V: SIGNAL IS "xilinx.com:signal:data:1.0 temperature_V DATA";
@@ -181,17 +169,16 @@ ARCHITECTURE system_Random_0_0_arch OF system_Random_0_0 IS
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_CONTROL_BUS_WDATA: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS WDATA";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_CONTROL_BUS_AWREADY: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS AWREADY";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_CONTROL_BUS_AWVALID: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS AWVALID";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF s_axi_CONTROL_BUS_AWADDR: SIGNAL IS "XIL_INTERFACENAME s_axi_CONTROL_BUS, ADDR_WIDTH 6, DATA_WIDTH 32, PROTOCOL AXI4LITE, READ_WRITE_MODE READ_WRITE, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, FREQ_HZ 1000000" & 
+  ATTRIBUTE X_INTERFACE_PARAMETER OF s_axi_CONTROL_BUS_AWADDR: SIGNAL IS "XIL_INTERFACENAME s_axi_CONTROL_BUS, ADDR_WIDTH 7, DATA_WIDTH 32, PROTOCOL AXI4LITE, READ_WRITE_MODE READ_WRITE, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, FREQ_HZ 1000000" & 
 "00, ID_WIDTH 0, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN system_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_CONTROL_BUS_AWADDR: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS AWADDR";
 BEGIN
   U0 : Random
     GENERIC MAP (
-      C_S_AXI_CONTROL_BUS_ADDR_WIDTH => 6,
+      C_S_AXI_CONTROL_BUS_ADDR_WIDTH => 7,
       C_S_AXI_CONTROL_BUS_DATA_WIDTH => 32
     )
     PORT MAP (
-      output_V_o_ap_vld => output_V_o_ap_vld,
       s_axi_CONTROL_BUS_AWADDR => s_axi_CONTROL_BUS_AWADDR,
       s_axi_CONTROL_BUS_AWVALID => s_axi_CONTROL_BUS_AWVALID,
       s_axi_CONTROL_BUS_AWREADY => s_axi_CONTROL_BUS_AWREADY,
@@ -221,8 +208,6 @@ BEGIN
       INPUT_STREAM_TUSER => INPUT_STREAM_TUSER,
       INPUT_STREAM_TLAST => INPUT_STREAM_TLAST,
       INPUT_STREAM_TID => INPUT_STREAM_TID,
-      temperature_V => temperature_V,
-      output_V_i => output_V_i,
-      output_V_o => output_V_o
+      temperature_V => temperature_V
     );
 END system_Random_0_0_arch;
