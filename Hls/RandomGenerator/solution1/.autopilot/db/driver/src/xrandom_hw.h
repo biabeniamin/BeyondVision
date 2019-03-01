@@ -54,6 +54,9 @@
 // 0x3c : Control signal of agg_result_f
 //        bit 0  - agg_result_f_ap_vld (Read/COR)
 //        others - reserved
+// 0x40 : Data signal of last_V
+//        bit 31~0 - last_V[31:0] (Read/Write)
+// 0x44 : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 #define XRANDOM_CONTROL_BUS_ADDR_AP_CTRL           0x00
@@ -78,4 +81,6 @@
 #define XRANDOM_CONTROL_BUS_ADDR_AGG_RESULT_F_DATA 0x38
 #define XRANDOM_CONTROL_BUS_BITS_AGG_RESULT_F_DATA 32
 #define XRANDOM_CONTROL_BUS_ADDR_AGG_RESULT_F_CTRL 0x3c
+#define XRANDOM_CONTROL_BUS_ADDR_LAST_V_DATA       0x40
+#define XRANDOM_CONTROL_BUS_BITS_LAST_V_DATA       32
 

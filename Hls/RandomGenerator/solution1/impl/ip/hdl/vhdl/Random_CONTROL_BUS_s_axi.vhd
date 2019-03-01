@@ -11,7 +11,7 @@ use IEEE.NUMERIC_STD.all;
 
 entity Random_CONTROL_BUS_s_axi is
 generic (
-    C_S_AXI_ADDR_WIDTH    : INTEGER := 6;
+    C_S_AXI_ADDR_WIDTH    : INTEGER := 7;
     C_S_AXI_DATA_WIDTH    : INTEGER := 32);
 port (
     -- axi4 lite slave signals
@@ -52,7 +52,8 @@ port (
     agg_result_e          :in   STD_LOGIC_VECTOR(31 downto 0);
     agg_result_e_ap_vld   :in   STD_LOGIC;
     agg_result_f          :in   STD_LOGIC_VECTOR(31 downto 0);
-    agg_result_f_ap_vld   :in   STD_LOGIC
+    agg_result_f_ap_vld   :in   STD_LOGIC;
+    last_V                :out  STD_LOGIC_VECTOR(31 downto 0)
 );
 end entity Random_CONTROL_BUS_s_axi;
 
@@ -105,6 +106,9 @@ end entity Random_CONTROL_BUS_s_axi;
 -- 0x3c : Control signal of agg_result_f
 --        bit 0  - agg_result_f_ap_vld (Read/COR)
 --        others - reserved
+-- 0x40 : Data signal of last_V
+--        bit 31~0 - last_V[31:0] (Read/Write)
+-- 0x44 : reserved
 -- (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 architecture behave of Random_CONTROL_BUS_s_axi is
@@ -128,7 +132,9 @@ architecture behave of Random_CONTROL_BUS_s_axi is
     constant ADDR_AGG_RESULT_E_CTRL   : INTEGER := 16#34#;
     constant ADDR_AGG_RESULT_F_DATA_0 : INTEGER := 16#38#;
     constant ADDR_AGG_RESULT_F_CTRL   : INTEGER := 16#3c#;
-    constant ADDR_BITS         : INTEGER := 6;
+    constant ADDR_LAST_V_DATA_0       : INTEGER := 16#40#;
+    constant ADDR_LAST_V_CTRL         : INTEGER := 16#44#;
+    constant ADDR_BITS         : INTEGER := 7;
 
     signal waddr               : UNSIGNED(ADDR_BITS-1 downto 0);
     signal wmask               : UNSIGNED(31 downto 0);
@@ -162,6 +168,7 @@ architecture behave of Random_CONTROL_BUS_s_axi is
     signal int_agg_result_e_ap_vld : STD_LOGIC;
     signal int_agg_result_f    : UNSIGNED(31 downto 0) := (others => '0');
     signal int_agg_result_f_ap_vld : STD_LOGIC;
+    signal int_last_V          : UNSIGNED(31 downto 0) := (others => '0');
 
 
 begin
@@ -307,6 +314,8 @@ begin
                         rdata_data <= RESIZE(int_agg_result_f(31 downto 0), 32);
                     when ADDR_AGG_RESULT_F_CTRL =>
                         rdata_data <= (0 => int_agg_result_f_ap_vld, others => '0');
+                    when ADDR_LAST_V_DATA_0 =>
+                        rdata_data <= RESIZE(int_last_V(31 downto 0), 32);
                     when others =>
                         rdata_data <= (others => '0');
                     end case;
@@ -318,6 +327,7 @@ begin
 -- ----------------------- Register logic ----------------
     interrupt            <= int_gie and (int_isr(0) or int_isr(1));
     ap_start             <= int_ap_start;
+    last_V               <= STD_LOGIC_VECTOR(int_last_V);
 
     process (ACLK)
     begin
@@ -607,6 +617,17 @@ begin
                     int_agg_result_f_ap_vld <= '1';
                 elsif (ar_hs = '1' and raddr = ADDR_AGG_RESULT_F_CTRL) then
                     int_agg_result_f_ap_vld <= '0'; -- clear on read
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_LAST_V_DATA_0) then
+                    int_last_V(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_last_V(31 downto 0));
                 end if;
             end if;
         end if;

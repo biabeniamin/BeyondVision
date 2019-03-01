@@ -196,6 +196,23 @@ u32 XRandom_Get_agg_result_f_vld(XRandom *InstancePtr) {
     return Data & 0x1;
 }
 
+void XRandom_Set_last_V(XRandom *InstancePtr, u32 Data) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XRandom_WriteReg(InstancePtr->Control_bus_BaseAddress, XRANDOM_CONTROL_BUS_ADDR_LAST_V_DATA, Data);
+}
+
+u32 XRandom_Get_last_V(XRandom *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XRandom_ReadReg(InstancePtr->Control_bus_BaseAddress, XRANDOM_CONTROL_BUS_ADDR_LAST_V_DATA);
+    return Data;
+}
+
 void XRandom_InterruptGlobalEnable(XRandom *InstancePtr) {
     Xil_AssertVoid(InstancePtr != NULL);
     Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);

@@ -8,7 +8,7 @@
 `timescale 1ns/1ps
 module Random_CONTROL_BUS_s_axi
 #(parameter
-    C_S_AXI_ADDR_WIDTH = 6,
+    C_S_AXI_ADDR_WIDTH = 7,
     C_S_AXI_DATA_WIDTH = 32
 )(
     // axi4 lite slave signals
@@ -49,7 +49,8 @@ module Random_CONTROL_BUS_s_axi
     input  wire [31:0]                   agg_result_e,
     input  wire                          agg_result_e_ap_vld,
     input  wire [31:0]                   agg_result_f,
-    input  wire                          agg_result_f_ap_vld
+    input  wire                          agg_result_f_ap_vld,
+    output wire [31:0]                   last_V
 );
 //------------------------Address Info-------------------
 // 0x00 : Control signals
@@ -100,26 +101,31 @@ module Random_CONTROL_BUS_s_axi
 // 0x3c : Control signal of agg_result_f
 //        bit 0  - agg_result_f_ap_vld (Read/COR)
 //        others - reserved
+// 0x40 : Data signal of last_V
+//        bit 31~0 - last_V[31:0] (Read/Write)
+// 0x44 : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 //------------------------Parameter----------------------
 localparam
-    ADDR_AP_CTRL             = 6'h00,
-    ADDR_GIE                 = 6'h04,
-    ADDR_IER                 = 6'h08,
-    ADDR_ISR                 = 6'h0c,
-    ADDR_AGG_RESULT_A_DATA_0 = 6'h10,
-    ADDR_AGG_RESULT_A_CTRL   = 6'h14,
-    ADDR_AGG_RESULT_B_DATA_0 = 6'h18,
-    ADDR_AGG_RESULT_B_CTRL   = 6'h1c,
-    ADDR_AGG_RESULT_C_DATA_0 = 6'h20,
-    ADDR_AGG_RESULT_C_CTRL   = 6'h24,
-    ADDR_AGG_RESULT_D_DATA_0 = 6'h28,
-    ADDR_AGG_RESULT_D_CTRL   = 6'h2c,
-    ADDR_AGG_RESULT_E_DATA_0 = 6'h30,
-    ADDR_AGG_RESULT_E_CTRL   = 6'h34,
-    ADDR_AGG_RESULT_F_DATA_0 = 6'h38,
-    ADDR_AGG_RESULT_F_CTRL   = 6'h3c,
+    ADDR_AP_CTRL             = 7'h00,
+    ADDR_GIE                 = 7'h04,
+    ADDR_IER                 = 7'h08,
+    ADDR_ISR                 = 7'h0c,
+    ADDR_AGG_RESULT_A_DATA_0 = 7'h10,
+    ADDR_AGG_RESULT_A_CTRL   = 7'h14,
+    ADDR_AGG_RESULT_B_DATA_0 = 7'h18,
+    ADDR_AGG_RESULT_B_CTRL   = 7'h1c,
+    ADDR_AGG_RESULT_C_DATA_0 = 7'h20,
+    ADDR_AGG_RESULT_C_CTRL   = 7'h24,
+    ADDR_AGG_RESULT_D_DATA_0 = 7'h28,
+    ADDR_AGG_RESULT_D_CTRL   = 7'h2c,
+    ADDR_AGG_RESULT_E_DATA_0 = 7'h30,
+    ADDR_AGG_RESULT_E_CTRL   = 7'h34,
+    ADDR_AGG_RESULT_F_DATA_0 = 7'h38,
+    ADDR_AGG_RESULT_F_CTRL   = 7'h3c,
+    ADDR_LAST_V_DATA_0       = 7'h40,
+    ADDR_LAST_V_CTRL         = 7'h44,
     WRIDLE                   = 2'd0,
     WRDATA                   = 2'd1,
     WRRESP                   = 2'd2,
@@ -127,7 +133,7 @@ localparam
     RDIDLE                   = 2'd0,
     RDDATA                   = 2'd1,
     RDRESET                  = 2'd2,
-    ADDR_BITS         = 6;
+    ADDR_BITS         = 7;
 
 //------------------------Local signal-------------------
     reg  [1:0]                    wstate = WRRESET;
@@ -162,6 +168,7 @@ localparam
     reg                           int_agg_result_e_ap_vld;
     reg  [31:0]                   int_agg_result_f = 'b0;
     reg                           int_agg_result_f_ap_vld;
+    reg  [31:0]                   int_last_V = 'b0;
 
 //------------------------Instantiation------------------
 
@@ -305,6 +312,9 @@ always @(posedge ACLK) begin
                 ADDR_AGG_RESULT_F_CTRL: begin
                     rdata[0] <= int_agg_result_f_ap_vld;
                 end
+                ADDR_LAST_V_DATA_0: begin
+                    rdata <= int_last_V[31:0];
+                end
             endcase
         end
     end
@@ -314,6 +324,7 @@ end
 //------------------------Register logic-----------------
 assign interrupt = int_gie & (|int_isr);
 assign ap_start  = int_ap_start;
+assign last_V    = int_last_V;
 // int_ap_start
 always @(posedge ACLK) begin
     if (ARESET)
@@ -539,6 +550,16 @@ always @(posedge ACLK) begin
             int_agg_result_f_ap_vld <= 1'b1;
         else if (ar_hs && raddr == ADDR_AGG_RESULT_F_CTRL)
             int_agg_result_f_ap_vld <= 1'b0; // clear on read
+    end
+end
+
+// int_last_V[31:0]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_last_V[31:0] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_LAST_V_DATA_0)
+            int_last_V[31:0] <= (WDATA[31:0] & wmask) | (int_last_V[31:0] & ~wmask);
     end
 end
 

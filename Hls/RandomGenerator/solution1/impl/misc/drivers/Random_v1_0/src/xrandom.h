@@ -99,6 +99,8 @@ u32 XRandom_Get_agg_result_e(XRandom *InstancePtr);
 u32 XRandom_Get_agg_result_e_vld(XRandom *InstancePtr);
 u32 XRandom_Get_agg_result_f(XRandom *InstancePtr);
 u32 XRandom_Get_agg_result_f_vld(XRandom *InstancePtr);
+void XRandom_Set_last_V(XRandom *InstancePtr, u32 Data);
+u32 XRandom_Get_last_V(XRandom *InstancePtr);
 
 void XRandom_InterruptGlobalEnable(XRandom *InstancePtr);
 void XRandom_InterruptGlobalDisable(XRandom *InstancePtr);

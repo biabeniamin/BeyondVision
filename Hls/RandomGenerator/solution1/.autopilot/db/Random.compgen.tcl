@@ -60,6 +60,14 @@ agg_result_f {
 	offset 56
 	offset_end 63
 }
+last_V { 
+	dir I
+	width 32
+	depth 1
+	mode ap_none
+	offset 64
+	offset_end 71
+}
 }
 
 
@@ -228,21 +236,6 @@ eval "cg_default_interface_gen_dc { \
     corename dc_temperature_V \
     op interface \
     ports { temperature_V { I 12 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 10 \
-    name output_V \
-    type other \
-    dir IO \
-    reset_level 0 \
-    sync_rst true \
-    corename dc_output_V \
-    op interface \
-    ports { output_V_i { I 64 vector } output_V_o { O 64 vector } output_V_o_ap_vld { O 1 bit } } \
 } "
 }
 

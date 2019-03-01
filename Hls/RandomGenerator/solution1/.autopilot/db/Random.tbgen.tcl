@@ -1,18 +1,17 @@
 set C_TypeInfoList {{ 
-"Random" : [[], {"return": [[],"0"] }, [{"ExternC" : 0}], [ {"INPUT_STREAM": [[], {"reference": "1"}] }, {"temperature": [[],"2"] }, {"output": [[],{ "pointer": "3"}] }],[],""], 
-"1": [ "stream<ap_axiu<32, 2, 5, 6> >", {"hls_type": {"stream": [[[[],"4"]],"5"]}}], 
-"4": [ "ap_axiu<32, 2, 5, 6>", {"struct": [[],[{"D":[[], {"scalar": { "int": 32}}]},{"U":[[], {"scalar": { "int": 2}}]},{"TI":[[], {"scalar": { "int": 5}}]},{"TD":[[], {"scalar": { "int": 6}}]}],[{ "data": [[], "6"]},{ "keep": [[], "7"]},{ "strb": [[], "7"]},{ "user": [[], "8"]},{ "last": [[], "9"]},{ "id": [[], "10"]},{ "dest": [[], "11"]}],""]}], 
-"7": [ "ap_uint<4>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 4}}]],""]}}], 
+"Random" : [[], {"return": [[],"0"] }, [{"ExternC" : 0}], [ {"INPUT_STREAM": [[], {"reference": "1"}] }, {"temperature": [[],"2"] }, {"last": [[],"3"] }],[],""], 
+"3": [ "ap_uint<32>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 32}}]],""]}}], 
 "2": [ "ap_uint<12>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 12}}]],""]}}], 
-"11": [ "ap_uint<6>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 6}}]],""]}}], 
+"0": [ "asdf", {"typedef": [[[],"4"],""]}], 
+"4": [ "asd", {"struct": [[],[],[{ "a": [[],  {"scalar": "int"}]},{ "b": [[],  {"scalar": "int"}]},{ "c": [[],  {"scalar": "int"}]},{ "d": [[],  {"scalar": "int"}]},{ "e": [[],  {"scalar": "int"}]},{ "f": [[],  {"scalar": "int"}]}],""]}], 
+"1": [ "stream<ap_axiu<32, 2, 5, 6> >", {"hls_type": {"stream": [[[[],"5"]],"6"]}}], 
+"5": [ "ap_axiu<32, 2, 5, 6>", {"struct": [[],[{"D":[[], {"scalar": { "int": 32}}]},{"U":[[], {"scalar": { "int": 2}}]},{"TI":[[], {"scalar": { "int": 5}}]},{"TD":[[], {"scalar": { "int": 6}}]}],[{ "data": [[], "3"]},{ "keep": [[], "7"]},{ "strb": [[], "7"]},{ "user": [[], "8"]},{ "last": [[], "9"]},{ "id": [[], "10"]},{ "dest": [[], "11"]}],""]}], 
 "10": [ "ap_uint<5>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 5}}]],""]}}], 
-"6": [ "ap_uint<32>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 32}}]],""]}}], 
-"3": [ "ap_uint<64>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 64}}]],""]}}], 
+"11": [ "ap_uint<6>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 6}}]],""]}}], 
 "9": [ "ap_uint<1>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 1}}]],""]}}], 
-"0": [ "asdf", {"typedef": [[[],"12"],""]}], 
-"12": [ "asd", {"struct": [[],[],[{ "a": [[],  {"scalar": "int"}]},{ "b": [[],  {"scalar": "int"}]},{ "c": [[],  {"scalar": "int"}]},{ "d": [[],  {"scalar": "int"}]},{ "e": [[],  {"scalar": "int"}]},{ "f": [[],  {"scalar": "int"}]}],""]}], 
+"7": [ "ap_uint<4>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 4}}]],""]}}], 
 "8": [ "ap_uint<2>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 2}}]],""]}}],
-"5": ["hls", ""]
+"6": ["hls", ""]
 }}
 set moduleName Random
 set isTaskLevelControl 1
@@ -42,7 +41,7 @@ set C_modelArgList {
 	{ INPUT_STREAM_V_id_V int 5 regular {axi_s 0 volatile  { INPUT_STREAM ID } }  }
 	{ INPUT_STREAM_V_dest_V int 6 regular {axi_s 0 volatile  { INPUT_STREAM Dest } }  }
 	{ temperature_V int 12 regular  }
-	{ output_V int 64 regular {pointer 2}  }
+	{ last_V int 32 regular {axi_slave 0}  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "agg_result_a", "interface" : "axi_slave", "bundle":"CONTROL_BUS","type":"ap_vld","bitwidth" : 32, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "agg.result.a","cData": "int","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}], "offset" : {"out":16}, "offset_end" : {"out":23}} , 
@@ -59,9 +58,9 @@ set C_modelArgMapList {[
  	{ "Name" : "INPUT_STREAM_V_id_V", "interface" : "axis", "bitwidth" : 5, "direction" : "READONLY", "bitSlice":[{"low":0,"up":4,"cElement": [{"cName": "INPUT_STREAM.V.id.V","cData": "uint5","bit_use": { "low": 0,"up": 4},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
  	{ "Name" : "INPUT_STREAM_V_dest_V", "interface" : "axis", "bitwidth" : 6, "direction" : "READONLY", "bitSlice":[{"low":0,"up":5,"cElement": [{"cName": "INPUT_STREAM.V.dest.V","cData": "uint6","bit_use": { "low": 0,"up": 5},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
  	{ "Name" : "temperature_V", "interface" : "wire", "bitwidth" : 12, "direction" : "READONLY", "bitSlice":[{"low":0,"up":11,"cElement": [{"cName": "temperature.V","cData": "uint12","bit_use": { "low": 0,"up": 11},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} , 
- 	{ "Name" : "output_V", "interface" : "wire", "bitwidth" : 64, "direction" : "READWRITE", "bitSlice":[{"low":0,"up":63,"cElement": [{"cName": "output.V","cData": "uint64","bit_use": { "low": 0,"up": 63},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} ]}
+ 	{ "Name" : "last_V", "interface" : "axi_slave", "bundle":"CONTROL_BUS","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "last.V","cData": "uint32","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}], "offset" : {"in":64}, "offset_end" : {"in":71}} ]}
 # RTL Port declarations: 
-set portNum 33
+set portNum 30
 set portList { 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
 	{ ap_rst_n sc_in sc_logic 1 reset -1 active_low_sync } 
@@ -75,19 +74,16 @@ set portList {
 	{ INPUT_STREAM_TID sc_in sc_lv 5 signal 11 } 
 	{ INPUT_STREAM_TDEST sc_in sc_lv 6 signal 12 } 
 	{ temperature_V sc_in sc_lv 12 signal 13 } 
-	{ output_V_i sc_in sc_lv 64 signal 14 } 
-	{ output_V_o sc_out sc_lv 64 signal 14 } 
-	{ output_V_o_ap_vld sc_out sc_logic 1 outvld 14 } 
 	{ s_axi_CONTROL_BUS_AWVALID sc_in sc_logic 1 signal -1 } 
 	{ s_axi_CONTROL_BUS_AWREADY sc_out sc_logic 1 signal -1 } 
-	{ s_axi_CONTROL_BUS_AWADDR sc_in sc_lv 6 signal -1 } 
+	{ s_axi_CONTROL_BUS_AWADDR sc_in sc_lv 7 signal -1 } 
 	{ s_axi_CONTROL_BUS_WVALID sc_in sc_logic 1 signal -1 } 
 	{ s_axi_CONTROL_BUS_WREADY sc_out sc_logic 1 signal -1 } 
 	{ s_axi_CONTROL_BUS_WDATA sc_in sc_lv 32 signal -1 } 
 	{ s_axi_CONTROL_BUS_WSTRB sc_in sc_lv 4 signal -1 } 
 	{ s_axi_CONTROL_BUS_ARVALID sc_in sc_logic 1 signal -1 } 
 	{ s_axi_CONTROL_BUS_ARREADY sc_out sc_logic 1 signal -1 } 
-	{ s_axi_CONTROL_BUS_ARADDR sc_in sc_lv 6 signal -1 } 
+	{ s_axi_CONTROL_BUS_ARADDR sc_in sc_lv 7 signal -1 } 
 	{ s_axi_CONTROL_BUS_RVALID sc_out sc_logic 1 signal -1 } 
 	{ s_axi_CONTROL_BUS_RREADY sc_in sc_logic 1 signal -1 } 
 	{ s_axi_CONTROL_BUS_RDATA sc_out sc_lv 32 signal -1 } 
@@ -98,14 +94,14 @@ set portList {
 	{ interrupt sc_out sc_logic 1 signal -1 } 
 }
 set NewPortList {[ 
-	{ "name": "s_axi_CONTROL_BUS_AWADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":6, "type": "signal", "bundle":{"name": "CONTROL_BUS", "role": "AWADDR" },"address":[{"name":"Random","role":"start","value":"0","valid_bit":"0"},{"name":"Random","role":"continue","value":"0","valid_bit":"4"},{"name":"Random","role":"auto_start","value":"0","valid_bit":"7"}] },
+	{ "name": "s_axi_CONTROL_BUS_AWADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "CONTROL_BUS", "role": "AWADDR" },"address":[{"name":"Random","role":"start","value":"0","valid_bit":"0"},{"name":"Random","role":"continue","value":"0","valid_bit":"4"},{"name":"Random","role":"auto_start","value":"0","valid_bit":"7"},{"name":"last_V","role":"data","value":"64"}] },
 	{ "name": "s_axi_CONTROL_BUS_AWVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "CONTROL_BUS", "role": "AWVALID" } },
 	{ "name": "s_axi_CONTROL_BUS_AWREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "CONTROL_BUS", "role": "AWREADY" } },
 	{ "name": "s_axi_CONTROL_BUS_WVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "CONTROL_BUS", "role": "WVALID" } },
 	{ "name": "s_axi_CONTROL_BUS_WREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "CONTROL_BUS", "role": "WREADY" } },
 	{ "name": "s_axi_CONTROL_BUS_WDATA", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "CONTROL_BUS", "role": "WDATA" } },
 	{ "name": "s_axi_CONTROL_BUS_WSTRB", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "CONTROL_BUS", "role": "WSTRB" } },
-	{ "name": "s_axi_CONTROL_BUS_ARADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":6, "type": "signal", "bundle":{"name": "CONTROL_BUS", "role": "ARADDR" },"address":[{"name":"Random","role":"start","value":"0","valid_bit":"0"},{"name":"Random","role":"done","value":"0","valid_bit":"1"},{"name":"Random","role":"idle","value":"0","valid_bit":"2"},{"name":"Random","role":"ready","value":"0","valid_bit":"3"},{"name":"Random","role":"auto_start","value":"0","valid_bit":"7"},{"name":"agg_result_a","role":"data","value":"16"}, {"name":"agg_result_a","role":"valid","value":"20","valid_bit":"0"},{"name":"agg_result_b","role":"data","value":"24"}, {"name":"agg_result_b","role":"valid","value":"28","valid_bit":"0"},{"name":"agg_result_c","role":"data","value":"32"}, {"name":"agg_result_c","role":"valid","value":"36","valid_bit":"0"},{"name":"agg_result_d","role":"data","value":"40"}, {"name":"agg_result_d","role":"valid","value":"44","valid_bit":"0"},{"name":"agg_result_e","role":"data","value":"48"}, {"name":"agg_result_e","role":"valid","value":"52","valid_bit":"0"},{"name":"agg_result_f","role":"data","value":"56"}, {"name":"agg_result_f","role":"valid","value":"60","valid_bit":"0"}] },
+	{ "name": "s_axi_CONTROL_BUS_ARADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "CONTROL_BUS", "role": "ARADDR" },"address":[{"name":"Random","role":"start","value":"0","valid_bit":"0"},{"name":"Random","role":"done","value":"0","valid_bit":"1"},{"name":"Random","role":"idle","value":"0","valid_bit":"2"},{"name":"Random","role":"ready","value":"0","valid_bit":"3"},{"name":"Random","role":"auto_start","value":"0","valid_bit":"7"},{"name":"agg_result_a","role":"data","value":"16"}, {"name":"agg_result_a","role":"valid","value":"20","valid_bit":"0"},{"name":"agg_result_b","role":"data","value":"24"}, {"name":"agg_result_b","role":"valid","value":"28","valid_bit":"0"},{"name":"agg_result_c","role":"data","value":"32"}, {"name":"agg_result_c","role":"valid","value":"36","valid_bit":"0"},{"name":"agg_result_d","role":"data","value":"40"}, {"name":"agg_result_d","role":"valid","value":"44","valid_bit":"0"},{"name":"agg_result_e","role":"data","value":"48"}, {"name":"agg_result_e","role":"valid","value":"52","valid_bit":"0"},{"name":"agg_result_f","role":"data","value":"56"}, {"name":"agg_result_f","role":"valid","value":"60","valid_bit":"0"}] },
 	{ "name": "s_axi_CONTROL_BUS_ARVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "CONTROL_BUS", "role": "ARVALID" } },
 	{ "name": "s_axi_CONTROL_BUS_ARREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "CONTROL_BUS", "role": "ARREADY" } },
 	{ "name": "s_axi_CONTROL_BUS_RVALID", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "CONTROL_BUS", "role": "RVALID" } },
@@ -127,10 +123,7 @@ set NewPortList {[
  	{ "name": "INPUT_STREAM_TLAST", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "INPUT_STREAM_V_last_V", "role": "default" }} , 
  	{ "name": "INPUT_STREAM_TID", "direction": "in", "datatype": "sc_lv", "bitwidth":5, "type": "signal", "bundle":{"name": "INPUT_STREAM_V_id_V", "role": "default" }} , 
  	{ "name": "INPUT_STREAM_TDEST", "direction": "in", "datatype": "sc_lv", "bitwidth":6, "type": "signal", "bundle":{"name": "INPUT_STREAM_V_dest_V", "role": "default" }} , 
- 	{ "name": "temperature_V", "direction": "in", "datatype": "sc_lv", "bitwidth":12, "type": "signal", "bundle":{"name": "temperature_V", "role": "default" }} , 
- 	{ "name": "output_V_i", "direction": "in", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "output_V", "role": "i" }} , 
- 	{ "name": "output_V_o", "direction": "out", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "output_V", "role": "o" }} , 
- 	{ "name": "output_V_o_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "output_V", "role": "o_ap_vld" }}  ]}
+ 	{ "name": "temperature_V", "direction": "in", "datatype": "sc_lv", "bitwidth":12, "type": "signal", "bundle":{"name": "temperature_V", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
 	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1"],
@@ -163,7 +156,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "INPUT_STREAM_V_id_V", "Type" : "Axis", "Direction" : "I"},
 			{"Name" : "INPUT_STREAM_V_dest_V", "Type" : "Axis", "Direction" : "I"},
 			{"Name" : "temperature_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "output_V", "Type" : "OVld", "Direction" : "IO"}]},
+			{"Name" : "last_V", "Type" : "None", "Direction" : "I"}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Random_CONTROL_BUS_s_axi_U", "Parent" : "0"}]}
 
 
@@ -183,7 +176,7 @@ set ArgLastReadFirstWriteLatency {
 		INPUT_STREAM_V_id_V {Type I LastRead 1 FirstWrite -1}
 		INPUT_STREAM_V_dest_V {Type I LastRead 1 FirstWrite -1}
 		temperature_V {Type I LastRead 0 FirstWrite -1}
-		output_V {Type IO LastRead 3 FirstWrite 3}}}
+		last_V {Type I LastRead 0 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 
@@ -205,7 +198,6 @@ set Spec2ImplPortList {
 	INPUT_STREAM_V_id_V { axis {  { INPUT_STREAM_TID in_data 0 5 } } }
 	INPUT_STREAM_V_dest_V { axis {  { INPUT_STREAM_TVALID in_vld 0 1 }  { INPUT_STREAM_TREADY in_acc 1 1 }  { INPUT_STREAM_TDEST in_data 0 6 } } }
 	temperature_V { ap_none {  { temperature_V in_data 0 12 } } }
-	output_V { ap_ovld {  { output_V_i in_data 0 64 }  { output_V_o out_data 1 64 }  { output_V_o_ap_vld out_vld 1 1 } } }
 }
 
 set busDeadlockParameterList { 

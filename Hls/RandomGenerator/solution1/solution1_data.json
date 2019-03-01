@@ -124,31 +124,13 @@
       "type": "interrupt",
       "ctype": {"INTERRUPT": {"Type": "bool"}}
     },
-    "output_V_i": {
-      "type": "data",
-      "dir": "in",
-      "width": "64",
-      "ctype": {"DATA": {
-          "Type": "integer unsigned",
-          "Width": "64"
-        }}
-    },
-    "output_V_o": {
-      "type": "data",
-      "dir": "out",
-      "width": "64",
-      "ctype": {"DATA": {
-          "Type": "integer unsigned",
-          "Width": "64"
-        }}
-    },
     "s_axi_CONTROL_BUS": {
       "type": "axi4lite",
       "is_adaptor": "true",
       "mode": "slave",
       "port_prefix": "s_axi_CONTROL_BUS",
       "param_prefix": "C_S_AXI_CONTROL_BUS",
-      "addr_bits": "6",
+      "addr_bits": "7",
       "registers": [
         {
           "offset": "0x00",
@@ -545,6 +527,21 @@
               "description": "Reserved.  0s on read."
             }
           ]
+        },
+        {
+          "offset": "0x40",
+          "name": "last_V",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of last_V",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "last_V",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of last_V"
+            }]
         }
       ],
       "memories": "",
@@ -569,10 +566,10 @@
         },
         "AWADDR": {
           "Type": "integer unsigned",
-          "Width": "6"
+          "Width": "7"
         },
         "WDATA": {
-          "Type": "integer signed",
+          "Type": "integer unsigned",
           "Width": "32"
         },
         "WSTRB": {
@@ -581,17 +578,17 @@
         },
         "ARADDR": {
           "Type": "integer unsigned",
-          "Width": "6"
+          "Width": "7"
         },
         "RDATA": {
-          "Type": "integer signed",
+          "Type": "integer unsigned",
           "Width": "32"
         }
       },
       "data_width": "32",
       "port_width": {
-        "ARADDR": "6",
-        "AWADDR": "6",
+        "ARADDR": "7",
+        "AWADDR": "7",
         "RDATA": "32",
         "WDATA": "32",
         "WSTRB": "4"
@@ -618,7 +615,7 @@
     },
     "s_axi_CONTROL_BUS_AWADDR": {
       "dir": "in",
-      "width": "6"
+      "width": "7"
     },
     "s_axi_CONTROL_BUS_WVALID": {
       "dir": "in",
@@ -646,7 +643,7 @@
     },
     "s_axi_CONTROL_BUS_ARADDR": {
       "dir": "in",
-      "width": "6"
+      "width": "7"
     },
     "s_axi_CONTROL_BUS_RVALID": {
       "dir": "out",
@@ -729,18 +726,6 @@
     "temperature_V": {
       "dir": "in",
       "width": "12"
-    },
-    "output_V_i": {
-      "dir": "in",
-      "width": "64"
-    },
-    "output_V_o": {
-      "dir": "out",
-      "width": "64"
-    },
-    "output_V_o_ap_vld": {
-      "dir": "out",
-      "width": "1"
     }
   },
   "CPorts": {
@@ -798,6 +783,14 @@
       "Object": "CONTROL_BUS",
       "firstOutLatency": "3"
     },
+    "last_V": {
+      "interfaceRef": "s_axi_CONTROL_BUS",
+      "dir": "in",
+      "offset": "64",
+      "statusOffset": "NA",
+      "handshakeRef": "ap_none",
+      "Object": "CONTROL_BUS"
+    },
     "ap_ctrl": {
       "interfaceRef": "s_axi_CONTROL_BUS",
       "dir": "in",
@@ -836,18 +829,6 @@
       "dir": "in",
       "dataWidth": "12",
       "handshakeRef": "ap_none"
-    },
-    "output_V_i": {
-      "interfaceRef": "output_V_i",
-      "dir": "in",
-      "dataWidth": "64",
-      "handshakeRef": "ap_none"
-    },
-    "output_V_o": {
-      "interfaceRef": "output_V_o",
-      "dir": "out",
-      "dataWidth": "64",
-      "handshakeRef": "ap_vld"
     }
   },
   "ModuleInfo": {
@@ -879,7 +860,7 @@
           }],
         "Area": {
           "BRAM_18K": "0",
-          "FF": "741",
+          "FF": "811",
           "LUT": "972",
           "DSP48E": "0"
         }
@@ -892,7 +873,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2019-03-01 10:41:35 +0200",
+    "Time": "2019-03-01 12:46:30 +0200",
     "ToolName": "vivado_hls",
     "ToolVersion": "2018.2"
   }
