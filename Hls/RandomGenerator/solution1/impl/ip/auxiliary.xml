@@ -15,6 +15,7 @@
   <xd:arg xd:name="INPUT_STREAM.id" xd:originalName="INPUT_STREAM" xd:direction="in" xd:interfaceRef="INPUT_STREAM" xd:busTypeRef="axis" xd:dataWidth="5"/>
   <xd:arg xd:name="INPUT_STREAM.dest" xd:originalName="INPUT_STREAM" xd:direction="in" xd:interfaceRef="INPUT_STREAM" xd:busTypeRef="axis" xd:dataWidth="6"/>
   <xd:arg xd:name="temperature" xd:originalName="temperature" xd:direction="in" xd:interfaceRef="temperature_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="12" xd:firstOut="3"/>
+  <xd:arg xd:name="last" xd:originalName="last" xd:direction="in" xd:interfaceRef="last_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="64" xd:firstOut="3"/>
   <xd:latencyEstimates xd:best-case="4" xd:worst-case="8371203" xd:average-case="4185603"/>
-  <xd:resourceEstimates xd:LUT="876" xd:FF="741" xd:BRAM="0" xd:DSP="0"/>
+  <xd:resourceEstimates xd:LUT="972" xd:FF="741" xd:BRAM="0" xd:DSP="0"/>
 </xd:acceleratorMap>

@@ -12,6 +12,7 @@ const Port_Property HLS_Design_Meta::port_props[]={
 	Port_Property("INPUT_STREAM_TID", 5, hls_in, 11, "axis", "in_data", 1),
 	Port_Property("INPUT_STREAM_TDEST", 6, hls_in, 12, "axis", "in_data", 1),
 	Port_Property("temperature_V", 12, hls_in, 13, "ap_none", "in_data", 1),
+	Port_Property("last_V", 64, hls_in, 14, "ap_none", "in_data", 1),
 	Port_Property("s_axi_CONTROL_BUS_AWVALID", 1, hls_in, -1, "", "", 1),
 	Port_Property("s_axi_CONTROL_BUS_AWREADY", 1, hls_out, -1, "", "", 1),
 	Port_Property("s_axi_CONTROL_BUS_AWADDR", 6, hls_in, -1, "", "", 1),

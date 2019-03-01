@@ -24543,7 +24543,7 @@ struct asd
 
 typedef struct asd asdf;
 
-asdf Random(hls::stream<AXI_VALUE> &in_stream, ap_uint<12> temperature)
+asdf Random(hls::stream<AXI_VALUE> &in_stream, ap_uint<12> temperature, ap_uint<64> last)
 {
 
 _ssdm_op_SpecInterface(0, "s_axilite", 0, 0, "", 0, 0, "CONTROL_BUS", "", "", 0, 0, 0, 0, "", "");
@@ -24584,6 +24584,7 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
 
 
 }
+ sum = sum ^ last;
 
 
  asdf a;

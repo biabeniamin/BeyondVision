@@ -41,7 +41,7 @@
 <Resources>
 <BRAM_18K>0</BRAM_18K>
 <FF>741</FF>
-<LUT>876</LUT>
+<LUT>972</LUT>
 <DSP48E>0</DSP48E>
 </Resources>
 </AreaEstimates>
@@ -417,6 +417,18 @@
 <IOConfig></IOConfig>
 <Dir>in</Dir>
 <Bits>12</Bits>
+<Attribute>data</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>last_V</name>
+<Object>last_V</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>64</Bits>
 <Attribute>data</Attribute>
 <CType>int</CType>
 </RtlPorts>

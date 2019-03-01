@@ -124,6 +124,15 @@
       "type": "interrupt",
       "ctype": {"INTERRUPT": {"Type": "bool"}}
     },
+    "last_V": {
+      "type": "data",
+      "dir": "in",
+      "width": "64",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "64"
+        }}
+    },
     "s_axi_CONTROL_BUS": {
       "type": "axi4lite",
       "is_adaptor": "true",
@@ -711,6 +720,10 @@
     "temperature_V": {
       "dir": "in",
       "width": "12"
+    },
+    "last_V": {
+      "dir": "in",
+      "width": "64"
     }
   },
   "CPorts": {
@@ -806,6 +819,12 @@
       "dir": "in",
       "dataWidth": "12",
       "handshakeRef": "ap_none"
+    },
+    "last_V": {
+      "interfaceRef": "last_V",
+      "dir": "in",
+      "dataWidth": "64",
+      "handshakeRef": "ap_none"
     }
   },
   "ModuleInfo": {
@@ -838,7 +857,7 @@
         "Area": {
           "BRAM_18K": "0",
           "FF": "741",
-          "LUT": "876",
+          "LUT": "972",
           "DSP48E": "0"
         }
       }}
@@ -850,7 +869,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2019-02-27 08:17:49 +0200",
+    "Time": "2019-03-01 10:33:42 +0200",
     "ToolName": "vivado_hls",
     "ToolVersion": "2018.2"
   }

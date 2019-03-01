@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'Random'" level="0">
-<item name = "Date">Wed Feb 27 08:17:48 2019
+<item name = "Date">Fri Mar  1 10:33:41 2019
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">RandomGenerator</item>
@@ -46,7 +46,7 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="DSP">-, -, -, -</column>
-<column name="Expression">-, -, 0, 278</column>
+<column name="Expression">-, -, 0, 374</column>
 <column name="FIFO">-, -, -, -</column>
 <column name="Instance">0, -, 264, 424</column>
 <column name="Memory">-, -, -, -</column>
@@ -77,23 +77,25 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="in1Count_fu_264_p2">+, 0, 0, 30, 23, 1</column>
-<column name="r_V_fu_295_p2">+, 0, 0, 63, 56, 56</column>
-<column name="sum_V_fu_282_p2">+, 0, 0, 62, 55, 55</column>
-<column name="tmp_9_fu_325_p2">-, 0, 0, 39, 1, 32</column>
+<column name="in1Count_fu_274_p2">+, 0, 0, 30, 23, 1</column>
+<column name="r_V_fu_305_p2">+, 0, 0, 63, 56, 56</column>
+<column name="sum_V_fu_292_p2">+, 0, 0, 62, 55, 55</column>
+<column name="tmp_7_fu_335_p2">-, 0, 0, 39, 1, 32</column>
 <column name="INPUT_STREAM_V_data_V_0_load_A">and, 0, 0, 2, 1, 1</column>
 <column name="INPUT_STREAM_V_data_V_0_load_B">and, 0, 0, 2, 1, 1</column>
 <column name="INPUT_STREAM_V_last_V_0_load_A">and, 0, 0, 2, 1, 1</column>
 <column name="INPUT_STREAM_V_last_V_0_load_B">and, 0, 0, 2, 1, 1</column>
 <column name="ap_block_pp0_stage0_11001">and, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state2_pp0_stage0_iter0">and, 0, 0, 2, 1, 1</column>
-<column name="ap_condition_539">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_542">and, 0, 0, 2, 1, 1</column>
 <column name="INPUT_STREAM_V_data_V_0_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
 <column name="INPUT_STREAM_V_last_V_0_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
-<column name="tmp_fu_258_p2">icmp, 0, 0, 18, 23, 16</column>
+<column name="tmp_fu_268_p2">icmp, 0, 0, 18, 23, 16</column>
 <column name="ap_predicate_tran3to4_state2">or, 0, 0, 2, 1, 1</column>
-<column name="r_V_2_fu_339_p3">select, 0, 0, 32, 1, 32</column>
+<column name="r_V_3_fu_349_p3">select, 0, 0, 32, 1, 32</column>
+<column name="agg_result_e">xor, 0, 0, 32, 32, 32</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+<column name="r_V_4_fu_373_p2">xor, 0, 0, 64, 64, 64</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -106,14 +108,14 @@
 <column name="INPUT_STREAM_V_last_V_0_state">15, 3, 2, 6</column>
 <column name="ap_NS_fsm">21, 4, 1, 4</column>
 <column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
-<column name="ap_phi_mux_i_phi_fu_180_p4">9, 2, 23, 46</column>
-<column name="ap_phi_mux_p_0_phi_fu_169_p4">9, 2, 55, 110</column>
-<column name="first_2_reg_233">9, 2, 32, 64</column>
-<column name="i_reg_176">9, 2, 23, 46</column>
-<column name="in1Count_1_reg_244">9, 2, 23, 46</column>
-<column name="lhs_V_reg_212">9, 2, 55, 110</column>
-<column name="p_0_reg_166">9, 2, 55, 110</column>
-<column name="value_1_reg_222">9, 2, 32, 64</column>
+<column name="ap_phi_mux_i_phi_fu_190_p4">9, 2, 23, 46</column>
+<column name="ap_phi_mux_p_0_phi_fu_179_p4">9, 2, 55, 110</column>
+<column name="first_2_reg_243">9, 2, 32, 64</column>
+<column name="i_reg_186">9, 2, 23, 46</column>
+<column name="in1Count_1_reg_254">9, 2, 23, 46</column>
+<column name="lhs_V_reg_222">9, 2, 55, 110</column>
+<column name="p_0_reg_176">9, 2, 55, 110</column>
+<column name="value_1_reg_232">9, 2, 32, 64</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
@@ -132,19 +134,19 @@
 <column name="ap_CS_fsm">3, 0, 3, 0</column>
 <column name="ap_enable_reg_pp0_iter0">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
-<column name="first_2_reg_233">32, 0, 32, 0</column>
-<column name="first_s_reg_200">32, 0, 32, 0</column>
-<column name="i_op_assign_reg_188">32, 0, 32, 0</column>
-<column name="i_reg_176">23, 0, 23, 0</column>
-<column name="in1Count_1_reg_244">23, 0, 23, 0</column>
-<column name="in1Count_reg_390">23, 0, 23, 0</column>
-<column name="lhs_V_reg_212">55, 0, 55, 0</column>
-<column name="p_0_reg_166">55, 0, 55, 0</column>
-<column name="sum_V_reg_406">55, 0, 55, 0</column>
-<column name="tmp_data_V_reg_396">32, 0, 32, 0</column>
-<column name="tmp_last_V_reg_402">1, 0, 1, 0</column>
-<column name="tmp_reg_386">1, 0, 1, 0</column>
-<column name="value_1_reg_222">32, 0, 32, 0</column>
+<column name="first_2_reg_243">32, 0, 32, 0</column>
+<column name="first_s_reg_210">32, 0, 32, 0</column>
+<column name="i_op_assign_reg_198">32, 0, 32, 0</column>
+<column name="i_reg_186">23, 0, 23, 0</column>
+<column name="in1Count_1_reg_254">23, 0, 23, 0</column>
+<column name="in1Count_reg_420">23, 0, 23, 0</column>
+<column name="lhs_V_reg_222">55, 0, 55, 0</column>
+<column name="p_0_reg_176">55, 0, 55, 0</column>
+<column name="sum_V_reg_436">55, 0, 55, 0</column>
+<column name="tmp_data_V_reg_426">32, 0, 32, 0</column>
+<column name="tmp_last_V_reg_432">1, 0, 1, 0</column>
+<column name="tmp_reg_416">1, 0, 1, 0</column>
+<column name="value_1_reg_232">32, 0, 32, 0</column>
 </table>
 </item>
 </section>
@@ -184,6 +186,7 @@
 <column name="INPUT_STREAM_TLAST">in, 1, axis, INPUT_STREAM_V_last_V, pointer</column>
 <column name="INPUT_STREAM_TID">in, 5, axis, INPUT_STREAM_V_id_V, pointer</column>
 <column name="temperature_V">in, 12, ap_none, temperature_V, scalar</column>
+<column name="last_V">in, 64, ap_none, last_V, scalar</column>
 </table>
 </item>
 </section>
@@ -196,8 +199,8 @@
 <column name="'rhs_V_cast', RandomGenerator/main.cpp:47">sext, 0.00, 0.00, -, -, -, -, -, -, -, -, -, -, -</column>
 <column name="'r.V', RandomGenerator/main.cpp:47">add, 3.29, 3.29, -, -, -, -, -, -, -, -, -, -, -</column>
 <column name="'tmp_5', RandomGenerator/main.cpp:47">trunc, 0.00, 3.29, -, -, -, -, -, -, -, -, -, -, -</column>
-<column name="'tmp_7', RandomGenerator/main.cpp:47">bitconcatenate, 0.00, 3.29, -, -, -, -, -, -, -, -, -, -, -</column>
-<column name="'tmp_9', RandomGenerator/main.cpp:47">sub, 2.55, 5.84, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'tmp_6', RandomGenerator/main.cpp:47">bitconcatenate, 0.00, 3.29, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'tmp_7', RandomGenerator/main.cpp:47">sub, 2.55, 5.84, -, -, -, -, -, -, -, -, -, -, -</column>
 <column name="'r.V', RandomGenerator/main.cpp:47">select, 0.70, 6.54, -, -, -, -, -, -, -, -, -, -, -</column>
 </table>
 </item>

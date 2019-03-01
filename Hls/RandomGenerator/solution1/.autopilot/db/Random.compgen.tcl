@@ -231,6 +231,21 @@ eval "cg_default_interface_gen_dc { \
 } "
 }
 
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 10 \
+    name last_V \
+    type other \
+    dir I \
+    reset_level 0 \
+    sync_rst true \
+    corename dc_last_V \
+    op interface \
+    ports { last_V { I 64 vector } } \
+} "
+}
+
 
 # Adapter definition:
 set PortName ap_clk
