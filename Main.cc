@@ -20,12 +20,10 @@ using namespace cv;
 int main()
 {
 int map_len = 0x40;
-        int fd = open( "/dev/mem", O_RDWR);
         unsigned char* base_address;
         unsigned char* out_address;
-        unsigned long int PhysicalAddress =VIDEO_STREAM_AXI_VDMA_BASEADDR;
 
-        base_address = (unsigned char*)mmap(NULL, map_len, PROT_READ | PROT_WRITE, MAP_SHARED, fd, (off_t)PhysicalAddress);
+        base_address = (unsigned char*)MapPhysicalMemory(VIDEO_STREAM_AXI_VDMA_BASEADDR, map_len);
         //check if mapping was successful
         if(base_address == MAP_FAILED)
         {
@@ -37,10 +35,8 @@ int map_len = 0x40;
 	printf("height:%d\n", REG_READ(base_address, XAXIVDMA_MM2S_ADDR_OFFSET+XAXIVDMA_VSIZE_OFFSET));
 	int video_addr = REG_READ(base_address, XAXIVDMA_MM2S_ADDR_OFFSET+XAXIVDMA_START_ADDR_1_OFFSET);
 	printf("addrr1:%x\n", video_addr);
-	printf("addrr2:%x\n", REG_READ(base_address, XAXIVDMA_MM2S_ADDR_OFFSET+XAXIVDMA_START_ADDR_2_OFFSET));
-	printf("addrr3:%x\n", REG_READ(base_address, XAXIVDMA_MM2S_ADDR_OFFSET+XAXIVDMA_START_ADDR_3_OFFSET));
 
-        out_address = (unsigned char*)mmap(NULL, 1440*900*3, PROT_READ | PROT_WRITE, MAP_SHARED, fd, (off_t)video_addr);
+        out_address = (unsigned char*)MapPhysicalMemory(video_addr, 1440*900*3);
         //check if mapping was successful
         if(out_address == MAP_FAILED)
         {
@@ -58,6 +54,8 @@ inFrame2=imread("picture.jpg");
 /*		for(int i=0;i<1024*768*3-100;i++)
 		{
 			inFrame.data[i]= out_address[i];
+			if(i%3==0)
+				out_address[i]= 255;
 		}
 <<<<<<< HEAD
 >>>>>>> bdf998c... capture video from video out
