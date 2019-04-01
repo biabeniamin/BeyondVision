@@ -20,6 +20,9 @@ int main()
 	usleep(1000*1000);
 	//VideoStreamVDMA_Init();
 	printf("%x", REG_READ())
+	VideoStreamVDMA_Configure();
+	usleep(1000*1000);
+	VideoStreamVDMA_Init();
 	while(1);
 	return 0;
 	InitKeyboard();
