@@ -105,6 +105,7 @@ CMakeFiles/exec.dir/Main.cc.o: ../Memory.h
 CMakeFiles/exec.dir/Main.cc.o: ../Notifications.h
 CMakeFiles/exec.dir/Main.cc.o: ../Relay.h
 CMakeFiles/exec.dir/Main.cc.o: ../Temperature.h
+CMakeFiles/exec.dir/Main.cc.o: ../VdmaOut.h
 CMakeFiles/exec.dir/Main.cc.o: ../WebServer.h
 CMakeFiles/exec.dir/Main.cc.o: ../apsoc_cv_parameters.h
 CMakeFiles/exec.dir/Main.cc.o: ../apsoc_cv_vdma.h
@@ -178,6 +179,11 @@ CMakeFiles/exec.dir/Temperature.cc.o: ../DataTypes.h
 CMakeFiles/exec.dir/Temperature.cc.o: ../Memory.h
 CMakeFiles/exec.dir/Temperature.cc.o: ../Temperature.cc
 CMakeFiles/exec.dir/Temperature.cc.o: ../Temperature.h
+
+CMakeFiles/exec.dir/VdmaOut.cc.o: ../DataTypes.h
+CMakeFiles/exec.dir/VdmaOut.cc.o: ../Memory.h
+CMakeFiles/exec.dir/VdmaOut.cc.o: ../VdmaOut.cc
+CMakeFiles/exec.dir/VdmaOut.cc.o: ../VdmaOut.h
 
 CMakeFiles/exec.dir/WebServer.cc.o: ../DataTypes.h
 CMakeFiles/exec.dir/WebServer.cc.o: ../Door.h

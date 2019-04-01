@@ -12,7 +12,7 @@ struct VDMA_STRUCT
 	BYTE Height;
 };
 
-typedef struct VDMA_STRUCT DMA, *PVDMA;
+typedef struct VDMA_STRUCT VDMA, *PVDMA;
 
 VDMA VdmaOutInit(DWORD DmaAddress);
 

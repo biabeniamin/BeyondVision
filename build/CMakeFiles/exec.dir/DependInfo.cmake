@@ -16,6 +16,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/ubuntu/functional/Notifications.cpp" "/home/ubuntu/functional/build/CMakeFiles/exec.dir/Notifications.cpp.o"
   "/home/ubuntu/functional/Relay.cc" "/home/ubuntu/functional/build/CMakeFiles/exec.dir/Relay.cc.o"
   "/home/ubuntu/functional/Temperature.cc" "/home/ubuntu/functional/build/CMakeFiles/exec.dir/Temperature.cc.o"
+  "/home/ubuntu/functional/VdmaOut.cc" "/home/ubuntu/functional/build/CMakeFiles/exec.dir/VdmaOut.cc.o"
   "/home/ubuntu/functional/WebServer.cc" "/home/ubuntu/functional/build/CMakeFiles/exec.dir/WebServer.cc.o"
   "/home/ubuntu/functional/apsoc_cv_vdma.cpp" "/home/ubuntu/functional/build/CMakeFiles/exec.dir/apsoc_cv_vdma.cpp.o"
   )

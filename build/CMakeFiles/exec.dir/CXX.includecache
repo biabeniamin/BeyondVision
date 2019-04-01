@@ -149,6 +149,8 @@ opencv2/highgui.hpp
 /home/ubuntu/functional/opencv2/highgui.hpp
 opencv2/imgproc.hpp
 /home/ubuntu/functional/opencv2/imgproc.hpp
+VdmaOut.h
+/home/ubuntu/functional/VdmaOut.h
 
 /home/ubuntu/functional/Memory.cc
 Memory.h
@@ -203,6 +205,20 @@ stdio.h
 -
 stdlib.h
 -
+
+/home/ubuntu/functional/VdmaOut.cc
+VdmaOut.h
+/home/ubuntu/functional/VdmaOut.h
+Memory.h
+/home/ubuntu/functional/Memory.h
+
+/home/ubuntu/functional/VdmaOut.h
+stdio.h
+-
+stdlib.h
+-
+DataTypes.h
+/home/ubuntu/functional/DataTypes.h
 
 /home/ubuntu/functional/WebServer.cc
 WebServer.h

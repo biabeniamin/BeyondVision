@@ -447,6 +447,33 @@ Temperature.cc.s:
 	$(MAKE) -f CMakeFiles/exec.dir/build.make CMakeFiles/exec.dir/Temperature.cc.s
 .PHONY : Temperature.cc.s
 
+VdmaOut.o: VdmaOut.cc.o
+
+.PHONY : VdmaOut.o
+
+# target to build an object file
+VdmaOut.cc.o:
+	$(MAKE) -f CMakeFiles/exec.dir/build.make CMakeFiles/exec.dir/VdmaOut.cc.o
+.PHONY : VdmaOut.cc.o
+
+VdmaOut.i: VdmaOut.cc.i
+
+.PHONY : VdmaOut.i
+
+# target to preprocess a source file
+VdmaOut.cc.i:
+	$(MAKE) -f CMakeFiles/exec.dir/build.make CMakeFiles/exec.dir/VdmaOut.cc.i
+.PHONY : VdmaOut.cc.i
+
+VdmaOut.s: VdmaOut.cc.s
+
+.PHONY : VdmaOut.s
+
+# target to generate assembly for a file
+VdmaOut.cc.s:
+	$(MAKE) -f CMakeFiles/exec.dir/build.make CMakeFiles/exec.dir/VdmaOut.cc.s
+.PHONY : VdmaOut.cc.s
+
 WebServer.o: WebServer.cc.o
 
 .PHONY : WebServer.o
@@ -546,6 +573,9 @@ help:
 	@echo "... Temperature.o"
 	@echo "... Temperature.i"
 	@echo "... Temperature.s"
+	@echo "... VdmaOut.o"
+	@echo "... VdmaOut.i"
+	@echo "... VdmaOut.s"
 	@echo "... WebServer.o"
 	@echo "... WebServer.i"
 	@echo "... WebServer.s"

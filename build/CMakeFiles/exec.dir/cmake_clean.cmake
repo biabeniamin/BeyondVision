@@ -13,6 +13,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/exec.dir/Notifications.cpp.o"
   "CMakeFiles/exec.dir/Log.cpp.o"
   "CMakeFiles/exec.dir/apsoc_cv_vdma.cpp.o"
+  "CMakeFiles/exec.dir/VdmaOut.cc.o"
   "exec.pdb"
   "exec"
 )

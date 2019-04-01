@@ -10,6 +10,7 @@
 #include "apsoc_cv_vdma.h"
 #include "opencv2/highgui.hpp"
 #include "opencv2/imgproc.hpp"
+#include "VdmaOut.h"
 
 
 #define GRANTED_PIN 0x123A
@@ -23,7 +24,8 @@ int map_len = 0x40;
         unsigned char* base_address;
         unsigned char* out_address;
 
-        base_address = (unsigned char*)MapPhysicalMemory(VIDEO_STREAM_AXI_VDMA_BASEADDR, map_len);
+	VDMA vdmaOut = VdmaOutInit(VDMA_OUT_ADDRESS);
+        base_address = (unsigned char*)vdmaOut.DmaMappedAddress;
         //check if mapping was successful
         if(base_address == MAP_FAILED)
         {
@@ -73,8 +75,6 @@ inFrame2=imread("picture.jpg");
 
 	return 0;
 test2:	
->>>>>>> bdf998c... capture video from video out
-=======
 		/*for(int i=0;i<1440*900*3-100;i++)
 		{
 			if(i%3==0)
@@ -85,7 +85,6 @@ test2:
 memcpy(out_address, (unsigned char*)inFrame2.data, 1440*900*IN_BYTES_PER_PIXEL);
 
 return 0;
->>>>>>> 6c62715... display image on hdmi
 printf("start\r\n");
 	VideoStreamVDMA_Configure();
 	printf("vdma configured\r\n");

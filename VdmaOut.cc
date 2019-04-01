@@ -1,18 +1,17 @@
 #include "VdmaOut.h"
 #include "Memory.h"
 
-DMA DmaInit(DWORD DmaAddress)
+VDMA VdmaOutInit(DWORD DmaAddress)
 {
-	DMA dma;
+	VDMA dma;
 
 	dma.DmaAddress = DmaAddress;
-	dma.DmaMappedAddress = MapPhysicalMemory(DmaAddress);
+	dma.DmaMappedAddress = MapPhysicalMemory(DmaAddress, 40);
 
 	return dma;
 }
 
-
-void DmaTransfer(PDMA Dma,
+void VdmaOutTransfer(PVDMA Dma,
 	DWORD DmaDataPhysAddress)
 {
 	if (0 == Dma)
@@ -29,7 +28,7 @@ void DmaTransfer(PDMA Dma,
 	Dma->DmaMappedAddress[6] = DmaDataPhysAddress;
 }
 
-void DmaStart(PDMA Dma,
+void VdmaOutStart(PVDMA Dma,
 	DWORD DataSize)
 {
 	//start dma
