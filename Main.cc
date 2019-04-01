@@ -19,6 +19,10 @@ using namespace cv;
 
 int main()
 {
+<<<<<<< HEAD
+=======
+goto test2;
+>>>>>>> bdf998c... capture video from video out
 int map_len = 0x40;
         int fd = open( "/dev/mem", O_RDWR);
         unsigned char* base_address;
@@ -53,30 +57,27 @@ Mat inFrame(900,1400,CV_8UC3 );
 inFrame=imread("picture.jpg");
 
 
-//memcpy((unsigned char*)out_address, (unsigned char*)inFrame.data, (IN_FRAME_HEIGHT*IN_FRAME_WIDTH*sizeof(unsigned char)*IN_BYTES_PER_PIXEL));
 
-//REG_WRITE(base_address, XAXIVDMA_MM2S_ADDR_OFFSET+XAXIVDMA_START_ADDR_1_OFFSET, VDMA2MEM_BUFFER_BASEADDR);
-
-video_addr = REG_READ(base_address, XAXIVDMA_MM2S_ADDR_OFFSET+XAXIVDMA_START_ADDR_1_OFFSET);
-	printf("addrr1:%x\n", video_addr);
-	//REG_WRITE(base_address, XAXIVDMA_CONTROL_REG_OFFSET+XAXIVDMA_TX_OFFSET, XAXIVDMA_START_CMD);
-
-		for(int i=0;i<1024*768*3-100;i++)
+/*		for(int i=0;i<1024*768*3-100;i++)
 		{
 			inFrame.data[i]= out_address[i];
 		}
-		for(int i=0;i<1440*900*3-100;i++)
-		{
-			out_address[i]= 255;
-		}
+>>>>>>> bdf998c... capture video from video out
 	for(int i=0;i<100;i++)
 	{
 		printf("%x ", out_address[i]);
 	}
 	
+<<<<<<< HEAD
 		imwrite("picture.jpg", inFrame);
 
 	return 0;
+=======
+		imwrite("picture.jpg", inFrame);*/
+
+	return 0;
+test2:	
+>>>>>>> bdf998c... capture video from video out
 printf("start\r\n");
 	VideoStreamVDMA_Configure();
 	printf("vdma configured\r\n");

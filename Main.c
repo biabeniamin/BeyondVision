@@ -22,7 +22,8 @@ int main()
 	printf("%x", REG_READ())
 	VideoStreamVDMA_Configure();
 	usleep(1000*1000);
-	VideoStreamVDMA_Init();
+	//VideoStreamVDMA_Init();
+	printf("%x", REG_READ())
 	while(1);
 	return 0;
 	InitKeyboard();
