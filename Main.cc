@@ -19,10 +19,6 @@ using namespace cv;
 
 int main()
 {
-<<<<<<< HEAD
-=======
-goto test2;
->>>>>>> bdf998c... capture video from video out
 int map_len = 0x40;
         int fd = open( "/dev/mem", O_RDWR);
         unsigned char* base_address;
@@ -54,7 +50,8 @@ int map_len = 0x40;
 
 
 Mat inFrame(900,1400,CV_8UC3 );
-inFrame=imread("picture.jpg");
+Mat inFrame2(900,1400,CV_8UC3 );
+inFrame2=imread("picture.jpg");
 
 
 
@@ -62,6 +59,7 @@ inFrame=imread("picture.jpg");
 		{
 			inFrame.data[i]= out_address[i];
 		}
+<<<<<<< HEAD
 >>>>>>> bdf998c... capture video from video out
 	for(int i=0;i<100;i++)
 	{
@@ -78,6 +76,18 @@ inFrame=imread("picture.jpg");
 	return 0;
 test2:	
 >>>>>>> bdf998c... capture video from video out
+=======
+		/*for(int i=0;i<1440*900*3-100;i++)
+		{
+			if(i%3==0)
+				out_address[i]= 255;
+			else
+				out_address[i]= 0;
+		}*/
+memcpy(out_address, (unsigned char*)inFrame2.data, 1440*900*IN_BYTES_PER_PIXEL);
+
+return 0;
+>>>>>>> 6c62715... display image on hdmi
 printf("start\r\n");
 	VideoStreamVDMA_Configure();
 	printf("vdma configured\r\n");
