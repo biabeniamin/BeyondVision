@@ -5,7 +5,7 @@ PDWORD _temperatureXadcAddress = 0;
 
 void initTemperatureXadc()
 {
-	_temperatureXadcAddress = MapPhysicalMemory(TEMPERATURE_XADC_ADDRESS);
+	_temperatureXadcAddress = MapPhysicalMemory(TEMPERATURE_XADC_ADDRESS,15);
 }
 
 double GetTemperature()

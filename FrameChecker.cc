@@ -13,7 +13,7 @@ void initFrameChecker()
 {
 	_dmaCurrent = DmaInit(DMA_CURRENT);
 	_dmaLast = DmaInit(DMA_LAST);
-	_adder = MapPhysicalMemory(ADDER);
+	_adder = MapPhysicalMemory(ADDER,65555);
 }
 
 DWORD GetPixelsDelta(DWORD CurrentFrame,

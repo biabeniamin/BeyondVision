@@ -5,6 +5,6 @@
 #include <fcntl.h>
 #include "DataTypes.h"
 
-PDWORD MapPhysicalMemory(DWORD PhysAddress);
+PDWORD MapPhysicalMemory(DWORD PhysAddress, DWORD Size);
 
 void Dump(PDWORD Address);

@@ -7,7 +7,7 @@ BYTE _lastKey = 0x1F;
 
 void InitKeyboard()
 {
-	_keyboardAddress = MapPhysicalMemory(KEYBOARD_ADDRESS);
+	_keyboardAddress = MapPhysicalMemory(KEYBOARD_ADDRESS,1234);
 }
 
 DWORD GetKeyboardPin()

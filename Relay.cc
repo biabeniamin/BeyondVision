@@ -11,7 +11,7 @@
 
 Relay::Relay(DWORD GpioAddress, BYTE PinIndex)
 {
-	_relayGpioAddress = MapPhysicalMemory(GpioAddress);
+	_relayGpioAddress = MapPhysicalMemory(GpioAddress,15);
 	_pinIndex = PinIndex;
 }
 

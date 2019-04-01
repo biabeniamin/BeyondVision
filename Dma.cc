@@ -6,7 +6,7 @@ DMA DmaInit(DWORD DmaAddress)
 	DMA dma;
 
 	dma.DmaAddress = DmaAddress;
-	dma.DmaMappedAddress = MapPhysicalMemory(DmaAddress);
+	dma.DmaMappedAddress = MapPhysicalMemory(DmaAddress,40);
 
 	return dma;
 }

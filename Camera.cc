@@ -40,8 +40,8 @@ Camera::Camera()
 
 	cout << "stream opened\n";
 
-	_currentFrameMapped = MapPhysicalMemory(_currentFramePhysAddress);
-	_lastFrameMapped = MapPhysicalMemory(_lastFramePhysAddress);
+	_currentFrameMapped = MapPhysicalMemory(_currentFramePhysAddress,6500);
+	_lastFrameMapped = MapPhysicalMemory(_lastFramePhysAddress,6500);
 
 	_facialRecognitionResult = fopen("result", "w+");
 	_facialRecognitionProcess = fopen("process", "r+");
