@@ -211,6 +211,8 @@ VdmaOut.h
 /home/ubuntu/functional/VdmaOut.h
 Memory.h
 /home/ubuntu/functional/Memory.h
+apsoc_cv_vdma.h
+/home/ubuntu/functional/apsoc_cv_vdma.h
 
 /home/ubuntu/functional/VdmaOut.h
 stdio.h

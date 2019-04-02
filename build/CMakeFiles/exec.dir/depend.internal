@@ -185,6 +185,8 @@ CMakeFiles/exec.dir/VdmaOut.cc.o
  /home/ubuntu/functional/Memory.h
  /home/ubuntu/functional/VdmaOut.cc
  /home/ubuntu/functional/VdmaOut.h
+ /home/ubuntu/functional/apsoc_cv_parameters.h
+ /home/ubuntu/functional/apsoc_cv_vdma.h
 CMakeFiles/exec.dir/WebServer.cc.o
  /home/ubuntu/functional/DataTypes.h
  /home/ubuntu/functional/Door.h

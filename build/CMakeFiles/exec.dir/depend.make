@@ -184,6 +184,8 @@ CMakeFiles/exec.dir/VdmaOut.cc.o: ../DataTypes.h
 CMakeFiles/exec.dir/VdmaOut.cc.o: ../Memory.h
 CMakeFiles/exec.dir/VdmaOut.cc.o: ../VdmaOut.cc
 CMakeFiles/exec.dir/VdmaOut.cc.o: ../VdmaOut.h
+CMakeFiles/exec.dir/VdmaOut.cc.o: ../apsoc_cv_parameters.h
+CMakeFiles/exec.dir/VdmaOut.cc.o: ../apsoc_cv_vdma.h
 
 CMakeFiles/exec.dir/WebServer.cc.o: ../DataTypes.h
 CMakeFiles/exec.dir/WebServer.cc.o: ../Door.h

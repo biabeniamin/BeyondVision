@@ -8,7 +8,7 @@ struct VDMA_STRUCT
 {
 	DWORD DmaAddress;
 	PDWORD DmaMappedAddress;
-	BYTE Width;
+	DWORD Width;
 	BYTE Height;
 };
 
