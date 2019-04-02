@@ -25,40 +25,27 @@ int map_len = 0x40;
         unsigned char* out_address;
 
 	VDMA vdmaOut = VdmaOutInit(VDMA_OUT_ADDRESS);
-        base_address = (unsigned char*)vdmaOut.DmaMappedAddress;
-        //check if mapping was successful
-        if(base_address == MAP_FAILED)
-        {
-                std::cout<<"VDMA Mapping memory for absolute memory access failed.\n";
-                return 0;
-        }
 
 	printf("width:%d at \n",vdmaOut.Width);
 	printf("height:%d\n", vdmaOut.Height);
-	int video_addr = REG_READ(base_address, XAXIVDMA_MM2S_ADDR_OFFSET+XAXIVDMA_START_ADDR_1_OFFSET);
-	printf("addrr1:%x\n", video_addr);
 
         out_address = (unsigned char*)vdmaOut.OutputBuffer;
         //check if mapping was successful
-        if(out_address == MAP_FAILED)
-        {
-                std::cout<<"VDMA Mapping memory for absolute memory access failed.\n";
-                return 0;
-        }
 
 
 Mat inFrame(900,1400,CV_8UC3 );
 Mat inFrame2(900,1400,CV_8UC3 );
 inFrame2=imread("picture.jpg");
-
-
-
 /*		for(int i=0;i<1024*768*3-100;i++)
+=======
+		for(int i=0;i<1024*768*3-100;i++)
+>>>>>>> daa09e8... main cleanup
 		{
 			inFrame.data[i]= out_address[i];
 			if(i%3==0)
 				out_address[i]= 255;
 		}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> bdf998c... capture video from video out
 	for(int i=0;i<100;i++)
