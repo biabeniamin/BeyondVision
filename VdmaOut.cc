@@ -9,6 +9,7 @@ VDMA VdmaOutInit(DWORD DmaAddress)
 	dma.DmaAddress = DmaAddress;
 	dma.DmaMappedAddress = MapPhysicalMemory(DmaAddress, 40);
 	dma.Width = (*(PDWORD)((DWORD)dma.DmaMappedAddress + XAXIVDMA_MM2S_ADDR_OFFSET+XAXIVDMA_HSIZE_OFFSET)) / IN_BYTES_PER_PIXEL;
+	dma.Height = *(PDWORD)((DWORD)dma.DmaMappedAddress + XAXIVDMA_MM2S_ADDR_OFFSET+XAXIVDMA_VSIZE_OFFSET);
 
 	return dma;
 }

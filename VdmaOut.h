@@ -9,7 +9,7 @@ struct VDMA_STRUCT
 	DWORD DmaAddress;
 	PDWORD DmaMappedAddress;
 	DWORD Width;
-	BYTE Height;
+	DWORD Height;
 };
 
 typedef struct VDMA_STRUCT VDMA, *PVDMA;

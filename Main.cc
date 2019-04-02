@@ -34,7 +34,7 @@ int map_len = 0x40;
         }
 
 	printf("width:%d at \n",vdmaOut.Width);
-	printf("height:%d\n", REG_READ(base_address, XAXIVDMA_MM2S_ADDR_OFFSET+XAXIVDMA_VSIZE_OFFSET));
+	printf("height:%d\n", vdmaOut.Height);
 	int video_addr = REG_READ(base_address, XAXIVDMA_MM2S_ADDR_OFFSET+XAXIVDMA_START_ADDR_1_OFFSET);
 	printf("addrr1:%x\n", video_addr);
 
