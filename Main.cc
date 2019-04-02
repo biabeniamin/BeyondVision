@@ -10,8 +10,7 @@
 #include "apsoc_cv_vdma.h"
 #include "opencv2/highgui.hpp"
 #include "opencv2/imgproc.hpp"
-#include "VdmaOut.h"
-
+#include "Hdmi.h"
 
 #define GRANTED_PIN 0x123A
 
@@ -24,9 +23,9 @@ int map_len = 0x40;
 
 	VDMA vdmaOut = VdmaOutInit(VDMA_OUT_ADDRESS);
 
-	printf("width:%d at \n",vdmaOut.Width);
-	printf("height:%d\n", vdmaOut.Height);
+	Hdmi::GetInstance();
 
+        unsigned char *out_address = (unsigned char*)vdmaOut.OutputBuffer;
 Mat inFrame(900,1400,CV_8UC3 );
 Mat inFrame2(900,1400,CV_8UC3 );
 inFrame2=imread("picture.jpg");

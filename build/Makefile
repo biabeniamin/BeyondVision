@@ -231,6 +231,33 @@ FrameChecker.cc.s:
 	$(MAKE) -f CMakeFiles/exec.dir/build.make CMakeFiles/exec.dir/FrameChecker.cc.s
 .PHONY : FrameChecker.cc.s
 
+Hdmi.o: Hdmi.cpp.o
+
+.PHONY : Hdmi.o
+
+# target to build an object file
+Hdmi.cpp.o:
+	$(MAKE) -f CMakeFiles/exec.dir/build.make CMakeFiles/exec.dir/Hdmi.cpp.o
+.PHONY : Hdmi.cpp.o
+
+Hdmi.i: Hdmi.cpp.i
+
+.PHONY : Hdmi.i
+
+# target to preprocess a source file
+Hdmi.cpp.i:
+	$(MAKE) -f CMakeFiles/exec.dir/build.make CMakeFiles/exec.dir/Hdmi.cpp.i
+.PHONY : Hdmi.cpp.i
+
+Hdmi.s: Hdmi.cpp.s
+
+.PHONY : Hdmi.s
+
+# target to generate assembly for a file
+Hdmi.cpp.s:
+	$(MAKE) -f CMakeFiles/exec.dir/build.make CMakeFiles/exec.dir/Hdmi.cpp.s
+.PHONY : Hdmi.cpp.s
+
 Keyboard.o: Keyboard.cc.o
 
 .PHONY : Keyboard.o
@@ -549,6 +576,9 @@ help:
 	@echo "... FrameChecker.o"
 	@echo "... FrameChecker.i"
 	@echo "... FrameChecker.s"
+	@echo "... Hdmi.o"
+	@echo "... Hdmi.i"
+	@echo "... Hdmi.s"
 	@echo "... Keyboard.o"
 	@echo "... Keyboard.i"
 	@echo "... Keyboard.s"
