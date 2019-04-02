@@ -38,7 +38,7 @@ int map_len = 0x40;
 	int video_addr = REG_READ(base_address, XAXIVDMA_MM2S_ADDR_OFFSET+XAXIVDMA_START_ADDR_1_OFFSET);
 	printf("addrr1:%x\n", video_addr);
 
-        out_address = (unsigned char*)MapPhysicalMemory(video_addr, 1440*900*3);
+        out_address = (unsigned char*)vdmaOut.OutputBuffer;
         //check if mapping was successful
         if(out_address == MAP_FAILED)
         {
