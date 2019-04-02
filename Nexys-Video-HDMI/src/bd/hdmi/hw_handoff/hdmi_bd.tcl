@@ -545,7 +545,7 @@ proc create_root_design { parentCell } {
    CONFIG.S_HAS_TLAST {1} \
    CONFIG.S_TDATA_NUM_BYTES {3} \
    CONFIG.S_TUSER_WIDTH {1} \
-   CONFIG.TDATA_REMAP {8'b0,tdata[7:0],tdata[23:16]} \
+   CONFIG.TDATA_REMAP {tdata[15:8],tdata[7:0],tdata[23:16]} \
    CONFIG.TKEEP_REMAP {1'b0} \
    CONFIG.TLAST_REMAP {tlast[0]} \
    CONFIG.TUSER_REMAP {tuser[0:0]} \

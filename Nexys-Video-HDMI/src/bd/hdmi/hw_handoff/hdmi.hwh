@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Feb 23 19:14:41 2019" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Feb 23 21:38:02 2019" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:nexys_video:part0:1.1" DEVICE="7a200t" NAME="hdmi" PACKAGE="sbg484" SPEEDGRADE="-1"/>
 
@@ -6419,7 +6419,7 @@
         <PARAMETER NAME="M_HAS_TLAST" VALUE="1"/>
         <PARAMETER NAME="HAS_ACLKEN" VALUE="0"/>
         <PARAMETER NAME="DEFAULT_TLAST" VALUE="0"/>
-        <PARAMETER NAME="TDATA_REMAP" VALUE="8'b0,tdata[7:0],tdata[23:16]"/>
+        <PARAMETER NAME="TDATA_REMAP" VALUE="tdata[15:8],tdata[7:0],tdata[23:16]"/>
         <PARAMETER NAME="TUSER_REMAP" VALUE="tuser[0:0]"/>
         <PARAMETER NAME="TID_REMAP" VALUE="1'b0"/>
         <PARAMETER NAME="TDEST_REMAP" VALUE="1'b0"/>
