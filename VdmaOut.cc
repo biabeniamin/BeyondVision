@@ -20,7 +20,8 @@ VDMA VdmaOutInit(DWORD DmaAddress)
 }
 
 void VdmaOutTransfer(PVDMA Dma,
-	DWORD DmaDataPhysAddress)
+	PBYTE PDATA,
+	DWORD Size)
 {
 	if (0 == Dma)
 	{
@@ -32,8 +33,7 @@ void VdmaOutTransfer(PVDMA Dma,
 		return;
 	}
 
-	//writing address to 0x18 offset
-	Dma->DmaMappedAddress[6] = DmaDataPhysAddress;
+	memcpy((PBYTE)Dma->OutputBuffer, (PBYTE)PDATA, (size_t)Size);
 }
 
 void VdmaOutStart(PVDMA Dma,

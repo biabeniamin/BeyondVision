@@ -20,7 +20,8 @@ VDMA VdmaOutInit(DWORD DmaAddress);
 void VdmaOutReset(PVDMA Dma);
 
 void VdmaOutTransfer(PVDMA Dma,
-	DWORD DmaPhysAddress);
+	PBYTE PData,
+	DWORD Size);
 
 void VdmaOutStart(PVDMA Dma,
 	DWORD DataSize);

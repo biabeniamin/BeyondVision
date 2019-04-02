@@ -21,17 +21,11 @@ using namespace cv;
 int main()
 {
 int map_len = 0x40;
-        unsigned char* base_address;
-        unsigned char* out_address;
 
 	VDMA vdmaOut = VdmaOutInit(VDMA_OUT_ADDRESS);
 
 	printf("width:%d at \n",vdmaOut.Width);
 	printf("height:%d\n", vdmaOut.Height);
-
-        out_address = (unsigned char*)vdmaOut.OutputBuffer;
-        //check if mapping was successful
-
 
 Mat inFrame(900,1400,CV_8UC3 );
 Mat inFrame2(900,1400,CV_8UC3 );
@@ -41,10 +35,9 @@ inFrame2=imread("picture.jpg");
 		for(int i=0;i<1024*768*3-100;i++)
 >>>>>>> daa09e8... main cleanup
 		{
-			inFrame.data[i]= out_address[i];
-			if(i%3==0)
 				out_address[i]= 255;
 		}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> bdf998c... capture video from video out
