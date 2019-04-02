@@ -21,5 +21,6 @@ Hdmi::Hdmi()
 
 void Hdmi::Transfer(cv::Mat image)
 {
+	VdmaOutTransfer(&vdmaOut, image.data, 1440*900*3);
 	usleep(3000 * 1000);
 }

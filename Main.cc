@@ -39,6 +39,7 @@ inFrame2=imread("picture.jpg");
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> bdf998c... capture video from video out
 	for(int i=0;i<100;i++)
 	{
@@ -62,6 +63,9 @@ test2:
 				out_address[i]= 0;
 		}*/
 memcpy(out_address, (unsigned char*)inFrame2.data, 1440*900*IN_BYTES_PER_PIXEL);
+
+usleep(2000*1000);
+Hdmi::GetInstance()->Transfer(inFrame2);
 
 return 0;
 printf("start\r\n");
