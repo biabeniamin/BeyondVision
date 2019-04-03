@@ -65,7 +65,7 @@ test2:
 memcpy(out_address, (unsigned char*)inFrame2.data, 1440*900*IN_BYTES_PER_PIXEL);
 
 usleep(2000*1000);
-Hdmi::GetInstance()->Transfer(inFrame2);
+Hdmi::GetInstance()->Display(inFrame2);
 
 return 0;
 printf("start\r\n");

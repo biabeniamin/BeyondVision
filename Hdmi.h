@@ -14,7 +14,7 @@ public:
 	static Hdmi* GetInstance();
 	
 
-	void Transfer(cv::Mat);
+	void Display(cv::Mat);
 
 };
 

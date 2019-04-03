@@ -19,8 +19,7 @@ Hdmi::Hdmi()
 	printf("width %d\n", vdmaOut.Width);
 }
 
-void Hdmi::Transfer(cv::Mat image)
+void Hdmi::Display(cv::Mat image)
 {
 	VdmaOutTransfer(&vdmaOut, image.data, 1440*900*3);
-	usleep(3000 * 1000);
 }
