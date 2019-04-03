@@ -27,12 +27,12 @@ DWORD GetPixelsDelta(DWORD CurrentFrame,
 	DmaReset(&_dmaCurrent);
 	DmaReset(&_dmaLast);
 
-	_adder[0] = 0x1;
 	//adder[8] = 18;
-	*(PDWORD)((DWORD)_adder + 0x40)=1;
-	*(PDWORD)((DWORD)_adder + 0x48)=1;
+	*(PDWORD)((DWORD)_adder + 0x40)=0x2;
+	*(PDWORD)((DWORD)_adder + 0x48)=0x20;
 	Dump(_adder);
 
+	_adder[0] = 0x1;
 
 
 	DmaTransfer(&_dmaCurrent,

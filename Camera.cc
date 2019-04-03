@@ -45,12 +45,15 @@ Camera::Camera()
 	_lastFramePhysAddress = VDMA2MEM;
 	_currentFrameMapped = MapPhysicalMemory(_currentFramePhysAddress,6500);
 	_lastFrameMapped = MapPhysicalMemory(_lastFramePhysAddress,6500);
-	for(int i=0;i<20;i++) {
+	char *text="Ana are mere";
+	for(int i=0;i<12;i++) {
 		//_lastFrameMapped[i]=5;
-		_currentFrameMapped[i]=i;
+		_currentFrameMapped[i]=text[i];
 }
 	DWORD changes = GetPixelsDelta(_currentFramePhysAddress, _lastFramePhysAddress, 20*sizeof(DWORD));
 	cout << "pixels changed" << changes << "\n";
+	
+	Dump(_currentFrameMapped);
 	Dump(_lastFrameMapped);
 	//memcpy(_lastFrameMapped, _currentFrameMapped, 2000);
 	//memcpy(_currentFrameMapped, image.data, 2000);
