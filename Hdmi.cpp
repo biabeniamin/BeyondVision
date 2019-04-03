@@ -18,6 +18,7 @@ Hdmi::Hdmi()
 	vdmaOut = VdmaOutInit(VDMA_OUT_ADDRESS);
 	hdmiHpdGpio = MapPhysicalMemory(HPD_GPIO_ADDRESS, 0x40); 
 	printf("width %d\n", vdmaOut.Width);
+	printf("width %d\n", vdmaOut.Height);
 	TurnOnVideoCapture();
 }
 
