@@ -29,8 +29,8 @@
 /* Parameter definitions for image capture */
 //#define IN_FRAME_WIDTH		960		// for use with the test video
 //#define IN_FRAME_HEIGHT		540		// for use with the test video
-#define IN_FRAME_WIDTH		1024		// for use with the camera
-#define IN_FRAME_HEIGHT		768		// for use with the camera
+#define IN_FRAME_WIDTH		1280		// for use with the camera
+#define IN_FRAME_HEIGHT		1024		// for use with the camera
 
 #define IN_FRAME_RATE		30
 #define IN_FRAME_FORMAT		//TODO
@@ -39,8 +39,8 @@
 
 //#define OUT_FRAME_WIDTH		960		// for use with the test video
 //#define OUT_FRAME_HEIGHT		540		// for use with the test video
-#define OUT_FRAME_WIDTH		1024		// for use with the camera
-#define OUT_FRAME_HEIGHT	768		// for use with the camera
+#define OUT_FRAME_WIDTH		1280		// for use with the camera
+#define OUT_FRAME_HEIGHT	1024		// for use with the camera
 
 #define OUT_FRAME_RATE		30
 #define OUT_FRAME_FORMAT	//TODO

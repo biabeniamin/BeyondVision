@@ -46,10 +46,10 @@ printf("start\r\n");
 	VideoStreamVDMA_Start();
 	printf("started\r\n");
 	VideoStreamVDMA_Show_Status();
-Mat inFrame3(IN_FRAME_HEIGHT,IN_FRAME_WIDTH,CV_8UC3 );
+Mat inFrame3(1024,1280,CV_8UC3 );
 
 
-memcpy((unsigned char*)inFrame3.data, (unsigned char*)streamDevHandler.vdma2MemVirtAddr, (IN_FRAME_HEIGHT*IN_FRAME_WIDTH*sizeof(unsigned char)*IN_BYTES_PER_PIXEL));
+memcpy((unsigned char*)inFrame3.data, (unsigned char*)streamDevHandler.vdma2MemVirtAddr, (1280*1024*3));
 	imwrite("picture2.jpg", inFrame3);
 	return 0;
 	InitKeyboard();
