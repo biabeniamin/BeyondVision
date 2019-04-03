@@ -17,6 +17,9 @@ private:
 public:
 	static Hdmi* GetInstance();
 	
+	void TurnOnVideoCapture();
+	void TurnOffVideoCapture();
+
 	void Display(cv::Mat);
 
 };

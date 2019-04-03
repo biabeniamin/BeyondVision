@@ -1,6 +1,6 @@
 #include "Hdmi.h"
 #include <unistd.h>
-
+#include "Memory.h"
 Hdmi* Hdmi::_instance = 0;
 
 Hdmi* Hdmi::GetInstance()
@@ -16,10 +16,21 @@ Hdmi* Hdmi::GetInstance()
 Hdmi::Hdmi()
 {
 	vdmaOut = VdmaOutInit(VDMA_OUT_ADDRESS);
+	hdmiHpdGpio = MapPhysicalMemory(HPD_GPIO_ADDRESS, 0x40); 
 	printf("width %d\n", vdmaOut.Width);
 }
 
 void Hdmi::Display(cv::Mat image)
 {
 	VdmaOutTransfer(&vdmaOut, image.data, image.cols * image.rows *3);
+}
+
+void Hdmi::TurnOnVideoCapture()
+{
+	*hdmiHpdGpio = 1;
+}
+
+void Hdmi::TurnOffVideoCapture()
+{
+	*hdmiHpdGpio = 0;
 }
