@@ -1,4 +1,0 @@
-NumberHits:0
-Timestamp: Sat Dec 22 14:08:25 UTC 2018
-VLNV: xilinx.com:hls:StreamGenerator:1.0
-SynthRuntime: 31

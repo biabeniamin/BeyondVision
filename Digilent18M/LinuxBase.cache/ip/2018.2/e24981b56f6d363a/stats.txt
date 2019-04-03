@@ -1,4 +1,0 @@
-NumberHits:0
-Timestamp: Fri Dec 21 10:45:51 UTC 2018
-VLNV: digilentinc.com:IP:PWM:2.0
-SynthRuntime: 47
