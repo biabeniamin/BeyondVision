@@ -1,6 +1,7 @@
 #include "Random.h"
 #include "Dma.h"
 
+#include <time.h>
 DMA _dmaRandom;
 PDWORD _random = 0;
 
@@ -13,7 +14,14 @@ void initRandom()
 	_random = MapPhysicalMemory(RANDOM_IP,65555);
 }
 
-DWORD GetRandomNumer()
+DWORD GetPseudoRandomNumber()
+{
+	srand(time(NULL));
+	return rand();
+}
+
+DWORD GetRandomNumer(DWORD address,
+		     DWORD lenght)
 {
 	if (0 == _random)
 	{
@@ -32,12 +40,26 @@ DWORD GetRandomNumer()
 
 
 	DmaTransfer(&_dmaRandom,
-		0x2dc00000);
+		address);
 
 	DmaStart(&_dmaRandom,
-		5);
+		lenght);
 	//Dump(_dmaCurrent);
 
 	Dump(_random);
-	return _random[0xC];
+	return *(PDWORD)((DWORD)_random + 0x30);
 }
+
+DWORD GetTrueRandomNumber()
+{
+	return GetRandomNumer(0x0106fe4, GetPseudoRandomNumber() % 100);
+}
+
+
+
+
+
+
+
+
+
