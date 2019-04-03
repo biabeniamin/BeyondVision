@@ -8,6 +8,8 @@
 #include "Door.h"
 #include "Notifications.h"
 #include "FrameChecker.h"
+#include <time.h>
+#include "Random.h"
 
 using namespace std;
 using namespace cv;
@@ -50,11 +52,20 @@ Camera::Camera()
 		//_lastFrameMapped[i]=5;
 		_currentFrameMapped[i]=text[i];
 }
-	DWORD changes = GetPixelsDelta(_currentFramePhysAddress, _lastFramePhysAddress, 20*sizeof(DWORD));
+	DWORD changes = Encrypt(_currentFramePhysAddress, _lastFramePhysAddress, 20*sizeof(DWORD), 17, 3233);
 	cout << "pixels changed" << changes << "\n";
 	
 	Dump(_currentFrameMapped);
 	Dump(_lastFrameMapped);
+	clock_t start, end;
+	start = clock();	
+	changes = Encrypt(_lastFramePhysAddress,_currentFramePhysAddress, 2000*sizeof(DWORD), 2753, 3233);
+	end = clock();	
+	double execut = (double)(end-start) / CLOCKS_PER_SEC;
+	printf("After encryption %f\n", execut);
+	Dump(_currentFrameMapped);
+
+	printf("Random number %x\n", GetRandomNumer());
 	//memcpy(_lastFrameMapped, _currentFrameMapped, 2000);
 	//memcpy(_currentFrameMapped, image.data, 2000);
 
@@ -89,7 +100,7 @@ void Camera::Check()
 	memcpy(_lastFrameMapped, _currentFrameMapped, 2000);
 	memcpy(_currentFrameMapped, image.data, 2000);
 
-	DWORD changes = GetPixelsDelta(_currentFramePhysAddress, _lastFramePhysAddress, 2000);
+	DWORD changes = 0;//GetPixelsDelta(_currentFramePhysAddress, _lastFramePhysAddress, 2000);
 
 	if (0xB000 < changes)
 	{

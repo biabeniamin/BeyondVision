@@ -9,6 +9,7 @@ CMakeFiles/exec.dir/Camera.cc.o: ../FrameChecker.h
 CMakeFiles/exec.dir/Camera.cc.o: ../Log.h
 CMakeFiles/exec.dir/Camera.cc.o: ../Memory.h
 CMakeFiles/exec.dir/Camera.cc.o: ../Notifications.h
+CMakeFiles/exec.dir/Camera.cc.o: ../Random.h
 CMakeFiles/exec.dir/Camera.cc.o: ../Relay.h
 CMakeFiles/exec.dir/Camera.cc.o: /usr/local/include/opencv/cxcore.h
 CMakeFiles/exec.dir/Camera.cc.o: /usr/local/include/opencv2/calib3d.hpp
@@ -229,6 +230,12 @@ CMakeFiles/exec.dir/Memory.cc.o: ../Memory.h
 
 CMakeFiles/exec.dir/Notifications.cpp.o: ../Notifications.cpp
 CMakeFiles/exec.dir/Notifications.cpp.o: ../Notifications.h
+
+CMakeFiles/exec.dir/Random.cc.o: ../DataTypes.h
+CMakeFiles/exec.dir/Random.cc.o: ../Dma.h
+CMakeFiles/exec.dir/Random.cc.o: ../Memory.h
+CMakeFiles/exec.dir/Random.cc.o: ../Random.cc
+CMakeFiles/exec.dir/Random.cc.o: ../Random.h
 
 CMakeFiles/exec.dir/Relay.cc.o: ../DataTypes.h
 CMakeFiles/exec.dir/Relay.cc.o: ../Memory.h

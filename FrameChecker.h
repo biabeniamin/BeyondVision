@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include "Memory.h"
 
-DWORD GetPixelsDelta(DWORD CurrentFrame,
-	DWORD LastFrame,
-	DWORD FrameSize);
+DWORD Encrypt(DWORD CurrentFrame,
+	DWORD LastFrame,
+	DWORD FrameSize,
+	DWORD e,
+	DWORD n);

@@ -16,9 +16,11 @@ void initFrameChecker()
 	_adder = MapPhysicalMemory(ADDER,65555);
 }
 
-DWORD GetPixelsDelta(DWORD CurrentFrame,
+DWORD Encrypt(DWORD CurrentFrame,
 	DWORD LastFrame,
-	DWORD FrameSize)
+	DWORD FrameSize,
+	DWORD e,
+	DWORD n)
 {
 	if (0 == _adder)
 	{
@@ -28,9 +30,11 @@ DWORD GetPixelsDelta(DWORD CurrentFrame,
 	DmaReset(&_dmaLast);
 
 	//adder[8] = 18;
-	*(PDWORD)((DWORD)_adder + 0x40)=0x2;
-	*(PDWORD)((DWORD)_adder + 0x48)=0x20;
-	Dump(_adder);
+	//power
+	*(PDWORD)((DWORD)_adder + 0x40)=e;
+	//modulo
+	*(PDWORD)((DWORD)_adder + 0x48)=n;
+	//Dump(_adder);
 
 	_adder[0] = 0x1;
 
@@ -47,6 +51,6 @@ DWORD GetPixelsDelta(DWORD CurrentFrame,
 		FrameSize);
 	//Dump(_dmaCurrent);
 
-	Dump(_adder);
+	//Dump(_adder);
 	return _adder[0xC];
 }

@@ -69,7 +69,6 @@ void DmaStart(PDMA Dma,
 
 	//writing buffer length
 	Dma->DmaMappedAddress[10] = DataSize;
-	Dump(Dma->DmaMappedAddress);
 }
 
 void DmaStartReceive(PDMA Dma,
@@ -80,5 +79,4 @@ void DmaStartReceive(PDMA Dma,
 
 	//writing buffer length
 	Dma->DmaMappedAddress[0xC + 10] = DataSize;
-	Dump(Dma->DmaMappedAddress);
 }
