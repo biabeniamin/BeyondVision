@@ -1,5 +1,6 @@
 #include "Embedder.h"
 #include "Sobel.h"
+#include <time.h>
 
 using namespace cv;
 
@@ -65,8 +66,22 @@ cv::Mat Embedder::Sobel(cv::Mat input)
 	int lowTh = 45;
 	int highTh = 90;
 
+	clock_t start, end;
+	start = clock();
+	imgCanny = Sobel::GetInstance()->SobelInHardware(input);
+	end = clock();	
+	double execut = (double)(end-start) / CLOCKS_PER_SEC;
+	printf("sobel in %f \n", execut);
 
-	return Sobel::GetInstance()->SobelInHardware(RemoveBlueLayer(input));
+	start = clock();
+	cvtColor(RemoveBlueLayer(input), imgGrayscale, CV_BGR2GRAY);
+	GaussianBlur(imgGrayscale, imgBlurred, cv::Size(5, 5), sigma);
+	Canny(imgBlurred, imgCanny, lowTh, highTh);
+
+	end = clock();	
+	execut = (double)(end-start) / CLOCKS_PER_SEC;
+	printf("sobel software  in %f \n", execut);
+	return imgCanny;
 }
 
 cv::Mat Embedder::EmbedData(cv::Mat input2, uchar *data2, int size, int* length)

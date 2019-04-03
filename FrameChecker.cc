@@ -16,7 +16,7 @@ void initFrameChecker()
 	_adder = MapPhysicalMemory(ADDER,65555);
 }
 
-DWORD Encrypt(DWORD CurrentFrame,
+DWORD EncryptHardware(DWORD CurrentFrame,
 	DWORD LastFrame,
 	DWORD FrameSize,
 	DWORD e,

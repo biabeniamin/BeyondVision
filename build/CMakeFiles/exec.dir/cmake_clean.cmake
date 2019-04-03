@@ -18,6 +18,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/exec.dir/Random.cc.o"
   "CMakeFiles/exec.dir/Sobel.cpp.o"
   "CMakeFiles/exec.dir/Embedder.cpp.o"
+  "CMakeFiles/exec.dir/Rsa.cpp.o"
   "exec.pdb"
   "exec"
 )

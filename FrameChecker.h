@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "Memory.h"
 
-DWORD Encrypt(DWORD CurrentFrame,
+DWORD EncryptHardware(DWORD CurrentFrame,
 	DWORD LastFrame,
 	DWORD FrameSize,
 	DWORD e,
