@@ -20,5 +20,11 @@ void DmaReset(PDMA Dma);
 void DmaTransfer(PDMA Dma,
 	DWORD DmaPhysAddress);
 
+void DmaReceive(PDMA Dma,
+	DWORD DmaPhysAddress);
+
 void DmaStart(PDMA Dma,
+	DWORD DataSize);
+
+void DmaStartReceive(PDMA Dma,
 	DWORD DataSize);

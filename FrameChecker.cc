@@ -36,10 +36,10 @@ DWORD GetPixelsDelta(DWORD CurrentFrame,
 	DmaTransfer(&_dmaCurrent,
 		CurrentFrame);
 
-	DmaTransfer(&_dmaLast,
+	DmaReceive(&_dmaLast,
 		LastFrame);
 
-	DmaStart(&_dmaLast,
+	DmaStartReceive(&_dmaLast,
 		FrameSize);
 	DmaStart(&_dmaCurrent,
 		FrameSize);

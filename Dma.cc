@@ -27,6 +27,7 @@ void DmaReset(PDMA Dma)
 	Dma->DmaMappedAddress[0] = 0;
 }
 
+
 void DmaTransfer(PDMA Dma,
 	DWORD DmaDataPhysAddress)
 {
@@ -44,6 +45,22 @@ void DmaTransfer(PDMA Dma,
 	Dma->DmaMappedAddress[6] = DmaDataPhysAddress;
 }
 
+void DmaReceive(PDMA Dma,
+	DWORD DmaDataPhysAddress)
+{
+	if (0 == Dma)
+	{
+		return;
+	}
+
+	if (0 == Dma->DmaMappedAddress)
+	{
+		return;
+	}
+
+	//writing address to 0x18 offset
+	Dma->DmaMappedAddress[0xC + 6] = DmaDataPhysAddress;
+}
 void DmaStart(PDMA Dma,
 	DWORD DataSize)
 {
@@ -52,5 +69,16 @@ void DmaStart(PDMA Dma,
 
 	//writing buffer length
 	Dma->DmaMappedAddress[10] = DataSize;
+	Dump(Dma->DmaMappedAddress);
+}
+
+void DmaStartReceive(PDMA Dma,
+	DWORD DataSize)
+{
+	//start dma
+	Dma->DmaMappedAddress[0xC] = 0x10003;
+
+	//writing buffer length
+	Dma->DmaMappedAddress[0xC + 10] = DataSize;
 	Dump(Dma->DmaMappedAddress);
 }
