@@ -16,9 +16,12 @@ VDMA VdmaOutInit(DWORD DmaAddress)
 	dma.Width = (*(PDWORD)((DWORD)dma.DmaMappedAddress + XAXIVDMA_MM2S_ADDR_OFFSET+XAXIVDMA_HSIZE_OFFSET)) / IN_BYTES_PER_PIXEL;
 	dma.Height = *(PDWORD)((DWORD)dma.DmaMappedAddress + XAXIVDMA_MM2S_ADDR_OFFSET+XAXIVDMA_VSIZE_OFFSET);
 
-	videoBufferAddress = *(PDWORD)((DWORD)dma.DmaMappedAddress + XAXIVDMA_MM2S_ADDR_OFFSET+XAXIVDMA_START_ADDR_1_OFFSET);
-	dma.OutputBuffer = MapPhysicalMemory(videoBufferAddress, dma.Width * dma.Height * 3);
+	dma.Width = 1280;
+	dma.Height = 1024;
 
+	videoBufferAddress = *(PDWORD)((DWORD)dma.DmaMappedAddress + XAXIVDMA_MM2S_ADDR_OFFSET+XAXIVDMA_START_ADDR_1_OFFSET);
+	dma.OutputBuffer = MapPhysicalMemory(videoBufferAddress, dma.Width * dma.Height * 4);
+	printf("address:%x\n", videoBufferAddress);
 	
 	return dma;
 }

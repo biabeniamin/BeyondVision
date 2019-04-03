@@ -65,7 +65,9 @@ Camera::Camera()
 	printf("After encryption %f\n", execut);
 	Dump(_currentFrameMapped);
 
-	printf("Random number %x\n", GetRandomNumer());
+
+
+	printf("Random number %x %x\n", GetTrueRandomNumber(), GetPseudoRandomNumber());
 	//memcpy(_lastFrameMapped, _currentFrameMapped, 2000);
 	//memcpy(_currentFrameMapped, image.data, 2000);
 

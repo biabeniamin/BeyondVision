@@ -20,11 +20,12 @@ Hdmi::Hdmi()
 	printf("width %d\n", vdmaOut.Width);
 	printf("width %d\n", vdmaOut.Height);
 	TurnOnVideoCapture();
+	printf("capture turned on");
 }
 
 void Hdmi::Display(cv::Mat image)
 {
-	VdmaOutTransfer(&vdmaOut, image.data, image.cols * image.rows *3);
+	VdmaOutTransfer(&vdmaOut, image.data, image.cols * image.rows *3 - 100);
 }
 
 void Hdmi::TurnOnVideoCapture()

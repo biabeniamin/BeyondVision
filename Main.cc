@@ -19,56 +19,19 @@ using namespace cv;
 
 int main()
 {
-Camera *c = new Camera();
-return 0;
+//Camera *c = new Camera();
+//return 0;
 int map_len = 0x40;
 
-	VDMA vdmaOut = VdmaOutInit(VDMA_OUT_ADDRESS);
+	//VDMA vdmaOut = VdmaOutInit(VDMA_OUT_ADDRESS);
 
 	Hdmi::GetInstance();
 
-        unsigned char *out_address = (unsigned char*)vdmaOut.OutputBuffer;
+//        unsigned char *out_address = (unsigned char*)vdmaOut.OutputBuffer;
 Mat inFrame(900,1440,CV_8UC3 );
-Mat inFrame2(900,1440,CV_8UC3 );
+Mat inFrame2(1024,1280,CV_8UC3 );
 inFrame2=imread("picture.jpg");
-/*		for(int i=0;i<1024*768*3-100;i++)
-=======
-		for(int i=0;i<1024*768*3-100;i++)
->>>>>>> daa09e8... main cleanup
-		{
-				out_address[i]= 255;
-		}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> bdf998c... capture video from video out
-	for(int i=0;i<100;i++)
-	{
-		printf("%x ", out_address[i]);
-	}
-	
-<<<<<<< HEAD
-		imwrite("picture.jpg", inFrame);
-
-	return 0;
-=======
-		imwrite("picture.jpg", inFrame);*/
-
-	return 0;
-test2:	
-		/*for(int i=0;i<1440*900*3-100;i++)
-		{
-			if(i%3==0)
-				out_address[i]= 255;
-			else
-				out_address[i]= 0;
-		}*/
-memcpy(out_address, (unsigned char*)inFrame2.data, 1440*900*IN_BYTES_PER_PIXEL);
-
-usleep(2000*1000);
 Hdmi::GetInstance()->Display(inFrame2);
-return 0;
 
 printf("start\r\n");
 	VideoStreamVDMA_Configure();
