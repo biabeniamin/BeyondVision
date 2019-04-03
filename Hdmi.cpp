@@ -21,5 +21,5 @@ Hdmi::Hdmi()
 
 void Hdmi::Display(cv::Mat image)
 {
-	VdmaOutTransfer(&vdmaOut, image.data, 1440*900*3);
+	VdmaOutTransfer(&vdmaOut, image.data, image.cols * image.rows *3);
 }
