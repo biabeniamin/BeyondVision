@@ -52,4 +52,5 @@ void DmaStart(PDMA Dma,
 
 	//writing buffer length
 	Dma->DmaMappedAddress[10] = DataSize;
+	Dump(Dma->DmaMappedAddress);
 }

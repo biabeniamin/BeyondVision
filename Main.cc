@@ -19,6 +19,8 @@ using namespace cv;
 
 int main()
 {
+Camera *c = new Camera();
+return 0;
 int map_len = 0x40;
 
 	VDMA vdmaOut = VdmaOutInit(VDMA_OUT_ADDRESS);
@@ -26,8 +28,8 @@ int map_len = 0x40;
 	Hdmi::GetInstance();
 
         unsigned char *out_address = (unsigned char*)vdmaOut.OutputBuffer;
-Mat inFrame(900,1400,CV_8UC3 );
-Mat inFrame2(900,1400,CV_8UC3 );
+Mat inFrame(900,1440,CV_8UC3 );
+Mat inFrame2(900,1440,CV_8UC3 );
 inFrame2=imread("picture.jpg");
 /*		for(int i=0;i<1024*768*3-100;i++)
 =======
@@ -66,7 +68,7 @@ memcpy(out_address, (unsigned char*)inFrame2.data, 1440*900*IN_BYTES_PER_PIXEL);
 
 usleep(2000*1000);
 Hdmi::GetInstance()->Display(inFrame2);
-
+return 0;
 
 printf("start\r\n");
 	VideoStreamVDMA_Configure();

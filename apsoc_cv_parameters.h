@@ -22,8 +22,8 @@
 #define XIMAGE_FILTER_HW_HIGHADDR		0x83C0FFFF /**< End Address of XIMAGE_FILTER_HW registers*/
 
 /* Definitions for buffer memory */
-#define MEM2VDMA_BUFFER_BASEADDR	0x2d000000 /**<Addressd of the buffer allocated in RAM */
-#define VDMA2MEM_BUFFER_BASEADDR	0x2cc00000 /**<Addressd of the buffer allocated in RAM */
+#define MEM2VDMA_BUFFER_BASEADDR	0x2d800000 /**<Addressd of the buffer allocated in RAM */
+#define VDMA2MEM_BUFFER_BASEADDR	0x2dc00000 /**<Addressd of the buffer allocated in RAM */
 
 
 /* Parameter definitions for image capture */

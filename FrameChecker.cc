@@ -5,9 +5,9 @@ DMA _dmaCurrent;
 DMA _dmaLast;
 PDWORD _adder = 0;
 
-#define DMA_CURRENT 0x40400000
-#define DMA_LAST 0x40410000
-#define ADDER 0x43C60000
+#define DMA_CURRENT 0x40420000
+#define DMA_LAST 0x40430000
+#define ADDER 0x43CA0000
 
 void initFrameChecker()
 {
@@ -29,6 +29,7 @@ DWORD GetPixelsDelta(DWORD CurrentFrame,
 
 	_adder[0] = 0x1;
 	//adder[8] = 18;
+	Dump(_adder);
 
 
 
@@ -42,6 +43,8 @@ DWORD GetPixelsDelta(DWORD CurrentFrame,
 		FrameSize);
 	DmaStart(&_dmaCurrent,
 		FrameSize);
+	//Dump(_dmaCurrent);
 
+	Dump(_adder);
 	return _adder[0xC];
 }

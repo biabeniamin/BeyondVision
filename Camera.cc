@@ -27,25 +27,37 @@ FILE *_facialRecognitionResult;
 FILE *_facialRecognitionProcess;
 FILE *_facialRecognitionDone;
 
+#define MEM2VDMA	0x2d800000 /**<Addressd of the buffer allocated in RAM */
+#define VDMA2MEM	0x2dc00000 /**<Addressd of the buffer allocated in RAM */
 
 Camera::Camera()
 {
-	GetAllocatedAddress();
+	//GetAllocatedAddress();
 	
 	cout << "start\n";
 	
 	cout << "opening stream\n";
 
-	_capture.open("http://192.168.0.107:8081");
+	//_capture.open("http://192.168.0.107:8081");
 
 	cout << "stream opened\n";
-
+	_currentFramePhysAddress= MEM2VDMA;
+	_lastFramePhysAddress = VDMA2MEM;
 	_currentFrameMapped = MapPhysicalMemory(_currentFramePhysAddress,6500);
 	_lastFrameMapped = MapPhysicalMemory(_lastFramePhysAddress,6500);
+	for(int i=0;i<20;i++) {
+		_lastFrameMapped[i]=5;
+		_currentFrameMapped[i]=5;
+}
+	DWORD changes = GetPixelsDelta(_currentFramePhysAddress, _lastFramePhysAddress, 20*sizeof(DWORD));
+	cout << "pixels changed" << changes << "\n";
+	
+	//memcpy(_lastFrameMapped, _currentFrameMapped, 2000);
+	//memcpy(_currentFrameMapped, image.data, 2000);
 
-	_facialRecognitionResult = fopen("result", "w+");
-	_facialRecognitionProcess = fopen("process", "r+");
-	_facialRecognitionDone = fopen("facialDone", "w+");
+	//_facialRecognitionResult = fopen("result", "w+");
+	//_facialRecognitionProcess = fopen("process", "r+");
+	//_facialRecognitionDone = fopen("facialDone", "w+");
 }
 
 void Camera::GetAllocatedAddress()

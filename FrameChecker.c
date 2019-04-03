@@ -5,12 +5,13 @@ DMA _dmaCurrent;
 DMA _dmaLast;
 PDWORD _adder = 0;
 
-#define DMA_CURRENT 0x40400000
-#define DMA_LAST 0x40410000
-#define ADDER 0x43C60000
+#define DMA_CURRENT 0x40420000
+#define DMA_LAST 0x40430000
+#define ADDER 0x43CA0000
 
 void initFrameChecker()
 {
+	printf("init frame checker");
 	_dmaCurrent = DmaInit(DMA_CURRENT);
 	_dmaLast = DmaInit(DMA_LAST);
 	_adder = MapPhysicalMemory(ADDER);
@@ -25,19 +26,19 @@ DWORD GetPixelsDelta(DWORD CurrentFrame,
 	{
 		initFrameChecker();
 	}
-//	printf("Resetting\n");
+	printf("Resetting\n");
 
 	DmaReset(&_dmaCurrent);
 	DmaReset(&_dmaLast);
 
-//	printf("Start adder\n");
+	printf("Start adder\n");
 	_adder[0] = 0x1;
-	//adder[8] = 18;
+//adder[8] = 18;
 
-	//Dump(_adder);
+	Dump(_adder);
 	/*
 	
-	PDWORD dmaMem = MapPhysicalMemory(CurrentFrame);
+	DWORD dmaMem = MapPhysicalMemory(CurrentFrame);
 	PDWORD dmaMem2 = MapPhysicalMemory(LastFrame);
 	Dump(dmaMem);
 	Dump(dmaMem2);
