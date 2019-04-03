@@ -24,7 +24,7 @@ void Dump(PDWORD Address)
 {
 	for (int i = 0; i < 5; i++)
 	{
-		printf("[%x]: ", Address + i * 0x10);
+		printf("[%x]: ", (DWORD)Address + i * 0x10);
 		for (int j = 0; j < 4; j++)
 		{
 			printf("%x\t", *(PDWORD)((DWORD)Address + i * 0x10 + j * 0x4));

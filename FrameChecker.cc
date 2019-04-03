@@ -29,6 +29,8 @@ DWORD GetPixelsDelta(DWORD CurrentFrame,
 
 	_adder[0] = 0x1;
 	//adder[8] = 18;
+	*(PDWORD)((DWORD)_adder + 0x40)=1;
+	*(PDWORD)((DWORD)_adder + 0x48)=1;
 	Dump(_adder);
 
 
