@@ -67,7 +67,7 @@ memcpy(out_address, (unsigned char*)inFrame2.data, 1440*900*IN_BYTES_PER_PIXEL);
 usleep(2000*1000);
 Hdmi::GetInstance()->Display(inFrame2);
 
-return 0;
+
 printf("start\r\n");
 	VideoStreamVDMA_Configure();
 	printf("vdma configured\r\n");
@@ -81,35 +81,11 @@ printf("start\r\n");
 	VideoStreamVDMA_Start();
 	printf("started\r\n");
 	VideoStreamVDMA_Show_Status();
-inFrame=imread("picture.jpg");
-memcpy((unsigned char*)streamDevHandler.mem2VdmaVirtAddr, (unsigned char*)inFrame.data, (IN_FRAME_HEIGHT*IN_FRAME_WIDTH*sizeof(unsigned char)*IN_BYTES_PER_PIXEL));
-while(1);
-imwrite("picture.jpg", inFrame);
+Mat inFrame3(IN_FRAME_HEIGHT,IN_FRAME_WIDTH,CV_8UC3 );
 
-return 0;
-//Mat inFrame(720,1280,CV_8UC3 );
 
-	while(1)
-	{
-		int offset=0;
-//memcpy((unsigned char*)inFrame.data, (unsigned char*)streamDevHandler.vdma2MemVirtAddr, (IN_FRAME_HEIGHT*IN_FRAME_WIDTH*sizeof(unsigned char)*IN_BYTES_PER_PIXEL));
-		for(int i=0;i<1024*768*3-100;i++)
-{
-	if(i%(213*3)==0 && i!=0)
-{
-//offset++;
-}
-	inFrame.data[i]= streamDevHandler.vdma2MemVirtAddr[i+offset];
-	//printf("%d ", streamDevHandler.mem2VdmaVirtAddr[i]);	
-	if(i%3==0)
-{
-//	printf("%d %d %d %d  \n",i/3, streamDevHandler.vdma2MemVirtAddr[i+offset], streamDevHandler.vdma2MemVirtAddr[i+1+offset], streamDevHandler.vdma2MemVirtAddr[i+2+offset]);	
-}
-}
-		imwrite("picture.jpg", inFrame);
-	usleep(1000*1000);
-	return 0;
-	}
+memcpy((unsigned char*)inFrame3.data, (unsigned char*)streamDevHandler.vdma2MemVirtAddr, (IN_FRAME_HEIGHT*IN_FRAME_WIDTH*sizeof(unsigned char)*IN_BYTES_PER_PIXEL));
+	imwrite("picture2.jpg", inFrame3);
 	return 0;
 	InitKeyboard();
 	printf("App started! \n");

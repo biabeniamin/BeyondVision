@@ -84,6 +84,7 @@ CMakeFiles/exec.dir/FrameChecker.cc.o: ../Memory.h
 CMakeFiles/exec.dir/Hdmi.cpp.o: ../DataTypes.h
 CMakeFiles/exec.dir/Hdmi.cpp.o: ../Hdmi.cpp
 CMakeFiles/exec.dir/Hdmi.cpp.o: ../Hdmi.h
+CMakeFiles/exec.dir/Hdmi.cpp.o: ../Memory.h
 CMakeFiles/exec.dir/Hdmi.cpp.o: ../VdmaOut.h
 CMakeFiles/exec.dir/Hdmi.cpp.o: /usr/local/include/opencv/cxcore.h
 CMakeFiles/exec.dir/Hdmi.cpp.o: /usr/local/include/opencv2/calib3d.hpp

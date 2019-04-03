@@ -14,16 +14,16 @@
 
 
 /* Definitions for VIDEO_STREAM_AXI_VDMA */
-#define VIDEO_STREAM_AXI_VDMA_BASEADDR	0x43010000 /**< Start Address of VDMA registers*/
-#define VIDEO_STREAM_AXI_VDMA_HIGHADDR	0x4301FFFF /**< End Address of VDMA registers*/
+#define VIDEO_STREAM_AXI_VDMA_BASEADDR	0x43000000 /**< Start Address of VDMA registers*/
+#define VIDEO_STREAM_AXI_VDMA_HIGHADDR	0x4300FFFF /**< End Address of VDMA registers*/
 
 /* Definitions for XIMAGE_FILTER_HW */
 #define XIMAGE_FILTER_HW_BASEADDR		0x83C00000 /**< Start Address of XIMAGE_FILTER_HW registers*/
 #define XIMAGE_FILTER_HW_HIGHADDR		0x83C0FFFF /**< End Address of XIMAGE_FILTER_HW registers*/
 
 /* Definitions for buffer memory */
-#define MEM2VDMA_BUFFER_BASEADDR	0x2bc00000 /**<Addressd of the buffer allocated in RAM */
-#define VDMA2MEM_BUFFER_BASEADDR	0x2b800000 /**<Addressd of the buffer allocated in RAM */
+#define MEM2VDMA_BUFFER_BASEADDR	0x2d800000 /**<Addressd of the buffer allocated in RAM */
+#define VDMA2MEM_BUFFER_BASEADDR	0x2d400000 /**<Addressd of the buffer allocated in RAM */
 
 
 /* Parameter definitions for image capture */

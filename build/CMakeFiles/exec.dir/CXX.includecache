@@ -85,6 +85,8 @@ Hdmi.h
 /home/ubuntu/functional/Hdmi.h
 unistd.h
 -
+Memory.h
+/home/ubuntu/functional/Memory.h
 
 /home/ubuntu/functional/Hdmi.h
 VdmaOut.h
