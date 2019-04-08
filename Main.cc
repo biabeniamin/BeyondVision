@@ -8,6 +8,7 @@
 #include "Sobel.h"
 #include "Embedder.h"
 #include "Rsa.h"
+#include "Steganography.h"
 #define GRANTED_PIN 0x123A
 
 
