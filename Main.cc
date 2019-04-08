@@ -25,19 +25,16 @@ Embedder embedder;
 Steganography steg;
 
 Mat imgOriginal=imread("picture.png");
-	imwrite("out.png", steg.Embed(imgOriginal, text, 4));
+	imwrite("out.png", steg.Embed(imgOriginal, text, 8));
 	imgOriginal = imread("out.png");
 
 	int length = 0;
-	uchar* buffer = embedder.ExtractData(imgOriginal, &length);
-	printf("In the image was detected %x bytes", length);
+
+	char *te = steg.Extract(imgOriginal, &length);
+
+	printf("In the image was detected %x bytes %s \n", length, te);
 	
 
-	changes = Rsa::GetInstance()->Decrypt((int*)buffer, text, 4);
-	for (int i = 0; i < 8; i++)
-	{
-		printf("%x \n", text[i]);
-	}
 	//VDMA vdmaOut = VdmaOutInit(VDMA_OUT_ADDRESS);
 
 
