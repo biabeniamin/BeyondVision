@@ -1,13 +1,3 @@
-/*
- * APSOC_CV
- * apsoc_cv_parameters.h
- *
- * Author		:	Murali Padmanabha; Christian Schott
- * E-Mail		:	murali.padmanabha@s2013.tu-chemnitz.de; christian.schott@etit.tu-chemnitz.de
- * Company		:	Technische Universität Chemnitz
- * 
- * Created on	:	Apr 25, 2015
- */
 
 #ifndef APSOC_CV_PARAMETERS_H_
 #define APSOC_CV_PARAMETERS_H_
@@ -25,7 +15,7 @@
 
 /* Definitions for buffer memory */
 #define MEM2VDMA_BUFFER_BASEADDR	PhysicalMemory::GetInstance()->GetVideoInAddress() /**<Addressd of the buffer allocated in RAM */
-#define VDMA2MEM_BUFFER_BASEADDR	0x2d800000 /**<Addressd of the buffer allocated in RAM */
+#define VDMA2MEM_BUFFER_BASEADDR	PhysicalMemory::GetInstance()->GetVideoOutAddress() /**<Addressd of the buffer allocated in RAM */
 
 
 /* Parameter definitions for image capture */

@@ -16,4 +16,5 @@ private:
 public:
 	static PhysicalMemory* GetInstance();
 	unsigned long GetVideoInAddress();
+	unsigned long GetVideoOutAddress();
 };
