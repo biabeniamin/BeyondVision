@@ -10,7 +10,8 @@ private:
 	unsigned long _address2;
 	unsigned long _address3;
 	unsigned long _address4;
-
+	
+	unsigned long ReadAddress(char*);
 
 public:
 	static PhysicalMemory* GetInstance();
