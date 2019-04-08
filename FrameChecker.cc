@@ -39,6 +39,7 @@ DWORD EncryptHardware(DWORD CurrentFrame,
 	_adder[0] = 0x1;
 
 
+	Dump(_adder);
 	DmaTransfer(&_dmaCurrent,
 		CurrentFrame);
 
@@ -51,6 +52,10 @@ DWORD EncryptHardware(DWORD CurrentFrame,
 		FrameSize);
 	//Dump(_dmaCurrent);
 
-	//Dump(_adder);
+	//wait until it completes
+	while(!(_adder[0] >> 1 & 0x1))
+		usleep(50);
+
+	Dump(_adder);
 	return _adder[0xC];
 }
