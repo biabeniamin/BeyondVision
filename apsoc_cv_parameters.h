@@ -12,6 +12,8 @@
 #ifndef APSOC_CV_PARAMETERS_H_
 #define APSOC_CV_PARAMETERS_H_
 
+#include "PhysicalMemory.h"
+
 
 /* Definitions for VIDEO_STREAM_AXI_VDMA */
 #define VIDEO_STREAM_AXI_VDMA_BASEADDR	0x43000000 /**< Start Address of VDMA registers*/
@@ -22,8 +24,8 @@
 #define XIMAGE_FILTER_HW_HIGHADDR		0x83C0FFFF /**< End Address of XIMAGE_FILTER_HW registers*/
 
 /* Definitions for buffer memory */
-#define MEM2VDMA_BUFFER_BASEADDR	0x2ca00000 /**<Addressd of the buffer allocated in RAM */
-#define VDMA2MEM_BUFFER_BASEADDR	0x2c000000 /**<Addressd of the buffer allocated in RAM */
+#define MEM2VDMA_BUFFER_BASEADDR	PhysicalMemory::GetInstance()->GetVideoInAddress() /**<Addressd of the buffer allocated in RAM */
+#define VDMA2MEM_BUFFER_BASEADDR	0x2d800000 /**<Addressd of the buffer allocated in RAM */
 
 
 /* Parameter definitions for image capture */

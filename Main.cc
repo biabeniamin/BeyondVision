@@ -19,11 +19,11 @@ using namespace cv;
 
 int main()
 {
-Camera *c = new Camera();
-return 0;
+//Camera *c = new Camera();
+//return 0;
 int map_len = 0x40;
 uchar data[2000];
-Embedder embedder;
+/*Embedder embedder;
 
 	for (int q = 0; q < 2000; q++)
 	{
@@ -38,7 +38,7 @@ Mat imgOriginal=imread("picture.png");
 	for (int i = 3; i < length; i++)
 	{
 		printf("%x \n", buffer[i]);
-	}
+	}*/
 	//VDMA vdmaOut = VdmaOutInit(VDMA_OUT_ADDRESS);
 
 
@@ -46,7 +46,7 @@ Mat imgOriginal=imread("picture.png");
 Mat inFrame(900,1440,CV_8UC3 );
 Mat inFrame2(1024,1280,CV_8UC3 );
 inFrame2=imread("picture.png");
-	imwrite("picture2.png", Sobel::GetInstance()->SobelInHardware(embedder.RemoveBlueLayer(inFrame2)));
+	imwrite("picture2.png", Sobel::GetInstance()->SobelInHardware((inFrame2)));
 	return 0;
 	InitKeyboard();
 	printf("App started! \n");
