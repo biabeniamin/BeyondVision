@@ -12,6 +12,7 @@
 #include "opencv2/imgproc.hpp"
 #include "Sobel.h"
 #include "Embedder.h"
+#include "Rsa.h"
 #define GRANTED_PIN 0x123A
 
 
@@ -19,11 +20,15 @@ using namespace cv;
 
 int main()
 {
-//Camera *c = new Camera();
-//return 0;
+	char text[500];
+	int data2[500];
+	strcpy(text,"AnA are mere");
+	DWORD changes = Rsa::GetInstance()->Encrypt(text, data2, 13);
+	Dump((PDWORD)data2);
+return 0;
 int map_len = 0x40;
 uchar data[2000];
-/*Embedder embedder;
+Embedder embedder;
 
 	for (int q = 0; q < 2000; q++)
 	{
@@ -38,7 +43,7 @@ Mat imgOriginal=imread("picture.png");
 	for (int i = 3; i < length; i++)
 	{
 		printf("%x \n", buffer[i]);
-	}*/
+	}
 	//VDMA vdmaOut = VdmaOutInit(VDMA_OUT_ADDRESS);
 
 

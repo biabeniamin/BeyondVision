@@ -68,19 +68,19 @@ cv::Mat Embedder::Sobel(cv::Mat input)
 
 	clock_t start, end;
 	start = clock();
-	imgCanny = Sobel::GetInstance()->SobelInHardware(input);
+	imgCanny = Sobel::GetInstance()->SobelInHardware(RemoveBlueLayer(input));
 	end = clock();	
 	double execut = (double)(end-start) / CLOCKS_PER_SEC;
 	printf("sobel in %f \n", execut);
 
-	start = clock();
+	/*start = clock();
 	cvtColor(RemoveBlueLayer(input), imgGrayscale, CV_BGR2GRAY);
 	GaussianBlur(imgGrayscale, imgBlurred, cv::Size(5, 5), sigma);
 	Canny(imgBlurred, imgCanny, lowTh, highTh);
 
 	end = clock();	
 	execut = (double)(end-start) / CLOCKS_PER_SEC;
-	printf("sobel software  in %f \n", execut);
+	printf("sobel software  in %f \n", execut);*/
 	return imgCanny;
 }
 

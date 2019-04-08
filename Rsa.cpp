@@ -1,8 +1,9 @@
 #include "Rsa.h"
 #include "FrameChecker.h"
+#include "PhysicalMemory.h"
 
-#define MEM2VDMA	0x2ce00000 /**<Addressd of the buffer allocated in RAM */
-#define VDMA2MEM	0x2c800000 /**<Addressd of the buffer allocated in RAM */
+#define MEM2VDMA	PhysicalMemory::GetInstance()->GetEncryptionInAddress() /**<Addressd of the buffer allocated in RAM */
+#define VDMA2MEM	PhysicalMemory::GetInstance()->GetEncryptionOutAddress() /**<Addressd of the buffer allocated in RAM */
 
 Rsa* Rsa::_instance = 0;
 
