@@ -12,7 +12,7 @@ private:
 public:
 	static Rsa* GetInstance();
 
-	int Encrypt(char *data, int size);	
+	int Encrypt(char *dataIn, int* dataOut, int size);	
 	int Decrypt(char *data, int size);	
 
 };

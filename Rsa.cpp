@@ -1,8 +1,8 @@
 #include "Rsa.h"
 #include "FrameChecker.h"
 
-#define MEM2VDMA	0x2d200000 /**<Addressd of the buffer allocated in RAM */
-#define VDMA2MEM	0x2d800000 /**<Addressd of the buffer allocated in RAM */
+#define MEM2VDMA	0x2ce00000 /**<Addressd of the buffer allocated in RAM */
+#define VDMA2MEM	0x2c800000 /**<Addressd of the buffer allocated in RAM */
 
 Rsa* Rsa::_instance = 0;
 
@@ -22,16 +22,24 @@ Rsa::Rsa()
 	_lastFrameMapped = (int*)MapPhysicalMemory(VDMA2MEM,6500);
 }
 
-int Rsa::Encrypt(char *data, int size)
+int Rsa::Encrypt(char *dataIn, int *dataOut, int size)
 {
 	for(int i=0;i<size;i++) {
 		//memcpy(_currentFrameMapped, text, size);
-		_currentFrameMapped[i] = data[i];
+		_currentFrameMapped[i] = dataIn[i];
 	}
-	EncryptHardware(MEM2VDMA, VDMA2MEM, 20*sizeof(DWORD), 17, 3233);
+	EncryptHardware(MEM2VDMA, VDMA2MEM, size*sizeof(DWORD), 17, 3233);
+	for(int i=0;i<size;i++) {
+		//memcpy(_currentFrameMapped, text, size);
+		dataOut[i] = _lastFrameMapped[i];
+	}
 }
 int Rsa::Decrypt(char *data, int size)
 {
 	//memcpy(_currentFrameMapped, text, size);
-	EncryptHardware(VDMA2MEM, MEM2VDMA, 20*sizeof(DWORD),2753, 3233);
+	EncryptHardware(VDMA2MEM, MEM2VDMA, size*sizeof(DWORD),2753, 3233);
+	for(int i=0;i<size;i++) {
+		data[i] = _currentFrameMapped[i];
+	}
+	
 }

@@ -30,8 +30,8 @@ FILE *_facialRecognitionResult;
 FILE *_facialRecognitionProcess;
 FILE *_facialRecognitionDone;
 
-#define MEM2VDMA	0x2d200000 /**<Addressd of the buffer allocated in RAM */
-#define VDMA2MEM	0x2d800000 /**<Addressd of the buffer allocated in RAM */
+#define MEM2VDMA	0x2ce00000 /**<Addressd of the buffer allocated in RAM */
+#define VDMA2MEM	0x2c800000 /**<Addressd of the buffer allocated in RAM */
 
 Camera::Camera()
 {
@@ -48,34 +48,33 @@ Camera::Camera()
 	_lastFramePhysAddress = VDMA2MEM;
 	_currentFrameMapped = MapPhysicalMemory(_currentFramePhysAddress,6500);
 	_lastFrameMapped = MapPhysicalMemory(_lastFramePhysAddress,6500);
-	PDWORD _lastFrameMapped2 = MapPhysicalMemory(0x2da00000,6500);
-	char *text="AnA are mere";
-	for(int i=0;i<100;i++) {
-		//_lastFrameMapped[i]=5;
-		_currentFrameMapped[i]=text[i];
-}
-	DWORD changes = Rsa::GetInstance()->Encrypt(text, 13);
-//DWORD changes = EncryptHardware(_currentFramePhysAddress, _lastFramePhysAddress, 20*sizeof(DWORD), 17, 3233);
-	cout << "pixels changed" << changes << "\n";
+	char text[500];
+	int data[500];
+	strcpy(text,"AnA are mere");
+	DWORD changes = Rsa::GetInstance()->Encrypt(text, data, 13);
 	
 	Dump(_currentFrameMapped);
 	Dump(_lastFrameMapped);
+	Dump((PDWORD)data);
 
 for(int i=0;i<100;i++) {
 		//_lastFrameMapped[i]=5;
-		_lastFrameMapped2[i]=0;
+		_currentFrameMapped[i]=0;
+		text[i]=0;
 }
 	Dump(_currentFrameMapped);
 
 	clock_t start, end;
 	start = clock();	
-	//Rsa::GetInstance()->Decrypt(text, 13);
-	changes = EncryptHardware(_lastFramePhysAddress,0x2da00000, 2000*sizeof(DWORD), 2753, 3233);
+	Rsa::GetInstance()->Decrypt(text, 2);
+	//changes = EncryptHardware(_lastFramePhysAddress,_currentFramePhysAddress, 2000*sizeof(DWORD), 2753, 3233);
 usleep(100000)	;
+
+	printf("Decrypted text is %s \n", text);
 	end = clock();	
 	double execut = (double)(end-start) / CLOCKS_PER_SEC;
 	printf("After encryption %f\n", execut);
-	Dump(_lastFrameMapped2);
+	Dump(_currentFrameMapped);
 
 
 
