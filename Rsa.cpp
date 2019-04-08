@@ -34,12 +34,15 @@ int Rsa::Encrypt(char *dataIn, int *dataOut, int size)
 		dataOut[i] = _lastFrameMapped[i];
 	}
 }
-int Rsa::Decrypt(char *data, int size)
+int Rsa::Decrypt(int *dataIn, char* dataOut, int size)
 {
+	for(int i=0;i<size;i++) {
+		_lastFrameMapped[i] = dataIn[i];
+	}
 	//memcpy(_currentFrameMapped, text, size);
 	EncryptHardware(VDMA2MEM, MEM2VDMA, size*sizeof(DWORD),2753, 3233);
 	for(int i=0;i<size;i++) {
-		data[i] = _currentFrameMapped[i];
+		dataOut[i] = _currentFrameMapped[i];
 	}
 	
 }

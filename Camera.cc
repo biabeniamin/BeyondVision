@@ -66,7 +66,7 @@ for(int i=0;i<100;i++) {
 
 	clock_t start, end;
 	start = clock();	
-	Rsa::GetInstance()->Decrypt(text, 2);
+	Rsa::GetInstance()->Decrypt(data, text, 13);
 	//changes = EncryptHardware(_lastFramePhysAddress,_currentFramePhysAddress, 2000*sizeof(DWORD), 2753, 3233);
 usleep(100000)	;
 
