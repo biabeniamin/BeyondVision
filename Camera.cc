@@ -1,12 +1,9 @@
 #include "Camera.h"
-#include "Log.h"
 #include "opencv2/objdetect.hpp"
 #include "opencv2/highgui.hpp"
 #include "opencv2/imgproc.hpp"
 #include <iostream>
 #include "DataTypes.h"
-#include "Door.h"
-#include "Notifications.h"
 #include "FrameChecker.h"
 #include <time.h>
 #include "Random.h"
@@ -179,9 +176,9 @@ void Camera::Check()
 		printf("Facial recognition result %d\n", hasDone);
 		if (1 == hasDone)
 		{
-			Notifications::GetInstance()->SendNotification(6);
-			Door::GetInstance()->Unlock();
-			Log::GetInstance()->WriteLog("Ben face was detected");
+			//Notifications::GetInstance()->SendNotification(6);
+			//Door::GetInstance()->Unlock();
+			//Log::GetInstance()->WriteLog("Ben face was detected");
 			
 		}
 

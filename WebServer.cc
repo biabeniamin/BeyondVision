@@ -1,13 +1,10 @@
 #include "WebServer.h"
-#include "Light.h"
-#include "Door.h"
 
 FILE * _lightFile;
 FILE * _doorFile;
 FILE * _temperatureFile;
 
-Light _light;
-Door *_pdoor = Door::GetInstance();
+#define DWORD int
 
 void openFile()
 {
@@ -38,13 +35,13 @@ void CheckWebServer()
 	switch (lightCommand)
 	{
 	case 0:
-		_light.TurnOff();
+		//_light.TurnOff();
 		break;
 	case 1:
-		_light.TurnOn();
+		//_light.TurnOn();
 		break;
 	case 2:
-		_light.Switch();
+		//_light.Switch();
 		fseek(_lightFile, 0, SEEK_SET);
 		fprintf(_lightFile, "3");
 		fflush(_lightFile);
@@ -55,7 +52,7 @@ void CheckWebServer()
 
 	if (1 == doorCommand)
 	{
-		_pdoor->Unlock();
+		//_pdoor->Unlock();
 		fseek(_doorFile, 0, SEEK_SET);
 		fprintf(_doorFile, "0");
 		fflush(_doorFile);
