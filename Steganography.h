@@ -7,5 +7,5 @@ class Steganography
 public:
 	Steganography();
 
-	void Embed(cv::Mat, char *data, int size);
+	cv::Mat Embed(cv::Mat, char *data, int size);
 };

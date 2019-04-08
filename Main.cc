@@ -18,28 +18,23 @@ int main()
 {
 	char text[500];
 	int data2[500];
-	strcpy(text,"AnA are mere");
-	DWORD changes = Rsa::GetInstance()->Encrypt(text, data2, 4);
-	Dump((PDWORD)data2);
-int map_len = 0x40;
+	strcpy(text,"BnB are mere");
+	DWORD changes;
 uchar data[2000];
 Embedder embedder;
+Steganography steg;
 
-	for (int q = 0; q < 2000; q++)
-	{
-		data[q] = q & 0xFF;
-	}
-	int length = 0;
 Mat imgOriginal=imread("picture.png");
-	imwrite("out.png", embedder.EmbedData(imgOriginal, (uchar*)data2, 4 * 4, &length));
+	imwrite("out.png", steg.Embed(imgOriginal, text, 4));
 	imgOriginal = imread("out.png");
 
+	int length = 0;
 	uchar* buffer = embedder.ExtractData(imgOriginal, &length);
 	printf("In the image was detected %x bytes", length);
 	
 
 	changes = Rsa::GetInstance()->Decrypt((int*)buffer, text, 4);
-	for (int i = 0; i < 4; i++)
+	for (int i = 0; i < 8; i++)
 	{
 		printf("%x \n", text[i]);
 	}
