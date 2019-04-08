@@ -25,7 +25,7 @@ Embedder embedder;
 Steganography steg;
 
 Mat imgOriginal=imread("picture.png");
-	imwrite("out.png", steg.Embed(imgOriginal, text, 8));
+	imwrite("out.png", steg.Embed(imgOriginal, text, 10));
 	imgOriginal = imread("out.png");
 
 	int length = 0;
