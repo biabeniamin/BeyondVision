@@ -18,14 +18,14 @@ int main()
 {
 	char text[500];
 	int data2[500];
-	strcpy(text,"BnB are mere");
+	strcpy(text,"Testul suprem este acela care functioneaza corect indifrente de circumstante");
 	DWORD changes;
 uchar data[2000];
 Embedder embedder;
 Steganography steg;
 
 Mat imgOriginal=imread("picture.png");
-	imwrite("out.png", steg.Embed(imgOriginal, text, 10));
+	imwrite("out.png", steg.Embed(imgOriginal, text, 70));
 	imgOriginal = imread("out.png");
 
 	int length = 0;
@@ -41,8 +41,8 @@ Mat imgOriginal=imread("picture.png");
 //        unsigned char *out_address = (unsigned char*)vdmaOut.OutputBuffer;
 Mat inFrame(900,1440,CV_8UC3 );
 Mat inFrame2(1024,1280,CV_8UC3 );
-inFrame2=imread("picture.png");
-	imwrite("picture2.png", Sobel::GetInstance()->SobelInHardware((inFrame2)));
+//inFrame2=imread("picture.png");
+	//imwrite("picture2.png", Sobel::GetInstance()->SobelInHardware((inFrame2)));
 	return 0;
 }
 

@@ -42,6 +42,8 @@ int Rsa::Decrypt(int *dataIn, char* dataOut, int size)
 	}
 	//memcpy(_currentFrameMapped, text, size);
 	EncryptHardware(VDMA2MEM, MEM2VDMA, size*sizeof(DWORD),2753, 3233);
+	Dump((PDWORD)_lastFrameMapped);
+	Dump((PDWORD)_currentFrameMapped);
 	for(int i=0;i<size;i++) {
 		dataOut[i] = _currentFrameMapped[i];
 	}

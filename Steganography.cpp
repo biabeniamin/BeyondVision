@@ -13,6 +13,7 @@ cv::Mat Steganography::Embed(cv::Mat input, char *data, int size)
 	int length = 0;
 
 	Rsa::GetInstance()->Encrypt(data, data2, size);
+	Dump((PDWORD)data);
 	Dump((PDWORD)data2);
 
 	return embedder.EmbedData(input, (uchar*)data2, size * 4, &length);
