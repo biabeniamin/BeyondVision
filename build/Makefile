@@ -204,6 +204,33 @@ Door.cpp.s:
 	$(MAKE) -f CMakeFiles/exec.dir/build.make CMakeFiles/exec.dir/Door.cpp.s
 .PHONY : Door.cpp.s
 
+Embedder.o: Embedder.cpp.o
+
+.PHONY : Embedder.o
+
+# target to build an object file
+Embedder.cpp.o:
+	$(MAKE) -f CMakeFiles/exec.dir/build.make CMakeFiles/exec.dir/Embedder.cpp.o
+.PHONY : Embedder.cpp.o
+
+Embedder.i: Embedder.cpp.i
+
+.PHONY : Embedder.i
+
+# target to preprocess a source file
+Embedder.cpp.i:
+	$(MAKE) -f CMakeFiles/exec.dir/build.make CMakeFiles/exec.dir/Embedder.cpp.i
+.PHONY : Embedder.cpp.i
+
+Embedder.s: Embedder.cpp.s
+
+.PHONY : Embedder.s
+
+# target to generate assembly for a file
+Embedder.cpp.s:
+	$(MAKE) -f CMakeFiles/exec.dir/build.make CMakeFiles/exec.dir/Embedder.cpp.s
+.PHONY : Embedder.cpp.s
+
 FrameChecker.o: FrameChecker.cc.o
 
 .PHONY : FrameChecker.o
@@ -627,6 +654,9 @@ help:
 	@echo "... Door.o"
 	@echo "... Door.i"
 	@echo "... Door.s"
+	@echo "... Embedder.o"
+	@echo "... Embedder.i"
+	@echo "... Embedder.s"
 	@echo "... FrameChecker.o"
 	@echo "... FrameChecker.i"
 	@echo "... FrameChecker.s"

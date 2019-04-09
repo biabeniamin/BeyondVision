@@ -70,6 +70,16 @@ unistd.h
 Relay.h
 /home/ubuntu/functional/Relay.h
 
+/home/ubuntu/functional/Embedder.cpp
+Embedder.h
+/home/ubuntu/functional/Embedder.h
+
+/home/ubuntu/functional/Embedder.h
+opencv2/highgui.hpp
+/home/ubuntu/functional/opencv2/highgui.hpp
+opencv2/imgproc.hpp
+/home/ubuntu/functional/opencv2/imgproc.hpp
+
 /home/ubuntu/functional/FrameChecker.cc
 FrameChecker.h
 /home/ubuntu/functional/FrameChecker.h
@@ -173,6 +183,8 @@ opencv2/imgproc.hpp
 /home/ubuntu/functional/opencv2/imgproc.hpp
 Sobel.h
 /home/ubuntu/functional/Sobel.h
+Embedder.h
+/home/ubuntu/functional/Embedder.h
 
 /home/ubuntu/functional/Memory.cc
 Memory.h
