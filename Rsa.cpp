@@ -45,5 +45,6 @@ int Rsa::Decrypt(int *dataIn, char* dataOut, int size)
 	for(int i=0;i<size;i++) {
 		dataOut[i] = _currentFrameMapped[i];
 	}
+	dataOut[size] = '\0';
 	
 }
