@@ -1,61 +1,127 @@
 #include "WebServer.h"
+#include "opencv2/highgui.hpp"
+#include "opencv2/imgproc.hpp"
+#include "Steganography.h"
 
-FILE * _lightFile;
-FILE * _doorFile;
+using namespace cv;
+
+FILE * _jobFile;
+FILE * _messageFile;
 FILE * _temperatureFile;
 
 #define DWORD int
 
 void openFile()
 {
-	_lightFile = fopen("/var/www/html/lightStatus", "w+");
-	_doorFile = fopen("/var/www/html/doorStatus", "w+");
+	_jobFile = fopen("/var/www/html/motion/job", "w+");
+	_messageFile = fopen("/var/www/html/motion/message", "w+");
 	_temperatureFile = fopen("/var/www/html/temperature", "w");
 }
 
 void CheckWebServer()
 {
-	DWORD lightCommand;
+	DWORD jobCommand;
 	DWORD doorCommand;
+	Embedder embedder;
+	Steganography steg;
+	char text[500];
+	int data2[500];
+	strcpy(text,"Testul suprem este acela care functioneaza corect indifrente de circumstante");
+	DWORD changes;
+	uchar data[2000];
+	Mat imgOriginal;
 
-	lightCommand = 0;
+	jobCommand = 0;
 	doorCommand = 0;
 
-	if (0 == _lightFile)
+	if (0 == _jobFile)
 	{
 		openFile();
 	}
 
-	fseek(_lightFile, 0, SEEK_SET);
-	fscanf(_lightFile, "%d", &lightCommand);
 
-	fseek(_doorFile, 0, SEEK_SET);
-	fscanf(_doorFile, "%d", &doorCommand);
 
-	switch (lightCommand)
+	while(1)
 	{
-	case 0:
-		//_light.TurnOff();
-		break;
-	case 1:
-		//_light.TurnOn();
-		break;
-	case 2:
-		//_light.Switch();
-		fseek(_lightFile, 0, SEEK_SET);
-		fprintf(_lightFile, "3");
-		fflush(_lightFile);
-		break;
-	default:
-		break;
-	}
+		fseek(_jobFile, 0, SEEK_SET);
+		fscanf(_jobFile, "%d", &jobCommand);
 
-	if (1 == doorCommand)
-	{
-		//_pdoor->Unlock();
-		fseek(_doorFile, 0, SEEK_SET);
-		fprintf(_doorFile, "0");
-		fflush(_doorFile);
+		if(jobCommand == 2)
+		{
+	
+
+
+		fseek(_messageFile, 0, SEEK_END);
+		long size = ftell(_messageFile);
+		fseek(_messageFile, 0, SEEK_SET);
+		fread(text, 1, size, _messageFile);
+		text[size] = '\0';
+		printf("messagul este %s\n", text);
+
+	imgOriginal=imread("/var/www/html/motion/image.png");
+	imwrite("/var/www/html/motion/out.png", steg.Embed(imgOriginal, text, 70));
+	imgOriginal = imread("out.png");
+
+
+
+			fseek(_jobFile, 0, SEEK_SET);
+			fprintf(_jobFile, "0");
+			fflush(_jobFile);
+
+
+
+
+continue;
+		}
+		else if(jobCommand == 1)
+		{
+	
+
+
+
+	imgOriginal = imread("/var/www/html/motion/image.png");
+
+	int length = 0;
+
+	char *te = steg.Extract(imgOriginal, &length);
+
+	printf("In the image was detected %x bytes %s \n", length, te);
+			fseek(_jobFile, 0, SEEK_SET);
+			fprintf(_jobFile, "0");
+			fflush(_jobFile);
+
+
+
+
+continue;
+		}
+
+	/*	switch (jobCommand)
+		{
+		case 0:
+			//_light.TurnOff();
+			break;
+		case 1:
+			imgOriginal=imread("/var/www/html/motion/image.png");
+			imwrite("/var/www/html/motion/out.png", steg.Embed(imgOriginal, text, 70));
+			//_light.TurnOn();
+			break;
+		case 2:
+			printf("here\n");
+			imgOriginal=imread("picture.png");
+			printf("here2\n");
+			te = steg.Extract(imgOriginal, &length);
+
+			printf("here3\n");
+			printf("In the image was detected %x bytes %s \n", length, te);
+			fseek(_jobFile, 0, SEEK_SET);
+			fprintf(_jobFile, "0");
+			fflush(_jobFile);
+			//_light.Switch();
+			break;
+		default:
+			break;
+		}*/
 	}
 }
 
