@@ -30,27 +30,11 @@ int map_len = 0x40;
 //        unsigned char *out_address = (unsigned char*)vdmaOut.OutputBuffer;
 Mat inFrame(900,1440,CV_8UC3 );
 Mat inFrame2(1024,1280,CV_8UC3 );
-inFrame2=imread("picture.jpg");
+inFrame2=imread("picture.png");
 Hdmi::GetInstance()->Display(inFrame2);
 
 printf("start\r\n");
-	VideoStreamVDMA_Configure();
-	printf("vdma configured\r\n");
-	usleep(1000*1000);
-	printf("init\r\n");
-	VideoStreamVDMA_Init();
-	printf("init done\r\n");
-	VideoStreamVDMA_Show_Status();
-	
-	printf("status done\r\n");
-	VideoStreamVDMA_Start();
-	printf("started\r\n");
-	VideoStreamVDMA_Show_Status();
-Mat inFrame3(1024,1280,CV_8UC3 );
-
-
-memcpy((unsigned char*)inFrame3.data, (unsigned char*)streamDevHandler.vdma2MemVirtAddr, (1280*1024*3));
-	imwrite("picture2.jpg", inFrame3);
+	imwrite("picture2.jpg", Hdmi::GetInstance()->Capture());
 	return 0;
 	InitKeyboard();
 	printf("App started! \n");

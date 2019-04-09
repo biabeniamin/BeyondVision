@@ -91,6 +91,8 @@ unistd.h
 -
 Memory.h
 /home/ubuntu/functional/Memory.h
+apsoc_cv_vdma.h
+/home/ubuntu/functional/apsoc_cv_vdma.h
 
 /home/ubuntu/functional/Hdmi.h
 VdmaOut.h

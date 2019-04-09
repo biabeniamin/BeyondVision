@@ -21,6 +21,7 @@ public:
 	void TurnOffVideoCapture();
 
 	void Display(cv::Mat);
+	cv::Mat Capture();
 
 };
 
