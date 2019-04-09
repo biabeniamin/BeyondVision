@@ -37,8 +37,7 @@ DWORD GetRandomNumer(DWORD address,
 	//Dump(_adder);
 
 	//set last
-	*(PDWORD)((DWORD)_random + 0x40) = 8;
-	Dump(_random);
+	*(PDWORD)((DWORD)_random + 0x40) = *(PDWORD)((DWORD)_random + 0x30);
 	_random[0] = 0x1;
 	
 
@@ -53,9 +52,7 @@ DWORD GetRandomNumer(DWORD address,
 	while(!(_random[0] >> 1 & 0x1))
 		usleep(50);
 
-	Dump(_random);
-
-	return *(PDWORD)((DWORD)_random + 0x30);
+	return *(PDWORD)((DWORD)_random + 0x30) ^ *(PDWORD)((DWORD)_random + 0x38);
 }
 
 DWORD GetTrueRandomNumber()

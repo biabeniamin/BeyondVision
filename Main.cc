@@ -18,7 +18,6 @@ using namespace cv;
 int main()
 {
 			printf("%x\n", GetTrueRandomNumber());
-return 0;
 int x[10000];
 for(int i=0;i<100;i++)
 {
