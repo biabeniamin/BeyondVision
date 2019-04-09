@@ -72,7 +72,7 @@ void CheckWebServer()
 		printf("messagul este %s\n", text);
 
 	imgOriginal=imread("/var/www/html/motion/image.png");
-	imwrite("/var/www/html/motion/out.png", steg.Embed(imgOriginal, text, 70));
+	imwrite("/var/www/html/motion/out.png", steg.Embed(imgOriginal, text, strlen(text)));
 	imgOriginal = imread("out.png");
 
 
