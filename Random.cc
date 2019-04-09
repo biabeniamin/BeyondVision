@@ -36,6 +36,9 @@ DWORD GetRandomNumer(DWORD address,
 	//*(PDWORD)((DWORD)_adder + 0x48)=n;
 	//Dump(_adder);
 
+	//set last
+	*(PDWORD)((DWORD)_random + 0x40) = 8;
+	Dump(_random);
 	_random[0] = 0x1;
 	
 
