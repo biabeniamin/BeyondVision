@@ -102,6 +102,9 @@ WriteBusy();
 			fprintf(_jobFile, "0");
 			fflush(_jobFile);
 	
+	fseek(_messageFile, 0, SEEK_SET);
+	fprintf(_messageFile, "%s", te);
+	fflush(_messageFile);
 	WriteReady();
 
 
