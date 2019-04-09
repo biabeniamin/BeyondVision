@@ -9,6 +9,7 @@
 #include "Embedder.h"
 #include "Rsa.h"
 #include "Steganography.h"
+#include "WebServer.h"
 #define GRANTED_PIN 0x123A
 
 
@@ -16,7 +17,9 @@ using namespace cv;
 
 int main()
 {
-	char text[500];
+while(1)
+	CheckWebServer();
+/*	char text[500];
 	int data2[500];
 	strcpy(text,"Testul suprem este acela care functioneaza corect indifrente de circumstante");
 	DWORD changes;
@@ -34,7 +37,7 @@ Mat imgOriginal=imread("picture.png");
 
 	printf("In the image was detected %x bytes %s \n", length, te);
 	
-
+*/
 	//VDMA vdmaOut = VdmaOutInit(VDMA_OUT_ADDRESS);
 
 
