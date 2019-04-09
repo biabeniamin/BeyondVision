@@ -11,6 +11,6 @@ public:
 	cv::Mat Embed(cv::Mat, char *data, int size);
 	char* Extract(cv::Mat, int *length);
 private:
-	char buffer[5000];
+	char *buffer;
 	Embedder embedder;
 };

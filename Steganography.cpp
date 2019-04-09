@@ -4,7 +4,7 @@
 
 Steganography::Steganography()
 {
-	//buffer = 0;
+	buffer = 0;
 }
 
 cv::Mat Steganography::Embed(cv::Mat input, char *data, int size)
@@ -24,9 +24,9 @@ char* Steganography::Extract(cv::Mat input, int *len)
 
 	uchar* buff = embedder.ExtractData(input, &length);
 	
-	//if(!buffer)
-	//	free(buffer);
-	//buffer = (char*)malloc(length);
+	if(!buffer)
+		free(buffer);
+	buffer = (char*)malloc(length);
 
 	Rsa::GetInstance()->Decrypt((int*)buff, buffer, length / 4);
 
