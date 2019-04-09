@@ -12,11 +12,11 @@ void initRandom()
 {
 	_dmaRandom = DmaInit(DMA_RANDOM);
 	_random = MapPhysicalMemory(RANDOM_IP,65555);
+	srand(time(NULL));
 }
 
 DWORD GetPseudoRandomNumber()
 {
-	srand(time(NULL));
 	return rand();
 }
 
@@ -46,7 +46,6 @@ DWORD GetRandomNumer(DWORD address,
 		lenght);
 	//Dump(_dmaCurrent);
 
-	Dump(_random);
 	return *(PDWORD)((DWORD)_random + 0x30);
 }
 
