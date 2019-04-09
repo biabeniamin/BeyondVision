@@ -7,7 +7,7 @@ using namespace cv;
 
 FILE * _jobFile;
 FILE * _messageFile;
-FILE * _temperatureFile;
+FILE * _doneFile;
 
 #define DWORD int
 
@@ -15,9 +15,22 @@ void openFile()
 {
 	_jobFile = fopen("/var/www/html/motion/job", "w+");
 	_messageFile = fopen("/var/www/html/motion/message", "w+");
-	_temperatureFile = fopen("/var/www/html/temperature", "w");
+	_doneFile = fopen("/var/www/html/motion/done", "w+");
 }
 
+void WriteBusy()
+{
+	fseek(_doneFile, 0, SEEK_SET);
+	fprintf(_doneFile, "0");
+	fflush(_doneFile);
+}
+
+void WriteReady()
+{
+	fseek(_doneFile, 0, SEEK_SET);
+	fprintf(_doneFile, "1");
+	fflush(_doneFile);
+}
 void CheckWebServer()
 {
 	DWORD jobCommand;
@@ -49,7 +62,7 @@ void CheckWebServer()
 		if(jobCommand == 2)
 		{
 	
-
+		WriteBusy();
 
 		fseek(_messageFile, 0, SEEK_END);
 		long size = ftell(_messageFile);
@@ -68,15 +81,14 @@ void CheckWebServer()
 			fprintf(_jobFile, "0");
 			fflush(_jobFile);
 
+		WriteReady();
 
 
-
-continue;
 		}
 		else if(jobCommand == 1)
 		{
 	
-
+WriteBusy();
 
 
 	imgOriginal = imread("/var/www/html/motion/image.png");
@@ -89,8 +101,8 @@ continue;
 			fseek(_jobFile, 0, SEEK_SET);
 			fprintf(_jobFile, "0");
 			fflush(_jobFile);
-
-
+	
+	WriteReady();
 
 
 continue;
@@ -127,11 +139,11 @@ continue;
 
 void WriteTemperatureToWebServer(double Temperature)
 {
-	if (0 == _temperatureFile)
+	/*if (0 == _temperatureFile)
 	{
 		openFile();
 	}
 
 	fseek(_temperatureFile, 0, SEEK_SET);
-	fprintf(_temperatureFile, "%f", Temperature);
+	fprintf(_temperatureFile, "%f", Temperature);*/
 }
