@@ -16,6 +16,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/exec.dir/VdmaOut.cc.o"
   "CMakeFiles/exec.dir/Hdmi.cpp.o"
   "CMakeFiles/exec.dir/Random.cc.o"
+  "CMakeFiles/exec.dir/Sobel.cpp.o"
   "exec.pdb"
   "exec"
 )

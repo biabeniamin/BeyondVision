@@ -474,6 +474,33 @@ Relay.cc.s:
 	$(MAKE) -f CMakeFiles/exec.dir/build.make CMakeFiles/exec.dir/Relay.cc.s
 .PHONY : Relay.cc.s
 
+Sobel.o: Sobel.cpp.o
+
+.PHONY : Sobel.o
+
+# target to build an object file
+Sobel.cpp.o:
+	$(MAKE) -f CMakeFiles/exec.dir/build.make CMakeFiles/exec.dir/Sobel.cpp.o
+.PHONY : Sobel.cpp.o
+
+Sobel.i: Sobel.cpp.i
+
+.PHONY : Sobel.i
+
+# target to preprocess a source file
+Sobel.cpp.i:
+	$(MAKE) -f CMakeFiles/exec.dir/build.make CMakeFiles/exec.dir/Sobel.cpp.i
+.PHONY : Sobel.cpp.i
+
+Sobel.s: Sobel.cpp.s
+
+.PHONY : Sobel.s
+
+# target to generate assembly for a file
+Sobel.cpp.s:
+	$(MAKE) -f CMakeFiles/exec.dir/build.make CMakeFiles/exec.dir/Sobel.cpp.s
+.PHONY : Sobel.cpp.s
+
 Temperature.o: Temperature.cc.o
 
 .PHONY : Temperature.o
@@ -630,6 +657,9 @@ help:
 	@echo "... Relay.o"
 	@echo "... Relay.i"
 	@echo "... Relay.s"
+	@echo "... Sobel.o"
+	@echo "... Sobel.i"
+	@echo "... Sobel.s"
 	@echo "... Temperature.o"
 	@echo "... Temperature.i"
 	@echo "... Temperature.s"

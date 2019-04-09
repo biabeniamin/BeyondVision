@@ -10,7 +10,7 @@
 #include "apsoc_cv_vdma.h"
 #include "opencv2/highgui.hpp"
 #include "opencv2/imgproc.hpp"
-#include "Hdmi.h"
+#include "Sobel.h"
 
 #define GRANTED_PIN 0x123A
 
@@ -25,16 +25,12 @@ int map_len = 0x40;
 
 	//VDMA vdmaOut = VdmaOutInit(VDMA_OUT_ADDRESS);
 
-	Hdmi::GetInstance();
 
 //        unsigned char *out_address = (unsigned char*)vdmaOut.OutputBuffer;
 Mat inFrame(900,1440,CV_8UC3 );
 Mat inFrame2(1024,1280,CV_8UC3 );
 inFrame2=imread("picture.png");
-Hdmi::GetInstance()->Display(inFrame2);
-
-printf("start\r\n");
-	imwrite("picture2.jpg", Hdmi::GetInstance()->Capture());
+	imwrite("picture2.jpg", Sobel::GetInstance()->SobelInHardware(inFrame2));
 	return 0;
 	InitKeyboard();
 	printf("App started! \n");
