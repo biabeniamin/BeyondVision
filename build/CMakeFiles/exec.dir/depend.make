@@ -78,6 +78,7 @@ CMakeFiles/exec.dir/Door.cpp.o: ../Relay.h
 
 CMakeFiles/exec.dir/Embedder.cpp.o: ../Embedder.cpp
 CMakeFiles/exec.dir/Embedder.cpp.o: ../Embedder.h
+CMakeFiles/exec.dir/Embedder.cpp.o: ../Sobel.h
 CMakeFiles/exec.dir/Embedder.cpp.o: /usr/local/include/opencv/cxcore.h
 CMakeFiles/exec.dir/Embedder.cpp.o: /usr/local/include/opencv2/calib3d.hpp
 CMakeFiles/exec.dir/Embedder.cpp.o: /usr/local/include/opencv2/calib3d/calib3d_c.h

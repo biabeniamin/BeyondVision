@@ -1,4 +1,5 @@
 #include "Embedder.h"
+#include "Sobel.h"
 
 using namespace cv;
 
@@ -64,11 +65,8 @@ cv::Mat Embedder::Sobel(cv::Mat input)
 	int lowTh = 45;
 	int highTh = 90;
 
-	cvtColor(RemoveBlueLayer(input), imgGrayscale, CV_BGR2GRAY);
-	GaussianBlur(imgGrayscale, imgBlurred, cv::Size(5, 5), sigma);
-	Canny(imgBlurred, imgCanny, lowTh, highTh);
 
-	return imgCanny;
+	return Sobel::GetInstance()->SobelInHardware(RemoveBlueLayer(input));
 }
 
 cv::Mat Embedder::EmbedData(cv::Mat input2, uchar *data2, int size, int* length)

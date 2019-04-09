@@ -79,6 +79,7 @@ CMakeFiles/exec.dir/Door.cpp.o
 CMakeFiles/exec.dir/Embedder.cpp.o
  /home/ubuntu/functional/Embedder.cpp
  /home/ubuntu/functional/Embedder.h
+ /home/ubuntu/functional/Sobel.h
  /usr/local/include/opencv/cxcore.h
  /usr/local/include/opencv2/calib3d.hpp
  /usr/local/include/opencv2/calib3d/calib3d_c.h
