@@ -64,6 +64,7 @@ void CheckWebServer()
 	
 		WriteBusy();
 
+		//read message from file
 		fseek(_messageFile, 0, SEEK_END);
 		long size = ftell(_messageFile);
 		fseek(_messageFile, 0, SEEK_SET);
@@ -71,72 +72,38 @@ void CheckWebServer()
 		text[size] = '\0';
 		printf("messagul este %s\n", text);
 
-	imgOriginal=imread("/var/www/html/motion/image.png");
-	imwrite("/var/www/html/motion/out.png", steg.Embed(imgOriginal, text, strlen(text)));
-	imgOriginal = imread("out.png");
+		imgOriginal=imread("/var/www/html/motion/image.png");
+		imwrite("/var/www/html/motion/out.png", steg.Embed(imgOriginal, text, strlen(text)));
 
-
-
-			fseek(_jobFile, 0, SEEK_SET);
-			fprintf(_jobFile, "0");
-			fflush(_jobFile);
+		fseek(_jobFile, 0, SEEK_SET);
+		fprintf(_jobFile, "0");
+		fflush(_jobFile);
 
 		WriteReady();
 
 
 		}
-		else if(jobCommand == 1)
+		else if (jobCommand == 1)
 		{
-	
-WriteBusy();
+			WriteBusy();
 
+			imgOriginal = imread("/var/www/html/motion/image.png");
 
-	imgOriginal = imread("/var/www/html/motion/image.png");
+			int length = 0;
 
-	int length = 0;
+			char *te = steg.Extract(imgOriginal, &length);
 
-	char *te = steg.Extract(imgOriginal, &length);
-
-	printf("In the image was detected %x bytes %s \n", length, te);
-			fseek(_jobFile, 0, SEEK_SET);
-			fprintf(_jobFile, "0");
-			fflush(_jobFile);
-	
-	fseek(_messageFile, 0, SEEK_SET);
-	fprintf(_messageFile, "%s", te);
-	fflush(_messageFile);
-	WriteReady();
-
-
-continue;
+			printf("In the image was detected %x bytes %s \n", length, te);
+					fseek(_jobFile, 0, SEEK_SET);
+					fprintf(_jobFile, "0");
+					fflush(_jobFile);
+			
+			fseek(_messageFile, 0, SEEK_SET);
+			fprintf(_messageFile, "%s", te);
+			fflush(_messageFile);
+			WriteReady();
 		}
 
-	/*	switch (jobCommand)
-		{
-		case 0:
-			//_light.TurnOff();
-			break;
-		case 1:
-			imgOriginal=imread("/var/www/html/motion/image.png");
-			imwrite("/var/www/html/motion/out.png", steg.Embed(imgOriginal, text, 70));
-			//_light.TurnOn();
-			break;
-		case 2:
-			printf("here\n");
-			imgOriginal=imread("picture.png");
-			printf("here2\n");
-			te = steg.Extract(imgOriginal, &length);
-
-			printf("here3\n");
-			printf("In the image was detected %x bytes %s \n", length, te);
-			fseek(_jobFile, 0, SEEK_SET);
-			fprintf(_jobFile, "0");
-			fflush(_jobFile);
-			//_light.Switch();
-			break;
-		default:
-			break;
-		}*/
 	}
 }
 
