@@ -37,6 +37,7 @@ DWORD GetRandomNumer(DWORD address,
 	//Dump(_adder);
 
 	_random[0] = 0x1;
+	
 
 
 	DmaTransfer(&_dmaRandom,
@@ -44,14 +45,19 @@ DWORD GetRandomNumer(DWORD address,
 
 	DmaStart(&_dmaRandom,
 		lenght);
-	//Dump(_dmaCurrent);
+	
+//wait until it completes
+	while(!(_random[0] >> 1 & 0x1))
+		usleep(50);
+
+	Dump(_random);
 
 	return *(PDWORD)((DWORD)_random + 0x30);
 }
 
 DWORD GetTrueRandomNumber()
 {
-	return GetRandomNumer(0x0106fe4, GetPseudoRandomNumber() % 100);
+	return GetRandomNumer(0x0106fe4, GetPseudoRandomNumber() % 10000);
 }
 
 

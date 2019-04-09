@@ -5,7 +5,7 @@
 #include "apsoc_cv_vdma.h"
 #include "opencv2/highgui.hpp"
 #include "opencv2/imgproc.hpp"
-#include "Sobel.h"
+#include "Random.h"
 #include "Embedder.h"
 #include "Rsa.h"
 #include "Steganography.h"
@@ -17,6 +17,19 @@ using namespace cv;
 
 int main()
 {
+			printf("%x\n", GetTrueRandomNumber());
+return 0;
+int x[10000];
+for(int i=0;i<100;i++)
+{
+	x[i] =GetTrueRandomNumber();
+	for(int j=0;j<i;j++)
+	{
+		if(x[i] == x[j])
+			printf("%x\n", GetTrueRandomNumber());
+	}
+}
+return 0;
 while(1)
 	CheckWebServer();
 /*	char text[500];
