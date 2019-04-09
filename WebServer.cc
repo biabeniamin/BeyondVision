@@ -82,26 +82,26 @@ void CheckWebServer()
 		WriteReady();
 
 
-		}
-		else if (jobCommand == 1)
-		{
-			WriteBusy();
+	}
+	else if (jobCommand == 1)
+	{
+		WriteBusy();
 
-			imgOriginal = imread("/var/www/html/motion/image.png");
+		imgOriginal = imread("/var/www/html/motion/image.png");
 
-			int length = 0;
+		int length = 0;
 
-			char *te = steg.Extract(imgOriginal, &length);
+		char *te = steg.Extract(imgOriginal, &length);
 
-			printf("In the image was detected %x bytes %s \n", length, te);
-					fseek(_jobFile, 0, SEEK_SET);
-					fprintf(_jobFile, "0");
-					fflush(_jobFile);
-			
-			fseek(_messageFile, 0, SEEK_SET);
-			fprintf(_messageFile, "%s", te);
-			fflush(_messageFile);
-			WriteReady();
+		printf("In the image was detected %x bytes %s \n", length, te);
+				fseek(_jobFile, 0, SEEK_SET);
+				fprintf(_jobFile, "0");
+				fflush(_jobFile);
+		
+		fseek(_messageFile, 0, SEEK_SET);
+		fprintf(_messageFile, "%s", te);
+		fflush(_messageFile);
+		WriteReady();
 		}
 
 	}
