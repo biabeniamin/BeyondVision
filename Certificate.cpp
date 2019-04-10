@@ -9,13 +9,13 @@ Certificate* Certificate::FromFile(char *path)
 {
 	int e, n;
 
-	Certificate::ReadFile("private.rsa", &e, &n);
+	Certificate::ReadFile(path, &e, &n);
 	return new Certificate(e, n);
 }
 
 void Certificate::GenerateRandomCertificate(char *path)
 {
-	WriteFile("private.rsa", 2753, 3233);
+	WriteFile(path, 2753, 3233);
 	//WriteFile("public.rsa", 17, 3233);
 }
 
