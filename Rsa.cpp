@@ -29,19 +29,21 @@ int Rsa::Encrypt(char *dataIn, Certificate *certificate, int *dataOut, int size)
 		//memcpy(_currentFrameMapped, text, size);
 		_currentFrameMapped[i] = dataIn[i];
 	}
-	EncryptHardware(MEM2VDMA, VDMA2MEM, size*sizeof(DWORD), 17, 3233);
+	EncryptHardware(MEM2VDMA, VDMA2MEM, size*sizeof(DWORD), certificate->GetE(),
+			certificate->GetN());
 	for(int i=0;i<size;i++) {
 		//memcpy(_currentFrameMapped, text, size);
 		dataOut[i] = _lastFrameMapped[i];
 	}
 }
-int Rsa::Decrypt(int *dataIn, Certificate *certificate, char* dataOut, int size)
+int Rsa::Decrypt(int *dataIn, Certificate *cert, char* dataOut, int size)
 {
 	for(int i=0;i<size;i++) {
 		_lastFrameMapped[i] = dataIn[i];
 	}
 	//memcpy(_currentFrameMapped, text, size);
-	EncryptHardware(VDMA2MEM, MEM2VDMA, size*sizeof(DWORD),2753, 3233);
+	EncryptHardware(VDMA2MEM, MEM2VDMA, size*sizeof(DWORD),cert->GetE(),
+			cert->GetN());
 	for(int i=0;i<size;i++) {
 		dataOut[i] = _currentFrameMapped[i];
 	}

@@ -18,7 +18,7 @@ cv::Mat Steganography::Embed(cv::Mat input, Certificate *cert, char *data, int s
 		cv::resize(old, input, cv::Size(), 0.75, 0.75);	
 	}
 
-	Rsa::GetInstance()->Encrypt(data,Certificate::FromFile("private.rsa"), data2, size);
+	Rsa::GetInstance()->Encrypt(data, cert, data2, size);
 
 	return embedder.EmbedData(input, (uchar*)data2, size * 4, &length);
 
@@ -40,7 +40,7 @@ char* Steganography::Extract(cv::Mat input, Certificate *cert, int *len)
 		free(buffer);
 	buffer = (char*)malloc(length);
 
-	Rsa::GetInstance()->Decrypt((int*)buff,Certificate::FromFile("private.rsa"), buffer, length / 4);
+	Rsa::GetInstance()->Decrypt((int*)buff, cert, buffer, length / 4);
 
 	*len = length / 4;
 
