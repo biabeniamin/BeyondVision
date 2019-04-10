@@ -29,7 +29,13 @@ char* Steganography::Extract(cv::Mat input, int *len)
 	int length = 0;
 
 	uchar* buff = embedder.ExtractData(input, &length);
-	
+
+	if (length == 0)
+	{
+		*len = 0;
+		return "";
+	}
+
 	if(!buffer)
 		free(buffer);
 	buffer = (char*)malloc(length);
