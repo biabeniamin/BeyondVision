@@ -2,6 +2,7 @@
 #include "opencv2/highgui.hpp"
 #include "opencv2/imgproc.hpp"
 #include "Steganography.h"
+#include "Certificate.h"
 
 using namespace cv;
 
@@ -82,26 +83,37 @@ void CheckWebServer()
 		WriteReady();
 
 
-	}
-	else if (jobCommand == 1)
-	{
-		WriteBusy();
+		}
+		else if (jobCommand == 1)
+		{
+			WriteBusy();
 
-		imgOriginal = imread("/var/www/html/motion/image.png");
+			imgOriginal = imread("/var/www/html/motion/image.png");
 
-		int length = 0;
+			int length = 0;
 
-		char *te = steg.Extract(imgOriginal, &length);
 
-		printf("In the image was detected %x bytes %s \n", length, te);
-				fseek(_jobFile, 0, SEEK_SET);
-				fprintf(_jobFile, "0");
-				fflush(_jobFile);
-		
-		fseek(_messageFile, 0, SEEK_SET);
-		fprintf(_messageFile, "%s", te);
-		fflush(_messageFile);
-		WriteReady();
+
+			//Certificate::FromFile("sagfsagsa");
+			
+
+
+			char *te = steg.Extract(imgOriginal, &length);
+
+			printf("In the image was detected %x bytes %s \n", length, te);
+					fseek(_jobFile, 0, SEEK_SET);
+					fprintf(_jobFile, "0");
+					fflush(_jobFile);
+			
+			fseek(_messageFile, 0, SEEK_SET);
+			fprintf(_messageFile, "%s", te);
+			fflush(_messageFile);
+			WriteReady();
+		}
+		else if (jobCommand == 3)
+		{
+			Certificate::GenerateRandomCertificate("/var/www/html/motion/private.rsa",
+							       "/var/www/html/motion/public.rsa");
 		}
 
 	}
