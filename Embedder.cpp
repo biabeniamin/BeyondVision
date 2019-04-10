@@ -89,7 +89,7 @@ cv::Mat Embedder::EmbedData(cv::Mat input2, uchar *data2, int size, int* length)
 	int addedData = 0;
 	Mat input = input2.clone();
 	Mat imgCanny = Sobel(input);
-	uchar *data = (uchar*)malloc(size + 2);
+	uchar *data = (uchar*)malloc(size + 8);
 
 	memcpy(data + 4, data2, size);
 
@@ -181,9 +181,16 @@ uchar* Embedder::ExtractData(cv::Mat input, int *length)
 
 				count++;
 
-				if (count == 8)
+				if (count == 0xF)
 				{
-					size = buffer[0] << 8 | buffer[1];
+					if (buffer[0] != 0xAB && buffer[1] != 0xCD) {
+						printf("This image does not contain any hided content!\n");
+						//because decrementation of 4 at end
+						size = 4;
+						break;
+					}
+					size = buffer[2] << 8 | buffer[3];
+					printf("size is %d %x %x\n",size, buffer[0], buffer[1] );
 					buffer = (uchar*)realloc(buffer, size + 50);
 				}
 
@@ -198,7 +205,7 @@ uchar* Embedder::ExtractData(cv::Mat input, int *length)
 			break;
 	}
 
-	*length = size - 2;
+	*length = size - 4;
 
 	if (count >> 2 < size)
 	{
@@ -208,6 +215,6 @@ uchar* Embedder::ExtractData(cv::Mat input, int *length)
 
 	
 
-	return buffer + 2;
+	return buffer + 4;
 
 }
