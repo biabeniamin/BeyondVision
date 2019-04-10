@@ -13,4 +13,5 @@ public:
 
 private:
 	void WriteFile(char *path, int e, int n);
+	static void ReadFile(char *path, int *e, int *n);
 };

@@ -2,14 +2,14 @@
 
 Certificate::Certificate(int e, int n)
 {
+	printf("New certificate with %d %d \n", e, n);
 }
 
 Certificate* Certificate::FromFile(char *path)
 {
 	int e, n;
 
-	e= 5;
-	n = 4;
+	Certificate::ReadFile("private.rsa", &e, &n);
 	return new Certificate(e, n);
 }
 
@@ -25,6 +25,16 @@ void Certificate::WriteFile(char *path, int e, int n)
 
 	fwrite((void*)&e, 4, 1, f);
 	fwrite((void*)&n, 4, 1, f);
+
+	fclose(f);
+}
+
+void Certificate::ReadFile(char *path, int *e, int *n)
+{
+	FILE *f = fopen(path, "r");
+
+	fread((void*)e, 4, 1, f);
+	fread((void*)n, 4, 1, f);
 
 	fclose(f);
 }
