@@ -3,6 +3,8 @@
 Certificate::Certificate(int e, int n)
 {
 	printf("New certificate with %d %d \n", e, n);
+	_e = e;
+	_n = n;
 }
 
 Certificate* Certificate::FromFile(char *path)
@@ -13,10 +15,10 @@ Certificate* Certificate::FromFile(char *path)
 	return new Certificate(e, n);
 }
 
-void Certificate::GenerateRandomCertificate(char *path)
+void Certificate::GenerateRandomCertificate(char *pathPrivate, char *pathPublic)
 {
-	WriteFile(path, 2753, 3233);
-	//WriteFile("public.rsa", 17, 3233);
+	WriteFile(pathPrivate, 2753, 3233);
+	WriteFile(pathPublic, 17, 3233);
 }
 
 void Certificate::WriteFile(char *path, int e, int n)
@@ -37,4 +39,14 @@ void Certificate::ReadFile(char *path, int *e, int *n)
 	fread((void*)n, 4, 1, f);
 
 	fclose(f);
+}
+
+int Certificate::GetE()
+{
+	return _e;
+}
+
+int Certificate::GetN()
+{
+	return _n;
 }
