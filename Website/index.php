@@ -103,6 +103,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header("Content-Transfer-Encoding: binary");
 readFile("motion/out.png");*/
 	}
+	else if(isset($_POST['generate']))
+	{
+		echo "generate";
+		writeFile("motion/job", "3");
+	}
 }
 ?>
 
@@ -119,7 +124,14 @@ Encode
 <form action="index.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
     Decode
     <input type="file" name="photoDecrypt" id="photo" />
+    Certificate:
+<input type="file" name="certificate" />
     <input type="submit" value="Upload" />
+</form>		
+<form action="index.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+    Generate random certificate:
+<input type="text" name="generate" style="display:none"/>
+    <input type="submit" value="Generate" />
 </form>		
 		<a href="?cmd=lightOn"><Button class="button">Turn on light</Button></a>
 		<a href="?cmd=lightOff"><Button class="button">Turn off light</Button></a>
