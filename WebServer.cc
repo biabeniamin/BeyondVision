@@ -115,6 +115,9 @@ void CheckWebServer()
 		{
 			Certificate::GenerateRandomCertificate("/var/www/html/motion/private.rsa",
 							       "/var/www/html/motion/public.rsa");
+			fseek(_jobFile, 0, SEEK_SET);
+			fprintf(_jobFile, "0");
+			fflush(_jobFile);
 		}
 
 	}
