@@ -23,7 +23,7 @@ Rsa::Rsa()
 	_lastFrameMapped = (int*)MapPhysicalMemory(VDMA2MEM,6500);
 }
 
-int Rsa::Encrypt(char *dataIn, int *dataOut, int size)
+int Rsa::Encrypt(char *dataIn, Certificate *certificate, int *dataOut, int size)
 {
 	for(int i=0;i<size;i++) {
 		//memcpy(_currentFrameMapped, text, size);
@@ -35,7 +35,7 @@ int Rsa::Encrypt(char *dataIn, int *dataOut, int size)
 		dataOut[i] = _lastFrameMapped[i];
 	}
 }
-int Rsa::Decrypt(int *dataIn, char* dataOut, int size)
+int Rsa::Decrypt(int *dataIn, Certificate *certificate, char* dataOut, int size)
 {
 	for(int i=0;i<size;i++) {
 		_lastFrameMapped[i] = dataIn[i];

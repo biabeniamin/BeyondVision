@@ -10,6 +10,7 @@
 #include "Rsa.h"
 #include "Steganography.h"
 #include "WebServer.h"
+#include "Certificate.h"
 #define GRANTED_PIN 0x123A
 
 
@@ -17,6 +18,9 @@ using namespace cv;
 
 int main()
 {
+	Certificate::GenerateRandomCertificate("private.rsa", "public.rsa");
+	Certificate::FromFile("private.rsa");
+	Certificate::FromFile("public.rsa");
 			printf("%x\n", GetTrueRandomNumber());
 int x[10000];
 for(int i=0;i<100;i++)
@@ -28,7 +32,7 @@ for(int i=0;i<100;i++)
 			printf("%x\n", GetTrueRandomNumber());
 	}
 }
-return 0;
+//return 0;
 while(1)
 	CheckWebServer();
 /*	char text[500];

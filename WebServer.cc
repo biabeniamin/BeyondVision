@@ -63,24 +63,25 @@ void CheckWebServer()
 		if(jobCommand == 2)
 		{
 	
-		WriteBusy();
+			WriteBusy();
 
-		//read message from file
-		fseek(_messageFile, 0, SEEK_END);
-		long size = ftell(_messageFile);
-		fseek(_messageFile, 0, SEEK_SET);
-		fread(text, 1, size, _messageFile);
-		text[size] = '\0';
-		printf("messagul este %s\n", text);
+			//read message from file
+			fseek(_messageFile, 0, SEEK_END);
+			long size = ftell(_messageFile);
+			fseek(_messageFile, 0, SEEK_SET);
+			fread(text, 1, size, _messageFile);
+			text[size] = '\0';
+			printf("messagul este %s\n", text);
 
-		imgOriginal=imread("/var/www/html/motion/image.png");
-		imwrite("/var/www/html/motion/out.png", steg.Embed(imgOriginal, text, strlen(text)));
+			Certificate *cert = Certificate::FromFile("/var/www/html/motion/public.rsa");
+			imgOriginal=imread("/var/www/html/motion/image.png");
+			imwrite("/var/www/html/motion/out.png", steg.Embed(imgOriginal, cert, text, strlen(text)));
 
-		fseek(_jobFile, 0, SEEK_SET);
-		fprintf(_jobFile, "0");
-		fflush(_jobFile);
+			fseek(_jobFile, 0, SEEK_SET);
+			fprintf(_jobFile, "0");
+			fflush(_jobFile);
 
-		WriteReady();
+			WriteReady();
 
 
 		}
@@ -96,9 +97,9 @@ void CheckWebServer()
 
 			//Certificate::FromFile("sagfsagsa");
 			
+			Certificate *cert = Certificate::FromFile("/var/www/html/motion/private.rsa");
 
-
-			char *te = steg.Extract(imgOriginal, &length);
+			char *te = steg.Extract(imgOriginal, cert, &length);
 
 			printf("In the image was detected %x bytes %s \n", length, te);
 					fseek(_jobFile, 0, SEEK_SET);

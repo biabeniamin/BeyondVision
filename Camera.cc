@@ -34,44 +34,6 @@ Camera::Camera()
 {
 	//GetAllocatedAddress();
 	
-	cout << "start\n";
-	
-	cout << "opening stream\n";
-
-	//_capture.open("http://192.168.0.107:8081");
-
-	cout << "stream opened\n";
-	_currentFramePhysAddress= MEM2VDMA;
-	_lastFramePhysAddress = VDMA2MEM;
-	_currentFrameMapped = MapPhysicalMemory(_currentFramePhysAddress,6500);
-	_lastFrameMapped = MapPhysicalMemory(_lastFramePhysAddress,6500);
-	char text[500];
-	int data[500];
-	strcpy(text,"AnA are mere");
-	DWORD changes = Rsa::GetInstance()->Encrypt(text, data, 13);
-	
-	Dump(_currentFrameMapped);
-	Dump(_lastFrameMapped);
-	Dump((PDWORD)data);
-
-for(int i=0;i<100;i++) {
-		//_lastFrameMapped[i]=5;
-		_currentFrameMapped[i]=0;
-		text[i]=0;
-}
-	Dump(_currentFrameMapped);
-
-	clock_t start, end;
-	start = clock();	
-	Rsa::GetInstance()->Decrypt(data, text, 13);
-	//changes = EncryptHardware(_lastFramePhysAddress,_currentFramePhysAddress, 2000*sizeof(DWORD), 2753, 3233);
-usleep(100000)	;
-
-	printf("Decrypted text is %s \n", text);
-	end = clock();	
-	double execut = (double)(end-start) / CLOCKS_PER_SEC;
-	printf("After encryption %f\n", execut);
-	Dump(_currentFrameMapped);
 
 
 
