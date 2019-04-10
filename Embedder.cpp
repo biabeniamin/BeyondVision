@@ -91,12 +91,14 @@ cv::Mat Embedder::EmbedData(cv::Mat input2, uchar *data2, int size, int* length)
 	Mat imgCanny = Sobel(input);
 	uchar *data = (uchar*)malloc(size + 2);
 
-	memcpy(data + 2, data2, size);
+	memcpy(data + 4, data2, size);
 
 	//write length
-	size += 2;
-	data[0] = size >> 8;
-	data[1] = size & 0xFF;
+	size += 4;
+	data[0] = 0xAB;
+	data[1] = 0xCD;
+	data[2] = size >> 8;
+	data[3] = size & 0xFF;
 
 	for (int i = 0; i < imgCanny.rows; i++)
 	{
