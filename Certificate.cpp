@@ -1,4 +1,5 @@
 #include "Certificate.h"
+#include "Random.h"
 
 Certificate::Certificate(int e, int n)
 {
@@ -28,9 +29,14 @@ void Certificate::WriteFile(char *path, int e, int n)
 	fwrite((void*)&e, 4, 1, f);
 	fwrite((void*)&n, 4, 1, f);
 	
-	int i[100];
+	int x[100];
 
-	fwrite((void*)&i, 4, 10, f);
+	for(int i=0;i<10;i++)
+	{
+		x[i] = GetTrueRandomNumber();
+	}
+
+	fwrite((void*)&x, 4, 10, f);
 
 	fclose(f);
 }
