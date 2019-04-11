@@ -77,6 +77,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		echo "test";
 		echo $_FILES["photoDecrypt"]["tmp_name"];
 		move_uploaded_file( $_FILES['photoDecrypt']['tmp_name'], "/var/www/html/motion/image.png" );
+		if(isset($_FILES["certificate"]))
+		{
+			move_uploaded_file( $_FILES['certificate']['tmp_name'], "/var/www/html/motion/private.rsa" );
+		}
 		writeFile("motion/job", "1");
 
 		echo readAllFile("motion/done");
