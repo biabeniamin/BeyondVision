@@ -1,7 +1,8 @@
 #pragma once
 
-#include "opencv2/highgui.hpp"
-#include "opencv2/imgproc.hpp"
+#include "AudioFile.h"
+#include <opencv2\opencv.hpp>
+
 class Embedder
 {
 public:
@@ -20,6 +21,8 @@ public:
 
 	cv::Mat EmbedData(cv::Mat input, uchar *data, int size, int *length);
 	uchar* ExtractData(cv::Mat input, int *length);
+
+	void EmbedDataInAudio(AudioFile *file, uchar *data, int size, int *length);
 
 private:
 	uchar * buffer;
