@@ -27,6 +27,10 @@ void Certificate::WriteFile(char *path, int e, int n)
 
 	fwrite((void*)&e, 4, 1, f);
 	fwrite((void*)&n, 4, 1, f);
+	
+	int i[100];
+
+	fwrite((void*)&i, 4, 10, f);
 
 	fclose(f);
 }
