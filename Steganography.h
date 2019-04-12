@@ -11,6 +11,8 @@ public:
 
 	cv::Mat Embed(cv::Mat, Certificate *cert, char *data, int size);
 	char* Extract(cv::Mat, Certificate *cert, int *length);
+	
+	void EmbedInAudio(AudioFile *input, Certificate *cert, char *data, int size);
 private:
 	char *buffer;
 	Embedder embedder;

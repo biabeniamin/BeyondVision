@@ -47,3 +47,14 @@ char* Steganography::Extract(cv::Mat input, Certificate *cert, int *len)
 	return buffer;
 
 }
+
+void Steganography::EmbedInAudio(AudioFile *input, Certificate *cert, char *data, int size)
+{
+	int data2[500];
+	int length = 0;
+
+
+	//Rsa::GetInstance()->Encrypt(data, cert, data2, size);
+
+	embedder.EmbedDataInAudio(input, (uchar*)data, size , &length);
+}
