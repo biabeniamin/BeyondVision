@@ -296,7 +296,7 @@ uchar* Embedder::ExtractDataFromAudio(AudioFile *input, int *length)
 				break;
 			}
 			size = buffer[2] << 8 | buffer[3];
-			buffer = (uchar*)realloc(buffer, size*2 + 50);
+			buffer = (uchar*)realloc(buffer, size + 50);
 		}
 
 		if (count >> 2 == size)
