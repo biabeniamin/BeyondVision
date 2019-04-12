@@ -13,6 +13,7 @@ public:
 	char* Extract(cv::Mat, Certificate *cert, int *length);
 	
 	void EmbedInAudio(AudioFile *input, Certificate *cert, char *data, int size);
+	char* ExtractFromAudio(AudioFile *input, Certificate *cert, int *length);
 private:
 	char *buffer;
 	Embedder embedder;
