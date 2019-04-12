@@ -146,6 +146,27 @@ void CheckWebServer()
 
 
 		}
+		else if (jobCommand == 5)
+		{
+			WriteBusy();
+
+			int length = 0;
+
+			AudioFile *audio = new AudioFile("/var/www/html/motion/audioIn.wav");
+			Certificate *cert = Certificate::FromFile("/var/www/html/motion/private.rsa");
+
+			char *te = steg.ExtractFromAudio(audio, cert, &length);
+
+			printf("In the image was detected %x bytes %s \n", length, te);
+					fseek(_jobFile, 0, SEEK_SET);
+					fprintf(_jobFile, "0");
+					fflush(_jobFile);
+			
+			fseek(_messageFile, 0, SEEK_SET);
+			fprintf(_messageFile, "%s", te);
+			fflush(_messageFile);
+			WriteReady();
+		}
 
 	}
 }
