@@ -123,6 +123,21 @@ readFile("motion/out.png");*/
 		writeFile("motion/message", $_POST['message']);
 		writeFile("motion/job", "4");
 	}
+	else if(isset($_FILES["audioDecrypt"]))
+	{
+		echo "test";
+		move_uploaded_file( $_FILES['audioDecrypt']['tmp_name'], "/var/www/html/motion/audioIn.wav" );
+		if(isset($_FILES["certificate"]))
+		{
+			move_uploaded_file( $_FILES['certificate']['tmp_name'], "/var/www/html/motion/private.rsa" );
+		}
+		writeFile("motion/job", "5");
+
+		echo readAllFile("motion/done");
+		while(readAllFile("motion/done")!="1");
+		echo "not ready";
+		echo readAllFile("motion/message");
+	}
 	else if(isset($_POST['generate']))
 	{
 		echo "generate";
@@ -158,11 +173,20 @@ Encode
 
 
 <form action="index.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
-Encoe
+Encode
     <input type="file" name="audio" id="photo" />
     Certificate:
 <input type="file" name="certificate" />
 <input type="text" name="message"/>
+    <input type="submit" value="Upload" />
+</form>		
+
+
+<form action="index.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+    Decode
+    <input type="file" name="audioDecrypt" id="photo" />
+    Certificate:
+<input type="file" name="certificate" />
     <input type="submit" value="Upload" />
 </form>		
 		<a href="?cmd=lightOn"><Button class="button">Turn on light</Button></a>
