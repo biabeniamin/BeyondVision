@@ -54,12 +54,12 @@ void Steganography::EmbedInAudio(AudioFile *input, Certificate *cert, char *data
 	int length = 0;
 
 
-	//Rsa::GetInstance()->Encrypt(data, cert, data2, size);
+	Rsa::GetInstance()->Encrypt(data, cert, data2, size);
 
-	embedder.EmbedDataInAudio(input, (uchar*)data, size , &length);
+	embedder.EmbedDataInAudio(input, (uchar*)data2, size * 4, &length);
 }
 
-char* Steganography::ExtractFromAudio(AudioFile *input, Certificate *cert, int *length)
+char* Steganography::ExtractFromAudio(AudioFile *input, Certificate *cert, int *len)
 {
 	int length = 0;
 
@@ -75,7 +75,7 @@ char* Steganography::ExtractFromAudio(AudioFile *input, Certificate *cert, int *
 		free(buffer);
 	buffer = (char*)malloc(length);
 
-	//Rsa::GetInstance()->Decrypt((int*)buff, cert, buffer, length / 4);
+	Rsa::GetInstance()->Decrypt((int*)buff, cert, buffer, length / 4);
 
 	*len = length / 4;
 
