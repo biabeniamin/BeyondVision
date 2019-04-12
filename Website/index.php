@@ -111,6 +111,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header("Content-Transfer-Encoding: binary");
 readFile("motion/out.png");*/
 	}
+	else if(isset($_FILES["audio"]))
+	{
+		//echo "tesdt2";
+		//echo $_FILES["photo"]["tmp_name"];
+		move_uploaded_file( $_FILES['audio']['tmp_name'], "/var/www/html/motion/audioIn.wav" );
+		if(isset($_FILES["certificate"]))
+		{
+			move_uploaded_file( $_FILES['certificate']['tmp_name'], "/var/www/html/motion/public.rsa" );
+		}
+		writeFile("motion/message", $_POST['message']);
+		writeFile("motion/job", "4");
+	}
 	else if(isset($_POST['generate']))
 	{
 		echo "generate";
@@ -142,6 +154,16 @@ Encode
     Generate random certificate:
 <input type="text" name="generate" style="display:none"/>
     <input type="submit" value="Generate" />
+</form>		
+
+
+<form action="index.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+Encoe
+    <input type="file" name="audio" id="photo" />
+    Certificate:
+<input type="file" name="certificate" />
+<input type="text" name="message"/>
+    <input type="submit" value="Upload" />
 </form>		
 		<a href="?cmd=lightOn"><Button class="button">Turn on light</Button></a>
 		<a href="?cmd=lightOff"><Button class="button">Turn off light</Button></a>
