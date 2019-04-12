@@ -119,6 +119,33 @@ void CheckWebServer()
 			fprintf(_jobFile, "0");
 			fflush(_jobFile);
 		}
+		else if(jobCommand == 4)
+		{
+	
+			WriteBusy();
+
+			//read message from file
+			fseek(_messageFile, 0, SEEK_END);
+			long size = ftell(_messageFile);
+			fseek(_messageFile, 0, SEEK_SET);
+			fread(text, 1, size, _messageFile);
+			text[size] = '\0';
+			printf("messagul este %s\n", text);
+
+			Certificate *cert = Certificate::FromFile("/var/www/html/motion/public.rsa");
+			imgOriginal=imread("/var/www/html/motion/image.png");
+			AudioFile *audio = new AudioFile("/var/www/html/motion/audioIn.wav");
+			steg.EmbedInAudio(audio, cert, text, strlen(text));
+			audio->WriteToFile("/var/www/html/motion/audioOut.wav");
+
+			fseek(_jobFile, 0, SEEK_SET);
+			fprintf(_jobFile, "0");
+			fflush(_jobFile);
+
+			WriteReady();
+
+
+		}
 
 	}
 }
