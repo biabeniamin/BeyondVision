@@ -222,14 +222,16 @@ uchar* Embedder::ExtractData(cv::Mat input, int *length)
 void Embedder::EmbedDataInAudio(AudioFile *file, uchar *data2, int size, int *length)
 {
 	int addedData = 0;
-	uchar *data = (uchar*)malloc(size + 2);
+	uchar *data = (uchar*)malloc(size + 4);
 
-	memcpy(data + 2, data2, size);
+	memcpy(data + 4, data2, size);
 
 	//write length
-	size += 2;
-	data[0] = size >> 8;
-	data[1] = size & 0xFF;
+	size += 4;
+	data[0] = 0xAB;
+	data[1] = 0xCD;
+	data[2] = size >> 8;
+	data[3] = size & 0xFF;
 
 	for (int i = 0; i < file->GetLength(); i++)
 	{
@@ -267,7 +269,7 @@ uchar* Embedder::ExtractDataFromAudio(AudioFile *input, int *length)
 	int count = 0;
 	int size = 20;
 
-	buffer = (uchar*)malloc(20);
+	buffer = (uchar*)malloc(40);
 
 	for (int i = 0; i < input->GetLength(); i++)
 	{
@@ -285,9 +287,15 @@ uchar* Embedder::ExtractDataFromAudio(AudioFile *input, int *length)
 
 		count++;
 
-		if (count == 4)
+		if (count == 8)
 		{
-			size = buffer[0] << 8 | buffer[1];
+			if (buffer[0] != 0xAB && buffer[1] != 0xCD) {
+				printf("This sound does not contain any hided content!\n");
+				//because decrementation of 4 at end
+				size = 4;
+				break;
+			}
+			size = buffer[2] << 8 | buffer[3];
 			buffer = (uchar*)realloc(buffer, size + 50);
 		}
 
@@ -298,15 +306,8 @@ uchar* Embedder::ExtractDataFromAudio(AudioFile *input, int *length)
 		}
 	}
 
-	*length = size - 2;
-
-	if (count >> 1 < size)
-	{
-		printf("Could not embed in audio because it is too small!");
-		*length = 0;
-	}
+	*length = size - 4;
 
 
-
-	return buffer + 2;
+	return buffer + 4;
 }
