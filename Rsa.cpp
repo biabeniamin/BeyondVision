@@ -82,3 +82,24 @@ int Rsa::Decrypt(int *dataIn, Certificate *cert, char* dataOut, int size)
 	dataOut[size] = '\0';
 	
 }
+
+int Rsa::DecryptSoftware(int *dataIn, Certificate *cert, char* dataOut, int size)
+{
+	for(int i=0;i<size;i++) {
+		_lastFrameMapped[i] = dataIn[i];
+	}
+	//memcpy(_currentFrameMapped, text, size);
+	clock_t begin = clock();	
+	for(int i=0; i< size;i++)
+	{
+		for(int j=0; j< cert->GetE();j++)
+			dataOut[i] = (dataOut[i] * dataOut[i]) % cert->GetN();
+	}
+	clock_t end = clock();
+	printf("rsa encrypt in %f\n",(double)(end - begin) / CLOCKS_PER_SEC);
+	for(int i=0;i<size;i++) {
+		dataOut[i] = _currentFrameMapped[i];
+	}
+	dataOut[size] = '\0';
+	
+}

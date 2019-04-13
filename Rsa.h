@@ -17,6 +17,7 @@ public:
 	int Decrypt(int *datain, Certificate *certifcate, char *dataOut, int size);	
 
 	int EncryptSoftware(char *dataIn, Certificate *certificate, int* dataOut, int size);	
+	int DecryptSoftware(int *datain, Certificate *certifcate, char *dataOut, int size);	
 };
 
 
