@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 	require 'helpers.php';
 	$output="";
@@ -19,13 +20,26 @@
 	}
 
 ?>
-<form action="decryptImage.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
-    Decode
-    <input type="file" name="photoDecrypt" id="photo" />
-    Certificate:
-<input type="file" name="certificate" />
-    <input type="submit" value="Upload" />
-</form>		
-<?php
-	echo $output."<br>";
-?>
+<head>
+	<script>
+		function loading()
+		{
+			alert('asfd');
+			document.getElementById("load").style.display="block";
+		}
+	</script>
+</head>
+<body>
+	<form action="decryptImage.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+	    Decode
+	    <input type="file" name="photoDecrypt" id="photo" />
+	    Certificate:
+	<input type="file" name="certificate" />
+	    <input onclick="loading()" type="submit" value="Upload" />
+	</form>	
+	<img id="load" src="loading.gif" style="display:none;width:100px;">
+	<button onclick="loading()">asdf</button>
+	<?php
+		echo $output."<br>";
+	?>
+</body>
