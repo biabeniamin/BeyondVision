@@ -28,13 +28,19 @@
 			document.getElementById("load").style.display="block";
 		}
 	</script>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<style>
+	body {
+		
+	}
+	</style>
 </head>
 <body>
 	<form action="decryptImage.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
-	    Decode
-	    <input type="file" name="photoDecrypt" id="photo" />
-	    Certificate:
-	<input type="file" name="certificate" />
+	    <label for="photo">Decode</label><br>
+	    <input type="file" name="photoDecrypt" id="photo" /><br>
+	    <label for="certificate">Certificate</label><br>
+	    <input type="file" name="certificate" id="file"/>
 	    <input onclick="loading()" type="submit" value="Upload" />
 	</form>	
 	<img id="load" src="loading.gif" style="display:none;width:100px;">
