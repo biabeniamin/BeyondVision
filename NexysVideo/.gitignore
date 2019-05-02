@@ -76,31 +76,3 @@ proj/*
 !/**/.keep
 
 
-
-#vivado generationg project in new folder
-
-!proj/*sdk
-proj/*sdk/.metadata
-proj/*sdk/**/*RemoteSystemsTempFiles
-proj/*sdk/**/*Debug/*
-proj/*sdk/**/*Release
-proj/*sdk/**/*webtalk
-proj/*sdk/.sdk
-proj/*sdk/*.log
-
-# ignore everything in the hw_platform
-proj/*sdk/*hw_platform*/*
-# except
-!proj/*sdk/*hw_platform*/*.hdf
-!proj/*sdk/*hw_platform*/.*project
-
-# ignore everything in the BSP
-# except
-!proj/*sdk/*_bsp*/system.mss
-!proj/*sdk/*_bsp*/Makefile
-!proj/*sdk/*_bsp*/.*project
-
-# include the relevant elf files
-!proj/*sdk/**/*Debug/*.elf
-!proj/*sdk/**/*Debug/*.elf.size
-
