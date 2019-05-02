@@ -1,8 +1,0 @@
-<annotationInfo>
-<annotationInfo>
-<item  id="37" filename="StreamGenerator/a.cpp" linenumber="45" name="exitcond" contextFuncName="StreamGenerator" moduleName="StreamGenerator" rtlName="exitcond_fu_182_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="11" fileDirectory="C:\Digilent19\Hls"><\/item>
-<item  id="39" filename="StreamGenerator/a.cpp" linenumber="45" name="i" contextFuncName="StreamGenerator" moduleName="StreamGenerator" rtlName="i_fu_188_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="15" fileDirectory="C:\Digilent19\Hls"><\/item>
-<item  id="42" filename="StreamGenerator/a.cpp" linenumber="45" name="tmp_data_V_1" contextFuncName="StreamGenerator" moduleName="StreamGenerator" rtlName="tmp_data_V_1_fu_194_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\Digilent19\Hls"><\/item>
-<item  id="46" filename="StreamGenerator/a.cpp" linenumber="56" name="tmp_last_V" contextFuncName="StreamGenerator" moduleName="StreamGenerator" rtlName="tmp_last_V_fu_199_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="11" fileDirectory="C:\Digilent19\Hls"><\/item>
-<\/annotationInfo>
-</annotationInfo>

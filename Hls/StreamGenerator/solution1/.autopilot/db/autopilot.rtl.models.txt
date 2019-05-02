@@ -1,2 +1,0 @@
-StreamGenerator_CONTROL_BUS_s_axi
-StreamGenerator

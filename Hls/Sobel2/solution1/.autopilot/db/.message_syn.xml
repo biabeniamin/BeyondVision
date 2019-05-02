@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Messages>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;Sobel2/main.cpp&apos; ..."/>
-	<Message severity="WARNING" prefix="[HLS 200-40]" key="HLS_40_1378" tag="" content="Sobel2/main.cpp:2:10: fatal error: &apos;cvt_colour.hpp&apos; file not found
-#include &quot;cvt_colour.hpp&quot;
-         ^
-1 error generated.\n"/>
-</Messages>
