@@ -50,13 +50,13 @@
 #define VID_VTC_ID XPAR_VTC_1_DEVICE_ID
 #define VID_GPIO_ID XPAR_AXI_GPIO_VIDEO_DEVICE_ID
 #define VID_VTC_IRPT_ID XPAR_INTC_0_VTC_1_VEC_ID
-#define VID_GPIO_IRPT_ID XPAR_INTC_0_GPIO_2_VEC_ID
+#define VID_GPIO_IRPT_ID XPAR_INTC_0_GPIO_3_VEC_ID
 #define SCU_TIMER_ID XPAR_AXI_TIMER_0_DEVICE_ID
 #define UART_BASEADDR XPAR_UARTLITE_0_BASEADDR
 
 /* ------------------------------------------------------------ */
 /*				Global Variables								*/
-/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ * /
 
 /*
  * Display and Video Driver structs
@@ -69,6 +69,7 @@ char fRefresh; //flag used to trigger a refresh of the Menu on video detect
 
 XGpio hpd_in;
 XGpio hpd_in2;
+XGpio switchIn;
 /*
  * Framebuffers for video data
  */
@@ -94,6 +95,8 @@ int main(void)
 
 	XGpio_Initialize(&hpd_in, XPAR_AXI_GPIO_0_DEVICE_ID);
 	XGpio_Initialize(&hpd_in2, XPAR_AXI_GPIO_1_DEVICE_ID);
+
+	XGpio_Initialize(&switchIn, XPAR_AXI_GPIO_2_DEVICE_ID);
 	XGpio_DiscreteWrite(&hpd_in2,1,0x1);
 	XGpio_DiscreteWrite(&hpd_in,2,0x0);
 	XGpio_DiscreteWrite(&hpd_in,1,0x1);
@@ -188,7 +191,7 @@ void DemoInitialize()
 
 	return;
 }
-
+int last=0;
 void DemoRun()
 {
 	int nextFrame = 0;
@@ -208,7 +211,34 @@ void DemoRun()
 
 		/* Wait for data on UART */
 		while (XUartLite_IsReceiveEmpty(UART_BASEADDR) && !fRefresh)
-		{}
+		{
+			int status;
+			int aux = XGpio_DiscreteRead(&switchIn, 1);
+
+			if(last != aux) {
+
+				status = DisplayStop(&dispCtrl);
+
+				switch(aux) {
+				case 0:
+					DisplaySetMode(&dispCtrl, &VMODE_640x480);
+					break;
+				default:
+				case 1:
+					DisplaySetMode(&dispCtrl, &VMODE_1280x1024);
+					break;
+
+				}
+
+				DisplayStart(&dispCtrl);
+				last = aux;
+			}
+			//xil_printf("%x \r\n", aux);
+			sleep(1);
+			/*
+
+						sleep(5);*/
+		}
 
 		/* Store the first character in the UART receive FIFO and echo it */
 		if (!XUartLite_IsReceiveEmpty(UART_BASEADDR))
