@@ -38,8 +38,9 @@ Encode<br>
     Certificate:<br>
 <input type="file" name="certificate" /><br>
 <input type="text" name="message"/><br>
-    <input type="submit" value="Upload" />
+    <input onclick="loading()" type="submit" value="Upload" />
 </form>		
+	<img id="load" src="loading.gif" style="display:none;width:100px;">
 <?php
 	echo $output."<br>";
 	echo $image;
