@@ -20,8 +20,8 @@ Rsa* Rsa::GetInstance()
 
 Rsa::Rsa()
 {
-	_currentFrameMapped = (int*)MapPhysicalMemory(MEM2VDMA,6500);
-	_lastFrameMapped = (int*)MapPhysicalMemory(VDMA2MEM,6500);
+	_currentFrameMapped = (int*)MapPhysicalMemory(MEM2VDMA,20000*4);
+	_lastFrameMapped = (int*)MapPhysicalMemory(VDMA2MEM,20000*4);
 }
 
 int Rsa::EncryptSoftware(char *dataIn, Certificate *certificate, int *dataOut, int size)
@@ -41,7 +41,7 @@ int Rsa::EncryptSoftware(char *dataIn, Certificate *certificate, int *dataOut, i
 	}
 
 	clock_t end = clock();
-	printf("rsa software encrypt in %f\n",(double)(end - begin) / CLOCKS_PER_SEC);
+	printf("rsa software encrypt in %f\n",(double)(end - begin) / CLOCKS_PER_SEC*1000);
 	for(int i=0;i<size;i++) {
 		//memcpy(_currentFrameMapped, text, size);
 		dataOut[i] = _lastFrameMapped[i];
@@ -59,7 +59,7 @@ int Rsa::Encrypt(char *dataIn, Certificate *certificate, int *dataOut, int size)
 	EncryptHardware(MEM2VDMA, VDMA2MEM, size*sizeof(DWORD), certificate->GetE(),
 			certificate->GetN());
 	clock_t end = clock();
-	printf("rsa encrypt in %f \n",(double)(end - begin) / CLOCKS_PER_SEC);
+	printf("rsa encrypt in %f \n",(double)(end - begin) / CLOCKS_PER_SEC*1000);
 	for(int i=0;i<size;i++) {
 		//memcpy(_currentFrameMapped, text, size);
 		dataOut[i] = _lastFrameMapped[i];
@@ -75,7 +75,7 @@ int Rsa::Decrypt(int *dataIn, Certificate *cert, char* dataOut, int size)
 	EncryptHardware(VDMA2MEM, MEM2VDMA, size*sizeof(DWORD),cert->GetE(),
 			cert->GetN());
 	clock_t end = clock();
-	printf("rsa encrypt in %f\n",(double)(end - begin) / CLOCKS_PER_SEC);
+	printf("rsa decrypt in %f\n",(double)(end - begin) / CLOCKS_PER_SEC*1000);
 	for(int i=0;i<size;i++) {
 		dataOut[i] = _currentFrameMapped[i];
 	}
@@ -96,7 +96,7 @@ int Rsa::DecryptSoftware(int *dataIn, Certificate *cert, char* dataOut, int size
 			dataOut[i] = (dataOut[i] * dataOut[i]) % cert->GetN();
 	}
 	clock_t end = clock();
-	printf("rsa encrypt in %f\n",(double)(end - begin) / CLOCKS_PER_SEC);
+	printf("rsa software decrypt in %f\n",(double)(end - begin) / CLOCKS_PER_SEC*1000);
 	for(int i=0;i<size;i++) {
 		dataOut[i] = _currentFrameMapped[i];
 	}
