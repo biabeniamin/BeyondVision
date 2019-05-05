@@ -24,7 +24,6 @@
 	<script>
 		function loading()
 		{
-			alert('asfd');
 			document.getElementById("load").style.display="block";
 		}
 	</script>
@@ -44,8 +43,9 @@
 	    <input onclick="loading()" type="submit" value="Upload" />
 	</form>	
 	<img id="load" src="loading.gif" style="display:none;width:100px;">
-	<button onclick="loading()">asdf</button>
+	<p style="margin:2%; border:1px dashed black;">
 	<?php
 		echo $output."<br>";
 	?>
+	</p>
 </body>
