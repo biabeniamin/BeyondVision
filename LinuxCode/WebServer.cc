@@ -77,6 +77,7 @@ void CheckWebServer()
 			Certificate *cert = Certificate::FromFile("/var/www/html/motion/public.rsa");
 			imgOriginal=imread("/var/www/html/motion/image.png");
 			imwrite("/var/www/html/motion/out.png", steg.Embed(imgOriginal, cert, text, strlen(text)));
+			printf("Image written \n");
 
 			fseek(_jobFile, 0, SEEK_SET);
 			fprintf(_jobFile, "0");
@@ -193,6 +194,35 @@ void CheckWebServer()
 			fflush(_jobFile);
 
 			WriteReady();
+
+
+		}
+		else if(jobCommand == 7)
+		{
+	
+			WriteBusy();
+
+			//read message from file
+			FILE *input = fopen("/var/www/html/motion/textIn.txt", "r");
+			long size = ftell(input);
+			fread(data2, 1, size, input);
+			data2[size] = '\0';
+
+			//imgOriginal=imread("/var/www/html/motion/image.png");
+			Certificate *cert = Certificate::FromFile("/var/www/html/motion/public.rsa");
+			printf("start decrypting with %d size\n", size);
+			Rsa::GetInstance()->Decrypt(data2, cert, data, size);
+			fseek(_messageFile, 0, SEEK_SET);
+			fwrite(data, size * 4, 1, _messageFile);
+			fflush(_messageFile);
+
+			fseek(_jobFile, 0, SEEK_SET);
+			fprintf(_jobFile, "0");
+			fflush(_jobFile);
+
+			fclose(input);
+			WriteReady();
+			printf("Done!\n");
 
 
 		}
