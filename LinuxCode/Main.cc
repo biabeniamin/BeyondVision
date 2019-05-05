@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include "DataTypes.h"
-#include "Camera.h"
 #include "Memory.h"
 #include "apsoc_cv_vdma.h"
 #include "opencv2/highgui.hpp"
