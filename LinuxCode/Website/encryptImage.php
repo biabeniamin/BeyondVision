@@ -5,7 +5,6 @@
 	if(isset($_FILES["photo"]))
 	{
 		//echo "tesdt2";
-		//echo $_FILES["photo"]["tmp_name"];
 		move_uploaded_file( $_FILES['photo']['tmp_name'], "/var/www/html/motion/image.png" );
 		if(isset($_FILES["certificate"]))
 		{
@@ -13,6 +12,7 @@
 		}
 		writeFile("motion/message", $_POST['message']);
 		writeFile("motion/job", "2");
+		while(readAllFile("motion/done")!="1");
 		$output = "<a href='motion/out.png'>Output image</a>";
 		$image="<img src='motion/out.png' style='width:500px'/>";
 	}
