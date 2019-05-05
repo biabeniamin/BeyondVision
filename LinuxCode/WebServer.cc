@@ -73,6 +73,10 @@ void CheckWebServer()
 			fread(text, 1, size, _messageFile);
 			text[size] = '\0';
 			printf("messagul este %s\n", text);
+			if(strlen(text) == 0)
+			{
+				goto done2;
+			}
 
 			Certificate *cert = Certificate::FromFile("/var/www/html/motion/public.rsa");
 			imgOriginal=imread("/var/www/html/motion/image.png");
@@ -82,9 +86,7 @@ void CheckWebServer()
 			fseek(_jobFile, 0, SEEK_SET);
 			fprintf(_jobFile, "0");
 			fflush(_jobFile);
-
 			WriteReady();
-
 
 		}
 		else if (jobCommand == 1)
@@ -226,6 +228,12 @@ void CheckWebServer()
 
 
 		}
+		continue;
+done2:
+			fseek(_jobFile, 0, SEEK_SET);
+			fprintf(_jobFile, "0");
+			fflush(_jobFile);
+			WriteReady();
 
 	}
 }
