@@ -17,12 +17,26 @@
 	}
 
 ?>
+<head>
+	<script>
+		function loading()
+		{
+			document.getElementById("load").style.display="block";
+		}
+	</script>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<style>
+	body {
+		
+	}
+	</style>
+</head>
 <form action="encryptSound.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
-Encode
-    <input type="file" name="audio" id="photo" />
-    Certificate:
-<input type="file" name="certificate" />
-<input type="text" name="message"/>
+Encode<br>
+    <input type="file" name="audio" id="photo" /><br>
+    Certificate:<br>
+<input type="file" name="certificate" /><br>
+<input type="text" name="message"/><br>
     <input type="submit" value="Upload" />
 </form>		
 <?php
