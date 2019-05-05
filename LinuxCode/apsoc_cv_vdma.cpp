@@ -1,14 +1,3 @@
-/*
- * APSOC_CV
- * apsoc_cv_vdma.cpp
- *
- * Author		:	Murali Padmanabha
- * E-Mail		:	murali.padmanabha@s2013.tu-chemnitz.de
- * Company		:	Technische Universität Chemnitz
- * 
- * Created on	:	Apr 25, 2015
- */
-
 #include "apsoc_cv_vdma.h"
 
 VideoStreamVDMAHandler streamDevHandler;

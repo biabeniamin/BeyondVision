@@ -22,16 +22,6 @@ int main()
 	Certificate::FromFile("private.rsa");
 	Certificate::FromFile("public.rsa");
 			printf("%x\n", GetTrueRandomNumber());
-int x[10000];
-for(int i=0;i<100;i++)
-{
-	x[i] =GetTrueRandomNumber();
-	for(int j=0;j<i;j++)
-	{
-		if(x[i] == x[j])
-			printf("%x\n", GetTrueRandomNumber());
-	}
-}
 //return 0;
 while(1)
 	CheckWebServer();

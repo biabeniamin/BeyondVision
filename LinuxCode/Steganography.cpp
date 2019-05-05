@@ -9,7 +9,7 @@ Steganography::Steganography()
 
 cv::Mat Steganography::Embed(cv::Mat input, Certificate *cert, char *data, int size)
 {
-	int data2[500];
+	int data2[6500];
 	int length = 0;
 
 	while (input.rows > 768 || input.cols > 1440)
@@ -50,7 +50,7 @@ char* Steganography::Extract(cv::Mat input, Certificate *cert, int *len)
 
 void Steganography::EmbedInAudio(AudioFile *input, Certificate *cert, char *data, int size)
 {
-	int data2[500];
+	int data2[6500];
 	int length = 0;
 
 

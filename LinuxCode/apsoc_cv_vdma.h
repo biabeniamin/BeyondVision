@@ -1,14 +1,3 @@
-/*
- * APSOC_CV
- * apsoc_cv_vdma.h
- *
- * Author		:	Murali Padmanabha
- * E-Mail		:	murali.padmanabha@s2013.tu-chemnitz.de
- * Company		:	Technische Universität Chemnitz
- * 
- * Created on	:	Apr 25, 2015
- */
-
 #ifndef APSOC_CV_VDMA_H_
 #define APSOC_CV_VDMA_H_
 
