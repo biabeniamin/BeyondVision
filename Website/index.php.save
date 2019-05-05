@@ -1,0 +1,1276 @@
+<html>
+<?php
+header('Access-Control-Allow-Origin: *'); 
+	function readAllFile($filePath)
+	{
+		$f=fopen($filePath,"r");
+		$content=fread($f,filesize($filePath));
+		fclose($f);
+
+		return $content;
+	}
+	function writeFile($filePath,$content)
+	{
+		$f=fopen($filePath,"w");
+		fwrite($f,$content);
+		fclose($f);
+	}
+ini_set('display_errors', 1);
+if(isset($_GET["cmd"]))
+{
+	if($_GET["cmd"]=="lightOn")
+	{
+		writeFile("lightStatus", "1");
+	}
+	else if($_GET["cmd"]=="lightOff")
+	{
+		writeFile("lightStatus", "0");
+	}
+	else if($_GET["cmd"]=="lightSwitch")
+	{
+		writeFile("lightStatus", "2");
+	}
+	else if($_GET["cmd"]=="openDoor")
+	{
+		writeFile("doorStatus", "1");
+	}
+}
+?>
+<html>
+	 <head>
+		<style type="text/css">
+			body
+			{
+				background-color: #011F33;
+			}
+			.main
+			{
+				background-color: #1B6A9E;
+				text-align: center;
+				width: 800px;
+				margin:0 auto;
+				font-size:20px;
+
+			}
+.button {
+    background-color: #BD7B01;
+    border: none;
+    color: white;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+}	
+		 </style>
+	 </head>
+	 <body>
+	<div class="main">
+<?php
+002
+ 
+003
+function RemoveSpaces($url){
+004
+      
+005
+      $url = preg_replace('/\s+/', '-', trim($url));
+006
+      $url = str_replace("         ","-",$url);
+007
+      $url = str_replace("        ","-",$url);
+008
+      $url = str_replace("       ","-",$url);
+009
+      $url = str_replace("      ","-",$url);
+010
+      $url = str_replace("     ","-",$url);
+011
+      $url = str_replace("    ","-",$url);
+012
+      $url = str_replace("   ","-",$url);
+013
+      $url = str_replace("  ","-",$url);
+014
+      $url = str_replace(" ","-",$url);
+015
+     
+016
+     return $url;
+017
+      
+018
+}
+019
+ 
+020
+function RemoveUrlSpaces($url){
+021
+ 
+022
+        $url = preg_replace('/\s+/', '%20', trim($url));  
+023
+        $url = str_replace("         ","%20",$url);
+024
+        $url = str_replace("        ","%20",$url);
+025
+        $url = str_replace("       ","%20",$url);
+026
+        $url = str_replace("      ","%20",$url);
+027
+        $url = str_replace("     ","%20",$url);
+028
+        $url = str_replace("    ","%20",$url);
+029
+        $url = str_replace("   ","%20",$url);
+030
+        $url = str_replace("  ","%20",$url);
+031
+        $url = str_replace(" ","%20",$url);
+032
+         
+033
+        return $url;
+034
+      
+035
+}
+036
+function DownloadAnything($file, $newfilename = '', $mimetype='', $isremotefile = false){
+037
+          
+038
+        $formattedhpath = "";
+039
+        $filesize = "";
+040
+ 
+041
+        if(empty($file)){
+042
+           die('Please enter file url to download...!');
+043
+           exit;
+044
+        }
+045
+      
+046
+         //Removing spaces and replacing with %20 ascii code
+047
+         $file = RemoveUrlSpaces($file);
+048
+           
+049
+           
+050
+        if(preg_match("#http://#", $file)){
+051
+          $formattedhpath = "url";
+052
+        }else{
+053
+          $formattedhpath = "filepath";
+054
+        }
+055
+         
+056
+        if($formattedhpath == "url"){
+057
+ 
+058
+          $file_headers = @get_headers($file);
+059
+   
+060
+          if($file_headers[0] == 'HTTP/1.1 404 Not Found') {
+061
+           die('File is not readable or not found...!');
+062
+           exit;
+063
+          }
+064
+           
+065
+        }elseif($formattedhpath == "filepath"){
+066
+ 
+067
+          if(@is_readable($file)) {
+068
+               die('File is not readable or not found...!');
+069
+               exit;
+070
+          }
+071
+        }
+072
+         
+073
+         
+074
+       //Fetching File Size Located in Remote Server
+075
+       if($isremotefile && $formattedhpath == "url"){
+076
+           
+077
+           
+078
+          $data = @get_headers($file, true);
+079
+           
+080
+          if(!empty($data['Content-Length'])){
+081
+          $filesize = (int)$data["Content-Length"];
+082
+           
+083
+          }else{
+084
+                
+085
+               ///If get_headers fails then try to fetch filesize with curl
+086
+               $ch = @curl_init();
+087
+ 
+088
+               if(!@curl_setopt($ch, CURLOPT_URL, $file)) {
+089
+                 @curl_close($ch);
+090
+                 @exit;
+091
+               }
+092
+                
+093
+               @curl_setopt($ch, CURLOPT_NOBODY, true);
+094
+               @curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+095
+               @curl_setopt($ch, CURLOPT_HEADER, true);
+096
+               @curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+097
+               @curl_setopt($ch, CURLOPT_MAXREDIRS, 3);
+098
+               @curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
+099
+               @curl_exec($ch);
+100
+                
+101
+               if(!@curl_errno($ch))
+102
+               {
+103
+                     
+104
+                    $http_status = (int)@curl_getinfo($ch, CURLINFO_HTTP_CODE);
+105
+                    if($http_status >= 200  && $http_status <= 300)
+106
+                    $filesize = (int)@curl_getinfo($ch, CURLINFO_CONTENT_LENGTH_DOWNLOAD);
+107
+                
+108
+               }
+109
+               @curl_close($ch);
+110
+                
+111
+          }
+112
+           
+113
+       }elseif($isremotefile && $formattedhpath == "filepath"){
+114
+          
+115
+       die('Error : Need complete URL of remote file...!');
+116
+           exit;
+117
+            
+118
+       }else{
+119
+          
+120
+           if($formattedhpath == "url"){
+121
+            
+122
+               $data = @get_headers($file, true);
+123
+               $filesize = (int)$data["Content-Length"];
+124
+                
+125
+           }elseif($formattedhpath == "filepath"){
+126
+            
+127
+               $filesize = (int)@filesize($file);
+128
+                
+129
+           }
+130
+            
+131
+       }
+132
+        
+133
+       if(empty($newfilename)){
+134
+          $newfilename =  @basename($file);
+135
+       }else{
+136
+          //Replacing any spaces with (-) hypen
+137
+          $newfilename = RemoveSpaces($newfilename);
+138
+       }
+139
+        
+140
+       if(empty($mimetype)){
+141
+           
+142
+       ///Get the extension of the file
+143
+       $path_parts = @pathinfo($file);
+144
+       $myfileextension = $path_parts["extension"];
+145
+ 
+146
+        switch($myfileextension)
+147
+        {
+148
+           
+149
+            ///Image Mime Types
+150
+            case 'jpg':
+151
+            $mimetype = "image/jpg";
+152
+            break;
+153
+            case 'jpeg':
+154
+            $mimetype = "image/jpeg";
+155
+            break;
+156
+            case 'gif':
+157
+            $mimetype = "image/gif";
+158
+            break;
+159
+            case 'png':
+160
+            $mimetype = "image/png";
+161
+            break;
+162
+            case 'bm':
+163
+            $mimetype = "image/bmp";
+164
+            break;
+165
+            case 'bmp':
+166
+            $mimetype = "image/bmp";
+167
+            break;
+168
+            case 'art':
+169
+            $mimetype = "image/x-jg";
+170
+            break;
+171
+            case 'dwg':
+172
+            $mimetype = "image/x-dwg";
+173
+            break;
+174
+            case 'dxf':
+175
+            $mimetype = "image/x-dwg";
+176
+            break;
+177
+            case 'flo':
+178
+            $mimetype = "image/florian";
+179
+            break;
+180
+            case 'fpx':
+181
+            $mimetype = "image/vnd.fpx";
+182
+            break;
+183
+            case 'g3':
+184
+            $mimetype = "image/g3fax";
+185
+            break;
+186
+            case 'ief':
+187
+            $mimetype = "image/ief";
+188
+            break;
+189
+            case 'jfif':
+190
+            $mimetype = "image/pjpeg";
+191
+            break;
+192
+            case 'jfif-tbnl':
+193
+            $mimetype = "image/jpeg";
+194
+            break;
+195
+            case 'jpe':
+196
+            $mimetype = "image/pjpeg";
+197
+            break;
+198
+            case 'jps':
+199
+            $mimetype = "image/x-jps";
+200
+            break;
+201
+            case 'jut':
+202
+            $mimetype = "image/jutvision";
+203
+            break;
+204
+            case 'mcf':
+205
+            $mimetype = "image/vasa";
+206
+            break;
+207
+            case 'nap':
+208
+            $mimetype = "image/naplps";
+209
+            break;
+210
+            case 'naplps':
+211
+            $mimetype = "image/naplps";
+212
+            break;
+213
+            case 'nif':
+214
+            $mimetype = "image/x-niff";
+215
+            break;
+216
+            case 'niff':
+217
+            $mimetype = "image/x-niff";
+218
+            break;
+219
+            case 'cod':
+220
+            $mimetype = "image/cis-cod";
+221
+            break;
+222
+            case 'ief':
+223
+            $mimetype = "image/ief";
+224
+            break;
+225
+            case 'svg':
+226
+            $mimetype = "image/svg+xml";
+227
+            break;
+228
+            case 'tif':
+229
+            $mimetype = "image/tiff";
+230
+            break;
+231
+            case 'tiff':
+232
+            $mimetype = "image/tiff";
+233
+            break;
+234
+            case 'ras':
+235
+            $mimetype = "image/x-cmu-raster";
+236
+            break;
+237
+            case 'cmx':
+238
+            $mimetype = "image/x-cmx";
+239
+            break;
+240
+            case 'ico':
+241
+            $mimetype = "image/x-icon";
+242
+            break;
+243
+            case 'pnm':
+244
+            $mimetype = "image/x-portable-anymap";
+245
+            break;
+246
+            case 'pbm':
+247
+            $mimetype = "image/x-portable-bitmap";
+248
+            break;
+249
+            case 'pgm':
+250
+            $mimetype = "image/x-portable-graymap";
+251
+            break;
+252
+            case 'ppm':
+253
+            $mimetype = "image/x-portable-pixmap";
+254
+            break;
+255
+            case 'rgb':
+256
+            $mimetype = "image/x-rgb";
+257
+            break;
+258
+            case 'xbm':
+259
+            $mimetype = "image/x-xbitmap";
+260
+            break;
+261
+            case 'xpm':
+262
+            $mimetype = "image/x-xpixmap";
+263
+            break;
+264
+            case 'xwd':
+265
+            $mimetype = "image/x-xwindowdump";
+266
+            break;
+267
+            case 'rgb':
+268
+            $mimetype = "image/x-rgb";
+269
+            break;
+270
+            case 'xbm':
+271
+            $mimetype = "image/x-xbitmap";
+272
+            break;
+273
+            case "wbmp":
+274
+            $mimetype = "image/vnd.wap.wbmp";
+275
+            break;
+276
+           
+277
+            //Files MIME Types
+278
+             
+279
+            case 'css':
+280
+            $mimetype = "text/css";
+281
+            break;
+282
+            case 'htm':
+283
+            $mimetype = "text/html";
+284
+            break;
+285
+            case 'html':
+286
+            $mimetype = "text/html";
+287
+            break;
+288
+            case 'stm':
+289
+            $mimetype = "text/html";
+290
+            break;
+291
+            case 'c':
+292
+            $mimetype = "text/plain";
+293
+            break;
+294
+            case 'h':
+295
+            $mimetype = "text/plain";
+296
+            break;
+297
+            case 'txt':
+298
+            $mimetype = "text/plain";
+299
+            break;
+300
+            case 'rtx':
+301
+            $mimetype = "text/richtext";
+302
+            break;
+303
+            case 'htc':
+304
+            $mimetype = "text/x-component";
+305
+            break;
+306
+            case 'vcf':
+307
+            $mimetype = "text/x-vcard";
+308
+            break;
+309
+            
+310
+            
+311
+            //Applications MIME Types
+312
+             
+313
+            case 'doc':
+314
+            $mimetype = "application/msword";
+315
+            break;
+316
+            case 'xls':
+317
+            $mimetype = "application/vnd.ms-excel";
+318
+            break;
+319
+            case 'ppt':
+320
+            $mimetype = "application/vnd.ms-powerpoint";
+321
+            break;
+322
+            case 'pps':
+323
+            $mimetype = "application/vnd.ms-powerpoint";
+324
+            break;
+325
+            case 'pot':
+326
+            $mimetype = "application/vnd.ms-powerpoint";
+327
+            break;
+328
+           
+329
+            case "ogg":
+330
+            $mimetype = "application/ogg";
+331
+            break;
+332
+            case "pls":
+333
+            $mimetype = "application/pls+xml";
+334
+            break;
+335
+            case "asf":
+336
+            $mimetype = "application/vnd.ms-asf";
+337
+            break;
+338
+            case "wmlc":
+339
+            $mimetype = "application/vnd.wap.wmlc";
+340
+            break;
+341
+            case 'dot':
+342
+            $mimetype = "application/msword";
+343
+            break;
+344
+            case 'class':
+345
+            $mimetype = "application/octet-stream";
+346
+            break;
+347
+            case 'exe':
+348
+            $mimetype = "application/octet-stream";
+349
+            break;
+350
+            case 'pdf':
+351
+            $mimetype = "application/pdf";
+352
+            break;
+353
+            case 'rtf':
+354
+            $mimetype = "application/rtf";
+355
+            break;
+356
+            case 'xla':
+357
+            $mimetype = "application/vnd.ms-excel";
+358
+            break;
+359
+            case 'xlc':
+360
+            $mimetype = "application/vnd.ms-excel";
+361
+            break;
+362
+            case 'xlm':
+363
+            $mimetype = "application/vnd.ms-excel";
+364
+            break;
+365
+            
+366
+            case 'msg':
+367
+            $mimetype = "application/vnd.ms-outlook";
+368
+            break;
+369
+            case 'mpp':
+370
+            $mimetype = "application/vnd.ms-project";
+371
+            break;
+372
+            case 'cdf':
+373
+            $mimetype = "application/x-cdf";
+374
+            break;
+375
+            case 'tgz':
+376
+            $mimetype = "application/x-compressed";
+377
+            break;
+378
+            case 'dir':
+379
+            $mimetype = "application/x-director";
+380
+            break;
+381
+            case 'dvi':
+382
+            $mimetype = "application/x-dvi";
+383
+            break;
+384
+            case 'gz':
+385
+            $mimetype = "application/x-gzip";
+386
+            break;
+387
+            case 'js':
+388
+            $mimetype = "application/x-javascript";
+389
+            break;
+390
+            case 'mdb':
+391
+            $mimetype = "application/x-msaccess";
+392
+            break;
+393
+            case 'dll':
+394
+            $mimetype = "application/x-msdownload";
+395
+            break;
+396
+            case 'wri':
+397
+            $mimetype = "application/x-mswrite";
+398
+            break;
+399
+            case 'cdf':
+400
+            $mimetype = "application/x-netcdf";
+401
+            break;
+402
+            case 'swf':
+403
+            $mimetype = "application/x-shockwave-flash";
+404
+            break;
+405
+            case 'tar':
+406
+            $mimetype = "application/x-tar";
+407
+            break;
+408
+            case 'man':
+409
+            $mimetype = "application/x-troff-man";
+410
+            break;
+411
+            case 'zip':
+412
+            $mimetype = "application/zip";
+413
+            break;
+414
+            case 'xlsx':
+415
+            $mimetype = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+416
+            break;
+417
+            case 'pptx':
+418
+            $mimetype = "application/vnd.openxmlformats-officedocument.presentationml.presentation";
+419
+            break;
+420
+            case 'docx':
+421
+            $mimetype = "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
+422
+            break;
+423
+            case 'xltx':
+424
+            $mimetype = "application/vnd.openxmlformats-officedocument.spreadsheetml.template";
+425
+            break;
+426
+            case 'potx':
+427
+            $mimetype = "application/vnd.openxmlformats-officedocument.presentationml.template";
+428
+            break;
+429
+            case 'ppsx':
+430
+            $mimetype = "application/vnd.openxmlformats-officedocument.presentationml.slideshow";
+431
+            break;
+432
+            case 'sldx':
+433
+            $mimetype = "application/vnd.openxmlformats-officedocument.presentationml.slide";
+434
+            break;
+435
+           
+436
+            ///Audio and Video Files
+437
+             
+438
+            case 'mp3':
+439
+            $mimetype = "audio/mpeg";
+440
+            break;
+441
+            case 'wav':
+442
+            $mimetype = "audio/x-wav";
+443
+            break;
+444
+            case 'au':
+445
+            $mimetype = "audio/basic";
+446
+            break;
+447
+            case 'snd':
+448
+            $mimetype = "audio/basic";
+449
+            break;
+450
+            case 'm3u':
+451
+            $mimetype = "audio/x-mpegurl";
+452
+            break;
+453
+            case 'ra':
+454
+            $mimetype = "audio/x-pn-realaudio";
+455
+            break;
+456
+            case 'mp2':
+457
+            $mimetype = "video/mpeg";
+458
+            break;
+459
+            case 'mov':
+460
+            $mimetype = "video/quicktime";
+461
+            break;
+462
+            case 'qt':
+463
+            $mimetype = "video/quicktime";
+464
+            break;
+465
+            case 'mp4':
+466
+            $mimetype = "video/mp4";
+467
+            break;
+468
+            case 'm4a':
+469
+            $mimetype = "audio/mp4";
+470
+            break;
+471
+            case 'mp4a':
+472
+            $mimetype = "audio/mp4";
+473
+            break;
+474
+            case 'm4p':
+475
+            $mimetype = "audio/mp4";
+476
+            break;
+477
+            case 'm3a':
+478
+            $mimetype = "audio/mpeg";
+479
+            break;
+480
+            case 'm2a':
+481
+            $mimetype = "audio/mpeg";
+482
+            break;
+483
+            case 'mp2a':
+484
+            $mimetype = "audio/mpeg";
+485
+            break;
+486
+            case 'mp2':
+487
+            $mimetype = "audio/mpeg";
+488
+            break;
+489
+            case 'mpga':
+490
+            $mimetype = "audio/mpeg";
+491
+            break;
+492
+            case '3gp':
+493
+            $mimetype = "video/3gpp";
+494
+            break;
+495
+            case '3g2':
+496
+            $mimetype = "video/3gpp2";
+497
+            break;
+498
+            case 'mp4v':
+499
+            $mimetype = "video/mp4";
+500
+            break;
+501
+            case 'mpg4':
+502
+            $mimetype = "video/mp4";
+503
+            break;
+504
+            case 'm2v':
+505
+            $mimetype = "video/mpeg";
+506
+            break;
+507
+            case 'm1v':
+508
+            $mimetype = "video/mpeg";
+509
+            break;
+510
+            case 'mpe':
+511
+            $mimetype = "video/mpeg";
+512
+            break;
+513
+            case 'avi':
+514
+            $mimetype = "video/x-msvideo";
+515
+            break;
+516
+            case 'midi':
+517
+            $mimetype = "audio/midi";
+518
+            break;
+519
+            case 'mid':
+520
+            $mimetype = "audio/mid";
+521
+            break;
+522
+            case 'amr':
+523
+            $mimetype = "audio/amr";
+524
+            break;
+525
+             
+526
+             
+527
+            default:
+528
+            $mimetype = "application/octet-stream";
+529
+         
+530
+             
+531
+        }
+532
+         
+533
+         
+534
+       }
+535
+         
+536
+         
+537
+          //off output buffering to decrease Server usage
+538
+          @ob_end_clean();
+539
+         
+540
+          if(ini_get('zlib.output_compression')){
+541
+            ini_set('zlib.output_compression', 'Off');
+542
+          }
+543
+         
+544
+          header('Content-Description: File Transfer');
+545
+          header('Content-Type: '.$mimetype);
+546
+          header('Content-Disposition: attachment; filename='.$newfilename.'');
+547
+          header('Content-Transfer-Encoding: binary');
+548
+          header("Expires: Wed, 07 May 2013 09:09:09 GMT");
+549
+        header('Last-Modified: ' . gmdate('D, d M Y H:i:s') . ' GMT');
+550
+        header('Cache-Control: post-check=0, pre-check=0', false);
+551
+        header('Cache-Control: no-store, no-cache, must-revalidate');
+552
+        header('Pragma: no-cache');
+553
+          header('Content-Length: '.$filesize);
+554
+         
+555
+         
+556
+          ///Will Download 1 MB in chunkwise
+557
+          $chunk = 1 * (1024 * 1024);
+558
+          $nfile = @fopen($file,"rb");
+559
+          while(!feof($nfile))
+560
+          {
+561
+                  
+562
+              print(@fread($nfile, $chunk));
+563
+              @ob_flush();
+564
+              @flush();
+565
+          }
+566
+          @fclose($filen);
+567
+                
+568
+ 
+569
+ 
+570
+}
+
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	if(isset($_FILES["photoDecrypt"]))
+	{
+		echo "test";
+		echo $_FILES["photoDecrypt"]["tmp_name"];
+		move_uploaded_file( $_FILES['photoDecrypt']['tmp_name'], "/var/www/html/motion/image.png" );
+		writeFile("motion/job", "1");
+
+		echo readAllFile("motion/done");
+		while(readAllFile("motion/done")!="1");
+		echo "not ready";
+		echo readAllFile("motion/message");
+	}
+	else if(isset($_FILES["photo"]))
+	{
+		echo "test2";
+		echo $_FILES["photo"]["tmp_name"];
+		move_uploaded_file( $_FILES['photo']['tmp_name'], "/var/www/html/motion/image.png" );
+		writeFile("motion/message", $_POST['message']);
+		writeFile("motion/job", "2");
+		$mime = ($mime = getimagesize($filename)) ? $mime['mime'] : $mime;
+		echo $mime;
+		 header("Cache-Control: public");
+    header("Content-Description: File Transfer");
+    header("Content-Disposition: attachment; filename=motion/out.png");
+    header("Content-Type: ". $mime);
+    header("Content-Transfer-Encoding: binary");
+readFile("motion/out.png");
+	}
+}
+?>
+
+
+
+
+		<h1>Smart room</h1>
+<form action="index.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+Encode
+    <input type="file" name="photo" id="photo" />
+<input type="text" name="message"/>
+    <input type="submit" value="Upload" />
+</form>		
+<form action="index.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+    Decode
+    <input type="file" name="photoDecrypt" id="photo" />
+    <input type="submit" value="Upload" />
+</form>		
+		<a href="?cmd=lightOn"><Button class="button">Turn on light</Button></a>
+		<a href="?cmd=lightOff"><Button class="button">Turn off light</Button></a>
+		<a href="?cmd=lightSwitch"><Button class="button">Switch light</Button></a><br>
+		<a href="?cmd=openDoor"><Button class="button">Open Door</Button></a>
+		<a href="?cmd=closeDoor"><Button class="button">Close Door</Button></a>
+		<a href="?cmd=switchDoor"><Button class="button">Switch Door</Button></a><br>
+		<a href="?cmd=clearLog"><Button class="button">Clear Log</Button></a>
+		<a href="index.php"><Button class="button">Refresh</Button></a><br>
+		<a href="?cmd=plus"><Button class="button">+</Button></a>
+		<a href="?cmd=minus"><Button class="button">-</Button></a><br>
+		<?php
+			echo readAllFile("temperature")."<br>";
+		echo readAllFile("Log");
+		?>	
+	</div>
+	</body>
+</html>

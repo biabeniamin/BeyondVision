@@ -129,6 +129,22 @@ readFile("motion/out.png");*/
 		echo "generate";
 		writeFile("motion/job", "3");
 	}
+	else if(isset($_POST['textEncrypt']))
+	{
+		echo "encrpt".$_POST['textEncrypt'];
+		writeFile("motion/message", $_POST['textEncrypt']);
+		writeFile("motion/job", "6");
+		while(readAllFile("motion/done")!="1");
+		echo readAllFile("motion/message");
+	}
+	else if(isset($_FILES['textDecrypt']))
+	{
+		echo "decrypt";
+		move_uploaded_file( $_FILES['textDecrypt']['tmp_name'], "/var/www/html/motion/textIn.txt" );
+		writeFile("motion/job", "7");
+		while(readAllFile("motion/done")!="1");
+		echo readAllFile("motion/message");
+	}
 }
 ?>
 
@@ -171,6 +187,22 @@ Encode
 <form action="index.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
     Decode
     <input type="file" name="audioDecrypt" id="photo" />
+    Certificate:
+<input type="file" name="certificate" />
+    <input type="submit" value="Upload" />
+</form>		
+
+
+<form action="index.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+    Encode Text
+    <input type="text" name="textEncrypt" />
+    Certificate:
+<input type="file" name="certificate" />
+    <input type="submit" value="Upload" />
+</form>		
+<form action="index.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+    Decode Text
+    <input type="file" name="textDecrypt" id="photo"/>
     Certificate:
 <input type="file" name="certificate" />
     <input type="submit" value="Upload" />
