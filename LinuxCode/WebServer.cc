@@ -3,6 +3,7 @@
 #include "opencv2/imgproc.hpp"
 #include "Steganography.h"
 #include "Certificate.h"
+#include "Rsa.h"
 
 using namespace cv;
 
@@ -38,11 +39,11 @@ void CheckWebServer()
 	DWORD doorCommand;
 	Embedder embedder;
 	Steganography steg;
-	char text[500];
-	int data2[500];
+	char text[5000];
+	int data2[5000];
 	strcpy(text,"Testul suprem este acela care functioneaza corect indifrente de circumstante");
 	DWORD changes;
-	uchar data[2000];
+	char data[2000];
 	Mat imgOriginal;
 
 	jobCommand = 0;
@@ -166,6 +167,34 @@ void CheckWebServer()
 			fprintf(_messageFile, "%s", te);
 			fflush(_messageFile);
 			WriteReady();
+		}
+		else if(jobCommand == 6)
+		{
+	
+			WriteBusy();
+
+			//read message from file
+			fseek(_messageFile, 0, SEEK_END);
+			long size = ftell(_messageFile);
+			fseek(_messageFile, 0, SEEK_SET);
+			fread(text, 1, size, _messageFile);
+			text[size] = '\0';
+			printf("messagul este %s\n", text);
+
+			Certificate *cert = Certificate::FromFile("/var/www/html/motion/public.rsa");
+			//imgOriginal=imread("/var/www/html/motion/image.png");
+			Rsa::GetInstance()->Encrypt(data, cert, data2, size);
+			fseek(_messageFile, 0, SEEK_SET);
+			fwrite(data2, size * 4, 1, _messageFile);
+			fflush(_messageFile);
+
+			fseek(_jobFile, 0, SEEK_SET);
+			fprintf(_jobFile, "0");
+			fflush(_jobFile);
+
+			WriteReady();
+
+
 		}
 
 	}
